@@ -10,6 +10,16 @@ import veilKiss from "@/assets/gallery/veil-kiss-romantic.jpg";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import brideHorse from "@/assets/gallery/bride-with-horse.jpg";
 import weddingRings from "@/assets/gallery/wedding-rings-flower.jpg";
+import firstDanceCloseup from "@/assets/gallery/first-dance-closeup.jpg";
+import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.jpg";
+import cakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.jpg";
+import guestFavor from "@/assets/gallery/guest-favor-box.jpg";
+import cardBox from "@/assets/gallery/card-box-wine-barrel.jpg";
+import receptionTable3 from "@/assets/gallery/reception-table-3.jpg";
+import receptionTable4 from "@/assets/gallery/reception-table-4.jpg";
+import dressGazebo from "@/assets/gallery/dress-forest-gazebo.jpg";
+import dressPavilion from "@/assets/gallery/dress-forest-pavilion.jpg";
+import weddingRings2 from "@/assets/gallery/wedding-rings-flower-2.jpg";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -26,9 +36,19 @@ const Gallery = () => {
       category: "Ceremony"
     },
     {
+      src: firstDanceSparklers,
+      alt: "First dance with sparklers on forest deck at Rustic Retreat Alberta multi-day wedding celebration near Edmonton",
+      category: "Reception"
+    },
+    {
       src: veilKiss,
       alt: "Intimate wedding moment at Rustic Retreat with bride and groom kissing under veil with romantic bokeh lights",
       category: "Romance"
+    },
+    {
+      src: firstDanceCloseup,
+      alt: "First dance closeup of bride and groom smiling during forest wedding reception at Alberta venue near Lac La Nonne",
+      category: "Reception"
     },
     {
       src: cakeCutting,
@@ -36,9 +56,19 @@ const Gallery = () => {
       category: "Reception"
     },
     {
+      src: receptionTable3,
+      alt: "Elegant reception table setting with gold chargers, greenery centerpiece, and table number 3 at Alberta forest wedding venue",
+      category: "Details"
+    },
+    {
       src: licenseSigning,
       alt: "Marriage license signing at rustic wooden table with I have found sign at Alberta outdoor wedding venue",
       category: "Ceremony"
+    },
+    {
+      src: receptionTable4,
+      alt: "Outdoor reception table with gold accents, crystal glassware, navy napkins, and table number 4 at Rustic Retreat Alberta",
+      category: "Details"
     },
     {
       src: meadowKiss,
@@ -46,9 +76,19 @@ const Gallery = () => {
       category: "Romance"
     },
     {
+      src: cardBox,
+      alt: "Rustic Mr and Mrs wedding card box on wine barrel with forest greenery at Alberta outdoor venue near Edmonton",
+      category: "Details"
+    },
+    {
       src: bridalPortrait,
       alt: "Bride with cascading white rose bouquet on wooden cabin porch at Rustic Retreat Alberta wedding venue",
       category: "Bridal"
+    },
+    {
+      src: dressGazebo,
+      alt: "Elegant wedding dress hanging in decorated forest gazebo with white flowers at Rustic Retreat Alberta ceremony space",
+      category: "Details"
     },
     {
       src: weddingParty,
@@ -56,13 +96,33 @@ const Gallery = () => {
       category: "Group Photos"
     },
     {
+      src: dressPavilion,
+      alt: "Wedding dress displayed in forest pavilion reception area with rustic wooden beams at Alberta venue",
+      category: "Details"
+    },
+    {
+      src: cakeCuttingSet,
+      alt: "Gold cake cutting utensils with white bows on wooden reception table at Rustic Retreat Alberta forest wedding",
+      category: "Details"
+    },
+    {
       src: brideHorse,
       alt: "Country wedding photo with bride in lace dress and horse at Rustic Retreat Alberta outdoor venue",
       category: "Portraits"
     },
     {
+      src: guestFavor,
+      alt: "Wedding guest favor box with navy napkin, gold charger, and thank you tag on elegant reception table Alberta",
+      category: "Details"
+    },
+    {
       src: weddingRings,
       alt: "Wedding rings macro detail photo on white flower petals at Alberta rustic wedding venue near Edmonton",
+      category: "Details"
+    },
+    {
+      src: weddingRings2,
+      alt: "Close-up of wedding rings on delicate white flower at outdoor Alberta wedding venue near Lac La Nonne",
       category: "Details"
     },
   ];
