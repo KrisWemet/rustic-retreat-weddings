@@ -8,69 +8,72 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Rustic Wedding Venue Design System - Earth Tones & Natural Elegance */
+    /* Modern Elegant Wedding Venue - Charcoal & Rose Gold */
     
-    /* Main Background - Warm Cream */
-    --background: 40 20% 97%;
-    --foreground: 30 10% 15%;
+    /* Main Background - Soft Warm White */
+    --background: 30 15% 98%;
+    --foreground: 0 0% 20%;
 
-    /* Card Backgrounds - Pure White for Content */
+    /* Card Backgrounds - Pure White for Contrast */
     --card: 0 0% 100%;
-    --card-foreground: 30 10% 15%;
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 30 10% 15%;
+    --popover-foreground: 0 0% 20%;
 
-    /* Primary - Deep Forest Green */
-    --primary: 160 35% 25%;
-    --primary-foreground: 40 20% 97%;
+    /* Primary - Deep Charcoal */
+    --primary: 0 0% 25%;
+    --primary-foreground: 30 15% 98%;
 
-    /* Secondary - Warm Copper/Bronze */
-    --secondary: 25 50% 55%;
-    --secondary-foreground: 40 20% 97%;
+    /* Secondary - Metallic Rose Gold */
+    --secondary: 350 60% 68%;
+    --secondary-foreground: 0 0% 20%;
 
-    /* Muted - Soft Sage for Subtle Elements */
-    --muted: 140 15% 85%;
-    --muted-foreground: 30 8% 40%;
+    /* Muted - Light Gray for Subtle Elements */
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Accent - Rich Gold */
-    --accent: 45 80% 60%;
-    --accent-foreground: 30 10% 15%;
+    /* Accent - Warm Champagne Gold */
+    --accent: 40 55% 75%;
+    --accent-foreground: 0 0% 20%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 20% 97%;
+    --destructive-foreground: 30 15% 98%;
 
-    --border: 140 15% 85%;
-    --input: 140 15% 85%;
-    --ring: 160 35% 25%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 350 60% 68%;
 
     --radius: 0.75rem;
 
     /* Custom Design Tokens */
-    --forest-green: 160 35% 25%;
-    --forest-green-light: 160 30% 35%;
-    --forest-green-dark: 160 40% 18%;
+    --charcoal: 0 0% 25%;
+    --charcoal-light: 0 0% 35%;
+    --charcoal-dark: 0 0% 18%;
     
-    --copper: 25 50% 55%;
-    --copper-light: 25 50% 65%;
+    --rose-gold: 350 60% 68%;
+    --rose-gold-light: 350 55% 78%;
+    --rose-gold-dark: 350 65% 58%;
     
-    --gold: 45 80% 60%;
-    --gold-light: 45 75% 70%;
+    --champagne: 40 55% 75%;
+    --champagne-light: 40 50% 85%;
     
-    --cream: 40 20% 97%;
-    --warm-white: 40 15% 99%;
+    --warm-white: 30 15% 98%;
+    --soft-white: 30 10% 96%;
     
-    --earth-brown: 30 25% 35%;
+    --warm-gray: 20 5% 50%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(160 35% 25% / 0.95), hsl(160 40% 18% / 0.9));
-    --gradient-accent: linear-gradient(135deg, hsl(25 50% 55%), hsl(45 80% 60%));
-    --gradient-subtle: linear-gradient(180deg, hsl(40 20% 97%), hsl(140 15% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 25% / 0.95), hsl(0 0% 18% / 0.92));
+    --gradient-accent: linear-gradient(135deg, hsl(350 60% 68%), hsl(40 55% 75%));
+    --gradient-subtle: linear-gradient(180deg, hsl(30 15% 98%), hsl(0 0% 96%));
+    --gradient-metallic: linear-gradient(135deg, hsl(350 60% 68% / 0.15), hsl(40 55% 75% / 0.15));
     
     /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(30 10% 15% / 0.08);
-    --shadow-medium: 0 4px 16px hsl(30 10% 15% / 0.12);
-    --shadow-large: 0 8px 32px hsl(30 10% 15% / 0.15);
+    --shadow-soft: 0 2px 8px hsl(0 0% 20% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(0 0% 20% / 0.12);
+    --shadow-large: 0 8px 32px hsl(0 0% 20% / 0.15);
+    --shadow-elegant: 0 10px 40px hsl(350 60% 68% / 0.2);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -78,33 +81,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 160 20% 12%;
-    --foreground: 40 20% 95%;
+    --background: 0 0% 12%;
+    --foreground: 30 15% 95%;
 
-    --card: 160 18% 15%;
-    --card-foreground: 40 20% 95%;
+    --card: 0 0% 16%;
+    --card-foreground: 30 15% 95%;
 
-    --popover: 160 18% 15%;
-    --popover-foreground: 40 20% 95%;
+    --popover: 0 0% 16%;
+    --popover-foreground: 30 15% 95%;
 
-    --primary: 160 35% 45%;
-    --primary-foreground: 40 20% 97%;
+    --primary: 0 0% 85%;
+    --primary-foreground: 0 0% 15%;
 
-    --secondary: 25 50% 55%;
-    --secondary-foreground: 40 20% 97%;
+    --secondary: 350 60% 68%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 160 15% 25%;
-    --muted-foreground: 40 15% 70%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 30 10% 70%;
 
-    --accent: 45 80% 60%;
-    --accent-foreground: 30 10% 15%;
+    --accent: 40 55% 75%;
+    --accent-foreground: 0 0% 15%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 40 20% 95%;
+    --destructive-foreground: 30 15% 95%;
 
-    --border: 160 15% 25%;
-    --input: 160 15% 25%;
-    --ring: 160 35% 45%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 350 60% 68%;
   }
 }
 
@@ -145,6 +148,24 @@ All colors MUST be HSL.
     text-wrap: balance;
   }
   
+  /* Metallic Rose Gold Effect */
+  .text-rosegold {
+    @apply bg-gradient-to-r from-rosegold via-rosegold-light to-rosegold bg-clip-text text-transparent;
+  }
+  
+  .border-rosegold {
+    @apply border-secondary;
+  }
+  
+  /* Elegant Shadow Effects */
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
   /* Animations */
   @keyframes fade-in-up {
     from {
@@ -168,5 +189,21 @@ All colors MUST be HSL.
   
   .animate-fade-in {
     animation: fade-in 0.8s ease-out;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+  }
+  
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(350 60% 68% / 0) 0%,
+      hsl(350 60% 68% / 0.3) 50%,
+      hsl(350 60% 68% / 0) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
   }
 }

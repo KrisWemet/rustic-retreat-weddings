@@ -26,13 +26,14 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          light: "hsl(var(--forest-green-light))",
-          dark: "hsl(var(--forest-green-dark))",
+          light: "hsl(var(--charcoal-light))",
+          dark: "hsl(var(--charcoal-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
-          light: "hsl(var(--copper-light))",
+          light: "hsl(var(--rose-gold-light))",
+          dark: "hsl(var(--rose-gold-dark))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -45,7 +46,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
-          light: "hsl(var(--gold-light))",
+          light: "hsl(var(--champagne-light))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -55,21 +56,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        forest: {
-          DEFAULT: "hsl(var(--forest-green))",
-          light: "hsl(var(--forest-green-light))",
-          dark: "hsl(var(--forest-green-dark))",
+        charcoal: {
+          DEFAULT: "hsl(var(--charcoal))",
+          light: "hsl(var(--charcoal-light))",
+          dark: "hsl(var(--charcoal-dark))",
         },
-        copper: {
-          DEFAULT: "hsl(var(--copper))",
-          light: "hsl(var(--copper-light))",
+        rosegold: {
+          DEFAULT: "hsl(var(--rose-gold))",
+          light: "hsl(var(--rose-gold-light))",
+          dark: "hsl(var(--rose-gold-dark))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
+        champagne: {
+          DEFAULT: "hsl(var(--champagne))",
+          light: "hsl(var(--champagne-light))",
         },
-        cream: "hsl(var(--cream))",
-        earth: "hsl(var(--earth-brown))",
+        warmwhite: "hsl(var(--warm-white))",
+        warmgray: "hsl(var(--warm-gray))",
       },
       borderRadius: {
         lg: "var(--radius)",
