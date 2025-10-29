@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import heroImage from "@/assets/hero-ceremony.jpg";
+import ceremonySetup from "@/assets/gallery/ceremony-setup-wide.jpg";
 import propertyAerial from "@/assets/property-aerial.jpg";
 import receptionEvening from "@/assets/reception-evening.jpg";
 import { CheckCircle, MapPin, Users, Calendar, Home, Trees, Sparkles } from "lucide-react";
@@ -17,7 +17,7 @@ const Index = () => {
       <section className="relative min-h-[700px] flex items-center justify-center overflow-hidden mt-20">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${ceremonySetup})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/80" />
         </div>

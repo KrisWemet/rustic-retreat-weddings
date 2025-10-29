@@ -1,45 +1,69 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import heroImage from "@/assets/hero-ceremony.jpg";
-import cabinExterior from "@/assets/cabin-exterior.jpg";
-import decorCollection from "@/assets/decor-collection.jpg";
-import receptionEvening from "@/assets/reception-evening.jpg";
-import propertyAerial from "@/assets/property-aerial.jpg";
-import campfireNight from "@/assets/campfire-night.jpg";
+import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
+import cakeCutting from "@/assets/gallery/cake-cutting-forest.jpg";
+import ceremonyVows from "@/assets/gallery/ceremony-vows-gazebo.jpg";
+import ceremonySetup from "@/assets/gallery/ceremony-setup-wide.jpg";
+import licenseSigning from "@/assets/gallery/marriage-license-signing.jpg";
+import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
+import veilKiss from "@/assets/gallery/veil-kiss-romantic.jpg";
+import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
+import brideHorse from "@/assets/gallery/bride-with-horse.jpg";
+import weddingRings from "@/assets/gallery/wedding-rings-flower.jpg";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Gallery = () => {
   const images = [
     {
-      src: heroImage,
-      alt: "Outdoor wedding ceremony with wooden benches in Alberta forest at golden hour",
+      src: ceremonyVows,
+      alt: "Real wedding ceremony at Rustic Retreat Alberta with couple exchanging vows under rustic gazebo decorated with white flowers",
       category: "Ceremony"
     },
     {
-      src: receptionEvening,
-      alt: "Evening wedding reception under clear-top gazebo with string lights and guests dining",
+      src: ceremonySetup,
+      alt: "Outdoor wedding ceremony space at Alberta venue featuring wooden benches, white flower aisle, and forest gazebo backdrop",
+      category: "Ceremony"
+    },
+    {
+      src: veilKiss,
+      alt: "Intimate wedding moment at Rustic Retreat with bride and groom kissing under veil with romantic bokeh lights",
+      category: "Romance"
+    },
+    {
+      src: cakeCutting,
+      alt: "Couple cutting white wedding cake with bow decoration in forest setting near Edmonton Alberta",
       category: "Reception"
     },
     {
-      src: cabinExterior,
-      alt: "Cozy off-grid cabin with solar panels at dusk surrounded by pine trees",
-      category: "The Cabin"
+      src: licenseSigning,
+      alt: "Marriage license signing at rustic wooden table with I have found sign at Alberta outdoor wedding venue",
+      category: "Ceremony"
     },
     {
-      src: propertyAerial,
-      alt: "Aerial view of 65-acre wedding venue property showing forest meadows and trails",
-      category: "Property"
+      src: meadowKiss,
+      alt: "Romantic couple embrace in open meadow at sunset during wedding celebration near Lac La Nonne Alberta",
+      category: "Romance"
     },
     {
-      src: campfireNight,
-      alt: "Wedding guests gathered around campfire at night with string lights in trees",
-      category: "Celebration"
+      src: bridalPortrait,
+      alt: "Bride with cascading white rose bouquet on wooden cabin porch at Rustic Retreat Alberta wedding venue",
+      category: "Bridal"
     },
     {
-      src: decorCollection,
-      alt: "Curated collection of rustic wedding decorations including mason jars and vintage items",
-      category: "Décor House"
+      src: weddingParty,
+      alt: "Full wedding party and family group photo at forest gazebo ceremony space at Alberta multi-day wedding venue",
+      category: "Group Photos"
+    },
+    {
+      src: brideHorse,
+      alt: "Country wedding photo with bride in lace dress and horse at Rustic Retreat Alberta outdoor venue",
+      category: "Portraits"
+    },
+    {
+      src: weddingRings,
+      alt: "Wedding rings macro detail photo on white flower petals at Alberta rustic wedding venue near Edmonton",
+      category: "Details"
     },
   ];
 

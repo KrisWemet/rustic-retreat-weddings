@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import heroImage from "@/assets/hero-ceremony.jpg";
+import ceremonyVows from "@/assets/gallery/ceremony-vows-gazebo.jpg";
 import receptionEvening from "@/assets/reception-evening.jpg";
 import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles } from "lucide-react";
 
@@ -16,7 +16,7 @@ const Weddings = () => {
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden mt-20">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${ceremonyVows})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary/70" />
         </div>

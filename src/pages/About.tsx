@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import propertyAerial from "@/assets/property-aerial.jpg";
 import campfireNight from "@/assets/campfire-night.jpg";
 import { Heart, Clock, Sparkles, MapPin } from "lucide-react";
@@ -29,8 +30,8 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src={campfireNight}
-                alt="Intimate campfire gathering at night at Rustic Retreat Alberta wedding venue"
+                src={weddingParty}
+                alt="Real wedding celebration at Rustic Retreat Alberta with full wedding party and family group photo at forest gazebo ceremony space"
                 className="rounded-lg shadow-xl"
               />
             </div>
