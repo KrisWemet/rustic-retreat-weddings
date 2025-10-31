@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
-import propertyAerial from "@/assets/property-aerial.jpg";
-import campfireNight from "@/assets/campfire-night.jpg";
+import propertyAerial from "@/assets/property-aerial-view.avif";
+import campfireNight from "@/assets/campfire-evening-setting.avif";
 import { Heart, Clock, Sparkles, MapPin } from "lucide-react";
 
 const About = () => {
@@ -226,7 +226,7 @@ const About = () => {
             <div>
               <img 
                 src={propertyAerial}
-                alt="Aerial view of 65-acre Rustic Retreat Weddings property with forest and open meadows"
+                alt="Aerial drone view of Rustic Retreat Weddings 65-acre property showing forest ceremony areas and open meadow spaces near Edmonton"
                 className="rounded-lg shadow-xl"
               />
             </div>

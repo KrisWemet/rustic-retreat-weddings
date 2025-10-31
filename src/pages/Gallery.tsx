@@ -30,6 +30,8 @@ import sunsetClearingPortraits from "@/assets/gallery/sunset-clearing-portraits.
 import weddingArchPavilion from "@/assets/gallery/wedding-arch-pavilion.avif";
 import wineBarrelDecor from "@/assets/gallery/wine-barrel-decor.avif";
 import woodlandCeremonyAisle from "@/assets/gallery/woodland-ceremony-aisle.avif";
+import ceremonyForestSetup from "@/assets/gallery/ceremony-forest-setup.avif";
+import propertyLandscapeView from "@/assets/gallery/property-landscape-view.avif";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -184,6 +186,16 @@ const Gallery = () => {
       src: woodlandCeremonyAisle,
       alt: "Woodland ceremony aisle decorated with white florals and greenery at Rustic Retreat Weddings forest ceremony space",
       category: "Ceremony"
+    },
+    {
+      src: ceremonyForestSetup,
+      alt: "Forest ceremony setup with natural woodland backdrop at Rustic Retreat Weddings Alberta venue near Lac La Nonne",
+      category: "Ceremony"
+    },
+    {
+      src: propertyLandscapeView,
+      alt: "Panoramic landscape view of Rustic Retreat Weddings 65-acre property with open meadows and forest near Edmonton",
+      category: "Property"
     },
   ];
 

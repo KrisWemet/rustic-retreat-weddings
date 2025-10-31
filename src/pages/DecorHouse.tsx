@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import decorCollection from "@/assets/decor-collection.jpg";
+import decorCollection from "@/assets/decor-house-collection.avif";
 import { Sparkles, Heart, Package, Lightbulb, Gift, DollarSign } from "lucide-react";
 
 const DecorHouse = () => {
@@ -32,7 +32,7 @@ const DecorHouse = () => {
             <div>
               <img 
                 src={decorCollection}
-                alt="Rustic wedding décor collection with vintage mason jars, lace, and decorations at Alberta venue"
+                alt="Wedding décor collection house at Rustic Retreat Weddings with vintage mason jars lace and rustic decorations available for couples"
                 className="rounded-lg shadow-xl"
               />
             </div>

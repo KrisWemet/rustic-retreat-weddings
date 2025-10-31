@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ceremonySetup from "@/assets/gallery/ceremony-setup-wide.jpg";
-import propertyAerial from "@/assets/property-aerial.jpg";
-import receptionEvening from "@/assets/reception-evening.jpg";
+import heroCeremony from "@/assets/hero-ceremony-space.avif";
+import propertyAerial from "@/assets/property-aerial-view.avif";
+import receptionEvening from "@/assets/reception-gazebo-evening.avif";
 import { CheckCircle, MapPin, Users, Calendar, Home, Trees, Sparkles } from "lucide-react";
 
 const Index = () => {
@@ -17,7 +17,7 @@ const Index = () => {
       <section className="relative min-h-[700px] flex items-center justify-center overflow-hidden mt-20">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${ceremonySetup})` }}
+          style={{ backgroundImage: `url(${heroCeremony})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/80" />
         </div>
@@ -174,7 +174,7 @@ const Index = () => {
             <div>
               <img 
                 src={propertyAerial} 
-                alt="Aerial view of 65-acre private wedding venue property in Alberta with forest and meadows"
+                alt="Aerial view of Rustic Retreat Weddings 65-acre private wedding property near Edmonton Alberta with forest meadows and ceremony spaces"
                 className="rounded-lg shadow-xl"
               />
             </div>
@@ -334,7 +334,7 @@ const Index = () => {
             <div>
               <img 
                 src={receptionEvening} 
-                alt="Evening wedding reception under clear-top gazebo at Alberta outdoor venue"
+                alt="Evening wedding reception under illuminated clear-top gazebo at Rustic Retreat Weddings Alberta venue near Lac La Nonne"
                 className="rounded-lg shadow-xl"
               />
             </div>

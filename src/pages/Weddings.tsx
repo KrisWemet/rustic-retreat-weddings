@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ceremonyVows from "@/assets/gallery/ceremony-vows-gazebo.jpg";
-import receptionEvening from "@/assets/reception-evening.jpg";
+import ceremonyVows from "@/assets/ceremony-vows-outdoor.avif";
+import receptionEvening from "@/assets/reception-outdoor-celebration.avif";
 import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles } from "lucide-react";
 
 const Weddings = () => {
@@ -492,7 +492,7 @@ const Weddings = () => {
         <div className="container mx-auto px-4">
           <img 
             src={receptionEvening}
-            alt="Evening wedding reception under clear-top gazebo at Rustic Retreat Weddings outdoor venue"
+            alt="Evening outdoor wedding reception celebration under stars at Rustic Retreat Weddings Alberta multi-day venue near Edmonton"
             className="rounded-lg shadow-2xl max-w-5xl mx-auto"
           />
         </div>

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import cabinExterior from "@/assets/cabin-exterior.jpg";
+import cabinExterior from "@/assets/cabin-exterior-forest.avif";
 import { Home, Coffee, Sparkles, Sun, Users, Battery } from "lucide-react";
 
 const Cabin = () => {
