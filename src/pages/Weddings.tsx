@@ -492,7 +492,7 @@ const Weddings = () => {
         <div className="container mx-auto px-4">
           <img 
             src={receptionEvening}
-            alt="Evening wedding reception under clear-top gazebo at Rustic Retreat Alberta outdoor venue"
+            alt="Evening wedding reception under clear-top gazebo at Rustic Retreat Weddings outdoor venue"
             className="rounded-lg shadow-2xl max-w-5xl mx-auto"
           />
         </div>

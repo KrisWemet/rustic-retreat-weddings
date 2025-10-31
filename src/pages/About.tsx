@@ -31,7 +31,7 @@ const About = () => {
             <div>
               <img 
                 src={weddingParty}
-                alt="Real wedding celebration at Rustic Retreat Alberta with full wedding party and family group photo at forest gazebo ceremony space"
+                alt="Real wedding celebration at Rustic Retreat Weddings with full wedding party and family group photo at forest gazebo ceremony space"
                 className="rounded-lg shadow-xl"
               />
             </div>
@@ -226,7 +226,7 @@ const About = () => {
             <div>
               <img 
                 src={propertyAerial}
-                alt="Aerial view of 65-acre Rustic Retreat Alberta property with forest and open meadows"
+                alt="Aerial view of 65-acre Rustic Retreat Weddings property with forest and open meadows"
                 className="rounded-lg shadow-xl"
               />
             </div>

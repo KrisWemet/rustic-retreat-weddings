@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4 font-serif">Rustic Retreat Alberta</h3>
+            <h3 className="text-xl font-bold mb-4 font-serif">Rustic Retreat Weddings</h3>
             <p className="text-primary-foreground/80 text-sm">
               Your intimate 65-acre Alberta retreat where celebrations unfold naturally on 65 private acres near Edmonton.
             </p>
@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} Rustic Retreat Alberta. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Rustic Retreat Weddings. All rights reserved.</p>
         </div>
       </div>
     </footer>

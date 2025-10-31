@@ -20,6 +20,16 @@ import receptionTable4 from "@/assets/gallery/reception-table-4.jpg";
 import dressGazebo from "@/assets/gallery/dress-forest-gazebo.jpg";
 import dressPavilion from "@/assets/gallery/dress-forest-pavilion.jpg";
 import weddingRings2 from "@/assets/gallery/wedding-rings-flower-2.jpg";
+import birchGroveAltar from "@/assets/gallery/birch-grove-altar.avif";
+import bridalBouquetRoses from "@/assets/gallery/bridal-bouquet-roses.avif";
+import coupleKissMeadow from "@/assets/gallery/couple-kiss-meadow.avif";
+import forestPathPhotos from "@/assets/gallery/forest-path-photos.avif";
+import receptionTablescapeGold from "@/assets/gallery/reception-tablescape-gold.avif";
+import gazeboTwinkleLights from "@/assets/gallery/gazebo-twinkle-lights.avif";
+import sunsetClearingPortraits from "@/assets/gallery/sunset-clearing-portraits.avif";
+import weddingArchPavilion from "@/assets/gallery/wedding-arch-pavilion.avif";
+import wineBarrelDecor from "@/assets/gallery/wine-barrel-decor.avif";
+import woodlandCeremonyAisle from "@/assets/gallery/woodland-ceremony-aisle.avif";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -27,7 +37,7 @@ const Gallery = () => {
   const images = [
     {
       src: ceremonyVows,
-      alt: "Real wedding ceremony at Rustic Retreat Alberta with couple exchanging vows under rustic gazebo decorated with white flowers",
+      alt: "Real wedding ceremony at Rustic Retreat Weddings with couple exchanging vows under rustic gazebo decorated with white flowers",
       category: "Ceremony"
     },
     {
@@ -37,7 +47,7 @@ const Gallery = () => {
     },
     {
       src: firstDanceSparklers,
-      alt: "First dance with sparklers on forest deck at Rustic Retreat Alberta multi-day wedding celebration near Edmonton",
+      alt: "First dance with sparklers on forest deck at Rustic Retreat Weddings multi-day wedding celebration near Edmonton",
       category: "Reception"
     },
     {
@@ -67,7 +77,7 @@ const Gallery = () => {
     },
     {
       src: receptionTable4,
-      alt: "Outdoor reception table with gold accents, crystal glassware, navy napkins, and table number 4 at Rustic Retreat Alberta",
+      alt: "Outdoor reception table with gold accents, crystal glassware, navy napkins, and table number 4 at Rustic Retreat Weddings",
       category: "Details"
     },
     {
@@ -82,12 +92,12 @@ const Gallery = () => {
     },
     {
       src: bridalPortrait,
-      alt: "Bride with cascading white rose bouquet on wooden cabin porch at Rustic Retreat Alberta wedding venue",
+      alt: "Bride with cascading white rose bouquet on wooden cabin porch at Rustic Retreat Weddings venue",
       category: "Bridal"
     },
     {
       src: dressGazebo,
-      alt: "Elegant wedding dress hanging in decorated forest gazebo with white flowers at Rustic Retreat Alberta ceremony space",
+      alt: "Elegant wedding dress hanging in decorated forest gazebo with white flowers at Rustic Retreat Weddings ceremony space",
       category: "Details"
     },
     {
@@ -102,12 +112,12 @@ const Gallery = () => {
     },
     {
       src: cakeCuttingSet,
-      alt: "Gold cake cutting utensils with white bows on wooden reception table at Rustic Retreat Alberta forest wedding",
+      alt: "Gold cake cutting utensils with white bows on wooden reception table at Rustic Retreat Weddings forest wedding",
       category: "Details"
     },
     {
       src: brideHorse,
-      alt: "Country wedding photo with bride in lace dress and horse at Rustic Retreat Alberta outdoor venue",
+      alt: "Country wedding photo with bride in lace dress and horse at Rustic Retreat Weddings outdoor venue",
       category: "Portraits"
     },
     {
@@ -125,6 +135,56 @@ const Gallery = () => {
       alt: "Close-up of wedding rings on delicate white flower at outdoor Alberta wedding venue near Lac La Nonne",
       category: "Details"
     },
+    {
+      src: birchGroveAltar,
+      alt: "Natural birch grove wedding altar with forest backdrop at Rustic Retreat Weddings venue near Edmonton Alberta",
+      category: "Ceremony"
+    },
+    {
+      src: bridalBouquetRoses,
+      alt: "Elegant bridal bouquet with white roses and greenery for outdoor Alberta forest wedding",
+      category: "Bridal"
+    },
+    {
+      src: coupleKissMeadow,
+      alt: "Romantic couple kiss in woodland meadow clearing during golden hour at Rustic Retreat Weddings Alberta",
+      category: "Romance"
+    },
+    {
+      src: forestPathPhotos,
+      alt: "Scenic forest path photo spot with natural lighting at Rustic Retreat Weddings venue near Lac La Nonne",
+      category: "Portraits"
+    },
+    {
+      src: receptionTablescapeGold,
+      alt: "Luxury reception tablescape with gold chargers, crystal glassware, and elegant place settings at Alberta venue",
+      category: "Details"
+    },
+    {
+      src: gazeboTwinkleLights,
+      alt: "Rustic gazebo decorated with twinkle lights for evening reception at Rustic Retreat Weddings forest venue",
+      category: "Reception"
+    },
+    {
+      src: sunsetClearingPortraits,
+      alt: "Sunset clearing portrait spot with golden hour lighting at Rustic Retreat Weddings 65-acre property",
+      category: "Portraits"
+    },
+    {
+      src: weddingArchPavilion,
+      alt: "Wooden wedding arch ceremony setup at log pavilion with forest backdrop near Edmonton Alberta",
+      category: "Ceremony"
+    },
+    {
+      src: wineBarrelDecor,
+      alt: "Wine barrel decorated with greenery and florals for rustic wedding decor at Alberta outdoor venue",
+      category: "Details"
+    },
+    {
+      src: woodlandCeremonyAisle,
+      alt: "Woodland ceremony aisle decorated with white florals and greenery at Rustic Retreat Weddings forest ceremony space",
+      category: "Ceremony"
+    },
   ];
 
   return (
@@ -135,7 +195,7 @@ const Gallery = () => {
       <section className="section mt-20 pt-12">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-            See Rustic Retreat Alberta
+            See Rustic Retreat Weddings
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Explore our 65-acre property, ceremony spaces, accommodations, and the natural beauty that makes every celebration unforgettable.

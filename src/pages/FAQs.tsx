@@ -99,7 +99,7 @@ const FAQs = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Everything you need to know about celebrating your wedding at Rustic Retreat Alberta
+            Everything you need to know about celebrating your wedding at Rustic Retreat Weddings
           </p>
         </div>
       </section>
