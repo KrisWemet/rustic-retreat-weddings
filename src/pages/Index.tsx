@@ -36,7 +36,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/weddings">
-              <Button size="lg" variant="outline" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground/10 text-lg px-8">
+              <Button size="lg" variant="outline-light" className="text-lg px-8">
                 View Wedding Packages
               </Button>
             </Link>
@@ -356,7 +356,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/weddings">
-              <Button size="lg" variant="outline" className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+              <Button size="lg" variant="outline-light" className="text-lg px-8">
                 View Wedding Packages
               </Button>
             </Link>

@@ -69,11 +69,12 @@ All colors MUST be HSL.
     --gradient-subtle: linear-gradient(180deg, hsl(30 15% 98%), hsl(0 0% 96%));
     --gradient-metallic: linear-gradient(135deg, hsl(350 60% 68% / 0.15), hsl(40 55% 75% / 0.15));
     
-    /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(0 0% 20% / 0.08);
-    --shadow-medium: 0 4px 16px hsl(0 0% 20% / 0.12);
-    --shadow-large: 0 8px 32px hsl(0 0% 20% / 0.15);
-    --shadow-elegant: 0 10px 40px hsl(350 60% 68% / 0.2);
+    /* Shadows - Enhanced for depth and elegance */
+    --shadow-soft: 0 2px 10px hsl(0 0% 20% / 0.1);
+    --shadow-medium: 0 4px 20px hsl(0 0% 20% / 0.15);
+    --shadow-large: 0 8px 32px hsl(0 0% 20% / 0.18);
+    --shadow-elegant: 0 12px 48px hsl(350 60% 68% / 0.25);
+    --shadow-text: 0 2px 4px hsl(0 0% 0% / 0.3);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
