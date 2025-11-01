@@ -254,12 +254,12 @@ const Weddings = () => {
             <Card className="border-2">
               <CardContent className="pt-6">
                 <Calendar className="w-8 h-8 text-secondary mb-3" />
-                <h3 className="font-semibold mb-2">Coordination & Support</h3>
+                <h3 className="font-semibold mb-2">Planning Support</h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Day-of coordination</li>
-                  <li>• Setup assistance</li>
                   <li>• Vendor recommendations</li>
                   <li>• Emergency kit</li>
+                  <li>• Property guidance and tips</li>
+                  <li>• Optional paid coordination available</li>
                 </ul>
               </CardContent>
             </Card>
@@ -268,10 +268,10 @@ const Weddings = () => {
           <div className="mt-12 bg-primary/5 p-8 rounded-lg border-l-4 border-primary max-w-4xl mx-auto">
             <h3 className="text-xl font-bold mb-3">Your Creative Freedom</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• No noise restrictions or hard end times</li>
               <li>• No other weddings during your weekend</li>
               <li>• Complete creative control over timeline and activities</li>
               <li>• Flexibility for yoga sessions, group meals, themed activities, surprise events</li>
+              <li>• Private 65-acre property exclusively yours</li>
             </ul>
           </div>
         </div>
@@ -457,7 +457,7 @@ const Weddings = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
-                      <span>Day-of coordination</span>
+                      <span>Property guidance and support</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />

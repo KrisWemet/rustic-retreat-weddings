@@ -24,7 +24,7 @@ const FAQs = () => {
     },
     {
       question: "What's included in the wedding package price?",
-      answer: "Your package includes: exclusive use of 65 private acres, the cabin (newlywed suite), 15 camping sites, tables and benches for 80 guests, access to our Wedding Décor House collection (free!), day-of coordination, groomed trails, outdoor games, campfire areas, clear-top gazebo, and all amenities. No hidden fees. No surprise rental charges."
+      answer: "Your package includes: exclusive use of 65 private acres, the cabin (newlywed suite), 15 camping sites, tables and benches for 80 guests, access to our Wedding Décor House collection (free!), groomed trails, outdoor games, campfire areas, clear-top gazebo, and all amenities. Day-of coordination and setup assistance are available as optional paid services. No hidden fees. No surprise rental charges."
     },
     {
       question: "Can we bring our own vendors or use yours?",
@@ -59,8 +59,8 @@ const FAQs = () => {
       answer: "Our Wedding Décor House is stocked with treasures from past celebrations—vintage pieces, mason jars, fabric, signs, centerpiece elements, fairy lights, and more. All free to use. Many couples use 80% décor house items, supplement with 20% personal touches, and save thousands on rental fees. The collection grows with each wedding."
     },
     {
-      question: "Are there noise restrictions or curfews?",
-      answer: "No. You're on 65 private acres—your celebration can continue as long as you want. Dance until 2am. Have sunrise yoga at 6am. Gather around the campfire until everyone's ready for bed. This is your property for the weekend, not a venue with arbitrary rules."
+      question: "What are the celebration hours?",
+      answer: "You have exclusive access to the 65-acre property for your booked timeframe. We'll discuss appropriate celebration hours during your property visit to ensure you and your guests can fully enjoy the experience while respecting the natural setting. This is your private venue for the weekend."
     },
     {
       question: "How far is Rustic Retreat from Edmonton?",
