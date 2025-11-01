@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
+import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
+import forestPath from "@/assets/gallery/forest-path-photos.avif";
 import { Home, Coffee, Sparkles, Sun, Users, Battery } from "lucide-react";
 
 const Cabin = () => {
@@ -103,6 +105,38 @@ const Cabin = () => {
               </p>
               <p className="text-muted-foreground">
                 And when you're ready—maybe noon, maybe later—you'll wander back, and everyone will cheer, and someone will hand you pancakes, and you'll realize: this is what marriage is supposed to feel like. <strong>Present. Unhurried. Surrounded by love.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Opportunities */}
+      <section className="section">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-2 gap-4">
+              <img 
+                src={bridalPortrait}
+                alt="Bride portrait on rustic cabin porch at Rustic Retreat Weddings Alberta venue with natural forest background"
+                className="rounded-lg shadow-xl"
+              />
+              <img 
+                src={forestPath}
+                alt="Forest trail photo spot for wedding portraits at Rustic Retreat with couple walking wooded path"
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Picture-Perfect From Every Angle</h2>
+              <p className="text-lg mb-6">
+                The cabin's rustic charm creates stunning backdrops for bridal portraits, getting-ready photos, and those quiet couple moments your photographer will treasure.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                Wooden porch with forest views. Soft natural light filtering through trees. Authentic Alberta wilderness surrounding your private sanctuary.
+              </p>
+              <p className="font-medium">
+                Your wedding album will tell a story of genuine beauty—no artificial backdrops needed.
               </p>
             </div>
           </div>

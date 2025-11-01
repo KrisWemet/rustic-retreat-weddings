@@ -89,6 +89,11 @@ const Weddings = () => {
                   </p>
                 </div>
 
+                <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
+                  <p className="text-3xl font-bold mb-2">$4,500</p>
+                  <p className="text-sm text-muted-foreground">2026 Package Price</p>
+                </div>
+
                 <div className="space-y-2 mb-6">
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -109,7 +114,7 @@ const Weddings = () => {
                 </div>
 
                 <Link to="/contact">
-                  <Button variant="outline" className="w-full">Request 3-Day Package Pricing</Button>
+                  <Button variant="outline" className="w-full">Schedule Your Property Visit</Button>
                 </Link>
               </CardContent>
             </Card>
@@ -141,6 +146,11 @@ const Weddings = () => {
                   </p>
                 </div>
 
+                <div className="bg-secondary/20 p-6 rounded-lg mb-6 border-2 border-secondary">
+                  <p className="text-3xl font-bold mb-2">$5,500</p>
+                  <p className="text-sm">2026 Package Price</p>
+                </div>
+
                 <div className="space-y-2 mb-6">
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
@@ -161,7 +171,7 @@ const Weddings = () => {
                 </div>
 
                 <Link to="/contact">
-                  <Button className="w-full bg-secondary hover:bg-secondary/90">Request 5-Day Package Pricing</Button>
+                  <Button className="w-full bg-secondary hover:bg-secondary/90">Schedule Your Property Visit</Button>
                 </Link>
               </CardContent>
             </Card>

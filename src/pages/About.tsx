@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import propertyAerial from "@/assets/property-aerial-view.avif";
 import campfireNight from "@/assets/campfire-evening-setting.avif";
+import ceremonySetup from "@/assets/gallery/ceremony-forest-setup.avif";
+import birchGrove from "@/assets/gallery/birch-grove-altar.avif";
 import { Heart, Clock, Sparkles, MapPin } from "lucide-react";
 
 const About = () => {
@@ -234,8 +236,67 @@ const About = () => {
         </div>
       </section>
 
-      {/* Who We Work With */}
+      {/* Ceremony Spaces */}
+      <section className="section section-muted">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Nature Creates the Perfect Ceremony Backdrop</h2>
+              <p className="text-lg mb-6">
+                Your ceremony happens in a clearing surrounded by towering Alberta pines, where sunlight filters through branches and creates that perfect golden glow photographers dream about.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                No need for elaborate decorations when nature provides such stunning beauty. Simple touches honor the setting—fabric, flowers, your love story unfolding naturally.
+              </p>
+              <p className="font-medium">
+                This is where "I do" becomes unforgettable.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <img 
+                src={ceremonySetup}
+                alt="Forest wedding ceremony setup at Rustic Retreat with wooden arch and natural Alberta pine tree backdrop"
+                className="rounded-lg shadow-xl"
+              />
+              <img 
+                src={birchGrove}
+                alt="Birch grove wedding altar with white draping at Rustic Retreat Weddings outdoor ceremony space"
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Campfire Evenings */}
       <section className="section">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <img 
+                src={campfireNight}
+                alt="Evening campfire gathering at Rustic Retreat Weddings with cozy atmosphere and Alberta wilderness setting"
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Campfire Evenings Create Lasting Bonds</h2>
+              <p className="text-lg mb-6">
+                Long after the formal celebration ends, your guests gather around crackling campfires, sharing stories, making s'mores, and creating the memories they'll talk about for years.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                This is where your college friends meet your grandmother. Where your partner's family bonds with yours. Where strangers become friends under Alberta stars.
+              </p>
+              <p className="font-medium">
+                The campfire doesn't care about your seating chart—it creates its own magic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Work With */}
+      <section className="section section-muted">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">We Only Work With Couples Who Want This</h2>
           

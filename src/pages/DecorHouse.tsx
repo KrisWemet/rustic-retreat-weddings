@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import decorCollection from "@/assets/decor-house-collection.avif";
+import wineBarrelDecor from "@/assets/gallery/wine-barrel-decor.avif";
+import receptionTablescape from "@/assets/gallery/reception-tablescape-gold.avif";
 import { Sparkles, Heart, Package, Lightbulb, Gift, DollarSign } from "lucide-react";
 
 const DecorHouse = () => {
@@ -87,6 +89,38 @@ const DecorHouse = () => {
               <p><strong>Take what speaks to you.</strong> Use everything. Use nothing. Supplement with your own vision. Combine eras, styles, stories.</p>
               
               <p className="font-medium">There are no rules here, only possibilities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Inspiration Gallery */}
+      <section className="section section-muted">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">See What's Possible</h2>
+              <p className="text-lg mb-6">
+                From rustic wine barrel displays adorned with greenery to elegant gold-accented tablescapes, couples have created stunning designs using pieces from our collection.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                The beauty isn't just in the individual pieces—it's in how you combine them, how you make them yours, how you weave your story through each table setting and ceremony detail.
+              </p>
+              <p className="font-medium">
+                Your creativity + our collection = something uniquely beautiful.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <img 
+                src={wineBarrelDecor}
+                alt="Wine barrel wedding decor with greenery at Rustic Retreat Weddings showing vintage rustic styling options"
+                className="rounded-lg shadow-xl"
+              />
+              <img 
+                src={receptionTablescape}
+                alt="Elegant wedding reception tablescape with gold chargers at Rustic Retreat showing decoration possibilities"
+                className="rounded-lg shadow-xl"
+              />
             </div>
           </div>
         </div>
