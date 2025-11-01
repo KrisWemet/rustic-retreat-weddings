@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import heroCeremony from "@/assets/hero-ceremony-space.avif";
 import propertyAerial from "@/assets/property-aerial-view.avif";
-import receptionEvening from "@/assets/reception-gazebo-evening.avif";
+import propertyLandscape from "@/assets/property-landscape-view.avif";
 import { CheckCircle, MapPin, Users, Calendar, Home, Trees, Sparkles } from "lucide-react";
 
 const Index = () => {
@@ -333,8 +333,8 @@ const Index = () => {
 
             <div>
               <img 
-                src={receptionEvening} 
-                alt="Evening wedding reception under illuminated clear-top gazebo at Rustic Retreat Weddings Alberta venue near Lac La Nonne"
+                src={propertyLandscape} 
+                alt="Pristine landscape view of Rustic Retreat Weddings 65-acre property showing natural Alberta forest beauty and well-maintained ceremony spaces"
                 className="rounded-lg shadow-xl"
               />
             </div>
