@@ -76,6 +76,11 @@ export default {
 					foreground: "hsl(var(--card-foreground))",
 				},
 				warmgray: "hsl(var(--warm-gray))",
+				rosegold: {
+					DEFAULT: "hsl(var(--rosegold))",
+					light: "hsl(var(--rosegold-light))",
+					dark: "hsl(var(--rosegold-dark))",
+				},
 			},
       borderRadius: {
         lg: "var(--radius)",

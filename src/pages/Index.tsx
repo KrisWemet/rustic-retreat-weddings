@@ -55,7 +55,7 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up mb-12">
             <Link to="/contact">
-              <Button size="lg" className="bg-secondary hover:bg-secondary-dark text-secondary-foreground text-lg px-10 py-6 rounded-full shadow-elegant">
+              <Button size="lg" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white text-lg px-10 py-6 rounded-full shadow-elegant transition-all duration-300">
                 Schedule Your Tour
               </Button>
             </Link>

@@ -64,6 +64,12 @@ All colors MUST be HSL.
     
     --warm-gray: 25 10% 50%;
     
+    /* Rose Gold - Metallic */
+    --rosegold: 15 45% 70%;
+    --rosegold-light: 15 50% 80%;
+    --rosegold-dark: 15 40% 55%;
+    --rosegold-metallic: linear-gradient(135deg, hsl(15 50% 75%), hsl(15 45% 65%), hsl(15 55% 80%));
+    
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(25 20% 30% / 0.85), hsl(25 25% 20% / 0.9));
     --gradient-accent: linear-gradient(135deg, hsl(12 45% 65%), hsl(12 40% 75%));
