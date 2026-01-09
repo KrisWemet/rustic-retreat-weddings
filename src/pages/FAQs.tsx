@@ -16,11 +16,11 @@ const FAQs = () => {
     },
     {
       question: "How many guests can you accommodate?",
-      answer: "Up to 80 guests for ceremony and reception, with overnight camping accommodation for 60 guests across 15 camper/tent sites plus the newlywed cabin. Additional guests can stay at nearby Airbnbs within 5 minutes of the property."
+      answer: "Up to 80 guests for ceremony and reception, with overnight camping accommodation for 60 guests across 15 camper/tent sites plus the newlywed cabin. Half a dozen Airbnbs sit 5 minutes away around the lake, or RVezy.com can deliver trailers directly to your campsites for glamping comfort."
     },
     {
       question: "What if some of our guests don't want to camp?",
-      answer: "Perfect! Multiple Airbnb properties sit within 5 minutes of Rustic Retreat. Your non-camping guests can sleep in comfortable beds with full amenities, then drive over each morning for breakfast, activities, and celebration. Everyone participates fully—they just sleep how they prefer."
+      answer: "Perfect! Half a dozen Airbnb properties sit within 5 minutes around the lake. For guests who want on-site comfort without tent camping, RVezy.com delivers trailers right to your campsite—all the coziness, none of the setup. Your non-camping guests can sleep however they prefer, then join everyone for breakfast, activities, and celebration."
     },
     {
       question: "What's included in the wedding package price?",

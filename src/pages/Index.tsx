@@ -479,7 +479,7 @@ const Index = () => {
                 <div className="bg-card p-5 rounded-xl shadow-soft">
                   <h3 className="font-semibold mb-2">Where do guests sleep & shower?</h3>
                   <p className="text-sm text-muted-foreground">
-                    The cabin sleeps 4 with full bathrooms. We have 15 campsites with shower facilities ready for 2026 season. Hotels are 15 minutes away.
+                    The cabin sleeps 4 with full bathrooms. We have 15 campsites with shower facilities ready for 2026 season. Half a dozen Airbnbs sit 5 minutes away around the lake, and RVezy.com can deliver trailers directly to your campsites.
                   </p>
                 </div>
                 <div className="bg-card p-5 rounded-xl shadow-soft">
