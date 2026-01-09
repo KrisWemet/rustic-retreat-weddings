@@ -10,8 +10,8 @@ All colors MUST be HSL.
   :root {
     /* Modern Elegant Wedding Venue - Charcoal & Rose Gold */
     
-    /* Main Background - Soft Warm White */
-    --background: 30 15% 98%;
+    /* Main Background - Pearl White */
+    --background: 0 0% 99%;
     --foreground: 0 0% 20%;
 
     /* Card Backgrounds - Pure White for Contrast */
@@ -23,7 +23,7 @@ All colors MUST be HSL.
 
     /* Primary - Deep Charcoal */
     --primary: 0 0% 25%;
-    --primary-foreground: 30 15% 98%;
+    --primary-foreground: 0 0% 99%;
 
     /* Secondary - Metallic Rose Gold */
     --secondary: 350 60% 68%;
@@ -38,7 +38,7 @@ All colors MUST be HSL.
     --accent-foreground: 0 0% 20%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 30 15% 98%;
+    --destructive-foreground: 0 0% 99%;
 
     --border: 0 0% 88%;
     --input: 0 0% 88%;
@@ -58,15 +58,15 @@ All colors MUST be HSL.
     --champagne: 40 55% 75%;
     --champagne-light: 40 50% 85%;
     
-    --warm-white: 30 15% 98%;
-    --soft-white: 30 10% 96%;
+    --warm-white: 0 0% 99%;
+    --soft-white: 0 0% 97%;
     
     --warm-gray: 20 5% 50%;
     
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 25% / 0.95), hsl(0 0% 18% / 0.92));
     --gradient-accent: linear-gradient(135deg, hsl(350 60% 68%), hsl(40 55% 75%));
-    --gradient-subtle: linear-gradient(180deg, hsl(30 15% 98%), hsl(0 0% 96%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 99%), hsl(0 0% 97%));
     --gradient-metallic: linear-gradient(135deg, hsl(350 60% 68% / 0.15), hsl(40 55% 75% / 0.15));
     
     /* Shadows - Enhanced for depth and elegance */
