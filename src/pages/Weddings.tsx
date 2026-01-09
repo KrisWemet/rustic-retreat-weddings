@@ -341,7 +341,7 @@ const Weddings = () => {
               </p>
 
               <p className="mb-6 text-muted-foreground">
-                Multiple Airbnb properties sit within 5 minutes of Rustic Retreat. Close enough that morning coffee together is easy. Far enough that everyone sleeps how they prefer.
+                Half a dozen Airbnb properties sit within 5 minutes around the lake. For guests who want on-site comfort without tent camping, RVezy.com delivers trailers right to your campsite—all the coziness, none of the setup.
               </p>
 
               <div className="bg-secondary/10 p-6 rounded-lg border-l-4 border-secondary">
@@ -363,19 +363,19 @@ const Weddings = () => {
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <Home className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span>Private Airbnb homes (1-8 bedrooms)</span>
+                      <span>Half a dozen Airbnbs around the lake</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                       <span>5-minute drive to venue</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Users className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span>Comfortable for elderly guests or families with infants</span>
+                      <Sparkles className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <span>RVezy.com trailer delivery to campsites</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Sparkles className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span>Full amenities (kitchen, laundry, WiFi)</span>
+                      <Users className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <span>Comfortable for elderly guests or families with infants</span>
                     </li>
                   </ul>
                 </CardContent>
