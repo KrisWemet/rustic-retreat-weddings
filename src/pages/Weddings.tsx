@@ -214,10 +214,10 @@ const Weddings = () => {
                 <Home className="w-8 h-8 text-secondary mb-3" />
                 <h3 className="font-semibold mb-2">Accommodations</h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• The Cabin: Private newlywed suite</li>
+                  <li>• The Cabin: Sleeps 4 (newlywed suite)</li>
                   <li>• 15 camper/tent sites</li>
                   <li>• Accommodates 60 overnight guests</li>
-                  <li>• Modern Wash House facilities</li>
+                  <li>• Shower facilities ready for 2026 season</li>
                   <li>• Nearby Airbnb options available</li>
                 </ul>
               </CardContent>

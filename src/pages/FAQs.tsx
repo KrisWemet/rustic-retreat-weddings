@@ -48,7 +48,7 @@ const FAQs = () => {
     },
     {
       question: "Is there electricity and running water?",
-      answer: "The cabin has off-grid solar power and potable water. The Wash House (currently being upgraded) provides modern facilities for campers. We balance rustic charm with necessary modern comfort—you're not roughing it, you're experiencing intentional simplicity."
+      answer: "The cabin has off-grid solar power and potable water. Our new shower facilities will be ready for the 2026 season, providing modern comfort for campers. We balance rustic charm with necessary modern amenities—you're not roughing it, you're experiencing intentional simplicity."
     },
     {
       question: "Can we have a rehearsal dinner?",
@@ -68,7 +68,7 @@ const FAQs = () => {
     },
     {
       question: "Can we visit before booking?",
-      answer: "You MUST visit before booking. We require it. This isn't about sales pressure—it's about ensuring you're genuinely excited about celebrating here. Schedule your property visit, explore the land, ask questions, stand where you'll say your vows. Then make your decision from a place of certainty."
+      answer: "You MUST visit before booking. We require it. This isn't about sales pressure—it's about ensuring you're genuinely excited about celebrating here. Tours are available weekdays and on weekends by appointment. Schedule your property visit, explore the land, ask questions, stand where you'll say your vows. Then make your decision from a place of certainty."
     },
     {
       question: "What's your cancellation policy?",
