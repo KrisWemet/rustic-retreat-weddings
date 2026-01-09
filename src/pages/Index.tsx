@@ -6,11 +6,17 @@ import Footer from "@/components/Footer";
 import heroCeremony from "@/assets/hero-ceremony-space.avif";
 import propertyAerial from "@/assets/property-aerial-view.avif";
 import propertyLandscape from "@/assets/property-landscape-view.avif";
-import { CheckCircle, MapPin, Users, Calendar, Home, Trees, Sparkles } from "lucide-react";
+import galleryCouple from "@/assets/gallery/couple-kiss-meadow.avif";
+import galleryReception from "@/assets/gallery/reception-tablescape-gold.avif";
+import galleryCeremony from "@/assets/gallery/ceremony-forest-setup.avif";
+import galleryArch from "@/assets/gallery/wedding-arch-pavilion.avif";
+import galleryGazebo from "@/assets/gallery/gazebo-twinkle-lights.avif";
+import galleryPath from "@/assets/gallery/forest-path-photos.avif";
+import { Calendar, MapPin, Sparkles, Users } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -19,323 +25,288 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroCeremony})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary/70" />
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up text-balance">
-            Where Your Wedding Becomes a Weekend to Remember
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal mb-6 animate-fade-in-up text-balance italic">
+            A wedding weekend on your own 65-acre retreat
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up text-primary-foreground/90">
-            An intimate 65-acre Alberta retreat where celebrations unfold naturally, love stories take center stage, and your guests become part of something truly unforgettable.
+          <p className="text-lg md:text-xl mb-4 max-w-2xl mx-auto animate-fade-in-up text-primary-foreground/90">
+            Less rush. More time with your people. Total privacy just outside Edmonton.
           </p>
+          <div className="flex flex-wrap gap-4 justify-center mb-8 text-sm text-primary-foreground/80">
+            <span>2, 3, 5, and 10-day packages</span>
+            <span>•</span>
+            <span>Up to 80 guests</span>
+            <span>•</span>
+            <span>Cabin and gathering spaces</span>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
             <Link to="/contact">
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-lg px-8">
-                Schedule Your Property Visit
+              <Button size="lg" className="bg-secondary hover:bg-secondary-dark text-secondary-foreground text-lg px-8 rounded-full">
+                Schedule a Tour
               </Button>
             </Link>
             <Link to="/weddings">
-              <Button size="lg" variant="outline-light" className="text-lg px-8">
-                View Wedding Packages
+              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 rounded-full backdrop-blur-sm">
+                View Packages & Pricing
+              </Button>
+            </Link>
+          </div>
+          <p className="mt-8 text-sm text-primary-foreground/70">
+            65 acres · Near Edmonton · Wedding weekend packages · Up to 80 guests
+          </p>
+        </div>
+      </section>
+
+      {/* Real Weddings Gallery */}
+      <section className="section bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <p className="section-label">REAL WEDDINGS</p>
+            <h2 className="text-3xl md:text-4xl font-serif">See it in action</h2>
+          </div>
+
+          {/* Photo Gallery Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            <div className="col-span-2 row-span-2">
+              <img 
+                src={galleryCouple} 
+                alt="Bride and groom sharing a kiss in a wildflower meadow at Rustic Retreat Weddings near Edmonton Alberta"
+                className="w-full h-full object-cover rounded-2xl shadow-soft"
+              />
+            </div>
+            <div className="col-span-1">
+              <img 
+                src={galleryReception} 
+                alt="Elegant gold reception tablescape at Rustic Retreat Weddings Alberta venue"
+                className="w-full h-full object-cover rounded-2xl shadow-soft"
+              />
+            </div>
+            <div className="col-span-1">
+              <img 
+                src={galleryCeremony} 
+                alt="Forest ceremony setup with natural decorations at Lac La Nonne wedding venue"
+                className="w-full h-full object-cover rounded-2xl shadow-soft"
+              />
+            </div>
+            <div className="col-span-1">
+              <img 
+                src={galleryArch} 
+                alt="Wedding arch pavilion decorated for ceremony at Alberta rustic wedding venue"
+                className="w-full h-full object-cover rounded-2xl shadow-soft"
+              />
+            </div>
+            <div className="col-span-1">
+              <img 
+                src={galleryGazebo} 
+                alt="Gazebo with twinkle lights for evening wedding reception near Edmonton"
+                className="w-full h-full object-cover rounded-2xl shadow-soft"
+              />
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <Link to="/gallery">
+              <Button variant="outline" className="rounded-full px-8">
+                View Full Gallery
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* At a Glance */}
-      <section className="section">
+      {/* Why Couples Choose Us */}
+      <section className="section section-cream">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Your Rustic Retreat Wedding At a Glance</h2>
-            <p className="text-muted-foreground text-lg">Everything you need for an unforgettable celebration</p>
+            <p className="section-label">WHY COUPLES CHOOSE US</p>
+            <h2 className="text-3xl md:text-4xl font-serif">Built for your celebration</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="border-2 hover:border-secondary transition-colors">
-              <CardContent className="pt-6 text-center">
-                <MapPin className="w-10 h-10 mx-auto mb-3 text-secondary" />
-                <h3 className="font-semibold mb-2">Location</h3>
-                <p className="text-sm text-muted-foreground">99 km NW of Edmonton near Lac La Nonne</p>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Card className="bg-card border-0 shadow-soft hover:shadow-medium transition-shadow">
+              <CardContent className="p-8">
+                <Calendar className="w-8 h-8 text-secondary mb-4" />
+                <h3 className="text-xl font-serif font-semibold mb-3">Wedding Weekend</h3>
+                <p className="text-muted-foreground">
+                  More time with your people. Less rush. 2, 3, 5, or 10-day packages that let you celebrate your way.
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-secondary transition-colors">
-              <CardContent className="pt-6 text-center">
-                <Users className="w-10 h-10 mx-auto mb-3 text-secondary" />
-                <h3 className="font-semibold mb-2">Capacity</h3>
-                <p className="text-sm text-muted-foreground">80 ceremony guests, 60 overnight camping</p>
+            <Card className="bg-card border-0 shadow-soft hover:shadow-medium transition-shadow">
+              <CardContent className="p-8">
+                <MapPin className="w-8 h-8 text-secondary mb-4" />
+                <h3 className="text-xl font-serif font-semibold mb-3">Private 65 Acres</h3>
+                <p className="text-muted-foreground">
+                  Complete privacy just outside Edmonton. Your own retreat. No other events. Just you and your guests.
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-secondary transition-colors">
-              <CardContent className="pt-6 text-center">
-                <Trees className="w-10 h-10 mx-auto mb-3 text-secondary" />
-                <h3 className="font-semibold mb-2">Property</h3>
-                <p className="text-sm text-muted-foreground">65 private acres of Alberta wilderness</p>
+            <Card className="bg-card border-0 shadow-soft hover:shadow-medium transition-shadow">
+              <CardContent className="p-8">
+                <Sparkles className="w-8 h-8 text-secondary mb-4" />
+                <h3 className="text-xl font-serif font-semibold mb-3">Blank Canvas</h3>
+                <p className="text-muted-foreground">
+                  Customize everything. Multiple ceremony locations. Flexible spaces. Make it entirely yours.
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-secondary transition-colors">
-              <CardContent className="pt-6 text-center">
-                <Calendar className="w-10 h-10 mx-auto mb-3 text-secondary" />
-                <h3 className="font-semibold mb-2">Season</h3>
-                <p className="text-sm text-muted-foreground">June through September celebrations</p>
+            <Card className="bg-card border-0 shadow-soft hover:shadow-medium transition-shadow">
+              <CardContent className="p-8">
+                <Users className="w-8 h-8 text-secondary mb-4" />
+                <h3 className="text-xl font-serif font-semibold mb-3">Built-In Gathering</h3>
+                <p className="text-muted-foreground">
+                  Gazebo, firewood, games, treehouse, hammocks, trampoline. Everything to keep your guests happy.
+                </p>
               </CardContent>
             </Card>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link to="/contact">
+              <Button className="bg-secondary hover:bg-secondary-dark text-secondary-foreground rounded-full px-8">
+                Schedule a Tour
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Package Overview */}
-      <section className="section section-muted">
+      {/* Flexible Pricing */}
+      <section className="section bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Two Paths to Your Perfect Celebration</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              The question isn't where—it's how many days you give yourself to do this right
+            <p className="section-label">FLEXIBLE PRICING</p>
+            <h2 className="text-3xl md:text-4xl font-serif mb-4">Choose your timeline</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              All packages include ceremony space, gazebo reception, cabin, camping for 60 guests, and all property amenities.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* 3-Day Package */}
-            <Card className="border-2 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-3">The 3-Day Weekend Wedding</h3>
-                <p className="text-lg text-muted-foreground mb-4">Friday 8am - Sunday 8pm</p>
-                
-                <p className="mb-6">
-                  The classic weekend wedding, elevated. Your guests arrive Friday morning with the whole day ahead of them. Saturday is your ceremony and celebration. Sunday becomes the leisurely goodbye no one wants to have.
-                </p>
-
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">60 hours together instead of 6</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Budget-friendly pricing</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Defined timeline for traveling guests</span>
-                  </div>
-                </div>
-
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            {/* 2-Day */}
+            <Card className="bg-card border border-border hover:border-secondary transition-colors">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-serif font-semibold mb-1">2-Day</h3>
+                <p className="text-sm text-muted-foreground mb-4">Weekdays only</p>
+                <p className="text-3xl font-serif text-secondary mb-4">$3,000</p>
                 <Link to="/weddings">
-                  <Button variant="outline" className="w-full">Learn More</Button>
+                  <Button variant="outline" size="sm" className="rounded-full">
+                    Learn More
+                  </Button>
                 </Link>
               </CardContent>
             </Card>
 
-            {/* 5-Day Package */}
-            <Card className="border-2 border-secondary hover:shadow-lg transition-shadow">
-              <CardContent className="p-8">
-                <div className="inline-block bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
-                  ⭐ Most Chosen
-                </div>
-                <h3 className="text-2xl font-bold mb-3">The 5-Day Celebration</h3>
-                <p className="text-lg text-muted-foreground mb-4">Thursday 8am - Monday 8pm</p>
-                
-                <p className="mb-6">
-                  Your wedding happens on Saturday, but you get two full days before to settle in, bond, and build anticipation, plus a recovery day after when no one has to rush home. This is what couples rave about.
-                </p>
-
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">108 hours of shared life</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Guests bond before your ceremony</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Recovery day included</span>
-                  </div>
-                </div>
-
+            {/* 3-Day */}
+            <Card className="bg-card border border-border hover:border-secondary transition-colors">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-serif font-semibold mb-1">3-Day</h3>
+                <p className="text-sm text-muted-foreground mb-4">Friday–Sunday</p>
+                <p className="text-3xl font-serif text-secondary mb-4">$4,500</p>
                 <Link to="/weddings">
-                  <Button className="w-full bg-secondary hover:bg-secondary/90">Explore 5-Day Package</Button>
+                  <Button variant="outline" size="sm" className="rounded-full">
+                    Learn More
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* 5-Day */}
+            <Card className="bg-card border-2 border-secondary relative">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-serif font-semibold mb-1">5-Day</h3>
+                <p className="text-sm text-muted-foreground mb-4">Setup + Event + Teardown</p>
+                <p className="text-3xl font-serif text-secondary mb-4">$5,500</p>
+                <Link to="/weddings">
+                  <Button variant="outline" size="sm" className="rounded-full">
+                    Learn More
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* 10-Day */}
+            <Card className="bg-card border border-border hover:border-secondary transition-colors">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-serif font-semibold mb-1">10-Day</h3>
+                <p className="text-sm text-muted-foreground mb-4">Ultimate experience</p>
+                <p className="text-3xl font-serif text-secondary mb-4">$8,500</p>
+                <Link to="/weddings">
+                  <Button variant="outline" size="sm" className="rounded-full">
+                    Learn More
+                  </Button>
                 </Link>
               </CardContent>
             </Card>
           </div>
+
+          <div className="text-center mt-10">
+            <Link to="/weddings">
+              <Button className="bg-secondary hover:bg-secondary-dark text-secondary-foreground rounded-full px-8">
+                View Full Packages & What's Included
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Why Different Section */}
-      <section className="section">
+      {/* Peace of Mind / FAQ Preview */}
+      <section className="section section-cream">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
-              <img 
-                src={propertyAerial} 
-                alt="Aerial view of Rustic Retreat Weddings 65-acre private wedding property near Edmonton Alberta with forest meadows and ceremony spaces"
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Rustic Retreat is Different</h2>
+              <p className="section-label">PEACE OF MIND</p>
+              <h2 className="text-3xl md:text-4xl font-serif mb-6">Logistics made simple</h2>
               
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                    <Sparkles className="w-5 h-5 text-secondary" />
-                    Your Weekend, Your Way
-                  </h3>
-                  <p className="text-muted-foreground">
-                    No cookie-cutter weddings. Want sunrise yoga before vows? A lawn games tournament? Pancake breakfast in pajamas? This is your home for the weekend—fill it with joy.
-                  </p>
-                </div>
+              <p className="text-muted-foreground mb-6">
+                We've thought through the details so you don't have to. Here are answers to the questions every couple asks.
+              </p>
 
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                    <Trees className="w-5 h-5 text-secondary" />
-                    Nature as Your Co-Host
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Towering pines, groomed forest trails, sunsets that paint the sky, and silence so peaceful you can hear your own joy. 65 acres of Alberta's natural beauty.
-                  </p>
+              <div className="space-y-4">
+                <div className="bg-card p-4 rounded-xl shadow-soft">
+                  <h3 className="font-semibold mb-1">What if it rains?</h3>
+                  <p className="text-sm text-muted-foreground">We have backup plans for every scenario.</p>
                 </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                    <Home className="w-5 h-5 text-secondary" />
-                    Affordable Luxury
-                  </h3>
-                  <p className="text-muted-foreground">
-                    A breathtaking venue, accommodations for 60, tables, benches, décor, and coordination—without the $10,000+ price tag of traditional Edmonton venues.
-                  </p>
+                <div className="bg-card p-4 rounded-xl shadow-soft">
+                  <h3 className="font-semibold mb-1">Where do guests stay?</h3>
+                  <p className="text-sm text-muted-foreground">Camping on-site for 60, plus nearby accommodations.</p>
+                </div>
+                <div className="bg-card p-4 rounded-xl shadow-soft">
+                  <h3 className="font-semibold mb-1">Can you fit 80 guests?</h3>
+                  <p className="text-sm text-muted-foreground">Absolutely—comfortably, with room to breathe.</p>
                 </div>
               </div>
 
               <div className="mt-8">
-                <Link to="/about">
-                  <Button size="lg" variant="outline">Discover Our Story</Button>
+                <Link to="/faqs">
+                  <Button variant="outline" className="rounded-full px-8">
+                    View All FAQs
+                  </Button>
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* What's Waiting */}
-      <section className="section section-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What's Waiting for You</h2>
-            <p className="text-muted-foreground text-lg">Beyond the ceremony and reception</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card>
-              <CardContent className="p-6">
-                <Home className="w-8 h-8 text-secondary mb-3" />
-                <h3 className="font-semibold mb-2">The Cabin</h3>
-                <p className="text-sm text-muted-foreground">
-                  Your private newlywed retreat with off-grid solar power and forest views
-                </p>
-                <Link to="/cabin" className="text-sm text-primary hover:underline mt-2 inline-block">
-                  Learn more →
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6">
-                <Sparkles className="w-8 h-8 text-secondary mb-3" />
-                <h3 className="font-semibold mb-2">Wedding Décor House</h3>
-                <p className="text-sm text-muted-foreground">
-                  Curated collection of decorations from past celebrations—free to use
-                </p>
-                <Link to="/decor" className="text-sm text-primary hover:underline mt-2 inline-block">
-                  Explore décor →
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6">
-                <Trees className="w-8 h-8 text-secondary mb-3" />
-                <h3 className="font-semibold mb-2">Groomed Trails</h3>
-                <p className="text-sm text-muted-foreground">
-                  Perfect for morning coffee walks or sunset strolls through Alberta wilderness
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6">
-                <Users className="w-8 h-8 text-secondary mb-3" />
-                <h3 className="font-semibold mb-2">Outdoor Games</h3>
-                <p className="text-sm text-muted-foreground">
-                  Giant Jenga, Cornhole, Bocce Ball, Badminton, trampoline, and treehouse
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6">
-                <Calendar className="w-8 h-8 text-secondary mb-3" />
-                <h3 className="font-semibold mb-2">Clear-Top Gazebo</h3>
-                <p className="text-sm text-muted-foreground">
-                  Where the stars attend your celebration under Alberta's night sky
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6">
-                <MapPin className="w-8 h-8 text-secondary mb-3" />
-                <h3 className="font-semibold mb-2">65 Private Acres</h3>
-                <p className="text-sm text-muted-foreground">
-                  Where your guests can wander, breathe, and just be themselves
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Three-Day Reset */}
-      <section className="section">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why We Book With Three Days Between Weddings</h2>
-              
-              <p className="text-lg mb-4">
-                We give ourselves a minimum of <strong>3 full days</strong> between every wedding. Always.
-              </p>
-
-              <p className="mb-6 text-muted-foreground">
-                Other Alberta wedding venues flip celebrations like pancakes—ceremony ends at 5, next setup starts at 7. We refuse to rush magic. The grass recovers. The energy settles. We prepare for YOUR weekend specifically, not just slot you into a generic timeblock.
-              </p>
-
-              <div className="bg-muted/50 p-6 rounded-lg border-l-4 border-secondary mb-6">
-                <p className="font-medium mb-2">
-                  You'll never arrive to tired grass, rushed setup, or someone else's scattered confetti.
-                </p>
-                <p className="text-muted-foreground text-sm">
-                  When you check in at 8am, Rustic Retreat looks like it's been waiting just for you. Because it has been.
-                </p>
-              </div>
-
-              <p className="text-muted-foreground">
-                This is what happens when a venue chooses couples over volume. When quality matters more than quantity. When your celebration gets the attention it deserves.
-              </p>
-            </div>
-
-            <div>
+            <div className="grid grid-cols-2 gap-4">
+              <img 
+                src={propertyAerial} 
+                alt="Aerial view of Rustic Retreat Weddings 65-acre private property near Edmonton Alberta"
+                className="w-full h-48 object-cover rounded-2xl shadow-soft"
+              />
+              <img 
+                src={galleryPath} 
+                alt="Forest path for wedding photos at Rustic Retreat Weddings Alberta"
+                className="w-full h-48 object-cover rounded-2xl shadow-soft"
+              />
               <img 
                 src={propertyLandscape} 
-                alt="Pristine landscape view of Rustic Retreat Weddings 65-acre property showing natural Alberta forest beauty and well-maintained ceremony spaces"
-                className="rounded-lg shadow-xl"
+                alt="Landscape view of Rustic Retreat Weddings venue near Lac La Nonne Alberta"
+                className="w-full h-48 object-cover rounded-2xl shadow-soft col-span-2"
               />
             </div>
           </div>
@@ -345,22 +316,15 @@ const Index = () => {
       {/* CTA Section */}
       <section className="section bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Planning Your Wedding Weekend</h2>
+          <h2 className="text-3xl md:text-4xl font-serif mb-6 italic">Come see it in person</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-primary-foreground/90">
-            We don't let couples book until they visit the property. We want you certain, not just convinced.
+            Most couples know in 10 minutes if Rustic Retreat is their place. Let's find out if it's yours.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" variant="secondary" className="text-lg px-8">
-                Schedule Your Property Visit
-              </Button>
-            </Link>
-            <Link to="/weddings">
-              <Button size="lg" variant="outline-light" className="text-lg px-8">
-                View Wedding Packages
-              </Button>
-            </Link>
-          </div>
+          <Link to="/contact">
+            <Button size="lg" className="bg-secondary hover:bg-secondary-dark text-secondary-foreground text-lg px-10 rounded-full">
+              Schedule a Tour
+            </Button>
+          </Link>
         </div>
       </section>
 
