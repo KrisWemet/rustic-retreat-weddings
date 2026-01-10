@@ -13,20 +13,20 @@ const FAQs = () => {
       answer: "We don't let couples book until they visit the property. This isn't a sales tactic—it's our commitment to making sure you're certain, not just convinced."
     },
     {
-      question: "What's the difference between the 3-day and 5-day packages?",
-      answer: "The 3-day package (Friday-Sunday) gives you 60 hours together. The 5-day package (Thursday-Monday) provides 108 hours and is our most popular option. With 5 days, guests bond before your wedding, creating a community atmosphere."
+      question: "Which package would be best for me?",
+      answer: "The 3-day package (Friday-Sunday) gives you 60 hours together—perfect for tighter schedules. The 5-day package (Thursday-Monday) provides 108 hours and is our most popular option. With 5 days, guests bond before your wedding, creating a community atmosphere. We're happy to help you decide during your property visit."
     },
     {
       question: "How many guests can you accommodate?",
-      answer: "Up to 80 guests for ceremony and reception, with overnight camping for 60 guests across 15 camper/tent sites plus the cabin. Half a dozen Airbnbs sit 5 minutes away around the lake, or RVezy.com can deliver trailers to your campsites."
+      answer: "Up to 80 guests for ceremony and reception. We have room for 60 guests to camp on the property—you choose where to set up. Half a dozen Airbnbs sit 5-15 minutes away around the lake, or RVezy.com can deliver trailers directly to your camping area."
     },
     {
       question: "What if some of our guests don't want to camp?",
-      answer: "Perfect! Half a dozen Airbnb properties sit within 5 minutes around the lake. RVezy.com delivers trailers right to your campsite—all the coziness, none of the setup."
+      answer: "Perfect! Half a dozen Airbnb properties sit within 5-15 minutes around the lake. RVezy.com delivers trailers right to your camping area—all the coziness, none of the setup."
     },
     {
       question: "What's included in the wedding package price?",
-      answer: "Exclusive property access, the cabin, 15 camping sites, tables and benches for 80 guests, access to our Wedding Décor House collection (free!), groomed trails, outdoor games, campfire areas, and clear-top gazebo."
+      answer: "Exclusive property access, the cabin, flexible camping areas for your group, modern picnic tables and rustic benches for 80 guests, access to our Wedding Décor Collection, groomed trails, outdoor games, campfire areas, and clear-top gazebo."
     },
     {
       question: "Can we bring our own vendors?",

@@ -43,7 +43,7 @@ const Index = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
           <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/80 animate-fade-in">
-            65 Private Acres · Near Edmonton · Your Weekend, Your Way
+            65 Private Acres · Just North of Edmonton · Your Weekend, Your Way
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 animate-fade-in-up text-balance leading-tight">
             <span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" />
@@ -85,7 +85,7 @@ const Index = () => {
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-12">
               Picture morning coffee on the cabin porch with your bridesmaids. An afternoon lawn game tournament 
-              that turns legendary. Your grandmother in a rocking chair, watching your flower girl chase butterflies. 
+              that turns legendary. Your grandmother watching your flower girl chase butterflies. 
               A sparkler exit that melts into a bonfire under the stars—with nowhere else to be.
             </p>
           </div>
@@ -141,7 +141,7 @@ const Index = () => {
               <MapPin className="w-10 h-10 text-secondary mx-auto mb-4" />
               <h3 className="text-xl font-serif font-semibold mb-3 text-primary-foreground">65 Private Acres</h3>
               <p className="text-primary-foreground/80 text-sm">
-                Forest, meadows, and a private lake. Complete seclusion just 45 minutes from Edmonton.
+                Forest, meadows, and a private lake. Complete seclusion just north of Edmonton.
               </p>
             </div>
 
@@ -149,15 +149,15 @@ const Index = () => {
               <Users className="w-10 h-10 text-secondary mx-auto mb-4" />
               <h3 className="text-xl font-serif font-semibold mb-3 text-primary-foreground">Up to 80 Guests</h3>
               <p className="text-primary-foreground/80 text-sm">
-                Cabin sleeps 4. Camping for 50+. Everyone stays together, all weekend long.
+                Cabin sleeps 4. Room for 60 to camp—you choose where the party sets up.
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center">
               <Sparkles className="w-10 h-10 text-secondary mx-auto mb-4" />
-              <h3 className="text-xl font-serif font-semibold mb-3 text-primary-foreground">Free Décor Library</h3>
+              <h3 className="text-xl font-serif font-semibold mb-3 text-primary-foreground">Wedding Décor Collection</h3>
               <p className="text-primary-foreground/80 text-sm">
-                Our Wedding Décor House has everything. Arches, linens, lanterns—all included.
+                Our Décor House has a curated selection. Arches, lanterns, centerpieces—choose what fits your vision.
               </p>
             </div>
           </div>
@@ -224,11 +224,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Social Proof - Enhanced Testimonials */}
+      {/* Social Proof - Softer Testimonials */}
       <section className="section section-cream">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="section-label">REAL COUPLES, REAL WORDS</p>
+            <p className="section-label">WHAT COUPLES SAY</p>
             <h2 className="text-3xl md:text-4xl font-serif mb-4">This is what they remember</h2>
           </div>
           
@@ -236,28 +236,25 @@ const Index = () => {
             <div className="bg-card p-8 rounded-2xl shadow-soft">
               <Quote className="w-8 h-8 text-secondary/40 mb-4" />
               <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-6">
-                "We didn't just have a wedding—we had four days of the best memories of our lives. 
-                Our guests still talk about it two years later."
+                "We had time. That's what I remember most—we actually had time."
               </blockquote>
-              <p className="text-muted-foreground font-medium">— Sarah & Michael, June 2024</p>
+              <p className="text-muted-foreground font-medium">— Sarah & Mike</p>
             </div>
             
             <div className="bg-card p-8 rounded-2xl shadow-soft">
               <Quote className="w-8 h-8 text-secondary/40 mb-4" />
               <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-6">
-                "My grandmother played cards with my college friends until midnight. My dad and his brothers 
-                went fishing at dawn. That never happens at a 6-hour wedding."
+                "Everyone still talks about our weekend. Not just the wedding. The whole weekend."
               </blockquote>
-              <p className="text-muted-foreground font-medium">— Amanda & Josh, August 2024</p>
+              <p className="text-muted-foreground font-medium">— Jenna & Tyler</p>
             </div>
             
             <div className="bg-card p-8 rounded-2xl shadow-soft">
               <Quote className="w-8 h-8 text-secondary/40 mb-4" />
               <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-6">
-                "We budgeted $40,000 for our venue and couldn't believe when we found this. 
-                More time, more magic, more memories—for a fraction of the cost."
+                "It was the first time both families really got to know each other."
               </blockquote>
-              <p className="text-muted-foreground font-medium">— Priya & Daniel, September 2024</p>
+              <p className="text-muted-foreground font-medium">— Amanda & Chris</p>
             </div>
           </div>
         </div>
@@ -270,8 +267,8 @@ const Index = () => {
             <p className="section-label">TRANSPARENT PRICING</p>
             <h2 className="text-3xl md:text-4xl font-serif mb-4">Choose your timeline</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              All packages include exclusive use of 65 acres, the cabin, gazebo, ceremony spaces, camping, 
-              and access to our full décor collection.
+              All packages include exclusive use of 65 acres, the cabin, gazebo, ceremony spaces, camping areas, 
+              and access to our décor collection. <span className="font-medium">2026 Season Pricing.</span>
             </p>
           </div>
 
@@ -329,14 +326,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Price Anchoring - The Math Section */}
+      {/* Value Comparison - Softer Approach */}
       <section className="section section-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <p className="section-label">THE MATH THAT CHANGES EVERYTHING</p>
+              <p className="section-label">VALUE THAT MAKES SENSE</p>
               <h2 className="text-3xl md:text-4xl font-serif mb-4">
-                What most Alberta couples spend
+                Here's what you get
               </h2>
             </div>
 
@@ -346,7 +343,7 @@ const Index = () => {
                 <ul className="space-y-3 text-muted-foreground mb-6">
                   <li className="flex justify-between">
                     <span>Venue rental (6 hours)</span>
-                    <span className="font-semibold">$5,000–$15,000</span>
+                    <span className="font-semibold">$8,000–$15,000</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Table & chair rentals</span>
@@ -365,28 +362,25 @@ const Index = () => {
                     <span>$15,000–$35,000</span>
                   </li>
                 </ul>
-                <p className="text-center text-2xl font-serif text-muted-foreground">
-                  ~$2,500/hour of celebration
-                </p>
               </div>
 
               <div className="bg-gradient-to-br from-secondary/10 to-secondary/5 p-8 rounded-2xl shadow-medium border-2 border-secondary">
-                <h3 className="text-xl font-serif font-semibold mb-4 text-secondary">Rustic Retreat (5-Day)</h3>
+                <h3 className="text-xl font-serif font-semibold mb-4 text-secondary">Rustic Retreat (5-Day) — 2026 Pricing</h3>
                 <ul className="space-y-3 mb-6">
                   <li className="flex justify-between">
                     <span>Exclusive 65-acre venue (108 hours)</span>
                     <span className="font-semibold text-secondary">Included</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Tables & benches for 80</span>
+                    <span>Modern picnic tables & rustic benches for 80</span>
                     <span className="font-semibold text-secondary">Included</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Full décor collection</span>
+                    <span>Décor collection access</span>
                     <span className="font-semibold text-secondary">Included</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>60-guest accommodation</span>
+                    <span>Room for 60 to camp</span>
                     <span className="font-semibold text-secondary">Included</span>
                   </li>
                   <li className="flex justify-between border-t pt-3 font-bold">
@@ -394,15 +388,12 @@ const Index = () => {
                     <span className="text-secondary">$5,500</span>
                   </li>
                 </ul>
-                <p className="text-center text-2xl font-serif text-secondary">
-                  ~$51/hour of celebration
-                </p>
               </div>
             </div>
 
             <div className="text-center mt-10">
               <p className="text-lg text-muted-foreground mb-6">
-                That's not a typo. <span className="font-semibold text-primary">50x more time together for a fraction of the cost.</span>
+                Traditional venue rentals in Alberta typically run $8,000-15,000 for a few hours. Our 2026 packages include multiple days, accommodation, and décor access—giving you more time together at a fraction of typical costs.
               </p>
               <Link to="/contact">
                 <Button className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white rounded-full px-8 shadow-elegant transition-all duration-300">
@@ -414,43 +405,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What Guests Text After */}
+      {/* Moments That Stay With Everyone */}
       <section className="section bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <p className="section-label">THE TEXTS YOU'LL RECEIVE</p>
+            <p className="section-label">THE EXPERIENCE</p>
             <h2 className="text-3xl md:text-4xl font-serif mb-4">
-              What your guests say <span className="italic">after</span>
+              Moments that stay with everyone
             </h2>
             <p className="text-muted-foreground">
-              This is what happens when your wedding guests actually have time to connect.
+              When you give people time together, connection happens naturally.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
             <div className="bg-card p-5 rounded-2xl shadow-soft border-l-4 border-secondary">
-              <p className="text-sm italic mb-2">"Your mom and I became best friends over that bonfire. We're having lunch next week."</p>
-              <p className="text-xs text-muted-foreground">— Bride's college roommate</p>
+              <p className="text-sm mb-2">Morning coffee around the campfire with three generations</p>
             </div>
             <div className="bg-card p-5 rounded-2xl shadow-soft border-l-4 border-secondary">
-              <p className="text-sm italic mb-2">"I've been to 20+ weddings. This is the only one where I actually talked to everyone."</p>
-              <p className="text-xs text-muted-foreground">— Groom's uncle</p>
+              <p className="text-sm mb-2">Your nephew catching his first fish with your uncle</p>
             </div>
             <div className="bg-card p-5 rounded-2xl shadow-soft border-l-4 border-secondary">
-              <p className="text-sm italic mb-2">"My kids are still talking about the trampoline and catching frogs. Best wedding ever."</p>
-              <p className="text-xs text-muted-foreground">— Bride's cousin</p>
+              <p className="text-sm mb-2">That 2am guitar circle that becomes legendary</p>
             </div>
             <div className="bg-card p-5 rounded-2xl shadow-soft border-l-4 border-secondary">
-              <p className="text-sm italic mb-2">"We didn't want to leave. Like, genuinely did not want to pack up Monday morning."</p>
-              <p className="text-xs text-muted-foreground">— College friend group</p>
+              <p className="text-sm mb-2">Your grandmother playing cards with your college friends until midnight</p>
             </div>
             <div className="bg-card p-5 rounded-2xl shadow-soft border-l-4 border-secondary">
-              <p className="text-sm italic mb-2">"The sunrise yoga, the midnight s'mores... when's the 1-year reunion?"</p>
-              <p className="text-xs text-muted-foreground">— Bridesmaid</p>
+              <p className="text-sm mb-2">The sunrise yoga session that nobody planned</p>
             </div>
             <div className="bg-card p-5 rounded-2xl shadow-soft border-l-4 border-secondary">
-              <p className="text-sm italic mb-2">"This is what weddings should be. More life, less production."</p>
-              <p className="text-xs text-muted-foreground">— Father of the bride</p>
+              <p className="text-sm mb-2">Kids playing freely while adults remember what it feels like to relax</p>
             </div>
           </div>
         </div>
@@ -479,7 +464,7 @@ const Index = () => {
                 <div className="bg-card p-5 rounded-xl shadow-soft">
                   <h3 className="font-semibold mb-2">Where do guests sleep & shower?</h3>
                   <p className="text-sm text-muted-foreground">
-                    The cabin sleeps 4 with full bathrooms. We have 15 campsites with shower facilities ready for 2026 season. Half a dozen Airbnbs sit 5 minutes away around the lake, and RVezy.com can deliver trailers directly to your campsites.
+                    The cabin sleeps 4. Room for 60 guests to camp—you choose where to set up. Shower facilities ready for 2026 season. Half a dozen Airbnbs sit 5-15 minutes away around the lake, and RVezy.com can deliver trailers directly to your camping area.
                   </p>
                 </div>
                 <div className="bg-card p-5 rounded-xl shadow-soft">

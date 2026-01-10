@@ -215,10 +215,10 @@ const Weddings = () => {
                 <h3 className="font-semibold mb-2">Accommodations</h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>• The Cabin: Sleeps 4 (newlywed suite)</li>
-                  <li>• 15 camper/tent sites</li>
-                  <li>• Accommodates 60 overnight guests</li>
+                  <li>• Room for 60 guests to camp</li>
+                  <li>• You choose where to set up—no defined sites</li>
                   <li>• Shower facilities ready for 2026 season</li>
-                  <li>• Nearby Airbnb options available</li>
+                  <li>• Airbnbs 5-15 minutes away</li>
                 </ul>
               </CardContent>
             </Card>
@@ -228,7 +228,7 @@ const Weddings = () => {
                 <DollarSign className="w-8 h-8 text-secondary mb-3" />
                 <h3 className="font-semibold mb-2">Furniture & Essentials</h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Tables and benches for 80 guests</li>
+                  <li>• Modern picnic tables and rustic benches for 80 guests</li>
                   <li>• No rental fees!</li>
                   <li>• Setup flexibility</li>
                 </ul>
@@ -238,9 +238,9 @@ const Weddings = () => {
             <Card className="border-2">
               <CardContent className="pt-6">
                 <Sparkles className="w-8 h-8 text-secondary mb-3" />
-                <h3 className="font-semibold mb-2">Wedding Décor House</h3>
+                <h3 className="font-semibold mb-2">Wedding Décor Collection</h3>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Curated decoration collection</li>
+                  <li>• Curated selection of décor pieces</li>
                   <li>• Vintage pieces & centerpieces</li>
                   <li>• Free to use—no rental fees</li>
                   <li>• Add your own touches</li>
@@ -321,7 +321,7 @@ const Weddings = () => {
                 <h3 className="font-semibold text-lg mb-3">Overnight Stay</h3>
                 <p className="text-3xl font-bold mb-2">60</p>
                 <p className="text-sm text-muted-foreground">
-                  Guests can stay on-property across 15 camper/tent sites plus the cabin
+                  Guests can camp on the property—you choose where to set up, plus the cabin
                 </p>
               </CardContent>
             </Card>
@@ -341,13 +341,13 @@ const Weddings = () => {
               </p>
 
               <p className="mb-6 text-muted-foreground">
-                Half a dozen Airbnb properties sit within 5 minutes around the lake. For guests who want on-site comfort without tent camping, RVezy.com delivers trailers right to your campsite—all the coziness, none of the setup.
+                Half a dozen Airbnb properties sit within 5-15 minutes around the lake. For guests who want on-site comfort without tent camping, RVezy.com delivers trailers right to your camping area—all the coziness, none of the setup.
               </p>
 
               <div className="bg-secondary/10 p-6 rounded-lg border-l-4 border-secondary">
                 <p className="font-medium mb-2">The result?</p>
                 <p className="text-muted-foreground text-sm">
-                  Your non-camping guests wake up, drive 5 minutes, and arrive for sunrise yoga or breakfast prep or just quiet coffee before the property fully wakes. They're not missing anything. They're not disconnected. They're just sleeping in a bed instead of a tent, and that's perfect.
+                  Your non-camping guests wake up, drive a few minutes, and arrive for sunrise yoga or breakfast prep or just quiet coffee before the property fully wakes. They're not missing anything. They're not disconnected. They're just sleeping in a bed instead of a tent, and that's perfect.
                 </p>
               </div>
 
@@ -367,11 +367,11 @@ const Weddings = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span>5-minute drive to venue</span>
+                      <span>5-15 minute drive to venue</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Sparkles className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span>RVezy.com trailer delivery to campsites</span>
+                      <span>RVezy.com trailer delivery to your camping area</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Users className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
