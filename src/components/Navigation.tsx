@@ -22,6 +22,7 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
+        {/* Main Header Row */}
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
@@ -56,43 +57,36 @@ const Navigation = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-foreground"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile CTA Button */}
+          <Link to="/contact" className="lg:hidden">
+            <Button size="sm" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] text-primary-foreground rounded-full px-4 shadow-md text-xs">
+              Book Tour
+            </Button>
+          </Link>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden py-6 border-t border-border">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={cn(
-                    "text-base font-medium transition-colors py-2 border-l-4",
-                    isActive(link.path)
-                      ? "text-primary border-secondary pl-3"
-                      : "text-muted-foreground hover:text-primary border-transparent"
-                  )}
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <Link to="/contact" onClick={() => setIsOpen(false)}>
-                <Button className="w-full bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full shadow-md transition-all duration-300 hover:shadow-lg">
-                  Walk the Land With Us
-                </Button>
+        {/* Mobile Page Links - Horizontal Scroll */}
+        <div className="lg:hidden -mx-4 px-4 pb-2 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-4 min-w-max">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={cn(
+                  "text-sm whitespace-nowrap py-1 transition-colors relative",
+                  isActive(link.path)
+                    ? "text-foreground font-medium"
+                    : "text-muted-foreground"
+                )}
+              >
+                {link.name}
+                {isActive(link.path) && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary" />
+                )}
               </Link>
-            </div>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
