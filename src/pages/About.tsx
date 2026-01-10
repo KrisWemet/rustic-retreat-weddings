@@ -296,7 +296,7 @@ const About = () => {
                   </Button>
                 </Link>
                 <Link to="/packages">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8">
+                  <Button size="lg" variant="outline" className="border-[hsl(15,50%,75%)] text-transparent bg-clip-text bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:bg-primary-foreground/10 rounded-full px-8">
                     View Packages
                   </Button>
                 </Link>
