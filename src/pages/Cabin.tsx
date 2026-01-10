@@ -119,12 +119,12 @@ const Cabin = () => {
               <img 
                 src={bridalPortrait}
                 alt="Bride portrait on rustic cabin porch at Rustic Retreat Weddings Alberta venue with natural forest background"
-                className="rounded-lg shadow-xl"
+                className="shadow-xl"
               />
               <img 
                 src={forestPath}
                 alt="Forest trail photo spot for wedding portraits at Rustic Retreat with couple walking wooded path"
-                className="rounded-lg shadow-xl"
+                className="shadow-xl"
               />
             </div>
             <div>

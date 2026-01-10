@@ -29,7 +29,7 @@ const About = () => {
               <img 
                 src={propertyAerial}
                 alt="Aerial drone view of Rustic Retreat Weddings 65-acre property showing forest ceremony areas and open meadow spaces near Edmonton"
-                className="rounded-lg shadow-xl"
+                className="shadow-xl"
               />
             </div>
 
@@ -188,12 +188,12 @@ const About = () => {
               <img 
                 src={ceremonySetup}
                 alt="Forest wedding ceremony setup at Rustic Retreat"
-                className="rounded-lg shadow-xl"
+                className="shadow-xl"
               />
               <img 
                 src={birchGrove}
                 alt="Birch grove wedding altar at Rustic Retreat"
-                className="rounded-lg shadow-xl"
+                className="shadow-xl"
               />
             </div>
           </div>
@@ -208,7 +208,7 @@ const About = () => {
               <img 
                 src={campfireNight}
                 alt="Evening campfire gathering at Rustic Retreat Weddings"
-                className="rounded-lg shadow-xl"
+                className="shadow-xl"
               />
             </div>
             <div className="order-1 lg:order-2">
