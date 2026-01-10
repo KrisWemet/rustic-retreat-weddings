@@ -81,7 +81,7 @@ const FAQs = () => {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-card border-2 rounded-lg px-6 hover:border-secondary transition-colors"
+                  className="bg-card border-2 px-6 hover:border-secondary transition-colors"
                 >
                   <AccordionTrigger className="text-left font-semibold hover:text-primary">
                     {faq.question}
@@ -109,7 +109,7 @@ const FAQs = () => {
                 Walk the Land With Us
               </Button>
             </Link>
-            <Link to="/weddings">
+            <Link to="/packages">
               <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8">
                 View Packages
               </Button>

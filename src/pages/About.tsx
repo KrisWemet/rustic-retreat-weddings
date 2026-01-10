@@ -66,17 +66,17 @@ const About = () => {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="bg-card p-6 rounded-lg">
+              <div className="bg-card p-6">
                 <p className="font-medium mb-2">Traditional venue?</p>
                 <p className="text-muted-foreground">Beautiful, but rushed. Everyone's on their best behavior. Surface-level conversations. Photo-worthy but not soul-filling.</p>
               </div>
 
-              <div className="bg-card p-6 rounded-lg">
+              <div className="bg-card p-6">
                 <p className="font-medium mb-2">A 3-day weekend?</p>
                 <p className="text-muted-foreground">Better. People relax a little. Real connections start forming.</p>
               </div>
 
-              <div className="bg-secondary/10 p-6 rounded-lg border-2 border-secondary">
+              <div className="bg-secondary/10 p-6 border-2 border-secondary">
                 <p className="font-medium mb-2 text-lg">But a 5-day celebration?</p>
                 <p className="text-muted-foreground">
                   Everything changes. Day one, people are still in "event mode." Day two, the walls come down. By day three, your yoga instructor friend is teaching your accountant friend sun salutations. And then your wedding happens.
@@ -87,7 +87,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="bg-primary/5 p-8 rounded-lg border-l-4 border-primary">
+            <div className="bg-primary/5 p-8 border-l-4 border-primary">
               <p className="text-xl font-medium mb-3">
                 "This is why couples who choose 5 days consistently tell us: 'It was the best decision we made.'"
               </p>
@@ -105,7 +105,7 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Makes Rustic Retreat Different</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-card p-6 rounded-lg border-2 hover:border-secondary transition-colors">
+            <div className="bg-card p-6 border-2 hover:border-secondary transition-colors">
               <MapPin className="w-8 h-8 text-secondary mb-3" />
               <h3 className="text-xl font-semibold mb-3">The Space</h3>
               <p className="text-muted-foreground">
@@ -113,7 +113,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-card p-6 rounded-lg border-2 hover:border-secondary transition-colors">
+            <div className="bg-card p-6 border-2 hover:border-secondary transition-colors">
               <Clock className="w-8 h-8 text-secondary mb-3" />
               <h3 className="text-xl font-semibold mb-3">The Time</h3>
               <p className="text-muted-foreground">
@@ -121,7 +121,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-card p-6 rounded-lg border-2 hover:border-secondary transition-colors">
+            <div className="bg-card p-6 border-2 hover:border-secondary transition-colors">
               <Heart className="w-8 h-8 text-secondary mb-3" />
               <h3 className="text-xl font-semibold mb-3">The Investment</h3>
               <p className="text-muted-foreground">
@@ -129,7 +129,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-card p-6 rounded-lg border-2 hover:border-secondary transition-colors">
+            <div className="bg-card p-6 border-2 hover:border-secondary transition-colors">
               <Sparkles className="w-8 h-8 text-secondary mb-3" />
               <h3 className="text-xl font-semibold mb-3">The Transparency</h3>
               <p className="text-muted-foreground">
@@ -137,7 +137,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-card p-6 rounded-lg border-2 hover:border-secondary transition-colors">
+            <div className="bg-card p-6 border-2 hover:border-secondary transition-colors">
               <Clock className="w-8 h-8 text-secondary mb-3" />
               <h3 className="text-xl font-semibold mb-3">The Three-Day Reset</h3>
               <p className="text-muted-foreground">
@@ -145,7 +145,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-card p-6 rounded-lg border-2 hover:border-secondary transition-colors">
+            <div className="bg-card p-6 border-2 hover:border-secondary transition-colors">
               <Heart className="w-8 h-8 text-secondary mb-3" />
               <h3 className="text-xl font-semibold mb-3">The Feeling</h3>
               <p className="text-muted-foreground">
@@ -167,7 +167,7 @@ const About = () => {
                 Imagine waking up on your wedding day, not in a hotel room, but in a sun-drenched cabin surrounded by Alberta forest.
               </p>
 
-              <div className="space-y-3 bg-card p-6 rounded-lg">
+              <div className="space-y-3 bg-card p-6">
                 <h3 className="font-semibold text-lg mb-3">Location Details:</h3>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
@@ -214,7 +214,7 @@ const About = () => {
               But after the vows are exchanged and the portraits are captured? Kick off the heels. Trade the tux jacket for a flannel. Because you're camping now, and the real celebration is just getting started.
             </p>
 
-            <div className="bg-secondary/10 p-6 rounded-lg border-2 border-secondary">
+            <div className="bg-secondary/10 p-6 border-2 border-secondary">
               <p className="text-lg font-medium">
                 The beauty of a multi-day celebration: you get the fancy moments AND the relaxed ones. No need to choose.
               </p>
@@ -263,9 +263,9 @@ const About = () => {
                 Walk the Land With Us
               </Button>
             </Link>
-            <Link to="/gallery">
+            <Link to="/packages">
               <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8">
-                View Gallery
+                View Packages
               </Button>
             </Link>
           </div>

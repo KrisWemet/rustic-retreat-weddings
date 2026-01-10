@@ -185,11 +185,11 @@ All colors MUST be HSL.
   
   /* Image styling for galleries */
   .image-rounded {
-    @apply rounded-2xl overflow-hidden;
+    @apply overflow-hidden;
   }
   
   .image-gallery {
-    @apply rounded-xl overflow-hidden shadow-soft transition-transform duration-300 hover:scale-[1.02];
+    @apply overflow-hidden shadow-soft transition-transform duration-300 hover:scale-[1.02];
   }
   
   /* Animations */

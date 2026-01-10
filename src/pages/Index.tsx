@@ -314,7 +314,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-10">
-            <Link to="/weddings">
+            <Link to="/packages">
               <Button className="bg-secondary hover:bg-secondary-dark text-secondary-foreground rounded-full px-8">
                 View Full Package Details
               </Button>

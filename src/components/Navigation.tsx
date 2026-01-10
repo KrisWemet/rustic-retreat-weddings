@@ -11,9 +11,8 @@ const Navigation = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "The Cabin", path: "/cabin" },
-    { name: "Décor House", path: "/decor" },
-    { name: "Weddings", path: "/weddings" },
+    { name: "The Venue", path: "/venue" },
+    { name: "Packages", path: "/packages" },
     { name: "Gallery", path: "/gallery" },
     { name: "FAQs", path: "/faqs" },
   ];
@@ -38,13 +37,16 @@ const Navigation = () => {
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "text-sm transition-colors hover:text-secondary",
+                  "text-sm transition-colors hover:text-secondary relative py-1",
                   isActive(link.path)
                     ? "text-foreground font-medium"
                     : "text-muted-foreground"
                 )}
               >
                 {link.name}
+                {isActive(link.path) && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary" />
+                )}
               </Link>
             ))}
             <Link to="/contact">
@@ -74,10 +76,10 @@ const Navigation = () => {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "text-base font-medium transition-colors py-2",
+                    "text-base font-medium transition-colors py-2 border-l-4",
                     isActive(link.path)
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-primary"
+                      ? "text-primary border-secondary pl-3"
+                      : "text-muted-foreground hover:text-primary border-transparent"
                   )}
                 >
                   {link.name}

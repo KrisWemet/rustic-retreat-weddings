@@ -24,8 +24,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/weddings" className="hover:text-secondary transition-colors">
-                  Wedding Packages
+                <Link to="/packages" className="hover:text-secondary transition-colors">
+                  Packages
                 </Link>
               </li>
               <li>
@@ -46,13 +46,8 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Explore</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/cabin" className="hover:text-secondary transition-colors">
-                  The Cabin
-                </Link>
-              </li>
-              <li>
-                <Link to="/decor" className="hover:text-secondary transition-colors">
-                  Décor House
+                <Link to="/venue" className="hover:text-secondary transition-colors">
+                  The Venue
                 </Link>
               </li>
               <li>

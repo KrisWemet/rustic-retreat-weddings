@@ -2,13 +2,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import Cabin from "./pages/Cabin";
-import DecorHouse from "./pages/DecorHouse";
-import Weddings from "./pages/Weddings";
+import Venue from "./pages/Venue";
+import Packages from "./pages/Packages";
 import Gallery from "./pages/Gallery";
 import FAQs from "./pages/FAQs";
 import Contact from "./pages/Contact";
@@ -26,12 +25,15 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
-          <Route path="/cabin" element={<Cabin />} />
-          <Route path="/decor" element={<DecorHouse />} />
-          <Route path="/weddings" element={<Weddings />} />
+          <Route path="/venue" element={<Venue />} />
+          <Route path="/packages" element={<Packages />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/contact" element={<Contact />} />
+          {/* Redirects for old URLs */}
+          <Route path="/cabin" element={<Navigate to="/venue" replace />} />
+          <Route path="/decor" element={<Navigate to="/venue" replace />} />
+          <Route path="/weddings" element={<Navigate to="/packages" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

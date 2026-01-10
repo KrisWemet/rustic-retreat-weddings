@@ -7,7 +7,7 @@ import ceremonyVows from "@/assets/ceremony-vows-outdoor.avif";
 import receptionEvening from "@/assets/reception-outdoor-celebration.avif";
 import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles } from "lucide-react";
 
-const Weddings = () => {
+const Packages = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -275,13 +275,16 @@ const Weddings = () => {
             </Card>
           </div>
 
-          <div className="mt-12 bg-primary/5 p-8 rounded-lg border-l-4 border-primary max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold mb-3">Your Creative Freedom</h3>
+          <div className="mt-12 bg-primary/5 p-8 border-l-4 border-primary max-w-4xl mx-auto">
+            <h3 className="text-xl font-bold mb-3">Your Weekend, Your Way</h3>
+            <p className="text-muted-foreground mb-4">
+              This is your celebration—plan it however you want. Want a giant slip and slide? Do it. Treasure hunt through the forest? Go for it. Paintball tournament, morning yoga, campfire karaoke, stargazing party, group hike—whatever brings your people joy.
+            </p>
             <ul className="space-y-2 text-muted-foreground">
               <li>• No other weddings during your weekend</li>
               <li>• Complete creative control over timeline and activities</li>
-              <li>• Flexibility for yoga sessions, group meals, themed activities, surprise events</li>
-              <li>• Private 65-acre property exclusively yours</li>
+              <li>• 65 private acres to make your own</li>
+              <li>• Your imagination is the only limit</li>
             </ul>
           </div>
         </div>
@@ -528,4 +531,4 @@ const Weddings = () => {
   );
 };
 
-export default Weddings;
+export default Packages;
