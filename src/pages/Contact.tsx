@@ -1,13 +1,15 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { Mail, Phone, MapPin, Calendar } from "lucide-react";
+import receptionEvening from "@/assets/reception-gazebo-evening.avif";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -17,11 +19,10 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Message sent!",
-        description: "Thank you for your interest. We'll be in touch within 24 hours to schedule your property visit.",
+        description: "We'll be in touch within 24 hours to schedule your property visit.",
       });
       setIsSubmitting(false);
     }, 1000);
@@ -31,17 +32,11 @@ const Contact = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      {/* Hero */}
-      <section className="section mt-20 pt-12">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-            Schedule Your Property Visit
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            We don't let couples book until they visit the property. Experience Rustic Retreat in person and see why couples consistently call this "the best decision we made."
-          </p>
-        </div>
-      </section>
+      <PageHero
+        backgroundImage={receptionEvening}
+        title="Walk the Land With Us"
+        subtitle="Property tours available weekdays and weekends by appointment. Come feel the space and see if this is where your story wants to unfold."
+      />
 
       {/* Contact Section */}
       <section className="section">
@@ -75,31 +70,8 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <Label htmlFor="weddingDate">Preferred Wedding Date (if known)</Label>
+                      <Label htmlFor="weddingDate">Preferred Wedding Date</Label>
                       <Input id="weddingDate" type="date" className="mt-2" />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="package">Interested In</Label>
-                      <select 
-                        id="package" 
-                        className="w-full mt-2 border border-input rounded-md p-2 bg-background"
-                      >
-                        <option value="">Select a package</option>
-                        <option value="3-day">3-Day Weekend Wedding</option>
-                        <option value="5-day">5-Day Celebration (Most Popular)</option>
-                        <option value="not-sure">Not Sure Yet</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="guestCount">Expected Guest Count</Label>
-                      <Input 
-                        id="guestCount" 
-                        type="number" 
-                        placeholder="e.g., 60" 
-                        className="mt-2" 
-                      />
                     </div>
 
                     <div>
@@ -108,27 +80,23 @@ const Contact = () => {
                         id="message" 
                         required 
                         className="mt-2 min-h-32" 
-                        placeholder="What drew you to Rustic Retreat? What kind of celebration are you envisioning?"
+                        placeholder="What kind of celebration are you envisioning?"
                       />
                     </div>
 
                     <Button 
                       type="submit" 
-                      className="w-full bg-secondary hover:bg-secondary/90 text-lg py-6"
+                      className="w-full bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground text-lg py-6 rounded-full"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? "Sending..." : "Request Property Visit"}
                     </Button>
-
-                    <p className="text-sm text-muted-foreground text-center">
-                      We'll respond within 24 hours to schedule your visit.
-                    </p>
                   </form>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Contact Info & Details */}
+            {/* Contact Info */}
             <div className="space-y-6">
               <Card className="border-2">
                 <CardContent className="p-8">
@@ -140,8 +108,7 @@ const Contact = () => {
                         <p className="font-medium">Location</p>
                         <p className="text-muted-foreground text-sm">
                           99 km NW of Edmonton<br />
-                          Near Lac La Nonne & Pembina River<br />
-                          Alberta, Canada
+                          Near Lac La Nonne, Alberta
                         </p>
                       </div>
                     </div>
@@ -181,82 +148,17 @@ const Contact = () => {
 
               <Card className="border-2 border-primary bg-primary/5">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">What to Expect During Your Visit</h3>
-                  <ul className="space-y-3 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">•</span>
-                      <span>Full property tour (60-90 minutes)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">•</span>
-                      <span>Walk the ceremony space and reception areas</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">•</span>
-                      <span>See the cabin, camping sites, and amenities</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">•</span>
-                      <span>Browse the Wedding Décor House collection</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">•</span>
-                      <span>Discuss package options and pricing in detail</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">•</span>
-                      <span>Ask any questions on your mind</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">•</span>
-                      <span>No pressure—just honest conversation</span>
-                    </li>
+                  <h3 className="text-xl font-bold mb-4">What to Expect</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Full property tour (60-90 minutes)</li>
+                    <li>• Walk ceremony and reception areas</li>
+                    <li>• See the cabin and camping sites</li>
+                    <li>• Browse the Wedding Décor House</li>
+                    <li>• Discuss packages and pricing</li>
+                    <li>• No pressure—just honest conversation</li>
                   </ul>
                 </CardContent>
               </Card>
-
-              <Card className="border-2">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">Why Visit Before Booking?</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Photos can only show so much. We want you to feel the energy of the land. Stand where you'll say your vows. Picture your grandmother sitting by the campfire. Hear the silence that makes people exhale.
-                  </p>
-                  <p className="font-medium text-sm">
-                    When you leave your property visit, we want you thinking either "This is it" or "This isn't quite right." Both answers are perfect. Certainty is what matters.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Info */}
-      <section className="section section-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Before You Visit</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-card p-6 rounded-lg">
-                <h3 className="font-semibold mb-2">Bring Questions</h3>
-                <p className="text-sm text-muted-foreground">
-                  Write down everything you're wondering about. We'll answer honestly, even if the answer is "that won't work here."
-                </p>
-              </div>
-
-              <div className="bg-card p-6 rounded-lg">
-                <h3 className="font-semibold mb-2">Bring Your Person</h3>
-                <p className="text-sm text-muted-foreground">
-                  Both partners should visit if possible. You both need to feel the rightness of this place.
-                </p>
-              </div>
-
-              <div className="bg-card p-6 rounded-lg">
-                <h3 className="font-semibold mb-2">Bring Open Minds</h3>
-                <p className="text-sm text-muted-foreground">
-                  Multi-day celebrations are different than traditional weddings. Let yourself imagine the possibilities.
-                </p>
-              </div>
             </div>
           </div>
         </div>
