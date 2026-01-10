@@ -17,7 +17,7 @@ const ScrollReveal = ({
   direction = 'up',
   delay = 0,
   duration = 600,
-  once = true,
+  once = false,
 }: ScrollRevealProps) => {
   const { ref, isVisible } = useScrollAnimation({ triggerOnce: once });
 
