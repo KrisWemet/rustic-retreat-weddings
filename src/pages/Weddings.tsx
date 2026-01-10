@@ -503,7 +503,7 @@ const Weddings = () => {
           <img 
             src={receptionEvening}
             alt="Evening outdoor wedding reception celebration under stars at Rustic Retreat Weddings Alberta multi-day venue near Edmonton"
-            className="rounded-lg shadow-2xl max-w-5xl mx-auto"
+            className="shadow-2xl max-w-5xl mx-auto"
           />
         </div>
       </section>

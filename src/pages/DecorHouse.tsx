@@ -29,7 +29,7 @@ const DecorHouse = () => {
               <img 
                 src={receptionTablescape}
                 alt="Wedding décor collection at Rustic Retreat"
-                className="rounded-lg shadow-xl"
+                className="shadow-xl"
               />
             </div>
 
@@ -139,12 +139,12 @@ const DecorHouse = () => {
               <img 
                 src={wineBarrelDecor}
                 alt="Wine barrel wedding decor"
-                className="rounded-lg shadow-xl"
+                className="shadow-xl"
               />
               <img 
                 src={receptionTablescape}
                 alt="Elegant wedding reception tablescape"
-                className="rounded-lg shadow-xl"
+                className="shadow-xl"
               />
             </div>
           </div>

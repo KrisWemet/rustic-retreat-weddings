@@ -121,7 +121,7 @@ const Gallery = () => {
             {filteredImages.map((image, index) => (
               <div 
                 key={index}
-                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+                className="group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
                 onClick={() => setSelectedImage(image.src)}
               >
                 <img 
@@ -147,7 +147,7 @@ const Gallery = () => {
             <img 
               src={selectedImage} 
               alt="Gallery image"
-              className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
+              className="w-full h-auto max-h-[90vh] object-contain"
             />
           )}
         </DialogContent>

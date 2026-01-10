@@ -42,24 +42,24 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
-          <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/80 animate-fade-in">
+          <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/80 opacity-0 animate-hero-fade-in">
             65 Private Acres · Just North of Edmonton · Your Weekend, Your Way
           </p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 animate-fade-in-up text-balance leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight">
             <span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" />
             where time slows down
           </h1>
-          <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto animate-fade-in-up text-primary-foreground/90 leading-relaxed">
+          <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/90 leading-relaxed">
             No rushing between venues. No goodbyes after the reception. Just you, your people, and 65 acres of 
             forest and meadow—for as many days as you want.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up mb-12">
-            <Link to="/contact">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
               <Button size="lg" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white text-lg px-10 py-6 rounded-full shadow-elegant transition-all duration-300">
-                Walk the Land With Us
+                Book Your Tour
               </Button>
             </Link>
-            <Link to="/weddings">
+            <Link to="/weddings" className="opacity-0 animate-hero-fade-in-delayed">
               <Button size="lg" variant="outline" className="bg-white/10 border-white/40 text-white hover:bg-white/20 text-lg px-10 py-6 rounded-full backdrop-blur-sm">
                 View Packages
               </Button>
@@ -95,17 +95,17 @@ const Index = () => {
             <img 
               src={veilKiss} 
               alt="Intimate bridal moment at Rustic Retreat Weddings"
-              className="w-full h-48 md:h-72 object-cover rounded-2xl shadow-soft"
+              className="w-full h-48 md:h-72 object-cover shadow-soft"
             />
             <img 
               src={galleryCouple} 
               alt="Bride and groom in wildflower meadow at sunset"
-              className="w-full h-48 md:h-72 object-cover rounded-2xl shadow-soft"
+              className="w-full h-48 md:h-72 object-cover shadow-soft"
             />
             <img 
               src={firstDance} 
               alt="First dance with sparklers at Rustic Retreat Alberta"
-              className="w-full h-48 md:h-72 object-cover rounded-2xl shadow-soft"
+              className="w-full h-48 md:h-72 object-cover shadow-soft"
             />
           </div>
         </div>
@@ -189,28 +189,28 @@ const Index = () => {
               <img 
                 src={meadowKiss} 
                 alt="Romantic sunset kiss in meadow at Alberta wedding venue"
-                className="w-full h-full object-cover rounded-2xl shadow-soft hover:shadow-medium transition-shadow"
+                className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow"
               />
             </div>
             <img 
               src={galleryReception} 
               alt="Elegant gold reception table setting"
-              className="w-full h-full object-cover rounded-2xl shadow-soft hover:shadow-medium transition-shadow aspect-square"
+              className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square"
             />
             <img 
               src={birchAltar} 
               alt="Birch grove ceremony altar"
-              className="w-full h-full object-cover rounded-2xl shadow-soft hover:shadow-medium transition-shadow aspect-square"
+              className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square"
             />
             <img 
               src={galleryGazebo} 
               alt="Gazebo with twinkle lights at night"
-              className="w-full h-full object-cover rounded-2xl shadow-soft hover:shadow-medium transition-shadow aspect-square"
+              className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square"
             />
             <img 
               src={weddingParty} 
               alt="Wedding party group photo"
-              className="w-full h-full object-cover rounded-2xl shadow-soft hover:shadow-medium transition-shadow aspect-square"
+              className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square"
             />
           </div>
 
@@ -488,17 +488,17 @@ const Index = () => {
               <img 
                 src={cabinExterior} 
                 alt="Cozy cabin exterior at Rustic Retreat Weddings"
-                className="w-full h-40 md:h-52 object-cover rounded-2xl shadow-soft"
+                className="w-full h-40 md:h-52 object-cover shadow-soft"
               />
               <img 
                 src={receptionGazebo} 
                 alt="Evening reception in the gazebo with string lights"
-                className="w-full h-40 md:h-52 object-cover rounded-2xl shadow-soft"
+                className="w-full h-40 md:h-52 object-cover shadow-soft"
               />
               <img 
                 src={sunsetPortraits} 
                 alt="Couple portraits at sunset in forest clearing"
-                className="w-full h-40 md:h-52 object-cover rounded-2xl shadow-soft col-span-2"
+                className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2"
               />
             </div>
           </div>
