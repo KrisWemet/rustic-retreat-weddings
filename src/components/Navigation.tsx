@@ -48,8 +48,8 @@ const Navigation = () => {
               </Link>
             ))}
             <Link to="/contact">
-              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full px-6">
-                Schedule Tour
+              <Button className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-6 shadow-md transition-all duration-300 hover:shadow-lg">
+                Walk the Land With Us
               </Button>
             </Link>
           </div>
@@ -84,8 +84,8 @@ const Navigation = () => {
                 </Link>
               ))}
               <Link to="/contact" onClick={() => setIsOpen(false)}>
-                <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full">
-                  Schedule Tour
+                <Button className="w-full bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full shadow-md transition-all duration-300 hover:shadow-lg">
+                  Walk the Land With Us
                 </Button>
               </Link>
             </div>
