@@ -35,7 +35,7 @@ const Contact = () => {
       <PageHero
         backgroundImage={receptionEvening}
         title="Walk the Land With Us"
-        subtitle="Property tours available weekdays and weekends by appointment. Come feel the space and see if this is where your story wants to unfold."
+        subtitle="Property tours by appointment only, scheduled around existing bookings. Come feel the space and see if this is where your story wants to unfold."
       />
 
       {/* Contact Section */}

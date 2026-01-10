@@ -458,7 +458,7 @@ const Index = () => {
                 <div className="bg-card p-5 rounded-xl shadow-soft">
                   <h3 className="font-semibold mb-2">What if it rains?</h3>
                   <p className="text-sm text-muted-foreground">
-                    Our clear-top gazebo seats 80 for covered celebrations. The cabin has a cozy indoor backup. Alberta weather has never ruined a wedding here.
+                    Our clear-top gazebo seats 80 for covered celebrations. Alberta weather has never stopped a party at Rustic Retreat.
                   </p>
                 </div>
                 <div className="bg-card p-5 rounded-xl shadow-soft">
@@ -535,7 +535,7 @@ const Index = () => {
             </Link>
           </div>
           <p className="text-primary-foreground/60 text-sm mt-8">
-            Tours available weekdays and weekends by appointment · Response within 24 hours
+            Tours by appointment only, scheduled around existing bookings
           </p>
         </div>
       </section>

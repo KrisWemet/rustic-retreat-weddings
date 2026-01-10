@@ -34,21 +34,22 @@ const DecorHouse = () => {
             </div>
 
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Pass the Magic Forward</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">A Collection That Keeps Growing</h2>
 
               <p className="mb-6 text-muted-foreground">
-                When couples leave after their celebration, many choose to leave pieces of their décor behind. Not because they forgot them. <strong>Because they want to pass the magic forward.</strong>
+                When couples leave after their celebration, many choose to leave pieces of their décor behind. Not because they forgot them—<strong>because they want to pass the magic forward.</strong>
               </p>
 
-              <div className="space-y-3 text-sm text-muted-foreground">
-                <p>That vintage tablecloth? From Sarah and Tom's 2023 wedding.</p>
-                <p>The mason jar collection? Left by Jessica, who said, "The next bride will know what to do with these."</p>
-                <p>The handmade wooden signs? Crafted by Michael's grandfather.</p>
-              </div>
+              <p className="mb-6 text-muted-foreground">
+                Our Décor Collection isn't a complete décor package—it's a curated selection of pieces you can choose from to complement your vision. Mix them with your own items, or use them as a starting point.
+              </p>
 
               <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary mt-6">
-                <p className="font-medium text-lg">
-                  This is what community looks like. And it's all available to you, free of charge.
+                <p className="font-medium text-lg mb-2">
+                  Décor pieces are free to use. Consumables (batteries, candles, etc.) are available at cost.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Browse what's available during your property tour.
                 </p>
               </div>
             </div>
