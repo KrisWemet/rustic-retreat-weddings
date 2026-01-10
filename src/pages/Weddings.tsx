@@ -70,12 +70,12 @@ const Weddings = () => {
             <Card className="border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
                 <h3 className="text-3xl font-bold mb-3">The 3-Day Weekend Wedding Package</h3>
-                <p className="text-lg text-muted-foreground mb-6">Friday 8am through Sunday 8pm</p>
+                <p className="text-lg text-muted-foreground mb-6">Friday through Sunday</p>
                 
                 <div className="mb-6">
                   <h4 className="font-semibold mb-3">The Timeline:</h4>
                   <div className="space-y-2 text-sm">
-                    <p><strong>Friday 8am:</strong> Gates open. Your people arrive. Tents up, gear settled, the weekend officially begins.</p>
+                    <p><strong>Friday:</strong> Gates open. Your people arrive throughout the day. Tents up, gear settled, the weekend officially begins.</p>
                     <p><strong>Friday afternoon/evening:</strong> Exploration, campfires, the first wave of reconnection</p>
                     <p><strong>Saturday:</strong> Your wedding day, dawn to starlight</p>
                     <p><strong>Sunday:</strong> Slow morning, tearful goodbyes, promises to do this again</p>
@@ -126,7 +126,7 @@ const Weddings = () => {
                   ⭐ The One Couples Rave About
                 </div>
                 <h3 className="text-3xl font-bold mb-3">The 5-Day Celebration Package</h3>
-                <p className="text-lg text-muted-foreground mb-6">Thursday 8am - Monday 8pm OR Friday 8am - Tuesday 8pm</p>
+                <p className="text-lg text-muted-foreground mb-6">Thursday - Monday OR Friday - Tuesday</p>
                 
                 <div className="mb-6">
                   <h4 className="font-semibold mb-3">The Timeline (Thursday Arrival Option):</h4>
@@ -385,31 +385,31 @@ const Weddings = () => {
         </div>
       </section>
 
-      {/* Check-In Times */}
+      {/* Flexible Arrival */}
       <section className="section section-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
               <Clock className="w-10 h-10 text-secondary" />
-              <h2 className="text-3xl md:text-4xl font-bold">The Check-In/Check-Out Times That Actually Work</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Flexible Arrival & Departure</h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-2">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-xl mb-3">8am Check-In (First Day)</h3>
+                  <h3 className="font-semibold text-xl mb-3">Arrival Day</h3>
                   <p className="text-muted-foreground mb-4">
-                    Early enough that your eager guests can arrive and settle in. Late enough that we've had dawn hours to do final touches. Perfect for families with kids who wake at sunrise anyway.
+                    The property is yours from the start of your booking. Guests can arrive whenever works for them throughout the day—no strict check-in time.
                   </p>
                   <p className="text-sm">
-                    Arrival is flexible throughout the day—not everyone needs to arrive exactly at 8am. But the property is ready from 8am onward.
+                    Early birds can set up camp at dawn. Night owls can roll in after dinner. Everyone arrives on their own schedule.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-2">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-xl mb-3">8pm Check-Out (Last Day)</h3>
+                  <h3 className="font-semibold text-xl mb-3">Departure Day</h3>
                   <p className="text-muted-foreground mb-4">
                     You have the ENTIRE last day. Recovery breakfast at 10am? Do it. Afternoon final hike? Absolutely. Long goodbyes that stretch through dinner? That's the point.
                   </p>

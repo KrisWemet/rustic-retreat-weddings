@@ -62,12 +62,12 @@ const About = () => {
             </div>
 
             <p className="text-lg mb-6">
-              Here's what we've discovered after hosting dozens of weddings on our Alberta property: <strong>The length of your celebration directly impacts the depth of your experience.</strong>
+              <strong>The length of your celebration directly impacts the depth of your experience.</strong>
             </p>
 
             <div className="space-y-4 mb-8">
               <div className="bg-card p-6 rounded-lg">
-                <p className="font-medium mb-2">A 6-hour wedding?</p>
+                <p className="font-medium mb-2">Traditional venue?</p>
                 <p className="text-muted-foreground">Beautiful, but rushed. Everyone's on their best behavior. Surface-level conversations. Photo-worthy but not soul-filling.</p>
               </div>
 
@@ -195,6 +195,29 @@ const About = () => {
                 alt="Birch grove wedding altar at Rustic Retreat"
                 className="shadow-xl"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ceremony Fancy, Party Casual */}
+      <section className="section section-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ceremony Fancy, Party Casual</h2>
+            
+            <p className="text-lg mb-6">
+              Yes, you can absolutely have that elegant ceremony. The dress, the photos, the formal moments—all of it.
+            </p>
+
+            <p className="mb-6 text-muted-foreground">
+              But after the vows are exchanged and the portraits are captured? Kick off the heels. Trade the tux jacket for a flannel. Because you're camping now, and the real celebration is just getting started.
+            </p>
+
+            <div className="bg-secondary/10 p-6 rounded-lg border-2 border-secondary">
+              <p className="text-lg font-medium">
+                The beauty of a multi-day celebration: you get the fancy moments AND the relaxed ones. No need to choose.
+              </p>
             </div>
           </div>
         </div>

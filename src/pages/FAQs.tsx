@@ -26,27 +26,31 @@ const FAQs = () => {
     },
     {
       question: "What's included in the wedding package price?",
-      answer: "Exclusive property access, the cabin, flexible camping areas for your group, modern picnic tables and rustic benches for 80 guests, access to our Wedding Décor Collection, groomed trails, outdoor games, campfire areas, and clear-top gazebo."
+      answer: "Exclusive property access, the cabin, flexible camping areas for your group, modern picnic tables and rustic benches for 80 guests, access to our Wedding Décor Collection (consumables like batteries and candles available at cost), groomed trails, outdoor games, campfire areas, and clear-top gazebo."
+    },
+    {
+      question: "Can we have a rehearsal dinner or other events?",
+      answer: "Your time is yours. Whether that means a rehearsal dinner, morning yoga, or late-night bonfire—you set the schedule. You're renting the land, so enjoy it however fits your vision."
     },
     {
       question: "Can we bring our own vendors?",
       answer: "Complete freedom. Use our preferred vendors or bring your own team. This is your celebration, your vision, your rules."
     },
     {
-      question: "What months are available for weddings?",
-      answer: "June through September. Alberta weather is most reliable during these months."
+      question: "When is wedding season?",
+      answer: "June through September—when Alberta weather is at its best."
     },
     {
-      question: "Why do you wait 3 days between weddings?",
-      answer: "Quality requires space. We give ourselves minimum 3 days between bookings so your celebration gets fresh grass, renewed energy, and our complete attention."
+      question: "What are the quiet hours?",
+      answer: "On your wedding night, quiet hours start at midnight. All other nights, quiet hours are 11pm to 8am. This applies to generators and amplified music."
     },
     {
       question: "What happens if it rains?",
-      answer: "The clear-top gazebo provides covered space for reception. We help couples create weather contingency plans during planning."
+      answer: "The clear-top gazebo provides covered space for your reception. Alberta weather has never stopped a party at Rustic Retreat."
     },
     {
       question: "Is there electricity and running water?",
-      answer: "The cabin has off-grid solar power and potable water. Our shower facilities provide modern comfort for campers."
+      answer: "Yes! The property has solar power for your essentials and potable water on-site. Our shower facilities provide modern comfort while keeping that rustic, off-grid feel."
     },
     {
       question: "How far is Rustic Retreat from Edmonton?",
