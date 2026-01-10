@@ -4,6 +4,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
+import PageTransition from "@/components/PageTransition";
+import ScrollReveal from "@/components/ScrollReveal";
 import propertyLandscape from "@/assets/property-landscape-view.avif";
 
 const FAQs = () => {
@@ -63,63 +65,68 @@ const FAQs = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      
-      <PageHero
-        backgroundImage={propertyLandscape}
-        title="Questions? We've Got Answers"
-        subtitle="Everything you need to know before walking the land with us."
-      />
+    <PageTransition>
+      <div className="min-h-screen">
+        <Navigation />
+        
+        <PageHero
+          backgroundImage={propertyLandscape}
+          title="Questions? We've Got Answers"
+          subtitle="Everything you need to know before walking the land with us."
+        />
 
-      {/* FAQs Accordion */}
-      <section className="section">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index}`}
-                  className="bg-card border-2 px-6 hover:border-secondary transition-colors"
-                >
-                  <AccordionTrigger className="text-left font-semibold hover:text-primary">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-2">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+        {/* FAQs Accordion */}
+        <section className="section">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <ScrollReveal key={index} delay={index * 50}>
+                    <AccordionItem 
+                      value={`item-${index}`}
+                      className="bg-card border-2 px-6 hover:border-secondary transition-colors"
+                    >
+                      <AccordionTrigger className="text-left font-semibold hover:text-primary">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground pt-2">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </ScrollReveal>
+                ))}
+              </Accordion>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="section bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Still Have Questions?</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
-            The best way to get answers is during a property visit. Walk the land with us.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-8 shadow-lg">
-                Walk the Land With Us
-              </Button>
-            </Link>
-            <Link to="/packages">
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8">
-                View Packages
-              </Button>
-            </Link>
+        {/* CTA Section */}
+        <section className="section bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4 text-center">
+            <ScrollReveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Still Have Questions?</h2>
+              <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
+                The best way to get answers is during a property visit. Walk the land with us.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/contact">
+                  <Button size="lg" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-8 shadow-lg">
+                    Walk the Land With Us
+                  </Button>
+                </Link>
+                <Link to="/packages">
+                  <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8">
+                    View Packages
+                  </Button>
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </PageTransition>
   );
 };
 

@@ -5,6 +5,8 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
+import PageTransition from "@/components/PageTransition";
+import ScrollReveal from "@/components/ScrollReveal";
 
 // Gallery imports
 import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
@@ -86,90 +88,95 @@ const Gallery = () => {
     : images.filter(img => img.category === activeCategory);
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      
-      <PageHero
-        backgroundImage={coupleKissMeadow}
-        title="Real Weddings at Rustic Retreat"
-        subtitle="See yourself here. These are real couples who trusted us with their most important day."
-      />
+    <PageTransition>
+      <div className="min-h-screen">
+        <Navigation />
+        
+        <PageHero
+          backgroundImage={coupleKissMeadow}
+          title="Real Weddings at Rustic Retreat"
+          subtitle="See yourself here. These are real couples who trusted us with their most important day."
+        />
 
-      {/* Category Filter */}
-      <section className="py-8 bg-card border-b border-border sticky top-16 z-40">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={activeCategory === category ? "default" : "outline"}
-                size="sm"
-                onClick={() => setActiveCategory(category)}
-                className="rounded-full"
-              >
-                {category}
-              </Button>
-            ))}
+        {/* Category Filter */}
+        <section className="py-8 bg-card border-b border-border sticky top-16 z-40">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={activeCategory === category ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setActiveCategory(category)}
+                  className="rounded-full"
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Gallery Grid */}
-      <section className="section">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredImages.map((image, index) => (
-              <div 
-                key={index}
-                className="group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
-                onClick={() => setSelectedImage(image.src)}
-              >
-                <img 
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-6 text-primary-foreground">
-                    <p className="text-sm font-medium">{image.category}</p>
+        {/* Gallery Grid with Soft Reveal */}
+        <section className="section">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="gallery-item group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+                  style={{ animationDelay: `${Math.min(index * 75, 600)}ms` }}
+                  onClick={() => setSelectedImage(image.src)}
+                >
+                  <img 
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-6 text-primary-foreground">
+                      <p className="text-sm font-medium">{image.category}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Lightbox */}
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-5xl p-0 bg-transparent border-none">
-          {selectedImage && (
-            <img 
-              src={selectedImage} 
-              alt="Gallery image"
-              className="w-full h-auto max-h-[90vh] object-contain"
-            />
-          )}
-        </DialogContent>
-      </Dialog>
+        {/* Lightbox */}
+        <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+          <DialogContent className="max-w-5xl p-0 bg-transparent border-none">
+            {selectedImage && (
+              <img 
+                src={selectedImage} 
+                alt="Gallery image"
+                className="w-full h-auto max-h-[90vh] object-contain"
+              />
+            )}
+          </DialogContent>
+        </Dialog>
 
-      {/* CTA Section */}
-      <section className="section bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Your Story Belongs Here</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
-            Ready to write your own chapter?
-          </p>
-          <Link to="/contact">
-            <Button size="lg" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-8 shadow-lg">
-              Walk the Land With Us
-            </Button>
-          </Link>
-        </div>
-      </section>
+        {/* CTA Section */}
+        <section className="section bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4 text-center">
+            <ScrollReveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Your Story Belongs Here</h2>
+              <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
+                Ready to write your own chapter?
+              </p>
+              <Link to="/contact">
+                <Button size="lg" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-8 shadow-lg">
+                  Walk the Land With Us
+                </Button>
+              </Link>
+            </ScrollReveal>
+          </div>
+        </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </PageTransition>
   );
 };
 
