@@ -152,8 +152,8 @@ const Contact = () => {
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li>• Full property tour (60-90 minutes)</li>
                     <li>• Walk ceremony and reception areas</li>
-                    <li>• See the cabin and camping sites</li>
-                    <li>• Browse the Wedding Décor House</li>
+                    <li>• See the cabin and camping areas</li>
+                    <li>• Browse the Wedding Décor Collection</li>
                     <li>• Discuss packages and pricing</li>
                     <li>• No pressure—just honest conversation</li>
                   </ul>

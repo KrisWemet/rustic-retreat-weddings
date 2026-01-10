@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 font-serif">Rustic Retreat Weddings</h3>
             <p className="text-primary-foreground/80 text-sm">
-              Your intimate 65-acre Alberta retreat where celebrations unfold naturally on 65 private acres near Edmonton.
+              Your intimate 65-acre Alberta retreat where celebrations unfold naturally, just north of Edmonton.
             </p>
           </div>
 

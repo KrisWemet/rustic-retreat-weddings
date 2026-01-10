@@ -273,10 +273,6 @@ const Cabin = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-secondary font-bold">•</span>
-                <span>Getting-ready headquarters on wedding morning</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-secondary font-bold">•</span>
                 <span>Recovery space when you need 30 minutes away from the party</span>
               </li>
               <li className="flex items-start gap-2">
