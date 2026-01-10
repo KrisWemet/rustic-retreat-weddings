@@ -66,12 +66,6 @@ const Index = () => {
               </Link>
             </div>
             
-            {/* Scroll Indicator */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-              <div className="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-1">
-                <div className="w-1.5 h-3 bg-white/60 rounded-full" />
-              </div>
-            </div>
           </div>
         </section>
 
