@@ -4,18 +4,20 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Calendar } from "lucide-react";
+import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
 import receptionEvening from "@/assets/reception-gazebo-evening.avif";
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [preferredContact, setPreferredContact] = useState("email");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,51 +51,121 @@ const Contact = () => {
               <ScrollReveal direction="left">
                 <Card className="border-2">
                   <CardContent className="p-8">
+                    {/* Response Time Badge */}
+                    <div className="flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm mb-6 w-fit">
+                      <Clock className="w-4 h-4" />
+                      <span className="font-medium">We respond within 24 hours</span>
+                    </div>
+
                     <h2 className="text-2xl font-bold mb-6">Request Your Visit</h2>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
                           <Label htmlFor="firstName">First Name *</Label>
-                          <Input id="firstName" required className="mt-2" />
+                          <Input 
+                            id="firstName" 
+                            required 
+                            className="mt-2" 
+                            placeholder="Your first name"
+                          />
                         </div>
                         <div>
                           <Label htmlFor="lastName">Last Name *</Label>
-                          <Input id="lastName" required className="mt-2" />
+                          <Input 
+                            id="lastName" 
+                            required 
+                            className="mt-2" 
+                            placeholder="Your last name"
+                          />
                         </div>
                       </div>
 
                       <div>
                         <Label htmlFor="email">Email Address *</Label>
-                        <Input id="email" type="email" required className="mt-2" />
+                        <Input 
+                          id="email" 
+                          type="email" 
+                          required 
+                          className="mt-2" 
+                          placeholder="your.email@example.com"
+                        />
                       </div>
 
                       <div>
                         <Label htmlFor="phone">Phone Number *</Label>
-                        <Input id="phone" type="tel" required className="mt-2" />
+                        <Input 
+                          id="phone" 
+                          type="tel" 
+                          required 
+                          className="mt-2" 
+                          placeholder="(780) 555-0123"
+                        />
+                      </div>
+
+                      {/* Preferred Contact Method */}
+                      <div>
+                        <Label className="mb-3 block">How should we reach you?</Label>
+                        <RadioGroup 
+                          value={preferredContact} 
+                          onValueChange={setPreferredContact}
+                          className="flex gap-6"
+                        >
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="email" id="contact-email" />
+                            <Label htmlFor="contact-email" className="font-normal cursor-pointer">Email</Label>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="phone" id="contact-phone" />
+                            <Label htmlFor="contact-phone" className="font-normal cursor-pointer">Phone call</Label>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="text" id="contact-text" />
+                            <Label htmlFor="contact-text" className="font-normal cursor-pointer">Text message</Label>
+                          </div>
+                        </RadioGroup>
                       </div>
 
                       <div>
-                        <Label htmlFor="weddingDate">Preferred Wedding Date</Label>
-                        <Input id="weddingDate" type="date" className="mt-2" />
+                        <Label htmlFor="weddingDate">When are you thinking? (approximate is fine)</Label>
+                        <Input 
+                          id="weddingDate" 
+                          type="text" 
+                          className="mt-2" 
+                          placeholder="e.g., Summer 2026, August 2026, or 'still deciding'"
+                        />
                       </div>
 
                       <div>
-                        <Label htmlFor="message">Tell Us About Your Vision *</Label>
+                        <Label htmlFor="guestCount">How many guests are you expecting?</Label>
+                        <Input 
+                          id="guestCount" 
+                          type="text" 
+                          className="mt-2" 
+                          placeholder="e.g., 50-60 guests, or 'not sure yet'"
+                        />
+                      </div>
+
+                      <div>
+                        <Label htmlFor="message">Tell us about your vision *</Label>
                         <Textarea 
                           id="message" 
                           required 
                           className="mt-2 min-h-32" 
-                          placeholder="What kind of celebration are you envisioning?"
+                          placeholder="What draws you to an outdoor, multi-day celebration? What's your dream wedding weekend look like?"
                         />
                       </div>
 
                       <Button 
                         type="submit" 
-                        className="w-full bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground text-lg py-6 rounded-full"
+                        className="w-full bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground text-lg py-6 rounded-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
                         disabled={isSubmitting}
                       >
                         {isSubmitting ? "Sending..." : "Request Property Visit"}
                       </Button>
+
+                      <p className="text-xs text-center text-muted-foreground">
+                        No spam, no pressure. Just a real conversation about your wedding vision.
+                      </p>
                     </form>
                   </CardContent>
                 </Card>
