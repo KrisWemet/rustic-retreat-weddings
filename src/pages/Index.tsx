@@ -24,12 +24,31 @@ import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import birchAltar from "@/assets/gallery/birch-grove-altar.avif";
 import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
 
-import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, CheckCircle2, Play } from "lucide-react";
-import { useState } from "react";
+import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, CheckCircle2, Play, Volume2, VolumeX } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const { ref: videoSectionRef, isVisible: isVideoVisible } = useScrollAnimation({
+    threshold: 0.3,
+    triggerOnce: false,
+  });
+
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isVideoVisible) {
+        videoRef.current.play().catch(() => {
+          // Autoplay was prevented, that's okay
+        });
+      } else {
+        videoRef.current.pause();
+      }
+    }
+  }, [isVideoVisible]);
 
   return (
     <PageTransition>
@@ -152,28 +171,42 @@ const Index = () => {
               </div>
             </ScrollReveal>
             
-            <ScrollReveal delay={100}>
-              <div 
-                className="relative max-w-4xl mx-auto cursor-pointer group"
-                onClick={() => setIsVideoOpen(true)}
-              >
-                <div className="relative overflow-hidden shadow-xl">
-                  <img 
-                    src={receptionGazebo} 
-                    alt="Rustic Retreat venue tour preview"
-                    className="w-full h-64 md:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-primary/40 group-hover:bg-primary/30 transition-colors flex items-center justify-center">
-                    <div className="w-20 h-20 md:w-24 md:h-24 bg-white/90 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                      <Play className="w-8 h-8 md:w-10 md:h-10 text-primary ml-1" fill="currentColor" />
-                    </div>
-                  </div>
-                </div>
-                <p className="text-center text-muted-foreground text-sm mt-4">
-                  Click to watch the venue tour
-                </p>
+            <div ref={videoSectionRef} className="max-w-4xl mx-auto">
+              <div className="relative overflow-hidden shadow-xl group">
+                <video 
+                  ref={videoRef}
+                  muted={isMuted}
+                  loop
+                  playsInline
+                  className="w-full h-auto"
+                  src="/videos/venue-tour.mp4"
+                  poster={receptionGazebo}
+                />
+                {/* Sound toggle button */}
+                <button
+                  onClick={() => setIsMuted(!isMuted)}
+                  className="absolute bottom-4 right-4 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+                  aria-label={isMuted ? "Unmute video" : "Mute video"}
+                >
+                  {isMuted ? (
+                    <VolumeX className="w-5 h-5 text-primary" />
+                  ) : (
+                    <Volume2 className="w-5 h-5 text-primary" />
+                  )}
+                </button>
+                {/* Fullscreen button */}
+                <button
+                  onClick={() => setIsVideoOpen(true)}
+                  className="absolute bottom-4 left-4 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+                  aria-label="Play fullscreen"
+                >
+                  <Play className="w-5 h-5 text-primary ml-0.5" fill="currentColor" />
+                </button>
               </div>
-            </ScrollReveal>
+              <p className="text-center text-muted-foreground text-sm mt-4">
+                Video plays automatically • Click speaker to unmute
+              </p>
+            </div>
           </div>
         </section>
 
