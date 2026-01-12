@@ -73,8 +73,8 @@ const Index = () => {
               where time slows down
             </h1>
             <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/90 leading-relaxed">
-              No rushing between venues. No goodbyes after the reception. Just you, your people, 
-              and endless forest and meadow—for as many days as you want.
+              Our couples tell us the hardest part is leaving. Those who book 3 days always wish they'd stayed for 5. 
+              Just you, your people, and endless forest and meadow—for as many days as you want.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
@@ -102,7 +102,7 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-secondary fill-secondary" />
-                <span className="text-muted-foreground"><strong className="text-foreground">5.0 rating</strong> from couples</span>
+                <span className="text-muted-foreground"><strong className="text-foreground">Couples never want to leave</strong> • 5.0 rating</span>
               </div>
               <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
                 <Calendar className="w-4 h-4 text-primary" />
