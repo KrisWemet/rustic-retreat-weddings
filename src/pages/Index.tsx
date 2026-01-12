@@ -24,9 +24,13 @@ import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import birchAltar from "@/assets/gallery/birch-grove-altar.avif";
 import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
 
-import { Calendar, MapPin, Sparkles, Users, Heart, Quote } from "lucide-react";
+import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, CheckCircle2, Play } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const Index = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <PageTransition>
       <div className="min-h-screen bg-background">
@@ -55,17 +59,37 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
-                <Button size="lg" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white text-lg px-10 py-6 rounded-full shadow-elegant transition-all duration-300">
+                <Button size="lg" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white text-lg px-10 py-6 rounded-full shadow-elegant transition-all duration-300 hover:shadow-xl hover:scale-105">
                   Book Your Tour
                 </Button>
               </Link>
-              <Link to="/weddings" className="opacity-0 animate-hero-fade-in-delayed">
-                <Button size="lg" variant="outline" className="bg-white/10 border-[hsl(15,50%,75%)] text-white hover:bg-white/20 text-lg px-10 py-6 rounded-full backdrop-blur-sm">
+              <Link to="/packages" className="opacity-0 animate-hero-fade-in-delayed">
+                <Button size="lg" variant="outline" className="bg-white/10 border-[hsl(15,50%,75%)] text-white hover:bg-white/20 text-lg px-10 py-6 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105">
                   View Packages
                 </Button>
               </Link>
             </div>
             
+          </div>
+        </section>
+
+        {/* Social Proof Bar */}
+        <section className="py-6 bg-secondary/10 border-y border-secondary/20">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-sm">
+              <div className="flex items-center gap-2">
+                <Heart className="w-4 h-4 text-secondary" />
+                <span className="text-muted-foreground"><strong className="text-foreground">50+ couples</strong> since 2020</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Star className="w-4 h-4 text-secondary fill-secondary" />
+                <span className="text-muted-foreground"><strong className="text-foreground">5.0 rating</strong> from couples</span>
+              </div>
+              <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+                <Calendar className="w-4 h-4 text-primary" />
+                <span className="text-primary font-medium">2026 Season: Limited dates remaining</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -108,6 +132,139 @@ const Index = () => {
                   alt="First dance with sparklers at Rustic Retreat Alberta"
                   className="w-full h-48 md:h-72 object-cover shadow-soft"
                 />
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section className="py-16 bg-card">
+          <div className="container mx-auto px-4">
+            <ScrollReveal>
+              <div className="max-w-4xl mx-auto text-center mb-8">
+                <p className="section-label">EXPERIENCE THE PROPERTY</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-4">
+                  Take a virtual walk with us
+                </h2>
+                <p className="text-muted-foreground">
+                  See the gazebo, ceremony spaces, and where the magic happens.
+                </p>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={100}>
+              <div 
+                className="relative max-w-4xl mx-auto cursor-pointer group"
+                onClick={() => setIsVideoOpen(true)}
+              >
+                <div className="relative overflow-hidden shadow-xl">
+                  <img 
+                    src={receptionGazebo} 
+                    alt="Rustic Retreat venue tour preview"
+                    className="w-full h-64 md:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-primary/40 group-hover:bg-primary/30 transition-colors flex items-center justify-center">
+                    <div className="w-20 h-20 md:w-24 md:h-24 bg-white/90 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                      <Play className="w-8 h-8 md:w-10 md:h-10 text-primary ml-1" fill="currentColor" />
+                    </div>
+                  </div>
+                </div>
+                <p className="text-center text-muted-foreground text-sm mt-4">
+                  Click to watch the venue tour
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* Video Modal */}
+        <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+          <DialogContent className="max-w-5xl p-0 bg-black border-none">
+            <video 
+              controls 
+              autoPlay 
+              className="w-full h-auto max-h-[80vh]"
+              src="/videos/venue-tour.mp4"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </DialogContent>
+        </Dialog>
+
+        {/* This Is For You Section */}
+        <section className="section bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <ScrollReveal>
+                <div className="text-center mb-12">
+                  <p className="section-label">IS THIS YOUR PLACE?</p>
+                  <h2 className="text-3xl md:text-4xl font-serif mb-4">
+                    Rustic Retreat is for you if...
+                  </h2>
+                </div>
+              </ScrollReveal>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <ScrollReveal delay={0}>
+                  <div className="flex items-start gap-4 bg-card p-6 rounded-2xl shadow-soft">
+                    <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-semibold mb-2">You want your families to actually get to know each other</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Not just a wave across a reception hall—real conversations, shared meals, and memories that stick.
+                      </p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+                
+                <ScrollReveal delay={100}>
+                  <div className="flex items-start gap-4 bg-card p-6 rounded-2xl shadow-soft">
+                    <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-semibold mb-2">You'd rather have an experience than a production</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Less about the perfect timeline, more about the moments that happen when no one's watching.
+                      </p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+                
+                <ScrollReveal delay={200}>
+                  <div className="flex items-start gap-4 bg-card p-6 rounded-2xl shadow-soft">
+                    <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-semibold mb-2">Nature makes you feel alive</h3>
+                      <p className="text-sm text-muted-foreground">
+                        You light up around campfires, forest paths, and open skies. Walls feel limiting.
+                      </p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+                
+                <ScrollReveal delay={300}>
+                  <div className="flex items-start gap-4 bg-card p-6 rounded-2xl shadow-soft">
+                    <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-semibold mb-2">You believe the best memories happen when no one's watching the clock</h3>
+                      <p className="text-sm text-muted-foreground">
+                        That 2am guitar circle, the sunrise hike, the lazy breakfast—those become the stories.
+                      </p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              </div>
+
+              <ScrollReveal delay={400}>
+                <div className="text-center mt-10">
+                  <p className="text-muted-foreground mb-6 italic">
+                    "If you nodded along to any of these, you're going to love it here."
+                  </p>
+                  <Link to="/contact">
+                    <Button className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white rounded-full px-8 shadow-elegant transition-all duration-300 hover:shadow-xl hover:scale-105">
+                      Come See For Yourself
+                    </Button>
+                  </Link>
+                </div>
               </ScrollReveal>
             </div>
           </div>
