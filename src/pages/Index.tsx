@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageTransition from "@/components/PageTransition";
+import HoverImage from "@/components/HoverImage";
 
 // Hero & Property Images
 import heroCeremony from "@/assets/hero-ceremony-space.avif";
@@ -126,13 +127,31 @@ const Index = () => {
             {/* Cinematic Image Row */}
             <div className="grid grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
               <ScrollReveal delay={0}>
-                <img src={veilKiss} alt="Intimate bridal moment at Rustic Retreat Weddings" className="w-full h-48 md:h-72 object-cover shadow-soft" />
+                <HoverImage 
+                  src={veilKiss} 
+                  alt="Intimate bridal veil kiss moment at Rustic Retreat Weddings Alberta" 
+                  description="A stolen moment—the intimacy of a veil kiss in dappled forest light"
+                  category="Ceremony"
+                  className="h-48 md:h-72 shadow-soft"
+                />
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <img src={galleryCouple} alt="Bride and groom in wildflower meadow at sunset" className="w-full h-48 md:h-72 object-cover shadow-soft" />
+                <HoverImage 
+                  src={galleryCouple} 
+                  alt="Bride and groom romantic kiss in wildflower meadow at sunset near Edmonton" 
+                  description="Golden hour in the meadow—when the light is just right"
+                  category="Portraits"
+                  className="h-48 md:h-72 shadow-soft"
+                />
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <img src={firstDance} alt="First dance with sparklers at Rustic Retreat Alberta" className="w-full h-48 md:h-72 object-cover shadow-soft" />
+                <HoverImage 
+                  src={firstDance} 
+                  alt="First dance with sparklers at Rustic Retreat Alberta wedding venue" 
+                  description="Magic happens here—sparklers light up an unforgettable first dance"
+                  category="Reception"
+                  className="h-48 md:h-72 shadow-soft"
+                />
               </ScrollReveal>
             </div>
           </div>
@@ -348,19 +367,53 @@ const Index = () => {
             {/* Masonry-style Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
               <ScrollReveal delay={0} className="col-span-2 row-span-2">
-                <img src={meadowKiss} alt="Romantic sunset kiss in meadow at Alberta wedding venue" className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow" />
+                <HoverImage 
+                  src={meadowKiss} 
+                  alt="Romantic sunset kiss in wildflower meadow at Alberta wedding venue near Lac La Nonne" 
+                  description="Sunset kisses in the wildflower meadow—pure romance"
+                  category="Golden Hour"
+                  className="w-full h-full shadow-soft"
+                />
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <img src={galleryReception} alt="Elegant gold reception table setting" className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square" />
+                <HoverImage 
+                  src={galleryReception} 
+                  alt="Elegant gold reception tablescape with candles at Rustic Retreat wedding" 
+                  description="Elegance meets nature—gold accents shimmer in candlelight"
+                  category="Reception"
+                  className="shadow-soft"
+                  aspectRatio="square"
+                />
               </ScrollReveal>
               <ScrollReveal delay={150}>
-                <img src={birchAltar} alt="Birch grove ceremony altar" className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square" />
+                <HoverImage 
+                  src={birchAltar} 
+                  alt="Birch grove ceremony altar surrounded by nature near Edmonton" 
+                  description="The birch grove altar—nature creates the most beautiful cathedral"
+                  category="Ceremony"
+                  className="shadow-soft"
+                  aspectRatio="square"
+                />
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <img src={galleryGazebo} alt="Gazebo with twinkle lights at night" className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square" />
+                <HoverImage 
+                  src={galleryGazebo} 
+                  alt="Wedding gazebo illuminated with twinkle lights at night" 
+                  description="When the sun sets, twinkle lights transform the gazebo"
+                  category="Evening"
+                  className="shadow-soft"
+                  aspectRatio="square"
+                />
               </ScrollReveal>
               <ScrollReveal delay={250}>
-                <img src={weddingParty} alt="Wedding party group photo" className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square" />
+                <HoverImage 
+                  src={weddingParty} 
+                  alt="Wedding party group photo in forest setting at Alberta venue" 
+                  description="Your favorite people, all in one place"
+                  category="Wedding Party"
+                  className="shadow-soft"
+                  aspectRatio="square"
+                />
               </ScrollReveal>
             </div>
 

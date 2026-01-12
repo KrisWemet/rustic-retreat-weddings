@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import HoverImage from "@/components/HoverImage";
 import { getStoryBySlug, weddingStories } from "@/data/wedding-stories";
 import { Calendar, Users, Camera, Heart, Quote, ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
@@ -154,20 +155,13 @@ const WeddingStory = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
               {story.galleryImages.map((image, index) => (
                 <ScrollReveal key={index} delay={index * 75}>
-                  <div 
-                    className="group relative overflow-hidden shadow-soft cursor-pointer"
-                    onClick={() => setSelectedImageIndex(index)}
-                  >
-                    <img 
+                  <div onClick={() => setSelectedImageIndex(index)}>
+                    <HoverImage 
                       src={image.src} 
                       alt={image.alt}
-                      className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                      description={image.caption || "Click to view full size"}
+                      className="h-48 md:h-64 shadow-soft"
                     />
-                    {image.caption && (
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <p className="text-primary-foreground text-sm p-4">{image.caption}</p>
-                      </div>
-                    )}
                   </div>
                 </ScrollReveal>
               ))}
