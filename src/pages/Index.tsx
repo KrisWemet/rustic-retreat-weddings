@@ -50,8 +50,8 @@ const Index = () => {
               where time slows down
             </h1>
             <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/90 leading-relaxed">
-              No rushing between venues. No goodbyes after the reception. Just you, your people, and 65 acres of 
-              forest and meadow—for as many days as you want.
+              No rushing between venues. No goodbyes after the reception. Just you, your people, 
+              and endless forest and meadow—for as many days as you want.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
@@ -60,7 +60,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/weddings" className="opacity-0 animate-hero-fade-in-delayed">
-                <Button size="lg" variant="outline" className="bg-white/10 border-white/40 text-white hover:bg-white/20 text-lg px-10 py-6 rounded-full backdrop-blur-sm">
+                <Button size="lg" variant="outline" className="bg-white/10 border-[hsl(15,50%,75%)] text-transparent bg-clip-text bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:bg-white/20 text-lg px-10 py-6 rounded-full backdrop-blur-sm">
                   View Packages
                 </Button>
               </Link>
