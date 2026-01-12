@@ -42,46 +42,219 @@ import woodlandCeremonyAisle from "@/assets/gallery/woodland-ceremony-aisle.avif
 import ceremonyForestSetup from "@/assets/gallery/ceremony-forest-setup.avif";
 import propertyLandscapeView from "@/assets/gallery/property-landscape-view.avif";
 
-const images = [
-  { src: ceremonyVows, alt: "Real wedding ceremony at Rustic Retreat", category: "Ceremony" },
-  { src: ceremonySetup, alt: "Outdoor wedding ceremony space", category: "Ceremony" },
-  { src: firstDanceSparklers, alt: "First dance with sparklers", category: "Reception" },
-  { src: veilKiss, alt: "Intimate wedding moment under veil", category: "Romance" },
-  { src: firstDanceCloseup, alt: "First dance closeup", category: "Reception" },
-  { src: cakeCutting, alt: "Cake cutting in forest setting", category: "Reception" },
-  { src: receptionTable3, alt: "Elegant reception table setting", category: "Details" },
-  { src: licenseSigning, alt: "Marriage license signing", category: "Ceremony" },
-  { src: receptionTable4, alt: "Outdoor reception table", category: "Details" },
-  { src: meadowKiss, alt: "Romantic couple embrace in meadow", category: "Romance" },
-  { src: cardBox, alt: "Rustic wedding card box", category: "Details" },
-  { src: bridalPortrait, alt: "Bride with bouquet on porch", category: "Bridal" },
-  { src: dressGazebo, alt: "Wedding dress in gazebo", category: "Details" },
-  { src: weddingParty, alt: "Full wedding party photo", category: "Group" },
-  { src: dressPavilion, alt: "Wedding dress at pavilion", category: "Details" },
-  { src: cakeCuttingSet, alt: "Gold cake cutting utensils", category: "Details" },
-  { src: brideHorse, alt: "Bride with horse", category: "Portraits" },
-  { src: guestFavor, alt: "Wedding guest favor box", category: "Details" },
-  { src: weddingRings, alt: "Wedding rings on flowers", category: "Details" },
-  { src: weddingRings2, alt: "Wedding rings detail", category: "Details" },
-  { src: birchGroveAltar, alt: "Birch grove wedding altar", category: "Ceremony" },
-  { src: bridalBouquetRoses, alt: "Bridal bouquet with roses", category: "Bridal" },
-  { src: coupleKissMeadow, alt: "Couple kiss in meadow", category: "Romance" },
-  { src: forestPathPhotos, alt: "Forest path photo spot", category: "Portraits" },
-  { src: receptionTablescapeGold, alt: "Luxury reception tablescape", category: "Details" },
-  { src: gazeboTwinkleLights, alt: "Gazebo with twinkle lights", category: "Reception" },
-  { src: sunsetClearingPortraits, alt: "Sunset clearing portraits", category: "Portraits" },
-  { src: weddingArchPavilion, alt: "Wedding arch at pavilion", category: "Ceremony" },
-  { src: wineBarrelDecor, alt: "Wine barrel decor", category: "Details" },
-  { src: woodlandCeremonyAisle, alt: "Woodland ceremony aisle", category: "Ceremony" },
-  { src: ceremonyForestSetup, alt: "Forest ceremony setup", category: "Ceremony" },
-  { src: propertyLandscapeView, alt: "Property landscape view", category: "Property" },
+interface GalleryImage {
+  src: string;
+  alt: string;
+  description: string;
+  category: string;
+}
+
+const images: GalleryImage[] = [
+  { 
+    src: ceremonyVows, 
+    alt: "Couple exchanging vows under rustic gazebo at Rustic Retreat Alberta", 
+    description: "The moment that changes everything—exchanging vows surrounded by towering pines",
+    category: "Ceremony" 
+  },
+  { 
+    src: ceremonySetup, 
+    alt: "Outdoor ceremony space with white chairs at private Alberta venue", 
+    description: "Where your guests will witness your love story unfold",
+    category: "Ceremony" 
+  },
+  { 
+    src: firstDanceSparklers, 
+    alt: "First dance with sparklers at outdoor Alberta wedding reception", 
+    description: "Magic happens here—sparklers light up an unforgettable first dance under the stars",
+    category: "Reception" 
+  },
+  { 
+    src: veilKiss, 
+    alt: "Intimate veil kiss moment at forest wedding venue Edmonton area", 
+    description: "A stolen moment—the intimacy of a veil kiss in dappled forest light",
+    category: "Romance" 
+  },
+  { 
+    src: firstDanceCloseup, 
+    alt: "Close-up of couple during emotional first dance", 
+    description: "Lost in the moment—when the world disappears and only you two remain",
+    category: "Reception" 
+  },
+  { 
+    src: cakeCutting, 
+    alt: "Couple cutting wedding cake in forest setting at outdoor reception", 
+    description: "Sweet celebration—cutting the cake surrounded by nature's beauty",
+    category: "Reception" 
+  },
+  { 
+    src: receptionTable3, 
+    alt: "Elegant outdoor reception table with floral centerpiece", 
+    description: "Every detail matters—from linens to florals, the tables tell your story",
+    category: "Details" 
+  },
+  { 
+    src: licenseSigning, 
+    alt: "Couple signing marriage license at ceremony", 
+    description: "Making it official—the moment your names join forever",
+    category: "Ceremony" 
+  },
+  { 
+    src: receptionTable4, 
+    alt: "Rustic outdoor dining setup at forest wedding reception", 
+    description: "Gather, feast, celebrate—long tables bring everyone together",
+    category: "Details" 
+  },
+  { 
+    src: meadowKiss, 
+    alt: "Romantic sunset kiss in wildflower meadow near Lac La Nonne Alberta", 
+    description: "Golden hour in the meadow—when the light is just right and love is in the air",
+    category: "Romance" 
+  },
+  { 
+    src: cardBox, 
+    alt: "Rustic wine barrel card box at wedding reception", 
+    description: "Collect well-wishes in style with our wine barrel card box",
+    category: "Details" 
+  },
+  { 
+    src: bridalPortrait, 
+    alt: "Bride with bouquet on rustic cabin porch Rustic Retreat Weddings", 
+    description: "Morning of magic—a quiet moment on the cabin porch before the day begins",
+    category: "Bridal" 
+  },
+  { 
+    src: dressGazebo, 
+    alt: "Wedding dress displayed at forest gazebo", 
+    description: "Your dress deserves this backdrop—photographed in natural beauty",
+    category: "Details" 
+  },
+  { 
+    src: weddingParty, 
+    alt: "Full wedding party group photo at outdoor venue", 
+    description: "Your favorite people, all in one place—memories that last generations",
+    category: "Group" 
+  },
+  { 
+    src: dressPavilion, 
+    alt: "Bridal gown at forest pavilion venue", 
+    description: "The pavilion frames your gown in woodland elegance",
+    category: "Details" 
+  },
+  { 
+    src: cakeCuttingSet, 
+    alt: "Gold cake cutting knife set from venue decor collection", 
+    description: "Details from our collection—everything you need is here",
+    category: "Details" 
+  },
+  { 
+    src: brideHorse, 
+    alt: "Bride posing with horse at rustic Alberta wedding venue", 
+    description: "Your wedding, your way—one bride brought her beloved horse for portraits",
+    category: "Portraits" 
+  },
+  { 
+    src: guestFavor, 
+    alt: "Elegant wedding favor box for guests", 
+    description: "Send guests home with love—small touches make big memories",
+    category: "Details" 
+  },
+  { 
+    src: weddingRings, 
+    alt: "Wedding rings resting on flower petals", 
+    description: "The rings that seal your promise, nestled in nature's beauty",
+    category: "Details" 
+  },
+  { 
+    src: weddingRings2, 
+    alt: "Detail shot of wedding bands with floral arrangement", 
+    description: "Forever begins here—a symbol of your commitment",
+    category: "Details" 
+  },
+  { 
+    src: birchGroveAltar, 
+    alt: "Natural birch grove ceremony altar at woodland wedding venue", 
+    description: "The birch grove altar—nature creates the most beautiful cathedral",
+    category: "Ceremony" 
+  },
+  { 
+    src: bridalBouquetRoses, 
+    alt: "Lush bridal bouquet with roses and greenery", 
+    description: "Blooming beauty—fresh florals that complement the natural surroundings",
+    category: "Bridal" 
+  },
+  { 
+    src: coupleKissMeadow, 
+    alt: "Newlyweds kissing in sun-drenched meadow at Rustic Retreat", 
+    description: "The meadow moments—soft grass, warm sun, and endless love",
+    category: "Romance" 
+  },
+  { 
+    src: forestPathPhotos, 
+    alt: "Couple walking forest path for portraits at Edmonton area venue", 
+    description: "Countless photo opportunities—the forest paths offer endless backdrops",
+    category: "Portraits" 
+  },
+  { 
+    src: receptionTablescapeGold, 
+    alt: "Luxury gold-accented reception tablescape with candles", 
+    description: "Elegance meets nature—gold accents shimmer in candlelight",
+    category: "Details" 
+  },
+  { 
+    src: gazeboTwinkleLights, 
+    alt: "Gazebo illuminated with twinkle lights for evening reception", 
+    description: "When the sun sets, the real magic begins—twinkle lights transform the gazebo",
+    category: "Reception" 
+  },
+  { 
+    src: sunsetClearingPortraits, 
+    alt: "Couple portraits in sunset clearing at private Alberta property", 
+    description: "The clearing opens up for golden hour magic—a photographer's dream",
+    category: "Portraits" 
+  },
+  { 
+    src: weddingArchPavilion, 
+    alt: "Floral wedding arch at forest pavilion ceremony space", 
+    description: "Say I do under the pavilion arch, framed by flowers and forest",
+    category: "Ceremony" 
+  },
+  { 
+    src: wineBarrelDecor, 
+    alt: "Rustic wine barrel decor at outdoor wedding reception", 
+    description: "Rustic touches everywhere—wine barrels add character and charm",
+    category: "Details" 
+  },
+  { 
+    src: woodlandCeremonyAisle, 
+    alt: "Woodland ceremony aisle lined with petals at forest venue", 
+    description: "Walk this aisle surrounded by nature—no walls needed",
+    category: "Ceremony" 
+  },
+  { 
+    src: ceremonyForestSetup, 
+    alt: "Forest ceremony setup with decorated arch and seating", 
+    description: "Your ceremony, designed by you, set by nature",
+    category: "Ceremony" 
+  },
+  { 
+    src: propertyLandscapeView, 
+    alt: "Panoramic view of 65-acre Rustic Retreat wedding property", 
+    description: "65 acres of possibility—your entire weekend awaits",
+    category: "Property" 
+  },
 ];
 
 const categories = ["All", "Ceremony", "Reception", "Romance", "Portraits", "Details", "Bridal"];
 
+// Count images per category
+const getCategoryCount = (category: string) => {
+  if (category === "All") return images.length;
+  return images.filter(img => img.category === category).length;
+};
+
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
   const filteredImages = activeCategory === "All" 
     ? images 
@@ -111,6 +284,9 @@ const Gallery = () => {
                   className="rounded-full"
                 >
                   {category}
+                  <span className="ml-1.5 text-xs opacity-70">
+                    ({getCategoryCount(category)})
+                  </span>
                 </Button>
               ))}
             </div>
@@ -126,16 +302,21 @@ const Gallery = () => {
                   key={index}
                   className="gallery-item group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
                   style={{ animationDelay: `${Math.min(index * 75, 600)}ms` }}
-                  onClick={() => setSelectedImage(image.src)}
+                  onClick={() => setSelectedImage(image)}
                 >
                   <img 
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end">
                     <div className="p-6 text-primary-foreground">
-                      <p className="text-sm font-medium">{image.category}</p>
+                      <p className="text-xs font-medium uppercase tracking-wider mb-2 text-secondary">
+                        {image.category}
+                      </p>
+                      <p className="text-sm leading-relaxed">
+                        {image.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -144,18 +325,45 @@ const Gallery = () => {
           </div>
         </section>
 
-        {/* Lightbox */}
+        {/* Lightbox with description */}
         <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
           <DialogContent className="max-w-5xl p-0 bg-transparent border-none">
             {selectedImage && (
-              <img 
-                src={selectedImage} 
-                alt="Gallery image"
-                className="w-full h-auto max-h-[90vh] object-contain"
-              />
+              <div className="relative">
+                <img 
+                  src={selectedImage.src} 
+                  alt={selectedImage.alt}
+                  className="w-full h-auto max-h-[85vh] object-contain"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6 text-primary-foreground">
+                  <p className="text-xs font-medium uppercase tracking-wider mb-2 text-secondary">
+                    {selectedImage.category}
+                  </p>
+                  <p className="text-base leading-relaxed">
+                    {selectedImage.description}
+                  </p>
+                </div>
+              </div>
             )}
           </DialogContent>
         </Dialog>
+
+        {/* Read Real Stories CTA */}
+        <section className="py-16 bg-card border-t border-border">
+          <div className="container mx-auto px-4 text-center">
+            <ScrollReveal>
+              <h3 className="text-2xl font-serif mb-4">Want to know the stories behind the photos?</h3>
+              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+                Read about real couples who celebrated at Rustic Retreat—their favorite moments, their families' reactions, and why they chose this place.
+              </p>
+              <Link to="/real-weddings">
+                <Button className="bg-secondary hover:bg-secondary-dark text-secondary-foreground rounded-full px-8">
+                  Read Their Stories
+                </Button>
+              </Link>
+            </ScrollReveal>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="section bg-primary text-primary-foreground">
