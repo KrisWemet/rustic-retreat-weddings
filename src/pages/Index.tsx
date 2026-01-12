@@ -59,19 +59,19 @@ const Index = () => {
           <div className="absolute inset-0 bg-cover bg-center" style={{
           backgroundImage: `url(${heroCeremony})`
         }}>
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/55 via-primary/45 to-primary/65" />
           </div>
           
           <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
-            <div className="bg-primary/40 backdrop-blur-md rounded-3xl py-10 md:py-14 px-6 md:px-12 max-w-4xl mx-auto shadow-2xl">
-              <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/90 opacity-0 animate-hero-fade-in [text-shadow:_0_2px_8px_rgba(0,0,0,0.3)]">
+            <div className="bg-primary/20 backdrop-blur-sm rounded-3xl py-10 md:py-14 px-6 md:px-12 max-w-4xl mx-auto">
+              <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/90 opacity-0 animate-hero-fade-in [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
                 65 Private Acres · Just North of Edmonton · Your Weekend, Your Way
               </p>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight drop-shadow-lg [text-shadow:_0_4px_20px_rgba(0,0,0,0.5)]">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.6),_0_4px_24px_rgba(0,0,0,0.4)]">
                 <span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" />
                 where time slows down
               </h1>
-              <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/95 leading-relaxed [text-shadow:_0_2px_16px_rgba(0,0,0,0.5)]">
+              <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/95 leading-relaxed [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
                 No rushing between venues. No goodbyes after the reception. Just you, your people, 
                 and endless forest and meadow—for as many days as you want.
               </p>
