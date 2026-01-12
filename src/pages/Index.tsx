@@ -23,21 +23,21 @@ import sunsetPortraits from "@/assets/gallery/sunset-clearing-portraits.avif";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import birchAltar from "@/assets/gallery/birch-grove-altar.avif";
 import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
-
 import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, CheckCircle2, Play, Volume2, VolumeX } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
 const Index = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const { ref: videoSectionRef, isVisible: isVideoVisible } = useScrollAnimation({
+  const {
+    ref: videoSectionRef,
+    isVisible: isVideoVisible
+  } = useScrollAnimation({
     threshold: 0.3,
-    triggerOnce: false,
+    triggerOnce: false
   });
-
   useEffect(() => {
     if (videoRef.current) {
       if (isVideoVisible) {
@@ -49,32 +49,29 @@ const Index = () => {
       }
     }
   }, [isVideoVisible]);
-
-  return (
-    <PageTransition>
+  return <PageTransition>
       <div className="min-h-screen bg-background">
         <Navigation />
         
         {/* Hero Section - Immersive & Emotional */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroCeremony})` }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/55 to-primary/75" />
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: `url(${heroCeremony})`
+        }}>
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/70" />
           </div>
           
           <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
             <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/80 opacity-0 animate-hero-fade-in">
               65 Private Acres · Just North of Edmonton · Your Weekend, Your Way
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight">
               <span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" />
               where time slows down
             </h1>
-            <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground leading-relaxed [text-shadow:_0_2px_12px_rgba(0,0,0,0.4)]">
-              Our couples tell us the hardest part is leaving. Those who book 3 days always wish they'd stayed for 5. 
-              Just you, your people, and endless forest and meadow—for as many days as you want.
+            <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/90 leading-relaxed">
+              No rushing between venues. No goodbyes after the reception. Just you, your people, 
+              and endless forest and meadow—for as many days as you want.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
@@ -96,13 +93,10 @@ const Index = () => {
         <section className="py-6 bg-secondary/10 border-y border-secondary/20">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-sm">
-              <div className="flex items-center gap-2">
-                <Heart className="w-4 h-4 text-secondary" />
-                <span className="text-muted-foreground"><strong className="text-foreground">50+ couples</strong> since 2020</span>
-              </div>
+              
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-secondary fill-secondary" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Couples never want to leave</strong> • 5.0 rating</span>
+                <span className="text-muted-foreground"><strong className="text-foreground">5.0 rating</strong> from couples</span>
               </div>
               <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
                 <Calendar className="w-4 h-4 text-primary" />
@@ -132,25 +126,13 @@ const Index = () => {
             {/* Cinematic Image Row */}
             <div className="grid grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
               <ScrollReveal delay={0}>
-                <img 
-                  src={veilKiss} 
-                  alt="Intimate bridal moment at Rustic Retreat Weddings"
-                  className="w-full h-48 md:h-72 object-cover shadow-soft"
-                />
+                <img src={veilKiss} alt="Intimate bridal moment at Rustic Retreat Weddings" className="w-full h-48 md:h-72 object-cover shadow-soft" />
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <img 
-                  src={galleryCouple} 
-                  alt="Bride and groom in wildflower meadow at sunset"
-                  className="w-full h-48 md:h-72 object-cover shadow-soft"
-                />
+                <img src={galleryCouple} alt="Bride and groom in wildflower meadow at sunset" className="w-full h-48 md:h-72 object-cover shadow-soft" />
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <img 
-                  src={firstDance} 
-                  alt="First dance with sparklers at Rustic Retreat Alberta"
-                  className="w-full h-48 md:h-72 object-cover shadow-soft"
-                />
+                <img src={firstDance} alt="First dance with sparklers at Rustic Retreat Alberta" className="w-full h-48 md:h-72 object-cover shadow-soft" />
               </ScrollReveal>
             </div>
           </div>
@@ -173,33 +155,13 @@ const Index = () => {
             
             <div ref={videoSectionRef} className="max-w-4xl mx-auto">
               <div className="relative overflow-hidden shadow-xl group">
-                <video 
-                  ref={videoRef}
-                  muted={isMuted}
-                  loop
-                  playsInline
-                  className="w-full h-auto"
-                  src="/videos/venue-tour.mp4"
-                  poster={receptionGazebo}
-                />
+                <video ref={videoRef} muted={isMuted} loop playsInline className="w-full h-auto" src="/videos/venue-tour.mp4" poster={receptionGazebo} />
                 {/* Sound toggle button */}
-                <button
-                  onClick={() => setIsMuted(!isMuted)}
-                  className="absolute bottom-4 right-4 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
-                  aria-label={isMuted ? "Unmute video" : "Mute video"}
-                >
-                  {isMuted ? (
-                    <VolumeX className="w-5 h-5 text-primary" />
-                  ) : (
-                    <Volume2 className="w-5 h-5 text-primary" />
-                  )}
+                <button onClick={() => setIsMuted(!isMuted)} className="absolute bottom-4 right-4 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110" aria-label={isMuted ? "Unmute video" : "Mute video"}>
+                  {isMuted ? <VolumeX className="w-5 h-5 text-primary" /> : <Volume2 className="w-5 h-5 text-primary" />}
                 </button>
                 {/* Fullscreen button */}
-                <button
-                  onClick={() => setIsVideoOpen(true)}
-                  className="absolute bottom-4 left-4 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
-                  aria-label="Play fullscreen"
-                >
+                <button onClick={() => setIsVideoOpen(true)} className="absolute bottom-4 left-4 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110" aria-label="Play fullscreen">
                   <Play className="w-5 h-5 text-primary ml-0.5" fill="currentColor" />
                 </button>
               </div>
@@ -213,12 +175,7 @@ const Index = () => {
         {/* Video Modal */}
         <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
           <DialogContent className="max-w-5xl p-0 bg-black border-none">
-            <video 
-              controls 
-              autoPlay 
-              className="w-full h-auto max-h-[80vh]"
-              src="/videos/venue-tour.mp4"
-            >
+            <video controls autoPlay className="w-full h-auto max-h-[80vh]" src="/videos/venue-tour.mp4">
               Your browser does not support the video tag.
             </video>
           </DialogContent>
@@ -305,10 +262,9 @@ const Index = () => {
 
         {/* Experience Highlights - Full Bleed */}
         <section className="relative py-24 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${propertyAerial})` }}
-          >
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: `url(${propertyAerial})`
+        }}>
             <div className="absolute inset-0 bg-primary/80" />
           </div>
           
@@ -392,39 +348,19 @@ const Index = () => {
             {/* Masonry-style Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
               <ScrollReveal delay={0} className="col-span-2 row-span-2">
-                <img 
-                  src={meadowKiss} 
-                  alt="Romantic sunset kiss in meadow at Alberta wedding venue"
-                  className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow"
-                />
+                <img src={meadowKiss} alt="Romantic sunset kiss in meadow at Alberta wedding venue" className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow" />
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <img 
-                  src={galleryReception} 
-                  alt="Elegant gold reception table setting"
-                  className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square"
-                />
+                <img src={galleryReception} alt="Elegant gold reception table setting" className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square" />
               </ScrollReveal>
               <ScrollReveal delay={150}>
-                <img 
-                  src={birchAltar} 
-                  alt="Birch grove ceremony altar"
-                  className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square"
-                />
+                <img src={birchAltar} alt="Birch grove ceremony altar" className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square" />
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <img 
-                  src={galleryGazebo} 
-                  alt="Gazebo with twinkle lights at night"
-                  className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square"
-                />
+                <img src={galleryGazebo} alt="Gazebo with twinkle lights at night" className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square" />
               </ScrollReveal>
               <ScrollReveal delay={250}>
-                <img 
-                  src={weddingParty} 
-                  alt="Wedding party group photo"
-                  className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square"
-                />
+                <img src={weddingParty} alt="Wedding party group photo" className="w-full h-full object-cover shadow-soft hover:shadow-medium transition-shadow aspect-square" />
               </ScrollReveal>
             </div>
 
@@ -754,21 +690,9 @@ const Index = () => {
 
               <ScrollReveal direction="right">
                 <div className="grid grid-cols-2 gap-3">
-                  <img 
-                    src={cabinExterior} 
-                    alt="Cozy cabin exterior at Rustic Retreat Weddings"
-                    className="w-full h-40 md:h-52 object-cover shadow-soft"
-                  />
-                  <img 
-                    src={receptionGazebo} 
-                    alt="Evening reception in the gazebo with string lights"
-                    className="w-full h-40 md:h-52 object-cover shadow-soft"
-                  />
-                  <img 
-                    src={sunsetPortraits} 
-                    alt="Couple portraits at sunset in forest clearing"
-                    className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2"
-                  />
+                  <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" className="w-full h-40 md:h-52 object-cover shadow-soft" />
+                  <img src={receptionGazebo} alt="Evening reception in the gazebo with string lights" className="w-full h-40 md:h-52 object-cover shadow-soft" />
+                  <img src={sunsetPortraits} alt="Couple portraits at sunset in forest clearing" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2" />
                 </div>
               </ScrollReveal>
             </div>
@@ -777,10 +701,9 @@ const Index = () => {
 
         {/* Final CTA - Emotional Close */}
         <section className="relative py-32 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${galleryPath})` }}
-          >
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: `url(${galleryPath})`
+        }}>
             <div className="absolute inset-0 bg-primary/85" />
           </div>
           
@@ -814,8 +737,6 @@ const Index = () => {
 
         <Footer />
       </div>
-    </PageTransition>
-  );
+    </PageTransition>;
 };
-
 export default Index;
