@@ -158,7 +158,7 @@ const About = () => {
                   <Sparkles className="w-8 h-8 text-secondary mb-3" />
                   <h3 className="text-xl font-semibold mb-3">The Transparency</h3>
                   <p className="text-muted-foreground">
-                    You can't book until you visit. Because we want you certain, not just committed.
+                    Experience it first, book it second. You'll know when it's right.
                   </p>
                 </div>
               </ScrollReveal>
