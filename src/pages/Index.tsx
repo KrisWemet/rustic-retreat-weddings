@@ -61,18 +61,18 @@ const Index = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroCeremony})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/70" />
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/55 to-primary/75" />
           </div>
           
           <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
             <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/80 opacity-0 animate-hero-fade-in">
               65 Private Acres · Just North of Edmonton · Your Weekend, Your Way
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight drop-shadow-lg">
               <span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" />
               where time slows down
             </h1>
-            <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/90 leading-relaxed">
+            <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground leading-relaxed [text-shadow:_0_2px_12px_rgba(0,0,0,0.4)]">
               Our couples tell us the hardest part is leaving. Those who book 3 days always wish they'd stayed for 5. 
               Just you, your people, and endless forest and meadow—for as many days as you want.
             </p>
