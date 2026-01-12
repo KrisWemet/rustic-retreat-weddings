@@ -121,8 +121,8 @@ const Contact = () => {
                           <Phone className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                           <div>
                             <p className="font-medium">Phone</p>
-                            <a href="tel:+15879990000" className="text-primary hover:underline text-sm">
-                              (587) 999-0000
+                            <a href="tel:+17802106252" className="text-primary hover:underline text-sm">
+                              (780) 210-6252
                             </a>
                           </div>
                         </div>
@@ -131,8 +131,8 @@ const Contact = () => {
                           <Mail className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                           <div>
                             <p className="font-medium">Email</p>
-                            <a href="mailto:info@rusticretreatalberta.ca" className="text-primary hover:underline text-sm">
-                              info@rusticretreatalberta.ca
+                            <a href="mailto:rusticretreatalberta@gmail.com" className="text-primary hover:underline text-sm">
+                              rusticretreatalberta@gmail.com
                             </a>
                           </div>
                         </div>
