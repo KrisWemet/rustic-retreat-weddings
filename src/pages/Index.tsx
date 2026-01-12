@@ -279,6 +279,68 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Your Weekend, Your Rules Section */}
+        <section className="section bg-card">
+          <div className="container mx-auto px-4">
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <p className="section-label">BEYOND THE CEREMONY</p>
+                <h2 className="text-3xl md:text-5xl font-serif mb-6">
+                  Your Weekend. <span className="italic text-secondary">Your Rules.</span>
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Rustic Retreat isn't only about the ceremony and reception—the whole weekend should show who you are as a couple. When you rent the land, your imagination is the only limit.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+              <ScrollReveal delay={0}>
+                <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+                  <div className="text-4xl mb-4">🎆</div>
+                  <h3 className="font-semibold mb-2">Fireworks & Sparklers</h3>
+                  <p className="text-sm text-muted-foreground">Light up the night sky with your own celebration.</p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={100}>
+                <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+                  <div className="text-4xl mb-4">🏊</div>
+                  <h3 className="font-semibold mb-2">Giant Slip-and-Slide</h3>
+                  <p className="text-sm text-muted-foreground">Turn the meadow into your personal water park.</p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={200}>
+                <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+                  <div className="text-4xl mb-4">🗺️</div>
+                  <h3 className="font-semibold mb-2">Treasure Hunts</h3>
+                  <p className="text-sm text-muted-foreground">Hide surprises across 65 acres of adventure.</p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={300}>
+                <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+                  <div className="text-4xl mb-4">🎯</div>
+                  <h3 className="font-semibold mb-2">Paintball & Games</h3>
+                  <p className="text-sm text-muted-foreground">Friendly competition in the forest.</p>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            <ScrollReveal delay={400}>
+              <div className="bg-secondary/10 p-8 rounded-2xl max-w-4xl mx-auto text-center">
+                <p className="text-lg mb-4">
+                  <strong>Morning yoga. Campfire karaoke. Stargazing parties. Group hikes. Whatever brings your people joy.</strong>
+                </p>
+                <p className="text-muted-foreground italic">
+                  "The ceremony is just the beginning. The weekend is where the real magic happens."
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
         {/* Experience Highlights - Full Bleed */}
         <section className="relative py-24 overflow-hidden">
           <div className="absolute inset-0 bg-cover bg-center" style={{
