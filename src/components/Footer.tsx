@@ -76,8 +76,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:info@rusticretreatalberta.ca" className="hover:text-secondary transition-colors text-primary-foreground/80">
-                  info@rusticretreatalberta.ca
+                <a href="mailto:rusticretreatalberta@gmail.com" className="hover:text-secondary transition-colors text-primary-foreground/80">
+                  rusticretreatalberta@gmail.com
                 </a>
               </li>
             </ul>
