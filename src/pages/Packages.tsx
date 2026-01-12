@@ -275,17 +275,73 @@ const Packages = () => {
             </Card>
           </div>
 
-          <div className="mt-12 bg-primary/5 p-8 border-l-4 border-primary max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold mb-3">Your Weekend, Your Way</h3>
-            <p className="text-muted-foreground mb-4">
-              This is your celebration—plan it however you want. Want a giant slip and slide? Do it. Treasure hunt through the forest? Go for it. Paintball tournament, morning yoga, campfire karaoke, stargazing party, group hike—whatever brings your people joy.
+        </div>
+      </section>
+
+      {/* Your Weekend, Your Way - Full Width Section */}
+      <section className="section bg-secondary/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-widest text-secondary mb-4">BEYOND THE CEREMONY</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Your Weekend. Your Rules.</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Rustic Retreat isn't only about the ceremony and reception—<strong>the whole weekend should show who you are as a couple.</strong> When you rent the land, your imagination is the only limit.
             </p>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• No other weddings during your weekend</li>
-              <li>• Complete creative control over timeline and activities</li>
-              <li>• 65 private acres to make your own</li>
-              <li>• Your imagination is the only limit</li>
-            </ul>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+            <div className="bg-background p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">🎆</div>
+              <h3 className="font-semibold mb-2">Fireworks & Sparklers</h3>
+              <p className="text-sm text-muted-foreground">Light up the night sky with your own celebration.</p>
+            </div>
+
+            <div className="bg-background p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">🏊</div>
+              <h3 className="font-semibold mb-2">Giant Slip-and-Slide</h3>
+              <p className="text-sm text-muted-foreground">Turn the meadow into your personal water park.</p>
+            </div>
+
+            <div className="bg-background p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">🗺️</div>
+              <h3 className="font-semibold mb-2">Treasure Hunts</h3>
+              <p className="text-sm text-muted-foreground">Hide surprises across 65 acres of adventure.</p>
+            </div>
+
+            <div className="bg-background p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">🎯</div>
+              <h3 className="font-semibold mb-2">Games & Adventures</h3>
+              <p className="text-sm text-muted-foreground">Paintball, lawn games, forest explorations.</p>
+            </div>
+          </div>
+
+          <div className="bg-background p-8 rounded-xl shadow-md max-w-4xl mx-auto">
+            <div className="text-center mb-6">
+              <p className="text-lg font-medium mb-4">
+                Morning yoga. Campfire karaoke. Stargazing parties. Group hikes. Whatever brings your people joy.
+              </p>
+              <p className="text-muted-foreground italic">
+                "The ceremony is just the beginning. The weekend is where the real magic happens."
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4 text-sm">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                <span>No other weddings during your weekend</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                <span>Complete creative control</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                <span>65 private acres to make your own</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                <span>Your imagination is the only limit</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

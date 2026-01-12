@@ -322,6 +322,50 @@ const Venue = () => {
           </div>
         </section>
 
+        {/* Freedom to Create Section */}
+        <section className="section">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <ScrollReveal>
+                <p className="text-sm uppercase tracking-widest text-secondary mb-4">YOUR WEEKEND, YOUR RULES</p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Freedom to Create</h2>
+                <p className="text-lg text-muted-foreground mb-8">
+                  When you rent the land, you're not just booking a venue—you're claiming space for whatever celebration you imagine. Rustic Retreat isn't only about the ceremony and reception. <strong>The whole weekend should show who you are.</strong>
+                </p>
+              </ScrollReveal>
+
+              <ScrollReveal delay={100}>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                  <div className="bg-card p-4 rounded-xl shadow-soft">
+                    <div className="text-3xl mb-2">🎆</div>
+                    <p className="text-sm font-medium">Fireworks at midnight</p>
+                  </div>
+                  <div className="bg-card p-4 rounded-xl shadow-soft">
+                    <div className="text-3xl mb-2">🏊</div>
+                    <p className="text-sm font-medium">Giant slip-and-slide</p>
+                  </div>
+                  <div className="bg-card p-4 rounded-xl shadow-soft">
+                    <div className="text-3xl mb-2">🗺️</div>
+                    <p className="text-sm font-medium">Treasure hunts</p>
+                  </div>
+                  <div className="bg-card p-4 rounded-xl shadow-soft">
+                    <div className="text-3xl mb-2">🧘</div>
+                    <p className="text-sm font-medium">Sunrise yoga</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={200}>
+                <div className="bg-secondary/10 p-6 rounded-xl">
+                  <p className="text-muted-foreground italic">
+                    "Paintball with the groomsmen. Campfire karaoke. Stargazing with s'mores. A late-night poker tournament. Whatever brings your people joy—this is your space to do it."
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="section bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
