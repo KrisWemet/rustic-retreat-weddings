@@ -59,34 +59,35 @@ const Index = () => {
           <div className="absolute inset-0 bg-cover bg-center" style={{
           backgroundImage: `url(${heroCeremony})`
         }}>
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/60" />
           </div>
           
           <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
-            <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/80 opacity-0 animate-hero-fade-in">
-              65 Private Acres · Just North of Edmonton · Your Weekend, Your Way
-            </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight">
-              <span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" />
-              where time slows down
-            </h1>
-            <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/90 leading-relaxed">
-              No rushing between venues. No goodbyes after the reception. Just you, your people, 
-              and endless forest and meadow—for as many days as you want.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
-                <Button size="lg" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white text-lg px-10 py-6 rounded-full shadow-elegant transition-all duration-300 hover:shadow-xl hover:scale-105">
-                  Book Your Tour
-                </Button>
-              </Link>
-              <Link to="/packages" className="opacity-0 animate-hero-fade-in-delayed">
-                <Button size="lg" variant="outline" className="bg-white/10 border-[hsl(15,50%,75%)] text-white hover:bg-white/20 text-lg px-10 py-6 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105">
-                  View Packages
-                </Button>
-              </Link>
+            <div className="bg-primary/40 backdrop-blur-md rounded-3xl py-10 md:py-14 px-6 md:px-12 max-w-4xl mx-auto shadow-2xl">
+              <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/90 opacity-0 animate-hero-fade-in [text-shadow:_0_2px_8px_rgba(0,0,0,0.3)]">
+                65 Private Acres · Just North of Edmonton · Your Weekend, Your Way
+              </p>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight drop-shadow-lg [text-shadow:_0_4px_20px_rgba(0,0,0,0.5)]">
+                <span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" />
+                where time slows down
+              </h1>
+              <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/95 leading-relaxed [text-shadow:_0_2px_16px_rgba(0,0,0,0.5)]">
+                No rushing between venues. No goodbyes after the reception. Just you, your people, 
+                and endless forest and meadow—for as many days as you want.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
+                  <Button size="lg" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white text-lg px-10 py-6 rounded-full shadow-elegant transition-all duration-300 hover:shadow-xl hover:scale-105">
+                    Book Your Tour
+                  </Button>
+                </Link>
+                <Link to="/packages" className="opacity-0 animate-hero-fade-in-delayed">
+                  <Button size="lg" variant="outline" className="bg-white/10 border-[hsl(15,50%,75%)] text-white hover:bg-white/20 text-lg px-10 py-6 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105">
+                    View Packages
+                  </Button>
+                </Link>
+              </div>
             </div>
-            
           </div>
         </section>
 
