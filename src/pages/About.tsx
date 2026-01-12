@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import HoverImage from "@/components/HoverImage";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import propertyAerial from "@/assets/property-aerial-view.avif";
 import campfireNight from "@/assets/campfire-evening-setting.avif";
@@ -29,9 +30,11 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
-                <img 
+                <HoverImage 
                   src={propertyAerial}
                   alt="Aerial drone view of Rustic Retreat Weddings 65-acre property showing forest ceremony areas and open meadow spaces near Edmonton"
+                  description="65 acres of possibility—your entire weekend awaits"
+                  category="The Property"
                   className="shadow-xl"
                 />
               </ScrollReveal>
@@ -213,14 +216,18 @@ const About = () => {
 
               <ScrollReveal direction="right">
                 <div className="grid grid-cols-2 gap-4">
-                  <img 
+                  <HoverImage 
                     src={ceremonySetup}
-                    alt="Forest wedding ceremony setup at Rustic Retreat"
+                    alt="Forest wedding ceremony setup with natural décor at Rustic Retreat Alberta"
+                    description="Your ceremony, designed by you, set by nature"
+                    category="Ceremony Spaces"
                     className="shadow-xl"
                   />
-                  <img 
+                  <HoverImage 
                     src={birchGrove}
-                    alt="Birch grove wedding altar at Rustic Retreat"
+                    alt="Birch grove wedding altar surrounded by white birch trees near Edmonton"
+                    description="The birch grove altar—where vows become eternal"
+                    category="Natural Altar"
                     className="shadow-xl"
                   />
                 </div>
@@ -259,9 +266,11 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left" className="order-2 lg:order-1">
-                <img 
+                <HoverImage 
                   src={campfireNight}
-                  alt="Evening campfire gathering at Rustic Retreat Weddings"
+                  alt="Evening campfire gathering under stars at Rustic Retreat Weddings Alberta"
+                  description="Where strangers become friends under Alberta stars"
+                  category="Campfire Evenings"
                   className="shadow-xl"
                 />
               </ScrollReveal>

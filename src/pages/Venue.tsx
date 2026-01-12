@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import HoverImage from "@/components/HoverImage";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
 import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
 import forestPath from "@/assets/gallery/forest-path-photos.avif";
@@ -140,14 +141,18 @@ const Venue = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <div className="grid grid-cols-2 gap-4">
-                  <img 
+                  <HoverImage 
                     src={bridalPortrait}
                     alt="Bride portrait on rustic cabin porch at Rustic Retreat Weddings Alberta venue with natural forest background"
+                    description="Morning of magic—a quiet moment on the cabin porch"
+                    category="Getting Ready"
                     className="shadow-xl"
                   />
-                  <img 
+                  <HoverImage 
                     src={forestPath}
                     alt="Forest trail photo spot for wedding portraits at Rustic Retreat with couple walking wooded path"
+                    description="Countless photo opportunities—the forest paths offer endless backdrops"
+                    category="Photo Spots"
                     className="shadow-xl"
                   />
                 </div>
@@ -173,9 +178,11 @@ const Venue = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
-                <img 
+                <HoverImage 
                   src={receptionTablescape}
-                  alt="Wedding décor collection at Rustic Retreat"
+                  alt="Elegant wedding reception tablescape with gold accents at Rustic Retreat Alberta"
+                  description="Every detail matters—from linens to florals, we provide it all"
+                  category="Décor Collection"
                   className="shadow-xl"
                 />
               </ScrollReveal>
@@ -295,14 +302,18 @@ const Venue = () => {
               </ScrollReveal>
               <ScrollReveal direction="right">
                 <div className="grid grid-cols-2 gap-4">
-                  <img 
+                  <HoverImage 
                     src={wineBarrelDecor}
-                    alt="Wine barrel wedding decor"
+                    alt="Rustic wine barrel wedding décor at Alberta venue"
+                    description="Rustic touches everywhere—wine barrels add character"
+                    category="Rustic Details"
                     className="shadow-xl"
                   />
-                  <img 
+                  <HoverImage 
                     src={receptionTablescape}
-                    alt="Elegant wedding reception tablescape"
+                    alt="Elegant gold and white wedding reception table setting"
+                    description="Elegance without the rental fees—all included"
+                    category="Table Settings"
                     className="shadow-xl"
                   />
                 </div>
