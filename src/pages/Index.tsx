@@ -60,7 +60,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/weddings" className="opacity-0 animate-hero-fade-in-delayed">
-                <Button size="lg" variant="outline" className="bg-white/10 border-[hsl(15,50%,75%)] text-transparent bg-clip-text bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:bg-white/20 text-lg px-10 py-6 rounded-full backdrop-blur-sm">
+                <Button size="lg" variant="outline" className="bg-white/10 border-[hsl(15,50%,75%)] text-white hover:bg-white/20 text-lg px-10 py-6 rounded-full backdrop-blur-sm">
                   View Packages
                 </Button>
               </Link>
