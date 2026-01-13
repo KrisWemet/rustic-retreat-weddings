@@ -7,6 +7,7 @@ import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
+import SEO from "@/components/SEO";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
 import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
 import forestPath from "@/assets/gallery/forest-path-photos.avif";
@@ -17,6 +18,11 @@ import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, Doll
 const Venue = () => {
   return (
     <PageTransition>
+      <SEO 
+        title="The Venue"
+        description="Explore our private cabin for newlyweds, 65-acre forest property, and curated wedding décor collection. Off-grid solar power, comfortable accommodations, and endless photo opportunities near Edmonton."
+        path="/venue"
+      />
       <div className="min-h-screen">
         <Navigation />
         

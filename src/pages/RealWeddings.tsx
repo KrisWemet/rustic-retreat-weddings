@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { weddingStories } from "@/data/wedding-stories";
 import { Calendar, Users, ArrowRight } from "lucide-react";
 
@@ -14,6 +15,11 @@ import heroImage from "@/assets/gallery/couple-kiss-meadow.avif";
 const RealWeddings = () => {
   return (
     <PageTransition>
+      <SEO 
+        title="Real Wedding Stories"
+        description="Read stories from real couples who celebrated at Rustic Retreat. Discover how multi-day wedding weekends created unforgettable memories for families and friends."
+        path="/real-weddings"
+      />
       <div className="min-h-screen">
         <Navigation />
         

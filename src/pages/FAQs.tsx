@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import propertyLandscape from "@/assets/property-landscape-view.avif";
 
 const FAQs = () => {
@@ -66,6 +67,11 @@ const FAQs = () => {
 
   return (
     <PageTransition>
+      <SEO 
+        title="Frequently Asked Questions"
+        description="Get answers about Rustic Retreat wedding packages, guest capacity, camping accommodations, vendor policies, and more. Everything you need to know before booking your property tour."
+        path="/faqs"
+      />
       <div className="min-h-screen">
         <Navigation />
         

@@ -3,14 +3,21 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import ceremonyVows from "@/assets/ceremony-vows-outdoor.avif";
 import receptionEvening from "@/assets/reception-outdoor-celebration.avif";
 import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles } from "lucide-react";
 
 const Packages = () => {
   return (
-    <div className="min-h-screen">
-      <Navigation />
+    <>
+      <SEO 
+        title="Wedding Packages & Pricing"
+        description="Choose from 3-day ($4,500) or 5-day ($5,500) wedding packages at Rustic Retreat. Both include exclusive property access, cabin accommodation, décor collection, and complete creative freedom."
+        path="/packages"
+      />
+      <div className="min-h-screen">
+        <Navigation />
       
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden mt-20">
@@ -584,6 +591,7 @@ const Packages = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
