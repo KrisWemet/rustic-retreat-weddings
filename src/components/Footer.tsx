@@ -55,6 +55,11 @@ const Footer = () => {
                   Schedule a Visit
                 </Link>
               </li>
+              <li>
+                <a href="/llm.html" className="hover:text-secondary transition-colors">
+                  Venue Info (for AI/Press)
+                </a>
+              </li>
             </ul>
           </div>
 
