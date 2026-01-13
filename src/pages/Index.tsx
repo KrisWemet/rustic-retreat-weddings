@@ -100,10 +100,10 @@ const Index = () => {
                 <Star className="w-4 h-4 text-secondary fill-secondary" />
                 <span className="text-muted-foreground"><strong className="text-foreground">5.0 rating</strong> from couples</span>
               </div>
-              <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+              <Link to="/contact" className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors cursor-pointer group">
                 <Calendar className="w-4 h-4 text-primary" />
-                <span className="text-primary font-medium">2026 Season: Limited dates remaining</span>
-              </div>
+                <span className="text-primary font-medium group-hover:underline">2026 Season: Limited dates remaining</span>
+              </Link>
             </div>
           </div>
         </section>
