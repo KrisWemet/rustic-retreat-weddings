@@ -267,4 +267,57 @@ All colors MUST be HSL.
   .stagger-4 { animation-delay: 300ms; }
   .stagger-5 { animation-delay: 400ms; }
   .stagger-6 { animation-delay: 500ms; }
+
+  /* Navigation link underline animation */
+  .nav-link {
+    @apply relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-secondary;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Parallax hero effect */
+  .parallax-hero {
+    will-change: transform;
+    transition: transform 0.1s linear;
+  }
+
+  /* Clip-path reveal for gallery images */
+  .clip-reveal {
+    clip-path: inset(0 0 100% 0);
+    animation: clip-reveal 0.8s ease-out forwards;
+  }
+
+  @keyframes clip-reveal {
+    0% {
+      clip-path: inset(0 0 100% 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  /* Floating animation for decorative elements */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
 }

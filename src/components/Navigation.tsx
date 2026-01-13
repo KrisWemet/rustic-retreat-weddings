@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
   const navLinks = [
@@ -20,14 +19,40 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Scroll detection for navbar shrink/blur effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
+    <nav 
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300",
+        isScrolled 
+          ? "bg-background/98 backdrop-blur-lg border-border/50 shadow-sm" 
+          : "bg-background/95 backdrop-blur-md border-border/30"
+      )}
+    >
       <div className="container mx-auto px-4">
         {/* Main Header Row */}
-        <div className="flex items-center justify-between h-16">
+        <div 
+          className={cn(
+            "flex items-center justify-between transition-all duration-300",
+            isScrolled ? "h-14" : "h-16"
+          )}
+        >
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <h1 className="text-xl md:text-2xl font-serif italic text-primary">
+            <h1 
+              className={cn(
+                "font-serif italic text-primary transition-all duration-300",
+                isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
+              )}
+            >
               Rustic Retreat
             </h1>
           </Link>
@@ -39,10 +64,10 @@ const Navigation = () => {
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "text-sm transition-colors hover:text-secondary relative py-1",
+                  "nav-link text-sm transition-colors py-1",
                   isActive(link.path)
                     ? "text-foreground font-medium"
-                    : "text-muted-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {link.name}
@@ -52,7 +77,12 @@ const Navigation = () => {
               </Link>
             ))}
             <Link to="/contact">
-              <Button className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-6 shadow-md transition-all duration-300 hover:shadow-lg">
+              <Button 
+                className={cn(
+                  "bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105",
+                  isScrolled ? "px-5 text-sm" : "px-6"
+                )}
+              >
                 Walk the Land With Us
               </Button>
             </Link>
@@ -67,7 +97,12 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Page Links - Horizontal Scroll */}
-        <div className="lg:hidden -mx-4 px-4 pb-2 overflow-x-auto scrollbar-hide">
+        <div 
+          className={cn(
+            "lg:hidden -mx-4 px-4 overflow-x-auto scrollbar-hide transition-all duration-300",
+            isScrolled ? "pb-1.5" : "pb-2"
+          )}
+        >
           <div className="flex gap-4 min-w-max">
             {navLinks.map((link) => (
               <Link
