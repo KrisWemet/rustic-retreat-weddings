@@ -132,6 +132,16 @@ const Contact = () => {
                       </div>
 
                       <div>
+                        <Label htmlFor="tourDates">When would you like to visit? *</Label>
+                        <Textarea 
+                          id="tourDates" 
+                          required
+                          className="mt-2 min-h-20" 
+                          placeholder="Please provide 2-3 dates that work for you (we schedule around existing bookings)"
+                        />
+                      </div>
+
+                      <div>
                         <Label htmlFor="weddingDate">When are you thinking of having your celebration? (approximate is fine)</Label>
                         <Input 
                           id="weddingDate" 
