@@ -69,8 +69,7 @@ const Index = () => {
               <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/90 opacity-0 animate-hero-fade-in [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
                 65 Private Acres · Just North of Edmonton · Your Weekend, Your Way
               </p>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.6),_0_4px_24px_rgba(0,0,0,0.4)]">
-                <span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" />
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.6),_0_4px_24px_rgba(0,0,0,0.4)]">Imagine a wedding weekend where time slows down<span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" />
                 where time slows down
               </h1>
               <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/95 leading-relaxed [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
@@ -130,31 +129,13 @@ const Index = () => {
             {/* Cinematic Image Row */}
             <div className="grid grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
               <ScrollReveal delay={0}>
-                <HoverImage 
-                  src={veilKiss} 
-                  alt="Intimate bridal veil kiss moment at Rustic Retreat Weddings Alberta" 
-                  description="A stolen moment—the intimacy of a veil kiss in dappled forest light"
-                  category="Ceremony"
-                  className="h-48 md:h-72 shadow-soft"
-                />
+                <HoverImage src={veilKiss} alt="Intimate bridal veil kiss moment at Rustic Retreat Weddings Alberta" description="A stolen moment—the intimacy of a veil kiss in dappled forest light" category="Ceremony" className="h-48 md:h-72 shadow-soft" />
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <HoverImage 
-                  src={galleryCouple} 
-                  alt="Bride and groom romantic kiss in wildflower meadow at sunset near Edmonton" 
-                  description="Golden hour in the meadow—when the light is just right"
-                  category="Portraits"
-                  className="h-48 md:h-72 shadow-soft"
-                />
+                <HoverImage src={galleryCouple} alt="Bride and groom romantic kiss in wildflower meadow at sunset near Edmonton" description="Golden hour in the meadow—when the light is just right" category="Portraits" className="h-48 md:h-72 shadow-soft" />
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <HoverImage 
-                  src={firstDance} 
-                  alt="First dance with sparklers at Rustic Retreat Alberta wedding venue" 
-                  description="Magic happens here—sparklers light up an unforgettable first dance"
-                  category="Reception"
-                  className="h-48 md:h-72 shadow-soft"
-                />
+                <HoverImage src={firstDance} alt="First dance with sparklers at Rustic Retreat Alberta wedding venue" description="Magic happens here—sparklers light up an unforgettable first dance" category="Reception" className="h-48 md:h-72 shadow-soft" />
               </ScrollReveal>
             </div>
           </div>
@@ -440,53 +421,19 @@ const Index = () => {
             {/* Masonry-style Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
               <ScrollReveal delay={0} className="col-span-2 row-span-2">
-                <HoverImage 
-                  src={meadowKiss} 
-                  alt="Romantic sunset kiss in wildflower meadow at Alberta wedding venue near Lac La Nonne" 
-                  description="Sunset kisses in the wildflower meadow—pure romance"
-                  category="Golden Hour"
-                  className="w-full h-full shadow-soft"
-                />
+                <HoverImage src={meadowKiss} alt="Romantic sunset kiss in wildflower meadow at Alberta wedding venue near Lac La Nonne" description="Sunset kisses in the wildflower meadow—pure romance" category="Golden Hour" className="w-full h-full shadow-soft" />
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <HoverImage 
-                  src={galleryReception} 
-                  alt="Elegant gold reception tablescape with candles at Rustic Retreat wedding" 
-                  description="Elegance meets nature—gold accents shimmer in candlelight"
-                  category="Reception"
-                  className="shadow-soft"
-                  aspectRatio="square"
-                />
+                <HoverImage src={galleryReception} alt="Elegant gold reception tablescape with candles at Rustic Retreat wedding" description="Elegance meets nature—gold accents shimmer in candlelight" category="Reception" className="shadow-soft" aspectRatio="square" />
               </ScrollReveal>
               <ScrollReveal delay={150}>
-                <HoverImage 
-                  src={birchAltar} 
-                  alt="Birch grove ceremony altar surrounded by nature near Edmonton" 
-                  description="The birch grove altar—nature creates the most beautiful cathedral"
-                  category="Ceremony"
-                  className="shadow-soft"
-                  aspectRatio="square"
-                />
+                <HoverImage src={birchAltar} alt="Birch grove ceremony altar surrounded by nature near Edmonton" description="The birch grove altar—nature creates the most beautiful cathedral" category="Ceremony" className="shadow-soft" aspectRatio="square" />
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <HoverImage 
-                  src={galleryGazebo} 
-                  alt="Wedding gazebo illuminated with twinkle lights at night" 
-                  description="When the sun sets, twinkle lights transform the gazebo"
-                  category="Evening"
-                  className="shadow-soft"
-                  aspectRatio="square"
-                />
+                <HoverImage src={galleryGazebo} alt="Wedding gazebo illuminated with twinkle lights at night" description="When the sun sets, twinkle lights transform the gazebo" category="Evening" className="shadow-soft" aspectRatio="square" />
               </ScrollReveal>
               <ScrollReveal delay={250}>
-                <HoverImage 
-                  src={weddingParty} 
-                  alt="Wedding party group photo in forest setting at Alberta venue" 
-                  description="Your favorite people, all in one place"
-                  category="Wedding Party"
-                  className="shadow-soft"
-                  aspectRatio="square"
-                />
+                <HoverImage src={weddingParty} alt="Wedding party group photo in forest setting at Alberta venue" description="Your favorite people, all in one place" category="Wedding Party" className="shadow-soft" aspectRatio="square" />
               </ScrollReveal>
             </div>
 
