@@ -29,10 +29,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- AI/LLM Discovery -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable site information" />
+    <link rel="alternate" type="text/html" href="/llm.html" title="Full venue information for AI and press" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EventVenue",
+      "name": "Rustic Retreat Weddings",
+      "description": "Multi-day outdoor wedding venue on 65 private acres near Edmonton, Alberta. Offering 3-day and 5-day celebration packages with cabin accommodation, camping, and complete creative freedom.",
+      "url": "https://www.rusticretreat.xyz",
+      "telephone": "+1-780-210-6252",
+      "email": "rusticretreatalberta@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lac La Nonne",
+        "addressRegion": "Alberta",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 54.0,
+        "longitude": -114.5
+      },
+      "maximumAttendeeCapacity": 80,
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Cabin Accommodation", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Camping", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Outdoor Ceremony Space", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Reception Gazebo", "value": true}
+      ]
+    }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Fallback for non-JS crawlers -->
+    <noscript>
+      <div style="padding: 2rem; font-family: Georgia, serif;">
+        <h1>Rustic Retreat Weddings</h1>
+        <p><strong>Multi-day outdoor wedding venue on 65 private acres near Lac La Nonne, Alberta</strong> (99 km NW of Edmonton)</p>
+        <p>We offer 3-day ($4,500) and 5-day ($5,500) celebration packages that include exclusive property access, cabin accommodation for 4, camping for 60 guests, ceremony/reception seating for 80, and a curated décor collection.</p>
+        <p>Wedding season: June through September</p>
+        <p><strong>Contact:</strong> (780) 210-6252 | rusticretreatalberta@gmail.com</p>
+        <p><a href="/llm.html">View full venue information</a> | <a href="/packages">Packages</a> | <a href="/contact">Contact Us</a></p>
+      </div>
+    </noscript>
   </body>
 </html>
