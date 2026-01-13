@@ -6,6 +6,7 @@ import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
+import SEO from "@/components/SEO";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import propertyAerial from "@/assets/property-aerial-view.avif";
 import campfireNight from "@/assets/campfire-evening-setting.avif";
@@ -16,6 +17,11 @@ import { Heart, Clock, Sparkles, MapPin } from "lucide-react";
 const About = () => {
   return (
     <PageTransition>
+      <SEO 
+        title="Our Story & Philosophy"
+        description="Discover why Rustic Retreat offers multi-day wedding celebrations instead of single-day events. Learn about our 65-acre property near Lac La Nonne and our commitment to authentic, meaningful weddings."
+        path="/about"
+      />
       <div className="min-h-screen">
         <Navigation />
         

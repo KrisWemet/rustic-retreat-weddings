@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 
 // Gallery imports
 import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
@@ -262,6 +263,11 @@ const Gallery = () => {
 
   return (
     <PageTransition>
+      <SEO 
+        title="Wedding Photo Gallery"
+        description="Browse real wedding photos from Rustic Retreat. See ceremony setups, reception details, romantic portraits, and more from couples who celebrated on our 65-acre Alberta property."
+        path="/gallery"
+      />
       <div className="min-h-screen">
         <Navigation />
         

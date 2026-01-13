@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageTransition from "@/components/PageTransition";
 import HoverImage from "@/components/HoverImage";
+import SEO from "@/components/SEO";
 
 // Hero & Property Images
 import heroCeremony from "@/assets/hero-ceremony-space.avif";
@@ -51,6 +52,7 @@ const Index = () => {
     }
   }, [isVideoVisible]);
   return <PageTransition>
+      <SEO />
       <div className="min-h-screen bg-background">
         <Navigation />
         

@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
 import receptionEvening from "@/assets/reception-gazebo-evening.avif";
@@ -34,6 +35,11 @@ const Contact = () => {
 
   return (
     <PageTransition>
+      <SEO 
+        title="Book Your Property Tour"
+        description="Schedule a property tour at Rustic Retreat. Walk the 65-acre grounds, see ceremony spaces, browse our décor collection, and discuss your wedding vision. Tours by appointment only."
+        path="/contact"
+      />
       <div className="min-h-screen">
         <Navigation />
         
