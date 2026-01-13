@@ -132,7 +132,7 @@ const Contact = () => {
                       </div>
 
                       <div>
-                        <Label htmlFor="weddingDate">When are you thinking? (approximate is fine)</Label>
+                        <Label htmlFor="weddingDate">When are you thinking of having your celebration? (approximate is fine)</Label>
                         <Input 
                           id="weddingDate" 
                           type="text" 
