@@ -69,8 +69,8 @@ const Index = () => {
               <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/90 opacity-0 animate-hero-fade-in [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
                 65 Private Acres · Just North of Edmonton · Your Weekend, Your Way
               </p>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.6),_0_4px_24px_rgba(0,0,0,0.4)]">Imagine a wedding weekend where time slows down<span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" />
-                where time slows down
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.6),_0_4px_24px_rgba(0,0,0,0.4)]">
+                <span className="italic">Imagine</span> a wedding weekend<br className="hidden md:block" /> where time slows down
               </h1>
               <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/95 leading-relaxed [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
                 No rushing between venues. No goodbyes after the reception. Just you, your people, 
