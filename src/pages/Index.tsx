@@ -28,7 +28,6 @@ import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, V
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
 const Index = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
@@ -40,7 +39,6 @@ const Index = () => {
     threshold: 0.3,
     triggerOnce: false
   });
-
   useEffect(() => {
     if (videoRef.current) {
       if (isVideoVisible) {
@@ -52,9 +50,7 @@ const Index = () => {
       }
     }
   }, [isVideoVisible]);
-
-  return (
-    <PageTransition>
+  return <PageTransition>
       <SEO />
       <div className="min-h-screen bg-background">
         <Navigation />
@@ -62,8 +58,8 @@ const Index = () => {
         {/* Hero Section - Transformation Focus */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-cover bg-center" style={{
-            backgroundImage: `url(${heroCeremony})`
-          }}>
+          backgroundImage: `url(${heroCeremony})`
+        }}>
             <div className="absolute inset-0 bg-gradient-to-b from-primary/55 via-primary/45 to-primary/65" />
           </div>
           
@@ -98,10 +94,7 @@ const Index = () => {
         <section className="py-6 bg-secondary/10 border-y border-secondary/20">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-sm">
-              <div className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-secondary fill-secondary" />
-                <span className="text-muted-foreground"><strong className="text-foreground">50+ couples</strong> since 2020</span>
-              </div>
+              
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-secondary fill-secondary" />
                 <span className="text-muted-foreground"><strong className="text-foreground">5.0 rating</strong> from couples</span>
@@ -513,8 +506,8 @@ const Index = () => {
         {/* Final CTA */}
         <section className="relative py-32 overflow-hidden">
           <div className="absolute inset-0 bg-cover bg-center" style={{
-            backgroundImage: `url(${galleryPath})`
-          }}>
+          backgroundImage: `url(${galleryPath})`
+        }}>
             <div className="absolute inset-0 bg-primary/85" />
           </div>
           
@@ -540,8 +533,6 @@ const Index = () => {
 
         <Footer />
       </div>
-    </PageTransition>
-  );
+    </PageTransition>;
 };
-
 export default Index;
