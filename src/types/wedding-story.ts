@@ -18,4 +18,8 @@ export interface WeddingStory {
   packageUsed: string;
   favoriteMemory?: string;
   photographerCredit?: string;
+  // New fields for case study format
+  testimonialQuote?: string;
+  whatMadeItSpecial?: string[];
+  unexpectedMoment?: string;
 }

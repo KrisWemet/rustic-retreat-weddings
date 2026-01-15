@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import ceremonyVows from "@/assets/ceremony-vows-outdoor.avif";
 import receptionEvening from "@/assets/reception-outdoor-celebration.avif";
-import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles } from "lucide-react";
+import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Waves, Compass, Target } from "lucide-react";
 
 const Packages = () => {
   return (
@@ -298,25 +298,33 @@ const Packages = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
             <div className="bg-background p-6 rounded-xl shadow-md text-center">
-              <div className="text-4xl mb-3">🎆</div>
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
+                <Sparkles className="w-6 h-6 text-secondary" />
+              </div>
               <h3 className="font-semibold mb-2">Fireworks & Sparklers</h3>
               <p className="text-sm text-muted-foreground">Light up the night sky with your own celebration.</p>
             </div>
 
             <div className="bg-background p-6 rounded-xl shadow-md text-center">
-              <div className="text-4xl mb-3">🏊</div>
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
+                <Waves className="w-6 h-6 text-secondary" />
+              </div>
               <h3 className="font-semibold mb-2">Giant Slip-and-Slide</h3>
               <p className="text-sm text-muted-foreground">Turn the meadow into your personal water park.</p>
             </div>
 
             <div className="bg-background p-6 rounded-xl shadow-md text-center">
-              <div className="text-4xl mb-3">🗺️</div>
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
+                <Compass className="w-6 h-6 text-secondary" />
+              </div>
               <h3 className="font-semibold mb-2">Treasure Hunts</h3>
               <p className="text-sm text-muted-foreground">Hide surprises across 65 acres of adventure.</p>
             </div>
 
             <div className="bg-background p-6 rounded-xl shadow-md text-center">
-              <div className="text-4xl mb-3">🎯</div>
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
+                <Target className="w-6 h-6 text-secondary" />
+              </div>
               <h3 className="font-semibold mb-2">Games & Adventures</h3>
               <p className="text-sm text-muted-foreground">Paintball, lawn games, forest explorations.</p>
             </div>

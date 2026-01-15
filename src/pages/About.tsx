@@ -10,16 +10,15 @@ import SEO from "@/components/SEO";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import propertyAerial from "@/assets/property-aerial-view.avif";
 import campfireNight from "@/assets/campfire-evening-setting.avif";
-import ceremonySetup from "@/assets/gallery/ceremony-forest-setup.avif";
 import birchGrove from "@/assets/gallery/birch-grove-altar.avif";
-import { Heart, Clock, Sparkles, MapPin } from "lucide-react";
+import { Heart, MapPin, Quote } from "lucide-react";
 
 const About = () => {
   return (
     <PageTransition>
       <SEO 
         title="Our Story & Philosophy"
-        description="Discover why Rustic Retreat offers multi-day wedding celebrations instead of single-day events. Learn about our 65-acre property near Lac La Nonne and our commitment to authentic, meaningful weddings."
+        description="Family-owned since 2006. We threw our own 120-person wedding here in 2019—complete with paintball, axe throwing, and rubber boots in the rain. Now we share it with couples who want something different."
         path="/about"
       />
       <div className="min-h-screen">
@@ -27,12 +26,44 @@ const About = () => {
         
         <PageHero
           backgroundImage={weddingParty}
-          title="Our Story & Philosophy"
-          subtitle="You've been to those weddings. They cost a fortune, looked perfect in photos, and somehow felt... hollow. There has to be a better way."
+          title="Our Story"
+          subtitle="We aren't in this to be rich—we want to share the country with people who don't see it everyday."
         />
 
-        {/* Story Section */}
+        {/* Origin Story - THE LEAD */}
         <section className="section">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <ScrollReveal>
+                <div className="bg-secondary/10 p-8 md:p-12 rounded-2xl border-2 border-secondary mb-12">
+                  <Quote className="w-10 h-10 text-secondary mb-6" />
+                  <p className="text-xl md:text-2xl font-serif leading-relaxed mb-6">
+                    "In 2019, I threw my own 120-person wedding right here. I built a 40x60' pole barn. We set up paintball and axe throwing and a giant slip-and-slide. And then it rained. For three months straight."
+                  </p>
+                  <p className="text-xl md:text-2xl font-serif leading-relaxed mb-6">
+                    "So I got married in rubber boots, in the rain, and <span className="italic text-secondary">everyone had the time of their lives.</span>"
+                  </p>
+                  <p className="text-lg text-muted-foreground">
+                    That's when we realized: other couples deserve this too.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={100}>
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">How It Started</h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Family-owned since 2006. It started with annual gatherings where friends brought RVs and camped for weekends. My brother married here in 2018. Then came my own wedding in 2019—and everything changed.
+                </p>
+                <p className="text-lg mb-8">
+                  We saw what happens when you give people <strong>time</strong> together. Real connections. Three generations playing cards until midnight. College friends meeting grandparents. Strangers becoming family.
+                </p>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* The Philosophy */}
+        <section className="section section-muted">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
@@ -46,168 +77,48 @@ const About = () => {
               </ScrollReveal>
 
               <ScrollReveal direction="right">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">The Truth About Modern Weddings</h2>
+                <p className="section-label">THE PHILOSOPHY</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">We believe time changes everything</h2>
                 
-                <p className="mb-4 text-muted-foreground">
-                  Somewhere along the way, weddings became performances instead of celebrations. Day-of events instead of meaningful experiences. Instagram content instead of actual connection.
+                <p className="mb-6 text-muted-foreground">
+                  Traditional venue? Beautiful, but rushed. Everyone's on their best behavior. Surface-level conversations.
                 </p>
 
-                <p className="mb-6 text-lg font-medium">
-                  We're bringing them back.
+                <p className="mb-6 text-muted-foreground">
+                  A 3-day weekend? Better. People start to relax. Real connections form.
                 </p>
 
-                <p className="text-muted-foreground">
-                  Back to campfires and conversations that last past midnight. Back to mornings where your grandmother shows your fiancé her old love letters. Back to afternoons where kids play freely while adults remember what it feels like to relax.
+                <div className="bg-secondary/10 p-6 border-2 border-secondary rounded-xl mb-6">
+                  <p className="text-lg font-medium mb-2">But a 5-day celebration?</p>
+                  <p className="text-muted-foreground">
+                    Everything changes. Day one, people are in "event mode." Day two, walls come down. By day three, your yoga instructor friend is teaching your accountant friend sun salutations. <span className="italic">And then your wedding happens</span>—with a community already bonded, already invested, already celebrating.
+                  </p>
+                </div>
+
+                <p className="font-medium text-lg">
+                  The depth is incomparable. And you can't fake it, rush it, or buy it. It only comes from time.
                 </p>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Philosophy */}
-        <section className="section section-muted">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <ScrollReveal>
-                <div className="flex items-center gap-3 mb-6">
-                  <Clock className="w-10 h-10 text-secondary" />
-                  <h2 className="text-3xl md:text-4xl font-bold">The Philosophy: Time Changes Everything</h2>
-                </div>
-
-                <p className="text-lg mb-6">
-                  <strong>The length of your celebration directly impacts the depth of your experience.</strong>
-                </p>
-              </ScrollReveal>
-
-              <div className="space-y-4 mb-8">
-                <ScrollReveal delay={100}>
-                  <div className="bg-card p-6">
-                    <p className="font-medium mb-2">Traditional venue?</p>
-                    <p className="text-muted-foreground">Beautiful, but rushed. Everyone's on their best behavior. Surface-level conversations. Photo-worthy but not soul-filling.</p>
-                  </div>
-                </ScrollReveal>
-
-                <ScrollReveal delay={200}>
-                  <div className="bg-card p-6">
-                    <p className="font-medium mb-2">A 3-day weekend?</p>
-                    <p className="text-muted-foreground">Better. People relax a little. Real connections start forming.</p>
-                  </div>
-                </ScrollReveal>
-
-                <ScrollReveal delay={300}>
-                  <div className="bg-secondary/10 p-6 border-2 border-secondary">
-                    <p className="font-medium mb-2 text-lg">But a 5-day celebration?</p>
-                    <p className="text-muted-foreground">
-                      Everything changes. Day one, people are still in "event mode." Day two, the walls come down. By day three, your yoga instructor friend is teaching your accountant friend sun salutations. And then your wedding happens.
-                    </p>
-                    <p className="mt-4 font-medium">
-                      But now it's not strangers watching you marry. It's a community that's already bonded, already invested, already celebrating.
-                    </p>
-                  </div>
-                </ScrollReveal>
-              </div>
-
-              <ScrollReveal delay={400}>
-                <div className="bg-primary/5 p-8 border-l-4 border-primary">
-                  <p className="text-xl font-medium mb-3">
-                    "This is why couples who choose 5 days consistently tell us: 'It was the best decision we made.'"
-                  </p>
-                  <p className="text-muted-foreground">
-                    The depth is incomparable. And you can't fake it, rush it, or buy it. It only comes from time.
-                  </p>
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* What Makes Us Different */}
-        <section className="section">
-          <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Makes Rustic Retreat Different</h2>
-            </ScrollReveal>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <ScrollReveal delay={0}>
-                <div className="bg-card p-6 border-2 hover:border-secondary transition-colors h-full">
-                  <MapPin className="w-8 h-8 text-secondary mb-3" />
-                  <h3 className="text-xl font-semibold mb-3">The Space</h3>
-                  <p className="text-muted-foreground">
-                    65 private acres that become your temporary home. Not a "venue" you rent for hours. <strong>Yours. Completely.</strong>
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={100}>
-                <div className="bg-card p-6 border-2 hover:border-secondary transition-colors h-full">
-                  <Clock className="w-8 h-8 text-secondary mb-3" />
-                  <h3 className="text-xl font-semibold mb-3">The Time</h3>
-                  <p className="text-muted-foreground">
-                    3 or 5 days. Your choice. (Though we'll quietly suggest 5, because we've seen what happens when you give love that much space to breathe.)
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={200}>
-                <div className="bg-card p-6 border-2 hover:border-secondary transition-colors h-full">
-                  <Heart className="w-8 h-8 text-secondary mb-3" />
-                  <h3 className="text-xl font-semibold mb-3">The Investment</h3>
-                  <p className="text-muted-foreground">
-                    A fraction of what traditional Edmonton wedding venues charge, with infinitely more freedom and authenticity.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={300}>
-                <div className="bg-card p-6 border-2 hover:border-secondary transition-colors h-full">
-                  <Sparkles className="w-8 h-8 text-secondary mb-3" />
-                  <h3 className="text-xl font-semibold mb-3">The Transparency</h3>
-                  <p className="text-muted-foreground">
-                    Experience it first, book it second. You'll know when it's right.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={400}>
-                <div className="bg-card p-6 border-2 hover:border-secondary transition-colors h-full">
-                  <Clock className="w-8 h-8 text-secondary mb-3" />
-                  <h3 className="text-xl font-semibold mb-3">The Three-Day Reset</h3>
-                  <p className="text-muted-foreground">
-                    We give ourselves minimum 3 days between bookings—so your celebration gets fresh grass, renewed energy, and our complete attention.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={500}>
-                <div className="bg-card p-6 border-2 hover:border-secondary transition-colors h-full">
-                  <Heart className="w-8 h-8 text-secondary mb-3" />
-                  <h3 className="text-xl font-semibold mb-3">The Feeling</h3>
-                  <p className="text-muted-foreground">
-                    Relief. Rightness. The sense that you're finally planning something true.
-                  </p>
-                </div>
               </ScrollReveal>
             </div>
           </div>
         </section>
 
         {/* Location */}
-        <section className="section section-muted">
+        <section className="section">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">The Setting: 65 Acres Near Lac La Nonne</h2>
+                <p className="section-label">THE SETTING</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">65 Acres Near Lac La Nonne</h2>
                 
-                <p className="mb-6 text-lg">
-                  Imagine waking up on your wedding day, not in a hotel room, but in a sun-drenched cabin surrounded by Alberta forest.
+                <p className="mb-6 text-lg text-muted-foreground">
+                  Imagine waking up on your wedding day in a sun-drenched cabin surrounded by Alberta forest. No hotel hallway. No parking garage. Just trees and sky.
                 </p>
 
-                <div className="space-y-3 bg-card p-6">
-                  <h3 className="font-semibold text-lg mb-3">Location Details:</h3>
+                <div className="space-y-3 bg-card p-6 rounded-xl shadow-soft">
                   <div className="flex items-start gap-2">
                     <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span>99 km northwest of Edmonton (approximately 1-hour drive)</span>
+                    <span>99 km northwest of Edmonton (about 1 hour)</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
@@ -215,28 +126,19 @@ const About = () => {
                   </div>
                   <div className="flex items-start gap-2">
                     <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span>Private 65-acre property surrounded by Alberta wilderness</span>
+                    <span>Private 65 acres surrounded by Alberta wilderness</span>
                   </div>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal direction="right">
-                <div className="grid grid-cols-2 gap-4">
-                  <HoverImage 
-                    src={ceremonySetup}
-                    alt="Forest wedding ceremony setup with natural décor at Rustic Retreat Alberta"
-                    description="Your ceremony, designed by you, set by nature"
-                    category="Ceremony Spaces"
-                    className="shadow-xl"
-                  />
-                  <HoverImage 
-                    src={birchGrove}
-                    alt="Birch grove wedding altar surrounded by white birch trees near Edmonton"
-                    description="The birch grove altar—where vows become eternal"
-                    category="Natural Altar"
-                    className="shadow-xl"
-                  />
-                </div>
+                <HoverImage 
+                  src={birchGrove}
+                  alt="Birch grove wedding altar surrounded by white birch trees near Edmonton"
+                  description="The birch grove altar—where vows become eternal"
+                  category="Ceremony Space"
+                  className="shadow-xl"
+                />
               </ScrollReveal>
             </div>
           </div>
@@ -245,19 +147,28 @@ const About = () => {
         {/* Ceremony Fancy, Party Casual */}
         <section className="section section-muted">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <ScrollReveal>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Ceremony Fancy, Party Casual</h2>
-                
-                <p className="text-lg mb-6">
-                  Yes, you can absolutely have that elegant ceremony. The dress, the photos, the formal moments—all of it.
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <ScrollReveal direction="left">
+                <HoverImage 
+                  src={campfireNight}
+                  alt="Evening campfire gathering under stars at Rustic Retreat Weddings Alberta"
+                  description="Where strangers become friends under Alberta stars"
+                  category="Campfire Evenings"
+                  className="shadow-xl"
+                />
+              </ScrollReveal>
+              
+              <ScrollReveal direction="right">
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">Ceremony Fancy, Party Casual</h2>
+                <p className="text-lg mb-6 text-muted-foreground">
+                  Yes, you can have that elegant ceremony. The dress, the photos, the formal moments—all of it.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  But after the vows are exchanged and the portraits are captured? Kick off the heels. Trade the tux jacket for a flannel. Because you're camping now, and the real celebration is just getting started.
+                  But after the vows and portraits? Kick off the heels. Trade the tux jacket for a flannel. Because you're camping now, and the real celebration is just getting started.
                 </p>
 
-                <div className="bg-secondary/10 p-6 border-2 border-secondary">
+                <div className="bg-secondary/10 p-6 border-2 border-secondary rounded-xl">
                   <p className="text-lg font-medium">
                     The beauty of a multi-day celebration: you get the fancy moments AND the relaxed ones. No need to choose.
                   </p>
@@ -267,40 +178,12 @@ const About = () => {
           </div>
         </section>
 
-        {/* Campfire Evenings */}
-        <section className="section">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <ScrollReveal direction="left" className="order-2 lg:order-1">
-                <HoverImage 
-                  src={campfireNight}
-                  alt="Evening campfire gathering under stars at Rustic Retreat Weddings Alberta"
-                  description="Where strangers become friends under Alberta stars"
-                  category="Campfire Evenings"
-                  className="shadow-xl"
-                />
-              </ScrollReveal>
-              <ScrollReveal direction="right" className="order-1 lg:order-2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Campfire Evenings Create Lasting Bonds</h2>
-                <p className="text-lg mb-6">
-                  Long after the formal celebration ends, your guests gather around crackling campfires, sharing stories, making s'mores, and creating memories.
-                </p>
-                <p className="text-muted-foreground mb-6">
-                  This is where your college friends meet your grandmother. Where strangers become friends under Alberta stars.
-                </p>
-                <p className="font-medium">
-                  The campfire doesn't care about your seating chart—it creates its own magic.
-                </p>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="section bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to See It for Yourself?</h2>
+              <Heart className="w-10 h-10 text-secondary mx-auto mb-6" />
+              <h2 className="text-3xl md:text-4xl font-serif mb-6">Ready to See It for Yourself?</h2>
               <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
                 Photos can only show so much. The feeling of standing in the meadow at golden hour—that you have to experience.
               </p>
