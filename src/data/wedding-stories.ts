@@ -32,36 +32,41 @@ export const weddingStories: WeddingStory[] = [
     weddingDate: "August 15, 2024",
     season: "Summer 2024",
     headline: "A Weekend of Unscripted Magic",
-    excerpt: "What started as a simple outdoor wedding became a 4-day family reunion that no one wanted to end. Morning coffee on the porch, an impromptu volleyball tournament, and a sparkler exit that melted into a bonfire under the stars.",
+    excerpt: "What started as a simple outdoor wedding became a 4-day family reunion that no one wanted to end.",
     heroImage: meadowKiss,
     galleryImages: [
       { src: meadowKiss, alt: "Sarah and Mike kissing in the sunset meadow", caption: "The golden hour moment" },
       { src: ceremonyVows, alt: "Exchanging vows under the gazebo", caption: "Saying I do" },
       { src: firstDanceSparklers, alt: "First dance surrounded by sparklers", caption: "The night came alive" },
-      { src: weddingParty, alt: "Full wedding party celebration", caption: "Our favorite people" },
-      { src: receptionTablescape, alt: "Gold-accented reception tables", caption: "Every detail mattered" },
     ],
-    story: `When Sarah and Mike first walked the property, they knew within minutes. "It felt like coming home," Sarah recalls. "I could already picture my grandmother in a lawn chair by the lake, watching the kids catch frogs."
+    story: `When Sarah and Mike first walked the property, they knew within minutes. "It felt like coming home," Sarah recalls.
 
 They chose the 5-day package, giving their families time to really connect. What happened exceeded every expectation.
 
-"By day two, people who'd never met were sharing breakfast and planning hiking adventures," Mike shares. "My college roommates were teaching Sarah's nephews how to skip rocks. Her aunt organized a sunrise yoga session that became the highlight for half the guests."
+"By day two, people who'd never met were sharing breakfast and planning hiking adventures," Mike shares. "My college roommates were teaching Sarah's nephews how to skip rocks."
 
-The ceremony itself was intimate—just 65 of their closest people gathered in the birch grove. "No rushing, no timeline pressure," Sarah remembers. "We actually got to talk to everyone."
+The ceremony was intimate—just 65 of their closest people in the birch grove. "No rushing, no timeline pressure," Sarah remembers. "We actually got to talk to everyone."
 
-But it's the unplanned moments they treasure most: the 2am guitar circle that formed around the bonfire. Her father's impromptu speech the morning after. The way three generations of both families played card games until midnight in the cabin.
+But it's the unplanned moments they treasure most: the 2am guitar circle around the bonfire. Her father's impromptu speech the morning after.
 
-"Everyone still talks about that weekend," Sarah says. "Not just the wedding. The whole weekend. It changed how our families relate to each other."`,
+"Everyone still talks about that weekend," Sarah says. "Not just the wedding. The whole weekend."`,
     highlights: [
       "4-day celebration with 65 guests",
-      "Sunrise yoga session on day two",
+      "Sunrise yoga on day two",
       "Bonfire guitar circle until 2am",
-      "Three generations camping together",
     ],
     guestCount: 65,
     packageUsed: "5-Day Package",
     favoriteMemory: "Watching both grandmothers share a bottle of wine by the fire, becoming fast friends.",
     photographerCredit: "Emily Rose Photography",
+    // New case study fields
+    testimonialQuote: "We had time. That's what I remember most—we actually had time.",
+    whatMadeItSpecial: [
+      "Five days gave families time to truly bond",
+      "No rushing between formal events",
+      "Unplanned moments became the highlights",
+    ],
+    unexpectedMoment: "Her father's impromptu sunrise speech the morning after the wedding—there wasn't a dry eye at the campfire.",
   },
   {
     id: "2",
@@ -70,38 +75,41 @@ But it's the unplanned moments they treasure most: the 2am guitar circle that fo
     weddingDate: "September 22, 2023",
     season: "Fall 2023",
     headline: "Where Autumn Met Forever",
-    excerpt: "Fall colors, cozy sweaters, and a ceremony in the birch grove that left guests reaching for tissues. Jenna and Tyler proved that September weddings at Rustic Retreat are pure magic.",
+    excerpt: "Fall colors, cozy sweaters, and a ceremony in the birch grove that left guests reaching for tissues.",
     heroImage: birchAltar,
     galleryImages: [
       { src: birchAltar, alt: "Birch grove altar ceremony", caption: "Nature's cathedral" },
       { src: veilKiss, alt: "Intimate veil kiss moment", caption: "Stolen moments" },
       { src: bridalPortrait, alt: "Jenna on the cabin porch", caption: "Morning calm" },
-      { src: gazeboLights, alt: "Gazebo lit for evening reception", caption: "When the sun set" },
-      { src: sunsetClearing, alt: "Sunset portraits in the clearing", caption: "Golden hour" },
     ],
     story: `Jenna had always dreamed of a fall wedding—the colors, the crisp air, the cozy atmosphere. When she and Tyler discovered Rustic Retreat, she knew the birch grove was meant to be their altar.
 
-"We didn't want a stage," Tyler explains. "We wanted to stand in nature, surrounded by trees that had seen a hundred seasons. There's something grounding about that."
+"We didn't want a stage," Tyler explains. "We wanted to stand in nature, surrounded by trees that had seen a hundred seasons."
 
 Their September weekend was blessed with perfect weather—warm days, cool nights, and leaves just beginning to turn. Guests arrived Thursday, setting up camp and helping string lights through the trees.
 
-"Everyone contributed something," Jenna remembers. "Tyler's dad built the arch. My sister arranged all the flowers from a local farm. It became this beautiful collaboration."
+"Everyone contributed something," Jenna remembers. "Tyler's dad built the arch. My sister arranged all the flowers."
 
-The ceremony took place at golden hour, sun filtering through the birch trees. "When I walked down that aisle and saw Tyler waiting, I completely forgot about the 70 people watching," Jenna says. "It was just us and the trees."
+Their reception extended late into the night, guests wrapped in blankets around the fire. Many refused to leave the next day.
 
-Their reception extended late into the night, guests wrapped in blankets around the fire, sharing stories and toasting marshmallows. Many refused to leave the next day.
-
-"We had to kick people out," Tyler laughs. "They wanted to stay for a fourth night. That's when we knew we'd done something right."`,
+"We had to kick people out," Tyler laughs. "They wanted to stay for a fourth night."`,
     highlights: [
       "Ceremony in the birch grove at golden hour",
-      "DIY arch built by the father of the groom",
-      "Farm-fresh floral arrangements",
+      "DIY arch built by father of the groom",
       "Guests who didn't want to leave",
     ],
     guestCount: 70,
     packageUsed: "3-Day Package",
     favoriteMemory: "My dad getting emotional while Tyler's mom held his hand during the vows.",
     photographerCredit: "Northern Light Studios",
+    // New case study fields
+    testimonialQuote: "Everyone still talks about our weekend. Not just the wedding. The whole weekend.",
+    whatMadeItSpecial: [
+      "Fall colors created a magical backdrop",
+      "DIY touches made it deeply personal",
+      "The birch grove ceremony was unforgettable",
+    ],
+    unexpectedMoment: "Both families ended up doing an impromptu sing-along around the campfire that went until 3am.",
   },
   {
     id: "3",
@@ -110,31 +118,26 @@ Their reception extended late into the night, guests wrapped in blankets around 
     weddingDate: "July 8, 2024",
     season: "Summer 2024",
     headline: "Two Families Became One",
-    excerpt: "Before this weekend, Amanda's family from BC had never met Chris's family from Ontario. By Sunday, they were exchanging recipes and planning Christmas together.",
+    excerpt: "Before this weekend, Amanda's family from BC had never met Chris's family from Ontario. By Sunday, they were planning Christmas together.",
     heroImage: coupleKissMeadow,
     galleryImages: [
       { src: coupleKissMeadow, alt: "Amanda and Chris in the wildflower meadow", caption: "Our meadow moment" },
       { src: forestPath, alt: "Walking the forest path together", caption: "Just the two of us" },
       { src: sunsetClearing, alt: "Sunset portraits", caption: "The day we'll never forget" },
-      { src: weddingParty, alt: "Wedding party celebration", caption: "Our crew" },
-      { src: gazeboLights, alt: "Reception under the stars", caption: "Dancing all night" },
     ],
-    story: `For Amanda and Chris, the biggest wedding challenge wasn't the flowers or the food—it was that their families lived 4,000 kilometers apart and had never met.
+    story: `For Amanda and Chris, the biggest challenge wasn't the flowers or the food—it was that their families lived 4,000 kilometers apart and had never met.
 
 "We knew we had about 6 hours at a traditional wedding for them to connect," Amanda explains. "That wasn't going to cut it."
 
 They booked the 5-day package specifically to give their families time. And what happened was better than they'd hoped.
 
-"By day two, my mom and Chris's mom were cooking breakfast together," Amanda recalls. "My brother was teaching his little cousins to fish. People who'd only seen each other in phone photos were becoming actual friends."
+"By day two, my mom and Chris's mom were cooking breakfast together," Amanda recalls. "My brother was teaching his little cousins to fish."
 
-The wedding itself became almost secondary—not less meaningful, but part of a bigger tapestry. "The ceremony was beautiful," Chris says. "But honestly? The moment I'll never forget is seeing both our dads by the campfire, sharing stories like they'd known each other for years."
+The wedding became part of a bigger tapestry. "The ceremony was beautiful," Chris says. "But honestly? The moment I'll never forget is seeing both our dads by the campfire, sharing stories like they'd known each other for years."
 
-Their families now have a group text. They've visited each other three times since the wedding. They're planning Christmas together.
-
-"It wasn't just our wedding weekend," Amanda says. "It was the beginning of our families being one family. You can't put a price on that."`,
+Their families now have a group text. They've visited each other three times since the wedding. They're planning Christmas together.`,
     highlights: [
       "First-ever meeting of families from opposite coasts",
-      "Shared meals and campfire stories",
       "Families now have an active group chat",
       "Planning their first joint Christmas",
     ],
@@ -142,6 +145,14 @@ Their families now have a group text. They've visited each other three times sin
     packageUsed: "5-Day Package",
     favoriteMemory: "Overhearing my dad tell Chris's dad, 'I've never been more sure about a son-in-law.'",
     photographerCredit: "Wild Heart Photography",
+    // New case study fields
+    testimonialQuote: "It was the first time both families really got to know each other.",
+    whatMadeItSpecial: [
+      "Five days bridged a 4,000km family gap",
+      "Shared meals created lasting connections",
+      "The wedding became a family reunion",
+    ],
+    unexpectedMoment: "Chris's mother and Amanda's mother now talk weekly—they've become close friends.",
   },
 ];
 

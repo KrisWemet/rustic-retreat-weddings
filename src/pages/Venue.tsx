@@ -13,7 +13,7 @@ import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
 import forestPath from "@/assets/gallery/forest-path-photos.avif";
 import wineBarrelDecor from "@/assets/gallery/wine-barrel-decor.avif";
 import receptionTablescape from "@/assets/gallery/reception-tablescape-gold.avif";
-import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign } from "lucide-react";
+import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign, Waves, Compass } from "lucide-react";
 
 const Venue = () => {
   return (
@@ -342,20 +342,28 @@ const Venue = () => {
 
               <ScrollReveal delay={100}>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                  <div className="bg-card p-4 rounded-xl shadow-soft">
-                    <div className="text-3xl mb-2">🎆</div>
+                  <div className="bg-card p-4 rounded-xl shadow-soft flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <Sparkles className="w-5 h-5 text-secondary" />
+                    </div>
                     <p className="text-sm font-medium">Fireworks at midnight</p>
                   </div>
-                  <div className="bg-card p-4 rounded-xl shadow-soft">
-                    <div className="text-3xl mb-2">🏊</div>
+                  <div className="bg-card p-4 rounded-xl shadow-soft flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <Waves className="w-5 h-5 text-secondary" />
+                    </div>
                     <p className="text-sm font-medium">Giant slip-and-slide</p>
                   </div>
-                  <div className="bg-card p-4 rounded-xl shadow-soft">
-                    <div className="text-3xl mb-2">🗺️</div>
+                  <div className="bg-card p-4 rounded-xl shadow-soft flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <Compass className="w-5 h-5 text-secondary" />
+                    </div>
                     <p className="text-sm font-medium">Treasure hunts</p>
                   </div>
-                  <div className="bg-card p-4 rounded-xl shadow-soft">
-                    <div className="text-3xl mb-2">🧘</div>
+                  <div className="bg-card p-4 rounded-xl shadow-soft flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <Sun className="w-5 h-5 text-secondary" />
+                    </div>
                     <p className="text-sm font-medium">Sunrise yoga</p>
                   </div>
                 </div>
