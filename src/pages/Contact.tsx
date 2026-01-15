@@ -162,7 +162,7 @@ const Contact = () => {
                       </div>
 
                       <div>
-                        <Label htmlFor="message">Tell us about your vision *</Label>
+                        <Label htmlFor="message">Tell us a bit about what you're imagining for your weekend</Label>
                         <Textarea 
                           id="message" 
                           required 
