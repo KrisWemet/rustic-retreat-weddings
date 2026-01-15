@@ -16,7 +16,7 @@ const Packages = () => {
         description="Choose from 3-day ($4,500) or 5-day ($5,500) wedding packages at Rustic Retreat. Both include exclusive property access, cabin accommodation, décor collection, and complete creative freedom."
         path="/packages"
       />
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-x-hidden">
         <Navigation />
       
       {/* Hero */}
