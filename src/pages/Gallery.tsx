@@ -245,7 +245,7 @@ const images: GalleryImage[] = [
   },
 ];
 
-const categories = ["All", "Ceremony", "Reception", "Romance", "Portraits", "Details", "Bridal"];
+const categories = ["All", "Ceremony", "Reception", "Romance", "Portraits", "Details", "Bridal", "Property"];
 
 // Count images per category
 const getCategoryCount = (category: string) => {
