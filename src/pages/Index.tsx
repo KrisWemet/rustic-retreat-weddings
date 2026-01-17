@@ -154,7 +154,7 @@ const Index = () => {
                   While traditional venues say<br /><span className="italic text-muted-foreground">"this is how your wedding will be,"</span><br />we ask <span className="italic text-secondary">"what do you want to create?"</span>
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  We provide the canvas and the time—you bring the vision. With five exclusive days on 65 private acres, you'll have the freedom to create your celebration without the typical venue restrictions on timing, setup, or style.
+                  No timelines. No restrictions. Just you, your people, and five days to do this right.
                 </p>
               </div>
             </ScrollReveal>
@@ -216,31 +216,29 @@ const Index = () => {
               <ScrollReveal>
                 <div className="text-center mb-10">
                   <p className="section-label">IS THIS YOUR PLACE?</p>
-                  <h2 className="text-3xl md:text-4xl font-serif mb-4">
-                    This is for couples who...
-                  </h2>
+                  <h2 className="text-3xl md:text-4xl font-serif mb-4">This is for couples who want...</h2>
                 </div>
               </ScrollReveal>
 
               <div className="grid md:grid-cols-2 gap-4 mb-10">
                 <ScrollReveal delay={0}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Families to actually connect—not just wave across a reception hall</p>
+                    <p className="font-medium">Want families to actually get to know each other—not just wave across a reception hall</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={100}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Time to breathe—five days means no one's rushing, nothing's forced</p>
+                    <p className="font-medium">Would rather have an experience than a production</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">To celebrate under open skies—around campfires, along forest paths, beneath the stars</p>
+                    <p className="font-medium">Light up around campfires, forest paths, and open skies</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={300}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">A celebration that feels like you—not someone else's idea of what a wedding should be</p>
+                    <p className="font-medium">Believe the best memories happen when no one's watching the clock</p>
                   </div>
                 </ScrollReveal>
               </div>
