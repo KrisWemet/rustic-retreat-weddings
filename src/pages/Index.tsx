@@ -216,7 +216,7 @@ const Index = () => {
               <ScrollReveal>
                 <div className="text-center mb-10">
                   <p className="section-label">IS THIS YOUR PLACE?</p>
-                  <h2 className="text-3xl md:text-4xl font-serif mb-4">This is for couples who want...</h2>
+                  <h2 className="text-3xl md:text-4xl font-serif mb-4">This is for couples who...</h2>
                 </div>
               </ScrollReveal>
 
