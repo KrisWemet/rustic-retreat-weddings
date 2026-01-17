@@ -385,7 +385,7 @@ const Index = () => {
                     <h3 className="text-xl font-serif font-semibold mb-1">3-Day</h3>
                     <p className="text-xs text-muted-foreground mb-4">Fri–Sun</p>
                     <p className="text-3xl font-serif text-secondary mb-1">$4,500</p>
-                    <p className="text-xs text-muted-foreground mb-4">Most popular</p>
+                    <p className="text-xs text-muted-foreground mb-4">Weekend wedding</p>
                   </CardContent>
                 </Card>
               </ScrollReveal>
@@ -393,13 +393,13 @@ const Index = () => {
               <ScrollReveal delay={200}>
                 <Card className="bg-card border-2 border-secondary relative shadow-medium h-full">
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground text-xs px-3 py-1 rounded-full">
-                    Best Value
+                    Our Recommendation
                   </div>
                   <CardContent className="p-6 text-center">
                     <h3 className="text-xl font-serif font-semibold mb-1">5-Day</h3>
                     <p className="text-xs text-muted-foreground mb-4">Wed–Sun</p>
                     <p className="text-3xl font-serif text-secondary mb-1">$5,500</p>
-                    <p className="text-xs text-muted-foreground mb-4">Setup + celebration + recovery</p>
+                    <p className="text-xs text-muted-foreground mb-4">The complete experience</p>
                   </CardContent>
                 </Card>
               </ScrollReveal>
