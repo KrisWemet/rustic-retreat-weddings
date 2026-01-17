@@ -65,18 +65,72 @@ const Packages = () => {
         </div>
       </section>
 
-      {/* Two Package Options */}
+      {/* Four Package Options */}
       <section className="section section-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Two Wedding Package Options, One Perfect Property</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Perfect Timeline</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              From intimate elopements to the ultimate retreat—find the package that fits your vision.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+            {/* 2-Day Package */}
+            <Card className="border-2 hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <h3 className="text-3xl font-bold mb-3">The 2-Day Elopement Package</h3>
+                <p className="text-lg text-muted-foreground mb-6">Weekdays Only</p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold mb-3">The Timeline:</h4>
+                  <div className="space-y-2 text-sm">
+                    <p><strong>Day 1:</strong> Arrive, settle in, rehearse if you wish. Evening bonfire under the stars.</p>
+                    <p><strong>Day 2:</strong> Your wedding day—intimate, unhurried, exactly as you dreamed.</p>
+                  </div>
+                </div>
+
+                <div className="bg-muted/50 p-4 rounded-lg mb-6">
+                  <p className="font-medium mb-2">Perfect for:</p>
+                  <p className="text-sm text-muted-foreground">
+                    Couples seeking an intimate elopement experience with just your closest people. All the magic of Rustic Retreat in a focused, meaningful two-day celebration.
+                  </p>
+                </div>
+
+                <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
+                  <p className="text-3xl font-bold mb-2">$3,000</p>
+                  <p className="text-sm text-muted-foreground">2026 Package Price</p>
+                </div>
+
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Intimate elopement experience</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Weekday availability</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Most affordable option</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Full property access</span>
+                  </div>
+                </div>
+
+                <Link to="/contact">
+                  <Button variant="outline" className="w-full">Schedule Your Property Visit</Button>
+                </Link>
+              </CardContent>
+            </Card>
+
             {/* 3-Day Package */}
             <Card className="border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The 3-Day Weekend Wedding Package</h3>
+                <h3 className="text-3xl font-bold mb-3">The 3-Day Weekend Wedding</h3>
                 <p className="text-lg text-muted-foreground mb-6">Friday through Sunday</p>
                 
                 <div className="mb-6">
@@ -130,24 +184,24 @@ const Packages = () => {
             <Card className="border-2 border-secondary hover:shadow-xl transition-shadow bg-secondary/5">
               <CardContent className="p-8">
                 <div className="inline-block bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
-                  ⭐ The One Couples Rave About
+                  ⭐ Our Recommendation
                 </div>
-                <h3 className="text-3xl font-bold mb-3">The 5-Day Celebration Package</h3>
-                <p className="text-lg text-muted-foreground mb-6">Thursday - Monday OR Friday - Tuesday</p>
+                <h3 className="text-3xl font-bold mb-3">The 5-Day Celebration</h3>
+                <p className="text-lg text-muted-foreground mb-6">Wed–Sun or Thu–Mon</p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3">The Timeline (Thursday Arrival Option):</h4>
+                  <h4 className="font-semibold mb-3">The Timeline (Wednesday Arrival Option):</h4>
                   <div className="space-y-2 text-sm">
-                    <p><strong>Thursday:</strong> Arrival day. People trickle in. Camp setup. First dinner together. Early bedtime.</p>
-                    <p><strong>Friday:</strong> The "settling in" day. Morning hike. Afternoon games. Evening bonfire. Walls start coming down.</p>
-                    <p><strong>Saturday:</strong> YOUR DAY. But now it's happening in the middle of something bigger. Your ceremony at golden hour, reception under stars.</p>
-                    <p><strong>Sunday:</strong> Recovery day. Lazy morning. Shared breakfast. Stories from last night. That afternoon energy of not wanting it to end.</p>
-                    <p><strong>Monday:</strong> The goodbye. But softer. Extended. "We should do this every year" becomes a real plan.</p>
+                    <p><strong>Wednesday:</strong> Arrival day. People trickle in. Camp setup. First dinner together. Early bedtime.</p>
+                    <p><strong>Thursday:</strong> The "settling in" day. Morning hike. Afternoon games. Evening bonfire. Walls start coming down.</p>
+                    <p><strong>Friday:</strong> Pre-wedding festivities. Rehearsal dinner. The anticipation builds.</p>
+                    <p><strong>Saturday:</strong> YOUR DAY. Ceremony at golden hour, reception under stars.</p>
+                    <p><strong>Sunday:</strong> The goodbye. But softer. Extended. "We should do this every year" becomes a real plan.</p>
                   </div>
                 </div>
 
                 <div className="bg-secondary/20 p-4 rounded-lg mb-6">
-                  <p className="font-medium mb-2">Perfect for:</p>
+                  <p className="font-medium mb-2">The complete experience:</p>
                   <p className="text-sm">
                     Couples who want families to actually bond. Anyone who's left a 6-hour wedding thinking "I barely talked to anyone." Those who understand that the best celebrations unfold naturally, not on a tight schedule.
                   </p>
@@ -179,6 +233,58 @@ const Packages = () => {
 
                 <Link to="/contact">
                   <Button className="w-full bg-secondary hover:bg-secondary/90">Schedule Your Property Visit</Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* 10-Day Package */}
+            <Card className="border-2 hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <h3 className="text-3xl font-bold mb-3">The 10-Day Ultimate Retreat</h3>
+                <p className="text-lg text-muted-foreground mb-6">Full Experience</p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold mb-3">The Experience:</h4>
+                  <div className="space-y-2 text-sm">
+                    <p><strong>Days 1-3:</strong> Early arrivals settle in. Setup at your own pace. Pre-wedding adventures.</p>
+                    <p><strong>Days 4-6:</strong> Wedding events unfold naturally. Ceremony, reception, after-parties.</p>
+                    <p><strong>Days 7-10:</strong> Extended celebration. Day trips. Bonding. The moments you'll remember forever.</p>
+                  </div>
+                </div>
+
+                <div className="bg-muted/50 p-4 rounded-lg mb-6">
+                  <p className="font-medium mb-2">The ultimate retreat:</p>
+                  <p className="text-sm text-muted-foreground">
+                    For couples who want to transform their wedding into a true destination experience. Turn your celebration into a family reunion, a friend reunion, and a honeymoon preview all in one.
+                  </p>
+                </div>
+
+                <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
+                  <p className="text-3xl font-bold mb-2">$8,500</p>
+                  <p className="text-sm text-muted-foreground">2026 Package Price</p>
+                </div>
+
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">216+ hours of celebration</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Ultimate destination wedding experience</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Time for multiple events and activities</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Maximum flexibility and no rushing</span>
+                  </div>
+                </div>
+
+                <Link to="/contact">
+                  <Button variant="outline" className="w-full">Schedule Your Property Visit</Button>
                 </Link>
               </CardContent>
             </Card>
