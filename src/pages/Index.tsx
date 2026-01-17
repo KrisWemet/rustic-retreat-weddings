@@ -225,22 +225,22 @@ const Index = () => {
               <div className="grid md:grid-cols-2 gap-4 mb-10">
                 <ScrollReveal delay={0}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Want families to actually get to know each other—not just wave across a reception hall</p>
+                    <p className="font-medium">Families to actually connect—not just wave across a reception hall</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={100}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Would rather have an experience than a production</p>
+                    <p className="font-medium">Time to breathe—five days means no one's rushing, nothing's forced</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Light up around campfires, forest paths, and open skies</p>
+                    <p className="font-medium">To celebrate under open skies—around campfires, along forest paths, beneath the stars</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={300}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Believe the best memories happen when no one's watching the clock</p>
+                    <p className="font-medium">A celebration that feels like you—not someone else's idea of what a wedding should be</p>
                   </div>
                 </ScrollReveal>
               </div>
