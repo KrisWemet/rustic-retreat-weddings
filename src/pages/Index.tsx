@@ -154,7 +154,7 @@ const Index = () => {
                   While traditional venues say<br /><span className="italic text-muted-foreground">"this is how your wedding will be,"</span><br />we ask <span className="italic text-secondary">"what do you want to create?"</span>
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  No timelines. No restrictions. Just you, your people, and five days to do this right.
+                  We provide the canvas and the time—you bring the vision. With five exclusive days on 65 private acres, you'll have the freedom to create your celebration without the typical venue restrictions on timing, setup, or style.
                 </p>
               </div>
             </ScrollReveal>
