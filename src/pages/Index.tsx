@@ -228,7 +228,7 @@ const Index = () => {
                 </ScrollReveal>
                 <ScrollReveal delay={100}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Time to actually enjoy it—five days to savor every moment instead of watching your wedding fly by in four hours</p>
+                    <p className="font-medium">Want time to actually enjoy it—five days to savor every moment instead of watching your wedding fly by in four hours</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
