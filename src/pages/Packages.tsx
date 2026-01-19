@@ -1,21 +1,70 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
+import { CTAButton } from "@/components/ui/cta-button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import ceremonyVows from "@/assets/ceremony-vows-outdoor.avif";
 import receptionEvening from "@/assets/reception-outdoor-celebration.avif";
-import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Waves, Compass, Target } from "lucide-react";
+import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Waves, Compass, Target, Bath, Film, Music, Flag } from "lucide-react";
 
 const Packages = () => {
+  const packageSchema = {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    name: "Rustic Retreat Wedding Packages",
+    url: "https://www.rusticretreat.xyz/packages",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "The Intimate Escape",
+        description: "2-day weekday elopement experience with full property access.",
+        price: "3000",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "The Classic Weekend",
+        description: "3-day Friday-to-Sunday wedding weekend with exclusive access.",
+        price: "4500",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "The Full Experience",
+        description: "5-day celebration (Wed-Sun or Thu-Mon) with immersive guest time.",
+        price: "5500",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "The Grand Adventure",
+        description: "10-day destination-style wedding experience with maximum flexibility.",
+        price: "8500",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      },
+    ],
+  };
+
   return (
     <>
       <SEO 
         title="Wedding Packages & Pricing"
         description="Choose from 3-day ($4,500) or 5-day ($5,500) wedding packages at Rustic Retreat. Both include exclusive property access, cabin accommodation, décor collection, and complete creative freedom."
         path="/packages"
+        image={ceremonyVows}
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(packageSchema)}
+        </script>
+      </Helmet>
       <div className="min-h-screen overflow-x-hidden">
         <Navigation />
       
@@ -70,8 +119,11 @@ const Packages = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Perfect Timeline</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-3">
               From intimate elopements to the ultimate retreat—find the package that fits your vision.
+            </p>
+            <p className="text-sm text-secondary font-medium">
+              2026 Season: Only 16 weekend dates available. June and September book first.
             </p>
           </div>
 
@@ -79,7 +131,7 @@ const Packages = () => {
             {/* 2-Day Package */}
             <Card className="border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The 2-Day Elopement Package</h3>
+                <h3 className="text-3xl font-bold mb-3">The Intimate Escape</h3>
                 <p className="text-lg text-muted-foreground mb-6">Weekdays Only</p>
                 
                 <div className="mb-6">
@@ -130,7 +182,7 @@ const Packages = () => {
             {/* 3-Day Package */}
             <Card className="border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The 3-Day Weekend Wedding</h3>
+                <h3 className="text-3xl font-bold mb-3">The Classic Weekend</h3>
                 <p className="text-lg text-muted-foreground mb-6">Friday through Sunday</p>
                 
                 <div className="mb-6">
@@ -186,7 +238,7 @@ const Packages = () => {
                 <div className="inline-block bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
                   ⭐ Our Recommendation
                 </div>
-                <h3 className="text-3xl font-bold mb-3">The 5-Day Celebration</h3>
+                <h3 className="text-3xl font-bold mb-3">The Full Experience</h3>
                 <p className="text-lg text-muted-foreground mb-6">Wed–Sun or Thu–Mon</p>
                 
                 <div className="mb-6">
@@ -240,7 +292,7 @@ const Packages = () => {
             {/* 10-Day Package */}
             <Card className="border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The 10-Day Ultimate Retreat</h3>
+                <h3 className="text-3xl font-bold mb-3">The Grand Adventure</h3>
                 <p className="text-lg text-muted-foreground mb-6">Full Experience</p>
                 
                 <div className="mb-6">
@@ -396,11 +448,11 @@ const Packages = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-widest text-secondary mb-4">BEYOND THE CEREMONY</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Your Weekend. Your Rules.</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Rustic Retreat isn't only about the ceremony and reception—<strong>the whole weekend should show who you are as a couple.</strong> When you rent the land, your imagination is the only limit.
-            </p>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Your Weekend. Your Way.</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Rustic Retreat isn't only about the ceremony and reception—<strong>the whole weekend should show who you are as a couple.</strong> When you rent the land, you'll have the freedom to make it yours. A few ideas to spark your planning.
+          </p>
+        </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
             <div className="bg-background p-6 rounded-xl shadow-md text-center">
@@ -408,7 +460,7 @@ const Packages = () => {
                 <Sparkles className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="font-semibold mb-2">Fireworks & Sparklers</h3>
-              <p className="text-sm text-muted-foreground">Light up the night sky with your own celebration.</p>
+              <p className="text-sm text-muted-foreground">Plan a sparkler send-off or fireworks moment if it fits your weekend.</p>
             </div>
 
             <div className="bg-background p-6 rounded-xl shadow-md text-center">
@@ -416,7 +468,7 @@ const Packages = () => {
                 <Waves className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="font-semibold mb-2">Giant Slip-and-Slide</h3>
-              <p className="text-sm text-muted-foreground">Turn the meadow into your personal water park.</p>
+              <p className="text-sm text-muted-foreground">Set one up and turn the meadow into your personal water park.</p>
             </div>
 
             <div className="bg-background p-6 rounded-xl shadow-md text-center">
@@ -424,7 +476,7 @@ const Packages = () => {
                 <Compass className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="font-semibold mb-2">Treasure Hunts</h3>
-              <p className="text-sm text-muted-foreground">Hide surprises across 65 acres of adventure.</p>
+              <p className="text-sm text-muted-foreground">Create a treasure hunt with surprises across 65 acres.</p>
             </div>
 
             <div className="bg-background p-6 rounded-xl shadow-md text-center">
@@ -432,7 +484,39 @@ const Packages = () => {
                 <Target className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="font-semibold mb-2">Games & Adventures</h3>
-              <p className="text-sm text-muted-foreground">Paintball, lawn games, forest explorations.</p>
+              <p className="text-sm text-muted-foreground">Bring paintball, lawn games, or forest explorations.</p>
+            </div>
+
+            <div className="bg-background p-6 rounded-xl shadow-md text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
+                <Flag className="w-6 h-6 text-secondary" />
+              </div>
+              <h3 className="font-semibold mb-2">Inflatable Obstacle Course</h3>
+              <p className="text-sm text-muted-foreground">Rent a giant course for playful, laugh-out-loud races.</p>
+            </div>
+
+            <div className="bg-background p-6 rounded-xl shadow-md text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
+                <Bath className="w-6 h-6 text-secondary" />
+              </div>
+              <h3 className="font-semibold mb-2">Portable Hot Tub</h3>
+              <p className="text-sm text-muted-foreground">Bring in a rental for a cozy soak under the stars.</p>
+            </div>
+
+            <div className="bg-background p-6 rounded-xl shadow-md text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
+                <Film className="w-6 h-6 text-secondary" />
+              </div>
+              <h3 className="font-semibold mb-2">Outdoor Movie Night</h3>
+              <p className="text-sm text-muted-foreground">Set up a screen and host a movie under the trees.</p>
+            </div>
+
+            <div className="bg-background p-6 rounded-xl shadow-md text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
+                <Music className="w-6 h-6 text-secondary" />
+              </div>
+              <h3 className="font-semibold mb-2">Campfire Karaoke</h3>
+              <p className="text-sm text-muted-foreground">Cue up a playlist and pass the mic around the fire.</p>
             </div>
           </div>
 
@@ -460,7 +544,7 @@ const Packages = () => {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
-                <span>Your imagination is the only limit</span>
+                <span>You'll have the freedom to make it yours</span>
               </div>
             </div>
           </div>
@@ -654,8 +738,8 @@ const Packages = () => {
                       <span>All activities and amenities</span>
                     </li>
                   </ul>
-                  <p className="font-bold text-lg">Contact us for current pricing</p>
-                  <p className="text-sm mt-2">Your celebration in ONE connected place</p>
+                  <p className="font-bold text-lg">$3,000–$8,500</p>
+                  <p className="text-sm mt-2">Based on your timeline—all in ONE connected place</p>
                 </CardContent>
               </Card>
             </div>
@@ -668,9 +752,9 @@ const Packages = () => {
                 Payment plans available • Down payment holds your date • No hidden fees • Transparent pricing
               </p>
               <Link to="/contact">
-                <Button size="lg" className="bg-secondary hover:bg-secondary/90">
+                <CTAButton>
                   Schedule Your Visit to Discuss Pricing
-                </Button>
+                </CTAButton>
               </Link>
             </div>
           </div>
@@ -680,9 +764,10 @@ const Packages = () => {
       {/* Image Section */}
       <section className="section">
         <div className="container mx-auto px-4">
-          <img 
+          <img
             src={receptionEvening}
             alt="Evening outdoor wedding reception celebration under stars at Rustic Retreat Weddings Alberta multi-day venue near Edmonton"
+            loading="lazy"
             className="shadow-2xl max-w-5xl mx-auto"
           />
         </div>
@@ -691,15 +776,18 @@ const Packages = () => {
       {/* CTA Section */}
       <section className="section bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to See It for Yourself?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-primary-foreground/90">
-            We don't let couples book until they visit the property. Experience Rustic Retreat in person and discover why couples call this their best decision.
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">Walk the Land With Us</h2>
+          <p className="text-xl mb-6 max-w-2xl mx-auto text-primary-foreground/90">
+            We don't let couples book until they visit. Experience Rustic Retreat in person and discover why couples call this their best decision.
           </p>
           <Link to="/contact">
-            <Button size="lg" variant="secondary" className="text-lg px-8">
-              Schedule Your Property Visit
-            </Button>
+            <CTAButton className="text-lg px-8">
+              Schedule Your Visit
+            </CTAButton>
           </Link>
+          <p className="text-sm text-primary-foreground/70 mt-4">
+            Most couples hear back within 24 hours
+          </p>
         </div>
       </section>
 

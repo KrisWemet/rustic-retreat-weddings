@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "./ui/button";
+import { CTAButton } from "./ui/cta-button";
 import { cn } from "@/lib/utils";
 
 const StickyMobileCTA = () => {
@@ -31,12 +31,9 @@ const StickyMobileCTA = () => {
       )}
     >
       <Link to="/contact" className="block">
-        <Button 
-          size="lg" 
-          className="w-full bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full shadow-elegant text-base py-6"
-        >
+        <CTAButton className="w-full text-base py-6">
           Book Your Tour
-        </Button>
+        </CTAButton>
       </Link>
     </div>
   );

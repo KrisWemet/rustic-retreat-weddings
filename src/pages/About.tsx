@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { CTAButton } from "@/components/ui/cta-button";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -11,63 +13,73 @@ import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import propertyAerial from "@/assets/property-aerial-view.avif";
 import campfireNight from "@/assets/campfire-evening-setting.avif";
 import birchGrove from "@/assets/gallery/birch-grove-altar.avif";
-import { Heart, MapPin, Quote } from "lucide-react";
+import cabinExterior from "@/assets/cabin-exterior-forest.avif";
+import { Heart, MapPin, Users, Sparkles, Home, TreePine, Sun, CheckCircle } from "lucide-react";
 
 const About = () => {
   return (
     <PageTransition>
-      <SEO 
-        title="Our Story & Philosophy"
-        description="Family-owned since 2006. We threw our own 120-person wedding here in 2019—complete with paintball, axe throwing, and rubber boots in the rain. Now we share it with couples who want something different."
+      <SEO
+        title="Our Story"
+        description="Family-owned since 2006. What started as annual gatherings became a wedding venue after we threw our own celebrations here. Now we share 65 acres with couples who want something different."
         path="/about"
+        image={weddingParty}
       />
       <div className="min-h-screen">
         <Navigation />
-        
+
         <PageHero
           backgroundImage={weddingParty}
-          title="Our Story"
-          subtitle="We aren't in this to be rich—we want to share the country with people who don't see it everyday."
+          title="About Rustic Retreat"
+          subtitle="Family-owned since 2006. We built this place for ourselves—now we share it with couples who want something real."
         />
 
-        {/* Origin Story - THE LEAD */}
+        {/* How It All Started */}
         <section className="section">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <ScrollReveal>
-                <div className="bg-secondary/10 p-8 md:p-12 rounded-2xl border-2 border-secondary mb-12">
-                  <Quote className="w-10 h-10 text-secondary mb-6" />
-                  <p className="text-xl md:text-2xl font-serif leading-relaxed mb-6">
-                    "In 2019, I threw my own 120-person wedding right here. I built a 40x60' pole barn. We set up paintball and axe throwing and a giant slip-and-slide. And then it rained. For three months straight."
-                  </p>
-                  <p className="text-xl md:text-2xl font-serif leading-relaxed mb-6">
-                    "So I got married in rubber boots, in the rain, and <span className="italic text-secondary">everyone had the time of their lives.</span>"
-                  </p>
-                  <p className="text-lg text-muted-foreground">
-                    That's when we realized: other couples deserve this too.
-                  </p>
-                </div>
+                <p className="section-label">THE BEGINNING</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-8">How It All Started</h2>
+
+                <p className="text-lg mb-6">
+                  In 2006, my parents bought 65 acres near Lac La Nonne with a dream of creating something self-sufficient—an off-grid homestead with pasture, forest, and everything they needed to live on their own terms. No power lines. No city noise. Just land that felt like theirs.
+                </p>
+
+                <p className="text-lg text-muted-foreground mb-6">
+                  That first year, they hosted a small gathering. Family and friends came out with their RVs, sat around the campfire, and soaked in the quiet. At the end of the weekend, someone said, <span className="italic">"We should do this every year."</span>
+                </p>
+
+                <p className="text-lg mb-6">
+                  So we did.
+                </p>
               </ScrollReveal>
 
               <ScrollReveal delay={100}>
-                <h2 className="text-3xl md:text-4xl font-serif mb-6">How It Started</h2>
+                <div className="bg-secondary/10 p-8 rounded-2xl border-l-4 border-secondary mb-8">
+                  <p className="text-lg leading-relaxed">
+                    What started as a single weekend became an annual tradition. Some years we'd have 80 people camping across the property—kids running wild during the day, adults around the campfire at night with music from every genre, impromptu dancing, laughter that carried through the trees. We'd play beer pong and cornhole and giant Jenga. We'd do potlucks where everyone brought their best recipes, and there was always too much food.
+                  </p>
+                </div>
+
                 <p className="text-lg text-muted-foreground mb-6">
-                  Family-owned since 2006. It started with annual gatherings where friends brought RVs and camped for weekends. My brother married here in 2018. Then came my own wedding in 2019—and everything changed.
+                  Sometimes we'd plan structured activities—outdoor movie nights, birthday celebrations, anniversary parties. Other times we'd just… exist together. Slowed down. Undistracted.
                 </p>
+
                 <p className="text-lg mb-8">
-                  We saw what happens when you give people <strong>time</strong> together. Real connections. Three generations playing cards until midnight. College friends meeting grandparents. Strangers becoming family.
+                  My parents fell in love with hosting. And the more they did it, the more the land evolved to welcome people. Close enough to Edmonton that friends could easily make the drive, but tucked away enough that it felt like a true escape.
                 </p>
               </ScrollReveal>
             </div>
           </div>
         </section>
 
-        {/* The Philosophy */}
+        {/* The Seed Gets Planted */}
         <section className="section section-muted">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
-                <HoverImage 
+                <HoverImage
                   src={propertyAerial}
                   alt="Aerial drone view of Rustic Retreat Weddings 65-acre property showing forest ceremony areas and open meadow spaces near Edmonton"
                   description="65 acres of possibility—your entire weekend awaits"
@@ -77,65 +89,100 @@ const About = () => {
               </ScrollReveal>
 
               <ScrollReveal direction="right">
-                <p className="section-label">THE PHILOSOPHY</p>
-                <h2 className="text-3xl md:text-4xl font-serif mb-6">We believe time changes everything</h2>
-                
+                <p className="section-label">THE TURNING POINT</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">The Seed Gets Planted</h2>
+
                 <p className="mb-6 text-muted-foreground">
-                  Traditional venue? Beautiful, but rushed. Everyone's on their best behavior. Surface-level conversations.
+                  In 2018, my dad built the first part of the gazebo. After finishing it, he turned to my wife Shannon and said, <span className="italic">"Looks nice. Good place to get married."</span>
+                </p>
+
+                <p className="mb-6">
+                  He didn't know how right he'd be.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  A 3-day weekend? Better. People start to relax. Real connections form.
+                  My brother got married here that same year. Then Shannon and I got married in 2019. After our wedding weekend, we couldn't stop hearing the same thing: <strong>"Best wedding ever."</strong> People told us stories about moments we'd missed—the connections made, the laughter shared, the way time seemed to stop for three days.
                 </p>
 
-                <div className="bg-secondary/10 p-6 border-2 border-secondary rounded-xl mb-6">
-                  <p className="text-lg font-medium mb-2">But a 5-day celebration?</p>
-                  <p className="text-muted-foreground">
-                    Everything changes. Day one, people are in "event mode." Day two, walls come down. By day three, your yoga instructor friend is teaching your accountant friend sun salutations. <span className="italic">And then your wedding happens</span>—with a community already bonded, already invested, already celebrating.
+                <div className="bg-secondary/20 p-6 rounded-xl border-2 border-secondary">
+                  <p className="font-medium text-lg">
+                    The seed wasn't just planted anymore. It had taken root.
                   </p>
                 </div>
-
-                <p className="font-medium text-lg">
-                  The depth is incomparable. And you can't fake it, rush it, or buy it. It only comes from time.
-                </p>
               </ScrollReveal>
             </div>
           </div>
         </section>
 
-        {/* Location */}
+        {/* Building the Dream */}
         <section className="section">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <ScrollReveal>
+                <p className="section-label">THE JOURNEY</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-8">Building the Dream</h2>
+
+                <p className="text-lg mb-6">
+                  After our wedding, Shannon and I moved out to the property full-time. Suddenly there were four of us living here, and the idea of opening the land as a venue shifted from "someday maybe" to "we could actually do this."
+                </p>
+
+                <p className="text-lg text-muted-foreground mb-6">
+                  My dad and Shannon fed off each other's excitement. We made big plans—a reception barn, developed campsites, all these grand visions. Then COVID hit. Wood prices skyrocketed. What was feasible became impossible overnight.
+                </p>
+
+                <p className="text-lg mb-6">
+                  <strong>But we didn't stop. We just adapted.</strong>
+                </p>
+
+                <p className="text-lg text-muted-foreground mb-8">
+                  Instead of one massive project, we did dozens of smaller ones. We renovated the cabin. Extended the gazebo. Started manicuring parts of the land while keeping the wild beauty intact. We spent 2020 adjusting to off-grid life—living in our RV year-round and learning what this land needed. In 2023, we built our permanent house. In 2024, we started renting the cabin to families as weekend getaways, testing the waters.
+                </p>
+
+                <div className="bg-primary/5 p-8 rounded-2xl border-l-4 border-primary">
+                  <p className="text-xl font-serif italic">
+                    Then in 2025, we opened to weddings.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* What We Learned */}
+        <section className="section section-muted">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
-                <p className="section-label">THE SETTING</p>
-                <h2 className="text-3xl md:text-4xl font-serif mb-6">65 Acres Near Lac La Nonne</h2>
-                
-                <p className="mb-6 text-lg text-muted-foreground">
-                  Imagine waking up on your wedding day in a sun-drenched cabin surrounded by Alberta forest. No hotel hallway. No parking garage. Just trees and sky.
+                <p className="section-label">CONSTANT EVOLUTION</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">What We Learned (And Keep Learning)</h2>
+
+                <p className="mb-6 text-muted-foreground">
+                  Each wedding taught us something. Each one showed us what was missing and what we needed to add. So we built an outdoor dance floor. Added modern picnic tables and rustic ceremony benches. Kept expanding our Décor Collection.
                 </p>
 
-                <div className="space-y-3 bg-card p-6 rounded-xl shadow-soft">
-                  <div className="flex items-start gap-2">
-                    <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span>99 km northwest of Edmonton (about 1 hour)</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span>Near Lac La Nonne and Pembina River</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span>Private 65 acres surrounded by Alberta wilderness</span>
-                  </div>
+                <p className="mb-6">
+                  Started projects that are still in progress—a wash house, a bridal suite, a dedicated decor building, flush washrooms.
+                </p>
+
+                <p className="mb-6 text-muted-foreground">
+                  The land keeps evolving, but we're intentional about it. We don't clear trees unless absolutely necessary. When we create walking trails, we weave between the trunks instead of cutting them down.
+                </p>
+
+                <div className="bg-card p-6 rounded-xl shadow-soft">
+                  <p className="text-muted-foreground text-sm mb-3">
+                    In 2024, a wildfire traveled through the west side of the property—it stayed low to the ground and cleared undergrowth but didn't climb the trees. You can still see signs of it if you walk that area, but new growth is filling back in.
+                  </p>
+                  <p className="font-medium">
+                    The land heals itself. We're not trying to tame this place. We're trying to work with it.
+                  </p>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal direction="right">
-                <HoverImage 
+                <HoverImage
                   src={birchGrove}
                   alt="Birch grove wedding altar surrounded by white birch trees near Edmonton"
-                  description="The birch grove altar—where vows become eternal"
+                  description="Nature creates the most beautiful cathedral"
                   category="Ceremony Space"
                   className="shadow-xl"
                 />
@@ -144,35 +191,285 @@ const About = () => {
           </div>
         </section>
 
-        {/* Ceremony Fancy, Party Casual */}
+        {/* What We Actually Do */}
+        <section className="section">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <ScrollReveal>
+                <div className="text-center mb-12">
+                  <p className="section-label">HOW IT WORKS</p>
+                  <h2 className="text-3xl md:text-4xl font-serif mb-4">What We Actually Do</h2>
+                  <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                    Here's the truth: we're hands-on hosts, but this is your weekend, not ours.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={100}>
+                <p className="text-lg text-center mb-12 max-w-3xl mx-auto">
+                  When you book Rustic Retreat, you get the blank canvas—65 acres, exclusive access, freedom to create exactly what you envision. We're around during your weekend in case you need anything from the venue itself, but we're not hovering. <strong>We trust you to bring your vision to life.</strong>
+                </p>
+              </ScrollReveal>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <ScrollReveal delay={0}>
+                  <Card className="border-2 border-secondary h-full">
+                    <CardContent className="p-8">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
+                          <CheckCircle className="w-5 h-5 text-secondary" />
+                        </div>
+                        <h3 className="text-xl font-semibold">What's Included</h3>
+                      </div>
+                      <ul className="space-y-3 text-muted-foreground">
+                        <li>Modern picnic tables & rustic ceremony benches</li>
+                        <li>Two-speaker sound system with wireless microphones</li>
+                        <li>Arch options & selection of decor</li>
+                        <li>Giant outdoor games & hammocks</li>
+                        <li>Firewood & BBQ with propane</li>
+                        <li>Trampoline, playset & treehouse for kids</li>
+                        <li>Cabin (sleeps 4) with Keurig & meal prep basics</li>
+                        <li>Farm-fresh eggs when the chickens are laying</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
+
+                <ScrollReveal delay={100}>
+                  <Card className="border-2 h-full">
+                    <CardContent className="p-8">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Users className="w-5 h-5 text-primary" />
+                        </div>
+                        <h3 className="text-xl font-semibold">What You Handle</h3>
+                      </div>
+                      <ul className="space-y-3 text-muted-foreground">
+                        <li>Arranging vendors</li>
+                        <li>Decorating</li>
+                        <li>Cleanup</li>
+                      </ul>
+                      <div className="mt-6 p-4 bg-muted/50 rounded-lg">
+                        <p className="text-sm">
+                          This isn't a "show up and everything's done for you" venue. <strong>You're building your day.</strong> We're giving you the tools and the space to do it.
+                        </p>
+                      </div>
+                      <p className="mt-4 text-sm text-muted-foreground">
+                        We'll offer suggestions on anything that might help. But we're not going to tell you how your wedding should be. That's not our place.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
+              </div>
+
+              <ScrollReveal delay={200}>
+                <p className="text-center text-lg">
+                  We're constantly adding things we think will elevate your experience. <strong>If you have an idea or need something we don't have yet, tell us. We're listening.</strong>
+                </p>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* What Drives Us */}
+        <section className="section section-cream">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <ScrollReveal>
+                <p className="section-label">OUR PHILOSOPHY</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-8">What Drives Us</h2>
+
+                <p className="text-lg mb-6">
+                  So many venues charge $10,000+ for a single day and then lock you into mandatory minimums—you have to use their caterer, their bar staff, their timeline.
+                </p>
+
+                <p className="text-xl font-medium mb-6">
+                  We don't do that.
+                </p>
+
+                <p className="text-lg text-muted-foreground mb-8">
+                  We want you to build your day YOUR way. Bring in vendors for every detail and go extravagant? Great. DIY all your decor and do a potluck BBQ to keep costs low? Also great. We don't care how you spend your money. We care that you get to choose.
+                </p>
+
+                <div className="bg-secondary/10 p-8 rounded-2xl border-2 border-secondary mb-8">
+                  <p className="text-lg mb-4">
+                    <strong>Our goal is simple:</strong> be fully booked during our four-month season with one wedding per week, every year, with very little advertising.
+                  </p>
+                  <p className="text-muted-foreground">
+                    We want couples to hear about us from a friend who got married here and couldn't stop talking about it. Word of mouth. Real stories.
+                  </p>
+                </div>
+
+                <p className="text-lg">
+                  We're not in this to get rich. We're in this because we love hosting people. We love watching couples fall in love with this place the way we did. We love seeing memories get made. And we want you to do it <strong>your way</strong>—not ours, not some venue template, not what Instagram says weddings should look like.
+                </p>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Who We Are */}
+        <section className="section">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <ScrollReveal>
+                <div className="text-center mb-12">
+                  <p className="section-label">THE TEAM</p>
+                  <h2 className="text-3xl md:text-4xl font-serif mb-4">Who We Are</h2>
+                  <p className="text-lg text-muted-foreground">
+                    This is a family operation.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <ScrollReveal delay={0}>
+                  <Card className="border-2 h-full">
+                    <CardContent className="p-8">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Heart className="w-8 h-8 text-secondary" />
+                        <h3 className="text-xl font-semibold">Shannon</h3>
+                      </div>
+                      <p className="text-muted-foreground mb-4">
+                        The heart and face of the venue. She handles admin, bookings, communication, venue tours, scheduling, organizing. She builds a lot of the small items—games, custom touches for each wedding. She's the one planning and executing and bringing your vision to life.
+                      </p>
+                      <p className="italic text-sm">
+                        She loves this more than I do, honestly.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
+
+                <ScrollReveal delay={100}>
+                  <Card className="border-2 h-full">
+                    <CardContent className="p-8">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Home className="w-8 h-8 text-secondary" />
+                        <h3 className="text-xl font-semibold">Chris</h3>
+                      </div>
+                      <p className="text-muted-foreground">
+                        I support Shannon. We build the picnic tables and ceremony benches together. I join her on venue tours. I help with whatever she needs, which looks different every day. Right now, in the off-season, I'm working on this website.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
+
+                <ScrollReveal delay={200}>
+                  <Card className="border-2 h-full">
+                    <CardContent className="p-8">
+                      <div className="flex items-center gap-3 mb-4">
+                        <TreePine className="w-8 h-8 text-secondary" />
+                        <h3 className="text-xl font-semibold">Dad</h3>
+                      </div>
+                      <p className="text-muted-foreground">
+                        Handles firewood refills at the cabin firepit. He builds the bigger projects—the gazebo was almost entirely him. Last year he worked on framing the dance floor. This winter, he's building the wash house. In the spring, Shannon and I will finish the bridal suite.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
+
+                <ScrollReveal delay={300}>
+                  <Card className="border-2 h-full">
+                    <CardContent className="p-8">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Sun className="w-8 h-8 text-secondary" />
+                        <h3 className="text-xl font-semibold">Mom</h3>
+                      </div>
+                      <p className="text-muted-foreground">
+                        Takes care of cleaning and resetting the cabin, maintaining the outhouses, all the gardening around the property. She pitches in wherever else is needed.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
+              </div>
+
+              <ScrollReveal delay={400}>
+                <div className="mt-12 text-center">
+                  <p className="text-lg">
+                    We're all invested. We all care. <strong>This isn't a side hustle or a passive income stream. This is our life.</strong>
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* What Makes This Land Special */}
         <section className="section section-muted">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
-                <HoverImage 
+                <HoverImage
                   src={campfireNight}
                   alt="Evening campfire gathering under stars at Rustic Retreat Weddings Alberta"
-                  description="Where strangers become friends under Alberta stars"
-                  category="Campfire Evenings"
+                  description="Where time slows down and connections deepen"
+                  category="The Experience"
                   className="shadow-xl"
                 />
               </ScrollReveal>
-              
+
               <ScrollReveal direction="right">
-                <h2 className="text-3xl md:text-4xl font-serif mb-6">Ceremony Fancy, Party Casual</h2>
-                <p className="text-lg mb-6 text-muted-foreground">
-                  Yes, you can have that elegant ceremony. The dress, the photos, the formal moments—all of it.
+                <p className="section-label">THE FEELING</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">What Makes This Land Special</h2>
+
+                <p className="mb-6">
+                  The moment you turn down our winding driveway and the trees close in around you, something shifts. The smell of nature hits you when you step out of your car. Birds singing. Sun filtering through branches.
+                </p>
+
+                <p className="mb-6 text-lg font-medium">
+                  You feel it immediately—you've entered somewhere different.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  But after the vows and portraits? Kick off the heels. Trade the tux jacket for a flannel. Because you're camping now, and the real celebration is just getting started.
+                  There's a mix of open fields and forest. Trails winding between trees. Natural beauty around every turn. It feels like a place to explore, to let go of whatever stress you brought with you. Time slows down here. Or at least it feels that way.
                 </p>
 
-                <div className="bg-secondary/10 p-6 border-2 border-secondary rounded-xl">
-                  <p className="text-lg font-medium">
-                    The beauty of a multi-day celebration: you get the fancy moments AND the relaxed ones. No need to choose.
+                <div className="bg-card p-6 rounded-xl shadow-soft">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Sparkles className="w-6 h-6 text-secondary" />
+                    <p className="font-semibold">Completely Off-Grid</p>
+                  </div>
+                  <p className="text-muted-foreground text-sm">
+                    No power lines come into this property. Everything runs on solar—my dad's original vision of self-sufficiency made real. It's not a gimmick. It's just how we live.
                   </p>
                 </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* What We Want You to Know */}
+        <section className="section">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <ScrollReveal>
+                <p className="section-label">IN CLOSING</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-8">What We Want You to Know</h2>
+
+                <p className="text-xl font-medium mb-6">
+                  We are not your average wedding venue.
+                </p>
+
+                <p className="text-lg text-muted-foreground mb-6">
+                  We care almost as much about your wedding as you do. We want it to be exactly what you envision, and we'll give you the freedom to make that happen.
+                </p>
+
+                <p className="text-lg mb-8">
+                  We're family-owned and family-run, and when you're here, <strong>we want you to feel like family too.</strong>
+                </p>
+
+                <div className="bg-secondary/10 p-8 rounded-2xl border-2 border-secondary mb-8">
+                  <p className="text-lg">
+                    That's what success looks like to us. Not revenue. Not metrics. <strong>Smiles on your faces. Memories being made. Stories we get to hear afterward.</strong>
+                  </p>
+                </div>
+
+                <p className="text-xl font-serif italic mb-2">
+                  If that sounds like what you're looking for, we'd love to meet you.
+                </p>
+                <p className="text-lg text-secondary font-medium">
+                  — Shannon & Chris
+                </p>
               </ScrollReveal>
             </div>
           </div>
@@ -183,22 +480,25 @@ const About = () => {
           <div className="container mx-auto px-4 text-center">
             <ScrollReveal>
               <Heart className="w-10 h-10 text-secondary mx-auto mb-6" />
-              <h2 className="text-3xl md:text-4xl font-serif mb-6">Ready to See It for Yourself?</h2>
-              <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
+              <h2 className="text-3xl md:text-4xl font-serif mb-6">Come Feel the Difference</h2>
+              <p className="text-lg mb-6 max-w-2xl mx-auto text-primary-foreground/90">
                 Photos can only show so much. The feeling of standing in the meadow at golden hour—that you have to experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-8 shadow-lg">
-                    Walk the Land With Us
-                  </Button>
+                  <CTAButton className="px-8">
+                    Discover Your Venue
+                  </CTAButton>
                 </Link>
                 <Link to="/packages">
-                  <Button size="lg" variant="outline" className="border-[hsl(15,50%,75%)] text-transparent bg-clip-text bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:bg-primary-foreground/10 rounded-full px-8">
+                  <Button size="lg" variant="outline" className="bg-white/90 border-2 border-rosegold text-primary hover:bg-white rounded-full px-8 font-medium">
                     View Packages
                   </Button>
                 </Link>
               </div>
+              <p className="text-sm text-primary-foreground/70 mt-4">
+                Most couples hear back within 24 hours
+              </p>
             </ScrollReveal>
           </div>
         </section>

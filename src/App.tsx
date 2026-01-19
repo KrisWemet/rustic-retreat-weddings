@@ -11,8 +11,6 @@ import About from "./pages/About";
 import Venue from "./pages/Venue";
 import Packages from "./pages/Packages";
 import Gallery from "./pages/Gallery";
-import RealWeddings from "./pages/RealWeddings";
-import WeddingStory from "./pages/WeddingStory";
 import FAQs from "./pages/FAQs";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -34,8 +32,6 @@ const App = () => (
           <Route path="/venue" element={<Venue />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/real-weddings" element={<RealWeddings />} />
-          <Route path="/real-weddings/:slug" element={<WeddingStory />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/contact" element={<Contact />} />
           {/* Redirects for old URLs */}

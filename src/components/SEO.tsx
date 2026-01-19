@@ -18,6 +18,9 @@ const SEO = ({
 }: SEOProps) => {
   const canonicalUrl = `${BASE_URL}${path}`;
   const fullTitle = path === "" ? title : `${title} | Rustic Retreat Weddings`;
+  const resolvedImage = image.startsWith("http")
+    ? image
+    : `${BASE_URL}${image.startsWith("/") ? "" : "/"}${image}`;
 
   return (
     <Helmet>
@@ -29,7 +32,7 @@ const SEO = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={resolvedImage} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Rustic Retreat Weddings" />
       
@@ -37,7 +40,7 @@ const SEO = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={resolvedImage} />
     </Helmet>
   );
 };

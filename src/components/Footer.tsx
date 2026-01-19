@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* About */}
           <div>
             <h3 className="text-xl font-bold mb-4 font-serif">Rustic Retreat Weddings</h3>
@@ -19,8 +19,8 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/about" className="hover:text-secondary transition-colors">
-                  About Us
+                <Link to="/venue" className="hover:text-secondary transition-colors">
+                  The Venue
                 </Link>
               </li>
               <li>
@@ -38,27 +38,15 @@ const Footer = () => {
                   FAQs
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Explore */}
-          <div>
-            <h4 className="font-semibold mb-4">Explore</h4>
-            <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/venue" className="hover:text-secondary transition-colors">
-                  The Venue
+                <Link to="/about" className="hover:text-secondary transition-colors">
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-secondary transition-colors">
                   Schedule a Visit
                 </Link>
-              </li>
-              <li>
-                <a href="/llm.html" className="hover:text-secondary transition-colors">
-                  Venue Info (for AI/Press)
-                </a>
               </li>
             </ul>
           </div>

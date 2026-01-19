@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { CTAButton } from "@/components/ui/cta-button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -141,11 +142,11 @@ const images: GalleryImage[] = [
     description: "The pavilion frames your gown in woodland elegance",
     category: "Details" 
   },
-  { 
-    src: cakeCuttingSet, 
-    alt: "Gold cake cutting knife set from venue decor collection", 
-    description: "Details from our collection—everything you need is here",
-    category: "Details" 
+  {
+    src: cakeCuttingSet,
+    alt: "Gold cake cutting knife set from venue Décor Collection",
+    description: "The little touches that tell your story",
+    category: "Details"
   },
   { 
     src: brideHorse, 
@@ -267,18 +268,19 @@ const Gallery = () => {
         title="Wedding Photo Gallery"
         description="Browse real wedding photos from Rustic Retreat. See ceremony setups, reception details, romantic portraits, and more from couples who celebrated on our 65-acre Alberta property."
         path="/gallery"
+        image={coupleKissMeadow}
       />
       <div className="min-h-screen">
         <Navigation />
         
         <PageHero
           backgroundImage={coupleKissMeadow}
-          title="Real Weddings at Rustic Retreat"
-          subtitle="See yourself here. These are real couples who trusted us with their most important day."
+          title="Wedding Photo Gallery"
+          subtitle="Every photo is a real couple. A real moment. A real celebration."
         />
 
         {/* Category Filter */}
-        <section className="py-8 bg-card border-b border-border sticky top-16 z-40">
+        <section className="py-8 bg-card border-b border-border">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap gap-2 justify-center">
               {categories.map((category) => (
@@ -310,9 +312,10 @@ const Gallery = () => {
                   style={{ animationDelay: `${Math.min(index * 75, 600)}ms` }}
                   onClick={() => setSelectedImage(image)}
                 >
-                  <img 
+                  <img
                     src={image.src}
                     alt={image.alt}
+                    loading="lazy"
                     className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end">
@@ -354,36 +357,22 @@ const Gallery = () => {
           </DialogContent>
         </Dialog>
 
-        {/* Read Real Stories CTA */}
-        <section className="py-16 bg-card border-t border-border">
-          <div className="container mx-auto px-4 text-center">
-            <ScrollReveal>
-              <h3 className="text-2xl font-serif mb-4">Want to know the stories behind the photos?</h3>
-              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                Read about real couples who celebrated at Rustic Retreat—their favorite moments, their families' reactions, and why they chose this place.
-              </p>
-              <Link to="/real-weddings">
-                <Button className="bg-secondary hover:bg-secondary-dark text-secondary-foreground rounded-full px-8">
-                  Read Their Stories
-                </Button>
-              </Link>
-            </ScrollReveal>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="section bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Your Story Belongs Here</h2>
-              <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
+              <p className="text-lg mb-6 max-w-2xl mx-auto text-primary-foreground/90">
                 Ready to write your own chapter?
               </p>
               <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-8 shadow-lg">
-                  Walk the Land With Us
-                </Button>
+                <CTAButton className="px-8">
+                  Discover Your Venue
+                </CTAButton>
               </Link>
+              <p className="text-sm text-primary-foreground/70 mt-4">
+                Most couples hear back within 24 hours
+              </p>
             </ScrollReveal>
           </div>
         </section>

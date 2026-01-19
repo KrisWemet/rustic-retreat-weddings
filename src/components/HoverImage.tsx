@@ -8,6 +8,7 @@ interface HoverImageProps {
   className?: string;
   imageClassName?: string;
   aspectRatio?: 'square' | 'video' | 'auto';
+  loading?: 'lazy' | 'eager';
 }
 
 const HoverImage = ({
@@ -18,6 +19,7 @@ const HoverImage = ({
   className,
   imageClassName,
   aspectRatio = 'auto',
+  loading = 'lazy',
 }: HoverImageProps) => {
   const aspectClasses = {
     square: 'aspect-square',
@@ -33,9 +35,10 @@ const HoverImage = ({
         className
       )}
     >
-      <img 
-        src={src} 
+      <img
+        src={src}
         alt={alt}
+        loading={loading}
         className={cn(
           'w-full h-full object-cover transition-transform duration-500 group-hover:scale-110',
           imageClassName

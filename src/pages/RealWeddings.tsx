@@ -19,6 +19,7 @@ const RealWeddings = () => {
         title="Real Wedding Stories"
         description="Read stories from real couples who celebrated at Rustic Retreat. Discover how multi-day wedding weekends created unforgettable memories for families and friends."
         path="/real-weddings"
+        image={heroImage}
       />
       <div className="min-h-screen">
         <Navigation />
@@ -39,9 +40,10 @@ const RealWeddings = () => {
                     <div className="grid lg:grid-cols-2 gap-0">
                       {/* Image Side */}
                       <div className="relative overflow-hidden">
-                        <img 
-                          src={story.heroImage} 
+                        <img
+                          src={story.heroImage}
                           alt={`${story.coupleNames} wedding at Rustic Retreat Alberta`}
+                          loading="lazy"
                           className="w-full h-72 lg:h-full object-cover"
                         />
                         <div className="absolute bottom-4 left-4">
@@ -143,7 +145,7 @@ const RealWeddings = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
                   <Button size="lg" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-8 shadow-lg">
-                    Walk the Land With Us
+                    Discover Your Venue
                   </Button>
                 </Link>
                 <Link to="/gallery">

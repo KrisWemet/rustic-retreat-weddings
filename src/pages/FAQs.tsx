@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
+import { CTAButton } from "@/components/ui/cta-button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -37,7 +39,7 @@ const FAQs = () => {
     },
     {
       question: "Can we bring our own vendors?",
-      answer: "Complete freedom. Use our preferred vendors or bring your own team. This is your celebration, your vision, your rules."
+      answer: "Flexibility to choose. Use our preferred vendors or bring your own team. This is your celebration, your vision."
     },
     {
       question: "When is wedding season?",
@@ -45,11 +47,11 @@ const FAQs = () => {
     },
     {
       question: "What are the quiet hours?",
-      answer: "On your wedding night, quiet hours start at midnight. All other nights, quiet hours are 11pm to 8am. This applies to generators and amplified music."
+      answer: "Your wedding night? Celebrate until midnight. All other nights, quiet hours run 11pm to 8am for generators and amplified music. Your neighbors (the owls) will thank you."
     },
     {
       question: "What happens if it rains?",
-      answer: "The clear-top gazebo provides covered space for your reception. Alberta weather has never stopped a party at Rustic Retreat."
+      answer: "Alberta weather has never stopped a party at Rustic Retreat. The clear-top gazebo seats 80 for your reception, and rain often makes for the most dramatic photos. Some of our favorite wedding shots happened during surprise showers."
     },
     {
       question: "Is there electricity and running water?",
@@ -63,15 +65,47 @@ const FAQs = () => {
       question: "Do you host multiple weddings per weekend?",
       answer: "Never. When you book, the property is exclusively yours. No other couples. No overlapping events."
     },
+    {
+      question: "Can we bring our dog (or other pets)?",
+      answer: "Yes! Well-behaved pets are welcome. Many couples have included their dogs in the ceremony. Just let us know in advance so we can share a few guidelines about the property."
+    },
+    {
+      question: "Is there a minimum guest count?",
+      answer: "No minimum. Whether you're planning an intimate elopement with 10 guests or a celebration with 80, the property is yours to enjoy your way."
+    },
+    {
+      question: "Is there WiFi on the property?",
+      answer: "We have limited WiFi at the cabin for essential needs, but honestly? Most couples tell us the digital detox was one of the best parts of their weekend. Your guests will actually talk to each other."
+    },
   ];
+
+  // Generate FAQ schema markup
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
 
   return (
     <PageTransition>
-      <SEO 
+      <SEO
         title="Frequently Asked Questions"
         description="Get answers about Rustic Retreat wedding packages, guest capacity, camping accommodations, vendor policies, and more. Everything you need to know before booking your property tour."
         path="/faqs"
+        image={propertyLandscape}
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
       <div className="min-h-screen">
         <Navigation />
         
@@ -111,21 +145,24 @@ const FAQs = () => {
           <div className="container mx-auto px-4 text-center">
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Still Have Questions?</h2>
-              <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
+              <p className="text-lg mb-6 max-w-2xl mx-auto text-primary-foreground/90">
                 The best way to get answers is during a property visit. Walk the land with us.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-8 shadow-lg">
-                    Walk the Land With Us
-                  </Button>
+                  <CTAButton className="px-8">
+                    Discover Your Venue
+                  </CTAButton>
                 </Link>
                 <Link to="/packages">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8">
+                  <Button size="lg" variant="outline" className="bg-white/90 border-2 border-rosegold text-primary hover:bg-white rounded-full px-8 font-medium">
                     View Packages
                   </Button>
                 </Link>
               </div>
+              <p className="text-sm text-primary-foreground/70 mt-4">
+                Most couples hear back within 24 hours
+              </p>
             </ScrollReveal>
           </div>
         </section>

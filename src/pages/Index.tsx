@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { CTAButton } from "@/components/ui/cta-button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -24,7 +25,7 @@ import sunsetPortraits from "@/assets/gallery/sunset-clearing-portraits.avif";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import birchAltar from "@/assets/gallery/birch-grove-altar.avif";
 import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
-import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight } from "lucide-react";
+import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -51,7 +52,7 @@ const Index = () => {
     }
   }, [isVideoVisible]);
   return <PageTransition>
-      <SEO />
+      <SEO image={heroCeremony} />
       <div className="min-h-screen bg-background">
         <Navigation />
         
@@ -72,18 +73,18 @@ const Index = () => {
                 Your People. Your Vision.<br className="hidden md:block" /> <span className="italic">Your Legendary Weekend.</span>
               </h1>
               <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/95 leading-relaxed [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
-                Not a venue you rent for hours. A 65-acre blank canvas for the weekend your guests will never stop talking about.
+                Not a venue you rent for hours. 65 private acres for the weekend your guests will never stop talking about.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
-                  <Button size="lg" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white text-lg px-10 py-6 rounded-full shadow-elegant transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    Walk the Land With Us
-                  </Button>
+                  <CTAButton className="text-lg px-10 py-6">
+                    Discover Your Venue
+                  </CTAButton>
                 </Link>
                 <Link to="/packages" className="opacity-0 animate-hero-fade-in-delayed">
-                  <Button size="lg" variant="outline" className="bg-white/10 border-[hsl(15,50%,75%)] text-white hover:bg-white/20 text-lg px-10 py-6 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105">
+                  <CTAButton variant="outline" className="text-lg px-10 py-6">
                     View Packages
-                  </Button>
+                  </CTAButton>
                 </Link>
               </div>
             </div>
@@ -94,14 +95,17 @@ const Index = () => {
         <section className="py-6 bg-secondary/10 border-y border-secondary/20">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-sm">
-              
+              <div className="flex items-center gap-2">
+                <Heart className="w-4 h-4 text-secondary" />
+                <span className="text-muted-foreground"><strong className="text-foreground">Hosting dreams since 2019</strong></span>
+              </div>
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-secondary fill-secondary" />
                 <span className="text-muted-foreground"><strong className="text-foreground">5.0 rating</strong> from couples</span>
               </div>
               <Link to="/contact" className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors cursor-pointer group">
                 <Calendar className="w-4 h-4 text-primary" />
-                <span className="text-primary font-medium group-hover:underline">2026 Season: Limited dates remaining</span>
+                <span className="text-primary font-medium group-hover:underline">2026: Only 4 prime summer weekends left</span>
               </Link>
             </div>
           </div>
@@ -149,12 +153,12 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="max-w-4xl mx-auto text-center">
-                <p className="section-label">THIS IS DIFFERENT</p>
+                <p className="section-label">THE QUESTION CHANGES</p>
                 <h2 className="text-3xl md:text-5xl font-serif mb-8 leading-tight">
                   While traditional venues say<br /><span className="italic text-muted-foreground">"this is how your wedding will be,"</span><br />we ask <span className="italic text-secondary">"what do you want to create?"</span>
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  No timelines. No restrictions. Just you, your people, and five days to do this right.
+                  No rigid timelines. No cookie-cutter packages. Just you, your people, and five days to celebrate your way.
                 </p>
               </div>
             </ScrollReveal>
@@ -228,7 +232,7 @@ const Index = () => {
                 </ScrollReveal>
                 <ScrollReveal delay={100}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Want time to actually enjoy it—five days to savor every moment instead of watching your wedding fly by in four hours</p>
+                    <p className="font-medium">Want to actually enjoy your wedding—not watch it fly by in four hours</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
@@ -246,9 +250,9 @@ const Index = () => {
               <ScrollReveal delay={400}>
                 <div className="text-center">
                   <Link to="/contact">
-                    <Button className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white rounded-full px-8 shadow-elegant transition-all duration-300 hover:shadow-xl hover:scale-105">
-                      Come See For Yourself
-                    </Button>
+                    <CTAButton className="px-8">
+                      Walk the Land With Us
+                    </CTAButton>
                   </Link>
                 </div>
               </ScrollReveal>
@@ -263,10 +267,10 @@ const Index = () => {
               <div className="text-center mb-12">
                 <p className="section-label">BEYOND THE CEREMONY</p>
                 <h2 className="text-3xl md:text-5xl font-serif mb-6">
-                  Your Weekend. <span className="italic text-secondary">Your Rules.</span>
+                  Your Weekend. <span className="italic text-secondary">Your Way.</span>
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  When you rent the land, your imagination is the only limit.
+                  When you rent the land, you'll have the freedom to make it yours. A few ideas to spark your planning.
                 </p>
               </div>
             </ScrollReveal>
@@ -278,7 +282,7 @@ const Index = () => {
                     <Sparkles className="w-6 h-6 text-secondary" />
                   </div>
                   <h3 className="font-semibold mb-2">Fireworks & Sparklers</h3>
-                  <p className="text-sm text-muted-foreground">Light up the night sky with your own celebration.</p>
+                  <p className="text-sm text-muted-foreground">Plan a sparkler send-off or fireworks moment if it fits your weekend.</p>
                 </div>
               </ScrollReveal>
 
@@ -288,7 +292,7 @@ const Index = () => {
                     <Waves className="w-6 h-6 text-secondary" />
                   </div>
                   <h3 className="font-semibold mb-2">Giant Slip-and-Slide</h3>
-                  <p className="text-sm text-muted-foreground">Turn the meadow into your personal water park.</p>
+                  <p className="text-sm text-muted-foreground">Set one up and turn the meadow into your personal water park.</p>
                 </div>
               </ScrollReveal>
 
@@ -298,7 +302,7 @@ const Index = () => {
                     <Compass className="w-6 h-6 text-secondary" />
                   </div>
                   <h3 className="font-semibold mb-2">Treasure Hunts</h3>
-                  <p className="text-sm text-muted-foreground">Hide surprises across 65 acres of adventure.</p>
+                  <p className="text-sm text-muted-foreground">Create a treasure hunt with surprises across 65 acres.</p>
                 </div>
               </ScrollReveal>
 
@@ -308,19 +312,59 @@ const Index = () => {
                     <Target className="w-6 h-6 text-secondary" />
                   </div>
                   <h3 className="font-semibold mb-2">Paintball & Games</h3>
-                  <p className="text-sm text-muted-foreground">Friendly competition in the forest.</p>
+                  <p className="text-sm text-muted-foreground">Bring your favorite games for friendly competition in the forest.</p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={400}>
+                <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
+                    <Flag className="w-6 h-6 text-secondary" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Inflatable Obstacle Course</h3>
+                  <p className="text-sm text-muted-foreground">Rent a giant course for playful, laugh-out-loud races.</p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={500}>
+                <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
+                    <Bath className="w-6 h-6 text-secondary" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Portable Hot Tub</h3>
+                  <p className="text-sm text-muted-foreground">Bring in a rental for a cozy soak under the stars.</p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={600}>
+                <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
+                    <Film className="w-6 h-6 text-secondary" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Outdoor Movie Night</h3>
+                  <p className="text-sm text-muted-foreground">Set up a screen and host a movie under the trees.</p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={700}>
+                <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
+                    <Music className="w-6 h-6 text-secondary" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Campfire Karaoke</h3>
+                  <p className="text-sm text-muted-foreground">Cue up a playlist and pass the mic around the fire.</p>
                 </div>
               </ScrollReveal>
             </div>
           </div>
         </section>
 
-        {/* Real Weddings Gallery */}
+        {/* Photo Gallery */}
         <section className="section bg-background">
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="text-center mb-12">
-                <p className="section-label">REAL LOVE STORIES</p>
+                <p className="section-label">PHOTO GALLERY</p>
                 <h2 className="text-3xl md:text-4xl font-serif mb-4">See yourself here</h2>
               </div>
             </ScrollReveal>
@@ -346,8 +390,8 @@ const Index = () => {
 
             <ScrollReveal delay={300}>
               <div className="text-center mt-10">
-                <Link to="/real-weddings" className="inline-flex items-center gap-2 text-secondary hover:text-secondary-dark font-medium transition-colors">
-                  Read their stories <ArrowRight className="w-4 h-4" />
+                <Link to="/gallery" className="inline-flex items-center gap-2 text-secondary hover:text-secondary-dark font-medium transition-colors">
+                  View the full gallery <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </ScrollReveal>
@@ -361,8 +405,11 @@ const Index = () => {
               <div className="text-center mb-12">
                 <p className="section-label">TRANSPARENT PRICING</p>
                 <h2 className="text-3xl md:text-4xl font-serif mb-4">Choose your timeline</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
+                <p className="text-muted-foreground max-w-2xl mx-auto text-sm mb-2">
                   Most couples who chose 3-day wished they had 5—they didn't want the weekend to end.
+                </p>
+                <p className="text-xs text-secondary font-medium">
+                  Popular dates book 12-18 months in advance
                 </p>
               </div>
             </ScrollReveal>
@@ -472,9 +519,9 @@ const Index = () => {
 
               <ScrollReveal direction="right">
                 <div className="grid grid-cols-2 gap-3">
-                  <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" className="w-full h-40 md:h-52 object-cover shadow-soft" />
-                  <img src={receptionGazebo} alt="Evening reception in the gazebo with string lights" className="w-full h-40 md:h-52 object-cover shadow-soft" />
-                  <img src={sunsetPortraits} alt="Couple portraits at sunset in forest clearing" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2" />
+                  <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft" />
+                  <img src={receptionGazebo} alt="Evening reception in the gazebo with string lights" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft" />
+                  <img src={sunsetPortraits} alt="Couple portraits at sunset in forest clearing" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2" />
                 </div>
               </ScrollReveal>
             </div>
@@ -488,7 +535,7 @@ const Index = () => {
               <div className="max-w-3xl mx-auto text-center">
                 <p className="section-label">OUR STORY</p>
                 <h2 className="text-2xl md:text-3xl font-serif mb-6 italic">
-                  "I got married in rubber boots, in the rain, and everyone had the time of their lives."
+                  "It poured for months beforehand, so the rubber boots were real—but our four-day wedding weekend stayed dry, and everyone had the time of their lives."
                 </h2>
                 <p className="text-muted-foreground mb-8">
                   In 2019, we threw our own 120-person wedding right here—complete with a 40x60' pole barn, paintball, axe throwing, and a giant slip-and-slide. That's when we realized: other couples deserve this too.
@@ -520,9 +567,9 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white text-lg px-12 py-6 rounded-full shadow-elegant transition-all duration-300">
-                    Walk the Land With Us
-                  </Button>
+                  <CTAButton className="text-lg px-12 py-6">
+                    Discover Your Venue
+                  </CTAButton>
                 </Link>
               </div>
             </ScrollReveal>

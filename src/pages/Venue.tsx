@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { CTAButton } from "@/components/ui/cta-button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -13,6 +14,7 @@ import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
 import forestPath from "@/assets/gallery/forest-path-photos.avif";
 import wineBarrelDecor from "@/assets/gallery/wine-barrel-decor.avif";
 import receptionTablescape from "@/assets/gallery/reception-tablescape-gold.avif";
+import receptionGazebo from "@/assets/reception-gazebo-evening.avif";
 import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign, Waves, Compass } from "lucide-react";
 
 const Venue = () => {
@@ -22,6 +24,7 @@ const Venue = () => {
         title="The Venue"
         description="Explore our private cabin for newlyweds, 65-acre forest property, and curated wedding décor collection. Off-grid solar power, comfortable accommodations, and endless photo opportunities near Edmonton."
         path="/venue"
+        image={cabinExterior}
       />
       <div className="min-h-screen">
         <Navigation />
@@ -41,11 +44,7 @@ const Venue = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">The Cabin: Your Private Sanctuary</h2>
                 
                 <p className="text-lg mb-6 text-muted-foreground">
-                  Picture this moment: It's Saturday night. The toasts have been made, the dancing exhausted, the stars impossibly bright. Your guests are still gathered around the fire, telling stories about you, about love, about life. And you—you and your brand new spouse—slip away.
-                </p>
-
-                <p className="text-lg mb-6">
-                  Down a path lit by lanterns. Through the trees that witnessed your vows. To a cabin that's been waiting just for you.
+                  Saturday night. Stars impossibly bright. Your guests still gathered around the fire. And you—you and your brand new spouse—slip away down a lantern-lit path to a cabin that's been waiting just for you.
                 </p>
 
                 <div className="bg-primary/5 p-8 border-l-4 border-primary mb-8">
@@ -82,9 +81,9 @@ const Venue = () => {
                 <Card className="border-2 hover:border-secondary transition-colors h-full">
                   <CardContent className="pt-6">
                     <Users className="w-8 h-8 text-secondary mb-3" />
-                    <h3 className="font-semibold mb-2">Sleeps 4 Comfortably</h3>
+                    <h3 className="font-semibold mb-2">Room for Four</h3>
                     <p className="text-sm text-muted-foreground">
-                      Perfect for a wedding night retreat, or bring your parents or best friends Sunday morning for coffee and recap.
+                      Perfect for a wedding night retreat, or invite your parents Sunday morning for coffee and the best recap conversation of your life.
                     </p>
                   </CardContent>
                 </Card>
@@ -94,9 +93,9 @@ const Venue = () => {
                 <Card className="border-2 hover:border-secondary transition-colors h-full">
                   <CardContent className="pt-6">
                     <Coffee className="w-8 h-8 text-secondary mb-3" />
-                    <h3 className="font-semibold mb-2">Coffee Station</h3>
+                    <h3 className="font-semibold mb-2">Morning Coffee</h3>
                     <p className="text-sm text-muted-foreground">
-                      Keurig machine with pods provided—because morning-after coffee is essential.
+                      Keurig with pods provided—because the day-after conversations are sometimes the best part.
                     </p>
                   </CardContent>
                 </Card>
@@ -179,37 +178,37 @@ const Venue = () => {
           </div>
         </section>
 
-        {/* Décor House Section */}
+        {/* Ceremony & Reception Spaces */}
         <section className="section section-muted">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <HoverImage 
-                  src={receptionTablescape}
-                  alt="Elegant wedding reception tablescape with gold accents at Rustic Retreat Alberta"
-                  description="Every detail matters—from linens to florals, we provide it all"
-                  category="Décor Collection"
+                  src={receptionGazebo}
+                  alt="Clear-top gazebo reception space glowing with string lights at night"
+                  description="The clear-top gazebo glows after dark with twinkle lights"
+                  category="Reception"
                   className="shadow-xl"
                 />
               </ScrollReveal>
 
               <ScrollReveal direction="right">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">The Décor Collection</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Ceremony Settings & Reception Glow</h2>
 
                 <p className="mb-6 text-muted-foreground">
-                  When couples leave after their celebration, many choose to leave pieces of their décor behind. Not because they forgot them—<strong>because they want to pass the magic forward.</strong>
+                  Choose the ceremony backdrop that fits your vibe—an open meadow, the poplar grove, a forest clearing, or under the gazebo. Each spot gives you a different feel while keeping everything close for guests.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  Our Décor Collection isn't a complete décor package—it's a curated selection of pieces you can choose from to complement your vision. Mix them with your own items, or use them as a starting point.
+                  Most couples host the reception in the clear-top gazebo. At night, the string lights and open ceiling create that warm, glowing atmosphere everyone remembers.
                 </p>
 
                 <div className="bg-primary/5 p-6 border-l-4 border-primary mt-6">
                   <p className="font-medium text-lg mb-2">
-                    Décor pieces are free to use. Consumables (batteries, candles, etc.) are available at cost.
+                    We’ll walk you through ceremony options during your visit and help you choose the right flow for the day.
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Browse what's available during your property tour.
+                    Want to see the gazebo lit up? Schedule an evening tour.
                   </p>
                 </div>
               </ScrollReveal>
@@ -217,72 +216,23 @@ const Venue = () => {
           </div>
         </section>
 
-        {/* What You'll Find */}
+        {/* Décor Collection Details */}
         <section className="section">
           <div className="container mx-auto px-4">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What You'll Find in the Collection</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How the Décor Collection Works</h2>
             </ScrollReveal>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <ScrollReveal delay={0}>
-                <Card className="border-2 h-full">
-                  <CardContent className="pt-6">
-                    <Package className="w-8 h-8 text-secondary mb-3" />
-                    <h3 className="font-semibold text-lg mb-3">Vintage & Rustic Pieces</h3>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Mason jars in various sizes</li>
-                      <li>• Vintage tablecloths and runners</li>
-                      <li>• Wooden crates and barrels</li>
-                      <li>• Antique frames</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
+            <div className="max-w-4xl mx-auto">
               <ScrollReveal delay={100}>
-                <Card className="border-2 h-full">
-                  <CardContent className="pt-6">
-                    <Sparkles className="w-8 h-8 text-secondary mb-3" />
-                    <h3 className="font-semibold text-lg mb-3">Ceremony & Reception</h3>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Fabric for ceremony arches</li>
-                      <li>• Aisle markers</li>
-                      <li>• Lanterns and fairy lights</li>
-                      <li>• Sign easels and boards</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
-              <ScrollReveal delay={200}>
-                <Card className="border-2 h-full">
-                  <CardContent className="pt-6">
-                    <Gift className="w-8 h-8 text-secondary mb-3" />
-                    <h3 className="font-semibold text-lg mb-3">Table Settings</h3>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Centerpiece bases and vessels</li>
-                      <li>• Candle holders</li>
-                      <li>• Table numbers</li>
-                      <li>• Place card holders</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
-              <ScrollReveal delay={300}>
-                <Card className="border-2 h-full">
-                  <CardContent className="pt-6">
-                    <Heart className="w-8 h-8 text-secondary mb-3" />
-                    <h3 className="font-semibold text-lg mb-3">Handmade Treasures</h3>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Custom signs from previous weddings</li>
-                      <li>• Hand-painted elements</li>
-                      <li>• Crafted wooden pieces</li>
-                      <li>• Unique personal touches</li>
-                    </ul>
-                  </CardContent>
-                </Card>
+                <div className="bg-card border-2 rounded-2xl p-8 shadow-soft">
+                  <p className="text-lg mb-4">
+                    The collection is always evolving as couples leave pieces behind and we add new finds. It’s a flexible mix of ceremony accents, table styling pieces, and rustic details that you can blend with your own décor.
+                  </p>
+                  <p className="text-muted-foreground">
+                    We’ll walk you through what’s available during your visit and help you picture what fits your vision. If you want a current snapshot ahead of time, just ask and we’ll send the latest overview.
+                  </p>
+                </div>
               </ScrollReveal>
             </div>
           </div>
@@ -333,7 +283,7 @@ const Venue = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <ScrollReveal>
-                <p className="text-sm uppercase tracking-widest text-secondary mb-4">YOUR WEEKEND, YOUR RULES</p>
+                <p className="text-sm uppercase tracking-widest text-secondary mb-4">YOUR WEEKEND, YOUR WAY</p>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Freedom to Create</h2>
                 <p className="text-lg text-muted-foreground mb-8">
                   When you rent the land, you're not just booking a venue—you're claiming space for whatever celebration you imagine. Rustic Retreat isn't only about the ceremony and reception. <strong>The whole weekend should show who you are.</strong>
@@ -384,22 +334,25 @@ const Venue = () => {
         <section className="section bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Come See It for Yourself</h2>
-              <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">See It In Person</h2>
+              <p className="text-lg mb-6 max-w-2xl mx-auto text-primary-foreground/90">
                 Experience the cabin, explore the décor collection, and feel the magic of this space in person.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-8 shadow-lg">
-                    Walk the Land With Us
-                  </Button>
+                  <CTAButton className="px-8">
+                    Discover Your Venue
+                  </CTAButton>
                 </Link>
                 <Link to="/packages">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8">
+                  <Button size="lg" variant="outline" className="bg-white/90 border-2 border-rosegold text-primary hover:bg-white rounded-full px-8 font-medium">
                     View Packages
                   </Button>
                 </Link>
               </div>
+              <p className="text-sm text-primary-foreground/70 mt-4">
+                Most couples hear back within 24 hours
+              </p>
             </ScrollReveal>
           </div>
         </section>

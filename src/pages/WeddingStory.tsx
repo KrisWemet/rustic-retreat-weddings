@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
+import SEO from "@/components/SEO";
 import { getStoryBySlug, weddingStories } from "@/data/wedding-stories";
 import { Calendar, Users, Camera, Heart, Quote, ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
@@ -40,6 +41,12 @@ const WeddingStory = () => {
 
   return (
     <PageTransition>
+      <SEO
+        title={`${story.coupleNames} Wedding Story`}
+        description={story.excerpt}
+        path={`/real-weddings/${story.slug}`}
+        image={story.heroImage}
+      />
       <div className="min-h-screen">
         <Navigation />
         
@@ -259,7 +266,7 @@ const WeddingStory = () => {
               </p>
               <Link to="/contact">
                 <Button size="lg" className="bg-gradient-to-r from-[hsl(15,50%,75%)] via-[hsl(15,45%,65%)] to-[hsl(15,55%,80%)] hover:from-[hsl(15,55%,80%)] hover:via-[hsl(15,50%,70%)] hover:to-[hsl(15,60%,85%)] text-primary-foreground rounded-full px-8 shadow-lg">
-                  Walk the Land With Us
+                  Discover Your Venue
                 </Button>
               </Link>
             </ScrollReveal>

@@ -26,11 +26,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rusticretreat.xyz/real-weddings</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.rusticretreat.xyz/faqs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -39,6 +34,36 @@
     <loc>https://www.rusticretreat.xyz/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rusticretreat.xyz/prerender/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.rusticretreat.xyz/prerender/venue.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.rusticretreat.xyz/prerender/packages.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.rusticretreat.xyz/prerender/gallery.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.rusticretreat.xyz/prerender/faqs.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.rusticretreat.xyz/prerender/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.rusticretreat.xyz/llm.html</loc>
