@@ -93,6 +93,43 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Testimonial Bar - Immediate Social Proof */}
+        <section className="section-cream py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <ScrollReveal delay={0}>
+                <div className="text-center">
+                  <Quote className="w-8 h-8 text-secondary/40 mx-auto mb-4" />
+                  <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-4">
+                    "The property is stunning, featuring a romantic couples cabin, enchanting forested areas, and a breathtaking gazebo adorned with lights and ample space. The seamless flow to a gorgeous dance floor and field area, endless paths, and an inviting fire pit hangout near the couples suite made for a fun way to end a long night of dancing. Roasting hotdogs and smores, camping with family and friends added an extra layer of joy to our wedding."
+                  </blockquote>
+                  <p className="text-sm text-muted-foreground">— Tabitha, September 2025</p>
+                </div>
+              </ScrollReveal>
+              
+              <ScrollReveal delay={100}>
+                <div className="text-center">
+                  <Quote className="w-8 h-8 text-secondary/40 mx-auto mb-4" />
+                  <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-4">
+                    "Such an amazing experience from the moment we contacted Rustic Retreat to the time we checked out. The venue is absolutely beautiful and you will not be disappointed. I will absolutely recommend this amazing place to anyone and everyone looking for a small to medium romantic wedding. When you check in you are greeted by amazing hospitality."
+                  </blockquote>
+                  <p className="text-sm text-muted-foreground">— Ali, August 2025</p>
+                </div>
+              </ScrollReveal>
+              
+              <ScrollReveal delay={200}>
+                <div className="text-center">
+                  <Quote className="w-8 h-8 text-secondary/40 mx-auto mb-4" />
+                  <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-4">
+                    "My husband and I got married here two weeks ago (planned a wedding in just over a month)—let me tell ya, it was an absolute blast! Shannon and her husband went above and beyond to make sure everything went smoothly for us."
+                  </blockquote>
+                  <p className="text-sm text-muted-foreground">— Viktoria, June 2025</p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
         {/* Social Proof Bar */}
         <section className="py-6 bg-secondary/10 border-y border-secondary/20">
           <div className="container mx-auto px-4">
@@ -109,43 +146,6 @@ const Index = () => {
                 <Calendar className="w-4 h-4 text-primary" />
                 <span className="text-primary font-medium group-hover:underline">2026: Only 4 prime summer weekends left</span>
               </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonial Bar - Immediate Social Proof */}
-        <section className="section-cream py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <ScrollReveal delay={0}>
-                <div className="text-center">
-                  <Quote className="w-8 h-8 text-secondary/40 mx-auto mb-4" />
-                  <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-4">
-                    "We had time. That's what I remember most."
-                  </blockquote>
-                  <p className="text-sm text-muted-foreground">— Sarah & Mike, Summer 2024</p>
-                </div>
-              </ScrollReveal>
-              
-              <ScrollReveal delay={100}>
-                <div className="text-center">
-                  <Quote className="w-8 h-8 text-secondary/40 mx-auto mb-4" />
-                  <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-4">
-                    "Everyone still talks about our weekend. Not just the wedding."
-                  </blockquote>
-                  <p className="text-sm text-muted-foreground">— Jenna & Tyler, Fall 2023</p>
-                </div>
-              </ScrollReveal>
-              
-              <ScrollReveal delay={200}>
-                <div className="text-center">
-                  <Quote className="w-8 h-8 text-secondary/40 mx-auto mb-4" />
-                  <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-4">
-                    "It was the first time both families really got to know each other."
-                  </blockquote>
-                  <p className="text-sm text-muted-foreground">— Amanda & Chris, Summer 2024</p>
-                </div>
-              </ScrollReveal>
             </div>
           </div>
         </section>
