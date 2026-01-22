@@ -134,17 +134,9 @@ const Index = () => {
         <section className="py-6 bg-secondary/10 border-y border-secondary/20">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-sm">
-              <div className="flex items-center gap-2">
-                <Heart className="w-4 h-4 text-secondary" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Hosting dreams since 2019</strong></span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-secondary fill-secondary" />
-                <span className="text-muted-foreground"><strong className="text-foreground">5.0 rating</strong> from couples</span>
-              </div>
               <Link to="/contact" className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors cursor-pointer group">
                 <Calendar className="w-4 h-4 text-primary" />
-                <span className="text-primary font-medium group-hover:underline">2026: Only 4 prime summer weekends left</span>
+                <span className="text-primary font-medium group-hover:underline">2026: Only a few select weekends left</span>
               </Link>
             </div>
           </div>
