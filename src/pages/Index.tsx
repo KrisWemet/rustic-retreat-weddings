@@ -67,13 +67,15 @@ const Index = () => {
           <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
             <div className="bg-primary/20 backdrop-blur-sm rounded-3xl py-10 md:py-14 px-6 md:px-12 max-w-4xl mx-auto">
               <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/90 opacity-0 animate-hero-fade-in [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
-                65 Private Acres · Just North of Edmonton
+                65 Private Acres · Just 50 minutes north of Edmonton
               </p>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.6),_0_4px_24px_rgba(0,0,0,0.4)]">
-                Your People. Your Vision.<br className="hidden md:block" /> <span className="italic">Your Legendary Weekend.</span>
+                <span className="block">Your People.</span>
+                <span className="block">Your Vision.</span>
+                <span className="block italic">Your Legendary Weekend.</span>
               </h1>
               <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/95 leading-relaxed [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
-                Not a venue you rent for hours. 65 private acres for the weekend your guests will never stop talking about.
+                You’re not booking hours—you’re claiming a weekend. 65 private acres and a wedding your guests will never forget.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
@@ -416,7 +418,15 @@ const Index = () => {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
               <ScrollReveal delay={0}>
-                <Card className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full">
+                <Card
+                  className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  tabIndex={0}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                    <p className="text-sm text-muted-foreground">
+                      Full property access, ceremony + reception spaces, cabin suite, décor collection, and essentials for a simple weekday celebration.
+                    </p>
+                  </div>
                   <CardContent className="p-6 text-center">
                     <h3 className="text-xl font-serif font-semibold mb-1">2-Day</h3>
                     <p className="text-xs text-muted-foreground mb-4">Weekdays</p>
@@ -427,7 +437,15 @@ const Index = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={100}>
-                <Card className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full">
+                <Card
+                  className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  tabIndex={0}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                    <p className="text-sm text-muted-foreground">
+                      Weekend access Fri–Sun with ceremony + reception areas, cabin stay, décor collection, and room for camping guests.
+                    </p>
+                  </div>
                   <CardContent className="p-6 text-center">
                     <h3 className="text-xl font-serif font-semibold mb-1">3-Day</h3>
                     <p className="text-xs text-muted-foreground mb-4">Fri–Sun</p>
@@ -438,9 +456,17 @@ const Index = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={200}>
-                <Card className="bg-card border-2 border-secondary relative shadow-medium h-full">
+                <Card
+                  className="bg-card border-2 border-secondary relative shadow-medium h-full group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  tabIndex={0}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                    <p className="text-sm text-muted-foreground">
+                      Extended midweek-to-weekend access with full property amenities, cabin + camping, décor collection, and space for multiple events.
+                    </p>
+                  </div>
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground text-xs px-3 py-1 rounded-full">
-                    Our Recommendation
+                    Most Desired Package
                   </div>
                   <CardContent className="p-6 text-center">
                     <h3 className="text-xl font-serif font-semibold mb-1">5-Day</h3>
@@ -452,7 +478,15 @@ const Index = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={300}>
-                <Card className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full">
+                <Card
+                  className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  tabIndex={0}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                    <p className="text-sm text-muted-foreground">
+                      Full 10-day retreat with complete property access, cabin + camping, décor collection, and flexibility for multiple gatherings.
+                    </p>
+                  </div>
                   <CardContent className="p-6 text-center">
                     <h3 className="text-xl font-serif font-semibold mb-1">10-Day</h3>
                     <p className="text-xs text-muted-foreground mb-4">Full experience</p>
