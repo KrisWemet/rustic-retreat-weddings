@@ -8,6 +8,13 @@ import ScrollReveal from "@/components/ScrollReveal";
 import PageTransition from "@/components/PageTransition";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
 
 // Hero & Property Images
 import heroCeremony from "@/assets/hero-ceremony-space.avif";
@@ -93,40 +100,67 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Testimonial Bar - Immediate Social Proof */}
-        <section className="section-cream py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <ScrollReveal delay={0}>
-                <div className="text-center">
-                  <Quote className="w-8 h-8 text-secondary/40 mx-auto mb-4" />
-                  <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-4">
-                    "The property is stunning, featuring a romantic couples cabin, enchanting forested areas, and a breathtaking gazebo adorned with lights and ample space. The seamless flow to a gorgeous dance floor and field area, endless paths, and an inviting fire pit hangout near the couples suite made for a fun way to end a long night of dancing. Roasting hotdogs and smores, camping with family and friends added an extra layer of joy to our wedding."
-                  </blockquote>
-                  <p className="text-sm text-muted-foreground">— Tabitha, September 2025</p>
-                </div>
-              </ScrollReveal>
-              
-              <ScrollReveal delay={100}>
-                <div className="text-center">
-                  <Quote className="w-8 h-8 text-secondary/40 mx-auto mb-4" />
-                  <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-4">
-                    "Such an amazing experience from the moment we contacted Rustic Retreat to the time we checked out. The venue is absolutely beautiful and you will not be disappointed. I will absolutely recommend this amazing place to anyone and everyone looking for a small to medium romantic wedding. When you check in you are greeted by amazing hospitality."
-                  </blockquote>
-                  <p className="text-sm text-muted-foreground">— Ali, August 2025</p>
-                </div>
-              </ScrollReveal>
-              
-              <ScrollReveal delay={200}>
-                <div className="text-center">
-                  <Quote className="w-8 h-8 text-secondary/40 mx-auto mb-4" />
-                  <blockquote className="text-lg font-serif italic text-primary leading-relaxed mb-4">
-                    "My husband and I got married here two weeks ago (planned a wedding in just over a month)—let me tell ya, it was an absolute blast! Shannon and her husband went above and beyond to make sure everything went smoothly for us."
-                  </blockquote>
-                  <p className="text-sm text-muted-foreground">— Viktoria, June 2025</p>
-                </div>
-              </ScrollReveal>
-            </div>
+        {/* Testimonial Carousel - Immediate Social Proof */}
+        <section className="section-cream py-16 relative overflow-hidden">
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-secondary/15 blur-3xl" />
+            <div className="absolute -bottom-28 -right-16 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-secondary/20 to-transparent" />
+          </div>
+          <div className="container mx-auto px-4 relative">
+            <ScrollReveal>
+              <div className="text-center mb-8 md:mb-10">
+                <p className="section-label">REAL WORDS, REAL WEEKENDS</p>
+                <h2 className="text-3xl md:text-4xl font-serif text-primary">
+                  What couples had to say about Rustic Retreat
+                </h2>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal>
+              <Carousel opts={{
+              align: "center",
+              loop: true
+            }} className="max-w-4xl mx-auto">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft">
+                      <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
+                      <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
+                        "The property is stunning, featuring a romantic couples cabin, enchanting forested areas, and a breathtaking gazebo adorned with lights and ample space. The seamless flow to a gorgeous dance floor and field area, endless paths, and an inviting fire pit hangout near the couples suite made for a fun way to end a long night of dancing. Roasting hotdogs and smores, camping with family and friends added an extra layer of joy to our wedding."
+                      </blockquote>
+                      <p className="text-sm text-muted-foreground">— Tabitha, September 2025</p>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft">
+                      <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
+                      <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
+                        "Such an amazing experience from the moment we contacted Rustic Retreat to the time we checked out. The venue is absolutely beautiful and you will not be disappointed. I will absolutely recommend this amazing place to anyone and everyone looking for a small to medium romantic wedding. When you check in you are greeted by amazing hospitality."
+                      </blockquote>
+                      <p className="text-sm text-muted-foreground">— Ali, August 2025</p>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft">
+                      <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
+                      <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
+                        "My husband and I got married here two weeks ago (planned a wedding in just over a month)—let me tell ya, it was an absolute blast! Shannon and her husband went above and beyond to make sure everything went smoothly for us."
+                      </blockquote>
+                      <p className="text-sm text-muted-foreground">— Viktoria, June 2025</p>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex -left-12 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
+                <CarouselNext className="hidden md:flex -right-12 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
+              </Carousel>
+              <div className="flex justify-center gap-3 mt-6 text-xs text-muted-foreground">
+                <span className="inline-flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-secondary/60" />
+                  Swipe or use arrows to read more
+                </span>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -147,9 +181,9 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="max-w-4xl mx-auto text-center">
-                <p className="section-label">THE QUESTION CHANGES</p>
+                <p className="section-label">THIS QUESTION CHANGES EVERYTHING</p>
                 <h2 className="text-3xl md:text-5xl font-serif mb-8 leading-tight">
-                  While traditional venues say<br /><span className="italic text-muted-foreground">"this is how your wedding will be,"</span><br />we ask <span className="italic text-secondary">"what do you want to create?"</span>
+                  While traditional venues say<br /><span className="italic text-muted-foreground">"this is what you're allowed to do, and the schedule you'll follow,"</span><br />we ask <span className="italic text-secondary">"what do you want to create?"</span>
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                   No rigid timelines. No cookie-cutter packages. Just you, your people, and five days to celebrate your way.
@@ -186,7 +220,7 @@ const Index = () => {
             
             <div ref={videoSectionRef} className="max-w-4xl mx-auto">
               <div className="relative overflow-hidden shadow-xl group">
-                <video ref={videoRef} muted={isMuted} loop playsInline className="w-full h-auto" src="/videos/venue-tour.mp4" poster={receptionGazebo} />
+                <video ref={videoRef} muted={isMuted} loop playsInline className="w-full h-auto" src="/videos/venue-tour.mp4" />
                 <button onClick={() => setIsMuted(!isMuted)} className="absolute bottom-4 right-4 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110" aria-label={isMuted ? "Unmute video" : "Mute video"}>
                   {isMuted ? <VolumeX className="w-5 h-5 text-primary" /> : <Volume2 className="w-5 h-5 text-primary" />}
                 </button>
