@@ -165,12 +165,15 @@ const Index = () => {
         </section>
 
         {/* Social Proof Bar */}
-        <section className="py-6 bg-secondary/10 border-y border-secondary/20">
+        <section className="py-8 bg-secondary/10 border-y border-secondary/20">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-sm">
-              <Link to="/contact" className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors cursor-pointer group">
-                <Calendar className="w-4 h-4 text-primary" />
-                <span className="text-primary font-medium group-hover:underline">2026: Only a few select weekends left</span>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-10 text-base">
+              <Link to="/contact" className="flex w-full max-w-xl items-center justify-center gap-3 bg-primary/10 hover:bg-primary/20 px-5 py-3 rounded-full transition-colors cursor-pointer group text-center">
+                <Calendar className="w-5 h-5 text-primary" />
+                <span className="text-primary font-medium group-hover:underline">
+                  2026: Only a few select weekends left
+                  <span className="block">Now booking for 2027, 2028</span>
+                </span>
               </Link>
             </div>
           </div>
