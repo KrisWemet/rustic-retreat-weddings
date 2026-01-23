@@ -82,7 +82,7 @@ const Index = () => {
                 <span className="block italic">Your Legendary Weekend.</span>
               </h1>
               <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/95 leading-relaxed [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
-                You’re not booking hours—you’re claiming a weekend. 65 private acres and a wedding your guests will never forget.
+                You’re not booking for hours or a single day—you’re claiming a weekend. 65 private acres and a wedding your guests will never forget.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
