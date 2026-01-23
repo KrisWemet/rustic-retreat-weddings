@@ -113,7 +113,7 @@ const Index = () => {
               <div className="text-center mb-8 md:mb-10">
                 <p className="section-label">REAL WORDS, REAL WEEKENDS</p>
                 <h2 className="text-3xl md:text-4xl font-serif text-primary">
-                  What couples had to say about Rustic Retreat
+                  What brides had to say about Rustic Retreat
                 </h2>
               </div>
             </ScrollReveal>
