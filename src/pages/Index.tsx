@@ -172,7 +172,7 @@ const Index = () => {
                 <Calendar className="w-5 h-5 text-primary" />
                 <span className="text-primary font-medium group-hover:underline">
                   2026: Only a few select weekends left
-                  <span className="block">Now booking for 2027, 2028</span>
+                  <span className="block">Booking now open for 2027 & 2028</span>
                 </span>
               </Link>
             </div>
