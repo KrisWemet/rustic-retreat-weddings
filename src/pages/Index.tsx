@@ -64,39 +64,36 @@ const Index = () => {
       <div className="min-h-screen bg-background">
         <Navigation />
         
-        {/* Hero Section - Transformation Focus */}
-        <section className="relative min-h-screen flex items-end justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-cover" style={{
-          backgroundImage: `url(${heroSunsetMeadow})`,
-          backgroundPosition: "35% 35%"
-        }}>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-transparent" />
-          </div>
-          
-          <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pb-16 md:pb-24 pt-24">
-            <div className="bg-black/30 rounded-3xl py-10 md:py-12 px-6 md:px-12 max-w-4xl mx-auto shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
-              <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/90 opacity-0 animate-hero-fade-in [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
-                65 Private Acres · Just 50 minutes north of Edmonton
-              </p>
-              <h1 className="font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.6),_0_4px_24px_rgba(0,0,0,0.4)]">
-                <span className="block text-3xl md:text-4xl lg:text-5xl">Your People.</span>
-                <span className="block text-3xl md:text-4xl lg:text-5xl">Your Vision.</span>
-                <span className="block text-4xl md:text-6xl lg:text-7xl font-semibold italic text-secondary">Your Legendary Weekend.</span>
-              </h1>
-              <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/95 leading-relaxed [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
-                You’re not booking for hours or a single day—you’re claiming a weekend. 65 private acres and a wedding your guests will never forget.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
-                  <CTAButton className="text-lg px-10 py-6">
+        {/* Hero Section - Locked Composition */}
+        <section className="relative w-full min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px]">
+          <img
+            src={heroSunsetMeadow}
+            alt="Couple in the woodland at Rustic Retreat"
+            className="absolute inset-0 h-full w-full object-cover object-[50%_40%]"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_40%,rgba(0,0,0,0.75)_85%,rgba(0,0,0,0.9)_100%)]" />
+          <div className="absolute inset-0 z-10 flex items-end justify-center pb-8 md:pb-12 lg:pb-16">
+            <div className="mx-auto w-full max-w-6xl px-4 md:px-8 text-center text-white">
+              <div className="mx-auto max-w-2xl rounded-2xl md:rounded-3xl bg-black/35 px-6 py-6 md:px-10 md:py-7 lg:px-12 lg:py-8">
+                <p className="text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-white/85">
+                  65 Private Acres · Just 50 minutes north of Edmonton
+                </p>
+                <h1 className="mt-3 md:mt-4 lg:mt-5 font-serif font-normal leading-[1.05] [text-wrap:balance] [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
+                  <span className="block text-white text-3xl md:text-5xl lg:text-6xl">Your People.</span>
+                  <span className="block text-white text-3xl md:text-5xl lg:text-6xl">Your Vision.</span>
+                  <span className="block text-[#D8A799] italic text-4xl md:text-6xl lg:text-7xl">Your Legendary Weekend.</span>
+                </h1>
+                <p className="mx-auto mt-3 md:mt-4 lg:mt-5 max-w-3xl text-sm md:text-base lg:text-lg text-white/95">
+                  You're not booking for hours or a single day—you're claiming a weekend. 65 private acres and a wedding your guests will never forget.
+                </p>
+                <div className="mt-5 md:mt-6 lg:mt-7 flex flex-col items-center gap-3 md:gap-4 sm:flex-row sm:justify-center">
+                  <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center bg-[#D8A799] text-white px-8 md:px-10 lg:px-12 py-3 md:py-4 rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-[#cfa08f] transition-colors">
                     Schedule a Visit
-                  </CTAButton>
-                </Link>
-                <Link to="/packages" className="opacity-0 animate-hero-fade-in-delayed">
-                  <CTAButton variant="outline" className="text-lg px-10 py-6">
+                  </Link>
+                  <Link to="/packages" className="w-full sm:w-auto inline-flex items-center justify-center border border-white/70 bg-white/10 text-white px-8 md:px-10 lg:px-12 py-3 md:py-4 rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-white/20 transition-colors">
                     View Packages
-                  </CTAButton>
-                </Link>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
