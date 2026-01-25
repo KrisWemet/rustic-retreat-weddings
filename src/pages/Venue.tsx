@@ -14,7 +14,7 @@ import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
 import forestPath from "@/assets/gallery/forest-path-photos.avif";
 import wineBarrelDecor from "@/assets/gallery/wine-barrel-decor.avif";
 import receptionTablescape from "@/assets/gallery/reception-tablescape-gold.avif";
-import receptionGazebo from "@/assets/reception-gazebo-evening.avif";
+import receptionGazebo from "@/assets/gallery/Images/IMG_5103.jpg";
 import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign, Waves, Compass } from "lucide-react";
 
 const Venue = () => {

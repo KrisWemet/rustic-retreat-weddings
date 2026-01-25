@@ -17,9 +17,9 @@ import {
 } from "@/components/ui/carousel";
 
 // Hero & Property Images
-import heroCeremony from "@/assets/hero-ceremony-space.avif";
+import heroSunsetMeadow from "@/assets/gallery/Images/IMG_9996.jpeg";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
-import receptionGazebo from "@/assets/reception-gazebo-evening.avif";
+import receptionGazebo from "@/assets/gallery/Images/IMG_5103.jpg";
 
 // Gallery Images for Storytelling
 import galleryCouple from "@/assets/gallery/couple-kiss-meadow.avif";
@@ -32,6 +32,7 @@ import sunsetPortraits from "@/assets/gallery/sunset-clearing-portraits.avif";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import birchAltar from "@/assets/gallery/birch-grove-altar.avif";
 import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
+import visualResetImage from "@/assets/gallery/Images/IMG_5103.jpg";
 import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -59,27 +60,28 @@ const Index = () => {
     }
   }, [isVideoVisible]);
   return <PageTransition>
-      <SEO image={heroCeremony} />
+      <SEO image={heroSunsetMeadow} />
       <div className="min-h-screen bg-background">
         <Navigation />
         
         {/* Hero Section - Transformation Focus */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url(${heroCeremony})`
+        <section className="relative min-h-screen flex items-end justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-cover" style={{
+          backgroundImage: `url(${heroSunsetMeadow})`,
+          backgroundPosition: "35% 35%"
         }}>
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/55 via-primary/45 to-primary/65" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-transparent" />
           </div>
           
-          <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
-            <div className="bg-primary/20 backdrop-blur-sm rounded-3xl py-10 md:py-14 px-6 md:px-12 max-w-4xl mx-auto">
+          <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pb-16 md:pb-24 pt-24">
+            <div className="bg-black/30 rounded-3xl py-10 md:py-12 px-6 md:px-12 max-w-4xl mx-auto shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
               <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-6 text-primary-foreground/90 opacity-0 animate-hero-fade-in [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
                 65 Private Acres · Just 50 minutes north of Edmonton
               </p>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.6),_0_4px_24px_rgba(0,0,0,0.4)]">
-                <span className="block">Your People.</span>
-                <span className="block">Your Vision.</span>
-                <span className="block italic">Your Legendary Weekend.</span>
+              <h1 className="font-serif font-normal mb-8 opacity-0 animate-hero-fade-in text-balance leading-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.6),_0_4px_24px_rgba(0,0,0,0.4)]">
+                <span className="block text-3xl md:text-4xl lg:text-5xl">Your People.</span>
+                <span className="block text-3xl md:text-4xl lg:text-5xl">Your Vision.</span>
+                <span className="block text-4xl md:text-6xl lg:text-7xl font-semibold italic text-secondary">Your Legendary Weekend.</span>
               </h1>
               <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-0 animate-hero-fade-in text-primary-foreground/95 leading-relaxed [text-shadow:_0_2px_12px_rgba(0,0,0,0.6)]">
                 You’re not booking for hours or a single day—you’re claiming a weekend. 65 private acres and a wedding your guests will never forget.
@@ -87,7 +89,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact" className="opacity-0 animate-hero-fade-in-delayed">
                   <CTAButton className="text-lg px-10 py-6">
-                    Discover Your Venue
+                    Schedule a Visit
                   </CTAButton>
                 </Link>
                 <Link to="/packages" className="opacity-0 animate-hero-fade-in-delayed">
@@ -258,22 +260,22 @@ const Index = () => {
               <div className="grid md:grid-cols-2 gap-4 mb-10">
                 <ScrollReveal delay={0}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Want families to actually get to know each other—not just wave across a reception hall</p>
+                    <p className="font-medium">See 65 acres as a blank canvas, whether that means a refined meadow ceremony or an inflatable obstacle course in the sun.</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={100}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Want to actually enjoy your wedding—not watch it fly by in four hours</p>
+                    <p className="font-medium">Find their peace in the poplars, preferring rustling leaves and open spaces to the confines of a traditional banquet hall.</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Light up around campfires, forest paths, and open skies</p>
+                    <p className="font-medium">Want the freedom to be themselves, creating a DIY celebration that reflects their unique story from the first tent peg to the last dance.</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={300}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Believe the best memories happen when no one's watching the clock</p>
+                    <p className="font-medium">Value connection over tradition, where "wedding guest" turns into "camping neighbor" by the end of the first night.</p>
                   </div>
                 </ScrollReveal>
               </div>
@@ -285,6 +287,29 @@ const Index = () => {
                       Walk the Land With Us
                     </CTAButton>
                   </Link>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Visual Reset - Full Width Moment */}
+        <section className="relative overflow-hidden">
+          <div className="relative">
+            <img src={visualResetImage} alt="Couple in an open field at Rustic Retreat" className="w-full h-auto block" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-transparent" />
+          </div>
+          <div className="absolute inset-0 z-10">
+            <div className="container mx-auto px-4 py-16 md:py-24 h-full flex items-start">
+              <ScrollReveal>
+                <div className="max-w-2xl text-primary-foreground bg-gradient-to-b from-black/70 via-black/50 to-black/10 rounded-2xl px-6 py-6 md:px-8 md:py-8">
+                  <p className="text-sm uppercase tracking-[0.3em] text-primary-foreground/80 mb-4">
+                    A weekend that feels like yours
+                  </p>
+                  <blockquote className="text-2xl md:text-3xl font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
+                    “We didn’t want a venue. We wanted a place where everyone could stay, wander, and breathe.”
+                  </blockquote>
+                  <p className="mt-4 text-sm text-primary-foreground/80">— Rustic Retreat couple</p>
                 </div>
               </ScrollReveal>
             </div>
@@ -430,14 +455,19 @@ const Index = () => {
         </section>
 
         {/* Pricing Preview */}
-        <section className="section section-cream">
+        <section className="section bg-secondary/10 border-y border-secondary/20">
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="text-center mb-12">
-                <p className="section-label">TRANSPARENT PRICING</p>
-                <h2 className="text-3xl md:text-4xl font-serif mb-4">Choose your timeline</h2>
+                <div className="inline-flex items-center gap-2 bg-secondary/15 text-secondary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.3em] mb-4">
+                  Transparent Pricing
+                </div>
+                <h2 className="text-3xl md:text-5xl font-serif mb-3 text-primary">
+                  Choose your timeline
+                </h2>
+                <div className="mx-auto h-1 w-16 rounded-full bg-secondary/60 mb-4" />
                 <p className="text-muted-foreground max-w-2xl mx-auto text-sm mb-2">
-                  Most couples who chose 3-day wished they had 5—they didn't want the weekend to end.
+                  Most couples who chose 3-day wished they had 5—they didn&apos;t want the weekend to end.
                 </p>
                 <p className="text-xs text-secondary font-medium">
                   Popular dates book 12-18 months in advance

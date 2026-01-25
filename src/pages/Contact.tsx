@@ -14,7 +14,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
-import receptionEvening from "@/assets/reception-gazebo-evening.avif";
+import receptionEvening from "@/assets/gallery/Images/IMG_5103.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
