@@ -13,7 +13,7 @@ import { seoGalleryMeta } from "@/data/seo-gallery";
 
 // Gallery imports
 import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
-import cakeCutting from "@/assets/gallery/cake-cutting-forest.jpg";
+import cakeCuttingForest from "@/assets/gallery/cake-cutting-forest.jpg";
 import ceremonyVows from "@/assets/gallery/ceremony-vows-gazebo.jpg";
 import ceremonySetup from "@/assets/gallery/ceremony-setup-wide.jpg";
 import licenseSigning from "@/assets/gallery/marriage-license-signing.jpg";
@@ -38,7 +38,7 @@ import veilKissMistyForest from "@/assets/gallery/veil-kiss-misty-forest.jpg";
 import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
 import headTable from "@/assets/gallery/head-table.jpg";
 import firstDanceColor from "@/assets/gallery/first-dance-color.jpg";
-import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
+import cakeCuttingPavilion from "@/assets/gallery/cake-cutting.jpg";
 import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.jpg";
 import ringsBouquet from "@/assets/gallery/rings-bouquet.jpg";
 import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.jpg";
@@ -84,7 +84,7 @@ const baseImages: GalleryImage[] = [
     category: "Reception" 
   },
   { 
-    src: cakeCutting, 
+    src: cakeCuttingForest, 
     alt: "Couple cutting wedding cake in forest setting at outdoor reception", 
     description: "Sweet celebration—cutting the cake surrounded by nature's beauty",
     category: "Reception" 
@@ -210,7 +210,7 @@ const baseImages: GalleryImage[] = [
     category: "Reception"
   },
   {
-    src: cakeCutting,
+    src: cakeCuttingPavilion,
     alt: "Cake cutting and first bite moment at rustic pavilion",
     description: "Sweet moments—cutting the cake and sharing the first bite",
     category: "Reception"

@@ -52,10 +52,12 @@ const WeddingStory = () => {
         
         {/* Hero Section */}
         <section className="relative min-h-[70vh] flex items-end overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${story.heroImage})` }}
-          >
+          <div className="absolute inset-0">
+            <img
+              src={story.heroImage}
+              alt={`${story.coupleNames} wedding portrait at Rustic Retreat`}
+              className="h-full w-full object-cover object-center"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent" />
           </div>
           

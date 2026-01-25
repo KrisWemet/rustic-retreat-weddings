@@ -614,7 +614,7 @@ const Index = () => {
               <ScrollReveal direction="right">
                 <div className="grid grid-cols-2 gap-3">
                   <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft" />
-                  <img src={receptionGazebo} alt="Evening reception in the gazebo with string lights" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft" />
+                  <img src={receptionGazebo} alt="Couple and friends in an open field at Rustic Retreat" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft" />
                   <img src={pavilionReception} alt="Rustic pavilion reception with guests cheering" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2" />
                 </div>
               </ScrollReveal>
@@ -644,9 +644,12 @@ const Index = () => {
 
         {/* Final CTA */}
         <section className="relative py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url(${weddingPartyCheer})`
-        }}>
+          <div className="absolute inset-0">
+            <img
+              src={weddingPartyCheer}
+              alt="Wedding party cheering outdoors at Rustic Retreat"
+              className="h-full w-full object-cover object-center"
+            />
             <div className="absolute inset-0 bg-primary/85" />
           </div>
           

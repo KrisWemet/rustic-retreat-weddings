@@ -9,6 +9,9 @@ import SEO from "@/components/SEO";
 import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
 import receptionTable from "@/assets/gallery/reception-table-3.jpg";
 import ceremonySetupWide from "@/assets/gallery/ceremony-setup-wide.jpg";
+import groomsmenToast from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groomsmen-cheers-toast-low-angle-wedding-day-13.jpg";
+import loveMarquee from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-love-marquee-letters-ceremony-arch-42.jpg";
+import brideDancing from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-bride-dancing-at-rustic-pavilion-reception-20.jpg";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import cardBoxWineBarrel from "@/assets/gallery/card-box-wine-barrel.jpg";
 import guestFavorBox from "@/assets/gallery/guest-favor-box.jpg";
@@ -75,10 +78,12 @@ const Packages = () => {
       
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden mt-20">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${loveMarqueeArch})` }}
-        >
+        <div className="absolute inset-0">
+          <img
+            src={loveMarqueeArch}
+            alt="LOVE marquee letters with a ceremony arch in a forest clearing at Rustic Retreat"
+            className="h-full w-full object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary/70" />
         </div>
         
@@ -120,6 +125,27 @@ const Packages = () => {
                 src={weddingParty}
                 alt="Wedding party celebrating at Rustic Retreat"
                 className="rounded-lg shadow-lg w-full h-[300px] object-cover"
+              />
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-4 mb-10">
+              <img
+                src={groomsmenToast}
+                alt="Groomsmen cheering with drinks on a forest trail at Rustic Retreat"
+                className="rounded-lg shadow-lg w-full h-[240px] object-cover"
+                loading="lazy"
+              />
+              <img
+                src={loveMarquee}
+                alt="LOVE marquee letters with ceremony backdrop in a forest clearing"
+                className="rounded-lg shadow-lg w-full h-[240px] object-cover"
+                loading="lazy"
+              />
+              <img
+                src={brideDancing}
+                alt="Bride dancing at the rustic pavilion reception at Rustic Retreat"
+                className="rounded-lg shadow-lg w-full h-[240px] object-cover"
+                loading="lazy"
               />
             </div>
           </div>

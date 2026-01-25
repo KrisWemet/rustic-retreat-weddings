@@ -246,4 +246,28 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
     description: "Evening glow under the pavilion as guests gather and celebrate.",
     category: "Reception"
   },
+  {
+    file: "IMG_5069.jpg",
+    alt: "Couple embracing in a forest clearing at Rustic Retreat",
+    description: "A quiet, romantic moment in the woods on the wedding day.",
+    category: "Romance"
+  },
+  {
+    file: "IMG_6345.jpg",
+    alt: "Sweetheart table with sunflower florals under the rustic pavilion",
+    description: "Sunflower‑themed sweetheart table décor set beneath the wood pavilion.",
+    category: "Details"
+  },
+  {
+    file: "IMG_6758.jpg",
+    alt: "Black and white ceremony at the rustic pavilion at Rustic Retreat",
+    description: "A timeless ceremony moment framed by the pavilion structure.",
+    category: "Ceremony"
+  },
+  {
+    file: "IMG_6863.jpg",
+    alt: "Couple walking along a gravel path beside a personalized sign",
+    description: "A candid stroll down the lane with a custom wedding sign in view.",
+    category: "Portraits"
+  },
 ];

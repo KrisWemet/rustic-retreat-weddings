@@ -10,11 +10,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
-import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
-import veilKissRomantic from "@/assets/gallery/veil-kiss-romantic.jpg";
+import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-family-portrait-bride-groom-parents-fall-woods-11.jpg";
+import coupleKissingTrail from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-forest-trail-41.jpg";
 import cakeCuttingForest from "@/assets/gallery/cake-cutting-forest.jpg";
 import receptionTable4 from "@/assets/gallery/reception-table-4.jpg";
-import firstDanceCloseup from "@/assets/gallery/first-dance-closeup.jpg";
+import brideGroomTwirl from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-bride-and-groom-twirl-first-dance-34.jpg";
 import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign, Waves, Compass } from "lucide-react";
 
 const Venue = () => {
@@ -148,17 +148,17 @@ const Venue = () => {
               <ScrollReveal direction="left">
                 <div className="grid grid-cols-2 gap-4">
                   <HoverImage 
-                    src={bridalPortrait}
-                    alt="Bride portrait on rustic cabin porch at Rustic Retreat Weddings Alberta venue with natural forest background"
-                    description="Morning of magic—a quiet moment on the cabin porch"
-                    category="Getting Ready"
+                    src={familyPortrait}
+                    alt="Bride and groom with family in golden fall foliage at Rustic Retreat"
+                    description="Family portraits in the autumn woods"
+                    category="Family"
                     className="shadow-xl"
                   />
                   <HoverImage 
-                    src={veilKissRomantic}
-                    alt="Forest trail photo spot for wedding portraits at Rustic Retreat with couple walking wooded path"
-                    description="Countless photo opportunities—the forest paths offer endless backdrops"
-                    category="Photo Spots"
+                    src={coupleKissingTrail}
+                    alt="Couple kissing on a forest trail at Rustic Retreat"
+                    description="Private forest trails for romantic portraits"
+                    category="Portraits"
                     className="shadow-xl"
                   />
                 </div>
@@ -185,9 +185,9 @@ const Venue = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <HoverImage 
-                  src={firstDanceCloseup}
-                  alt="Clear-top gazebo reception space glowing with string lights at night"
-                  description="The clear-top gazebo glows after dark with twinkle lights"
+                  src={brideGroomTwirl}
+                  alt="Bride and groom twirling during their first dance on the forest dance floor"
+                  description="A joyful first dance under the trees"
                   category="Reception"
                   className="shadow-xl"
                 />

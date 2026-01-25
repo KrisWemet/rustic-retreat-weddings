@@ -10,9 +10,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
-import marriageLicenseSigning from "@/assets/gallery/marriage-license-signing.jpg";
+import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-family-portrait-bride-groom-parents-fall-woods-11.jpg";
 import campfireNight from "@/assets/campfire-evening-setting.avif";
-import groomSunflowerBouquet from "@/assets/gallery/Images/groom-sunflower-bouquet.jpg";
+import twoBridesDancing from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-two-brides-dancing-under-circle-arch-forest-10.jpg";
+import groomsmenCheers from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groomsmen-cheers-with-whiskey-and-cans-woods-17.jpg";
+import coupleForestKiss from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-forest-trail-41.jpg";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
 import { Heart, MapPin, Users, Sparkles, Home, TreePine, Sun, CheckCircle } from "lucide-react";
 
@@ -81,10 +83,10 @@ const About = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <HoverImage
-                  src={marriageLicenseSigning}
-                  alt="Aerial drone view of Rustic Retreat Weddings 65-acre property showing forest ceremony areas and open meadow spaces near Edmonton"
-                  description="65 acres of possibility—your entire weekend awaits"
-                  category="The Property"
+                  src={familyPortrait}
+                  alt="Bride and groom with family in golden fall foliage at Rustic Retreat"
+                  description="Families come together—real moments in the autumn woods"
+                  category="Family"
                   className="shadow-xl"
                 />
               </ScrollReveal>
@@ -181,10 +183,10 @@ const About = () => {
 
               <ScrollReveal direction="right">
                 <HoverImage
-                  src={groomSunflowerBouquet}
-                  alt="Birch grove wedding altar surrounded by white birch trees near Edmonton"
-                  description="Nature creates the most beautiful cathedral"
-                  category="Ceremony Space"
+                  src={twoBridesDancing}
+                  alt="Two brides dancing under a circle arch in a forest clearing"
+                  description="Joyful, unposed moments in the woods"
+                  category="Celebration"
                   className="shadow-xl"
                 />
               </ScrollReveal>
@@ -210,6 +212,23 @@ const About = () => {
                 <p className="text-lg text-center mb-12 max-w-3xl mx-auto">
                   When you book Rustic Retreat, you get the blank canvas—65 acres, exclusive access, freedom to create exactly what you envision. We're around during your weekend in case you need anything from the venue itself, but we're not hovering. <strong>We trust you to bring your vision to life.</strong>
                 </p>
+              </ScrollReveal>
+
+              <ScrollReveal delay={150}>
+                <div className="grid md:grid-cols-2 gap-4 mb-12">
+                  <img
+                    src={groomsmenCheers}
+                    alt="Groomsmen celebrating with drinks on a forest path at Rustic Retreat"
+                    className="w-full h-56 md:h-64 object-cover rounded-xl shadow-soft"
+                    loading="lazy"
+                  />
+                  <img
+                    src={coupleForestKiss}
+                    alt="Couple kissing on the forest trail at Rustic Retreat"
+                    className="w-full h-56 md:h-64 object-cover rounded-xl shadow-soft"
+                    loading="lazy"
+                  />
+                </div>
               </ScrollReveal>
 
               <div className="grid md:grid-cols-2 gap-8 mb-12">
