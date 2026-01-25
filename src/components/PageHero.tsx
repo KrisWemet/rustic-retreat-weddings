@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 
 interface PageHeroProps {
   backgroundImage: string;
+  backgroundImageAlt?: string;
   title: string;
   subtitle?: string;
   children?: ReactNode;
@@ -10,6 +11,7 @@ interface PageHeroProps {
 
 const PageHero = ({ 
   backgroundImage, 
+  backgroundImageAlt,
   title, 
   subtitle, 
   children,
@@ -23,10 +25,12 @@ const PageHero = ({
 
   return (
     <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
+      <div className="absolute inset-0">
+        <img
+          src={backgroundImage}
+          alt={backgroundImageAlt || title}
+          className="h-full w-full object-cover"
+        />
         <div className={`absolute inset-0 bg-gradient-to-b ${overlayClasses[overlayOpacity]}`} />
       </div>
       

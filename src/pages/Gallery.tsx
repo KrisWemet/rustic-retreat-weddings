@@ -9,6 +9,7 @@ import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
+import { seoGalleryMeta } from "@/data/seo-gallery";
 
 // Gallery imports
 import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
@@ -51,7 +52,7 @@ interface GalleryImage {
   category: string;
 }
 
-const images: GalleryImage[] = [
+const baseImages: GalleryImage[] = [
   { 
     src: ceremonyVows, 
     alt: "Couple exchanging vows under rustic gazebo at Rustic Retreat Alberta", 
@@ -246,7 +247,36 @@ const images: GalleryImage[] = [
   },
 ];
 
-const categories = ["All", "Ceremony", "Reception", "Romance", "Portraits", "Details", "Bridal", "Property"];
+const seoImageMap = import.meta.glob("../assets/gallery/seo/*.{jpg,jpeg,png}", {
+  eager: true,
+  import: "default"
+}) as Record<string, string>;
+
+const seoImages: GalleryImage[] = seoGalleryMeta
+  .map((image) => ({
+    src: seoImageMap[`../assets/gallery/seo/${image.file}`],
+    alt: image.alt,
+    description: image.description,
+    category: image.category
+  }))
+  .filter((image) => image.src);
+
+const normalizeCategory = (category: string) => {
+  if (category === "Group") return "Wedding Party";
+  return category;
+};
+
+const images: GalleryImage[] = [...baseImages, ...seoImages].map((image) => ({
+  ...image,
+  category: normalizeCategory(image.category)
+}));
+
+const categoryOrder = ["Ceremony", "Reception", "Romance", "Portraits", "Wedding Party", "Bridal", "Details", "Property"];
+const categories = [
+  "All",
+  ...categoryOrder.filter((category) => images.some((img) => img.category === category)),
+  ...Array.from(new Set(images.map((img) => img.category))).filter((category) => !categoryOrder.includes(category))
+];
 
 // Count images per category
 const getCategoryCount = (category: string) => {
@@ -275,6 +305,7 @@ const Gallery = () => {
 
         <PageHero
           backgroundImage={veilKissMistyForest}
+          backgroundImageAlt="Romantic veil kiss in a misty forest at Rustic Retreat"
           title="Wedding Photo Gallery"
           subtitle="Every photo is a real couple. A real moment. A real celebration."
         />

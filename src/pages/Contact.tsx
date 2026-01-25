@@ -11,10 +11,13 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
 import receptionEvening from "@/assets/gallery/Images/IMG_5103.jpg";
+import brideWithHorse from "@/assets/gallery/bride-with-horse.jpg";
+import dressForestPavilion from "@/assets/gallery/dress-forest-pavilion.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -72,6 +75,7 @@ const Contact = () => {
         
         <PageHero
           backgroundImage={receptionEvening}
+          backgroundImageAlt="Couple and friends in an open field at Rustic Retreat"
           title="Discover Your Venue"
           subtitle="Property tours by appointment only, scheduled around existing bookings. Come feel the space and see if this is where your story wants to unfold."
         />
@@ -312,6 +316,32 @@ const Contact = () => {
                   </Card>
                 </ScrollReveal>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Visual Inspiration - Unique Wedding Moments */}
+        <section className="section bg-card">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <ScrollReveal delay={0}>
+                <HoverImage
+                  src={brideWithHorse}
+                  alt="Bride with horse at Rustic Retreat Alberta wedding venue"
+                  description="Connect with nature—your day, your way"
+                  category="Bridal"
+                  className="shadow-lg"
+                />
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
+                <HoverImage
+                  src={dressForestPavilion}
+                  alt="Wedding dress displayed at forest pavilion"
+                  description="Your dress deserves a magical backdrop"
+                  category="Details"
+                  className="shadow-lg"
+                />
+              </ScrollReveal>
             </div>
           </div>
         </section>

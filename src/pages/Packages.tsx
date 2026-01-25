@@ -7,7 +7,12 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
-import pavilionReception from "@/assets/gallery/pavilion-reception.jpg";
+import receptionTable from "@/assets/gallery/reception-table-3.jpg";
+import ceremonySetupWide from "@/assets/gallery/ceremony-setup-wide.jpg";
+import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
+import cardBoxWineBarrel from "@/assets/gallery/card-box-wine-barrel.jpg";
+import guestFavorBox from "@/assets/gallery/guest-favor-box.jpg";
+import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.jpg";
 import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Waves, Compass, Target, Bath, Film, Music, Flag } from "lucide-react";
 
 const Packages = () => {
@@ -99,16 +104,23 @@ const Packages = () => {
               You've toured venues around Edmonton and central Alberta. Watched a hundred wedding videos. Scrolled Instagram until the pretty pictures all blurred together. You've said "yes, but..." to a dozen options that were fine, gorgeous even, but not quite <em>right</em>.
             </p>
 
-            <div className="bg-primary/5 p-8 rounded-lg border-l-4 border-primary">
-              <p className="text-xl font-bold mb-3">
-                And then you found this place.
-              </p>
-              <p className="text-muted-foreground">
-                Something shifted when you saw those photos, didn't it? Read that description. Felt your heart start whispering, "Yes. This one. Here."
-              </p>
-              <p className="mt-4 font-medium">
-                That's not random. <strong>That's recognition. Your intuition already knows this is where your story wants to be told.</strong>
-              </p>
+            <div className="grid md:grid-cols-2 gap-6 items-center my-8">
+              <div className="bg-primary/5 p-8 rounded-lg border-l-4 border-primary">
+                <p className="text-xl font-bold mb-3">
+                  And then you found this place.
+                </p>
+                <p className="text-muted-foreground">
+                  Something shifted when you saw those photos, didn't it? Read that description. Felt your heart start whispering, "Yes. This one. Here."
+                </p>
+                <p className="mt-4 font-medium">
+                  That's not random. <strong>That's recognition. Your intuition already knows this is where your story wants to be told.</strong>
+                </p>
+              </div>
+              <img
+                src={weddingParty}
+                alt="Wedding party celebrating at Rustic Retreat"
+                className="rounded-lg shadow-lg w-full h-[300px] object-cover"
+              />
             </div>
           </div>
         </div>
@@ -551,6 +563,29 @@ const Packages = () => {
         </div>
       </section>
 
+      {/* Visual Break - Details */}
+      <section className="section bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <img
+              src={cardBoxWineBarrel}
+              alt="Rustic card box on wine barrel at wedding reception"
+              className="rounded-lg shadow-md w-full h-48 object-cover"
+            />
+            <img
+              src={guestFavorBox}
+              alt="Wedding guest favor boxes with rustic details"
+              className="rounded-lg shadow-md w-full h-48 object-cover"
+            />
+            <img
+              src={firstDanceSparklers}
+              alt="First dance with sparklers at evening reception"
+              className="rounded-lg shadow-md w-full h-48 object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Capacity */}
       <section className="section section-muted">
         <div className="container mx-auto px-4">
@@ -764,12 +799,20 @@ const Packages = () => {
       {/* Image Section */}
       <section className="section">
         <div className="container mx-auto px-4">
-          <img
-            src={pavilionReception}
-            alt="Evening outdoor wedding reception celebration under stars at Rustic Retreat Weddings Alberta multi-day venue near Edmonton"
-            loading="lazy"
-            className="shadow-2xl max-w-5xl mx-auto"
-          />
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <img
+              src={ceremonySetupWide}
+              alt="Forest ceremony setup with decorated arch at Rustic Retreat Weddings"
+              loading="lazy"
+              className="shadow-xl w-full h-full object-cover"
+            />
+            <img
+              src={receptionTable}
+              alt="Evening outdoor wedding reception celebration at Rustic Retreat"
+              loading="lazy"
+              className="shadow-xl w-full h-full object-cover"
+            />
+          </div>
         </div>
       </section>
 

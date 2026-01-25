@@ -25,7 +25,7 @@ import receptionGazebo from "@/assets/gallery/Images/IMG_5103.jpg";
 import ceremonyWideShot from "@/assets/gallery/ceremony-wide-shot.jpg";
 import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
 import pavilionReception from "@/assets/gallery/pavilion-reception.jpg";
-import veilKissMistyForest from "@/assets/gallery/veil-kiss-misty-forest.jpg";
+import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
 import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
 import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.jpg";
 import firstDanceColor from "@/assets/gallery/first-dance-color.jpg";
@@ -33,10 +33,10 @@ import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
 import headTable from "@/assets/gallery/head-table.jpg";
 import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.jpg";
 import ringsBouquet from "@/assets/gallery/rings-bouquet.jpg";
-import weddingCakeGold from "@/assets/gallery/Images/wedding-cake-gold-antler.jpg";
+import goldCakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.jpg";
 import firstDanceBW from "@/assets/gallery/Images/first-dance-string-lights.jpg";
 import sweetheartTable from "@/assets/gallery/Images/sweetheart-table-laughing.jpg";
-import visualResetImage from "@/assets/gallery/Images/IMG_5103.jpg";
+import dressGazebo from "@/assets/gallery/dress-forest-gazebo.jpg";
 import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -297,7 +297,7 @@ const Index = () => {
         {/* Visual Reset - Full Width Moment */}
         <section className="relative overflow-hidden">
           <div className="relative">
-            <img src={visualResetImage} alt="Couple in an open field at Rustic Retreat" className="w-full h-auto block" />
+            <img src={dressGazebo} alt="Wedding dress displayed under the forest gazebo at Rustic Retreat" className="w-full h-auto block" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-transparent" />
           </div>
           <div className="absolute inset-0 z-10">
@@ -429,7 +429,7 @@ const Index = () => {
             {/* Masonry-style Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
               <ScrollReveal delay={0} className="col-span-2 row-span-2">
-                <HoverImage src={veilKissMistyForest} alt="Romantic veil kiss in misty forest at Rustic Retreat Weddings near Lac La Nonne" description="Dreamy moments under the veil in the misty forest" category="Romance" className="w-full h-full shadow-soft" />
+                <HoverImage src={meadowSunsetKiss} alt="Romantic veil kiss in misty forest at Rustic Retreat Weddings near Lac La Nonne" description="Dreamy moments under the veil in the misty forest" category="Romance" className="w-full h-full shadow-soft" />
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <HoverImage src={headTable} alt="Rustic head table with candles and white florals at Alberta wedding venue" description="Elegance meets nature—candles and florals create magic" category="Reception" className="shadow-soft" aspectRatio="square" />

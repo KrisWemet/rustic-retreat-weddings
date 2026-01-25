@@ -11,10 +11,10 @@ import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
 import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
-import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
-import weddingCakeGold from "@/assets/gallery/Images/wedding-cake-gold-antler.jpg";
-import headTable from "@/assets/gallery/head-table.jpg";
-import receptionGazebo from "@/assets/gallery/Images/IMG_5103.jpg";
+import veilKissRomantic from "@/assets/gallery/veil-kiss-romantic.jpg";
+import cakeCuttingForest from "@/assets/gallery/cake-cutting-forest.jpg";
+import receptionTable4 from "@/assets/gallery/reception-table-4.jpg";
+import firstDanceCloseup from "@/assets/gallery/first-dance-closeup.jpg";
 import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign, Waves, Compass } from "lucide-react";
 
 const Venue = () => {
@@ -31,6 +31,7 @@ const Venue = () => {
         
         <PageHero
           backgroundImage={cabinExterior}
+          backgroundImageAlt="Rustic cabin exterior in the forest at Rustic Retreat"
           title="The Venue"
           subtitle="65 private acres of forest and meadow, a cozy cabin for newlyweds, and a treasure trove of décor waiting to be discovered."
           overlayOpacity="heavy"
@@ -154,7 +155,7 @@ const Venue = () => {
                     className="shadow-xl"
                   />
                   <HoverImage 
-                    src={coupleWalkingTrail}
+                    src={veilKissRomantic}
                     alt="Forest trail photo spot for wedding portraits at Rustic Retreat with couple walking wooded path"
                     description="Countless photo opportunities—the forest paths offer endless backdrops"
                     category="Photo Spots"
@@ -184,7 +185,7 @@ const Venue = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <HoverImage 
-                  src={receptionGazebo}
+                  src={firstDanceCloseup}
                   alt="Clear-top gazebo reception space glowing with string lights at night"
                   description="The clear-top gazebo glows after dark with twinkle lights"
                   category="Reception"
@@ -259,14 +260,14 @@ const Venue = () => {
               <ScrollReveal direction="right">
                 <div className="grid grid-cols-2 gap-4">
                   <HoverImage 
-                    src={weddingCakeGold}
+                    src={cakeCuttingForest}
                     alt="Rustic wine barrel wedding décor at Alberta venue"
                     description="Rustic touches everywhere—wine barrels add character"
                     category="Rustic Details"
                     className="shadow-xl"
                   />
                   <HoverImage 
-                    src={headTable}
+                    src={receptionTable4}
                     alt="Elegant gold and white wedding reception table setting"
                     description="Elegance without the rental fees—all included"
                     category="Table Settings"

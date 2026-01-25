@@ -10,9 +10,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
-import ceremonyWideShot from "@/assets/gallery/ceremony-wide-shot.jpg";
+import marriageLicenseSigning from "@/assets/gallery/marriage-license-signing.jpg";
 import campfireNight from "@/assets/campfire-evening-setting.avif";
-import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
+import groomSunflowerBouquet from "@/assets/gallery/Images/groom-sunflower-bouquet.jpg";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
 import { Heart, MapPin, Users, Sparkles, Home, TreePine, Sun, CheckCircle } from "lucide-react";
 
@@ -30,6 +30,7 @@ const About = () => {
 
         <PageHero
           backgroundImage={weddingParty}
+          backgroundImageAlt="Wedding party group photo in a forest clearing at Rustic Retreat"
           title="About Rustic Retreat"
           subtitle="Family-owned since 2006. We built this place for ourselves—now we share it with couples who want something real."
         />
@@ -80,7 +81,7 @@ const About = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <HoverImage
-                  src={ceremonyWideShot}
+                  src={marriageLicenseSigning}
                   alt="Aerial drone view of Rustic Retreat Weddings 65-acre property showing forest ceremony areas and open meadow spaces near Edmonton"
                   description="65 acres of possibility—your entire weekend awaits"
                   category="The Property"
@@ -180,7 +181,7 @@ const About = () => {
 
               <ScrollReveal direction="right">
                 <HoverImage
-                  src={loveMarqueeArch}
+                  src={groomSunflowerBouquet}
                   alt="Birch grove wedding altar surrounded by white birch trees near Edmonton"
                   description="Nature creates the most beautiful cathedral"
                   category="Ceremony Space"

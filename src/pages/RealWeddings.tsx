@@ -26,6 +26,7 @@ const RealWeddings = () => {
         
         <PageHero
           backgroundImage={heroImage}
+          backgroundImageAlt="Veil kiss in a misty forest at Rustic Retreat"
           title="Real Love Stories"
           subtitle="Couples like you had amazing experiences here. These are their stories."
         />

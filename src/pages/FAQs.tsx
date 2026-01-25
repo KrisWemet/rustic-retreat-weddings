@@ -8,8 +8,11 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
-import ceremonyWideShot from "@/assets/gallery/ceremony-wide-shot.jpg";
+import ceremonyVowsGazebo from "@/assets/gallery/ceremony-vows-gazebo.jpg";
+import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.jpg";
+import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
 
 const FAQs = () => {
   const faqs = [
@@ -99,7 +102,7 @@ const FAQs = () => {
         title="Frequently Asked Questions"
         description="Get answers about Rustic Retreat wedding packages, guest capacity, camping accommodations, vendor policies, and more. Everything you need to know before booking your property tour."
         path="/faqs"
-        image={ceremonyWideShot}
+        image={ceremonyVowsGazebo}
       />
       <Helmet>
         <script type="application/ld+json">
@@ -108,9 +111,10 @@ const FAQs = () => {
       </Helmet>
       <div className="min-h-screen">
         <Navigation />
-        
+
         <PageHero
-          backgroundImage={ceremonyWideShot}
+          backgroundImage={ceremonyVowsGazebo}
+          backgroundImageAlt="Couple exchanging vows under the rustic gazebo at Rustic Retreat"
           title="Questions? We've Got Answers"
           subtitle="Everything you need to know before walking the land with us."
         />
@@ -136,6 +140,32 @@ const FAQs = () => {
                   </ScrollReveal>
                 ))}
               </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Visual Break - Showcase the Experience */}
+        <section className="section bg-background">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <ScrollReveal delay={0}>
+                <HoverImage
+                  src={meadowSunsetKiss}
+                  alt="Romantic sunset kiss in wildflower meadow at Rustic Retreat"
+                  description="Golden hour magic in the meadow"
+                  category="Romance"
+                  className="shadow-lg"
+                />
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
+                <HoverImage
+                  src={firstDanceSparklers}
+                  alt="First dance with sparklers at Alberta wedding venue"
+                  description="Your celebration under the stars"
+                  category="Reception"
+                  className="shadow-lg"
+                />
+              </ScrollReveal>
             </div>
           </div>
         </section>
