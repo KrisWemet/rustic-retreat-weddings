@@ -8,6 +8,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 import PageTransition from "@/components/PageTransition";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
+import OrganizationSchema from "@/components/OrganizationSchema";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import ExclusivityBanner from "@/components/ExclusivityBanner";
 import {
   Carousel,
   CarouselContent,
@@ -64,7 +67,12 @@ const Index = () => {
     }
   }, [isVideoVisible]);
   return <PageTransition>
-      <SEO image={heroSunsetMeadow} />
+      <SEO
+        image={heroSunsetMeadow}
+        keywords={["edmonton wedding venue", "outdoor wedding alberta", "multi-day wedding", "camping wedding venue", "rustic wedding alberta", "private wedding property", "weekend wedding venue"]}
+      />
+      <OrganizationSchema />
+      <BreadcrumbSchema />
       <div className="min-h-screen bg-background">
         <Navigation />
         
@@ -102,6 +110,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* Exclusivity & Value Banner */}
+        <ExclusivityBanner />
 
         {/* Testimonial Carousel - Immediate Social Proof */}
         <section className="section-cream py-16 relative overflow-hidden">

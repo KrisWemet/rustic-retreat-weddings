@@ -13,6 +13,9 @@ import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import TrustBadges from "@/components/TrustBadges";
+import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
 import receptionEvening from "@/assets/gallery/Images/IMG_5103.jpg";
@@ -64,12 +67,14 @@ const Contact = () => {
 
   return (
     <PageTransition>
-      <SEO 
+      <SEO
         title="Book Your Property Tour"
         description="Schedule a property tour at Rustic Retreat. Walk the 65-acre grounds, see ceremony spaces, browse our décor collection, and discuss your wedding vision. Tours by appointment only."
         path="/contact"
         image={receptionEvening}
+        keywords={["wedding venue tour edmonton", "property visit rustic retreat", "wedding venue consultation alberta", "book wedding venue viewing", "outdoor wedding venue edmonton contact"]}
       />
+      <BreadcrumbSchema />
       <div className="min-h-screen">
         <Navigation />
         
