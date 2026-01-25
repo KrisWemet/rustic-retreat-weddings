@@ -27,17 +27,9 @@ const Packages = () => {
     itemListElement: [
       {
         "@type": "Offer",
-        name: "The Intimate Escape",
-        description: "2-day weekday elopement experience with full property access.",
-        price: "3000",
-        priceCurrency: "CAD",
-        availability: "https://schema.org/InStock",
-      },
-      {
-        "@type": "Offer",
-        name: "The Classic Weekend",
-        description: "3-day Friday-to-Sunday wedding weekend with exclusive access.",
-        price: "4500",
+        name: "The Grand Adventure",
+        description: "10-day destination-style wedding experience with maximum flexibility.",
+        price: "8500",
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
       },
@@ -51,9 +43,17 @@ const Packages = () => {
       },
       {
         "@type": "Offer",
-        name: "The Grand Adventure",
-        description: "10-day destination-style wedding experience with maximum flexibility.",
-        price: "8500",
+        name: "The Classic Weekend",
+        description: "3-day Friday-to-Sunday wedding weekend with exclusive access.",
+        price: "4500",
+        priceCurrency: "CAD",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "The Intimate Escape",
+        description: "2-day weekday elopement experience with full property access.",
+        price: "3000",
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
       },
@@ -166,102 +166,53 @@ const Packages = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-            {/* 2-Day Package */}
+            {/* 10-Day Package */}
             <Card className="border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The Intimate Escape</h3>
-                <p className="text-lg text-muted-foreground mb-6">Weekdays Only</p>
+                <div className="inline-block bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
+                  Premium
+                </div>
+                <h3 className="text-3xl font-bold mb-3">The Grand Adventure</h3>
+                <p className="text-lg text-muted-foreground mb-6">Full Experience</p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3">The Timeline:</h4>
+                  <h4 className="font-semibold mb-3">The Experience:</h4>
                   <div className="space-y-2 text-sm">
-                    <p><strong>Day 1:</strong> Arrive, settle in, rehearse if you wish. Evening bonfire under the stars.</p>
-                    <p><strong>Day 2:</strong> Your wedding day—intimate, unhurried, exactly as you dreamed.</p>
+                    <p><strong>Days 1-3:</strong> Early arrivals settle in. Setup at your own pace. Pre-wedding adventures.</p>
+                    <p><strong>Days 4-6:</strong> Wedding events unfold naturally. Ceremony, reception, after-parties.</p>
+                    <p><strong>Days 7-10:</strong> Extended celebration. Day trips. Bonding. The moments you'll remember forever.</p>
                   </div>
                 </div>
 
                 <div className="bg-muted/50 p-4 rounded-lg mb-6">
-                  <p className="font-medium mb-2">Perfect for:</p>
+                  <p className="font-medium mb-2">The ultimate retreat:</p>
                   <p className="text-sm text-muted-foreground">
-                    Couples seeking an intimate elopement experience with just your closest people. All the magic of Rustic Retreat in a focused, meaningful two-day celebration.
+                    For couples who want to transform their wedding into a true destination experience. Turn your celebration into a family reunion, a friend reunion, and a honeymoon preview all in one.
                   </p>
-                </div>
-
-                <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$3,000</p>
-                  <p className="text-sm text-muted-foreground">2026 Package Price</p>
                 </div>
 
                 <div className="space-y-2 mb-6">
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Intimate elopement experience</span>
+                    <span className="text-sm">216+ hours of celebration</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Weekday availability</span>
+                    <span className="text-sm">Ultimate destination wedding experience</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Most affordable option</span>
+                    <span className="text-sm">Time for multiple events and activities</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Full property access</span>
+                    <span className="text-sm">Maximum flexibility and no rushing</span>
                   </div>
-                </div>
-
-                <Link to="/contact">
-                  <Button variant="outline" className="w-full">Schedule Your Property Visit</Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* 3-Day Package */}
-            <Card className="border-2 hover:shadow-xl transition-shadow">
-              <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The Classic Weekend</h3>
-                <p className="text-lg text-muted-foreground mb-6">Friday through Sunday</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold mb-3">The Timeline:</h4>
-                  <div className="space-y-2 text-sm">
-                    <p><strong>Friday:</strong> Gates open. Your people arrive throughout the day. Tents up, gear settled, the weekend officially begins.</p>
-                    <p><strong>Friday afternoon/evening:</strong> Exploration, campfires, the first wave of reconnection</p>
-                    <p><strong>Saturday:</strong> Your wedding day, dawn to starlight</p>
-                    <p><strong>Sunday:</strong> Slow morning, tearful goodbyes, promises to do this again</p>
-                  </div>
-                </div>
-
-                <div className="bg-muted/50 p-4 rounded-lg mb-6">
-                  <p className="font-medium mb-2">Perfect for:</p>
-                  <p className="text-sm text-muted-foreground">
-                    Couples working with tighter schedules or budgets, or guests traveling from far away who need defined arrival/departure times. You still get that "wedding weekend" magic—exponentially more connection than a single-day event—in a contained timeframe.
-                  </p>
                 </div>
 
                 <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$4,500</p>
+                  <p className="text-3xl font-bold mb-2">$8,500</p>
                   <p className="text-sm text-muted-foreground">2026 Package Price</p>
-                </div>
-
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">60 hours together instead of 6</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Budget-friendly multi-day celebration</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Intimate outdoor wedding with accommodation</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Private venue without $10,000+ price tag</span>
-                  </div>
                 </div>
 
                 <Link to="/contact">
@@ -297,11 +248,6 @@ const Packages = () => {
                   </p>
                 </div>
 
-                <div className="bg-secondary/20 p-6 rounded-lg mb-6 border-2 border-secondary">
-                  <p className="text-3xl font-bold mb-2">$5,500</p>
-                  <p className="text-sm">2026 Package Price</p>
-                </div>
-
                 <div className="space-y-2 mb-6">
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
@@ -321,56 +267,113 @@ const Packages = () => {
                   </div>
                 </div>
 
+                <div className="bg-secondary/20 p-6 rounded-lg mb-6 border-2 border-secondary">
+                  <p className="text-3xl font-bold mb-2">$5,500</p>
+                  <p className="text-sm">2026 Package Price</p>
+                </div>
+
                 <Link to="/contact">
                   <Button className="w-full bg-secondary hover:bg-secondary/90">Schedule Your Property Visit</Button>
                 </Link>
               </CardContent>
             </Card>
 
-            {/* 10-Day Package */}
+            {/* 3-Day Package */}
             <Card className="border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The Grand Adventure</h3>
-                <p className="text-lg text-muted-foreground mb-6">Full Experience</p>
+                <h3 className="text-3xl font-bold mb-3">The Classic Weekend</h3>
+                <p className="text-lg text-muted-foreground mb-6">Friday through Sunday</p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3">The Experience:</h4>
+                  <h4 className="font-semibold mb-3">The Timeline:</h4>
                   <div className="space-y-2 text-sm">
-                    <p><strong>Days 1-3:</strong> Early arrivals settle in. Setup at your own pace. Pre-wedding adventures.</p>
-                    <p><strong>Days 4-6:</strong> Wedding events unfold naturally. Ceremony, reception, after-parties.</p>
-                    <p><strong>Days 7-10:</strong> Extended celebration. Day trips. Bonding. The moments you'll remember forever.</p>
+                    <p><strong>Friday:</strong> Gates open. Your people arrive throughout the day. Tents up, gear settled, the weekend officially begins.</p>
+                    <p><strong>Friday afternoon/evening:</strong> Exploration, campfires, the first wave of reconnection</p>
+                    <p><strong>Saturday:</strong> Your wedding day, dawn to starlight</p>
+                    <p><strong>Sunday:</strong> Slow morning, tearful goodbyes, promises to do this again</p>
                   </div>
                 </div>
 
                 <div className="bg-muted/50 p-4 rounded-lg mb-6">
-                  <p className="font-medium mb-2">The ultimate retreat:</p>
+                  <p className="font-medium mb-2">Perfect for:</p>
                   <p className="text-sm text-muted-foreground">
-                    For couples who want to transform their wedding into a true destination experience. Turn your celebration into a family reunion, a friend reunion, and a honeymoon preview all in one.
+                    Couples working with tighter schedules or budgets, or guests traveling from far away who need defined arrival/departure times. You still get that "wedding weekend" magic—exponentially more connection than a single-day event—in a contained timeframe.
                   </p>
-                </div>
-
-                <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$8,500</p>
-                  <p className="text-sm text-muted-foreground">2026 Package Price</p>
                 </div>
 
                 <div className="space-y-2 mb-6">
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">216+ hours of celebration</span>
+                    <span className="text-sm">60 hours together instead of 6</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Ultimate destination wedding experience</span>
+                    <span className="text-sm">Budget-friendly multi-day celebration</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Time for multiple events and activities</span>
+                    <span className="text-sm">Intimate outdoor wedding with accommodation</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Maximum flexibility and no rushing</span>
+                    <span className="text-sm">Private venue without $10,000+ price tag</span>
                   </div>
+                </div>
+
+                <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
+                  <p className="text-3xl font-bold mb-2">$4,500</p>
+                  <p className="text-sm text-muted-foreground">2026 Package Price</p>
+                </div>
+
+                <Link to="/contact">
+                  <Button variant="outline" className="w-full">Schedule Your Property Visit</Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* 2-Day Package */}
+            <Card className="border-2 hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <h3 className="text-3xl font-bold mb-3">The Intimate Escape</h3>
+                <p className="text-lg text-muted-foreground mb-6">Weekdays Only</p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold mb-3">The Timeline:</h4>
+                  <div className="space-y-2 text-sm">
+                    <p><strong>Day 1:</strong> Arrive, settle in, rehearse if you wish. Evening bonfire under the stars.</p>
+                    <p><strong>Day 2:</strong> Your wedding day—intimate, unhurried, exactly as you dreamed.</p>
+                  </div>
+                </div>
+
+                <div className="bg-muted/50 p-4 rounded-lg mb-6">
+                  <p className="font-medium mb-2">Perfect for:</p>
+                  <p className="text-sm text-muted-foreground">
+                    Couples seeking an intimate elopement experience with just your closest people. All the magic of Rustic Retreat in a focused, meaningful two-day celebration.
+                  </p>
+                </div>
+
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Intimate elopement experience</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Weekday availability</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Most affordable option</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">Full property access</span>
+                  </div>
+                </div>
+
+                <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
+                  <p className="text-3xl font-bold mb-2">$3,000</p>
+                  <p className="text-sm text-muted-foreground">2026 Package Price</p>
                 </div>
 
                 <Link to="/contact">
