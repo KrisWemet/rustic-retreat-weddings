@@ -9,7 +9,7 @@ import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
-import propertyLandscape from "@/assets/property-landscape-view.avif";
+import ceremonyWideShot from "@/assets/gallery/ceremony-wide-shot.jpg";
 
 const FAQs = () => {
   const faqs = [
@@ -99,7 +99,7 @@ const FAQs = () => {
         title="Frequently Asked Questions"
         description="Get answers about Rustic Retreat wedding packages, guest capacity, camping accommodations, vendor policies, and more. Everything you need to know before booking your property tour."
         path="/faqs"
-        image={propertyLandscape}
+        image={ceremonyWideShot}
       />
       <Helmet>
         <script type="application/ld+json">
@@ -110,7 +110,7 @@ const FAQs = () => {
         <Navigation />
         
         <PageHero
-          backgroundImage={propertyLandscape}
+          backgroundImage={ceremonyWideShot}
           title="Questions? We've Got Answers"
           subtitle="Everything you need to know before walking the land with us."
         />

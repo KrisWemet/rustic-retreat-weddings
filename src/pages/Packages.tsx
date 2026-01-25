@@ -6,8 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import ceremonyVows from "@/assets/ceremony-vows-outdoor.avif";
-import receptionEvening from "@/assets/reception-outdoor-celebration.avif";
+import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
+import pavilionReception from "@/assets/gallery/pavilion-reception.jpg";
 import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Waves, Compass, Target, Bath, Film, Music, Flag } from "lucide-react";
 
 const Packages = () => {
@@ -58,7 +58,7 @@ const Packages = () => {
         title="Wedding Packages & Pricing"
         description="Choose from 3-day ($4,500) or 5-day ($5,500) wedding packages at Rustic Retreat. Both include exclusive property access, cabin accommodation, décor collection, and complete creative freedom."
         path="/packages"
-        image={ceremonyVows}
+        image={loveMarqueeArch}
       />
       <Helmet>
         <script type="application/ld+json">
@@ -72,7 +72,7 @@ const Packages = () => {
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden mt-20">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${ceremonyVows})` }}
+          style={{ backgroundImage: `url(${loveMarqueeArch})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary/70" />
         </div>
@@ -765,7 +765,7 @@ const Packages = () => {
       <section className="section">
         <div className="container mx-auto px-4">
           <img
-            src={receptionEvening}
+            src={pavilionReception}
             alt="Evening outdoor wedding reception celebration under stars at Rustic Retreat Weddings Alberta multi-day venue near Edmonton"
             loading="lazy"
             className="shadow-2xl max-w-5xl mx-auto"

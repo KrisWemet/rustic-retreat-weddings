@@ -11,9 +11,9 @@ import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
 import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
-import forestPath from "@/assets/gallery/forest-path-photos.avif";
-import wineBarrelDecor from "@/assets/gallery/wine-barrel-decor.avif";
-import receptionTablescape from "@/assets/gallery/reception-tablescape-gold.avif";
+import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
+import weddingCakeGold from "@/assets/gallery/Images/wedding-cake-gold-antler.jpg";
+import headTable from "@/assets/gallery/head-table.jpg";
 import receptionGazebo from "@/assets/gallery/Images/IMG_5103.jpg";
 import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign, Waves, Compass } from "lucide-react";
 
@@ -154,7 +154,7 @@ const Venue = () => {
                     className="shadow-xl"
                   />
                   <HoverImage 
-                    src={forestPath}
+                    src={coupleWalkingTrail}
                     alt="Forest trail photo spot for wedding portraits at Rustic Retreat with couple walking wooded path"
                     description="Countless photo opportunities—the forest paths offer endless backdrops"
                     category="Photo Spots"
@@ -259,14 +259,14 @@ const Venue = () => {
               <ScrollReveal direction="right">
                 <div className="grid grid-cols-2 gap-4">
                   <HoverImage 
-                    src={wineBarrelDecor}
+                    src={weddingCakeGold}
                     alt="Rustic wine barrel wedding décor at Alberta venue"
                     description="Rustic touches everywhere—wine barrels add character"
                     category="Rustic Details"
                     className="shadow-xl"
                   />
                   <HoverImage 
-                    src={receptionTablescape}
+                    src={headTable}
                     alt="Elegant gold and white wedding reception table setting"
                     description="Elegance without the rental fees—all included"
                     category="Table Settings"

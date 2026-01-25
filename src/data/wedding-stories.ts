@@ -7,12 +7,12 @@ import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
 import veilKiss from "@/assets/gallery/veil-kiss-romantic.jpg";
 import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
-import receptionTablescape from "@/assets/gallery/reception-tablescape-gold.avif";
-import gazeboLights from "@/assets/gallery/gazebo-twinkle-lights.avif";
-import birchAltar from "@/assets/gallery/birch-grove-altar.avif";
-import coupleKissMeadow from "@/assets/gallery/couple-kiss-meadow.avif";
-import sunsetClearing from "@/assets/gallery/sunset-clearing-portraits.avif";
-import forestPath from "@/assets/gallery/forest-path-photos.avif";
+import headTable from "@/assets/gallery/head-table.jpg";
+import firstDanceColor from "@/assets/gallery/first-dance-color.jpg";
+import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
+import veilKissMistyForest from "@/assets/gallery/veil-kiss-misty-forest.jpg";
+import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
+import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
 
 /**
  * Wedding Stories Data
@@ -76,9 +76,9 @@ But it's the unplanned moments they treasure most: the 2am guitar circle around 
     season: "Fall 2023",
     headline: "Where Autumn Met Forever",
     excerpt: "Fall colors, cozy sweaters, and a ceremony in the birch grove that left guests reaching for tissues.",
-    heroImage: birchAltar,
+    heroImage: loveMarqueeArch,
     galleryImages: [
-      { src: birchAltar, alt: "Birch grove altar ceremony", caption: "Nature's cathedral" },
+      { src: loveMarqueeArch, alt: "Birch grove altar ceremony", caption: "Nature's cathedral" },
       { src: veilKiss, alt: "Intimate veil kiss moment", caption: "Stolen moments" },
       { src: bridalPortrait, alt: "Jenna on the cabin porch", caption: "Morning calm" },
     ],
@@ -119,11 +119,11 @@ Their reception extended late into the night, guests wrapped in blankets around 
     season: "Summer 2024",
     headline: "Two Families Became One",
     excerpt: "Before this weekend, Amanda's family from BC had never met Chris's family from Ontario. By Sunday, they were planning Christmas together.",
-    heroImage: coupleKissMeadow,
+    heroImage: veilKissMistyForest,
     galleryImages: [
-      { src: coupleKissMeadow, alt: "Amanda and Chris in the wildflower meadow", caption: "Our meadow moment" },
-      { src: forestPath, alt: "Walking the forest path together", caption: "Just the two of us" },
-      { src: sunsetClearing, alt: "Sunset portraits", caption: "The day we'll never forget" },
+      { src: veilKissMistyForest, alt: "Amanda and Chris in the wildflower meadow", caption: "Our meadow moment" },
+      { src: coupleWalkingTrail, alt: "Walking the forest path together", caption: "Just the two of us" },
+      { src: cakeCutting, alt: "Sunset portraits", caption: "The day we'll never forget" },
     ],
     story: `For Amanda and Chris, the biggest challenge wasn't the flowers or the food—it was that their families lived 4,000 kilometers apart and had never met.
 

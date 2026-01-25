@@ -31,18 +31,18 @@ import receptionTable4 from "@/assets/gallery/reception-table-4.jpg";
 import dressGazebo from "@/assets/gallery/dress-forest-gazebo.jpg";
 import dressPavilion from "@/assets/gallery/dress-forest-pavilion.jpg";
 import weddingRings2 from "@/assets/gallery/wedding-rings-flower-2.jpg";
-import birchGroveAltar from "@/assets/gallery/birch-grove-altar.avif";
-import bridalBouquetRoses from "@/assets/gallery/bridal-bouquet-roses.avif";
-import coupleKissMeadow from "@/assets/gallery/couple-kiss-meadow.avif";
-import forestPathPhotos from "@/assets/gallery/forest-path-photos.avif";
-import receptionTablescapeGold from "@/assets/gallery/reception-tablescape-gold.avif";
-import gazeboTwinkleLights from "@/assets/gallery/gazebo-twinkle-lights.avif";
-import sunsetClearingPortraits from "@/assets/gallery/sunset-clearing-portraits.avif";
-import weddingArchPavilion from "@/assets/gallery/wedding-arch-pavilion.avif";
-import wineBarrelDecor from "@/assets/gallery/wine-barrel-decor.avif";
-import woodlandCeremonyAisle from "@/assets/gallery/woodland-ceremony-aisle.avif";
-import ceremonyForestSetup from "@/assets/gallery/ceremony-forest-setup.avif";
-import propertyLandscapeView from "@/assets/gallery/property-landscape-view.avif";
+import ceremonyWideShot from "@/assets/gallery/ceremony-wide-shot.jpg";
+import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
+import veilKissMistyForest from "@/assets/gallery/veil-kiss-misty-forest.jpg";
+import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
+import headTable from "@/assets/gallery/head-table.jpg";
+import firstDanceColor from "@/assets/gallery/first-dance-color.jpg";
+import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
+import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.jpg";
+import ringsBouquet from "@/assets/gallery/rings-bouquet.jpg";
+import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.jpg";
+import pavilionReception from "@/assets/gallery/pavilion-reception.jpg";
+import weddingCakeGold from "@/assets/gallery/Images/wedding-cake-gold-antler.jpg";
 
 interface GalleryImage {
   src: string;
@@ -172,77 +172,77 @@ const images: GalleryImage[] = [
     description: "Forever begins here—a symbol of your commitment",
     category: "Details" 
   },
-  { 
-    src: birchGroveAltar, 
-    alt: "Natural birch grove ceremony altar at woodland wedding venue", 
-    description: "The birch grove altar—nature creates the most beautiful cathedral",
-    category: "Ceremony" 
+  {
+    src: ceremonyWideShot,
+    alt: "Wide outdoor ceremony with wedding party in forest clearing at Rustic Retreat",
+    description: "Your ceremony in the heart of the forest—surrounded by nature and loved ones",
+    category: "Ceremony"
   },
-  { 
-    src: bridalBouquetRoses, 
-    alt: "Lush bridal bouquet with roses and greenery", 
-    description: "Blooming beauty—fresh florals that complement the natural surroundings",
-    category: "Bridal" 
+  {
+    src: ringsBouquet,
+    alt: "Wedding rings nestled in white bridal bouquet closeup",
+    description: "Forever begins here—a symbol of your commitment and love",
+    category: "Details"
   },
-  { 
-    src: coupleKissMeadow, 
-    alt: "Newlyweds kissing in sun-drenched meadow at Rustic Retreat", 
-    description: "The meadow moments—soft grass, warm sun, and endless love",
-    category: "Romance" 
+  {
+    src: veilKissMistyForest,
+    alt: "Romantic veil kiss in misty forest at Rustic Retreat Weddings",
+    description: "Dreamy moments under the veil in the enchanted forest",
+    category: "Romance"
   },
-  { 
-    src: forestPathPhotos, 
-    alt: "Couple walking forest path for portraits at Edmonton area venue", 
-    description: "Countless photo opportunities—the forest paths offer endless backdrops",
-    category: "Portraits" 
+  {
+    src: coupleWalkingTrail,
+    alt: "Newlyweds walking hand in hand down forest trail",
+    description: "Just married—strolling the forest trails, just the two of you",
+    category: "Portraits"
   },
-  { 
-    src: receptionTablescapeGold, 
-    alt: "Luxury gold-accented reception tablescape with candles", 
-    description: "Elegance meets nature—gold accents shimmer in candlelight",
-    category: "Details" 
+  {
+    src: headTable,
+    alt: "Rustic head table with candles and white florals at reception",
+    description: "Elegance meets nature—candles and florals create magic",
+    category: "Reception"
   },
-  { 
-    src: gazeboTwinkleLights, 
-    alt: "Gazebo illuminated with twinkle lights for evening reception", 
-    description: "When the sun sets, the real magic begins—twinkle lights transform the gazebo",
-    category: "Reception" 
+  {
+    src: firstDanceColor,
+    alt: "Outdoor first dance under string lights at forest venue",
+    description: "Your first dance under the open sky and twinkling lights",
+    category: "Reception"
   },
-  { 
-    src: sunsetClearingPortraits, 
-    alt: "Couple portraits in sunset clearing at private Alberta property", 
-    description: "The clearing opens up for golden hour magic—a photographer's dream",
-    category: "Portraits" 
+  {
+    src: cakeCutting,
+    alt: "Cake cutting and first bite moment at rustic pavilion",
+    description: "Sweet moments—cutting the cake and sharing the first bite",
+    category: "Reception"
   },
-  { 
-    src: weddingArchPavilion, 
-    alt: "Floral wedding arch at forest pavilion ceremony space", 
-    description: "Say I do under the pavilion arch, framed by flowers and forest",
-    category: "Ceremony" 
+  {
+    src: loveMarqueeArch,
+    alt: "LOVE marquee letters with ceremony arch in forest clearing",
+    description: "Iconic LOVE sign lights up your ceremony backdrop",
+    category: "Ceremony"
   },
-  { 
-    src: wineBarrelDecor, 
-    alt: "Rustic wine barrel decor at outdoor wedding reception", 
-    description: "Rustic touches everywhere—wine barrels add character and charm",
-    category: "Details" 
+  {
+    src: weddingCakeGold,
+    alt: "Two-tier semi-naked wedding cake with florals and gold antler topper",
+    description: "Rustic elegance—your cake is a work of art",
+    category: "Details"
   },
-  { 
-    src: woodlandCeremonyAisle, 
-    alt: "Woodland ceremony aisle lined with petals at forest venue", 
-    description: "Walk this aisle surrounded by nature—no walls needed",
-    category: "Ceremony" 
+  {
+    src: weddingPartyFormal,
+    alt: "Wedding party formal portrait with lavender bridesmaids in forest",
+    description: "Your favorite people, all dressed up in the woods",
+    category: "Wedding Party"
   },
-  { 
-    src: ceremonyForestSetup, 
-    alt: "Forest ceremony setup with decorated arch and seating", 
-    description: "Your ceremony, designed by you, set by nature",
-    category: "Ceremony" 
+  {
+    src: weddingPartyCheer,
+    alt: "Wedding party celebrating and cheering with couple kissing",
+    description: "Pure joy—your people celebrating your love",
+    category: "Wedding Party"
   },
-  { 
-    src: propertyLandscapeView, 
-    alt: "Panoramic view of 65-acre Rustic Retreat wedding property", 
-    description: "65 acres of possibility—your entire weekend awaits",
-    category: "Property" 
+  {
+    src: pavilionReception,
+    alt: "Rustic pavilion reception entrance with guests cheering",
+    description: "Welcome to the party—your reception under the rustic pavilion",
+    category: "Reception"
   },
 ];
 
@@ -264,17 +264,17 @@ const Gallery = () => {
 
   return (
     <PageTransition>
-      <SEO 
+      <SEO
         title="Wedding Photo Gallery"
         description="Browse real wedding photos from Rustic Retreat. See ceremony setups, reception details, romantic portraits, and more from couples who celebrated on our 65-acre Alberta property."
         path="/gallery"
-        image={coupleKissMeadow}
+        image={veilKissMistyForest}
       />
       <div className="min-h-screen">
         <Navigation />
-        
+
         <PageHero
-          backgroundImage={coupleKissMeadow}
+          backgroundImage={veilKissMistyForest}
           title="Wedding Photo Gallery"
           subtitle="Every photo is a real couple. A real moment. A real celebration."
         />

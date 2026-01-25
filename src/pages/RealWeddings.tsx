@@ -10,7 +10,7 @@ import SEO from "@/components/SEO";
 import { weddingStories } from "@/data/wedding-stories";
 import { Calendar, Users, ArrowRight, Quote, Heart, CheckCircle2 } from "lucide-react";
 
-import heroImage from "@/assets/gallery/couple-kiss-meadow.avif";
+import heroImage from "@/assets/gallery/veil-kiss-misty-forest.jpg";
 
 const RealWeddings = () => {
   return (
