@@ -22,16 +22,20 @@ import cabinExterior from "@/assets/cabin-exterior-forest.avif";
 import receptionGazebo from "@/assets/gallery/Images/IMG_5103.jpg";
 
 // Gallery Images for Storytelling
-import galleryCouple from "@/assets/gallery/couple-kiss-meadow.avif";
-import galleryReception from "@/assets/gallery/reception-tablescape-gold.avif";
-import galleryGazebo from "@/assets/gallery/gazebo-twinkle-lights.avif";
-import galleryPath from "@/assets/gallery/forest-path-photos.avif";
-import firstDance from "@/assets/gallery/first-dance-sparklers.jpg";
-import veilKiss from "@/assets/gallery/veil-kiss-romantic.jpg";
-import sunsetPortraits from "@/assets/gallery/sunset-clearing-portraits.avif";
-import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
-import birchAltar from "@/assets/gallery/birch-grove-altar.avif";
-import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
+import ceremonyWideShot from "@/assets/gallery/ceremony-wide-shot.jpg";
+import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
+import pavilionReception from "@/assets/gallery/pavilion-reception.jpg";
+import veilKissMistyForest from "@/assets/gallery/veil-kiss-misty-forest.jpg";
+import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
+import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.jpg";
+import firstDanceColor from "@/assets/gallery/first-dance-color.jpg";
+import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
+import headTable from "@/assets/gallery/head-table.jpg";
+import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.jpg";
+import ringsBouquet from "@/assets/gallery/rings-bouquet.jpg";
+import weddingCakeGold from "@/assets/gallery/Images/wedding-cake-gold-antler.jpg";
+import firstDanceBW from "@/assets/gallery/Images/first-dance-string-lights.jpg";
+import sweetheartTable from "@/assets/gallery/Images/sweetheart-table-laughing.jpg";
 import visualResetImage from "@/assets/gallery/Images/IMG_5103.jpg";
 import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
@@ -196,13 +200,13 @@ const Index = () => {
             {/* Cinematic Image Row */}
             <div className="grid grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
               <ScrollReveal delay={0}>
-                <HoverImage src={veilKiss} alt="Intimate bridal veil kiss moment at Rustic Retreat Weddings Alberta" description="A stolen moment—the intimacy of a veil kiss in dappled forest light" category="Ceremony" className="h-48 md:h-72 shadow-soft" />
+                <HoverImage src={ceremonyWideShot} alt="Wide outdoor ceremony with wedding party in forest clearing at Rustic Retreat" description="Your ceremony in the heart of the forest—surrounded by nature and loved ones" category="Ceremony" className="h-48 md:h-72 shadow-soft" />
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <HoverImage src={galleryCouple} alt="Bride and groom romantic kiss in wildflower meadow at sunset near Edmonton" description="Golden hour in the meadow—when the light is just right" category="Portraits" className="h-48 md:h-72 shadow-soft" />
+                <HoverImage src={coupleWalkingTrail} alt="Newlyweds walking hand in hand down forest trail at Lac La Nonne wedding venue" description="Just married—strolling the forest trails, just the two of you" category="Portraits" className="h-48 md:h-72 shadow-soft" />
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <HoverImage src={firstDance} alt="First dance with sparklers at Rustic Retreat Alberta wedding venue" description="Magic happens here—sparklers light up an unforgettable first dance" category="Reception" className="h-48 md:h-72 shadow-soft" />
+                <HoverImage src={cakeCutting} alt="Cake cutting and first bite moment under rustic pavilion" description="Sweet moments—cutting the cake and sharing the first bite" category="Reception" className="h-48 md:h-72 shadow-soft" />
               </ScrollReveal>
             </div>
           </div>
@@ -425,19 +429,19 @@ const Index = () => {
             {/* Masonry-style Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
               <ScrollReveal delay={0} className="col-span-2 row-span-2">
-                <HoverImage src={meadowKiss} alt="Romantic sunset kiss in wildflower meadow at Alberta wedding venue near Lac La Nonne" description="Sunset kisses in the wildflower meadow—pure romance" category="Golden Hour" className="w-full h-full shadow-soft" />
+                <HoverImage src={veilKissMistyForest} alt="Romantic veil kiss in misty forest at Rustic Retreat Weddings near Lac La Nonne" description="Dreamy moments under the veil in the misty forest" category="Romance" className="w-full h-full shadow-soft" />
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <HoverImage src={galleryReception} alt="Elegant gold reception tablescape with candles at Rustic Retreat wedding" description="Elegance meets nature—gold accents shimmer in candlelight" category="Reception" className="shadow-soft" aspectRatio="square" />
+                <HoverImage src={headTable} alt="Rustic head table with candles and white florals at Alberta wedding venue" description="Elegance meets nature—candles and florals create magic" category="Reception" className="shadow-soft" aspectRatio="square" />
               </ScrollReveal>
               <ScrollReveal delay={150}>
-                <HoverImage src={birchAltar} alt="Birch grove ceremony altar surrounded by nature near Edmonton" description="The birch grove altar—nature creates the most beautiful cathedral" category="Ceremony" className="shadow-soft" aspectRatio="square" />
+                <HoverImage src={loveMarqueeArch} alt="LOVE marquee letters with ceremony arch in forest clearing" description="Iconic LOVE sign lights up your ceremony backdrop" category="Ceremony" className="shadow-soft" aspectRatio="square" />
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <HoverImage src={galleryGazebo} alt="Wedding gazebo illuminated with twinkle lights at night" description="When the sun sets, twinkle lights transform the gazebo" category="Evening" className="shadow-soft" aspectRatio="square" />
+                <HoverImage src={firstDanceColor} alt="Outdoor first dance under string lights at Rustic Retreat wedding" description="Your first dance under the open sky and twinkling lights" category="Reception" className="shadow-soft" aspectRatio="square" />
               </ScrollReveal>
               <ScrollReveal delay={250}>
-                <HoverImage src={weddingParty} alt="Wedding party group photo in forest setting at Alberta venue" description="Your favorite people, all in one place" category="Wedding Party" className="shadow-soft" aspectRatio="square" />
+                <HoverImage src={weddingPartyFormal} alt="Wedding party portrait with lavender bridesmaids in forest setting" description="Your favorite people, all dressed up in the woods" category="Wedding Party" className="shadow-soft" aspectRatio="square" />
               </ScrollReveal>
             </div>
 
@@ -611,7 +615,7 @@ const Index = () => {
                 <div className="grid grid-cols-2 gap-3">
                   <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft" />
                   <img src={receptionGazebo} alt="Evening reception in the gazebo with string lights" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft" />
-                  <img src={sunsetPortraits} alt="Couple portraits at sunset in forest clearing" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2" />
+                  <img src={pavilionReception} alt="Rustic pavilion reception with guests cheering" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2" />
                 </div>
               </ScrollReveal>
             </div>
@@ -641,7 +645,7 @@ const Index = () => {
         {/* Final CTA */}
         <section className="relative py-32 overflow-hidden">
           <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: `url(${galleryPath})`
+          backgroundImage: `url(${weddingPartyCheer})`
         }}>
             <div className="absolute inset-0 bg-primary/85" />
           </div>
