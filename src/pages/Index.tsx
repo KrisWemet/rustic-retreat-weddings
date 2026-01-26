@@ -158,7 +158,7 @@ const Index = () => {
         </section>
 
         {/* Testimonial Carousel - Immediate Social Proof */}
-        <section className="section-cream py-16 relative overflow-hidden">
+        <section className="section-compact section-cream relative overflow-hidden">
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-secondary/15 blur-3xl" />
             <div className="absolute -bottom-28 -right-16 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
@@ -178,7 +178,7 @@ const Index = () => {
               <Carousel opts={{
               align: "center",
               loop: true
-            }} className="max-w-4xl mx-auto pb-14">
+            }} className="max-w-4xl mx-auto pb-6 md:pb-10">
                 <CarouselContent>
                   <CarouselItem>
                     <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full">
@@ -271,7 +271,7 @@ const Index = () => {
         </section>
 
         {/* Video Section */}
-        <section className="py-16 bg-card">
+        <section className="section-compact bg-card">
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="max-w-4xl mx-auto text-center mb-8">
@@ -334,42 +334,72 @@ const Index = () => {
         {/* Is This Your Place? - Streamlined */}
         <section className="section bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <ScrollReveal>
-                <div className="text-center mb-10">
-                  <p className="section-label">IS THIS YOUR PLACE?</p>
-                  <h2 className="text-3xl md:text-4xl font-serif mb-4">This is for couples who want...</h2>
-                </div>
-              </ScrollReveal>
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <ScrollReveal>
+                  <div className="text-center lg:text-left mb-10">
+                    <p className="section-label">IS THIS YOUR PLACE?</p>
+                    <h2 className="text-3xl md:text-4xl font-serif mb-4">This is for couples who want...</h2>
+                  </div>
+                </ScrollReveal>
 
-              <div className="grid md:grid-cols-2 gap-4 mb-10">
-                <ScrollReveal delay={0}>
-                  <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">A weekend that unfolds naturally, not a wedding that ends before it really begins.</p>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={100}>
-                  <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Open air and rustling poplars, not a ballroom ceiling and a strict schedule.</p>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={200}>
-                  <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">A celebration that reflects your story, not a template you're expected to fit into.</p>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={300}>
-                  <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Music and dancing under the open sky, not the same indoor routine you've seen a hundred times.</p>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={400}>
-                  <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">The freedom to be themselves, whether that's creating a DIY celebration or an extravagant event that reflects their unique story.</p>
-                  </div>
-                </ScrollReveal>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <ScrollReveal delay={0}>
+                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                      <p className="font-medium">A weekend that unfolds naturally, not a wedding that ends before it really begins.</p>
+                    </div>
+                  </ScrollReveal>
+                  <ScrollReveal delay={100}>
+                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                      <p className="font-medium">Open air and rustling poplars, not a ballroom ceiling and a strict schedule.</p>
+                    </div>
+                  </ScrollReveal>
+                  <ScrollReveal delay={200}>
+                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                      <p className="font-medium">A celebration that reflects your story, not a template you're expected to fit into.</p>
+                    </div>
+                  </ScrollReveal>
+                  <ScrollReveal delay={300}>
+                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                      <p className="font-medium">Music and dancing under the open sky, not the same indoor routine you've seen a hundred times.</p>
+                    </div>
+                  </ScrollReveal>
+                  <ScrollReveal delay={400}>
+                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full sm:col-span-2">
+                      <p className="font-medium">The freedom to be themselves, whether that's creating a DIY celebration or an extravagant event that reflects their unique story.</p>
+                    </div>
+                  </ScrollReveal>
+                </div>
               </div>
 
+              <ScrollReveal delay={150}>
+                <div className="relative">
+                  <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                  <div className="relative grid grid-cols-2 gap-3">
+                    <img
+                      src={ceremonyWideShot}
+                      alt="Outdoor wedding ceremony in a forest clearing at Rustic Retreat"
+                      loading="lazy"
+                      decoding="async"
+                      className="col-span-2 h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant"
+                    />
+                    <img
+                      src={pavilionReception}
+                      alt="Rustic pavilion reception with guests cheering"
+                      loading="lazy"
+                      decoding="async"
+                      className="h-40 object-cover rounded-2xl shadow-soft"
+                    />
+                    <img
+                      src={meadowSunsetKiss}
+                      alt="Romantic sunset kiss in a meadow at Rustic Retreat"
+                      loading="lazy"
+                      decoding="async"
+                      className="h-40 object-cover rounded-2xl shadow-soft"
+                    />
+                  </div>
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </section>
@@ -387,7 +417,7 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-transparent" />
           </div>
           <div className="absolute inset-0 z-10">
-            <div className="container mx-auto px-4 py-16 md:py-24 h-full flex items-start">
+            <div className="container mx-auto px-4 py-12 md:py-16 h-full flex items-start">
               <ScrollReveal>
                 <div className="max-w-2xl text-primary-foreground bg-gradient-to-b from-black/70 via-black/50 to-black/10 rounded-2xl px-6 py-6 md:px-8 md:py-8">
                   <p className="text-sm uppercase tracking-[0.3em] text-primary-foreground/80 mb-4">
@@ -411,17 +441,39 @@ const Index = () => {
         {/* Your Weekend, Your Rules Section */}
         <section className="section bg-card">
           <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <div className="text-center mb-12">
-                <p className="section-label">BEYOND THE CEREMONY</p>
-                <h2 className="text-3xl md:text-5xl font-serif mb-6">
-                  Your Weekend. <span className="italic text-secondary">Your Way.</span>
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  When you rent the land, you'll have the freedom to make it yours. A few ideas to spark your planning.
-                </p>
-              </div>
-            </ScrollReveal>
+            <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center mb-12">
+              <ScrollReveal>
+                <div className="text-center lg:text-left lg:order-2">
+                  <p className="section-label">BEYOND THE CEREMONY</p>
+                  <h2 className="text-3xl md:text-5xl font-serif mb-6">
+                    Your Weekend. <span className="italic text-secondary">Your Way.</span>
+                  </h2>
+                  <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none">
+                    When you rent the land, you'll have the freedom to make it yours. A few ideas to spark your planning.
+                  </p>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={150}>
+                <div className="relative lg:order-1">
+                  <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                  <div className="relative overflow-hidden rounded-3xl shadow-elegant">
+                    <img
+                      src={firstDanceColor}
+                      alt="First dance under string lights at Rustic Retreat"
+                      loading="lazy"
+                      decoding="async"
+                      className="h-[280px] sm:h-[320px] w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <span className="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary shadow-soft">
+                        Weekend Ideas
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               <ScrollReveal delay={0}>
@@ -719,20 +771,34 @@ const Index = () => {
         {/* Origin Story Teaser */}
         <section className="section section-cream">
           <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <div className="max-w-3xl mx-auto text-center">
-                <p className="section-label">OUR STORY</p>
-                <h2 className="text-2xl md:text-3xl font-serif mb-6 italic">
-                  "It poured for months beforehand, so the rubber boots were real—but our four-day wedding weekend stayed dry, and everyone had the time of their lives."
-                </h2>
-                <p className="text-muted-foreground mb-8">
-                  In 2019, we threw our own 120-person wedding right here—complete with a 40x60' pole barn, paintball, axe throwing, and a giant slip-and-slide. That's when we realized: other couples deserve this too.
-                </p>
-                <Link to="/about" className="inline-flex items-center gap-2 text-secondary hover:text-secondary-dark font-medium transition-colors">
-                  Read our full story <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </ScrollReveal>
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <ScrollReveal>
+                <div className="relative lg:order-2">
+                  <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                  <img
+                    src={coupleWalkingTrail}
+                    alt="Newlyweds walking hand in hand down a forest trail at Rustic Retreat"
+                    loading="lazy"
+                    decoding="async"
+                    className="relative w-full h-[320px] sm:h-[360px] md:h-[420px] object-cover rounded-3xl shadow-elegant"
+                  />
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={150}>
+                <div className="bg-card/80 backdrop-blur-sm rounded-3xl border border-secondary/10 p-8 md:p-10 shadow-soft lg:order-1">
+                  <p className="section-label">OUR STORY</p>
+                  <h2 className="text-2xl md:text-3xl font-serif mb-6 italic">
+                    "It poured for months beforehand, so the rubber boots were real—but our four-day wedding weekend stayed dry, and everyone had the time of their lives."
+                  </h2>
+                  <p className="text-muted-foreground mb-8">
+                    In 2019, we threw our own 120-person wedding right here—complete with a 40x60' pole barn, paintball, axe throwing, and a giant slip-and-slide. That's when we realized: other couples deserve this too.
+                  </p>
+                  <Link to="/about" className="inline-flex items-center gap-2 text-secondary hover:text-secondary-dark font-medium transition-colors">
+                    Read our full story <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </section>
 
