@@ -144,7 +144,18 @@ All colors MUST be HSL.
   
   /* Section Containers */
   .section {
-    @apply py-16 md:py-24 px-4;
+    @apply px-4;
+    padding-block: clamp(3.5rem, 8vw, 7rem);
+  }
+
+  .section-compact {
+    @apply px-4;
+    padding-block: clamp(2.75rem, 6.5vw, 5.5rem);
+  }
+
+  .section-tight {
+    @apply px-4;
+    padding-block: clamp(2rem, 5vw, 4rem);
   }
   
   .section-muted {

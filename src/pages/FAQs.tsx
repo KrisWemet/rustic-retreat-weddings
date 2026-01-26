@@ -142,24 +142,47 @@ const FAQs = () => {
         {/* FAQs Accordion */}
         <section className="section">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <ScrollReveal key={index} delay={index * 50}>
-                    <AccordionItem 
-                      value={`item-${index}`}
-                      className="bg-card border-2 px-6 hover:border-secondary transition-colors"
-                    >
-                      <AccordionTrigger className="text-left font-semibold hover:text-primary">
-                        {faq.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground pt-2">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  </ScrollReveal>
-                ))}
-              </Accordion>
+            <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-start">
+              <div>
+                <Accordion type="single" collapsible className="space-y-4">
+                  {faqs.map((faq, index) => (
+                    <ScrollReveal key={index} delay={index * 50}>
+                      <AccordionItem 
+                        value={`item-${index}`}
+                        className="bg-card border-2 px-6 hover:border-secondary transition-colors"
+                      >
+                        <AccordionTrigger className="text-left font-semibold hover:text-primary">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground pt-2">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </ScrollReveal>
+                  ))}
+                </Accordion>
+              </div>
+              <ScrollReveal delay={150}>
+                <div className="relative">
+                  <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                  <div className="relative grid gap-4">
+                    <img
+                      src={meadowSunsetKiss}
+                      alt="Romantic sunset kiss in wildflower meadow at Rustic Retreat"
+                      loading="lazy"
+                      decoding="async"
+                      className="h-56 sm:h-64 object-cover rounded-3xl shadow-elegant"
+                    />
+                    <img
+                      src={firstDanceSparklers}
+                      alt="First dance with sparklers at Alberta wedding venue"
+                      loading="lazy"
+                      decoding="async"
+                      className="h-56 sm:h-64 object-cover rounded-3xl shadow-soft"
+                    />
+                  </div>
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </section>

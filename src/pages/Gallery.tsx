@@ -354,6 +354,34 @@ const Gallery = () => {
           subtitle="Every photo is a real couple. A real moment. A real celebration."
         />
 
+        <section className="section-tight bg-background">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
+              <ScrollReveal>
+                <div className="text-center lg:text-left">
+                  <p className="section-label">REAL MOMENTS</p>
+                  <h2 className="text-2xl md:text-3xl font-serif mb-4">See the full story behind every photo</h2>
+                  <p className="text-muted-foreground max-w-xl lg:max-w-none">
+                    Tap any image to view it full size and read the story behind it. These are real weddings, real couples, and the kind of candid moments a weekend celebration makes possible.
+                  </p>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={150}>
+                <div className="relative">
+                  <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                  <img
+                    src={ceremonyWideShot}
+                    alt="Outdoor wedding ceremony in a forest clearing at Rustic Retreat"
+                    loading="lazy"
+                    decoding="async"
+                    className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant"
+                  />
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
         {/* Category Filter */}
         <section className="py-8 bg-card border-b border-border">
           <div className="container mx-auto px-4">

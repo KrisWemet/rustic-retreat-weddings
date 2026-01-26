@@ -255,6 +255,18 @@ const Contact = () => {
 
               {/* Contact Info */}
               <div className="space-y-6">
+                <ScrollReveal direction="right">
+                  <div className="relative">
+                    <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                    <img
+                      src={brideWithHorse}
+                      alt="Bride with horse at Rustic Retreat Alberta wedding venue"
+                      loading="lazy"
+                      decoding="async"
+                      className="relative w-full h-[240px] sm:h-[280px] object-cover rounded-3xl shadow-elegant"
+                    />
+                  </div>
+                </ScrollReveal>
                 <ScrollReveal direction="right" delay={100}>
                   <Card className="border-2">
                     <CardContent className="p-8">

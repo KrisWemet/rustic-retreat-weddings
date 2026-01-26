@@ -148,7 +148,21 @@ const Venue = () => {
         <section className="section">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <ScrollReveal direction="left">
+              <ScrollReveal direction="left" className="lg:order-1">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Picture-Perfect From Every Angle</h2>
+                  <p className="text-lg mb-6">
+                    The cabin's rustic charm creates stunning backdrops for bridal portraits, getting-ready photos, and those quiet couple moments your photographer will treasure.
+                  </p>
+                  <p className="text-muted-foreground mb-6">
+                    Wooden porch with forest views. Soft natural light filtering through trees. Authentic Alberta wilderness surrounding your private sanctuary.
+                  </p>
+                  <p className="font-medium">
+                    Your wedding album will tell a story of genuine beauty—no artificial backdrops needed.
+                  </p>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal direction="right" className="lg:order-2">
                 <div className="grid grid-cols-2 gap-4">
                   <HoverImage 
                     src={familyPortrait}
@@ -165,18 +179,6 @@ const Venue = () => {
                     className="shadow-xl"
                   />
                 </div>
-              </ScrollReveal>
-              <ScrollReveal direction="right">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Picture-Perfect From Every Angle</h2>
-                <p className="text-lg mb-6">
-                  The cabin's rustic charm creates stunning backdrops for bridal portraits, getting-ready photos, and those quiet couple moments your photographer will treasure.
-                </p>
-                <p className="text-muted-foreground mb-6">
-                  Wooden porch with forest views. Soft natural light filtering through trees. Authentic Alberta wilderness surrounding your private sanctuary.
-                </p>
-                <p className="font-medium">
-                  Your wedding album will tell a story of genuine beauty—no artificial backdrops needed.
-                </p>
               </ScrollReveal>
             </div>
           </div>

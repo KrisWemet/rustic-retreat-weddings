@@ -22,6 +22,7 @@ const WeddingStory = () => {
   const currentIndex = story ? weddingStories.findIndex(s => s.id === story.id) : -1;
   const prevStory = currentIndex > 0 ? weddingStories[currentIndex - 1] : null;
   const nextStory = currentIndex < weddingStories.length - 1 ? weddingStories[currentIndex + 1] : null;
+  const highlightImage = story.galleryImages?.[0]?.src || story.heroImage;
 
   if (!story) {
     return <Navigate to="/real-weddings" replace />;
@@ -99,11 +100,25 @@ const WeddingStory = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               {/* Excerpt */}
-              <ScrollReveal>
-                <p className="text-xl text-muted-foreground leading-relaxed mb-12 italic">
-                  {story.excerpt}
-                </p>
-              </ScrollReveal>
+              <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center mb-12">
+                <ScrollReveal>
+                  <p className="text-xl text-muted-foreground leading-relaxed italic">
+                    {story.excerpt}
+                  </p>
+                </ScrollReveal>
+                <ScrollReveal delay={150}>
+                  <div className="relative">
+                    <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                    <img
+                      src={highlightImage}
+                      alt={`${story.coupleNames} wedding moment at Rustic Retreat`}
+                      loading="lazy"
+                      decoding="async"
+                      className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant"
+                    />
+                  </div>
+                </ScrollReveal>
+              </div>
 
               {/* Main Story */}
               <ScrollReveal delay={100}>

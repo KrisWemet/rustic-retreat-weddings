@@ -365,8 +365,13 @@ const Index = () => {
                     </div>
                   </ScrollReveal>
                   <ScrollReveal delay={400}>
-                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full sm:col-span-2">
+                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
                       <p className="font-medium">The freedom to be themselves, whether that's creating a DIY celebration or an extravagant event that reflects their unique story.</p>
+                    </div>
+                  </ScrollReveal>
+                  <ScrollReveal delay={500}>
+                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                      <p className="font-medium">A venue that feels like a getaway, not a place where you’re watching the clock all day.</p>
                     </div>
                   </ScrollReveal>
                 </div>
@@ -375,27 +380,27 @@ const Index = () => {
               <ScrollReveal delay={150}>
                 <div className="relative">
                   <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
-                  <div className="relative grid grid-cols-2 gap-3">
+                  <div className="relative grid grid-cols-2 gap-3 lg:gap-4">
                     <img
                       src={ceremonyWideShot}
                       alt="Outdoor wedding ceremony in a forest clearing at Rustic Retreat"
                       loading="lazy"
                       decoding="async"
-                      className="col-span-2 h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant"
+                      className="col-span-2 aspect-[16/9] w-full object-cover rounded-3xl shadow-elegant"
                     />
                     <img
                       src={pavilionReception}
                       alt="Rustic pavilion reception with guests cheering"
                       loading="lazy"
                       decoding="async"
-                      className="h-40 object-cover rounded-2xl shadow-soft"
+                      className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
                     />
                     <img
                       src={meadowSunsetKiss}
                       alt="Romantic sunset kiss in a meadow at Rustic Retreat"
                       loading="lazy"
                       decoding="async"
-                      className="h-40 object-cover rounded-2xl shadow-soft"
+                      className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
                     />
                   </div>
                 </div>

@@ -43,38 +43,53 @@ const About = () => {
         {/* How It All Started */}
         <section className="section">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <ScrollReveal>
-                <p className="section-label">THE BEGINNING</p>
-                <h2 className="text-3xl md:text-4xl font-serif mb-8">How It All Started</h2>
+            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
+              <div>
+                <ScrollReveal>
+                  <p className="section-label">THE BEGINNING</p>
+                  <h2 className="text-3xl md:text-4xl font-serif mb-8">How It All Started</h2>
 
-                <p className="text-lg mb-6">
-                  In 2006, my parents bought 65 acres near Lac La Nonne with a dream of creating something self-sufficient—an off-grid homestead with pasture, forest, and everything they needed to live on their own terms. No power lines. No city noise. Just land that felt like theirs.
-                </p>
-
-                <p className="text-lg text-muted-foreground mb-6">
-                  That first year, they hosted a small gathering. Family and friends came out with their RVs, sat around the campfire, and soaked in the quiet. At the end of the weekend, someone said, <span className="italic">"We should do this every year."</span>
-                </p>
-
-                <p className="text-lg mb-6">
-                  So we did.
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={100}>
-                <div className="bg-secondary/10 p-8 rounded-2xl border-l-4 border-secondary mb-8">
-                  <p className="text-lg leading-relaxed">
-                    What started as a single weekend became an annual tradition. Some years we'd have 80 people camping across the property—kids running wild during the day, adults around the campfire at night with music from every genre, impromptu dancing, laughter that carried through the trees. We'd play beer pong and cornhole and giant Jenga. We'd do potlucks where everyone brought their best recipes, and there was always too much food.
+                  <p className="text-lg mb-6">
+                    In 2006, my parents bought 65 acres near Lac La Nonne with a dream of creating something self-sufficient—an off-grid homestead with pasture, forest, and everything they needed to live on their own terms. No power lines. No city noise. Just land that felt like theirs.
                   </p>
+
+                  <p className="text-lg text-muted-foreground mb-6">
+                    That first year, they hosted a small gathering. Family and friends came out with their RVs, sat around the campfire, and soaked in the quiet. At the end of the weekend, someone said, <span className="italic">"We should do this every year."</span>
+                  </p>
+
+                  <p className="text-lg mb-6">
+                    So we did.
+                  </p>
+                </ScrollReveal>
+
+                <ScrollReveal delay={100}>
+                  <div className="bg-secondary/10 p-8 rounded-2xl border-l-4 border-secondary mb-8">
+                    <p className="text-lg leading-relaxed">
+                      What started as a single weekend became an annual tradition. Some years we'd have 80 people camping across the property—kids running wild during the day, adults around the campfire at night with music from every genre, impromptu dancing, laughter that carried through the trees. We'd play beer pong and cornhole and giant Jenga. We'd do potlucks where everyone brought their best recipes, and there was always too much food.
+                    </p>
+                  </div>
+
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Sometimes we'd plan structured activities—outdoor movie nights, birthday celebrations, anniversary parties. Other times we'd just… exist together. Slowed down. Undistracted.
+                  </p>
+
+                  <p className="text-lg mb-8">
+                    My parents fell in love with hosting. And the more they did it, the more the land evolved to welcome people. Close enough to Edmonton that friends could easily make the drive, but tucked away enough that it felt like a true escape.
+                  </p>
+                </ScrollReveal>
+              </div>
+
+              <ScrollReveal delay={150}>
+                <div className="relative">
+                  <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                  <img
+                    src={campfireNight}
+                    alt="Evening campfire gathering under stars at Rustic Retreat Weddings Alberta"
+                    loading="lazy"
+                    decoding="async"
+                    className="relative w-full h-[320px] sm:h-[380px] md:h-[440px] object-cover rounded-3xl shadow-elegant"
+                  />
                 </div>
-
-                <p className="text-lg text-muted-foreground mb-6">
-                  Sometimes we'd plan structured activities—outdoor movie nights, birthday celebrations, anniversary parties. Other times we'd just… exist together. Slowed down. Undistracted.
-                </p>
-
-                <p className="text-lg mb-8">
-                  My parents fell in love with hosting. And the more they did it, the more the land evolved to welcome people. Close enough to Edmonton that friends could easily make the drive, but tucked away enough that it felt like a true escape.
-                </p>
               </ScrollReveal>
             </div>
           </div>
@@ -299,35 +314,50 @@ const About = () => {
         {/* What Drives Us */}
         <section className="section section-cream">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
               <ScrollReveal>
-                <p className="section-label">OUR PHILOSOPHY</p>
-                <h2 className="text-3xl md:text-4xl font-serif mb-8">What Drives Us</h2>
+                <div className="lg:order-2">
+                  <p className="section-label">OUR PHILOSOPHY</p>
+                  <h2 className="text-3xl md:text-4xl font-serif mb-8">What Drives Us</h2>
 
-                <p className="text-lg mb-6">
-                  So many venues charge $10,000+ for a single day and then lock you into mandatory minimums—you have to use their caterer, their bar staff, their timeline.
-                </p>
-
-                <p className="text-xl font-medium mb-6">
-                  We don't do that.
-                </p>
-
-                <p className="text-lg text-muted-foreground mb-8">
-                  We want you to build your day YOUR way. Bring in vendors for every detail and go extravagant? Great. DIY all your decor and do a potluck BBQ to keep costs low? Also great. We don't care how you spend your money. We care that you get to choose.
-                </p>
-
-                <div className="bg-secondary/10 p-8 rounded-2xl border-2 border-secondary mb-8">
-                  <p className="text-lg mb-4">
-                    <strong>Our goal is simple:</strong> be fully booked during our four-month season with one wedding per week, every year, with very little advertising.
+                  <p className="text-lg mb-6">
+                    So many venues charge $10,000+ for a single day and then lock you into mandatory minimums—you have to use their caterer, their bar staff, their timeline.
                   </p>
-                  <p className="text-muted-foreground">
-                    We want couples to hear about us from a friend who got married here and couldn't stop talking about it. Word of mouth. Real stories.
+
+                  <p className="text-xl font-medium mb-6">
+                    We don't do that.
+                  </p>
+
+                  <p className="text-lg text-muted-foreground mb-8">
+                    We want you to build your day YOUR way. Bring in vendors for every detail and go extravagant? Great. DIY all your decor and do a potluck BBQ to keep costs low? Also great. We don't care how you spend your money. We care that you get to choose.
+                  </p>
+
+                  <div className="bg-secondary/10 p-8 rounded-2xl border-2 border-secondary mb-8">
+                    <p className="text-lg mb-4">
+                      <strong>Our goal is simple:</strong> be fully booked during our four-month season with one wedding per week, every year, with very little advertising.
+                    </p>
+                    <p className="text-muted-foreground">
+                      We want couples to hear about us from a friend who got married here and couldn't stop talking about it. Word of mouth. Real stories.
+                    </p>
+                  </div>
+
+                  <p className="text-lg">
+                    We're not in this to get rich. We're in this because we love hosting people. We love watching couples fall in love with this place the way we did. We love seeing memories get made. And we want you to do it <strong>your way</strong>—not ours, not some venue template, not what Instagram says weddings should look like.
                   </p>
                 </div>
+              </ScrollReveal>
 
-                <p className="text-lg">
-                  We're not in this to get rich. We're in this because we love hosting people. We love watching couples fall in love with this place the way we did. We love seeing memories get made. And we want you to do it <strong>your way</strong>—not ours, not some venue template, not what Instagram says weddings should look like.
-                </p>
+              <ScrollReveal delay={150}>
+                <div className="relative lg:order-1">
+                  <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                  <img
+                    src={cabinExterior}
+                    alt="Rustic cabin exterior surrounded by forest at Rustic Retreat"
+                    loading="lazy"
+                    decoding="async"
+                    className="relative w-full h-[320px] sm:h-[380px] md:h-[440px] object-cover rounded-3xl shadow-elegant"
+                  />
+                </div>
               </ScrollReveal>
             </div>
           </div>

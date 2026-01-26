@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import ScrollReveal from "@/components/ScrollReveal";
 import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
 import receptionTable from "@/assets/gallery/reception-table-3.jpg";
 import ceremonySetupWide from "@/assets/gallery/ceremony-setup-wide.jpg";
@@ -87,7 +88,6 @@ const Packages = () => {
             alt="LOVE marquee letters with a ceremony arch in a forest clearing at Rustic Retreat"
             loading="eager"
             decoding="async"
-            fetchPriority="high"
             className="h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary/70" />
@@ -166,14 +166,30 @@ const Packages = () => {
       {/* Four Package Options */}
       <section className="section section-muted">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Perfect Timeline</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-3">
-              From intimate elopements to the ultimate retreat—find the package that fits your vision.
-            </p>
-            <p className="text-sm text-secondary font-medium">
-              2026 Season: Only 16 weekend dates available. June and September book first.
-            </p>
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center mb-12">
+            <ScrollReveal>
+              <div className="text-center lg:text-left">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Perfect Timeline</h2>
+                <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none mb-3">
+                  From intimate elopements to the ultimate retreat—find the package that fits your vision.
+                </p>
+                <p className="text-sm text-secondary font-medium">
+                  2026 Season: Only 16 weekend dates available. June and September book first.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={150}>
+              <div className="relative">
+                <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                <img
+                  src={receptionTable}
+                  alt="Evening outdoor wedding reception celebration at Rustic Retreat"
+                  loading="lazy"
+                  decoding="async"
+                  className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant"
+                />
+              </div>
+            </ScrollReveal>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
