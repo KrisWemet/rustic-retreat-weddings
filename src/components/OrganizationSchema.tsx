@@ -27,8 +27,7 @@ const OrganizationSchema = () => {
     },
     priceRange: "$$$",
     sameAs: [
-      "https://www.facebook.com/rusticretreatweddings",
-      "https://www.instagram.com/rusticretreatweddings"
+      "https://www.facebook.com/share/1J4ztXhiSk/?mibextid=wwXIfr"
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
