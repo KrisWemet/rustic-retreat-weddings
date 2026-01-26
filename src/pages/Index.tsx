@@ -334,51 +334,49 @@ const Index = () => {
         {/* Is This Your Place? - Streamlined */}
         <section className="section bg-background">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-10 items-center">
-              <div>
-                <ScrollReveal>
-                  <div className="text-center lg:text-left mb-10">
-                    <p className="section-label">IS THIS YOUR PLACE?</p>
-                    <h2 className="text-3xl md:text-4xl font-serif mb-4">This is for couples who want...</h2>
+            <ScrollReveal>
+              <div className="text-center lg:text-left mb-10">
+                <p className="section-label">IS THIS YOUR PLACE?</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-4">This is for couples who want...</h2>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <ScrollReveal delay={0}>
+                  <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                    <p className="font-medium">A weekend that unfolds naturally, not a wedding that ends before it really begins.</p>
                   </div>
                 </ScrollReveal>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <ScrollReveal delay={0}>
-                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                      <p className="font-medium">A weekend that unfolds naturally, not a wedding that ends before it really begins.</p>
-                    </div>
-                  </ScrollReveal>
-                  <ScrollReveal delay={100}>
-                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                      <p className="font-medium">Open air and rustling poplars, not a ballroom ceiling and a strict schedule.</p>
-                    </div>
-                  </ScrollReveal>
-                  <ScrollReveal delay={200}>
-                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                      <p className="font-medium">A celebration that reflects your story, not a template you're expected to fit into.</p>
-                    </div>
-                  </ScrollReveal>
-                  <ScrollReveal delay={300}>
-                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                      <p className="font-medium">Music and dancing under the open sky, not the same indoor routine you've seen a hundred times.</p>
-                    </div>
-                  </ScrollReveal>
-                  <ScrollReveal delay={400}>
-                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                      <p className="font-medium">The freedom to be themselves, whether that's creating a DIY celebration or an extravagant event that reflects their unique story.</p>
-                    </div>
-                  </ScrollReveal>
-                  <ScrollReveal delay={500}>
-                    <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                      <p className="font-medium">A venue that feels like a getaway, not a place where you’re watching the clock all day.</p>
-                    </div>
-                  </ScrollReveal>
-                </div>
+                <ScrollReveal delay={100}>
+                  <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                    <p className="font-medium">Open air and rustling poplars, not a ballroom ceiling and a strict schedule.</p>
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal delay={200}>
+                  <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                    <p className="font-medium">A celebration that reflects your story, not a template you're expected to fit into.</p>
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal delay={300}>
+                  <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                    <p className="font-medium">Music and dancing under the open sky, not the same indoor routine you've seen a hundred times.</p>
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal delay={400}>
+                  <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                    <p className="font-medium">The freedom to be themselves, whether that's creating a DIY celebration or an extravagant event that reflects their unique story.</p>
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal delay={500}>
+                  <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                    <p className="font-medium">A venue that feels like a getaway, not a place where you’re watching the clock all day.</p>
+                  </div>
+                </ScrollReveal>
               </div>
 
-              <ScrollReveal delay={150}>
-                <div className="relative">
+              <ScrollReveal delay={150} className="h-full">
+                <div className="relative h-full flex items-end">
                   <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                   <div className="relative grid grid-cols-2 gap-3 lg:gap-4">
                     <img
@@ -398,6 +396,20 @@ const Index = () => {
                     <img
                       src={meadowSunsetKiss}
                       alt="Romantic sunset kiss in a meadow at Rustic Retreat"
+                      loading="lazy"
+                      decoding="async"
+                      className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
+                    />
+                    <img
+                      src={loveMarqueeArch}
+                      alt="LOVE marquee letters with ceremony arch in a forest clearing"
+                      loading="lazy"
+                      decoding="async"
+                      className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
+                    />
+                    <img
+                      src={headTable}
+                      alt="Rustic head table with candles and florals at a wedding reception"
                       loading="lazy"
                       decoding="async"
                       className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
@@ -424,7 +436,7 @@ const Index = () => {
           <div className="absolute inset-0 z-10">
             <div className="container mx-auto px-4 py-12 md:py-16 h-full flex items-start">
               <ScrollReveal>
-                <div className="max-w-2xl text-primary-foreground bg-gradient-to-b from-black/70 via-black/50 to-black/10 rounded-2xl px-6 py-6 md:px-8 md:py-8">
+                <div className="w-full max-w-3xl text-primary-foreground bg-gradient-to-b from-black/70 via-black/50 to-black/10 rounded-2xl px-6 py-6 md:px-10 md:py-9">
                   <p className="text-sm uppercase tracking-[0.3em] text-primary-foreground/80 mb-4">
                     A weekend that is completely yours
                   </p>
@@ -451,10 +463,11 @@ const Index = () => {
                 <div className="text-center lg:text-left lg:order-2">
                   <p className="section-label">BEYOND THE CEREMONY</p>
                   <h2 className="text-3xl md:text-5xl font-serif mb-6">
-                    Your Weekend. <span className="italic text-secondary">Your Way.</span>
+                    <span className="block">Your Weekend.</span>
+                    <span className="block italic text-secondary">Your Way.</span>
                   </h2>
                   <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none">
-                    When you rent the land, you'll have the freedom to make it yours. A few ideas to spark your planning.
+                    When you book Rustic Retreat, you'll have the freedom to make it yours. A few ideas to spark your planning, your options are near endless.
                   </p>
                 </div>
               </ScrollReveal>
@@ -470,11 +483,6 @@ const Index = () => {
                       className="h-[280px] sm:h-[320px] w-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
-                    <div className="absolute bottom-4 left-4">
-                      <span className="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary shadow-soft">
-                        Weekend Ideas
-                      </span>
-                    </div>
                   </div>
                 </div>
               </ScrollReveal>
@@ -487,7 +495,7 @@ const Index = () => {
                     <Sparkles className="w-6 h-6 text-secondary" />
                   </div>
                   <h3 className="font-semibold mb-2">Fireworks & Sparklers</h3>
-                  <p className="text-sm text-muted-foreground">Plan a sparkler send-off or fireworks moment if it fits your weekend.</p>
+                  <p className="text-sm text-muted-foreground">Plan a sparkler send-off or fireworks.</p>
                 </div>
               </ScrollReveal>
 
