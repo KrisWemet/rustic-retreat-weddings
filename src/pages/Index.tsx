@@ -208,15 +208,9 @@ const Index = () => {
                     </div>
                   </CarouselItem>
                 </CarouselContent>
-                <CarouselPrevious className="hidden md:flex -left-12 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
-                <CarouselNext className="hidden md:flex -right-12 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
+                <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow-soft border-secondary/20 z-10" />
+                <CarouselNext className="right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow-soft border-secondary/20 z-10" />
               </Carousel>
-              <div className="flex justify-center gap-3 mt-6 text-xs text-muted-foreground">
-                <span className="inline-flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-secondary/60" />
-                  Swipe or use arrows to read more
-                </span>
-              </div>
             </ScrollReveal>
           </div>
         </section>
@@ -398,11 +392,15 @@ const Index = () => {
                   <p className="text-sm uppercase tracking-[0.3em] text-primary-foreground/80 mb-4">
                     A weekend that feels like yours
                   </p>
-                  <blockquote className="text-xl md:text-2xl font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
-                    “We didn’t want just another venue. We wanted to create a place where people could gather, connect, and celebrate—not just for a few hours, but for an
-                    <span className="block text-center -ml-[10%] text-[#D8A799] italic text-[1.1em] md:text-[1.15em]">entire weekend.”</span>
+                  <blockquote className="text-lg font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
+                    “We didn’t want to build just another venue. We wanted to create something deeper—a place where people could slow down, truly connect, and celebrate life and their unique individual love stories across an
+                    <span className="block text-center -ml-[10%] text-[#D8A799] italic text-[1.2em]">entire weekend.”</span>
                   </blockquote>
-                  <p className="mt-4 text-sm text-primary-foreground/80">— Shannon and Chris (Rustic Retreat Owners)</p>
+                  <p className="mt-4 text-sm text-primary-foreground/80">
+                    — Chris & Shannon
+                    <br />
+                    (Rustic Retreat)
+                  </p>
                 </div>
               </ScrollReveal>
             </div>
