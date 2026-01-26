@@ -355,11 +355,8 @@ const About = () => {
                         <Heart className="w-8 h-8 text-secondary" />
                         <h3 className="text-xl font-semibold">Shannon</h3>
                       </div>
-                      <p className="text-muted-foreground mb-4">
-                        The heart and face of the venue. She handles admin, bookings, communication, venue tours, scheduling, organizing. She builds a lot of the small items—games, custom touches for each wedding. She's the one planning and executing and bringing your vision to life.
-                      </p>
-                      <p className="italic text-sm">
-                        She loves this more than I do, honestly.
+                      <p className="text-muted-foreground">
+                        The heart of Rustic Retreat. Shannon guides couples from first message to final details with calm confidence and real care. She handles communication, scheduling, and the day-to-day rhythm of the venue, making the whole experience feel steady, personal, and easy. When nerves show up, she’s the voice that brings you back to what matters.
                       </p>
                     </CardContent>
                   </Card>
@@ -373,7 +370,7 @@ const About = () => {
                         <h3 className="text-xl font-semibold">Chris</h3>
                       </div>
                       <p className="text-muted-foreground">
-                        I support Shannon. We build the picnic tables and ceremony benches together. I join her on venue tours. I help with whatever she needs, which looks different every day. Right now, in the off-season, I'm working on this website.
+                        The steady hand behind the scenes. Chris keeps the land and logistics running—power management (solar + generator), setup, and all the practical details that make the weekend feel effortless. He builds, moves, fixes, and adapts fast, usually with a joke that breaks the tension at exactly the right moment.
                       </p>
                     </CardContent>
                   </Card>

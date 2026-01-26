@@ -178,7 +178,7 @@ const Index = () => {
               <Carousel opts={{
               align: "center",
               loop: true
-            }} className="max-w-4xl mx-auto">
+            }} className="max-w-4xl mx-auto pb-14">
                 <CarouselContent>
                   <CarouselItem>
                     <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft">
@@ -208,8 +208,8 @@ const Index = () => {
                     </div>
                   </CarouselItem>
                 </CarouselContent>
-                <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow-soft border-secondary/20 z-10" />
-                <CarouselNext className="right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow-soft border-secondary/20 z-10" />
+                <CarouselPrevious className="left-6 top-auto bottom-4 translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20 z-10" />
+                <CarouselNext className="right-6 top-auto bottom-4 translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20 z-10" />
               </Carousel>
             </ScrollReveal>
           </div>
@@ -240,7 +240,7 @@ const Index = () => {
                   While traditional venues say<br /><span className="italic text-muted-foreground">"this is what you're allowed to do, and the schedule you'll follow,"</span><br />we ask <span className="italic text-secondary">"what do you want to create?"</span>
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  No rigid timelines. No cookie-cutter packages. Just you, your people, and five days to celebrate your way.
+                  No rigid timelines. No cookie-cutter packages. Just you, your people, and multiple days to bring your celebration to life.
                 </p>
               </div>
             </ScrollReveal>
@@ -335,7 +335,7 @@ const Index = () => {
               <div className="grid md:grid-cols-2 gap-4 mb-10">
                 <ScrollReveal delay={0}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">A weekend that unfolds slowly, not a wedding that ends before it really begins.</p>
+                    <p className="font-medium">A weekend that unfolds naturally, not a wedding that ends before it really begins.</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={100}>
@@ -355,20 +355,11 @@ const Index = () => {
                 </ScrollReveal>
                 <ScrollReveal delay={400}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">The freedom to be themselves, creating a DIY celebration that reflects their unique story from the first tent peg to the last dance.</p>
+                    <p className="font-medium">The freedom to be themselves, whether that creating a DIY celebration, or extravigant event that reflects their unique story</p>
                   </div>
                 </ScrollReveal>
               </div>
 
-              <ScrollReveal delay={500}>
-                <div className="text-center">
-                  <Link to="/contact">
-                    <CTAButton className="px-8">
-                      Walk the Land With Us
-                    </CTAButton>
-                  </Link>
-                </div>
-              </ScrollReveal>
             </div>
           </div>
         </section>
@@ -381,7 +372,7 @@ const Index = () => {
               alt="Wedding dress displayed under the forest gazebo at Rustic Retreat"
               loading="lazy"
               decoding="async"
-              className="w-full h-auto block"
+              className="w-full h-[70vh] sm:h-[80vh] md:h-auto object-cover object-[center_60%] md:object-center block"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-transparent" />
           </div>
@@ -390,7 +381,7 @@ const Index = () => {
               <ScrollReveal>
                 <div className="max-w-2xl text-primary-foreground bg-gradient-to-b from-black/70 via-black/50 to-black/10 rounded-2xl px-6 py-6 md:px-8 md:py-8">
                   <p className="text-sm uppercase tracking-[0.3em] text-primary-foreground/80 mb-4">
-                    A weekend that feels like yours
+                    A weekend that is completely yours
                   </p>
                   <blockquote className="text-lg font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
                     “We didn’t want to build just another venue. We wanted to create something deeper—a place where people could slow down, truly connect, and celebrate life and their unique individual love stories across an
@@ -567,14 +558,14 @@ const Index = () => {
                 </div>
               </ScrollReveal>
 
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
                 <ScrollReveal delay={0}>
                   <Card
-                    className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     tabIndex={0}
                   >
-                    <div className="absolute inset-0 flex items-center justify-center p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                      <p className="text-sm text-muted-foreground">
+                    <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                      <p className="text-[11px] sm:text-sm leading-relaxed text-muted-foreground">
                         Full property access, ceremony + reception spaces, cabin suite, décor collection, and essentials for a simple weekday celebration.
                       </p>
                     </div>
@@ -589,11 +580,11 @@ const Index = () => {
 
                 <ScrollReveal delay={100}>
                   <Card
-                    className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     tabIndex={0}
                   >
-                    <div className="absolute inset-0 flex items-center justify-center p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                      <p className="text-sm text-muted-foreground">
+                    <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                      <p className="text-[11px] sm:text-sm leading-relaxed text-muted-foreground">
                         Weekend access Fri–Sun with ceremony + reception areas, cabin stay, décor collection, and room for camping guests.
                       </p>
                     </div>
@@ -608,16 +599,17 @@ const Index = () => {
 
                 <ScrollReveal delay={200}>
                   <Card
-                    className="bg-card border-2 border-secondary relative shadow-medium h-full group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="bg-card border-2 border-secondary relative shadow-medium h-full min-h-[220px] group overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     tabIndex={0}
                   >
-                    <div className="absolute inset-0 flex items-center justify-center p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                      <p className="text-sm text-muted-foreground">
+                    <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                      <p className="text-[11px] sm:text-sm leading-relaxed text-muted-foreground">
                         Extended midweek-to-weekend access with full property amenities, cabin + camping, décor collection, and space for multiple events.
                       </p>
                     </div>
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground text-xs px-3 py-1 rounded-full">
-                      Most Desired Package
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1 rounded-full bg-gradient-to-r from-secondary to-secondary-dark text-secondary-foreground text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] px-3 py-1 shadow-lg">
+                      <Star className="w-3 h-3" />
+                      <span>Most Desired</span>
                     </div>
                     <CardContent className="p-6 text-center">
                       <h3 className="text-xl font-serif font-semibold mb-1">5-Day</h3>
@@ -630,11 +622,11 @@ const Index = () => {
 
                 <ScrollReveal delay={300}>
                   <Card
-                    className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     tabIndex={0}
                   >
-                    <div className="absolute inset-0 flex items-center justify-center p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                      <p className="text-sm text-muted-foreground">
+                    <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                      <p className="text-[11px] sm:text-sm leading-relaxed text-muted-foreground">
                         Full 10-day retreat with complete property access, cabin + camping, décor collection, and flexibility for multiple gatherings.
                       </p>
                     </div>
