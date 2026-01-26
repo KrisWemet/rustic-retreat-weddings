@@ -181,35 +181,45 @@ const Index = () => {
             }} className="max-w-4xl mx-auto pb-14">
                 <CarouselContent>
                   <CarouselItem>
-                    <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft">
+                    <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full">
                       <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
                       <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
                         "The property is stunning, featuring a romantic couples cabin, enchanting forested areas, and a breathtaking gazebo adorned with lights and ample space. The seamless flow to a gorgeous dance floor and field area, endless paths, and an inviting fire pit hangout near the couples suite made for a fun way to end a long night of dancing. Roasting hotdogs and smores, camping with family and friends added an extra layer of joy to our wedding."
                       </blockquote>
                       <p className="text-sm text-muted-foreground">— Tabitha, September 2025</p>
+                      <div className="mt-6 flex items-center justify-between">
+                        <CarouselPrevious className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
+                        <CarouselNext className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
+                      </div>
                     </div>
                   </CarouselItem>
                   <CarouselItem>
-                    <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft">
+                    <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full">
                       <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
                       <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
                         "Such an amazing experience from the moment we contacted Rustic Retreat to the time we checked out. The venue is absolutely beautiful and you will not be disappointed. I will absolutely recommend this amazing place to anyone and everyone looking for a small to medium romantic wedding. When you check in you are greeted by amazing hospitality."
                       </blockquote>
                       <p className="text-sm text-muted-foreground">— Ali, August 2025</p>
+                      <div className="mt-6 flex items-center justify-between">
+                        <CarouselPrevious className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
+                        <CarouselNext className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
+                      </div>
                     </div>
                   </CarouselItem>
                   <CarouselItem>
-                    <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft">
+                    <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full">
                       <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
                       <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
                         "My husband and I got married here two weeks ago (planned a wedding in just over a month)—let me tell ya, it was an absolute blast! Shannon and her husband went above and beyond to make sure everything went smoothly for us."
                       </blockquote>
                       <p className="text-sm text-muted-foreground">— Viktoria, June 2025</p>
+                      <div className="mt-6 flex items-center justify-between">
+                        <CarouselPrevious className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
+                        <CarouselNext className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
+                      </div>
                     </div>
                   </CarouselItem>
                 </CarouselContent>
-                <CarouselPrevious className="left-6 top-auto bottom-4 translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20 z-10" />
-                <CarouselNext className="right-6 top-auto bottom-4 translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20 z-10" />
               </Carousel>
             </ScrollReveal>
           </div>
@@ -350,12 +360,12 @@ const Index = () => {
                 </ScrollReveal>
                 <ScrollReveal delay={300}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">Starlight and music outside, not the same indoor routine you've seen a hundred times.</p>
+                    <p className="font-medium">Music and dancing under the open sky, not the same indoor routine you've seen a hundred times.</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={400}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">The freedom to be themselves, whether that creating a DIY celebration, or extravigant event that reflects their unique story</p>
+                    <p className="font-medium">The freedom to be themselves, whether that's creating a DIY celebration or an extravagant event that reflects their unique story.</p>
                   </div>
                 </ScrollReveal>
               </div>
