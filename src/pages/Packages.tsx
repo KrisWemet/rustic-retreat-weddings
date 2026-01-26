@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
 import receptionTable from "@/assets/gallery/reception-table-3.jpg";
 import ceremonySetupWide from "@/assets/gallery/ceremony-setup-wide.jpg";
@@ -62,12 +63,14 @@ const Packages = () => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Wedding Packages & Pricing"
         description="Choose from 3-day ($4,500) or 5-day ($5,500) wedding packages at Rustic Retreat. Both include exclusive property access, cabin accommodation, décor collection, and complete creative freedom."
         path="/packages"
         image={loveMarqueeArch}
+        keywords={["wedding packages edmonton", "weekend wedding pricing alberta", "multi-day wedding cost", "all-inclusive wedding venue edmonton", "wedding venue pricing alberta", "3 day wedding package", "5 day wedding package"]}
       />
+      <BreadcrumbSchema />
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(packageSchema)}
@@ -82,6 +85,9 @@ const Packages = () => {
           <img
             src={loveMarqueeArch}
             alt="LOVE marquee letters with a ceremony arch in a forest clearing at Rustic Retreat"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary/70" />
@@ -124,6 +130,8 @@ const Packages = () => {
               <img
                 src={weddingParty}
                 alt="Wedding party celebrating at Rustic Retreat"
+                loading="lazy"
+                decoding="async"
                 className="rounded-lg shadow-lg w-full h-[300px] object-cover"
               />
             </div>
@@ -134,18 +142,21 @@ const Packages = () => {
                 alt="Groomsmen cheering with drinks on a forest trail at Rustic Retreat"
                 className="rounded-lg shadow-lg w-full h-[240px] object-cover"
                 loading="lazy"
+                decoding="async"
               />
               <img
                 src={loveMarquee}
                 alt="LOVE marquee letters with ceremony backdrop in a forest clearing"
                 className="rounded-lg shadow-lg w-full h-[240px] object-cover"
                 loading="lazy"
+                decoding="async"
               />
               <img
                 src={brideDancing}
                 alt="Bride dancing at the rustic pavilion reception at Rustic Retreat"
                 className="rounded-lg shadow-lg w-full h-[240px] object-cover"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -599,16 +610,22 @@ const Packages = () => {
             <img
               src={cardBoxWineBarrel}
               alt="Rustic card box on wine barrel at wedding reception"
+              loading="lazy"
+              decoding="async"
               className="rounded-lg shadow-md w-full h-48 object-cover"
             />
             <img
               src={guestFavorBox}
               alt="Wedding guest favor boxes with rustic details"
+              loading="lazy"
+              decoding="async"
               className="rounded-lg shadow-md w-full h-48 object-cover"
             />
             <img
               src={firstDanceSparklers}
               alt="First dance with sparklers at evening reception"
+              loading="lazy"
+              decoding="async"
               className="rounded-lg shadow-md w-full h-48 object-cover"
             />
           </div>
@@ -833,12 +850,14 @@ const Packages = () => {
               src={ceremonySetupWide}
               alt="Forest ceremony setup with decorated arch at Rustic Retreat Weddings"
               loading="lazy"
+              decoding="async"
               className="shadow-xl w-full h-full object-cover"
             />
             <img
               src={receptionTable}
               alt="Evening outdoor wedding reception celebration at Rustic Retreat"
               loading="lazy"
+              decoding="async"
               className="shadow-xl w-full h-full object-cover"
             />
           </div>

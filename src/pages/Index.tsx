@@ -10,7 +10,6 @@ import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import OrganizationSchema from "@/components/OrganizationSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import ExclusivityBanner from "@/components/ExclusivityBanner";
 import {
   Carousel,
   CarouselContent,
@@ -43,19 +42,63 @@ import dressGazebo from "@/assets/gallery/dress-forest-gazebo.jpg";
 import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const Index = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
+  const [videoSrc, setVideoSrc] = useState<string | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const {
-    ref: videoSectionRef,
-    isVisible: isVideoVisible
-  } = useScrollAnimation({
-    threshold: 0.3,
-    triggerOnce: false
-  });
+  const videoSectionRef = useRef<HTMLDivElement>(null);
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+  const [isVideoNear, setIsVideoNear] = useState(false);
   useEffect(() => {
+    const element = videoSectionRef.current;
+    if (!element) return;
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      setIsVideoNear(true);
+      setIsVideoVisible(true);
+      return;
+    }
+
+    const preloadObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVideoNear(true);
+          preloadObserver.unobserve(entry.target);
+        }
+      },
+      { threshold: 0, rootMargin: "200px 0px 200px 0px" }
+    );
+
+    const playObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          setIsVideoVisible(true);
+        } else {
+          setIsVideoVisible(false);
+        }
+      },
+      { threshold: [0, 0.5] }
+    );
+
+    preloadObserver.observe(element);
+    playObserver.observe(element);
+
+    return () => {
+      preloadObserver.disconnect();
+      playObserver.disconnect();
+    };
+  }, []);
+  useEffect(() => {
+    if (isVideoNear && !videoSrc) {
+      setVideoSrc("/videos/venue-tour.mp4");
+    }
+  }, [isVideoNear, videoSrc]);
+  useEffect(() => {
+    if (!videoSrc || !videoRef.current) {
+      return;
+    }
     if (videoRef.current) {
       if (isVideoVisible) {
         videoRef.current.play().catch(() => {
@@ -81,6 +124,9 @@ const Index = () => {
           <img
             src={heroSunsetMeadow}
             alt="Couple in the woodland at Rustic Retreat"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="absolute inset-0 h-full w-full object-cover object-[50%_40%]"
           />
           <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_40%,rgba(0,0,0,0.75)_85%,rgba(0,0,0,0.9)_100%)]" />
@@ -110,9 +156,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        {/* Exclusivity & Value Banner */}
-        <ExclusivityBanner />
 
         {/* Testimonial Carousel - Immediate Social Proof */}
         <section className="section-cream py-16 relative overflow-hidden">
@@ -237,7 +280,23 @@ const Index = () => {
             
             <div ref={videoSectionRef} className="max-w-4xl mx-auto">
               <div className="relative overflow-hidden shadow-xl group">
-                <video ref={videoRef} muted={isMuted} loop playsInline className="w-full h-auto" src="/videos/venue-tour.mp4" />
+                <video
+                  ref={videoRef}
+                  muted={isMuted}
+                  loop
+                  playsInline
+                  preload="auto"
+                  poster="/videos/venue-tour-poster.jpg"
+                  className="w-full h-auto"
+                  src={videoSrc || undefined}
+                  onCanPlay={() => {
+                    if (isVideoVisible) {
+                      videoRef.current?.play().catch(() => {
+                        // Autoplay can be blocked; ignore.
+                      });
+                    }
+                  }}
+                />
                 <button onClick={() => setIsMuted(!isMuted)} className="absolute bottom-4 right-4 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110" aria-label={isMuted ? "Unmute video" : "Mute video"}>
                   {isMuted ? <VolumeX className="w-5 h-5 text-primary" /> : <Volume2 className="w-5 h-5 text-primary" />}
                 </button>
@@ -251,11 +310,21 @@ const Index = () => {
 
         {/* Video Modal */}
         <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
-          <DialogContent className="max-w-5xl p-0 bg-black border-none">
-            <video controls autoPlay className="w-full h-auto max-h-[80vh]" src="/videos/venue-tour.mp4">
-              Your browser does not support the video tag.
-            </video>
-          </DialogContent>
+          {isVideoOpen && (
+            <DialogContent className="max-w-5xl p-0 bg-black border-none">
+              <video
+                controls
+                autoPlay
+                loop
+                preload="metadata"
+                poster="/videos/venue-tour-poster.jpg"
+                className="w-full h-auto max-h-[80vh]"
+                src="/videos/venue-tour.mp4"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </DialogContent>
+          )}
         </Dialog>
 
         {/* Is This Your Place? - Streamlined */}
@@ -265,34 +334,34 @@ const Index = () => {
               <ScrollReveal>
                 <div className="text-center mb-10">
                   <p className="section-label">IS THIS YOUR PLACE?</p>
-                  <h2 className="text-3xl md:text-4xl font-serif mb-4">This is for couples who...</h2>
+                  <h2 className="text-3xl md:text-4xl font-serif mb-4">This is for couples who want...</h2>
                 </div>
               </ScrollReveal>
 
               <div className="grid md:grid-cols-2 gap-4 mb-10">
                 <ScrollReveal delay={0}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">1. Choose a weekend that unfolds slowly, not a wedding that ends before it really begins.</p>
+                    <p className="font-medium">A weekend that unfolds slowly, not a wedding that ends before it really begins.</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={100}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">2. Choose open air and rustling poplars, not a ballroom ceiling and a strict schedule.</p>
+                    <p className="font-medium">Open air and rustling poplars, not a ballroom ceiling and a strict schedule.</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">3. Choose a celebration that reflects your story, not a template you're expected to fit into.</p>
+                    <p className="font-medium">A celebration that reflects your story, not a template you're expected to fit into.</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={300}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">4. Choose starlight and music outside, not the same indoor routine you've seen a hundred times.</p>
+                    <p className="font-medium">Starlight and music outside, not the same indoor routine you've seen a hundred times.</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={400}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft">
-                    <p className="font-medium">5. Want the freedom to be themselves, creating a DIY celebration that reflects their unique story from the first tent peg to the last dance.</p>
+                    <p className="font-medium">The freedom to be themselves, creating a DIY celebration that reflects their unique story from the first tent peg to the last dance.</p>
                   </div>
                 </ScrollReveal>
               </div>
@@ -313,7 +382,13 @@ const Index = () => {
         {/* Visual Reset - Full Width Moment */}
         <section className="relative overflow-hidden">
           <div className="relative">
-            <img src={dressGazebo} alt="Wedding dress displayed under the forest gazebo at Rustic Retreat" className="w-full h-auto block" />
+            <img
+              src={dressGazebo}
+              alt="Wedding dress displayed under the forest gazebo at Rustic Retreat"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-auto block"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-transparent" />
           </div>
           <div className="absolute inset-0 z-10">
@@ -323,10 +398,11 @@ const Index = () => {
                   <p className="text-sm uppercase tracking-[0.3em] text-primary-foreground/80 mb-4">
                     A weekend that feels like yours
                   </p>
-                  <blockquote className="text-2xl md:text-3xl font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
-                    “We didn’t want a venue. We wanted a place where everyone could stay, wander, and breathe.”
+                  <blockquote className="text-xl md:text-2xl font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
+                    “We didn’t want just another venue. We wanted to create a place where people could gather, connect, and celebrate—not just for a few hours, but for an
+                    <span className="block text-center -ml-[10%] text-[#D8A799] italic text-[1.1em] md:text-[1.15em]">entire weekend.”</span>
                   </blockquote>
-                  <p className="mt-4 text-sm text-primary-foreground/80">— Rustic Retreat couple</p>
+                  <p className="mt-4 text-sm text-primary-foreground/80">— Shannon and Chris (Rustic Retreat Owners)</p>
                 </div>
               </ScrollReveal>
             </div>
@@ -631,9 +707,9 @@ const Index = () => {
 
               <ScrollReveal direction="right">
                 <div className="grid grid-cols-2 gap-3">
-                  <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft" />
-                  <img src={receptionGazebo} alt="Couple and friends in an open field at Rustic Retreat" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft" />
-                  <img src={pavilionReception} alt="Rustic pavilion reception with guests cheering" loading="lazy" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2" />
+                  <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft" />
+                  <img src={receptionGazebo} alt="Couple and friends in an open field at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft" />
+                  <img src={pavilionReception} alt="Rustic pavilion reception with guests cheering" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2" />
                 </div>
               </ScrollReveal>
             </div>
@@ -666,6 +742,8 @@ const Index = () => {
             <img
               src={weddingPartyCheer}
               alt="Wedding party cheering outdoors at Rustic Retreat"
+              loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-primary/85" />

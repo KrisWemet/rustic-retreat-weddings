@@ -45,6 +45,7 @@ const RealWeddings = () => {
                           src={story.heroImage}
                           alt={`${story.coupleNames} wedding at Rustic Retreat Alberta`}
                           loading="lazy"
+                          decoding="async"
                           className="w-full h-72 lg:h-full object-cover"
                         />
                         <div className="absolute bottom-4 left-4">

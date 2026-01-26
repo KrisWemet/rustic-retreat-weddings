@@ -56,6 +56,9 @@ const WeddingStory = () => {
             <img
               src={story.heroImage}
               alt={`${story.coupleNames} wedding portrait at Rustic Retreat`}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               className="h-full w-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent" />
@@ -195,6 +198,7 @@ const WeddingStory = () => {
                 <img 
                   src={story.galleryImages[selectedImageIndex].src} 
                   alt={story.galleryImages[selectedImageIndex].alt}
+                  decoding="async"
                   className="w-full h-auto max-h-[85vh] object-contain"
                 />
                 {story.galleryImages[selectedImageIndex].caption && (

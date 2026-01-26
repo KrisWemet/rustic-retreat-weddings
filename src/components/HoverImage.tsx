@@ -39,6 +39,7 @@ const HoverImage = ({
         src={src}
         alt={alt}
         loading={loading}
+        decoding="async"
         className={cn(
           'w-full h-full object-cover transition-transform duration-500 group-hover:scale-110',
           imageClassName

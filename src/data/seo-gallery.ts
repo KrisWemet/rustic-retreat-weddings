@@ -73,12 +73,6 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
     category: "Romance"
   },
   {
-    file: "rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-under-veil-in-woods-46.jpg",
-    alt: "Couple kissing under the veil in the woods at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
-    description: "Couple kissing under the veil in the woods captured at Rustic Retreat Weddings near Lac La Nonne, Alberta—a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
-    category: "Romance"
-  },
-  {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-family-portrait-bride-groom-parents-fall-woods-11.jpg",
     alt: "Bride and groom pose with family in golden fall foliage at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
     description: "Family portrait in the golden autumn woods at Rustic Retreat Weddings near Lac La Nonne, Alberta. Private forest trails and natural backdrops for timeless photos.",
@@ -139,30 +133,6 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
     category: "Ceremony"
   },
   {
-    file: "rustic-retreat-weddings-lac-la-nonne-alberta-newlyweds-walking-hand-in-hand-forest-trail-18.jpg",
-    alt: "Newly married couple walk away hand-in-hand down a forest trail at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
-    description: "A quiet just-married walk down the forest trail at Rustic Retreat Weddings near Lac La Nonne, Alberta. Private acreage with endless photo paths.",
-    category: "Portraits"
-  },
-  {
-    file: "rustic-retreat-weddings-lac-la-nonne-alberta-outdoor-first-dance-under-string-lights-31.jpg",
-    alt: "Bride and groom dancing on an outdoor forest dance floor under string lights at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
-    description: "A couple shares their first dance on Rustic Retreat’s outdoor dance floor surrounded by trees and warm string lights in Alberta.",
-    category: "Reception"
-  },
-  {
-    file: "rustic-retreat-weddings-lac-la-nonne-alberta-rustic-head-table-candles-and-florals-38.jpg",
-    alt: "Bride and groom laughing at their head table under a rustic pavilion with candles and florals at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
-    description: "A cozy reception setup with candles, florals, and a timber pavilion backdrop—Rustic Retreat’s signature forest wedding vibe.",
-    category: "Reception"
-  },
-  {
-    file: "rustic-retreat-weddings-lac-la-nonne-alberta-rustic-pavilion-reception-entrance-guests-cheering-19.jpg",
-    alt: "Guests cheer as the bride and groom arrive at the rustic pavilion reception at Rustic Retreat Weddings, Alberta.",
-    description: "Guests cheer as the couple arrives at the rustic pavilion reception at Rustic Retreat Weddings near Lac La Nonne, Alberta. Open-air vibes, warm lighting, and nature all around.",
-    category: "Reception"
-  },
-  {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-sparkler-moment-on-dance-floor-35.jpg",
     alt: "Bride and groom dancing while friends hold sparklers around them on Rustic Retreat’s outdoor dance floor near Lac La Nonne, Alberta.",
     description: "A high-energy celebration moment with sparklers and friends gathered around the couple on Rustic Retreat’s outdoor dance floor.",
@@ -179,18 +149,6 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
     alt: "Two-tier semi-naked wedding cake with floral accents and a gold monogram topper, photographed outdoors in the woods.",
     description: "Detail shot of a two-tier semi-naked wedding cake with florals and a gold topper, styled for an outdoor forest wedding at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
     category: "Details"
-  },
-  {
-    file: "rustic-retreat-weddings-lac-la-nonne-alberta-wedding-party-cheer-couple-kissing-forest-group-portrait-07.jpg",
-    alt: "Large wedding party cheering with hands up while the couple kisses in a forest clearing at Rustic Retreat Weddings.",
-    description: "Forest group portrait with the couple kissing and the wedding party cheering—captured at Rustic Retreat Weddings, a multi-day outdoor venue near Lac La Nonne, Alberta.",
-    category: "Wedding Party"
-  },
-  {
-    file: "rustic-retreat-weddings-lac-la-nonne-alberta-wedding-party-portrait-bridesmaids-lavender-groomsmen-forest-16.jpg",
-    alt: "Wedding party portrait with bridesmaids in lavender and groomsmen in suits in the autumn woods at Rustic Retreat Weddings, Alberta.",
-    description: "Full wedding party portrait in the forest at Rustic Retreat Weddings near Lac La Nonne, Alberta. Ideal for fall weddings with rich, natural colors.",
-    category: "Wedding Party"
   },
   {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-in-white-rose-43.jpg",

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CTAButton } from "@/components/ui/cta-button";
@@ -9,7 +9,9 @@ import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { seoGalleryMeta } from "@/data/seo-gallery";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Gallery imports
 import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
@@ -31,7 +33,6 @@ import receptionTable3 from "@/assets/gallery/reception-table-3.jpg";
 import receptionTable4 from "@/assets/gallery/reception-table-4.jpg";
 import dressGazebo from "@/assets/gallery/dress-forest-gazebo.jpg";
 import dressPavilion from "@/assets/gallery/dress-forest-pavilion.jpg";
-import weddingRings2 from "@/assets/gallery/wedding-rings-flower-2.jpg";
 import ceremonyWideShot from "@/assets/gallery/ceremony-wide-shot.jpg";
 import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
 import veilKissMistyForest from "@/assets/gallery/veil-kiss-misty-forest.jpg";
@@ -167,12 +168,6 @@ const baseImages: GalleryImage[] = [
     description: "The rings that seal your promise, nestled in nature's beauty",
     category: "Details" 
   },
-  { 
-    src: weddingRings2, 
-    alt: "Detail shot of wedding bands with floral arrangement", 
-    description: "Forever begins here—a symbol of your commitment",
-    category: "Details" 
-  },
   {
     src: ceremonyWideShot,
     alt: "Wide outdoor ceremony with wedding party in forest clearing at Rustic Retreat",
@@ -266,7 +261,17 @@ const normalizeCategory = (category: string) => {
   return category;
 };
 
-const images: GalleryImage[] = [...baseImages, ...seoImages].map((image) => ({
+const interleaveImages = (primary: GalleryImage[], secondary: GalleryImage[]) => {
+  const mixed: GalleryImage[] = [];
+  const max = Math.max(primary.length, secondary.length);
+  for (let i = 0; i < max; i += 1) {
+    if (primary[i]) mixed.push(primary[i]);
+    if (secondary[i]) mixed.push(secondary[i]);
+  }
+  return mixed;
+};
+
+const images: GalleryImage[] = interleaveImages(baseImages, seoImages).map((image) => ({
   ...image,
   category: normalizeCategory(image.category)
 }));
@@ -286,11 +291,48 @@ const getCategoryCount = (category: string) => {
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   const filteredImages = activeCategory === "All" 
     ? images 
     : images.filter(img => img.category === activeCategory);
+
+  const selectedImage = selectedImageIndex !== null ? filteredImages[selectedImageIndex] : null;
+  const totalImages = filteredImages.length;
+
+  const handlePrevImage = useCallback(() => {
+    if (selectedImageIndex === null || totalImages === 0) return;
+    setSelectedImageIndex((prev) => {
+      if (prev === null) return prev;
+      return (prev - 1 + totalImages) % totalImages;
+    });
+  }, [selectedImageIndex, totalImages]);
+
+  const handleNextImage = useCallback(() => {
+    if (selectedImageIndex === null || totalImages === 0) return;
+    setSelectedImageIndex((prev) => {
+      if (prev === null) return prev;
+      return (prev + 1) % totalImages;
+    });
+  }, [selectedImageIndex, totalImages]);
+
+  useEffect(() => {
+    if (selectedImageIndex === null) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowLeft") {
+        handlePrevImage();
+      }
+      if (event.key === "ArrowRight") {
+        handleNextImage();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleNextImage, handlePrevImage, selectedImageIndex]);
+
+  useEffect(() => {
+    setSelectedImageIndex(null);
+  }, [activeCategory]);
 
   return (
     <PageTransition>
@@ -299,7 +341,9 @@ const Gallery = () => {
         description="Browse real wedding photos from Rustic Retreat. See ceremony setups, reception details, romantic portraits, and more from couples who celebrated on our 65-acre Alberta property."
         path="/gallery"
         image={veilKissMistyForest}
+        keywords={["wedding photos edmonton venue", "rustic wedding photography alberta", "outdoor wedding gallery", "wedding venue photo inspiration", "forest wedding photos", "alberta wedding venue pictures"]}
       />
+      <BreadcrumbSchema />
       <div className="min-h-screen">
         <Navigation />
 
@@ -341,12 +385,13 @@ const Gallery = () => {
                   key={index}
                   className="gallery-item group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
                   style={{ animationDelay: `${Math.min(index * 75, 600)}ms` }}
-                  onClick={() => setSelectedImage(image)}
+                  onClick={() => setSelectedImageIndex(index)}
                 >
                   <img
                     src={image.src}
                     alt={image.alt}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end">
@@ -366,13 +411,14 @@ const Gallery = () => {
         </section>
 
         {/* Lightbox with description */}
-        <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <Dialog open={selectedImageIndex !== null} onOpenChange={() => setSelectedImageIndex(null)}>
           <DialogContent className="max-w-5xl p-0 bg-transparent border-none">
             {selectedImage && (
               <div className="relative">
                 <img 
                   src={selectedImage.src} 
                   alt={selectedImage.alt}
+                  decoding="async"
                   className="w-full h-auto max-h-[85vh] object-contain"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6 text-primary-foreground">
@@ -383,6 +429,24 @@ const Gallery = () => {
                     {selectedImage.description}
                   </p>
                 </div>
+                {totalImages > 1 && (
+                  <>
+                    <button 
+                      onClick={handlePrevImage}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary/60 hover:bg-primary/80 text-primary-foreground p-2 rounded-full transition-colors"
+                      aria-label="Previous image"
+                    >
+                      <ChevronLeft className="w-6 h-6" />
+                    </button>
+                    <button 
+                      onClick={handleNextImage}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary/60 hover:bg-primary/80 text-primary-foreground p-2 rounded-full transition-colors"
+                      aria-label="Next image"
+                    >
+                      <ChevronRight className="w-6 h-6" />
+                    </button>
+                  </>
+                )}
               </div>
             )}
           </DialogContent>

@@ -9,6 +9,7 @@ import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-family-portrait-bride-groom-parents-fall-woods-11.jpg";
 import campfireNight from "@/assets/campfire-evening-setting.avif";
@@ -26,7 +27,9 @@ const About = () => {
         description="Family-owned since 2006. What started as annual gatherings became a wedding venue after we threw our own celebrations here. Now we share 65 acres with couples who want something different."
         path="/about"
         image={weddingParty}
+        keywords={["family owned wedding venue alberta", "rustic retreat story", "edmonton wedding venue owners", "personal wedding venue alberta", "intimate wedding venue near edmonton", "private property wedding alberta"]}
       />
+      <BreadcrumbSchema />
       <div className="min-h-screen">
         <Navigation />
 
@@ -221,12 +224,14 @@ const About = () => {
                     alt="Groomsmen celebrating with drinks on a forest path at Rustic Retreat"
                     className="w-full h-56 md:h-64 object-cover rounded-xl shadow-soft"
                     loading="lazy"
+                    decoding="async"
                   />
                   <img
                     src={coupleForestKiss}
                     alt="Couple kissing on the forest trail at Rustic Retreat"
                     className="w-full h-56 md:h-64 object-cover rounded-xl shadow-soft"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </ScrollReveal>

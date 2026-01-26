@@ -29,6 +29,9 @@ const PageHero = ({
         <img
           src={backgroundImage}
           alt={backgroundImageAlt || title}
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           className="h-full w-full object-cover"
         />
         <div className={`absolute inset-0 bg-gradient-to-b ${overlayClasses[overlayOpacity]}`} />

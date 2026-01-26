@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
 
+const FacebookIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
+    <path d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H8.08V12h2.36V9.8c0-2.33 1.39-3.62 3.52-3.62 1.02 0 2.09.18 2.09.18v2.3h-1.18c-1.16 0-1.52.72-1.52 1.46V12h2.59l-.41 2.88h-2.18v6.99A10 10 0 0 0 22 12z" />
+  </svg>
+);
+
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -71,6 +77,17 @@ const Footer = () => {
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 <a href="mailto:rusticretreatalberta@gmail.com" className="hover:text-secondary transition-colors text-primary-foreground/80">
                   rusticretreatalberta@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <FacebookIcon className="w-4 h-4 flex-shrink-0" />
+                <a
+                  href="https://www.facebook.com/share/1J4ztXhiSk/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-secondary transition-colors text-primary-foreground/80"
+                >
+                  Facebook
                 </a>
               </li>
             </ul>

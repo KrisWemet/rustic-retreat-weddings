@@ -9,6 +9,7 @@ import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
 import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-family-portrait-bride-groom-parents-fall-woods-11.jpg";
 import coupleKissingTrail from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-forest-trail-41.jpg";
@@ -20,12 +21,14 @@ import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, Doll
 const Venue = () => {
   return (
     <PageTransition>
-      <SEO 
+      <SEO
         title="The Venue"
         description="Explore our private cabin for newlyweds, 65-acre forest property, and curated wedding décor collection. Off-grid solar power, comfortable accommodations, and endless photo opportunities near Edmonton."
         path="/venue"
         image={cabinExterior}
+        keywords={["wedding venue cabin alberta", "private wedding property edmonton", "65 acre wedding venue", "outdoor wedding ceremony spaces", "wedding décor collection alberta", "off-grid wedding venue"]}
       />
+      <BreadcrumbSchema />
       <div className="min-h-screen">
         <Navigation />
         
