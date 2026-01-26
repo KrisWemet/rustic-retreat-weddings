@@ -571,7 +571,7 @@ const Index = () => {
 
             {/* Masonry-style Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
-              <ScrollReveal delay={0} className="col-span-2 row-span-2">
+              <ScrollReveal delay={0} className="col-span-2 row-span-3">
                 <HoverImage src={meadowSunsetKiss} alt="Romantic veil kiss in misty forest at Rustic Retreat Weddings near Lac La Nonne" description="Dreamy moments under the veil in the misty forest" category="Romance" className="w-full h-full shadow-soft" />
               </ScrollReveal>
               <ScrollReveal delay={100}>
@@ -586,9 +586,15 @@ const Index = () => {
               <ScrollReveal delay={250}>
                 <HoverImage src={weddingPartyFormal} alt="Wedding party portrait with lavender bridesmaids in forest setting" description="Your favorite people, all dressed up in the woods" category="Wedding Party" className="shadow-soft" aspectRatio="square" />
               </ScrollReveal>
+              <ScrollReveal delay={300}>
+                <HoverImage src={ringsBouquet} alt="Wedding rings nestled in a bouquet at Rustic Retreat" description="Detail shots that capture the quiet magic" category="Details" className="shadow-soft" aspectRatio="square" />
+              </ScrollReveal>
+              <ScrollReveal delay={350}>
+                <HoverImage src={goldCakeCuttingSet} alt="Gold cake cutting set with florals at Rustic Retreat" description="Golden touches that elevate your tablescape" category="Reception" className="shadow-soft" aspectRatio="square" />
+              </ScrollReveal>
             </div>
 
-            <ScrollReveal delay={300}>
+            <ScrollReveal delay={400}>
               <div className="text-center mt-10">
                 <Link to="/gallery" className="inline-flex items-center gap-2 text-secondary hover:text-secondary-dark font-medium transition-colors">
                   View the full gallery <ArrowRight className="w-4 h-4" />
