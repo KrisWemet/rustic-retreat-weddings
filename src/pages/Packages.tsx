@@ -29,7 +29,7 @@ const Packages = () => {
     itemListElement: [
       {
         "@type": "Offer",
-        name: "The Grand Adventure",
+        name: "The Grand 10-Day Adventure",
         description: "10-day destination-style wedding experience with maximum flexibility.",
         price: "10500",
         priceCurrency: "CAD",
@@ -37,7 +37,7 @@ const Packages = () => {
       },
       {
         "@type": "Offer",
-        name: "The Full Experience",
+        name: "The Full 5-Day Experience",
         description: "5-day celebration (Wed-Sun or Thu-Mon) with immersive guest time.",
         price: "5500",
         priceCurrency: "CAD",
@@ -45,7 +45,7 @@ const Packages = () => {
       },
       {
         "@type": "Offer",
-        name: "The Classic Weekend",
+        name: "The Classic 3-Day Weekend",
         description: "3-day Friday-to-Sunday wedding weekend with exclusive access.",
         price: "4500",
         priceCurrency: "CAD",
@@ -53,7 +53,7 @@ const Packages = () => {
       },
       {
         "@type": "Offer",
-        name: "The Intimate Escape",
+        name: "The Intimate 2-Day Escape",
         description: "2-day weekday elopement experience with full property access.",
         price: "3000",
         priceCurrency: "CAD",
@@ -199,7 +199,7 @@ const Packages = () => {
                 <div className="inline-block bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
                   Premium
                 </div>
-                <h3 className="text-3xl font-bold mb-3">The Grand Adventure</h3>
+                <h3 className="text-3xl font-bold mb-3">The Grand 10-Day Adventure</h3>
                 <p className="text-lg text-muted-foreground mb-6">Full Experience</p>
                 
                 <div className="mb-6">
@@ -242,9 +242,6 @@ const Packages = () => {
                   <p className="text-sm text-muted-foreground">2026 Package Price</p>
                 </div>
 
-                <Link to="/contact">
-                  <Button variant="outline" className="w-full">Schedule Your Property Visit</Button>
-                </Link>
               </CardContent>
             </Card>
 
@@ -254,7 +251,7 @@ const Packages = () => {
                 <div className="inline-block bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
                   ⭐ Our Recommendation
                 </div>
-                <h3 className="text-3xl font-bold mb-3">The Full Experience</h3>
+                <h3 className="text-3xl font-bold mb-3">The Full 5-Day Experience</h3>
                 <p className="text-lg text-muted-foreground mb-6">Wed–Sun or Thu–Mon</p>
                 
                 <div className="mb-6">
@@ -299,16 +296,13 @@ const Packages = () => {
                   <p className="text-sm">2026 Package Price</p>
                 </div>
 
-                <Link to="/contact">
-                  <Button className="w-full bg-secondary hover:bg-secondary/90">Schedule Your Property Visit</Button>
-                </Link>
               </CardContent>
             </Card>
 
             {/* 3-Day Package */}
             <Card className="border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The Classic Weekend</h3>
+                <h3 className="text-3xl font-bold mb-3">The Classic 3-Day Weekend</h3>
                 <p className="text-lg text-muted-foreground mb-6">Friday through Sunday</p>
                 
                 <div className="mb-6">
@@ -352,16 +346,13 @@ const Packages = () => {
                   <p className="text-sm text-muted-foreground">2026 Package Price</p>
                 </div>
 
-                <Link to="/contact">
-                  <Button variant="outline" className="w-full">Schedule Your Property Visit</Button>
-                </Link>
               </CardContent>
             </Card>
 
             {/* 2-Day Package */}
             <Card className="border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The Intimate Escape</h3>
+                <h3 className="text-3xl font-bold mb-3">The Intimate 2-Day Escape</h3>
                 <p className="text-lg text-muted-foreground mb-6">Weekdays Only</p>
                 
                 <div className="mb-6">
@@ -403,9 +394,6 @@ const Packages = () => {
                   <p className="text-sm text-muted-foreground">2026 Package Price</p>
                 </div>
 
-                <Link to="/contact">
-                  <Button variant="outline" className="w-full">Schedule Your Property Visit</Button>
-                </Link>
               </CardContent>
             </Card>
           </div>
@@ -415,7 +403,9 @@ const Packages = () => {
               Not sure which package is right for you? Let's talk during your property visit.
             </p>
             <Link to="/contact">
-              <Button size="lg" variant="outline">Schedule Your Visit</Button>
+              <CTAButton className="text-lg px-10 py-4">
+                Schedule Your Visit
+              </CTAButton>
             </Link>
             <p className="text-xs text-muted-foreground mt-3">* GST not included.</p>
           </div>
