@@ -13,6 +13,8 @@ const About = lazy(() => import("./pages/About"));
 const Venue = lazy(() => import("./pages/Venue"));
 const Packages = lazy(() => import("./pages/Packages"));
 const Gallery = lazy(() => import("./pages/Gallery"));
+const RealWeddings = lazy(() => import("./pages/RealWeddings"));
+const WeddingStory = lazy(() => import("./pages/WeddingStory"));
 const FAQs = lazy(() => import("./pages/FAQs"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -35,6 +37,8 @@ const App = () => (
             <Route path="/venue" element={<Venue />} />
             <Route path="/packages" element={<Packages />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/real-weddings" element={<RealWeddings />} />
+            <Route path="/real-weddings/:slug" element={<WeddingStory />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/contact" element={<Contact />} />
             {/* Redirects for old URLs */}

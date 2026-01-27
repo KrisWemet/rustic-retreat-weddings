@@ -524,8 +524,8 @@ const Index = () => {
                   <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
                     <Target className="w-6 h-6 text-secondary" />
                   </div>
-                  <h3 className="font-semibold mb-2">Paintball & Games</h3>
-                  <p className="text-sm text-muted-foreground">Bring your favorite games for friendly competition in the forest.</p>
+                  <h3 className="font-semibold mb-2">Bubble Soccer & Games</h3>
+                  <p className="text-sm text-muted-foreground">Bring your favorite games for friendly competition.</p>
                 </div>
               </ScrollReveal>
 
@@ -569,51 +569,6 @@ const Index = () => {
                 </div>
               </ScrollReveal>
             </div>
-          </div>
-        </section>
-
-        {/* Photo Gallery */}
-        <section className="section bg-background">
-          <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <div className="text-center mb-12">
-                <p className="section-label">PHOTO GALLERY</p>
-                <h2 className="text-3xl md:text-4xl font-serif mb-4">See yourself here</h2>
-              </div>
-            </ScrollReveal>
-
-            {/* Masonry-style Gallery */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
-              <ScrollReveal delay={0} className="col-span-2 row-span-3">
-                <HoverImage src={meadowSunsetKiss} alt="Romantic veil kiss in misty forest at Rustic Retreat Weddings near Lac La Nonne" description="Dreamy moments under the veil in the misty forest" category="Romance" className="w-full h-full shadow-soft" />
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <HoverImage src={headTable} alt="Rustic head table with candles and white florals at Alberta wedding venue" description="Elegance meets nature—candles and florals create magic" category="Reception" className="shadow-soft" aspectRatio="square" />
-              </ScrollReveal>
-              <ScrollReveal delay={150}>
-                <HoverImage src={loveMarqueeArch} alt="LOVE marquee letters with ceremony arch in forest clearing" description="Iconic LOVE sign lights up your ceremony backdrop" category="Ceremony" className="shadow-soft" aspectRatio="square" />
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <HoverImage src={firstDanceColor} alt="Outdoor first dance under string lights at Rustic Retreat wedding" description="Your first dance under the open sky and twinkling lights" category="Reception" className="shadow-soft" aspectRatio="square" />
-              </ScrollReveal>
-              <ScrollReveal delay={250}>
-                <HoverImage src={weddingPartyFormal} alt="Wedding party portrait with lavender bridesmaids in forest setting" description="Your favorite people, all dressed up in the woods" category="Wedding Party" className="shadow-soft" aspectRatio="square" />
-              </ScrollReveal>
-              <ScrollReveal delay={300}>
-                <HoverImage src={ringsBouquet} alt="Wedding rings nestled in a bouquet at Rustic Retreat" description="Detail shots that capture the quiet magic" category="Details" className="shadow-soft" aspectRatio="square" />
-              </ScrollReveal>
-              <ScrollReveal delay={350}>
-                <HoverImage src={goldCakeCuttingSet} alt="Gold cake cutting set with florals at Rustic Retreat" description="Golden touches that elevate your tablescape" category="Reception" className="shadow-soft" aspectRatio="square" />
-              </ScrollReveal>
-            </div>
-
-            <ScrollReveal delay={400}>
-              <div className="text-center mt-10">
-                <Link to="/gallery" className="inline-flex items-center gap-2 text-secondary hover:text-secondary-dark font-medium transition-colors">
-                  View the full gallery <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </ScrollReveal>
           </div>
         </section>
 
@@ -688,11 +643,11 @@ const Index = () => {
                         Extended midweek-to-weekend access with full property amenities, cabin + camping, décor collection, and space for multiple events.
                       </p>
                     </div>
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1 rounded-full bg-gradient-to-r from-secondary to-secondary-dark text-secondary-foreground text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] px-3 py-1 shadow-lg">
+                    <div className="absolute top-3 left-1/2 -translate-x-1/2 flex items-center gap-1 rounded-full bg-gradient-to-r from-secondary to-secondary-dark text-secondary-foreground text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] px-3 py-1 shadow-lg">
                       <Star className="w-3 h-3" />
                       <span>Most Desired</span>
                     </div>
-                    <CardContent className="p-6 text-center">
+                    <CardContent className="p-6 pt-10 text-center">
                       <h3 className="text-xl font-serif font-semibold mb-1">5-Day</h3>
                       <p className="text-xs text-muted-foreground mb-4">Wed–Sun</p>
                       <p className="text-3xl font-serif text-secondary mb-1">$5,500</p>
@@ -812,7 +767,7 @@ const Index = () => {
                   <p className="text-muted-foreground mb-8">
                     In 2019, we threw our own 120-person wedding right here—complete with a 40x60' pole barn, paintball, axe throwing, and a giant slip-and-slide. That's when we realized: other couples deserve this too.
                   </p>
-                  <Link to="/about" className="inline-flex items-center gap-2 text-secondary hover:text-secondary-dark font-medium transition-colors">
+                  <Link to="/real-weddings" className="inline-flex items-center gap-2 text-secondary hover:text-secondary-dark font-medium transition-colors">
                     Read our full story <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
