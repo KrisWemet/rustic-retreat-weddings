@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
@@ -69,6 +69,9 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
+                <a href="sms:+17802106252" aria-label="Text Rustic Retreat">
+                  <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                </a>
                 <a href="tel:+17802106252" className="hover:text-secondary transition-colors text-primary-foreground/80">
                   (780) 210-6252
                 </a>

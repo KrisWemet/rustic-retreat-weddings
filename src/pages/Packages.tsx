@@ -169,7 +169,7 @@ const Packages = () => {
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center mb-12">
             <ScrollReveal>
               <div className="text-center lg:text-left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Perfect Timeline*</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Perfect Timeline</h2>
                 <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none mb-3">
                   From intimate elopements to the ultimate retreat—find the package that fits your vision.
                 </p>
@@ -238,7 +238,7 @@ const Packages = () => {
                 </div>
 
                 <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$10,500</p>
+                  <p className="text-3xl font-bold mb-2">$10,500*</p>
                   <p className="text-sm text-muted-foreground">2026 Package Price</p>
                 </div>
 
@@ -295,7 +295,7 @@ const Packages = () => {
                 </div>
 
                 <div className="bg-secondary/20 p-6 rounded-lg mb-6 border-2 border-secondary">
-                  <p className="text-3xl font-bold mb-2">$5,500</p>
+                  <p className="text-3xl font-bold mb-2">$5,500*</p>
                   <p className="text-sm">2026 Package Price</p>
                 </div>
 
@@ -348,7 +348,7 @@ const Packages = () => {
                 </div>
 
                 <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$4,500</p>
+                  <p className="text-3xl font-bold mb-2">$4,500*</p>
                   <p className="text-sm text-muted-foreground">2026 Package Price</p>
                 </div>
 
@@ -399,7 +399,7 @@ const Packages = () => {
                 </div>
 
                 <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$3,000</p>
+                  <p className="text-3xl font-bold mb-2">$3,000*</p>
                   <p className="text-sm text-muted-foreground">2026 Package Price</p>
                 </div>
 
@@ -836,7 +836,7 @@ const Packages = () => {
                       <span>All activities and amenities</span>
                     </li>
                   </ul>
-                  <p className="font-bold text-lg">$3,000–$10,500</p>
+                  <p className="font-bold text-lg">$3,000–$10,500*</p>
                   <p className="text-sm mt-2">Based on your timeline—all in ONE connected place</p>
                 </CardContent>
               </Card>
