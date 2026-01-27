@@ -591,7 +591,6 @@ const Index = () => {
                   <p className="text-xs text-secondary font-medium">
                     Popular dates book 12-18 months in advance
                   </p>
-                  <p className="text-xs text-muted-foreground mt-2">All prices plus GST.</p>
                 </div>
               </ScrollReveal>
 
@@ -609,7 +608,7 @@ const Index = () => {
                     <CardContent className="p-6 text-center">
                       <h3 className="text-xl font-serif font-semibold mb-1">2-Day</h3>
                       <p className="text-xs text-muted-foreground mb-4">Weekdays</p>
-                      <p className="text-3xl font-serif text-secondary mb-1">$3,000</p>
+                      <p className="text-3xl font-serif text-secondary mb-1">$3,000*</p>
                       <p className="text-xs text-muted-foreground mb-4">Intimate elopements</p>
                     </CardContent>
                   </Card>
@@ -628,7 +627,7 @@ const Index = () => {
                     <CardContent className="p-6 text-center">
                       <h3 className="text-xl font-serif font-semibold mb-1">3-Day</h3>
                       <p className="text-xs text-muted-foreground mb-4">Fri–Sun</p>
-                      <p className="text-3xl font-serif text-secondary mb-1">$4,500</p>
+                      <p className="text-3xl font-serif text-secondary mb-1">$4,500*</p>
                       <p className="text-xs text-muted-foreground mb-4">Weekend wedding</p>
                     </CardContent>
                   </Card>
@@ -651,7 +650,7 @@ const Index = () => {
                     <CardContent className="p-6 pt-10 text-center">
                       <h3 className="text-xl font-serif font-semibold mb-1">5-Day</h3>
                       <p className="text-xs text-muted-foreground mb-4">Wed–Sun</p>
-                      <p className="text-3xl font-serif text-secondary mb-1">$5,500</p>
+                      <p className="text-3xl font-serif text-secondary mb-1">$5,500*</p>
                       <p className="text-xs text-muted-foreground mb-4">The complete experience</p>
                     </CardContent>
                   </Card>
@@ -670,7 +669,7 @@ const Index = () => {
                     <CardContent className="p-6 text-center">
                       <h3 className="text-xl font-serif font-semibold mb-1">10-Day</h3>
                       <p className="text-xs text-muted-foreground mb-4">Full experience</p>
-                      <p className="text-3xl font-serif text-secondary mb-1">$10,500</p>
+                      <p className="text-3xl font-serif text-secondary mb-1">$10,500*</p>
                       <p className="text-xs text-muted-foreground mb-4">The ultimate retreat</p>
                     </CardContent>
                   </Card>
@@ -684,6 +683,7 @@ const Index = () => {
                       View Full Package Details
                     </Button>
                   </Link>
+                  <p className="text-xs text-muted-foreground mt-3">* GST not included.</p>
                 </div>
               </ScrollReveal>
             </div>
@@ -793,8 +793,8 @@ const Index = () => {
           <div className="relative z-10 container mx-auto px-4 text-center">
             <ScrollReveal>
               <Heart className="w-10 h-10 text-secondary mx-auto mb-6" />
-              <h2 className="text-3xl md:text-5xl font-serif text-primary-foreground mb-6 italic">
-                Come see if it feels like home
+              <h2 className="text-3xl md:text-5xl font-serif text-primary-foreground mb-6">
+                Come see if this is where your <span className="italic text-secondary">Forever</span> begins
               </h2>
               <p className="text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto">
                 Most couples know within 10 minutes of walking the property.
