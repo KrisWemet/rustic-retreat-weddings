@@ -591,6 +591,7 @@ const Index = () => {
                   <p className="text-xs text-secondary font-medium">
                     Popular dates book 12-18 months in advance
                   </p>
+                  <p className="text-xs text-muted-foreground mt-2">All prices plus GST.</p>
                 </div>
               </ScrollReveal>
 
@@ -669,7 +670,7 @@ const Index = () => {
                     <CardContent className="p-6 text-center">
                       <h3 className="text-xl font-serif font-semibold mb-1">10-Day</h3>
                       <p className="text-xs text-muted-foreground mb-4">Full experience</p>
-                      <p className="text-3xl font-serif text-secondary mb-1">$8,500</p>
+                      <p className="text-3xl font-serif text-secondary mb-1">$10,500</p>
                       <p className="text-xs text-muted-foreground mb-4">The ultimate retreat</p>
                     </CardContent>
                   </Card>
