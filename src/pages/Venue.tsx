@@ -48,14 +48,9 @@ const Venue = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">The Cabin: Your Private Sanctuary</h2>
                 
                 <p className="text-lg mb-6 text-muted-foreground">
-                  Saturday night. Stars impossibly bright. Your guests still gathered around the fire. And you—you and your brand new spouse—slip away down a lantern-lit path to a cabin that's been waiting just for you.
+                  The celebration keeps humming outside—voices drifting, the fire still crackling, that warm end-of-night glow settling in. When you’re ready, you step away without going far. Just a few steps from the fire, your cabin feels like a reset: quiet, cozy, and completely yours. It’s the kind of moment where everything slows down, you look at each other, and it finally sinks in… we did it.
                 </p>
 
-                <div className="bg-primary/5 p-8 border-l-4 border-primary mb-8">
-                  <p className="text-xl font-bold">
-                    This is where the performance ends and the marriage begins.
-                  </p>
-                </div>
               </ScrollReveal>
             </div>
           </div>

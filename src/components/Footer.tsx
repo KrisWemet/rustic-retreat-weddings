@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import logoLight from "@/assets/logo/rustic-retreat-logo-light.png";
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
@@ -14,7 +15,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4 font-serif">Rustic Retreat Weddings</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <img
+                src={logoLight}
+                alt="Rustic Retreat logo"
+                className="h-7 w-7 object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+              <h3 className="text-xl font-bold font-serif">Rustic Retreat Weddings</h3>
+            </div>
             <p className="text-primary-foreground/80 text-sm">
               Your intimate 65-acre Alberta retreat where celebrations unfold naturally, just 50 minutes north of Edmonton.
             </p>

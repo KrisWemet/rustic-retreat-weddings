@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import logoDark from "@/assets/logo/rustic-retreat-logo-dark.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -75,7 +76,17 @@ const Navigation = () => {
             </button>
 
             {/* Logo */}
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center gap-2">
+              <img
+                src={logoDark}
+                alt="Rustic Retreat logo"
+                className={cn(
+                  "h-6 w-6 object-contain brightness-0",
+                  isScrolled ? "md:h-6 md:w-6" : "md:h-7 md:w-7"
+                )}
+                loading="eager"
+                decoding="async"
+              />
               <h1
                 className={cn(
                   "font-serif italic text-primary transition-all duration-300",
@@ -146,7 +157,14 @@ const Navigation = () => {
       >
         {/* Menu Header */}
         <div className="flex items-center justify-between p-4 border-b border-border">
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>
+          <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2">
+            <img
+              src={logoDark}
+              alt="Rustic Retreat logo"
+              className="h-6 w-6 object-contain brightness-0"
+              loading="eager"
+              decoding="async"
+            />
             <h2 className="font-serif italic text-xl text-primary">Rustic Retreat</h2>
           </Link>
           <button
