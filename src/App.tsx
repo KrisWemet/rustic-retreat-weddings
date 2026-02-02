@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Suspense, lazy } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import StickyMobileCTA from "./components/StickyMobileCTA";
+import ChatbotWidget from "./components/ChatbotWidget";
 
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
@@ -30,6 +31,7 @@ const App = () => (
       <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <ScrollToTop />
         <StickyMobileCTA />
+        <ChatbotWidget />
         <Suspense fallback={<div className="min-h-screen bg-background" />}>
           <Routes>
             <Route path="/" element={<Index />} />
