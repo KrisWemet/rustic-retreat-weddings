@@ -50,6 +50,11 @@ const Index = () => {
   const videoSectionRef = useRef<HTMLDivElement>(null);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [isVideoNear, setIsVideoNear] = useState(false);
+
+  const enableHomepageV2 =
+    (typeof window !== "undefined" &&
+      new URLSearchParams(window.location.search).get("v2") === "1") ||
+    import.meta.env.VITE_HOMEPAGE_V2 === "true";
   useEffect(() => {
     const element = videoSectionRef.current;
     if (!element) return;
@@ -144,6 +149,12 @@ const Index = () => {
                 <p className="mx-auto mt-3 md:mt-4 lg:mt-5 max-w-3xl text-sm md:text-base lg:text-lg text-white/95">
                   You're claiming a weekend. 65 private acres and a wedding your guests will never forget.
                 </p>
+                {enableHomepageV2 && (
+                  <div className="mt-3 space-y-2 text-xs md:text-sm text-white/90">
+                    <p>2–10 day private wedding retreat near Edmonton — packages from $3,000.</p>
+                    <p className="italic">“We knew within 10 minutes this was our place.” — Ali, Aug 2025</p>
+                  </div>
+                )}
                 <div className="mt-5 md:mt-6 lg:mt-7 flex flex-col items-center gap-3 md:gap-4 sm:flex-row sm:justify-center">
                   <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center bg-[#D8A799] text-white px-8 md:px-10 lg:px-12 py-3 md:py-4 rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-[#cfa08f] transition-colors">
                     Schedule a Visit
@@ -308,6 +319,16 @@ const Index = () => {
                   <Play className="w-5 h-5 text-primary ml-0.5" fill="currentColor" />
                 </button>
               </div>
+              {enableHomepageV2 && (
+                <div className="mt-6 text-center">
+                  <p className="text-muted-foreground mb-4">Ready to see it in person? Most couples know within 10 minutes.</p>
+                  <Link to="/contact">
+                    <Button className="bg-secondary hover:bg-secondary-dark text-secondary-foreground rounded-full px-8">
+                      Book a Tour
+                    </Button>
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -593,6 +614,23 @@ const Index = () => {
                   </p>
                 </div>
               </ScrollReveal>
+
+              {enableHomepageV2 && (
+                <div className="mb-8 flex flex-wrap justify-center gap-3 text-xs md:text-sm text-muted-foreground">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-background px-4 py-2 shadow-soft">
+                    <Users className="w-4 h-4 text-secondary" /> Ceremony + reception spaces
+                  </span>
+                  <span className="inline-flex items-center gap-2 rounded-full bg-background px-4 py-2 shadow-soft">
+                    <MapPin className="w-4 h-4 text-secondary" /> 65 private acres
+                  </span>
+                  <span className="inline-flex items-center gap-2 rounded-full bg-background px-4 py-2 shadow-soft">
+                    <Heart className="w-4 h-4 text-secondary" /> Cabin stay for the couple
+                  </span>
+                  <span className="inline-flex items-center gap-2 rounded-full bg-background px-4 py-2 shadow-soft">
+                    <Sparkles className="w-4 h-4 text-secondary" /> Décor collection + essentials
+                  </span>
+                </div>
+              )}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
                 <ScrollReveal delay={0}>
