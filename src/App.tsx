@@ -8,6 +8,7 @@ import { Suspense, lazy } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import ChatbotWidget from "./components/ChatbotWidget";
+import PricingGuideWidget from "./components/PricingGuideWidget";
 
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
@@ -32,6 +33,7 @@ const App = () => (
         <ScrollToTop />
         <StickyMobileCTA />
         <ChatbotWidget />
+        <PricingGuideWidget />
         <Suspense fallback={<div className="min-h-screen bg-background" />}>
           <Routes>
             <Route path="/" element={<Index />} />
