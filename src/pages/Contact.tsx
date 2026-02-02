@@ -17,6 +17,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import TrustBadges from "@/components/TrustBadges";
 import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
+import { submitInquiry } from "@/lib/inquiry";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
 import receptionEvening from "@/assets/gallery/Images/IMG_5103.jpg";
 import brideWithHorse from "@/assets/gallery/bride-with-horse.jpg";
@@ -36,24 +37,41 @@ const Contact = () => {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("https://formspree.io/f/mgooaleg", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
+      const firstName = String(formData.get("firstName") || "").trim();
+      const lastName = String(formData.get("lastName") || "").trim();
+      const payload = {
+        full_name: `${firstName} ${lastName}`.trim(),
+        email: String(formData.get("email") || "").trim(),
+        phone: String(formData.get("phone") || "").trim(),
+        source: "website-contact",
+        status: "inquiry",
+        event_start_date: String(formData.get("weddingDate") || "").trim() || undefined,
+        estimated_guest_count: Number(formData.get("guestCount") || 0) || undefined,
+        notes: String(formData.get("message") || "").trim(),
+        lead_type: `contact-form | tourDates:${String(formData.get("tourDates") || "").trim()}`,
+      };
 
-      if (response.ok) {
-        setIsSubmitted(true);
-        toast({
-          title: "Message sent!",
-          description: "We'll be in touch within 24 hours to schedule your property visit.",
+      try {
+        await submitInquiry(payload);
+      } catch (_err) {
+        const response = await fetch("https://formspree.io/f/mgooaleg", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
         });
-        form.reset();
-      } else {
-        throw new Error("Form submission failed");
+        if (!response.ok) {
+          throw new Error("Form submission failed");
+        }
       }
+
+      setIsSubmitted(true);
+      toast({
+        title: "Message sent!",
+        description: "We'll be in touch within 24 hours to schedule your property visit.",
+      });
+      form.reset();
     } catch (error) {
       toast({
         title: "Something went wrong",

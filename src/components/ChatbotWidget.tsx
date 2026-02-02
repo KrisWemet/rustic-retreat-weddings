@@ -2,6 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { faqs, FAQItem } from "@/data/faqs";
+import { submitInquiry } from "@/lib/inquiry";
 
 const QUICK_QUESTIONS = [
   "How much does it cost and what's included?",
@@ -102,24 +103,40 @@ const ChatbotWidget = () => {
   const submitLead = async (payload: Record<string, string>) => {
     setSubmitting(true);
     try {
-      const formData = new FormData();
-      Object.entries(payload).forEach(([key, value]) => {
-        formData.append(key, value);
-      });
-      formData.append("leadType", "chatbot-tour-request");
+      const mappedPayload = {
+        full_name: payload.name ?? "",
+        email: payload.email ?? "",
+        phone: payload.phone ?? "",
+        source: "website-chatbot",
+        status: "inquiry",
+        event_start_date: payload.weddingDate ?? "",
+        estimated_guest_count: payload.guestCount ? Number(payload.guestCount) : undefined,
+        notes: `tourDates:${payload.tourDates ?? ""}`,
+        lead_type: "chatbot-tour-request",
+      };
 
-      const response = await fetch("https://formspree.io/f/mgooaleg", {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
+      try {
+        await submitInquiry(mappedPayload);
+      } catch (_err) {
+        const formData = new FormData();
+        Object.entries(payload).forEach(([key, value]) => {
+          formData.append(key, value);
+        });
+        formData.append("leadType", "chatbot-tour-request");
 
-      if (response.ok) {
-        appendMessage("bot", "All set! We’ll reply within 24 hours to confirm a tour.");
-        appendMessage("bot", "Want to keep browsing? Ask me anything about the venue.");
-      } else {
-        throw new Error("Form submission failed");
+        const response = await fetch("https://formspree.io/f/mgooaleg", {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" },
+        });
+
+        if (!response.ok) {
+          throw new Error("Form submission failed");
+        }
       }
+
+      appendMessage("bot", "All set! We’ll reply within 24 hours to confirm a tour.");
+      appendMessage("bot", "Want to keep browsing? Ask me anything about the venue.");
     } catch (error) {
       appendMessage(
         "bot",
