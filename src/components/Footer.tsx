@@ -64,6 +64,11 @@ const Footer = () => {
                   Schedule a Visit
                 </Link>
               </li>
+              <li>
+                <Link to="/client-portal" className="hover:text-secondary transition-colors">
+                  Client Portal
+                </Link>
+              </li>
             </ul>
           </div>
 
