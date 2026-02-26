@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Editor Login</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body style="font-family: system-ui; padding: 24px;">
+    <h2>Rustic Retreat Editor</h2>
+    <p>Use this page to create an account or log in.</p>
+
+    <button onclick="netlifyIdentity.open('signup')" style="padding:12px 16px; margin-right:8px;">
+        Sign up
+    </button>
+    <button onclick="netlifyIdentity.open('login')" style="padding:12px 16px;">
+        Log in
+    </button>
+
+    <script>
+        netlifyIdentity.init();
+        netlifyIdentity.on("login", () => (window.location.href = "/admin/"));
+    </script>
+</body>
+
+</html>
