@@ -19,8 +19,10 @@ import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
 import receptionEvening from "@/assets/gallery/IMG_4469.jpeg";
-import brideWithHorse from "@/assets/gallery/IMG_4942.jpg";
-import dressForestPavilion from "@/assets/gallery/IMG_5869.jpeg";
+import contactMiddleImage from "@/assets/gallery/IMG_7938.jpeg";
+import contactBottomLeft from "@/assets/gallery/IMG_4942.jpg";
+import contactBottomRight from "@/assets/gallery/IMG_5869.jpeg";
+import contactExpectImage from "@/assets/gallery/IMG_4474.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -121,23 +123,46 @@ const Contact = () => {
                         <form onSubmit={handleSubmit} className="space-y-6">
                           <div className="grid md:grid-cols-2 gap-4">
                             <div>
-                              <Label htmlFor="firstName">First Name *</Label>
+                              <Label htmlFor="partner1FirstName">Your First Name *</Label>
                               <Input
-                                id="firstName"
-                                name="firstName"
+                                id="partner1FirstName"
+                                name="partner1FirstName"
                                 required
                                 className="mt-2"
                                 placeholder="Your first name"
                               />
                             </div>
                             <div>
-                              <Label htmlFor="lastName">Last Name *</Label>
+                              <Label htmlFor="partner1LastName">Your Last Name *</Label>
                               <Input
-                                id="lastName"
-                                name="lastName"
+                                id="partner1LastName"
+                                name="partner1LastName"
                                 required
                                 className="mt-2"
                                 placeholder="Your last name"
+                              />
+                            </div>
+                          </div>
+
+                          <div className="grid md:grid-cols-2 gap-4">
+                            <div>
+                              <Label htmlFor="partner2FirstName">Your Fiancé(e)'s First Name *</Label>
+                              <Input
+                                id="partner2FirstName"
+                                name="partner2FirstName"
+                                required
+                                className="mt-2"
+                                placeholder="Their first name"
+                              />
+                            </div>
+                            <div>
+                              <Label htmlFor="partner2LastName">Your Fiancé(e)'s Last Name *</Label>
+                              <Input
+                                id="partner2LastName"
+                                name="partner2LastName"
+                                required
+                                className="mt-2"
+                                placeholder="Their last name"
                               />
                             </div>
                           </div>
@@ -191,7 +216,7 @@ const Contact = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="tourDates">When would you like to visit? *</Label>
+                            <Label htmlFor="tourDates">When would you like to schedule your visit? *</Label>
                             <Textarea
                               id="tourDates"
                               name="tourDates"
@@ -261,8 +286,8 @@ const Contact = () => {
                   <div className="relative">
                     <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                     <img
-                      src={brideWithHorse}
-                      alt="Bride with horse at Rustic Retreat Alberta wedding venue"
+                      src={contactMiddleImage}
+                      alt="Rustic Retreat Alberta wedding venue"
                       loading="lazy"
                       decoding="async"
                       className="relative w-full h-[240px] sm:h-[280px] object-cover rounded-3xl shadow-elegant"
@@ -320,19 +345,28 @@ const Contact = () => {
                 </ScrollReveal>
 
                 <ScrollReveal direction="right" delay={200}>
-                  <Card className="border-2 border-primary bg-primary/5">
-                    <CardContent className="p-8">
-                      <h3 className="text-xl font-bold mb-4">What to Expect</h3>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Full property tour (60-90 minutes)</li>
-                        <li>• Walk ceremony and reception areas</li>
-                        <li>• See the cabin and camping areas</li>
-                        <li>• Browse the Wedding Décor Collection</li>
-                        <li>• Discuss packages and pricing</li>
-                        <li>• No pressure—just honest conversation</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
+                  <div className="grid md:grid-cols-[1.15fr_0.85fr] gap-4 items-stretch">
+                    <Card className="border-2 border-primary bg-primary/5">
+                      <CardContent className="p-6">
+                        <h3 className="text-xl font-bold mb-3">What to Expect</h3>
+                        <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-muted-foreground">
+                          <li>• Full property tour (60-90 minutes)</li>
+                          <li>• Walk ceremony and reception areas</li>
+                          <li>• See the cabin and camping areas</li>
+                          <li>• Browse the Wedding Décor Collection</li>
+                          <li>• Discuss packages and pricing</li>
+                          <li>• No pressure—just honest conversation</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                    <img
+                      src={contactExpectImage}
+                      alt="Couple portrait in the forest at Rustic Retreat"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full min-h-[220px] object-cover rounded-2xl shadow-soft"
+                    />
+                  </div>
                 </ScrollReveal>
               </div>
             </div>
@@ -345,8 +379,8 @@ const Contact = () => {
             <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               <ScrollReveal delay={0}>
                 <HoverImage
-                  src={brideWithHorse}
-                  alt="Bride with horse at Rustic Retreat Alberta wedding venue"
+                  src={contactBottomLeft}
+                  alt="Stunning sunset silhouette at Rustic Retreat"
                   description="Connect with nature—your day, your way"
                   category="Bridal"
                   className="shadow-lg"
@@ -354,8 +388,8 @@ const Contact = () => {
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <HoverImage
-                  src={dressForestPavilion}
-                  alt="Wedding dress displayed at forest pavilion"
+                  src={contactBottomRight}
+                  alt="Wedding details at Rustic Retreat"
                   description="Your dress deserves a magical backdrop"
                   category="Details"
                   className="shadow-lg"
