@@ -29,8 +29,9 @@ import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
 import pavilionReception from "@/assets/gallery/pavilion-reception.jpg";
 import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
 import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
+import chrisShannonUpscale from "@/assets/gallery/Chris&Shannonupscale.jpeg";
 import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.jpg";
-import firstDanceColor from "@/assets/gallery/first-dance-color.jpg";
+import beyondCeremonyPortrait from "@/assets/gallery/A7307773.jpeg";
 import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
 import headTable from "@/assets/gallery/head-table.jpg";
 import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.jpg";
@@ -472,15 +473,15 @@ const Index = () => {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={150}>
-              <div className="relative lg:order-1">
+              <div className="relative lg:order-1 flex justify-center lg:justify-start">
                 <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
-                <div className="relative overflow-hidden rounded-3xl shadow-elegant">
+                <div className="relative overflow-hidden rounded-3xl shadow-elegant w-full max-w-[280px] sm:max-w-[320px]">
                   <img
-                    src={firstDanceColor}
-                    alt="First dance under string lights at Rustic Retreat"
+                    src={beyondCeremonyPortrait}
+                    alt="Couple walking hand in hand after their ceremony at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
-                    className="h-[280px] sm:h-[320px] w-full object-cover"
+                    className="block w-full h-auto"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
                 </div>
@@ -731,14 +732,14 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <ScrollReveal>
-              <div className="relative lg:order-2">
+              <div className="relative lg:order-2 flex justify-center lg:justify-end">
                 <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                 <img
-                  src={coupleWalkingTrail}
+                  src={chrisShannonUpscale}
                   alt="Newlyweds walking hand in hand down a forest trail at Rustic Retreat"
                   loading="lazy"
                   decoding="async"
-                  className="relative w-full h-[320px] sm:h-[360px] md:h-[420px] object-cover rounded-3xl shadow-elegant"
+                  className="relative block w-full max-w-md h-auto rounded-3xl shadow-elegant"
                 />
               </div>
             </ScrollReveal>
