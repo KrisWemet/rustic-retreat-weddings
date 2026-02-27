@@ -31,7 +31,7 @@ import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
 import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
 import chrisShannonUpscale from "@/assets/gallery/Chris&Shannonupscale.jpeg";
 import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.jpg";
-import beyondCeremonyPortrait from "@/assets/gallery/A7307773.jpeg";
+import beyondCeremonyImage from "@/assets/gallery/IMG_7936.jpg";
 import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
 import headTable from "@/assets/gallery/head-table.jpg";
 import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.jpg";
@@ -381,8 +381,8 @@ const Index = () => {
                 <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                 <div className="relative grid grid-cols-2 gap-3 lg:gap-4">
                   <img
-                    src={ceremonyWideShot}
-                    alt="Outdoor wedding ceremony in a forest clearing at Rustic Retreat"
+                    src={weddingPartyCheer}
+                    alt="Wedding party portrait in the forest at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
                     className="col-span-2 aspect-[16/9] w-full object-cover rounded-3xl shadow-elegant"
@@ -475,10 +475,10 @@ const Index = () => {
             <ScrollReveal delay={150}>
               <div className="relative lg:order-1 flex justify-center lg:justify-start">
                 <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
-                <div className="relative overflow-hidden rounded-3xl shadow-elegant w-full max-w-[280px] sm:max-w-[320px]">
+                <div className="relative overflow-hidden rounded-3xl shadow-elegant w-full max-w-[520px]">
                   <img
-                    src={beyondCeremonyPortrait}
-                    alt="Couple walking hand in hand after their ceremony at Rustic Retreat"
+                    src={beyondCeremonyImage}
+                    alt="Couple portrait with sparkler heart light painting at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
                     className="block w-full h-auto"
@@ -719,7 +719,14 @@ const Index = () => {
             <ScrollReveal direction="right">
               <div className="grid grid-cols-2 gap-3">
                 <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft" />
-                <img src={receptionGazebo} alt="Couple and friends in an open field at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft" />
+                <img
+                  src={receptionGazebo}
+                  alt="Couple and friends in an open field at Rustic Retreat"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-40 md:h-52 object-cover shadow-soft"
+                  style={{ objectPosition: "center 80%" }}
+                />
                 <img src={pavilionReception} alt="Rustic pavilion reception with guests cheering" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2" />
               </div>
             </ScrollReveal>
