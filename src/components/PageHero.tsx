@@ -6,18 +6,21 @@ interface PageHeroProps {
   title: string;
   subtitle?: string;
   children?: ReactNode;
-  overlayOpacity?: "light" | "medium" | "heavy";
+  overlayOpacity?: "none" | "light" | "medium" | "heavy";
+  contentClassName?: string;
 }
 
-const PageHero = ({ 
-  backgroundImage, 
+const PageHero = ({
+  backgroundImage,
   backgroundImageAlt,
-  title, 
-  subtitle, 
+  title,
+  subtitle,
   children,
-  overlayOpacity = "medium" 
+  overlayOpacity = "medium",
+  contentClassName = ""
 }: PageHeroProps) => {
   const overlayClasses = {
+    none: "",
     light: "from-primary/50 via-primary/40 to-primary/50",
     medium: "from-primary/70 via-primary/60 to-primary/70",
     heavy: "from-primary/85 via-primary/75 to-primary/85"
@@ -34,10 +37,12 @@ const PageHero = ({
           fetchPriority="high"
           className="h-full w-full object-cover"
         />
-        <div className={`absolute inset-0 bg-gradient-to-b ${overlayClasses[overlayOpacity]}`} />
+        {overlayOpacity !== "none" && (
+          <div className={`absolute inset-0 bg-gradient-to-b ${overlayClasses[overlayOpacity]}`} />
+        )}
       </div>
-      
-      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
+
+      <div className={`relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20 ${contentClassName}`}>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
           {title}
         </h1>

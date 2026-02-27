@@ -19,8 +19,8 @@ import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
 import receptionEvening from "@/assets/gallery/IMG_4469.jpeg";
-import brideWithHorse from "@/assets/gallery/bride-with-horse.jpg";
-import dressForestPavilion from "@/assets/gallery/dress-forest-pavilion.jpg";
+import brideWithHorse from "@/assets/gallery/IMG_4942.jpg";
+import dressForestPavilion from "@/assets/gallery/IMG_5869.jpeg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -83,6 +83,8 @@ const Contact = () => {
           backgroundImageAlt="Couple and friends in an open field at Rustic Retreat"
           title="Discover Your Venue"
           subtitle="Property tours by appointment only, scheduled around existing bookings. Come feel the space and see if this is where your story wants to unfold."
+          overlayOpacity="none"
+          contentClassName="translate-y-[15vh] drop-shadow-md"
         />
 
         {/* Contact Section */}
