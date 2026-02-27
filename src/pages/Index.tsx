@@ -24,7 +24,7 @@ import cabinExterior from "@/assets/cabin-exterior-forest.avif";
 import receptionGazebo from "@/assets/gallery/Images/IMG_5103.jpg";
 
 // Gallery Images for Storytelling
-import ceremonyWideShot from "@/assets/gallery/ceremony-wide-shot.jpg";
+import ceremonyWideShot from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groom-lifts-bride-on-dance-floor-33.jpg";
 import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
 import pavilionReception from "@/assets/gallery/pavilion-reception.jpg";
 import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
