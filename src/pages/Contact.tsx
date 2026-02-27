@@ -249,7 +249,7 @@ const Contact = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="message">Describe your dream wedding weekend in a few sentences</Label>
+                            <Label htmlFor="message">Tell us about your vision for your wedding weekend</Label>
                             <Textarea
                               id="message"
                               name="message"
