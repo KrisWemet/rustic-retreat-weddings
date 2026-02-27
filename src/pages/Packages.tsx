@@ -29,17 +29,9 @@ const Packages = () => {
     itemListElement: [
       {
         "@type": "Offer",
-        name: "The Grand 10-Day Adventure",
-        description: "10-day destination-style wedding experience with maximum flexibility.",
-        price: "10500",
-        priceCurrency: "CAD",
-        availability: "https://schema.org/InStock",
-      },
-      {
-        "@type": "Offer",
         name: "The Full 5-Day Experience",
         description: "5-day celebration (Wed-Sun or Thu-Mon) with immersive guest time.",
-        price: "5500",
+        price: "7500",
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
       },
@@ -47,7 +39,7 @@ const Packages = () => {
         "@type": "Offer",
         name: "The Classic 3-Day Weekend",
         description: "3-day Friday-to-Sunday wedding weekend with exclusive access.",
-        price: "4500",
+        price: "6500",
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
       },
@@ -55,7 +47,7 @@ const Packages = () => {
         "@type": "Offer",
         name: "The Intimate 2-Day Escape",
         description: "2-day weekday elopement experience with full property access.",
-        price: "3000",
+        price: "5000",
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
       },
@@ -66,7 +58,7 @@ const Packages = () => {
     <>
       <SEO
         title="Wedding Packages & Pricing"
-        description="Choose from 3-day ($4,500) or 5-day ($5,500) wedding packages at Rustic Retreat. Both include exclusive property access, cabin accommodation, décor collection, and complete creative freedom."
+        description="Choose from 3-day ($6,500) or 5-day ($7,500) wedding packages at Rustic Retreat. Both include exclusive property access, cabin accommodation, décor collection, and complete creative freedom."
         path="/packages"
         image={loveMarqueeArch}
         keywords={["wedding packages edmonton", "weekend wedding pricing alberta", "multi-day wedding cost", "all-inclusive wedding venue edmonton", "wedding venue pricing alberta", "3 day wedding package", "5 day wedding package"]}
@@ -174,7 +166,7 @@ const Packages = () => {
                   From intimate elopements to the ultimate retreat—find the package that fits your vision.
                 </p>
                 <p className="text-sm text-secondary font-medium">
-                  2026 Season: Only 16 weekend dates available. June and September book first.
+                  2027 Season: Only 16 weekend dates available. June and September book first.
                 </p>
               </div>
             </ScrollReveal>
@@ -193,58 +185,6 @@ const Packages = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-            {/* 10-Day Package */}
-            <Card className="border-2 hover:shadow-xl transition-shadow">
-              <CardContent className="p-8">
-                <div className="inline-block bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
-                  Premium
-                </div>
-                <h3 className="text-3xl font-bold mb-3">The Grand 10-Day Adventure</h3>
-                <p className="text-lg text-muted-foreground mb-6">Full Experience</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold mb-3">The Experience:</h4>
-                  <div className="space-y-2 text-sm">
-                    <p><strong>Days 1-3:</strong> Early arrivals settle in. Setup at your own pace. Pre-wedding adventures.</p>
-                    <p><strong>Days 4-6:</strong> Wedding events unfold naturally. Ceremony, reception, after-parties.</p>
-                    <p><strong>Days 7-10:</strong> Extended celebration. Day trips. Bonding. The moments you'll remember forever.</p>
-                  </div>
-                </div>
-
-                <div className="bg-muted/50 p-4 rounded-lg mb-6">
-                  <p className="font-medium mb-2">The ultimate retreat:</p>
-                  <p className="text-sm text-muted-foreground">
-                    For couples who want to transform their wedding into a true destination experience. Turn your celebration into a family reunion, a friend reunion, and a honeymoon preview all in one.
-                  </p>
-                </div>
-
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">216+ hours of celebration</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Ultimate destination wedding experience</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Time for multiple events and activities</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Maximum flexibility and no rushing</span>
-                  </div>
-                </div>
-
-                <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$10,500*</p>
-                  <p className="text-sm text-muted-foreground">2026 Package Price</p>
-                </div>
-
-              </CardContent>
-            </Card>
-
             {/* 5-Day Package */}
             <Card className="border-2 border-secondary hover:shadow-xl transition-shadow bg-secondary/5">
               <CardContent className="p-8">
@@ -292,8 +232,8 @@ const Packages = () => {
                 </div>
 
                 <div className="bg-secondary/20 p-6 rounded-lg mb-6 border-2 border-secondary">
-                  <p className="text-3xl font-bold mb-2">$5,500*</p>
-                  <p className="text-sm">2026 Package Price</p>
+                  <p className="text-3xl font-bold mb-2">$7,500*</p>
+                  <p className="text-sm">2027 Package Price</p>
                 </div>
 
               </CardContent>
@@ -342,8 +282,8 @@ const Packages = () => {
                 </div>
 
                 <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$4,500*</p>
-                  <p className="text-sm text-muted-foreground">2026 Package Price</p>
+                  <p className="text-3xl font-bold mb-2">$6,500*</p>
+                  <p className="text-sm text-muted-foreground">2027 Package Price</p>
                 </div>
 
               </CardContent>
@@ -390,8 +330,8 @@ const Packages = () => {
                 </div>
 
                 <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$3,000*</p>
-                  <p className="text-sm text-muted-foreground">2026 Package Price</p>
+                  <p className="text-3xl font-bold mb-2">$5,000*</p>
+                  <p className="text-sm text-muted-foreground">2027 Package Price</p>
                 </div>
 
               </CardContent>
@@ -441,7 +381,7 @@ const Packages = () => {
                   <li>• The Cabin: Sleeps 4 (newlywed suite)</li>
                   <li>• Room for 60 guests to camp</li>
                   <li>• You choose where to set up—no defined sites</li>
-                  <li>• Shower facilities ready for 2026 season</li>
+                  <li>• Shower facilities ready for 2027 season</li>
                   <li>• Airbnbs 5-15 minutes away</li>
                 </ul>
               </CardContent>
@@ -826,7 +766,7 @@ const Packages = () => {
                       <span>All activities and amenities</span>
                     </li>
                   </ul>
-                  <p className="font-bold text-lg">$3,000–$10,500*</p>
+                  <p className="font-bold text-lg">$5,000–$7,500*</p>
                   <p className="text-sm mt-2">Based on your timeline—all in ONE connected place</p>
                 </CardContent>
               </Card>

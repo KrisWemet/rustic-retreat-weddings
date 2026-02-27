@@ -17,10 +17,10 @@ const AvailabilityIndicator = () => {
       <AlertCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
       <div>
         <p className="font-semibold text-amber-900 mb-1">
-          Limited Availability for 2026 Season
+          Limited Availability for 2027 Season
         </p>
         <p className="text-sm text-amber-800">
-          Only <strong>{availableWeekends} weekends</strong> remain for June-September 2026.
+          Only <strong>{availableWeekends} weekends</strong> remain for June-September 2027.
           Most couples book 8-12 months in advance.
         </p>
       </div>
