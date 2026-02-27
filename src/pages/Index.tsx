@@ -31,6 +31,8 @@ import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
 import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
 import chrisShannonUpscale from "@/assets/gallery/Chris&Shannonupscale.jpeg";
 import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.jpg";
+import weddingPartyLineup from "@/assets/gallery/IMG_7910.jpeg";
+import img7625 from "@/assets/gallery/IMG_7625.jpg";
 import beyondCeremonyImage from "@/assets/gallery/IMG_7936.jpg";
 import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
 import headTable from "@/assets/gallery/head-table.jpg";
@@ -381,15 +383,15 @@ const Index = () => {
                 <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                 <div className="relative grid grid-cols-2 gap-3 lg:gap-4">
                   <img
-                    src={weddingPartyCheer}
-                    alt="Wedding party portrait in the forest at Rustic Retreat"
+                    src={weddingPartyLineup}
+                    alt="Wedding party lineup portrait in the forest at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
                     className="col-span-2 aspect-[16/9] w-full object-cover rounded-3xl shadow-elegant"
                   />
                   <img
-                    src={pavilionReception}
-                    alt="Rustic pavilion reception with guests cheering"
+                    src={img7625}
+                    alt="Wedding reception moment under floral draping at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
