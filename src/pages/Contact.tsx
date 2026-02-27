@@ -255,7 +255,7 @@ const Contact = () => {
                               name="message"
                               required
                               className="mt-2 min-h-32"
-                              placeholder="What draws you to an outdoor, multi-day celebration? What would make this weekend unforgettable for you and your guests?"
+                              placeholder="What would make this weekend unforgettable for you and your guests?"
                             />
                           </div>
 
