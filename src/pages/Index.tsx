@@ -390,15 +390,15 @@ const Index = () => {
                     className="col-span-2 aspect-[16/9] w-full object-cover rounded-3xl shadow-elegant"
                   />
                   <img
-                    src={img7625}
-                    alt="Wedding reception moment under floral draping at Rustic Retreat"
+                    src={meadowSunsetKiss}
+                    alt="Romantic sunset kiss in a meadow at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
                   />
                   <img
-                    src={meadowSunsetKiss}
-                    alt="Romantic sunset kiss in a meadow at Rustic Retreat"
+                    src={img7625}
+                    alt="Wedding reception moment under floral draping at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"

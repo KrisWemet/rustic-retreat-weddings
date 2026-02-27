@@ -18,7 +18,7 @@ import TrustBadges from "@/components/TrustBadges";
 import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
-import receptionEvening from "@/assets/gallery/Images/IMG_5103.jpg";
+import receptionEvening from "@/assets/gallery/IMG_4469.jpeg";
 import brideWithHorse from "@/assets/gallery/bride-with-horse.jpg";
 import dressForestPavilion from "@/assets/gallery/dress-forest-pavilion.jpg";
 
@@ -77,7 +77,7 @@ const Contact = () => {
       <BreadcrumbSchema />
       <div className="min-h-screen">
         <Navigation />
-        
+
         <PageHero
           backgroundImage={receptionEvening}
           backgroundImageAlt="Couple and friends in an open field at Rustic Retreat"
@@ -117,135 +117,135 @@ const Contact = () => {
                         <h2 className="text-2xl font-bold mb-2">Request Your Visit</h2>
                         <p className="text-sm text-muted-foreground mb-6">Tell us a bit about yourselves. No pressure—this is just the start of a conversation.</p>
                         <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <Label htmlFor="firstName">First Name *</Label>
-                          <Input
-                            id="firstName"
-                            name="firstName"
-                            required
-                            className="mt-2"
-                            placeholder="Your first name"
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="lastName">Last Name *</Label>
-                          <Input
-                            id="lastName"
-                            name="lastName"
-                            required
-                            className="mt-2"
-                            placeholder="Your last name"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="email">Email Address *</Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          className="mt-2"
-                          placeholder="your.email@example.com"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="phone">Phone Number *</Label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          required
-                          className="mt-2"
-                          placeholder="(780) 555-0123"
-                        />
-                      </div>
-
-                      {/* Preferred Contact Method */}
-                      <div>
-                        <Label className="mb-3 block">How should we reach you?</Label>
-                        <input type="hidden" name="preferredContact" value={preferredContact} />
-                        <RadioGroup
-                          value={preferredContact}
-                          onValueChange={setPreferredContact}
-                          className="flex gap-6"
-                        >
-                          <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="email" id="contact-email" />
-                            <Label htmlFor="contact-email" className="font-normal cursor-pointer">Email</Label>
+                          <div className="grid md:grid-cols-2 gap-4">
+                            <div>
+                              <Label htmlFor="firstName">First Name *</Label>
+                              <Input
+                                id="firstName"
+                                name="firstName"
+                                required
+                                className="mt-2"
+                                placeholder="Your first name"
+                              />
+                            </div>
+                            <div>
+                              <Label htmlFor="lastName">Last Name *</Label>
+                              <Input
+                                id="lastName"
+                                name="lastName"
+                                required
+                                className="mt-2"
+                                placeholder="Your last name"
+                              />
+                            </div>
                           </div>
-                          <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="phone" id="contact-phone" />
-                            <Label htmlFor="contact-phone" className="font-normal cursor-pointer">Phone call</Label>
+
+                          <div>
+                            <Label htmlFor="email">Email Address *</Label>
+                            <Input
+                              id="email"
+                              name="email"
+                              type="email"
+                              required
+                              className="mt-2"
+                              placeholder="your.email@example.com"
+                            />
                           </div>
-                          <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="text" id="contact-text" />
-                            <Label htmlFor="contact-text" className="font-normal cursor-pointer">Text message</Label>
+
+                          <div>
+                            <Label htmlFor="phone">Phone Number *</Label>
+                            <Input
+                              id="phone"
+                              name="phone"
+                              type="tel"
+                              required
+                              className="mt-2"
+                              placeholder="(780) 555-0123"
+                            />
                           </div>
-                        </RadioGroup>
-                      </div>
 
-                      <div>
-                        <Label htmlFor="tourDates">When would you like to visit? *</Label>
-                        <Textarea
-                          id="tourDates"
-                          name="tourDates"
-                          required
-                          className="mt-2 min-h-20"
-                          placeholder="Please provide 2-3 dates that work for you (we schedule around existing bookings)"
-                        />
-                      </div>
+                          {/* Preferred Contact Method */}
+                          <div>
+                            <Label className="mb-3 block">How should we reach you?</Label>
+                            <input type="hidden" name="preferredContact" value={preferredContact} />
+                            <RadioGroup
+                              value={preferredContact}
+                              onValueChange={setPreferredContact}
+                              className="flex gap-6"
+                            >
+                              <div className="flex items-center space-x-2">
+                                <RadioGroupItem value="email" id="contact-email" />
+                                <Label htmlFor="contact-email" className="font-normal cursor-pointer">Email</Label>
+                              </div>
+                              <div className="flex items-center space-x-2">
+                                <RadioGroupItem value="phone" id="contact-phone" />
+                                <Label htmlFor="contact-phone" className="font-normal cursor-pointer">Phone call</Label>
+                              </div>
+                              <div className="flex items-center space-x-2">
+                                <RadioGroupItem value="text" id="contact-text" />
+                                <Label htmlFor="contact-text" className="font-normal cursor-pointer">Text message</Label>
+                              </div>
+                            </RadioGroup>
+                          </div>
 
-                      <div>
-                        <Label htmlFor="weddingDate">When are you thinking of having your celebration? (approximate is fine)</Label>
-                        <Input
-                          id="weddingDate"
-                          name="weddingDate"
-                          type="text"
-                          className="mt-2"
-                          placeholder="e.g., Summer 2026, August 2026, or 'still deciding'"
-                        />
-                      </div>
+                          <div>
+                            <Label htmlFor="tourDates">When would you like to visit? *</Label>
+                            <Textarea
+                              id="tourDates"
+                              name="tourDates"
+                              required
+                              className="mt-2 min-h-20"
+                              placeholder="Please provide 2-3 dates that work for you (we schedule around existing bookings)"
+                            />
+                          </div>
 
-                      <div>
-                        <Label htmlFor="guestCount">How many guests are you expecting?</Label>
-                        <Input
-                          id="guestCount"
-                          name="guestCount"
-                          type="text"
-                          className="mt-2"
-                          placeholder="e.g., 50-60 guests, or 'not sure yet'"
-                        />
-                      </div>
+                          <div>
+                            <Label htmlFor="weddingDate">When are you thinking of having your celebration? (approximate is fine)</Label>
+                            <Input
+                              id="weddingDate"
+                              name="weddingDate"
+                              type="text"
+                              className="mt-2"
+                              placeholder="e.g., Summer 2026, August 2026, or 'still deciding'"
+                            />
+                          </div>
 
-                      <div>
-                        <Label htmlFor="message">Describe your dream wedding weekend in a few sentences</Label>
-                        <Textarea
-                          id="message"
-                          name="message"
-                          required
-                          className="mt-2 min-h-32"
-                          placeholder="What draws you to an outdoor, multi-day celebration? What would make this weekend unforgettable for you and your guests?"
-                        />
-                      </div>
+                          <div>
+                            <Label htmlFor="guestCount">How many guests are you expecting?</Label>
+                            <Input
+                              id="guestCount"
+                              name="guestCount"
+                              type="text"
+                              className="mt-2"
+                              placeholder="e.g., 50-60 guests, or 'not sure yet'"
+                            />
+                          </div>
 
-                      <CTAButton
-                        type="submit"
-                        className="w-full text-lg py-6"
-                        disabled={isSubmitting}
-                      >
-                        {isSubmitting ? "Sending..." : "Request Property Visit"}
-                      </CTAButton>
+                          <div>
+                            <Label htmlFor="message">Describe your dream wedding weekend in a few sentences</Label>
+                            <Textarea
+                              id="message"
+                              name="message"
+                              required
+                              className="mt-2 min-h-32"
+                              placeholder="What draws you to an outdoor, multi-day celebration? What would make this weekend unforgettable for you and your guests?"
+                            />
+                          </div>
 
-                      <p className="text-xs text-center text-muted-foreground">
-                        No spam, no pressure. Just a real conversation about your vision.
-                      </p>
-                      <p className="text-xs text-center text-muted-foreground italic mt-3">
-                        "From our first email, we knew they got it." — Sarah & Mike
-                      </p>
+                          <CTAButton
+                            type="submit"
+                            className="w-full text-lg py-6"
+                            disabled={isSubmitting}
+                          >
+                            {isSubmitting ? "Sending..." : "Request Property Visit"}
+                          </CTAButton>
+
+                          <p className="text-xs text-center text-muted-foreground">
+                            No spam, no pressure. Just a real conversation about your vision.
+                          </p>
+                          <p className="text-xs text-center text-muted-foreground italic mt-3">
+                            "From our first email, we knew they got it." — Sarah & Mike
+                          </p>
                         </form>
                       </>
                     )}
