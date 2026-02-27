@@ -19,10 +19,10 @@ import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
 import receptionEvening from "@/assets/gallery/IMG_4469.jpeg";
-import contactMiddleImage from "@/assets/gallery/IMG_7938.jpeg";
-import contactBottomLeft from "@/assets/gallery/IMG_4942.jpg";
+import contactMiddleImage from "@/assets/gallery/IMG_4942.jpg";
+import contactBottomLeft from "@/assets/gallery/IMG_4474.jpg";
 import contactBottomRight from "@/assets/gallery/IMG_5869.jpeg";
-import contactExpectImage from "@/assets/gallery/IMG_4474.jpg";
+import contactExpectImage from "@/assets/gallery/IMG_7938.jpeg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -227,13 +227,13 @@ const Contact = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="weddingDate">When are you thinking of having your celebration? (approximate is fine)</Label>
+                            <Label htmlFor="weddingDate">What is your ideal wedding date or season?</Label>
                             <Input
                               id="weddingDate"
                               name="weddingDate"
                               type="text"
                               className="mt-2"
-                              placeholder="e.g., Summer 2026, August 2026, or 'still deciding'"
+                              placeholder="e.g., Summer 2027, August 14th, 2027, etc."
                             />
                           </div>
 
