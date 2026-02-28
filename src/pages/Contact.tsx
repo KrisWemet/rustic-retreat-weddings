@@ -267,12 +267,6 @@ const Contact = () => {
                             {isSubmitting ? "Sending..." : "Request Property Visit"}
                           </CTAButton>
 
-                          <p className="text-xs text-center text-muted-foreground">
-                            No spam, no pressure. Just a real conversation about your vision.
-                          </p>
-                          <p className="text-xs text-center text-muted-foreground italic mt-3">
-                            "From our first email, we knew they got it." — Sarah & Mike
-                          </p>
                         </form>
                       </>
                     )}
