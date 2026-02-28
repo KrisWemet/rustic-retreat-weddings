@@ -115,7 +115,7 @@ const Contact = () => {
                         {/* Response Time Badge */}
                         <div className="flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm mb-6 w-fit">
                           <Clock className="w-4 h-4" />
-                          <span className="font-medium">We respond within 24 hours</span>
+                          <span className="font-medium">We do our absolute best to respond to all inquries within 24 hours</span>
                         </div>
 
                         <h2 className="text-2xl font-bold mb-2">Request Your Visit</h2>
@@ -339,30 +339,32 @@ const Contact = () => {
                 </ScrollReveal>
 
                 <ScrollReveal direction="right" delay={200}>
-                  <div className="grid md:grid-cols-[1.15fr_0.85fr] gap-4 items-stretch">
-                    <Card className="border-2 border-primary bg-primary/5">
-                      <CardContent className="p-6">
-                        <h3 className="text-xl font-bold mb-3">What to Expect</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                  <div className="flex flex-col lg:flex-row gap-6 items-stretch">
+                    <Card className="border-2 border-primary bg-primary/5 flex-grow">
+                      <CardContent className="p-6 md:p-8">
+                        <h3 className="text-xl md:text-2xl font-bold mb-3">What to Expect</h3>
+                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
                           Expect a laid-back country vibe. We aren't here to pressure you to book—if you want to take time to walk the grounds and talk things over just the two of you without us hovering, you can absolutely do that.
                         </p>
-                        <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-muted-foreground">
-                          <li>• Full property tour (1-1.5 hours)</li>
-                          <li>• Walk ceremony and reception spaces</li>
-                          <li>• See the cabin and camping areas</li>
-                          <li>• Browse the Wedding Décor Collection</li>
-                          <li>• Discuss packages and pricing openly</li>
-                          <li>• Just an honest, relaxed conversation</li>
+                        <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-4 text-sm md:text-base text-muted-foreground">
+                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Full property tour (1-1.5 hours)</span></li>
+                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Walk ceremony and reception spaces</span></li>
+                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>See the cabin and camping areas</span></li>
+                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Browse the Wedding Décor Collection</span></li>
+                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Discuss packages and pricing openly</span></li>
+                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Just an honest, relaxed conversation</span></li>
                         </ul>
                       </CardContent>
                     </Card>
-                    <img
-                      src={contactExpectImage}
-                      alt="Couple portrait in the forest at Rustic Retreat"
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full min-h-[220px] object-cover rounded-2xl shadow-soft"
-                    />
+                    <div className="w-full lg:w-[40%] xl:w-[45%] shrink-0">
+                      <img
+                        src={contactExpectImage}
+                        alt="Couple portrait in the forest at Rustic Retreat"
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full min-h-[280px] object-cover rounded-2xl shadow-soft"
+                      />
+                    </div>
                   </div>
                 </ScrollReveal>
               </div>
