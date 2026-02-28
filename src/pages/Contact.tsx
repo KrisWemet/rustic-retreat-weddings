@@ -343,13 +343,16 @@ const Contact = () => {
                     <Card className="border-2 border-primary bg-primary/5">
                       <CardContent className="p-6">
                         <h3 className="text-xl font-bold mb-3">What to Expect</h3>
-                        <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-muted-foreground">
-                          <li>• Full property tour (60-90 minutes)</li>
-                          <li>• Walk ceremony and reception areas</li>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                          Expect a laid-back country vibe. We aren't here to pressure you to book—if you want to take time to walk the grounds and talk things over just the two of you without us hovering, you can absolutely do that.
+                        </p>
+                        <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-muted-foreground">
+                          <li>• Full property tour (1-1.5 hours)</li>
+                          <li>• Walk ceremony and reception spaces</li>
                           <li>• See the cabin and camping areas</li>
                           <li>• Browse the Wedding Décor Collection</li>
-                          <li>• Discuss packages and pricing</li>
-                          <li>• No pressure—just honest conversation</li>
+                          <li>• Discuss packages and pricing openly</li>
+                          <li>• Just an honest, relaxed conversation</li>
                         </ul>
                       </CardContent>
                     </Card>
