@@ -23,7 +23,7 @@ import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
 import veilKiss from "@/assets/gallery/veil-kiss-romantic.jpg";
 import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
 import brideHorse from "@/assets/gallery/bride-with-horse.jpg";
-import weddingRings from "@/assets/gallery/wedding-rings-flower.jpg";
+import weddingRings from "@/assets/gallery/rings-bouquet.jpg";
 import firstDanceCloseup from "@/assets/gallery/first-dance-closeup.jpg";
 import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.jpg";
 import cakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.jpg";

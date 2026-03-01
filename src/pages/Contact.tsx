@@ -21,8 +21,8 @@ import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react
 import receptionEvening from "@/assets/gallery/IMG_4469.jpeg";
 import contactMiddleImage from "@/assets/gallery/IMG_4942.jpg";
 import contactBottomLeft from "@/assets/gallery/IMG_4474.jpg";
-import contactBottomRight from "@/assets/gallery/IMG_5869.jpeg";
-import contactExpectImage from "@/assets/gallery/IMG_7938.jpeg";
+import contactBottomRight from "@/assets/gallery/IMG_7938.jpeg";
+import contactExpectImage from "@/assets/gallery/IMG_5869.jpeg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -278,13 +278,13 @@ const Contact = () => {
               <div className="space-y-6">
                 <ScrollReveal direction="right">
                   <div className="relative">
-                    <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
+                    <div className="absolute -inset-4 rounded-2xl bg-secondary/10 blur-2xl" />
                     <img
                       src={contactMiddleImage}
                       alt="Rustic Retreat Alberta wedding venue"
                       loading="lazy"
                       decoding="async"
-                      className="relative w-full h-[240px] sm:h-[280px] object-cover rounded-3xl shadow-elegant"
+                      className="relative w-full h-[240px] sm:h-[280px] object-cover rounded-2xl shadow-elegant"
                     />
                   </div>
                 </ScrollReveal>
@@ -339,8 +339,8 @@ const Contact = () => {
                 </ScrollReveal>
 
                 <ScrollReveal direction="right" delay={200}>
-                  <div className="flex flex-col lg:flex-row gap-6 items-stretch">
-                    <Card className="border-2 border-primary bg-primary/5 flex-grow">
+                  <div className="flex flex-col gap-6">
+                    <Card className="border-2 border-primary bg-primary/5 w-full">
                       <CardContent className="p-6 md:p-8">
                         <h3 className="text-xl md:text-2xl font-bold mb-3">What to Expect</h3>
                         <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
@@ -356,13 +356,13 @@ const Contact = () => {
                         </ul>
                       </CardContent>
                     </Card>
-                    <div className="w-full lg:w-[40%] xl:w-[45%] shrink-0">
+                    <div className="w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-soft shrink-0">
                       <img
                         src={contactExpectImage}
                         alt="Couple portrait in the forest at Rustic Retreat"
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full min-h-[280px] object-cover rounded-2xl shadow-soft"
+                        className="w-full h-full object-cover object-center"
                       />
                     </div>
                   </div>
@@ -382,7 +382,7 @@ const Contact = () => {
                   alt="Stunning sunset silhouette at Rustic Retreat"
                   description="Connect with nature—your day, your way"
                   category="Bridal"
-                  className="shadow-lg"
+                  className="shadow-lg rounded-2xl"
                 />
               </ScrollReveal>
               <ScrollReveal delay={100}>
@@ -391,7 +391,7 @@ const Contact = () => {
                   alt="Wedding details at Rustic Retreat"
                   description="Your dress deserves a magical backdrop"
                   category="Details"
-                  className="shadow-lg"
+                  className="shadow-lg rounded-2xl"
                 />
               </ScrollReveal>
             </div>
