@@ -20,7 +20,7 @@ import {
 
 // Hero & Property Images
 import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.jpeg";
-import cabinExterior from "@/assets/cabin-exterior-forest.avif";
+import cabinExterior from "@/assets/Cabin/cabin-exterior-woods.jpeg";
 import receptionGazebo from "@/assets/gallery/Images/reception-gazebo.jpg";
 
 // Gallery Images for Storytelling
@@ -183,45 +183,33 @@ const Index = () => {
             <Carousel opts={{
               align: "center",
               loop: true
-            }} className="max-w-4xl mx-auto pb-6 md:pb-10">
-              <CarouselContent>
-                <CarouselItem>
-                  <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full">
+            }} className="w-full pb-6 md:pb-10 overflow-visible">
+              <CarouselContent className="-ml-4 md:-ml-8">
+                <CarouselItem className="pl-4 md:pl-8 basis-[90%] sm:basis-[80%] md:basis-[70%] lg:basis-[50%]">
+                  <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full transition-opacity duration-300">
                     <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
                     <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
                       "The property is stunning, featuring a romantic couples cabin, enchanting forested areas, and a breathtaking gazebo adorned with lights and ample space. The seamless flow to a gorgeous dance floor and field area, endless paths, and an inviting fire pit hangout near the couples suite made for a fun way to end a long night of dancing. Roasting hotdogs and smores, camping with family and friends added an extra layer of joy to our wedding."
                     </blockquote>
                     <p className="text-sm text-muted-foreground">— Tabitha, September 2025</p>
-                    <div className="mt-6 flex items-center justify-between">
-                      <CarouselPrevious className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
-                      <CarouselNext className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
-                    </div>
                   </div>
                 </CarouselItem>
-                <CarouselItem>
-                  <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full">
+                <CarouselItem className="pl-4 md:pl-8 basis-[90%] sm:basis-[80%] md:basis-[70%] lg:basis-[50%]">
+                  <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full transition-opacity duration-300">
                     <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
                     <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
                       "Such an amazing experience from the moment we contacted Rustic Retreat to the time we checked out. The venue is absolutely beautiful and you will not be disappointed. I will absolutely recommend this amazing place to anyone and everyone looking for a small to medium romantic wedding. When you check in you are greeted by amazing hospitality."
                     </blockquote>
                     <p className="text-sm text-muted-foreground">— Ali, August 2025</p>
-                    <div className="mt-6 flex items-center justify-between">
-                      <CarouselPrevious className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
-                      <CarouselNext className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
-                    </div>
                   </div>
                 </CarouselItem>
-                <CarouselItem>
-                  <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full">
+                <CarouselItem className="pl-4 md:pl-8 basis-[90%] sm:basis-[80%] md:basis-[70%] lg:basis-[50%]">
+                  <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full transition-opacity duration-300">
                     <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
                     <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
                       "My husband and I got married here two weeks ago (planned a wedding in just over a month)—let me tell ya, it was an absolute blast! Shannon and her husband went above and beyond to make sure everything went smoothly for us."
                     </blockquote>
                     <p className="text-sm text-muted-foreground">— Viktoria, June 2025</p>
-                    <div className="mt-6 flex items-center justify-between">
-                      <CarouselPrevious className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
-                      <CarouselNext className="static translate-y-0 bg-white/80 hover:bg-white shadow-soft border-secondary/20" />
-                    </div>
                   </div>
                 </CarouselItem>
               </CarouselContent>

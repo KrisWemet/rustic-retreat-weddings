@@ -227,7 +227,7 @@ const Contact = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="weddingDate">What is your ideal wedding date? (approximate is fine)</Label>
+                            <Label htmlFor="weddingDate">What is your ideal wedding date?</Label>
                             <Input
                               id="weddingDate"
                               name="weddingDate"

@@ -125,7 +125,7 @@ const Navigation = () => {
                     isScrolled ? "px-5 text-sm" : "px-6"
                   )}
                 >
-                  Discover Your Venue
+                  Schedule your tour
                 </Button>
               </Link>
             </div>
@@ -133,7 +133,7 @@ const Navigation = () => {
             {/* Mobile CTA Button */}
             <Link to="/contact" className="lg:hidden">
               <Button size="sm" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark text-white rounded-full px-4 shadow-md text-xs">
-                Book Tour
+                Schedule your tour
               </Button>
             </Link>
           </div>

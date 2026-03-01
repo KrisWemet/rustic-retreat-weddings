@@ -11,6 +11,14 @@ import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import cabinExterior from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-pavilion-reception-entrance-guests-cheering-19.jpg";
+import cabinInterior from "@/assets/Cabin/cabin-interior-living-area.jpeg";
+import cabinPorch from "@/assets/Cabin/cabin-porch-view.jpeg";
+import cabinBed from "@/assets/Cabin/cabin-bedroom-comfort.jpeg";
+import cabinKitchen from "@/assets/Cabin/cabin-kitchenette-details.jpeg";
+import cabinLoft from "@/assets/Cabin/cabin-loft-view.jpeg";
+import cabinDeck from "@/assets/Cabin/cabin-deck-outdoor-seating.jpeg";
+import cabinFullExterior from "@/assets/Cabin/cabin-exterior-woods.jpeg";
+import campfireSetting from "@/assets/Cabin/cabin-campfire-evening.jpeg";
 import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-party-cheer-couple-kissing-forest-group-portrait-07.jpg";
 import coupleKissingTrail from "@/assets/gallery/Images/couple-kissing-trail.jpeg";
 import cakeCuttingForest from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-cake-cutting-and-first-bite-40.jpg";
@@ -63,9 +71,10 @@ const Venue = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What's Inside Your Private Sanctuary</h2>
             </ScrollReveal>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+              {/* Row 1 */}
               <ScrollReveal delay={0}>
-                <Card className="border-2 hover:border-secondary transition-colors h-full">
+                <Card className="border-2 hover:border-secondary transition-colors">
                   <CardContent className="pt-6">
                     <Battery className="w-8 h-8 text-secondary mb-3" />
                     <h3 className="font-semibold mb-2">Off-Grid Solar Power</h3>
@@ -77,7 +86,13 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={100}>
-                <Card className="border-2 hover:border-secondary transition-colors h-full">
+                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
+                  <img src={cabinFullExterior} alt="Cabin exterior nestled in the forest" className="w-full h-full object-cover" />
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={200}>
+                <Card className="border-2 hover:border-secondary transition-colors">
                   <CardContent className="pt-6">
                     <Users className="w-8 h-8 text-secondary mb-3" />
                     <h3 className="font-semibold mb-2">Room for Four</h3>
@@ -88,8 +103,15 @@ const Venue = () => {
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={200}>
-                <Card className="border-2 hover:border-secondary transition-colors h-full">
+              {/* Row 2 */}
+              <ScrollReveal delay={300}>
+                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
+                  <img src={cabinInterior} alt="Cozy cabin interior" className="w-full h-full object-cover" />
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={400}>
+                <Card className="border-2 hover:border-secondary transition-colors">
                   <CardContent className="pt-6">
                     <Coffee className="w-8 h-8 text-secondary mb-3" />
                     <h3 className="font-semibold mb-2">Morning Coffee</h3>
@@ -100,8 +122,15 @@ const Venue = () => {
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={300}>
-                <Card className="border-2 hover:border-secondary transition-colors h-full">
+              <ScrollReveal delay={500}>
+                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
+                  <img src={cabinBed} alt="Comfortable bed in the cabin" className="w-full h-full object-cover" />
+                </div>
+              </ScrollReveal>
+
+              {/* Row 3 */}
+              <ScrollReveal delay={600}>
+                <Card className="border-2 hover:border-secondary transition-colors">
                   <CardContent className="pt-6">
                     <Home className="w-8 h-8 text-secondary mb-3" />
                     <h3 className="font-semibold mb-2">Comfortable Furnishings</h3>
@@ -112,25 +141,19 @@ const Venue = () => {
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={400}>
-                <Card className="border-2 hover:border-secondary transition-colors h-full">
+              <ScrollReveal delay={700}>
+                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
+                  <img src={campfireSetting} alt="Campfire setting near the cabin" className="w-full h-full object-cover" />
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={800}>
+                <Card className="border-2 hover:border-secondary transition-colors">
                   <CardContent className="pt-6">
                     <Sun className="w-8 h-8 text-secondary mb-3" />
                     <h3 className="font-semibold mb-2">Forest Views</h3>
                     <p className="text-sm text-muted-foreground">
                       Wake up to Alberta wilderness stretching in every direction. No buildings. No roads. Just trees and sky.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
-              <ScrollReveal delay={500}>
-                <Card className="border-2 hover:border-secondary transition-colors h-full">
-                  <CardContent className="pt-6">
-                    <Sparkles className="w-8 h-8 text-secondary mb-3" />
-                    <h3 className="font-semibold mb-2">Complete Privacy</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Close enough to hear the joy of your celebration, far enough to be completely alone.
                     </p>
                   </CardContent>
                 </Card>
