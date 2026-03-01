@@ -13,6 +13,8 @@ import SEO from "@/components/SEO";
 import ceremonyVowsGazebo from "@/assets/gallery/Images/ceremony-vows-gazebo-2.jpeg";
 import firstDanceSparklers from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-sweetheart-table-laughter-under-draped-arbor-forest-04.jpg";
 import meadowSunsetKiss from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-under-veil-in-woods-46.jpg";
+import faqImage1 from "@/assets/gallery/unused-wedding-portrait.jpeg";
+import faqImage2 from "@/assets/gallery/Images/bride&groom-in-field.jpg";
 
 const FAQs = () => {
   const faqs = [
@@ -147,7 +149,7 @@ const FAQs = () => {
                 <Accordion type="single" collapsible className="space-y-4">
                   {faqs.map((faq, index) => (
                     <ScrollReveal key={index} delay={index * 50}>
-                      <AccordionItem 
+                      <AccordionItem
                         value={`item-${index}`}
                         className="bg-card border-2 px-6 hover:border-secondary transition-colors"
                       >
@@ -167,18 +169,18 @@ const FAQs = () => {
                   <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                   <div className="relative grid gap-4">
                     <img
-                      src={meadowSunsetKiss}
-                      alt="Romantic sunset kiss in wildflower meadow at Rustic Retreat"
+                      src={faqImage1}
+                      alt="A beautiful, intimate wedding portrait at Rustic Retreat"
                       loading="lazy"
                       decoding="async"
-                      className="h-56 sm:h-64 object-cover rounded-3xl shadow-elegant"
+                      className="w-full h-56 sm:h-64 object-cover rounded-3xl shadow-elegant"
                     />
                     <img
-                      src={firstDanceSparklers}
-                      alt="First dance with sparklers at Alberta wedding venue"
+                      src={faqImage2}
+                      alt="Bride and groom standing in an open grassy field"
                       loading="lazy"
                       decoding="async"
-                      className="h-56 sm:h-64 object-cover rounded-3xl shadow-soft"
+                      className="w-full h-56 sm:h-64 object-cover rounded-3xl shadow-soft"
                     />
                   </div>
                 </div>
