@@ -12,19 +12,19 @@ import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import venueHero from "@/assets/gallery/wedding-party-woods-hero.jpg";
 import cabinExterior from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-pavilion-reception-entrance-guests-cheering-19.jpg";
-import cabinInterior from "@/assets/Cabin/cabin-interior-living-area.jpeg";
-import cabinPorch from "@/assets/Cabin/cabin-porch-view.jpeg";
-import cabinBed from "@/assets/Cabin/cabin-bedroom-comfort.jpeg";
-import cabinKitchen from "@/assets/Cabin/cabin-kitchenette-details.jpeg";
-import cabinLoft from "@/assets/Cabin/cabin-loft-view.jpeg";
-import cabinDeck from "@/assets/Cabin/cabin-deck-outdoor-seating.jpeg";
-import cabinFullExterior from "@/assets/Cabin/cabin-exterior-woods.jpeg";
-import campfireSetting from "@/assets/Cabin/cabin-campfire-evening.jpeg";
-import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-party-cheer-couple-kissing-forest-group-portrait-07.jpg";
-import coupleKissingTrail from "@/assets/gallery/Images/couple-kissing-trail.jpeg";
+import cabinInterior from "@/assets/gallery/Cabin/cabin-interior-living-area.jpeg";
+import cabinPorch from "@/assets/gallery/Cabin/cabin-porch-view.jpeg";
+import cabinBed from "@/assets/gallery/Cabin/cabin-bedroom-comfort.jpeg";
+import cabinKitchen from "@/assets/gallery/Cabin/cabin-kitchenette-details.jpeg";
+import cabinLoft from "@/assets/gallery/Cabin/cabin-loft-view.jpeg";
+import cabinDeck from "@/assets/gallery/Cabin/cabin-deck-outdoor-seating.jpeg";
+import cabinFullExterior from "@/assets/gallery/Cabin/cabin-exterior-woods.jpeg";
+import campfireSetting from "@/assets/gallery/Cabin/cabin-campfire-evening.jpeg";
+import familyPortrait from "@/assets/gallery/Cabin/cabin-bridal-portraits.jpeg";
+import coupleRomantic from "@/assets/gallery/Cabin/cabin-romantic-couple.jpeg";
 import cakeCuttingForest from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-cake-cutting-and-first-bite-40.jpg";
 import receptionTable4 from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-head-table-candles-and-florals-38.jpg";
-import brideGroomTwirl from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-bride-and-groom-walking-field-black-and-white-45.jpg";
+import receptionChairGame from "@/assets/gallery/ae544ad7d928a81729703820306114ae-xxxlarge.jpeg";
 import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign, Waves, Compass } from "lucide-react";
 
 const Venue = () => {
@@ -186,15 +186,15 @@ const Venue = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <HoverImage 
                     src={familyPortrait}
-                    alt="Bride and groom with family in golden fall foliage at Rustic Retreat"
-                    description="Family portraits in the autumn woods"
-                    category="Family"
+                    alt="Bridal portraits near the rustic cabin at Rustic Retreat"
+                    description="Beautiful backdrops for your wedding photos"
+                    category="Portraits"
                     className="shadow-xl"
                   />
                   <HoverImage 
-                    src={coupleKissingTrail}
-                    alt="Couple kissing on a forest trail at Rustic Retreat"
-                    description="Private forest trails for romantic portraits"
+                    src={coupleRomantic}
+                    alt="Couple enjoying a romantic moment near the cabin at Rustic Retreat"
+                    description="Private, intimate moments away from the crowd"
                     category="Portraits"
                     className="shadow-xl"
                   />
@@ -210,9 +210,9 @@ const Venue = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <HoverImage 
-                  src={brideGroomTwirl}
-                  alt="Bride and groom twirling during their first dance on the forest dance floor"
-                  description="A joyful first dance under the trees"
+                  src={receptionChairGame}
+                  alt="Wedding reception chair game under string lights at Rustic Retreat"
+                  description="Laughter-filled reception moments under the glowing pavilion"
                   category="Reception"
                   className="shadow-xl"
                 />

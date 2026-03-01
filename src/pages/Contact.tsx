@@ -123,7 +123,7 @@ const Contact = () => {
                         <form onSubmit={handleSubmit} className="space-y-6">
                           <div className="grid md:grid-cols-2 gap-4">
                             <div>
-                              <Label htmlFor="partner1FirstName">Your First Name *</Label>
+                              <Label htmlFor="partner1FirstName">Your First Name</Label>
                               <Input
                                 id="partner1FirstName"
                                 name="partner1FirstName"
@@ -133,7 +133,7 @@ const Contact = () => {
                               />
                             </div>
                             <div>
-                              <Label htmlFor="partner1LastName">Your Last Name *</Label>
+                              <Label htmlFor="partner1LastName">Your Last Name</Label>
                               <Input
                                 id="partner1LastName"
                                 name="partner1LastName"
@@ -146,7 +146,7 @@ const Contact = () => {
 
                           <div className="grid md:grid-cols-2 gap-4">
                             <div>
-                              <Label htmlFor="partner2FirstName">Your Fiancé(e)'s First Name *</Label>
+                              <Label htmlFor="partner2FirstName">Your Fiancé(e)'s First Name</Label>
                               <Input
                                 id="partner2FirstName"
                                 name="partner2FirstName"
@@ -156,7 +156,7 @@ const Contact = () => {
                               />
                             </div>
                             <div>
-                              <Label htmlFor="partner2LastName">Your Fiancé(e)'s Last Name *</Label>
+                              <Label htmlFor="partner2LastName">Your Fiancé(e)'s Last Name</Label>
                               <Input
                                 id="partner2LastName"
                                 name="partner2LastName"
@@ -168,7 +168,7 @@ const Contact = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="email">Email Address *</Label>
+                            <Label htmlFor="email">Email Address</Label>
                             <Input
                               id="email"
                               name="email"
@@ -180,7 +180,7 @@ const Contact = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="phone">Phone Number *</Label>
+                            <Label htmlFor="phone">Phone Number</Label>
                             <Input
                               id="phone"
                               name="phone"
@@ -216,7 +216,7 @@ const Contact = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="tourDates">When would you like to schedule your visit? *</Label>
+                            <Label htmlFor="tourDates">When would you like to schedule your visit? (only available between May through September)</Label>
                             <Textarea
                               id="tourDates"
                               name="tourDates"
@@ -232,6 +232,7 @@ const Contact = () => {
                               id="weddingDate"
                               name="weddingDate"
                               type="text"
+                              required
                               className="mt-2"
                               placeholder="e.g., Summer 2027, August 14th, 2027, etc."
                             />
@@ -243,6 +244,7 @@ const Contact = () => {
                               id="guestCount"
                               name="guestCount"
                               type="text"
+                              required
                               className="mt-2"
                               placeholder="e.g., 50-60 guests, or 'not sure yet'"
                             />

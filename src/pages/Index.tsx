@@ -20,7 +20,7 @@ import {
 
 // Hero & Property Images
 import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.jpeg";
-import cabinExterior from "@/assets/Cabin/cabin-exterior-woods.jpeg";
+import cabinExterior from "@/assets/gallery/Cabin/cabin-exterior-woods.jpeg";
 import receptionGazebo from "@/assets/gallery/Images/reception-gazebo.jpg";
 
 // Gallery Images for Storytelling
