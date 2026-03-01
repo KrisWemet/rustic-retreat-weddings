@@ -45,6 +45,8 @@ import dressGazebo from "@/assets/gallery/dress-forest-gazebo.jpg";
 import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import content from "@/data/site-content.json";
+
 const Index = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
@@ -140,19 +142,19 @@ const Index = () => {
                 You're not booking for hours or a single day...
               </p>
               <h1 className="mt-3 md:mt-4 lg:mt-5 font-serif font-normal leading-[1.05] [text-wrap:balance] [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
-                <span className="block text-white text-3xl md:text-5xl lg:text-6xl">Your People.</span>
-                <span className="block text-white text-3xl md:text-5xl lg:text-6xl">Your Vision.</span>
-                <span className="block text-[#D8A799] italic text-4xl md:text-6xl lg:text-7xl">Your Legendary Weekend.</span>
+                <span className="block text-white text-3xl md:text-5xl lg:text-6xl">{content.homepage.hero.headline.part1}</span>
+                <span className="block text-white text-3xl md:text-5xl lg:text-6xl">{content.homepage.hero.headline.part2}</span>
+                <span className="block text-[#D8A799] italic text-4xl md:text-6xl lg:text-7xl">{content.homepage.hero.headline.part3}</span>
               </h1>
               <p className="mx-auto mt-3 md:mt-4 lg:mt-5 max-w-3xl text-sm md:text-base lg:text-lg text-white/95">
-                You're claiming a weekend. 65 private acres and a wedding your guests will never forget.
+                {content.homepage.hero.subheadline}
               </p>
               <div className="mt-5 md:mt-6 lg:mt-7 flex flex-col items-center gap-3 md:gap-4 sm:flex-row sm:justify-center">
                 <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center bg-[#D8A799] text-white px-8 md:px-10 lg:px-12 py-3 md:py-4 rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-[#cfa08f] transition-colors">
-                  Schedule a Visit
+                  {content.homepage.hero.ctaText.visit}
                 </Link>
                 <Link to="/packages" className="w-full sm:w-auto inline-flex items-center justify-center border border-white/70 bg-white/10 text-white px-8 md:px-10 lg:px-12 py-3 md:py-4 rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-white/20 transition-colors">
-                  View Packages
+                  {content.homepage.hero.ctaText.packages}
                 </Link>
               </div>
             </div>
@@ -346,36 +348,13 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             <div className="grid sm:grid-cols-2 gap-4">
-              <ScrollReveal delay={0}>
-                <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                  <p className="font-medium">A weekend that unfolds naturally, not a wedding that ends before it really begins.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                  <p className="font-medium">Open air and rustling poplars, not a ballroom ceiling and a strict schedule.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                  <p className="font-medium">A celebration that reflects your story, not a template you're expected to fit into.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={300}>
-                <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                  <p className="font-medium">Music and dancing under the open sky, not the same indoor routine you've seen a hundred times.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={400}>
-                <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                  <p className="font-medium">The freedom to be themselves, whether that's creating a DIY celebration or an extravagant event that reflects their unique story.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={500}>
-                <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                  <p className="font-medium">A venue that feels like a getaway, not a place where you’re watching the clock all day.</p>
-                </div>
-              </ScrollReveal>
+              {content.homepage.intro.text.map((text, index) => (
+                <ScrollReveal key={index} delay={index * 100}>
+                  <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                    <p className="font-medium">{text}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
 
             <ScrollReveal delay={150} className="h-full">
@@ -598,68 +577,36 @@ const Index = () => {
             </ScrollReveal>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-              <ScrollReveal delay={0}>
-                <Card
-                  className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                  tabIndex={0}
-                >
-                  <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                    <p className="text-[11px] sm:text-sm leading-relaxed text-muted-foreground">
-                      Full property access, ceremony + reception spaces, cabin suite, décor collection, and essentials for a simple weekday celebration.
-                    </p>
-                  </div>
-                  <CardContent className="p-6 text-center">
-                    <h3 className="text-xl font-serif font-semibold mb-1">2-Day</h3>
-                    <p className="text-xs text-muted-foreground mb-4">Weekdays</p>
-                    <p className="text-3xl font-serif text-secondary mb-1">$5,000*</p>
-                    <p className="text-xs text-muted-foreground mb-4">Intimate elopements</p>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
-              <ScrollReveal delay={100}>
-                <Card
-                  className="bg-card border border-border hover:border-secondary transition-all hover:shadow-medium group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                  tabIndex={0}
-                >
-                  <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                    <p className="text-[11px] sm:text-sm leading-relaxed text-muted-foreground">
-                      Weekend access Fri–Sun with ceremony + reception areas, cabin stay, décor collection, and room for camping guests.
-                    </p>
-                  </div>
-                  <CardContent className="p-6 text-center">
-                    <h3 className="text-xl font-serif font-semibold mb-1">3-Day</h3>
-                    <p className="text-xs text-muted-foreground mb-4">Fri–Sun</p>
-                    <p className="text-3xl font-serif text-secondary mb-1">$6,500*</p>
-                    <p className="text-xs text-muted-foreground mb-4">Weekend wedding</p>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
-              <ScrollReveal delay={200}>
-                <Card
-                  className="bg-card border-2 border-secondary relative shadow-medium h-full min-h-[220px] group overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                  tabIndex={0}
-                >
-                  <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                    <p className="text-[11px] sm:text-sm leading-relaxed text-muted-foreground">
-                      Extended midweek-to-weekend access with full property amenities, cabin + camping, décor collection, and space for multiple events.
-                    </p>
-                  </div>
-                  <div className="absolute top-3 left-1/2 -translate-x-1/2 flex items-center gap-1 whitespace-nowrap rounded-full bg-gradient-to-r from-secondary to-secondary-dark text-secondary-foreground text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] px-3 py-1 shadow-lg">
-                    <Star className="w-3 h-3" />
-                    <span>Most Desired</span>
-                  </div>
-                  <CardContent className="p-6 pt-10 text-center">
-                    <h3 className="text-xl font-serif font-semibold mb-1">5-Day</h3>
-                    <p className="text-xs text-muted-foreground mb-4">Wed–Sun</p>
-                    <p className="text-3xl font-serif text-secondary mb-1">$7,500*</p>
-                    <p className="text-xs text-muted-foreground mb-4">The complete experience</p>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
-
+              {[...content.packages.packages].reverse().map((pkg, index) => (
+                <ScrollReveal key={index} delay={index * 100}>
+                  <Card
+                    className={`bg-card group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+                      pkg.isRecommended
+                        ? "border-2 border-secondary shadow-medium"
+                        : "border border-border hover:border-secondary transition-all hover:shadow-medium"
+                    }`}
+                    tabIndex={0}
+                  >
+                    <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                      <p className="text-[11px] sm:text-sm leading-relaxed text-muted-foreground">
+                        {pkg.previewDescription}
+                      </p>
+                    </div>
+                    {pkg.isRecommended && (
+                      <div className="absolute top-3 left-1/2 -translate-x-1/2 flex items-center gap-1 whitespace-nowrap rounded-full bg-gradient-to-r from-secondary to-secondary-dark text-secondary-foreground text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] px-3 py-1 shadow-lg">
+                        <Star className="w-3 h-3" />
+                        <span>Most Desired</span>
+                      </div>
+                    )}
+                    <CardContent className={`p-6 text-center ${pkg.isRecommended ? "pt-10" : ""}`}>
+                      <h3 className="text-xl font-serif font-semibold mb-1">{pkg.shortName}</h3>
+                      <p className="text-xs text-muted-foreground mb-4">{pkg.duration}</p>
+                      <p className="text-3xl font-serif text-secondary mb-1">${pkg.price}*</p>
+                      <p className="text-xs text-muted-foreground mb-4">{pkg.subtitle}</p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
+              ))}
             </div>
 
             <ScrollReveal delay={400}>

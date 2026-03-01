@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import logoLight from "@/assets/logo/rustic-retreat-logo-light.png";
+import content from "@/data/site-content.json";
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
@@ -26,7 +27,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold font-serif">Rustic Retreat Weddings</h3>
             </div>
             <p className="text-primary-foreground/80 text-sm">
-              Your intimate 65-acre Alberta retreat where celebrations unfold naturally, just 50 minutes north of Edmonton.
+              {content.footer.tagline}
             </p>
           </div>
 
@@ -79,17 +80,17 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <a href="sms:+17802106252" aria-label="Text Rustic Retreat">
+                <a href={`sms:+1${content.sitewide.phone.replace(/\D/g, '')}`} aria-label="Text Rustic Retreat">
                   <MessageCircle className="w-4 h-4 flex-shrink-0" />
                 </a>
-                <a href="tel:+17802106252" className="hover:text-secondary transition-colors text-primary-foreground/80">
-                  (780) 210-6252
+                <a href={`tel:+1${content.sitewide.phone.replace(/\D/g, '')}`} className="hover:text-secondary transition-colors text-primary-foreground/80">
+                  {content.sitewide.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:rusticretreatalberta@gmail.com" className="hover:text-secondary transition-colors text-primary-foreground/80">
-                  rusticretreatalberta@gmail.com
+                <a href={`mailto:${content.sitewide.email}`} className="hover:text-secondary transition-colors text-primary-foreground/80">
+                  {content.sitewide.email}
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -108,7 +109,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} Rustic Retreat Weddings. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {content.footer.copyright}</p>
         </div>
       </div>
     </footer>

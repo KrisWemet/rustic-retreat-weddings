@@ -19,6 +19,7 @@ import cardBoxWineBarrel from "@/assets/gallery/card-box-wine-barrel.jpg";
 import guestFavorBox from "@/assets/gallery/guest-favor-box.jpg";
 import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.jpg";
 import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Waves, Compass, Target, Bath, Film, Music, Flag } from "lucide-react";
+import content from "@/data/site-content.json";
 
 const Packages = () => {
   const packageSchema = {
@@ -185,157 +186,53 @@ const Packages = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-            {/* 5-Day Package */}
-            <Card className="border-2 border-secondary hover:shadow-xl transition-shadow bg-secondary/5">
-              <CardContent className="p-8">
-                <div className="inline-block bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
-                  ⭐ Our Recommendation
-                </div>
-                <h3 className="text-3xl font-bold mb-3">The Full 5-Day Experience</h3>
-                <p className="text-lg text-muted-foreground mb-6">Wed–Sun or Thu–Mon</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold mb-3">The Timeline (Wednesday Arrival Option):</h4>
-                  <div className="space-y-2 text-sm">
-                    <p><strong>Wednesday:</strong> Arrival day. People trickle in. Camp setup. First dinner together. Early bedtime.</p>
-                    <p><strong>Thursday:</strong> The "settling in" day. Morning hike. Afternoon games. Evening bonfire. Walls start coming down.</p>
-                    <p><strong>Friday:</strong> Pre-wedding festivities. Rehearsal dinner. The anticipation builds.</p>
-                    <p><strong>Saturday:</strong> YOUR DAY. Ceremony at golden hour, reception under stars.</p>
-                    <p><strong>Sunday:</strong> The goodbye. But softer. Extended. "We should do this every year" becomes a real plan.</p>
+            {content.packages.packages.map((pkg, idx) => (
+              <Card 
+                key={idx} 
+                className={`border-2 hover:shadow-xl transition-shadow ${pkg.isRecommended ? "border-secondary bg-secondary/5" : ""}`}
+              >
+                <CardContent className="p-8">
+                  {pkg.isRecommended && (
+                    <div className="inline-block bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
+                      ⭐ Our Recommendation
+                    </div>
+                  )}
+                  <h3 className="text-3xl font-bold mb-3">{pkg.name}</h3>
+                  <p className="text-lg text-muted-foreground mb-6">{pkg.duration}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-3">{pkg.timelineTitle}</h4>
+                    <div className="space-y-2 text-sm">
+                      {pkg.timeline?.map((item, tIdx) => (
+                        <p key={tIdx}><strong>{item.day}</strong> {item.desc}</p>
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                <div className="bg-secondary/20 p-4 rounded-lg mb-6">
-                  <p className="font-medium mb-2">The complete experience:</p>
-                  <p className="text-sm">
-                    Couples who want families to actually bond. Anyone who's left a 6-hour wedding thinking "I barely talked to anyone." Those who understand that the best celebrations unfold naturally, not on a tight schedule.
-                  </p>
-                </div>
+                  <div className={`${pkg.isRecommended ? "bg-secondary/20" : "bg-muted/50"} p-4 rounded-lg mb-6`}>
+                    <p className="font-medium mb-2">{pkg.perfectForTitle}</p>
+                    <p className={`text-sm ${!pkg.isRecommended ? "text-muted-foreground" : ""}`}>
+                      {pkg.perfectForText}
+                    </p>
+                  </div>
 
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">108 hours of shared life</span>
+                  <div className="space-y-2 mb-6">
+                    {pkg.features.map((feature, fIdx) => (
+                      <div key={fIdx} className="flex items-start gap-2">
+                        <CheckCircle className={`w-5 h-5 ${pkg.isRecommended ? "text-secondary" : "text-primary"} mt-0.5 flex-shrink-0`} />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
                   </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Extended family wedding celebration</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Immersive multi-day experience</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Maximum value for out-of-town guests</span>
-                  </div>
-                </div>
 
-                <div className="bg-secondary/20 p-6 rounded-lg mb-6 border-2 border-secondary">
-                  <p className="text-3xl font-bold mb-2">$7,500*</p>
-                  <p className="text-sm">2027 Package Price</p>
-                </div>
-
-              </CardContent>
-            </Card>
-
-            {/* 3-Day Package */}
-            <Card className="border-2 hover:shadow-xl transition-shadow">
-              <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The Classic 3-Day Weekend</h3>
-                <p className="text-lg text-muted-foreground mb-6">Friday through Sunday</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold mb-3">The Timeline:</h4>
-                  <div className="space-y-2 text-sm">
-                    <p><strong>Friday:</strong> Gates open. Your people arrive throughout the day. Tents up, gear settled, the weekend officially begins.</p>
-                    <p><strong>Friday afternoon/evening:</strong> Exploration, campfires, the first wave of reconnection</p>
-                    <p><strong>Saturday:</strong> Your wedding day, dawn to starlight</p>
-                    <p><strong>Sunday:</strong> Slow morning, tearful goodbyes, promises to do this again</p>
+                  <div className={`${pkg.isRecommended ? "bg-secondary/20 border-secondary" : "bg-primary/10 border-primary"} p-6 rounded-lg mb-6 border-2`}>
+                    <p className="text-3xl font-bold mb-2">${pkg.price}*</p>
+                    <p className={`text-sm ${!pkg.isRecommended ? "text-muted-foreground" : ""}`}>2027 Package Price</p>
                   </div>
-                </div>
 
-                <div className="bg-muted/50 p-4 rounded-lg mb-6">
-                  <p className="font-medium mb-2">Perfect for:</p>
-                  <p className="text-sm text-muted-foreground">
-                    Couples working with tighter schedules or budgets, or guests traveling from far away who need defined arrival/departure times. You still get that "wedding weekend" magic—exponentially more connection than a single-day event—in a contained timeframe.
-                  </p>
-                </div>
-
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">60 hours together instead of 6</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Budget-friendly multi-day celebration</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Intimate outdoor wedding with accommodation</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Private venue without $10,000+ price tag</span>
-                  </div>
-                </div>
-
-                <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$6,500*</p>
-                  <p className="text-sm text-muted-foreground">2027 Package Price</p>
-                </div>
-
-              </CardContent>
-            </Card>
-
-            {/* 2-Day Package */}
-            <Card className="border-2 hover:shadow-xl transition-shadow">
-              <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-3">The Intimate 2-Day Escape</h3>
-                <p className="text-lg text-muted-foreground mb-6">Weekdays Only</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold mb-3">The Timeline:</h4>
-                  <div className="space-y-2 text-sm">
-                    <p><strong>Day 1:</strong> Arrive, settle in, rehearse if you wish. Evening bonfire under the stars.</p>
-                    <p><strong>Day 2:</strong> Your wedding day—intimate, unhurried, exactly as you dreamed.</p>
-                  </div>
-                </div>
-
-                <div className="bg-muted/50 p-4 rounded-lg mb-6">
-                  <p className="font-medium mb-2">Perfect for:</p>
-                  <p className="text-sm text-muted-foreground">
-                    Couples seeking an intimate elopement experience with just your closest people. All the magic of Rustic Retreat in a focused, meaningful two-day celebration.
-                  </p>
-                </div>
-
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Intimate elopement experience</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Weekday availability</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Most affordable option</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Full property access</span>
-                  </div>
-                </div>
-
-                <div className="bg-primary/10 p-6 rounded-lg mb-6 border-2 border-primary">
-                  <p className="text-3xl font-bold mb-2">$5,000*</p>
-                  <p className="text-sm text-muted-foreground">2027 Package Price</p>
-                </div>
-
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           <div className="text-center">
@@ -585,38 +482,20 @@ const Packages = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Ceremony & Reception Capacity</h2>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="border-2 hover:border-secondary transition-colors">
-              <CardContent className="pt-6 text-center">
-                <Users className="w-12 h-12 mx-auto mb-4 text-secondary" />
-                <h3 className="font-semibold text-lg mb-3">Ceremony Space</h3>
-                <p className="text-3xl font-bold mb-2">80</p>
-                <p className="text-sm text-muted-foreground">
-                  Guests comfortably seated in natural forest ceremony area with towering Alberta pines as backdrop
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-secondary transition-colors">
-              <CardContent className="pt-6 text-center">
-                <Users className="w-12 h-12 mx-auto mb-4 text-secondary" />
-                <h3 className="font-semibold text-lg mb-3">Reception Area</h3>
-                <p className="text-3xl font-bold mb-2">80</p>
-                <p className="text-sm text-muted-foreground">
-                  Guests for dining and celebration under clear-top gazebo or open field arrangements
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-secondary transition-colors">
-              <CardContent className="pt-6 text-center">
-                <Home className="w-12 h-12 mx-auto mb-4 text-secondary" />
-                <h3 className="font-semibold text-lg mb-3">Overnight Stay</h3>
-                <p className="text-3xl font-bold mb-2">60</p>
-                <p className="text-sm text-muted-foreground">
-                  Guests can camp on the property—you choose where to set up, plus the cabin
-                </p>
-              </CardContent>
-            </Card>
+            {content.packages.capacity.map((item, idx) => (
+              <Card key={idx} className="border-2 hover:border-secondary transition-colors">
+                <CardContent className="pt-6 text-center">
+                  {idx === 2 ? (
+                    <Home className="w-12 h-12 mx-auto mb-4 text-secondary" />
+                  ) : (
+                    <Users className="w-12 h-12 mx-auto mb-4 text-secondary" />
+                  )}
+                  <h3 className="font-semibold text-lg mb-3">{item.title}</h3>
+                  <p className="text-3xl font-bold mb-2">{item.value}</p>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -728,45 +607,29 @@ const Packages = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <Card className="border-2">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-4 text-muted-foreground">Traditional Edmonton/Alberta Venue:</h3>
+                  <h3 className="font-semibold text-lg mb-4 text-muted-foreground">{content.packages.pricingComparison.traditional.title}</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground mb-4">
-                    <li>• Venue rental (6 hours): $8,000-15,000+</li>
-                    <li>• Hotel rooms: $200-400/night × multiple rooms</li>
-                    <li>• Rehearsal dinner venue: $1,500-3,000</li>
-                    <li>• Day-after brunch venue: $800-1,500</li>
-                    <li>• Decoration rentals: $2,000-4,000</li>
+                    {content.packages.pricingComparison.traditional.items.map((item, idx) => (
+                      <li key={idx}>• {item}</li>
+                    ))}
                   </ul>
-                  <p className="font-bold text-lg">Total: Often $15,000-25,000+</p>
+                  <p className="font-bold text-lg">Total: {content.packages.pricingComparison.traditional.total}</p>
                   <p className="text-sm text-muted-foreground mt-2">For disconnected events</p>
                 </CardContent>
               </Card>
 
               <Card className="border-2 border-secondary bg-secondary/5">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-4">Rustic Retreat Multi-Day Package:</h3>
+                  <h3 className="font-semibold text-lg mb-4">{content.packages.pricingComparison.rusticRetreat.title}</h3>
                   <ul className="space-y-2 text-sm mb-4">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
-                      <span>Venue for 3-5 full days</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
-                      <span>Accommodation for 60 guests on-property</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
-                      <span>Tables, benches, décor included</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
-                      <span>Property guidance and support</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
-                      <span>All activities and amenities</span>
-                    </li>
+                    {content.packages.pricingComparison.rusticRetreat.items.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
                   </ul>
-                  <p className="font-bold text-lg">$5,000–$7,500*</p>
+                  <p className="font-bold text-lg">{content.packages.pricingComparison.rusticRetreat.priceRange}</p>
                   <p className="text-sm mt-2">Based on your timeline—all in ONE connected place</p>
                 </CardContent>
               </Card>

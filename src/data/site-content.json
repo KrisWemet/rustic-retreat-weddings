@@ -1,0 +1,151 @@
+{
+  "sitewide": {
+    "phone": "(780) 210-6252",
+    "email": "rusticretreatalberta@gmail.com"
+  },
+  "homepage": {
+    "hero": {
+      "headline": {
+        "part1": "Your People.",
+        "part2": "Your Vision.",
+        "part3": "Your Legendary Weekend."
+      },
+      "subheadline": "You're claiming a weekend. 65 private acres and a wedding your guests will never forget.",
+      "ctaText": {
+        "visit": "Schedule a Visit",
+        "packages": "View Packages"
+      }
+    },
+    "intro": {
+      "text": [
+        "A weekend that unfolds naturally, not a wedding that ends before it really begins.",
+        "Open air and rustling poplars, not a ballroom ceiling and a strict schedule.",
+        "A celebration that reflects your story, not a template you're expected to fit into.",
+        "Music and dancing under the open sky, not the same indoor routine you've seen a hundred times.",
+        "The freedom to be themselves, whether that's creating a DIY celebration or an extravagant event that reflects their unique story.",
+        "A venue that feels like a getaway, not a place where you’re watching the clock all day."
+      ]
+    }
+  },
+  "packages": {
+    "packages": [
+      {
+        "name": "The Full 5-Day Experience",
+        "shortName": "5-Day",
+        "subtitle": "The complete experience",
+        "duration": "Wed–Sun or Thu–Mon",
+        "price": "7,500",
+        "description": "5-day celebration (Wed-Sun or Thu-Mon) with immersive guest time.",
+        "previewDescription": "Extended midweek-to-weekend access with full property amenities, cabin + camping, décor collection, and space for multiple events.",
+        "timelineTitle": "The Timeline (Wednesday Arrival Option):",
+        "timeline": [
+          { "day": "Wednesday:", "desc": "Arrival day. People trickle in. Camp setup. First dinner together. Early bedtime." },
+          { "day": "Thursday:", "desc": "The \"settling in\" day. Morning hike. Afternoon games. Evening bonfire. Walls start coming down." },
+          { "day": "Friday:", "desc": "Pre-wedding festivities. Rehearsal dinner. The anticipation builds." },
+          { "day": "Saturday:", "desc": "YOUR DAY. Ceremony at golden hour, reception under stars." },
+          { "day": "Sunday:", "desc": "The goodbye. But softer. Extended. \"We should do this every year\" becomes a real plan." }
+        ],
+        "perfectForTitle": "The complete experience:",
+        "perfectForText": "Couples who want families to actually bond. Anyone who's left a 6-hour wedding thinking \"I barely talked to anyone.\" Those who understand that the best celebrations unfold naturally, not on a tight schedule.",
+        "features": [
+          "108 hours of shared life",
+          "Extended family wedding celebration",
+          "Immersive multi-day experience",
+          "Maximum value for out-of-town guests"
+        ],
+        "isRecommended": true
+      },
+      {
+        "name": "The Classic 3-Day Weekend",
+        "shortName": "3-Day",
+        "subtitle": "Weekend wedding",
+        "duration": "Friday through Sunday",
+        "price": "6,500",
+        "description": "3-day Friday-to-Sunday wedding weekend with exclusive access.",
+        "previewDescription": "Weekend access Fri–Sun with ceremony + reception areas, cabin stay, décor collection, and room for camping guests.",
+        "timelineTitle": "The Timeline:",
+        "timeline": [
+          { "day": "Friday:", "desc": "Gates open. Your people arrive throughout the day. Tents up, gear settled, the weekend officially begins." },
+          { "day": "Friday afternoon/evening:", "desc": "Exploration, campfires, the first wave of reconnection" },
+          { "day": "Saturday:", "desc": "Your wedding day, dawn to starlight" },
+          { "day": "Sunday:", "desc": "Slow morning, tearful goodbyes, promises to do this again" }
+        ],
+        "perfectForTitle": "Perfect for:",
+        "perfectForText": "Couples working with tighter schedules or budgets, or guests traveling from far away who need defined arrival/departure times. You still get that \"wedding weekend\" magic—exponentially more connection than a single-day event—in a contained timeframe.",
+        "features": [
+          "60 hours together instead of 6",
+          "Budget-friendly multi-day celebration",
+          "Intimate outdoor wedding with accommodation",
+          "Private venue without $10,000+ price tag"
+        ]
+      },
+      {
+        "name": "The Intimate 2-Day Escape",
+        "shortName": "2-Day",
+        "subtitle": "Intimate elopements",
+        "duration": "Weekdays Only",
+        "price": "5,000",
+        "description": "2-day weekday elopement experience with full property access.",
+        "previewDescription": "Full property access, ceremony + reception spaces, cabin suite, décor collection, and essentials for a simple weekday celebration.",
+        "timelineTitle": "The Timeline:",
+        "timeline": [
+          { "day": "Day 1:", "desc": "Arrive, settle in, rehearse if you wish. Evening bonfire under the stars." },
+          { "day": "Day 2:", "desc": "Your wedding day—intimate, unhurried, exactly as you dreamed." }
+        ],
+        "perfectForTitle": "Perfect for:",
+        "perfectForText": "Couples seeking an intimate elopement experience with just your closest people. All the magic of Rustic Retreat in a focused, meaningful two-day celebration.",
+        "features": [
+          "Intimate elopement experience",
+          "Weekday availability",
+          "Most affordable option",
+          "Full property access"
+        ]
+      }
+    ],
+    "capacity": [
+      {
+        "title": "Ceremony Space",
+        "value": "80",
+        "description": "Guests comfortably seated in natural forest ceremony area with towering Alberta pines as backdrop"
+      },
+      {
+        "title": "Reception Area",
+        "value": "80",
+        "description": "Guests for dining and celebration under clear-top gazebo or open field arrangements"
+      },
+      {
+        "title": "Overnight Stay",
+        "value": "60",
+        "description": "Guests can camp on the property—you choose where to set up, plus the cabin"
+      }
+    ],
+    "pricingComparison": {
+      "traditional": {
+        "title": "Traditional Edmonton/Alberta Venue:",
+        "items": [
+          "Venue rental (6 hours): $8,000-15,000+",
+          "Hotel rooms: $200-400/night × multiple rooms",
+          "Rehearsal dinner venue: $1,500-3,000",
+          "Day-after brunch venue: $800-1,500",
+          "Decoration rentals: $2,000-4,000"
+        ],
+        "total": "Often $15,000-25,000+"
+      },
+      "rusticRetreat": {
+        "title": "Rustic Retreat Multi-Day Package:",
+        "items": [
+          "Venue for 3-5 full days",
+          "Accommodation for 60 guests on-property",
+          "Tables, benches, décor included",
+          "Property guidance and support",
+          "All activities and amenities"
+        ],
+        "priceRange": "$5,000–$7,500*"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Your intimate 65-acre Alberta retreat where celebrations unfold naturally, just 50 minutes north of Edmonton.",
+    "copyright": "Rustic Retreat Weddings. All rights reserved."
+  }
+}
