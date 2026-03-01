@@ -10,7 +10,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import venueHero from "@/assets/gallery/wedding-party-woods-hero.jpg";
+import venueHero from "@/assets/gallery/989fd5f8429eef3c3a6873a7ac4e595c-xxxlarge.jpeg";
 import cabinExterior from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-pavilion-reception-entrance-guests-cheering-19.jpg";
 import cabinInterior from "@/assets/gallery/Cabin/cabin-interior-living-area.jpeg";
 import cabinPorch from "@/assets/gallery/Cabin/cabin-porch-view.jpeg";
@@ -43,7 +43,7 @@ const Venue = () => {
         
         <PageHero
           backgroundImage={venueHero}
-          backgroundImageAlt="Wedding party celebrating in the woods at Rustic Retreat"
+          backgroundImageAlt="A beautiful scenic view of the forest and meadow at Rustic Retreat"
           title="The Venue"
           subtitle="65 private acres of forest and meadow, a cozy cabin for newlyweds, and a treasure trove of décor waiting to be discovered."
           overlayOpacity="none"
@@ -164,6 +164,62 @@ const Venue = () => {
           </div>
         </section>
 
+        {/* Abundance & Décor Section - Combined and moved up */}
+        <section className="section">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+              <ScrollReveal direction="left">
+                <div className="flex items-center gap-3 mb-6">
+                  <DollarSign className="w-10 h-10 text-secondary" />
+                  <h2 className="text-3xl md:text-4xl font-bold">Abundance Without the Added Cost</h2>
+                </div>
+                
+                <p className="text-lg mb-6 text-muted-foreground">
+                  Your wedding should feel like a celebration, not a series of line items on an invoice. While most venues charge per piece for rentals and decor, we believe in abundance. 
+                </p>
+
+                <div className="bg-secondary/10 p-6 border-l-4 border-secondary mb-8">
+                  <p className="text-xl font-bold text-primary">
+                    Our curated Wedding Décor Collection is included in every booking—at zero extra cost.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold">A Living Collection</h3>
+                  <p className="text-muted-foreground">
+                    The collection is always growing, shaped by new finds and the generosity of couples who leave pieces behind for the next story to unfold. It’s a flexible mix of ceremony arches, rustic wine barrels, table styling pieces, and vintage accents that you can weave into your own vision.
+                  </p>
+                  <p className="text-muted-foreground">
+                    During your tour, we’ll walk you through the collection and help you start picturing how these pieces can transform the space into something uniquely yours.
+                  </p>
+                </div>
+              </ScrollReveal>
+              
+              <ScrollReveal direction="right">
+                <div className="grid grid-cols-2 gap-4">
+                  <HoverImage 
+                    src={cakeCuttingForest}
+                    alt="Rustic wine barrel wedding décor at Alberta venue"
+                    description="Rustic touches everywhere—wine barrels add character"
+                    category="Included Décor"
+                    className="shadow-xl"
+                  />
+                  <HoverImage 
+                    src={receptionTable4}
+                    alt="Elegant gold and white wedding reception table setting"
+                    description="Elegance without the rental fees—all included"
+                    category="Table Settings"
+                    className="shadow-xl"
+                  />
+                </div>
+                <div className="mt-4 p-4 bg-card border rounded-xl text-center italic text-sm text-muted-foreground">
+                  "Walk into a space where everything you need is already waiting for you."
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
         {/* Photo Opportunities */}
         <section className="section">
           <div className="container mx-auto px-4">
@@ -222,11 +278,11 @@ const Venue = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Ceremony Settings & Reception Glow</h2>
 
                 <p className="mb-6 text-muted-foreground">
-                  Choose the ceremony backdrop that fits your vibe—an open meadow, the poplar grove, a forest clearing, or under the gazebo. Each spot gives you a different feel while keeping everything close for guests.
+                  The land has its own way of guiding you. Whether it’s the sun-drenched open meadow, the quiet filter of light through the poplar grove, or the intimacy of a forest clearing, we invite you to wander the 65 acres and find the exact spot where your story feels most at home.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  Most couples host the reception in the clear-top gazebo. At night, the string lights and open ceiling create that warm, glowing atmosphere everyone remembers.
+                  When the sun dips low, most couples move the celebration to the clear-top gazebo. Under the glow of string lights and an open night sky, the space transforms into something truly magical.
                 </p>
 
                 <div className="bg-primary/5 p-6 border-l-4 border-primary mt-6">
@@ -236,68 +292,6 @@ const Venue = () => {
                   <p className="text-sm text-muted-foreground">
                     Want to see the gazebo lit up? Schedule an evening tour.
                   </p>
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Décor Collection Details */}
-        <section className="section">
-          <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How the Décor Collection Works</h2>
-            </ScrollReveal>
-
-            <div className="max-w-4xl mx-auto">
-              <ScrollReveal delay={100}>
-                <div className="bg-card border-2 rounded-2xl p-8 shadow-soft">
-                  <p className="text-lg mb-4">
-                    The collection is always evolving as couples leave pieces behind and we add new finds. It’s a flexible mix of ceremony accents, table styling pieces, and rustic details that you can blend with your own décor.
-                  </p>
-                  <p className="text-muted-foreground">
-                    We’ll walk you through what’s available during your visit and help you picture what fits your vision. If you want a current snapshot ahead of time, just ask and we’ll send the latest overview.
-                  </p>
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Zero Extra Cost */}
-        <section className="section section-muted">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <ScrollReveal direction="left">
-                <div className="flex items-center gap-3 mb-6">
-                  <DollarSign className="w-10 h-10 text-secondary" />
-                  <h2 className="text-3xl md:text-4xl font-bold">Zero Extra Cost</h2>
-                </div>
-                <p className="text-lg mb-6">
-                  Most venues charge decoration rental fees. Companies demand deposits. You spend thousands on purchases you'll never use again.
-                </p>
-                <div className="bg-secondary/10 p-6 border-2 border-secondary">
-                  <p className="text-xl font-bold">
-                    Here, you walk into abundance. Ready. Waiting. Free.
-                  </p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal direction="right">
-                <div className="grid grid-cols-2 gap-4">
-                  <HoverImage 
-                    src={cakeCuttingForest}
-                    alt="Rustic wine barrel wedding décor at Alberta venue"
-                    description="Rustic touches everywhere—wine barrels add character"
-                    category="Rustic Details"
-                    className="shadow-xl"
-                  />
-                  <HoverImage 
-                    src={receptionTable4}
-                    alt="Elegant gold and white wedding reception table setting"
-                    description="Elegance without the rental fees—all included"
-                    category="Table Settings"
-                    className="shadow-xl"
-                  />
                 </div>
               </ScrollReveal>
             </div>
