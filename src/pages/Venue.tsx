@@ -10,7 +10,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import venueHero from "@/assets/gallery/989fd5f8429eef3c3a6873a7ac4e595c-xxxlarge.jpeg";
+import venueHero from "@/assets/gallery/Images/hero-sunset-meadow.jpeg";
 import cabinExterior from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-pavilion-reception-entrance-guests-cheering-19.jpg";
 import cabinInterior from "@/assets/gallery/Cabin/cabin-interior-living-area.jpeg";
 import cabinPorch from "@/assets/gallery/Cabin/cabin-porch-view.jpeg";
@@ -27,18 +27,19 @@ import receptionTable4 from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la
 import receptionChairGame from "@/assets/gallery/ae544ad7d928a81729703820306114ae-xxxlarge.jpeg";
 import ceremonyPavilion from "@/assets/gallery/Images/IMG_0036.jpg";
 import ceremonyAisles from "@/assets/gallery/Images/4099316435379843506.jpg";
-import ceremonyWide1 from "@/assets/gallery/Images/IMG_0002.jpg";
+import ceremonyWide1 from "@/assets/gallery/Images/ceremony-wide-forest-clearing.jpg";
 import ceremonyCloseUp from "@/assets/gallery/Images/IMG_0009.jpg";
 import ceremonySeating from "@/assets/gallery/Images/IMG_0030.jpg";
 import ceremonyAisleWalk from "@/assets/gallery/Images/IMG_5018.jpg";
 import ceremonyForest1 from "@/assets/gallery/Images/IMG_6716.jpg";
 import ceremonyForest2 from "@/assets/gallery/Images/IMG_6758.jpg";
 import extrasYardGames from "@/assets/gallery/Images/extras-yard-games.jpg";
-import extrasTrampoline from "@/assets/gallery/Images/extras-trampoline.jpg";
-import extrasFirePit from "@/assets/gallery/Images/extras-fire-pit.jpg";
-import extrasTreehouse from "@/assets/gallery/Images/extras-treehouse.jpg";
+import extrasTrampolineKids from "@/assets/gallery/Images/extras-trampoline-kids.jpg";
+import extrasFirePitNight from "@/assets/gallery/Images/extras-firepit-night.jpeg";
 import extrasPlayHouse from "@/assets/gallery/Images/extras-play-house.jpg";
-import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, Waves, Compass, Flame, Trophy, Baby, Tent, Zap } from "lucide-react";
+import extrasGiantConnectFour from "@/assets/gallery/Images/extras-giant-connect-four.jpeg";
+import extrasTreehouse from "@/assets/gallery/Images/extras-treehouse.jpg";
+import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, Waves, Compass, Flame, Trophy, Baby, Zap, Tent, Trees } from "lucide-react";
 
 const Venue = () => {
   return (
@@ -183,43 +184,17 @@ const Venue = () => {
             <ScrollReveal className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold">Ceremony Settings & Reception Glow</h2>
             </ScrollReveal>
-            <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-              {/* Visual Grid - Left side (matches user's screenshot layout) */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="col-span-1 row-span-2">
-                  <ScrollReveal direction="left" className="h-full">
-                    <HoverImage 
-                      src={ceremonyPavilion}
-                      alt="Ceremony under the rustic pavilion at Rustic Retreat"
-                      description="Our signature pavilion ceremony space, blending rustic timbers with a modern clear-top roof"
-                      category="Pavilion Ceremony"
-                      className="w-full h-full object-cover rounded-2xl shadow-elegant"
-                    />
-                  </ScrollReveal>
+            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+              <ScrollReveal direction="left">
+                <div className="bg-primary/5 p-6 border-l-4 border-primary">
+                  <p className="font-medium text-lg mb-2">
+                    The Land Speaks for Itself
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Most couples choose their ceremony spot by simply walking the grounds until a particular clearing or view feels right. We encourage you to take that time during your visit to feel which space resonates with your story.
+                  </p>
                 </div>
-                <div className="col-span-1">
-                  <ScrollReveal direction="right" delay={100}>
-                    <HoverImage 
-                      src={receptionChairGame}
-                      alt="The shoe game during the reception"
-                      description="Laughter and joy during the reception under the glowing pavilion lights"
-                      category="Reception Fun"
-                      className="w-full h-full object-cover rounded-2xl shadow-elegant"
-                    />
-                  </ScrollReveal>
-                </div>
-                <div className="col-span-1">
-                  <ScrollReveal direction="right" delay={200}>
-                    <HoverImage 
-                      src={receptionTable4}
-                      alt="Elegant reception table settings"
-                      description="Warm, glowing atmosphere for your evening celebration"
-                      category="Reception"
-                      className="w-full h-full object-cover rounded-2xl shadow-elegant"
-                    />
-                  </ScrollReveal>
-                </div>
-              </div>
+              </ScrollReveal>
 
               <ScrollReveal direction="right">
                 <p className="mb-6 text-muted-foreground">
@@ -322,6 +297,16 @@ const Venue = () => {
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
+
+              <ScrollReveal delay={800} className="break-inside-avoid">
+                <HoverImage 
+                  src={ceremonyPavilion}
+                  alt="Ceremony under the rustic pavilion at Rustic Retreat"
+                  description="A beautiful ceremony setting under the hand-crafted pavilion timbers"
+                  category="Pavilion Ceremony"
+                  className="w-full rounded-2xl"
+                />
+              </ScrollReveal>
             </div>
           </div>
         </section>
@@ -381,34 +366,19 @@ const Venue = () => {
               <ScrollReveal delay={0}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
-                    <img src={extrasTreehouse} alt="Whimsical treehouse at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={extrasGiantConnectFour} alt="Giant Connect Four at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
-                    <Tent className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
-                    <h3 className="text-xl font-bold mb-2">The Treehouse</h3>
+                    <Trophy className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                    <h3 className="text-xl font-bold mb-2">Yard Games Galore</h3>
                     <p className="text-muted-foreground">
-                      A whimsical escape nestled in the branches—perfect for unique photos or a quiet moment away from the celebration.
+                      Giant Jenga, Connect Four, cornhole, and more. Keep the energy high and the guests laughing during cocktail hour or throughout the weekend.
                     </p>
                   </CardContent>
                 </Card>
               </ScrollReveal>
 
               <ScrollReveal delay={100}>
-                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
-                  <div className="h-48 overflow-hidden">
-                    <img src={extrasYardGames} alt="Yard games at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <CardContent className="pt-6 text-center lg:text-left">
-                    <Trophy className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
-                    <h3 className="text-xl font-bold mb-2">Yard Games Galore</h3>
-                    <p className="text-muted-foreground">
-                      Giant Jenga, cornhole, and more. Keep the energy high and the guests laughing during cocktail hour or throughout the weekend.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
-              <ScrollReveal delay={200}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
                     <img src={extrasPlayHouse} alt="Children's play house at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -423,10 +393,10 @@ const Venue = () => {
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={300}>
+              <ScrollReveal delay={200}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
-                    <img src={extrasTrampoline} alt="Trampoline at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={extrasTrampolineKids} alt="Trampoline at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
                     <Zap className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
@@ -438,10 +408,10 @@ const Venue = () => {
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={400}>
+              <ScrollReveal delay={300}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
-                    <img src={extrasFirePit} alt="Fire pit at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={extrasFirePitNight} alt="Fire pit at night at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
                     <Flame className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
@@ -453,7 +423,7 @@ const Venue = () => {
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={500}>
+              <ScrollReveal delay={400}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 flex items-center justify-center bg-secondary/10">
                     <Sparkles className="w-16 h-16 text-secondary/40" />
