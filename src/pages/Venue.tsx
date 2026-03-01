@@ -10,7 +10,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import venueHero from "@/assets/gallery/Images/hero-sunset-meadow.jpeg";
+import venueHero from "@/assets/gallery/ceremony-by-gazebo.jpeg";
 import cabinExterior from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-pavilion-reception-entrance-guests-cheering-19.jpg";
 import cabinInterior from "@/assets/gallery/Cabin/cabin-interior-living-area.jpeg";
 import cabinPorch from "@/assets/gallery/Cabin/cabin-porch-view.jpeg";
@@ -28,7 +28,7 @@ import receptionChairGame from "@/assets/gallery/ae544ad7d928a81729703820306114a
 import ceremonyPavilion from "@/assets/gallery/Images/IMG_0036.jpg";
 import ceremonyAisles from "@/assets/gallery/Images/4099316435379843506.jpg";
 import ceremonyWide1 from "@/assets/gallery/Images/ceremony-wide-forest-clearing.jpg";
-import ceremonyCloseUp from "@/assets/gallery/Images/IMG_0009.jpg";
+import ceremonyCloseUp from "@/assets/gallery/Images/IMG_0002.jpg";
 import ceremonySeating from "@/assets/gallery/Images/IMG_0030.jpg";
 import ceremonyAisleWalk from "@/assets/gallery/Images/IMG_5018.jpg";
 import ceremonyForest1 from "@/assets/gallery/Images/IMG_6716.jpg";
@@ -36,9 +36,9 @@ import ceremonyForest2 from "@/assets/gallery/Images/IMG_6758.jpg";
 import extrasYardGames from "@/assets/gallery/Images/extras-yard-games.jpg";
 import extrasTrampolineKids from "@/assets/gallery/Images/extras-trampoline-kids.jpg";
 import extrasFirePitNight from "@/assets/gallery/Images/extras-firepit-night.jpeg";
-import extrasPlayHouse from "@/assets/gallery/Images/extras-play-house.jpg";
+import extrasPlayhouse from "@/assets/gallery/Images/extras-playhouse.jpg";
 import extrasGiantConnectFour from "@/assets/gallery/Images/extras-giant-connect-four.jpeg";
-import extrasTreehouse from "@/assets/gallery/Images/extras-treehouse.jpg";
+
 import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, Waves, Compass, Flame, Trophy, Baby, Zap, Tent, Trees } from "lucide-react";
 
 const Venue = () => {
@@ -54,10 +54,10 @@ const Venue = () => {
       <BreadcrumbSchema />
       <div className="min-h-screen">
         <Navigation />
-        
+
         <PageHero
           backgroundImage={venueHero}
-          backgroundImageAlt="A beautiful scenic view of the forest and meadow at Rustic Retreat"
+          backgroundImageAlt="A beautiful wedding ceremony setup by the gazebo at Rustic Retreat"
           title="The Venue"
           subtitle="65 private acres of forest and meadow, a cozy cabin for newlyweds, and a treasure trove of décor waiting to be discovered."
           overlayOpacity="none"
@@ -70,7 +70,7 @@ const Venue = () => {
             <div className="max-w-4xl mx-auto">
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">The Cabin</h2>
-                
+
                 <p className="text-lg mb-6 text-muted-foreground">
                   The celebration keeps humming outside—voices drifting, the fire still crackling, that warm end-of-night glow settling in. When you’re ready, you step away without going far. Just a few steps from the fire, your cabin feels like a reset: quiet, cozy, and completely yours. It’s the kind of moment where everything slows down, you look at each other, and it finally sinks in… we did it.
                 </p>
@@ -219,7 +219,7 @@ const Venue = () => {
             {/* Ceremony Image Gallery - Masonry Layout to show full images */}
             <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 mt-12 space-y-4">
               <ScrollReveal delay={0} className="break-inside-avoid">
-                <HoverImage 
+                <HoverImage
                   src={ceremonyAisles}
                   alt="Ceremony setup with flower-lined aisles at Rustic Retreat"
                   description="A sun-drenched meadow ceremony with hand-crafted benches and wildflower-lined aisles"
@@ -227,9 +227,9 @@ const Venue = () => {
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
-              
+
               <ScrollReveal delay={100} className="break-inside-avoid">
-                <HoverImage 
+                <HoverImage
                   src={ceremonyWide1}
                   alt="Wide shot of a wedding ceremony in the forest at Rustic Retreat"
                   description="Vows exchanged in a grand forest clearing with guests seated under the ancient poplar canopy"
@@ -239,7 +239,7 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={200} className="break-inside-avoid">
-                <HoverImage 
+                <HoverImage
                   src={ceremonyCloseUp}
                   alt="Close up of a couple exchanging rings during the ceremony"
                   description="An intimate moment shared between the couple at the altar in the woods"
@@ -249,7 +249,7 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={300} className="break-inside-avoid">
-                <HoverImage 
+                <HoverImage
                   src={ceremonySeating}
                   alt="Ceremony seating setup in a quiet forest grove"
                   description="Rustic wooden benches perfectly placed for an intimate ceremony in a secluded forest grove"
@@ -259,7 +259,7 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={400} className="break-inside-avoid">
-                <HoverImage 
+                <HoverImage
                   src={ceremonyAisleWalk}
                   alt="A father walking his daughter down the forest aisle"
                   description="The emotional walk down a natural forest aisle towards the clearing"
@@ -269,7 +269,7 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={500} className="break-inside-avoid">
-                <HoverImage 
+                <HoverImage
                   src={ceremonyForest1}
                   alt="Ceremony setup nestled deep in the forest trees"
                   description="A sacred ceremony space tucked away where the trees form a natural cathedral"
@@ -279,7 +279,7 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={600} className="break-inside-avoid">
-                <HoverImage 
+                <HoverImage
                   src={ceremonyForest2}
                   alt="Another beautiful forest ceremony spot with natural light"
                   description="Soft afternoon light filtering through the trees during a quiet ceremony"
@@ -289,7 +289,7 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={700} className="break-inside-avoid">
-                <HoverImage 
+                <HoverImage
                   src={receptionChairGame}
                   alt="The couple playing the shoe game during the reception"
                   description="Laughter and joy during the reception shoe game under the glowing pavilion lights"
@@ -299,7 +299,7 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={800} className="break-inside-avoid">
-                <HoverImage 
+                <HoverImage
                   src={ceremonyPavilion}
                   alt="Ceremony under the rustic pavilion at Rustic Retreat"
                   description="A beautiful ceremony setting under the hand-crafted pavilion timbers"
@@ -320,9 +320,9 @@ const Venue = () => {
                   <p className="text-secondary font-semibold uppercase tracking-[0.18em] mb-4">The Decor Collection</p>
                   <h2 className="text-3xl md:text-4xl font-bold">Abundance Without the Added Cost</h2>
                 </div>
-                
+
                 <p className="text-lg md:text-xl mb-8 text-muted-foreground leading-relaxed">
-                  Your wedding should feel like a celebration, not a series of line items on an invoice. While most venues charge per piece for rentals and decor, we believe in abundance. 
+                  Your wedding should feel like a celebration, not a series of line items on an invoice. While most venues charge per piece for rentals and decor, we believe in abundance.
                 </p>
 
                 <div className="bg-secondary/10 p-8 rounded-2xl border-2 border-secondary/20 mb-10">
@@ -363,7 +363,7 @@ const Venue = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <ScrollReveal delay={0}>
+              <ScrollReveal delay={100}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
                     <img src={extrasGiantConnectFour} alt="Giant Connect Four at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -378,10 +378,10 @@ const Venue = () => {
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={100}>
+              <ScrollReveal delay={200}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
-                    <img src={extrasPlayHouse} alt="Children's play house at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={extrasPlayhouse} alt="Children's play house at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
                     <Baby className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
@@ -393,7 +393,7 @@ const Venue = () => {
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={200}>
+              <ScrollReveal delay={300}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
                     <img src={extrasTrampolineKids} alt="Trampoline at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -408,7 +408,7 @@ const Venue = () => {
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={300}>
+              <ScrollReveal delay={400}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
                     <img src={extrasFirePitNight} alt="Fire pit at night at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -423,7 +423,7 @@ const Venue = () => {
                 </Card>
               </ScrollReveal>
 
-              <ScrollReveal delay={400}>
+              <ScrollReveal delay={500}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 flex items-center justify-center bg-secondary/10">
                     <Sparkles className="w-16 h-16 text-secondary/40" />

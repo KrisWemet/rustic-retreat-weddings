@@ -21,7 +21,7 @@ import {
 // Hero & Property Images
 import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.jpeg";
 import cabinExterior from "@/assets/gallery/Cabin/cabin-exterior-woods.jpeg";
-import receptionGazebo from "@/assets/gallery/Images/reception-gazebo.jpg";
+import receptionGazebo from "@/assets/gallery/Images/gazebo-empty.jpg";
 
 // Gallery Images for Storytelling
 import ceremonyWideShot from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groom-lifts-bride-on-dance-floor-33.jpg";
@@ -568,11 +568,10 @@ const Index = () => {
               {[...content.packages.packages].reverse().map((pkg, index) => (
                 <ScrollReveal key={index} delay={index * 100}>
                   <Card
-                    className={`bg-card group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
-                      pkg.isRecommended
+                    className={`bg-card group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background ${pkg.isRecommended
                         ? "border-2 border-secondary shadow-medium"
                         : "border border-border hover:border-secondary transition-all hover:shadow-medium"
-                    }`}
+                      }`}
                     tabIndex={0}
                   >
                     <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center bg-card/95 backdrop-blur-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
