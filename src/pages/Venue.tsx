@@ -25,6 +25,13 @@ import coupleRomantic from "@/assets/gallery/Cabin/cabin-romantic-couple.jpeg";
 import cakeCuttingForest from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-cake-cutting-and-first-bite-40.jpg";
 import receptionTable4 from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-head-table-candles-and-florals-38.jpg";
 import receptionChairGame from "@/assets/gallery/ae544ad7d928a81729703820306114ae-xxxlarge.jpeg";
+import ceremonyAisles from "@/assets/gallery/Images/4099316435379843506.jpg";
+import ceremonyWide1 from "@/assets/gallery/Images/IMG_0002.jpg";
+import ceremonyCloseUp from "@/assets/gallery/Images/IMG_0009.jpg";
+import ceremonySeating from "@/assets/gallery/Images/IMG_0030.jpg";
+import ceremonyAisleWalk from "@/assets/gallery/Images/IMG_5018.jpg";
+import ceremonyForest1 from "@/assets/gallery/Images/IMG_6716.jpg";
+import ceremonyForest2 from "@/assets/gallery/Images/IMG_6758.jpg";
 import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign, Waves, Compass } from "lucide-react";
 
 const Venue = () => {
@@ -172,13 +179,14 @@ const Venue = () => {
             </ScrollReveal>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
-                <HoverImage 
-                  src={receptionChairGame}
-                  alt="Wedding reception chair game under string lights at Rustic Retreat"
-                  description="Laughter-filled reception moments under the glowing pavilion"
-                  category="Reception"
-                  className="shadow-xl"
-                />
+                <div className="bg-primary/5 p-6 border-l-4 border-primary">
+                  <p className="font-medium text-lg mb-2">
+                    The Land Speaks for Itself
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Most couples choose their ceremony spot by simply walking the grounds until a particular clearing or view feels right. We encourage you to take that time during your visit.
+                  </p>
+                </div>
               </ScrollReveal>
 
               <ScrollReveal direction="right">
@@ -198,6 +206,89 @@ const Venue = () => {
                     Want to see the gazebo lit up? Schedule an evening tour.
                   </p>
                 </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Ceremony Image Gallery - Masonry Layout to show full images */}
+            <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 mt-12 space-y-4">
+              <ScrollReveal delay={0} className="break-inside-avoid">
+                <HoverImage 
+                  src={ceremonyAisles}
+                  alt="Ceremony setup with aisles at Rustic Retreat"
+                  description="Beautifully prepared ceremony spaces"
+                  category="Ceremony"
+                  className="w-full rounded-2xl"
+                />
+              </ScrollReveal>
+              
+              <ScrollReveal delay={100} className="break-inside-avoid">
+                <HoverImage 
+                  src={ceremonyWide1}
+                  alt="Wide shot of forest ceremony at Rustic Retreat"
+                  description="Authentic wilderness settings"
+                  category="Ceremony"
+                  className="w-full rounded-2xl"
+                />
+              </ScrollReveal>
+
+              <ScrollReveal delay={200} className="break-inside-avoid">
+                <HoverImage 
+                  src={ceremonyCloseUp}
+                  alt="Close up of wedding ceremony detail"
+                  description="Intimate details in nature"
+                  category="Ceremony"
+                  className="w-full rounded-2xl"
+                />
+              </ScrollReveal>
+
+              <ScrollReveal delay={300} className="break-inside-avoid">
+                <HoverImage 
+                  src={ceremonySeating}
+                  alt="Ceremony seating in the forest clearing"
+                  description="Seating for your loved ones"
+                  category="Ceremony"
+                  className="w-full rounded-2xl"
+                />
+              </ScrollReveal>
+
+              <ScrollReveal delay={400} className="break-inside-avoid">
+                <HoverImage 
+                  src={ceremonyAisleWalk}
+                  alt="The walk down the aisle at Rustic Retreat"
+                  description="Moments you'll never forget"
+                  category="Ceremony"
+                  className="w-full rounded-2xl"
+                />
+              </ScrollReveal>
+
+              <ScrollReveal delay={500} className="break-inside-avoid">
+                <HoverImage 
+                  src={ceremonyForest1}
+                  alt="Ceremony in the trees at Rustic Retreat"
+                  description="Surrounded by ancient forest"
+                  category="Ceremony"
+                  className="w-full rounded-2xl"
+                />
+              </ScrollReveal>
+
+              <ScrollReveal delay={600} className="break-inside-avoid">
+                <HoverImage 
+                  src={ceremonyForest2}
+                  alt="Another beautiful ceremony spot in the forest"
+                  description="Quiet, sacred spaces"
+                  category="Ceremony"
+                  className="w-full rounded-2xl"
+                />
+              </ScrollReveal>
+
+              <ScrollReveal delay={700} className="break-inside-avoid">
+                <HoverImage 
+                  src={receptionChairGame}
+                  alt="Wedding reception chair game at Rustic Retreat"
+                  description="Laughter-filled reception moments"
+                  category="Reception"
+                  className="w-full rounded-2xl"
+                />
               </ScrollReveal>
             </div>
           </div>
