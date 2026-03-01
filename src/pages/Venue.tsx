@@ -10,6 +10,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import venueHero from "@/assets/gallery/wedding-party-woods-hero.jpg";
 import cabinExterior from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-pavilion-reception-entrance-guests-cheering-19.jpg";
 import cabinInterior from "@/assets/Cabin/cabin-interior-living-area.jpeg";
 import cabinPorch from "@/assets/Cabin/cabin-porch-view.jpeg";
@@ -33,7 +34,7 @@ const Venue = () => {
         title="The Venue"
         description="Explore our private cabin for newlyweds, 65-acre forest property, and curated wedding décor collection. Off-grid solar power, comfortable accommodations, and endless photo opportunities near Edmonton."
         path="/venue"
-        image={cabinExterior}
+        image={venueHero}
         keywords={["wedding venue cabin alberta", "private wedding property edmonton", "65 acre wedding venue", "outdoor wedding ceremony spaces", "wedding décor collection alberta", "off-grid wedding venue"]}
       />
       <BreadcrumbSchema />
@@ -41,8 +42,8 @@ const Venue = () => {
         <Navigation />
         
         <PageHero
-          backgroundImage={cabinExterior}
-          backgroundImageAlt="Rustic cabin exterior in the forest at Rustic Retreat"
+          backgroundImage={venueHero}
+          backgroundImageAlt="Wedding party celebrating in the woods at Rustic Retreat"
           title="The Venue"
           subtitle="65 private acres of forest and meadow, a cozy cabin for newlyweds, and a treasure trove of décor waiting to be discovered."
           overlayOpacity="heavy"
