@@ -25,6 +25,7 @@ import coupleRomantic from "@/assets/gallery/Cabin/cabin-romantic-couple.jpeg";
 import cakeCuttingForest from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-cake-cutting-and-first-bite-40.jpg";
 import receptionTable4 from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-head-table-candles-and-florals-38.jpg";
 import receptionChairGame from "@/assets/gallery/ae544ad7d928a81729703820306114ae-xxxlarge.jpeg";
+import ceremonyPavilion from "@/assets/gallery/Images/IMG_0036.jpg";
 import ceremonyAisles from "@/assets/gallery/Images/4099316435379843506.jpg";
 import ceremonyWide1 from "@/assets/gallery/Images/IMG_0002.jpg";
 import ceremonyCloseUp from "@/assets/gallery/Images/IMG_0009.jpg";
@@ -32,7 +33,12 @@ import ceremonySeating from "@/assets/gallery/Images/IMG_0030.jpg";
 import ceremonyAisleWalk from "@/assets/gallery/Images/IMG_5018.jpg";
 import ceremonyForest1 from "@/assets/gallery/Images/IMG_6716.jpg";
 import ceremonyForest2 from "@/assets/gallery/Images/IMG_6758.jpg";
-import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign, Waves, Compass } from "lucide-react";
+import extrasYardGames from "@/assets/gallery/Images/extras-yard-games.jpg";
+import extrasTrampoline from "@/assets/gallery/Images/extras-trampoline.jpg";
+import extrasFirePit from "@/assets/gallery/Images/extras-fire-pit.jpg";
+import extrasTreehouse from "@/assets/gallery/Images/extras-treehouse.jpg";
+import extrasPlayHouse from "@/assets/gallery/Images/extras-play-house.jpg";
+import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, Waves, Compass, Flame, Trophy, Baby, Tent, Zap } from "lucide-react";
 
 const Venue = () => {
   return (
@@ -177,17 +183,43 @@ const Venue = () => {
             <ScrollReveal className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold">Ceremony Settings & Reception Glow</h2>
             </ScrollReveal>
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <ScrollReveal direction="left">
-                <div className="bg-primary/5 p-6 border-l-4 border-primary">
-                  <p className="font-medium text-lg mb-2">
-                    The Land Speaks for Itself
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Most couples choose their ceremony spot by simply walking the grounds until a particular clearing or view feels right. We encourage you to take that time during your visit.
-                  </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+              {/* Visual Grid - Left side (matches user's screenshot layout) */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="col-span-1 row-span-2">
+                  <ScrollReveal direction="left" className="h-full">
+                    <HoverImage 
+                      src={ceremonyPavilion}
+                      alt="Ceremony under the rustic pavilion at Rustic Retreat"
+                      description="Our signature pavilion ceremony space, blending rustic timbers with a modern clear-top roof"
+                      category="Pavilion Ceremony"
+                      className="w-full h-full object-cover rounded-2xl shadow-elegant"
+                    />
+                  </ScrollReveal>
                 </div>
-              </ScrollReveal>
+                <div className="col-span-1">
+                  <ScrollReveal direction="right" delay={100}>
+                    <HoverImage 
+                      src={receptionChairGame}
+                      alt="The shoe game during the reception"
+                      description="Laughter and joy during the reception under the glowing pavilion lights"
+                      category="Reception Fun"
+                      className="w-full h-full object-cover rounded-2xl shadow-elegant"
+                    />
+                  </ScrollReveal>
+                </div>
+                <div className="col-span-1">
+                  <ScrollReveal direction="right" delay={200}>
+                    <HoverImage 
+                      src={receptionTable4}
+                      alt="Elegant reception table settings"
+                      description="Warm, glowing atmosphere for your evening celebration"
+                      category="Reception"
+                      className="w-full h-full object-cover rounded-2xl shadow-elegant"
+                    />
+                  </ScrollReveal>
+                </div>
+              </div>
 
               <ScrollReveal direction="right">
                 <p className="mb-6 text-muted-foreground">
@@ -214,9 +246,9 @@ const Venue = () => {
               <ScrollReveal delay={0} className="break-inside-avoid">
                 <HoverImage 
                   src={ceremonyAisles}
-                  alt="Ceremony setup with aisles at Rustic Retreat"
-                  description="Beautifully prepared ceremony spaces"
-                  category="Ceremony"
+                  alt="Ceremony setup with flower-lined aisles at Rustic Retreat"
+                  description="A sun-drenched meadow ceremony with hand-crafted benches and wildflower-lined aisles"
+                  category="Meadow Ceremony"
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
@@ -224,9 +256,9 @@ const Venue = () => {
               <ScrollReveal delay={100} className="break-inside-avoid">
                 <HoverImage 
                   src={ceremonyWide1}
-                  alt="Wide shot of forest ceremony at Rustic Retreat"
-                  description="Authentic wilderness settings"
-                  category="Ceremony"
+                  alt="Wide shot of a wedding ceremony in the forest at Rustic Retreat"
+                  description="Vows exchanged in a grand forest clearing with guests seated under the ancient poplar canopy"
+                  category="Forest Clearing"
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
@@ -234,9 +266,9 @@ const Venue = () => {
               <ScrollReveal delay={200} className="break-inside-avoid">
                 <HoverImage 
                   src={ceremonyCloseUp}
-                  alt="Close up of wedding ceremony detail"
-                  description="Intimate details in nature"
-                  category="Ceremony"
+                  alt="Close up of a couple exchanging rings during the ceremony"
+                  description="An intimate moment shared between the couple at the altar in the woods"
+                  category="The Vows"
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
@@ -244,9 +276,9 @@ const Venue = () => {
               <ScrollReveal delay={300} className="break-inside-avoid">
                 <HoverImage 
                   src={ceremonySeating}
-                  alt="Ceremony seating in the forest clearing"
-                  description="Seating for your loved ones"
-                  category="Ceremony"
+                  alt="Ceremony seating setup in a quiet forest grove"
+                  description="Rustic wooden benches perfectly placed for an intimate ceremony in a secluded forest grove"
+                  category="Forest Grove Seating"
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
@@ -254,9 +286,9 @@ const Venue = () => {
               <ScrollReveal delay={400} className="break-inside-avoid">
                 <HoverImage 
                   src={ceremonyAisleWalk}
-                  alt="The walk down the aisle at Rustic Retreat"
-                  description="Moments you'll never forget"
-                  category="Ceremony"
+                  alt="A father walking his daughter down the forest aisle"
+                  description="The emotional walk down a natural forest aisle towards the clearing"
+                  category="The Processional"
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
@@ -264,9 +296,9 @@ const Venue = () => {
               <ScrollReveal delay={500} className="break-inside-avoid">
                 <HoverImage 
                   src={ceremonyForest1}
-                  alt="Ceremony in the trees at Rustic Retreat"
-                  description="Surrounded by ancient forest"
-                  category="Ceremony"
+                  alt="Ceremony setup nestled deep in the forest trees"
+                  description="A sacred ceremony space tucked away where the trees form a natural cathedral"
+                  category="The Forest Cathedral"
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
@@ -274,9 +306,9 @@ const Venue = () => {
               <ScrollReveal delay={600} className="break-inside-avoid">
                 <HoverImage 
                   src={ceremonyForest2}
-                  alt="Another beautiful ceremony spot in the forest"
-                  description="Quiet, sacred spaces"
-                  category="Ceremony"
+                  alt="Another beautiful forest ceremony spot with natural light"
+                  description="Soft afternoon light filtering through the trees during a quiet ceremony"
+                  category="Woodland Sanctuary"
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
@@ -284,9 +316,9 @@ const Venue = () => {
               <ScrollReveal delay={700} className="break-inside-avoid">
                 <HoverImage 
                   src={receptionChairGame}
-                  alt="Wedding reception chair game at Rustic Retreat"
-                  description="Laughter-filled reception moments"
-                  category="Reception"
+                  alt="The couple playing the shoe game during the reception"
+                  description="Laughter and joy during the reception shoe game under the glowing pavilion lights"
+                  category="Reception Fun"
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
@@ -300,7 +332,7 @@ const Venue = () => {
             <div className="max-w-4xl mx-auto text-center">
               <ScrollReveal>
                 <div className="flex flex-col items-center mb-8">
-                  <DollarSign className="w-12 h-12 text-secondary mb-4" />
+                  <p className="text-secondary font-semibold uppercase tracking-[0.18em] mb-4">The Decor Collection</p>
                   <h2 className="text-3xl md:text-4xl font-bold">Abundance Without the Added Cost</h2>
                 </div>
                 
@@ -327,6 +359,113 @@ const Venue = () => {
                 <div className="mt-10 p-4 bg-card border rounded-xl inline-block italic text-sm text-muted-foreground">
                   Walk into a space where everything you need is already waiting for you.
                 </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* All the Extras Section */}
+        <section className="section section-muted">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <ScrollReveal>
+                <p className="text-secondary font-semibold uppercase tracking-[0.18em] mb-4">The Little Details</p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">All the Extras, Because We Got You</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We know that it’s the small things that make a weekend unforgettable. We’ve built, gathered, and curated these "extras" so you don’t have to worry about the entertainment or the logistics. It's all here, ready for your guests to enjoy.
+                </p>
+              </ScrollReveal>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <ScrollReveal delay={0}>
+                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img src={extrasTreehouse} alt="Whimsical treehouse at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <CardContent className="pt-6 text-center lg:text-left">
+                    <Tent className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                    <h3 className="text-xl font-bold mb-2">The Treehouse</h3>
+                    <p className="text-muted-foreground">
+                      A whimsical escape nestled in the branches—perfect for unique photos or a quiet moment away from the celebration.
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+
+              <ScrollReveal delay={100}>
+                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img src={extrasYardGames} alt="Yard games at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <CardContent className="pt-6 text-center lg:text-left">
+                    <Trophy className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                    <h3 className="text-xl font-bold mb-2">Yard Games Galore</h3>
+                    <p className="text-muted-foreground">
+                      Giant Jenga, cornhole, and more. Keep the energy high and the guests laughing during cocktail hour or throughout the weekend.
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+
+              <ScrollReveal delay={200}>
+                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img src={extrasPlayHouse} alt="Children's play house at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <CardContent className="pt-6 text-center lg:text-left">
+                    <Baby className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                    <h3 className="text-xl font-bold mb-2">Children's Play House</h3>
+                    <p className="text-muted-foreground">
+                      A dedicated space for the little ones to let their imaginations run wild, keeping them entertained while the adults celebrate.
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+
+              <ScrollReveal delay={300}>
+                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img src={extrasTrampoline} alt="Trampoline at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <CardContent className="pt-6 text-center lg:text-left">
+                    <Zap className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                    <h3 className="text-xl font-bold mb-2">The Trampoline</h3>
+                    <p className="text-muted-foreground">
+                      For the young (and the young at heart). A fun addition to the property that adds a bit of bounce to your wedding weekend.
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+
+              <ScrollReveal delay={400}>
+                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img src={extrasFirePit} alt="Fire pit at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <CardContent className="pt-6 text-center lg:text-left">
+                    <Flame className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                    <h3 className="text-xl font-bold mb-2">The Fire Pit</h3>
+                    <p className="text-muted-foreground">
+                      The heart of late-night conversations. We provide the pit and the setting; you bring the stories (and maybe some s'mores).
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+
+              <ScrollReveal delay={500}>
+                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
+                  <div className="h-48 flex items-center justify-center bg-secondary/10">
+                    <Sparkles className="w-16 h-16 text-secondary/40" />
+                  </div>
+                  <CardContent className="pt-6 text-center lg:text-left">
+                    <Sparkles className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                    <h3 className="text-xl font-bold mb-2">And So Much More</h3>
+                    <p className="text-muted-foreground">
+                      From unexpected photo ops to quiet corners, the property is full of little surprises waiting to be discovered.
+                    </p>
+                  </CardContent>
+                </Card>
               </ScrollReveal>
             </div>
           </div>
