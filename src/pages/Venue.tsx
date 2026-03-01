@@ -46,7 +46,8 @@ const Venue = () => {
           backgroundImageAlt="Wedding party celebrating in the woods at Rustic Retreat"
           title="The Venue"
           subtitle="65 private acres of forest and meadow, a cozy cabin for newlyweds, and a treasure trove of décor waiting to be discovered."
-          overlayOpacity="heavy"
+          overlayOpacity="none"
+          contentClassName="max-w-4xl mx-auto bg-black/60 p-8 md:p-12 rounded-3xl shadow-xl"
         />
 
         {/* The Cabin Section */}
