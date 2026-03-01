@@ -19,9 +19,9 @@ import {
 } from "@/components/ui/carousel";
 
 // Hero & Property Images
-import heroSunsetMeadow from "@/assets/gallery/Images/IMG_9996.jpeg";
+import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.jpeg";
 import cabinExterior from "@/assets/cabin-exterior-forest.avif";
-import receptionGazebo from "@/assets/gallery/Images/IMG_5103.jpg";
+import receptionGazebo from "@/assets/gallery/Images/reception-gazebo.jpg";
 
 // Gallery Images for Storytelling
 import ceremonyWideShot from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groom-lifts-bride-on-dance-floor-33.jpg";
@@ -29,11 +29,11 @@ import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
 import pavilionReception from "@/assets/gallery/pavilion-reception.jpg";
 import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
 import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
-import chrisShannonUpscale from "@/assets/gallery/Chris&Shannonupscale.jpeg";
+import chrisShannonUpscale from "@/assets/gallery/chris-shannon-upscale.jpeg";
 import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.jpg";
-import weddingPartyLineup from "@/assets/gallery/IMG_7910.jpeg";
-import img7625 from "@/assets/gallery/IMG_7625.jpg";
-import beyondCeremonyImage from "@/assets/gallery/IMG_7936.jpg";
+import weddingPartyLineup from "@/assets/gallery/wedding-party-lineup.jpeg";
+import img7625 from "@/assets/gallery/wedding-party-woods-hero.jpg";
+import beyondCeremonyImage from "@/assets/gallery/beyond-ceremony-woods.jpg";
 import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
 import headTable from "@/assets/gallery/head-table.jpg";
 import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.jpg";

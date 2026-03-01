@@ -18,11 +18,11 @@ import TrustBadges from "@/components/TrustBadges";
 import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
-import receptionEvening from "@/assets/gallery/IMG_4469.jpeg";
-import contactMiddleImage from "@/assets/gallery/IMG_4942.jpg";
-import contactBottomLeft from "@/assets/gallery/IMG_4474.jpg";
-import contactBottomRight from "@/assets/gallery/IMG_7938.jpeg";
-import contactExpectImage from "@/assets/gallery/IMG_5869.jpeg";
+import receptionEvening from "@/assets/gallery/reception-evening-lights.jpeg";
+import contactMiddleImage from "@/assets/gallery/rustic-retreat-venue-exterior.jpg";
+import contactBottomLeft from "@/assets/gallery/sunset-silhouette-couple.jpg";
+import contactBottomRight from "@/assets/gallery/wedding-details-rings.jpeg";
+import contactExpectImage from "@/assets/gallery/couple-portrait-forest-tall.jpeg";
 
 const Contact = () => {
   const { toast } = useToast();

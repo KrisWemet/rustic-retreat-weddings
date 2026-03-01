@@ -181,49 +181,49 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
     category: "Ceremony"
   },
   {
-    file: "IMG_5063.jpg",
+    file: "black-and-white-candid-walking.jpg",
     alt: "Black and white candid of bride and groom walking at Rustic Retreat",
     description: "A candid walk through the forest as the couple shares a quiet moment on their wedding day.",
     category: "Portraits"
   },
   {
-    file: "IMG_5097.jpg",
+    file: "couple-open-field.jpg",
     alt: "Couple standing together in an open field at Rustic Retreat",
     description: "A peaceful portrait looking out over the meadow and tree line at Rustic Retreat.",
     category: "Portraits"
   },
   {
-    file: "IMG_6815.jpg",
+    file: "couple-sunset-meadow.jpg",
     alt: "Couple at sunset in a meadow at Rustic Retreat",
     description: "Golden hour portraits with the sun setting over the open field.",
     category: "Romance"
   },
   {
-    file: "IMG_6926.jpg",
+    file: "nighttime-pavilion-string-lights.jpg",
     alt: "Nighttime pavilion with string lights at Rustic Retreat",
     description: "Evening glow under the pavilion as guests gather and celebrate.",
     category: "Reception"
   },
   {
-    file: "IMG_5069.jpg",
+    file: "couple-embracing-forest-clearing.jpg",
     alt: "Couple embracing in a forest clearing at Rustic Retreat",
     description: "A quiet, romantic moment in the woods on the wedding day.",
     category: "Romance"
   },
   {
-    file: "IMG_6345.jpg",
+    file: "sweetheart-table-sunflowers.jpg",
     alt: "Sweetheart table with sunflower florals under the rustic pavilion",
     description: "Sunflower‑themed sweetheart table décor set beneath the wood pavilion.",
     category: "Details"
   },
   {
-    file: "IMG_6758.jpg",
+    file: "black-and-white-ceremony-pavilion.jpg",
     alt: "Black and white ceremony at the rustic pavilion at Rustic Retreat",
     description: "A timeless ceremony moment framed by the pavilion structure.",
     category: "Ceremony"
   },
   {
-    file: "IMG_6863.jpg",
+    file: "couple-walking-gravel-path.jpg",
     alt: "Couple walking along a gravel path beside a personalized sign",
     description: "A candid stroll down the lane with a custom wedding sign in view.",
     category: "Portraits"

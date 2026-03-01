@@ -10,13 +10,13 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
-import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-family-portrait-bride-groom-parents-fall-woods-11.jpg";
-import campfireNight from "@/assets/campfire-evening-setting.avif";
-import twoBridesDancing from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-two-brides-dancing-under-circle-arch-forest-10.jpg";
-import groomsmenCheers from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groomsmen-cheers-with-whiskey-and-cans-woods-17.jpg";
-import coupleForestKiss from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-forest-trail-41.jpg";
-import cabinExterior from "@/assets/cabin-exterior-forest.avif";
+import weddingParty from "@/assets/gallery/Images/wedding-party-cheer.jpg";
+import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-party-portrait-bridesmaids-lavender-groomsmen-forest-16.jpg";
+import campfireNight from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-sparkler-moment-on-dance-floor-35.jpg";
+import twoBridesDancing from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-newlyweds-walking-hand-in-hand-forest-trail-18.jpg";
+import groomsmenCheers from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groomsmen-toast-with-whiskey-bottle-forest-trail-14.jpg";
+import coupleForestKiss from "@/assets/gallery/Images/couple-forest-kiss.jpeg";
+import cabinExterior from "@/assets/gallery/seo/couple-sunset-meadow.jpg";
 import { Heart, MapPin, Users, Sparkles, Home, TreePine, Sun, CheckCircle } from "lucide-react";
 
 const About = () => {

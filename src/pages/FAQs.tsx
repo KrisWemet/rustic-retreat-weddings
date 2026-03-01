@@ -10,9 +10,9 @@ import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
-import ceremonyVowsGazebo from "@/assets/gallery/ceremony-vows-gazebo.jpg";
-import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.jpg";
-import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
+import ceremonyVowsGazebo from "@/assets/gallery/Images/ceremony-vows-gazebo-2.jpeg";
+import firstDanceSparklers from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-sweetheart-table-laughter-under-draped-arbor-forest-04.jpg";
+import meadowSunsetKiss from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-under-veil-in-woods-46.jpg";
 
 const FAQs = () => {
   const faqs = [

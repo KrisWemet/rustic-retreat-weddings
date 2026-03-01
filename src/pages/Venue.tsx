@@ -10,12 +10,12 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import cabinExterior from "@/assets/cabin-exterior-forest.avif";
-import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-family-portrait-bride-groom-parents-fall-woods-11.jpg";
-import coupleKissingTrail from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-forest-trail-41.jpg";
-import cakeCuttingForest from "@/assets/gallery/cake-cutting-forest.jpg";
-import receptionTable4 from "@/assets/gallery/reception-table-4.jpg";
-import brideGroomTwirl from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-bride-and-groom-twirl-first-dance-34.jpg";
+import cabinExterior from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-pavilion-reception-entrance-guests-cheering-19.jpg";
+import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-party-cheer-couple-kissing-forest-group-portrait-07.jpg";
+import coupleKissingTrail from "@/assets/gallery/Images/couple-kissing-trail.jpeg";
+import cakeCuttingForest from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-cake-cutting-and-first-bite-40.jpg";
+import receptionTable4 from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-head-table-candles-and-florals-38.jpg";
+import brideGroomTwirl from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-bride-and-groom-walking-field-black-and-white-45.jpg";
 import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, DollarSign, Waves, Compass } from "lucide-react";
 
 const Venue = () => {
