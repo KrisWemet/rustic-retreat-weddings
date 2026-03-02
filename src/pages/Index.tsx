@@ -19,29 +19,29 @@ import {
 } from "@/components/ui/carousel";
 
 // Hero & Property Images
-import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.jpeg";
-import cabinExterior from "@/assets/gallery/Cabin/cabin-exterior-woods.jpeg";
-import receptionGazebo from "@/assets/gallery/Images/gazebo-empty.jpg";
+import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.webp";
+import cabinExterior from "@/assets/gallery/Cabin/cabin-exterior-woods.webp";
+import receptionGazebo from "@/assets/gallery/Images/gazebo-empty.webp";
 
 // Gallery Images for Storytelling
-import ceremonyWideShot from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groom-lifts-bride-on-dance-floor-33.jpg";
-import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
-import pavilionReception from "@/assets/gallery/pavilion-reception.jpg";
-import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
-import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
-import chrisShannonUpscale from "@/assets/gallery/chris-shannon-upscale.jpeg";
-import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.jpg";
-import weddingPartyLineup from "@/assets/gallery/wedding-party-lineup.jpeg";
-import img7625 from "@/assets/gallery/wedding-party-woods-hero.jpg";
-import beyondCeremonyImage from "@/assets/gallery/beyond-ceremony-woods.jpg";
-import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
-import headTable from "@/assets/gallery/head-table.jpg";
-import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.jpg";
-import ringsBouquet from "@/assets/gallery/rings-bouquet.jpg";
-import goldCakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.jpg";
-import firstDanceBW from "@/assets/gallery/Images/first-dance-string-lights.jpg";
-import sweetheartTable from "@/assets/gallery/Images/sweetheart-table-laughing.jpg";
-import dressGazebo from "@/assets/gallery/dress-forest-gazebo.jpg";
+import ceremonyWideShot from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groom-lifts-bride-on-dance-floor-33.webp";
+import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.webp";
+import pavilionReception from "@/assets/gallery/pavilion-reception.webp";
+import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.webp";
+import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.webp";
+import chrisShannonUpscale from "@/assets/gallery/chris-shannon-upscale.webp";
+import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.webp";
+import weddingPartyLineup from "@/assets/gallery/wedding-party-lineup.webp";
+import img7625 from "@/assets/gallery/wedding-party-woods-hero.webp";
+import beyondCeremonyImage from "@/assets/gallery/beyond-ceremony-woods.webp";
+import cakeCutting from "@/assets/gallery/cake-cutting.webp";
+import headTable from "@/assets/gallery/head-table.webp";
+import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.webp";
+import ringsBouquet from "@/assets/gallery/rings-bouquet.webp";
+import goldCakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.webp";
+import firstDanceBW from "@/assets/gallery/Images/first-dance-string-lights.webp";
+import sweetheartTable from "@/assets/gallery/Images/sweetheart-table-laughing.webp";
+import dressGazebo from "@/assets/gallery/dress-forest-gazebo.webp";
 import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -284,7 +284,7 @@ const Index = () => {
                 loop
                 playsInline
                 preload="auto"
-                poster="/videos/venue-tour-poster.jpg"
+                poster="/videos/venue-tour-poster.webp"
                 className="w-full h-auto"
                 src={videoSrc || undefined}
                 onCanPlay={() => {
@@ -315,7 +315,7 @@ const Index = () => {
               autoPlay
               loop
               preload="metadata"
-              poster="/videos/venue-tour-poster.jpg"
+              poster="/videos/venue-tour-poster.webp"
               className="w-full h-auto max-h-[80vh]"
               src="/videos/venue-tour.mp4"
             >

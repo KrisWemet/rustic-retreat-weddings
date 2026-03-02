@@ -10,12 +10,12 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import weddingParty from "@/assets/gallery/wedding-party-cheer.jpg";
-import familyPortrait from "@/assets/gallery/wedding-party-formal.jpg";
-import campfireNight from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-sparkler-moment-on-dance-floor-35.jpg";
-import twoBridesDancing from "@/assets/gallery/couple-walking-trail.jpg";
-import cabinExterior from "@/assets/gallery/seo/couple-sunset-meadow.jpg";
-import meadowLandscape from "@/assets/gallery/Images/hero-sunset-meadow.jpeg";
+import weddingParty from "@/assets/gallery/wedding-party-cheer.webp";
+import familyPortrait from "@/assets/gallery/wedding-party-formal.webp";
+import campfireNight from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-sparkler-moment-on-dance-floor-35.webp";
+import twoBridesDancing from "@/assets/gallery/couple-walking-trail.webp";
+import cabinExterior from "@/assets/gallery/seo/couple-sunset-meadow.webp";
+import meadowLandscape from "@/assets/gallery/Images/hero-sunset-meadow.webp";
 import { Heart, Sparkles, Home, TreePine, Sun } from "lucide-react";
 
 const About = () => {

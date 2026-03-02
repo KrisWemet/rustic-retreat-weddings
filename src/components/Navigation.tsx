@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
-import logoLight from "@/assets/logo/rustic-retreat-logo-light.png";
+import logoLight from "@/assets/logo/rustic-retreat-logo-light.webp";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);

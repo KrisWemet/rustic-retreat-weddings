@@ -1,18 +1,18 @@
 import { WeddingStory } from "@/types/wedding-story";
 
 // Import gallery images for stories
-import ceremonyVows from "@/assets/gallery/ceremony-vows-gazebo.jpg";
-import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.jpg";
-import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.jpg";
-import veilKiss from "@/assets/gallery/veil-kiss-romantic.jpg";
-import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.jpg";
-import weddingParty from "@/assets/gallery/wedding-party-group.jpg";
-import headTable from "@/assets/gallery/head-table.jpg";
-import firstDanceColor from "@/assets/gallery/first-dance-color.jpg";
-import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.jpg";
-import veilKissMistyForest from "@/assets/gallery/veil-kiss-misty-forest.jpg";
-import cakeCutting from "@/assets/gallery/cake-cutting.jpg";
-import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.jpg";
+import ceremonyVows from "@/assets/gallery/ceremony-vows-gazebo.webp";
+import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.webp";
+import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.webp";
+import veilKiss from "@/assets/gallery/veil-kiss-romantic.webp";
+import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.webp";
+import weddingParty from "@/assets/gallery/wedding-party-group.webp";
+import headTable from "@/assets/gallery/head-table.webp";
+import firstDanceColor from "@/assets/gallery/first-dance-color.webp";
+import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.webp";
+import veilKissMistyForest from "@/assets/gallery/veil-kiss-misty-forest.webp";
+import cakeCutting from "@/assets/gallery/cake-cutting.webp";
+import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.webp";
 
 /**
  * Wedding Stories Data

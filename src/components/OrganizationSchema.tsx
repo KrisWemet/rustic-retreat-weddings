@@ -7,8 +7,8 @@ const OrganizationSchema = () => {
     name: "Rustic Retreat Weddings",
     description: "Multi-day outdoor wedding venue near Edmonton with 65 private acres, cabin accommodation, and complete décor collection",
     url: "https://rusticretreatweddings.ca",
-    logo: "https://rusticretreatweddings.ca/logo.png",
-    image: "https://rusticretreatweddings.ca/hero-couple.jpg",
+    logo: "https://rusticretreatweddings.ca/logo.webp",
+    image: "https://rusticretreatweddings.ca/hero-couple.webp",
     telephone: "+17802106252",
     email: "rusticretreatalberta@gmail.com",
     address: {
