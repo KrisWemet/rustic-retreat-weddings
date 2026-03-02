@@ -11,9 +11,9 @@ import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import weddingParty from "@/assets/gallery/Images/wedding-party-cheer.jpg";
-import familyPortrait from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-party-portrait-bridesmaids-lavender-groomsmen-forest-16.jpg";
+import familyPortrait from "@/assets/gallery/wedding-party-formal.jpg";
 import campfireNight from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-sparkler-moment-on-dance-floor-35.jpg";
-import twoBridesDancing from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-newlyweds-walking-hand-in-hand-forest-trail-18.jpg";
+import twoBridesDancing from "@/assets/gallery/couple-walking-trail.jpg";
 import groomsmenCheers from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groomsmen-toast-with-whiskey-bottle-forest-trail-14.jpg";
 import coupleForestKiss from "@/assets/gallery/Images/couple-forest-kiss.jpeg";
 import cabinExterior from "@/assets/gallery/seo/couple-sunset-meadow.jpg";
@@ -282,20 +282,20 @@ const About = () => {
                         <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                           <Users className="w-5 h-5 text-primary" />
                         </div>
-                        <h3 className="text-xl font-semibold">What You Handle</h3>
+                        <h3 className="text-xl font-semibold">Your Creative Freedom</h3>
                       </div>
                       <ul className="space-y-3 text-muted-foreground">
-                        <li>Arranging vendors</li>
-                        <li>Decorating</li>
-                        <li>Cleanup</li>
+                        <li>Selecting your dream vendor team</li>
+                        <li>Styling and personalizing the spaces</li>
+                        <li>End-of-weekend packing & cleanup</li>
                       </ul>
-                      <div className="mt-6 p-4 bg-muted/50 rounded-lg">
+                      <div className="mt-6 p-4 bg-primary/5 border border-primary/10 rounded-lg">
                         <p className="text-sm">
-                          This isn't a "show up and everything's done for you" venue. <strong>You're building your day.</strong> We're giving you the tools and the space to do it.
+                          We believe your wedding shouldn't be a generic template. <strong>You have total flexibility</strong> to bring in your own decor and design the celebration exactly how you envision it.
                         </p>
                       </div>
                       <p className="mt-4 text-sm text-muted-foreground">
-                        We'll offer suggestions on anything that might help. But we're not going to tell you how your wedding should be. That's not our place.
+                        While the styling and cleanup are in your hands, we're always here to offer advice, share our favorite local vendors, or suggest layouts that work beautifully on the property!
                       </p>
                     </CardContent>
                   </Card>

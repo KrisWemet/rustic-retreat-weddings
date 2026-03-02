@@ -11,7 +11,7 @@ import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import venueHero from "@/assets/gallery/ceremony-by-gazebo.jpeg";
-import cabinExterior from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-pavilion-reception-entrance-guests-cheering-19.jpg";
+import cabinExterior from "@/assets/gallery/pavilion-reception.jpg";
 import cabinInterior from "@/assets/gallery/Cabin/cabin-interior-living-area.jpeg";
 import cabinPorch from "@/assets/gallery/Cabin/cabin-porch-view.jpeg";
 import cabinBed from "@/assets/gallery/Cabin/cabin-bedroom-comfort.jpeg";
@@ -23,7 +23,7 @@ import campfireSetting from "@/assets/gallery/Cabin/cabin-campfire-evening.jpeg"
 import familyPortrait from "@/assets/gallery/Cabin/cabin-bridal-portraits.jpeg";
 import coupleRomantic from "@/assets/gallery/Cabin/cabin-romantic-couple.jpeg";
 import cakeCuttingForest from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-cake-cutting-and-first-bite-40.jpg";
-import receptionTable4 from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-rustic-head-table-candles-and-florals-38.jpg";
+import receptionTable4 from "@/assets/gallery/head-table.jpg";
 import receptionChairGame from "@/assets/gallery/ae544ad7d928a81729703820306114ae-xxxlarge.jpeg";
 import ceremonyPavilion from "@/assets/gallery/Images/IMG_0036.jpg";
 import ceremonyAisles from "@/assets/gallery/Images/4099316435379843506.jpg";

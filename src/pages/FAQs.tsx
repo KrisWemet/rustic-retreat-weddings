@@ -12,7 +12,7 @@ import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import ceremonyVowsGazebo from "@/assets/gallery/Images/ceremony-vows-gazebo-2.jpeg";
 import firstDanceSparklers from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-sweetheart-table-laughter-under-draped-arbor-forest-04.jpg";
-import meadowSunsetKiss from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-under-veil-in-woods-46.jpg";
+import meadowSunsetKiss from "@/assets/gallery/veil-kiss-misty-forest.jpg";
 import faqImage1 from "@/assets/gallery/unused-wedding-portrait.jpeg";
 import faqImage2 from "@/assets/gallery/Images/bride&groom-in-field.jpg";
 
@@ -165,7 +165,7 @@ const FAQs = () => {
                 </Accordion>
               </div>
               <ScrollReveal delay={150}>
-                <div className="relative">
+                <div className="relative max-w-md mx-auto lg:max-w-none">
                   <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                   <div className="relative grid gap-4">
                     <img
@@ -173,14 +173,14 @@ const FAQs = () => {
                       alt="A beautiful, intimate wedding portrait at Rustic Retreat"
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-56 sm:h-64 object-cover rounded-3xl shadow-elegant"
+                      className="w-full h-48 sm:h-56 lg:h-60 object-cover rounded-3xl shadow-elegant"
                     />
                     <img
                       src={faqImage2}
                       alt="Bride and groom standing in an open grassy field"
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-56 sm:h-64 object-cover rounded-3xl shadow-soft"
+                      className="w-full h-48 sm:h-56 lg:h-60 object-cover rounded-3xl shadow-soft"
                     />
                   </div>
                 </div>
@@ -199,7 +199,7 @@ const FAQs = () => {
                   alt="Romantic sunset kiss in wildflower meadow at Rustic Retreat"
                   description="Golden hour magic in the meadow"
                   category="Romance"
-                  className="shadow-lg"
+                  className="h-64 md:h-72 rounded-2xl shadow-lg"
                 />
               </ScrollReveal>
               <ScrollReveal delay={100}>
@@ -208,7 +208,7 @@ const FAQs = () => {
                   alt="First dance with sparklers at Alberta wedding venue"
                   description="Your celebration under the stars"
                   category="Reception"
-                  className="shadow-lg"
+                  className="h-64 md:h-72 rounded-2xl shadow-lg"
                 />
               </ScrollReveal>
             </div>

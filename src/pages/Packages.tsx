@@ -13,7 +13,7 @@ import receptionTable from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-
 import ceremonySetupWide from "@/assets/gallery/Images/ceremony-wide-forest-clearing.jpg";
 import groomsmenToast from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-groomsmen-lift-bride-funny-woods-photo-06.jpg";
 import loveMarquee from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-father-daughter-dance-love-marquee-37.jpg";
-import brideDancing from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-outdoor-first-dance-under-string-lights-31.jpg";
+import brideDancing from "@/assets/gallery/first-dance-color.jpg";
 import weddingParty from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-ceremony-signing-bride-groom-wooden-stand-02.jpg";
 import cardBoxWineBarrel from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-welcome-sign-mirror-display-39.jpg";
 import guestFavorBox from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-in-white-rose-43.jpg";
