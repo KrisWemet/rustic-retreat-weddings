@@ -460,82 +460,42 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <ScrollReveal delay={0}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
                   <Sparkles className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="font-semibold mb-2">Fireworks & Sparklers</h3>
-                <p className="text-sm text-muted-foreground">Plan a sparkler send-off or fireworks.</p>
+                <p className="text-sm text-muted-foreground">Light up the night sky with an unforgettable full fireworks display and a sparkler send-off.</p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={100}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Waves className="w-6 h-6 text-secondary" />
+                  <Music className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="font-semibold mb-2">Giant Slip-and-Slide</h3>
-                <p className="text-sm text-muted-foreground">Set one up and turn the meadow into your personal water park.</p>
+                <h3 className="font-semibold mb-2">Live Bands & DJs</h3>
+                <p className="text-sm text-muted-foreground">Go all out. Bring in an incredible live band or DJ to keep the dance floor packed late into the night.</p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Compass className="w-6 h-6 text-secondary" />
+                  <Flag className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="font-semibold mb-2">Treasure Hunts</h3>
-                <p className="text-sm text-muted-foreground">Create a treasure hunt with surprises across 65 acres.</p>
+                <h3 className="font-semibold mb-2">Epic Outdoor Activities</h3>
+                <p className="text-sm text-muted-foreground">Rent a giant inflatable obstacle course or set up a massive slip-and-slide for unapologetic fun.</p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={300}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Target className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Bubble Soccer & Games</h3>
-                <p className="text-sm text-muted-foreground">Bring your favorite games for friendly competition.</p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={400}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Flag className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Inflatable Obstacle Course</h3>
-                <p className="text-sm text-muted-foreground">Rent a giant course for playful, laugh-out-loud races.</p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={500}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Bath className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Portable Hot Tub</h3>
-                <p className="text-sm text-muted-foreground">Bring in a rental for a cozy soak under the stars.</p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={600}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
+              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
                   <Film className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="font-semibold mb-2">Outdoor Movie Night</h3>
-                <p className="text-sm text-muted-foreground">Set up a screen and host a movie under the trees.</p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={700}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full">
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Music className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Campfire Karaoke</h3>
-                <p className="text-sm text-muted-foreground">Cue up a playlist and pass the mic around the fire.</p>
+                <h3 className="font-semibold mb-2">Food Trucks & Late-Nights</h3>
+                <p className="text-sm text-muted-foreground">Hire your favorite food truck for midnight snacking, or set up a massive outdoor movie projector.</p>
               </div>
             </ScrollReveal>
           </div>
@@ -569,8 +529,8 @@ const Index = () => {
                 <ScrollReveal key={index} delay={index * 100}>
                   <Card
                     className={`bg-card group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background ${pkg.isRecommended
-                        ? "border-2 border-secondary shadow-medium"
-                        : "border border-border hover:border-secondary transition-all hover:shadow-medium"
+                      ? "border-2 border-secondary shadow-medium"
+                      : "border border-border hover:border-secondary transition-all hover:shadow-medium"
                       }`}
                     tabIndex={0}
                   >

@@ -17,6 +17,7 @@ import twoBridesDancing from "@/assets/gallery/couple-walking-trail.jpg";
 import groomsmenCheers from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groomsmen-toast-with-whiskey-bottle-forest-trail-14.jpg";
 import coupleForestKiss from "@/assets/gallery/Images/couple-forest-kiss.jpeg";
 import cabinExterior from "@/assets/gallery/seo/couple-sunset-meadow.jpg";
+import meadowLandscape from "@/assets/gallery/Images/hero-sunset-meadow.jpeg";
 import { Heart, MapPin, Users, Sparkles, Home, TreePine, Sun, CheckCircle } from "lucide-react";
 
 const About = () => {
@@ -105,7 +106,7 @@ const About = () => {
                   alt="Bride and groom with family in golden fall foliage at Rustic Retreat"
                   description="Families come together—real moments in the autumn woods"
                   category="Family"
-                  className="shadow-xl"
+                  className="rounded-3xl shadow-xl"
                 />
               </ScrollReveal>
 
@@ -205,7 +206,7 @@ const About = () => {
                   alt="Two brides dancing under a circle arch in a forest clearing"
                   description="Joyful, unposed moments in the woods"
                   category="Celebration"
-                  className="shadow-xl"
+                  className="rounded-3xl shadow-xl"
                 />
               </ScrollReveal>
             </div>
@@ -237,14 +238,14 @@ const About = () => {
                   <img
                     src={groomsmenCheers}
                     alt="Groomsmen celebrating with drinks on a forest path at Rustic Retreat"
-                    className="w-full h-56 md:h-64 object-cover rounded-xl shadow-soft"
+                    className="w-full h-56 md:h-64 object-cover rounded-2xl shadow-soft"
                     loading="lazy"
                     decoding="async"
                   />
                   <img
                     src={coupleForestKiss}
                     alt="Couple kissing on the forest trail at Rustic Retreat"
-                    className="w-full h-56 md:h-64 object-cover rounded-xl shadow-soft"
+                    className="w-full h-56 md:h-64 object-cover rounded-2xl shadow-soft"
                     loading="lazy"
                     decoding="async"
                   />
@@ -452,11 +453,11 @@ const About = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <HoverImage
-                  src={campfireNight}
-                  alt="Evening campfire gathering under stars at Rustic Retreat Weddings Alberta"
-                  description="Where time slows down and connections deepen"
+                  src={meadowLandscape}
+                  alt="Open meadow and forest horizon at sunset on the Rustic Retreat property"
+                  description="The quiet, open landscape that makes this place feel different"
                   category="The Experience"
-                  className="shadow-xl"
+                  className="rounded-3xl shadow-xl"
                 />
               </ScrollReveal>
 
