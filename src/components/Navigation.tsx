@@ -77,18 +77,16 @@ const Navigation = () => {
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
-              <span className="rounded-sm bg-primary/15 p-1">
-                <img
-                  src={logoLight}
-                  alt="Rustic Retreat logo"
-                  className={cn(
-                    "h-5 w-5 object-contain",
-                    isScrolled ? "md:h-5 md:w-5" : "md:h-6 md:w-6"
-                  )}
-                  loading="eager"
-                  decoding="async"
-                />
-              </span>
+              <img
+                src={logoLight}
+                alt="Rustic Retreat logo"
+                className={cn(
+                  "object-contain",
+                  isScrolled ? "h-6 w-6 md:h-7 md:w-7" : "h-7 w-7 md:h-8 md:w-8"
+                )}
+                loading="eager"
+                decoding="async"
+              />
               <h1
                 className={cn(
                   "font-serif italic text-primary transition-all duration-300",
@@ -160,15 +158,13 @@ const Navigation = () => {
         {/* Menu Header */}
         <div className="flex items-center justify-between p-4 border-b border-border">
           <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2">
-            <span className="rounded-sm bg-primary/15 p-1">
-              <img
-                src={logoLight}
-                alt="Rustic Retreat logo"
-                className="h-5 w-5 object-contain"
-                loading="eager"
-                decoding="async"
-              />
-            </span>
+            <img
+              src={logoLight}
+              alt="Rustic Retreat logo"
+              className="h-8 w-8 object-contain"
+              loading="eager"
+              decoding="async"
+            />
             <h2 className="font-serif italic text-xl text-primary">Rustic Retreat</h2>
           </Link>
           <button

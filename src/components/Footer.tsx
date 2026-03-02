@@ -20,7 +20,7 @@ const Footer = () => {
               <img
                 src={logoLight}
                 alt="Rustic Retreat logo"
-                className="h-7 w-7 object-contain"
+                className="h-9 w-9 object-contain"
                 loading="lazy"
                 decoding="async"
               />
