@@ -411,7 +411,7 @@ const About = () => {
                     <CardContent className="p-8">
                       <div className="flex items-center gap-3 mb-4">
                         <TreePine className="w-8 h-8 text-secondary" />
-                        <h3 className="text-xl font-semibold">Dad</h3>
+                        <h3 className="text-xl font-semibold">Wilf (aka Dad)</h3>
                       </div>
                       <p className="text-muted-foreground">
                         Handles firewood refills at the cabin firepit. He builds the bigger projects—the gazebo was almost entirely him. Last year he worked on framing the dance floor. This winter, he's building the wash house. In the spring, Shannon and I will finish the bridal suite.
@@ -425,7 +425,7 @@ const About = () => {
                     <CardContent className="p-8">
                       <div className="flex items-center gap-3 mb-4">
                         <Sun className="w-8 h-8 text-secondary" />
-                        <h3 className="text-xl font-semibold">Mom</h3>
+                        <h3 className="text-xl font-semibold">Patsy (aka Mom)</h3>
                       </div>
                       <p className="text-muted-foreground">
                         Takes care of cleaning and resetting the cabin, maintaining the outhouses, all the gardening around the property. She pitches in wherever else is needed.

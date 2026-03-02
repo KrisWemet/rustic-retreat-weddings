@@ -173,14 +173,14 @@ const FAQs = () => {
                       alt="A beautiful, intimate wedding portrait at Rustic Retreat"
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-48 sm:h-56 lg:h-60 object-cover rounded-3xl shadow-elegant"
+                      className="w-full h-56 sm:h-64 lg:h-72 object-contain bg-card rounded-3xl shadow-elegant"
                     />
                     <img
                       src={faqImage2}
                       alt="Bride and groom standing in an open grassy field"
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-48 sm:h-56 lg:h-60 object-cover rounded-3xl shadow-soft"
+                      className="w-full h-56 sm:h-64 lg:h-72 object-contain bg-card rounded-3xl shadow-soft"
                     />
                   </div>
                 </div>
@@ -199,7 +199,8 @@ const FAQs = () => {
                   alt="Romantic sunset kiss in wildflower meadow at Rustic Retreat"
                   description="Golden hour magic in the meadow"
                   category="Romance"
-                  className="h-64 md:h-72 rounded-2xl shadow-lg"
+                  className="h-64 md:h-72 rounded-2xl shadow-lg bg-card"
+                  imageClassName="object-contain"
                 />
               </ScrollReveal>
               <ScrollReveal delay={100}>
@@ -208,7 +209,8 @@ const FAQs = () => {
                   alt="First dance with sparklers at Alberta wedding venue"
                   description="Your celebration under the stars"
                   category="Reception"
-                  className="h-64 md:h-72 rounded-2xl shadow-lg"
+                  className="h-64 md:h-72 rounded-2xl shadow-lg bg-card"
+                  imageClassName="object-contain"
                 />
               </ScrollReveal>
             </div>
