@@ -11,7 +11,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import ceremonyVowsGazebo from "@/assets/gallery/Images/ceremony-vows-gazebo-2.jpeg";
-import firstDanceSparklers from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-sweetheart-table-laughter-under-draped-arbor-forest-04.jpg";
+import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.jpg";
 import meadowSunsetKiss from "@/assets/gallery/veil-kiss-misty-forest.jpg";
 import faqImage1 from "@/assets/gallery/unused-wedding-portrait.jpeg";
 import faqImage2 from "@/assets/gallery/Images/bride&groom-in-field.jpg";

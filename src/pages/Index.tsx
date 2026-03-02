@@ -131,7 +131,8 @@ const Index = () => {
           alt="Couple in the woodland at Rustic Retreat"
           loading="eager"
           decoding="async"
-          fetchPriority="high"
+          // @ts-ignore - React 18 types don't support lowercase fetchpriority, but React runtime complains about camelCase
+          fetchpriority="high"
           className="absolute inset-0 h-full w-full object-cover object-[50%_40%]"
         />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_40%,rgba(0,0,0,0.75)_85%,rgba(0,0,0,0.9)_100%)]" />

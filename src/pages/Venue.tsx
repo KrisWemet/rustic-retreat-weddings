@@ -27,7 +27,7 @@ import receptionTable4 from "@/assets/gallery/head-table.jpg";
 import receptionChairGame from "@/assets/gallery/ae544ad7d928a81729703820306114ae-xxxlarge.jpeg";
 import ceremonyPavilion from "@/assets/gallery/Images/IMG_0036.jpg";
 import ceremonyAisles from "@/assets/gallery/Images/4099316435379843506.jpg";
-import ceremonyWide1 from "@/assets/gallery/Images/ceremony-wide-forest-clearing.jpg";
+import ceremonyWide1 from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wide-outdoor-ceremony-arch-wedding-party-forest-clearing-03.jpg";
 import ceremonyCloseUp from "@/assets/gallery/Images/IMG_0002.jpg";
 import ceremonySeating from "@/assets/gallery/Images/IMG_0030.jpg";
 import ceremonyAisleWalk from "@/assets/gallery/Images/IMG_5018.jpg";
