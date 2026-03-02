@@ -51,47 +51,47 @@ const FAQs = () => {
     {
       category: "Booking & Scheduling",
       question: "When is wedding season?",
-      answer: "June through September, when Alberta weather is at its best."
+      answer: "Our wedding season runs from June through September, when Alberta weather is theoretically at its best, though as any Albertan knows, Mother Nature doesn't always get the memo!\n\nWe open in June once the land has had a chance to dry out from spring, and the grass and leaves have returned to give the property that lush, full feeling that makes it so magical. Earlier in the season the land can be soft and the trees still waking up, so we wait until everything is at its best before welcoming our first celebrations.\n\nOn the other end, we wrap up in September to stay comfortably ahead of both the falling leaves and the cooler temperatures that creep in as the season turns. Once the trees begin to show their fall colours and shed, the ambiance of the property shifts significantly. And while autumn in Alberta is undeniably beautiful, we want your celebration filled with warm evenings, comfortable nights around the campfire, and that gorgeous late-summer light rather than chilly mornings and a colourful but bare canopy overhead.\n\nIn a province where you can experience all four seasons in a single weekend, we've learned to work with the land rather than against it. This sweet spot of June through September is where the magic happens."
     },
     {
       category: "Property Rules & Policies",
       question: "What are the quiet hours?",
-      answer: "Your wedding night? Celebrate until midnight. All other nights, quiet hours run 11pm to 8am for generators and amplified music. Your neighbors (the owls) will thank you."
+      answer: "On your wedding night, the celebration is yours until midnight. Dance, laugh, and let the music carry through the trees as long as the night calls for it.\n\nAll other nights, quiet hours begin at 11pm and run until 8am. This applies to generators and amplified music, so the campfire stays lit, the conversation keeps flowing, and the stars stay just as bright. It's just the speakers that get a rest.\n\nWe share this land with the surrounding area and take being good neighbours seriously. A little consideration goes a long way. And honestly, some of the best moments of the weekend happen in that quiet, crackling, just-the-fire-and-good-company space anyway.\n\nYour neighbours (the owls) will thank you."
     },
     {
       category: "Weather & Logistics",
       question: "What happens if it rains?",
-      answer: "Alberta weather has never stopped a party at Rustic Retreat. The clear-top gazebo seats 80 for your reception, and rain often makes for the most dramatic photos. Some of our favorite wedding shots happened during surprise showers."
+      answer: "Honestly? Some of our most beautiful weddings have had a little rain in them.\n\nThe clear-top gazebo comfortably seats your entire guest list of 80 for the reception, and the ceremony can move under cover if needed. The sky might be grey, but the celebration doesn't skip a beat.\n\nAnd here's the thing about rain and photos: it does something magical. The light softens, the colours deepen, and couples who have a spontaneous moment in the rain almost always end up with their favourite shots of the day.\n\nAlberta weather is famously unpredictable, and we've made peace with that. We plan for every possibility, and we've yet to have a wedding that wasn't wonderful regardless of the forecast."
     },
     {
       category: "Property Amenities",
       question: "Is there electricity and running water?",
-      answer: "Yes! The property has solar power for your essentials and potable water on-site. Our shower facilities provide modern comfort while keeping that rustic, off-grid feel."
+      answer: "Yes to both, with a little context on each.\n\nThe entire property runs on solar power. No power lines come in from the road — it's completely off-grid, just as it's been since day one. You'll have reliable electricity for your essentials throughout your stay: the cabin, the sound system, lighting, and everything you need to run a great celebration.\n\nPotable water is available on-site, so drinking water is never a concern.\n\nFor bathroom facilities, the property currently has well-maintained outhouses. They're kept clean and are very much part of the genuine off-grid experience that makes this place feel different. A proper wash house with flush facilities is currently under construction and will be ready for the 2027 season."
     },
     {
       category: "Location & Access",
       question: "How far is Rustic Retreat from Edmonton?",
-      answer: "99 kilometres northwest of Edmonton, about an hour's drive. Close enough to make the trip easy, far enough that it actually feels like a true escape."
+      answer: "About an hour northwest of Edmonton, 99 kilometres to be exact, near the shores of Lac la Nonne.\n\nClose enough that your guests won't dread the drive. Far enough that the moment you turn off the highway and head toward the property, the city genuinely feels like it belongs to another world.\n\nNo traffic noise. No skyline. Just trees, sky, and the smell of nature when you step out of the car.\n\nFor out-of-town guests, it's an easy trip from Edmonton's airport as well. Straight northwest, a scenic drive, and a destination worth every kilometre."
     },
     {
       category: "Exclusivity & Privacy",
       question: "Do you host multiple weddings per weekend?",
-      answer: "Never. When you book, the property is exclusively yours. No other couples. No overlapping events."
+      answer: "Never. Not once, not ever.\n\nWhen you book Rustic Retreat, the entire venue is yours for the full duration of your package. No other couple is setting up on the other side of a dividing wall. No strangers wandering through your ceremony. No overlapping timelines or competing sound systems.\n\nJust you, your people, and the venue entirely yours to fill with whatever makes your celebration feel like you.\n\nWe only host one wedding per weekend by design, and that's a promise we take seriously."
     },
     {
       category: "Property Rules & Policies",
       question: "Can we bring our dog (or other pets)?",
-      answer: "Yes! Well-behaved pets are welcome. Many couples have included their dogs in the ceremony. Just let us know in advance so we can share a few guidelines about the property."
+      answer: "Well-behaved pets are absolutely welcome here.\n\nDogs especially seem to love this property. We've had pups walk down the aisle, pose for portraits in the trees, and curl up by the campfire like they've lived here their whole lives. Some of our favourite wedding photos have featured a very happy, very photogenic dog.\n\nJust give us a heads-up before your weekend so we can share a few simple guidelines about the property. We want to make sure your furry family members have just as wonderful a time as everyone else.\n\nIf they're part of your family, they're part of your celebration."
     },
     {
       category: "Guest Accommodations",
       question: "Is there a minimum guest count?",
-      answer: "No minimum. Whether you're planning an intimate elopement with 10 guests or a celebration with 80, the property is yours to enjoy your way."
+      answer: "Not at all. We genuinely mean it when we say this place works for every size of celebration.\n\nSome of our most memorable weekends have been intimate elopements — just the couple, a handful of their closest people, and the venue feeling like it was made for exactly this moment. There's something incredibly beautiful about a small wedding on a big property. The space doesn't overwhelm. It just holds you.\n\nOn the other end, a full weekend with 80 guests has an energy all its own. The campfire buzzing, lawn games going in every direction, laughter carrying through the trees.\n\nBoth are wonderful. Both are exactly right. It all comes down to what feels like you."
     },
     {
       category: "Property Amenities",
       question: "Is there WiFi on the property?",
-      answer: "We have limited WiFi at the cabin for essential needs, but honestly? Most couples tell us the digital detox was one of the best parts of their weekend. Your guests will actually talk to each other."
+      answer: "There's limited WiFi available at the cabin for anything essential — checking in on a few last-minute details, that kind of thing.\n\nBut we'll be honest with you: most couples tell us afterward that the unexpected digital detox was one of their favourite parts of the whole weekend. Guests actually put their phones down. They look up. They talk to each other, really talk. Old friends reconnect in ways that just don't happen when everyone's scrolling.\n\nThe forest has a way of doing that.\n\nConsider the limited WiFi a gentle nudge toward being fully present for one of the most important weekends of your life. The Instagram posts can wait."
     },
   ];
 
