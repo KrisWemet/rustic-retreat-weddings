@@ -1,5 +1,3 @@
-import { anthropic } from '@ai-sdk/anthropic';
-import { streamText } from 'ai';
 import fs from 'fs';
 import path from 'path';
 
@@ -50,25 +48,76 @@ ${venue}
 ${packages}
 `;
 
-        // Make sure anthropic key exists
-        if (!process.env.ANTHROPIC_API_KEY) {
-            console.warn("ANTHROPIC_API_KEY is not set. Generating mock response for development...");
+        // Make sure API key exists
+        const apiKey = process.env.VITE_OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEY;
+        if (!apiKey) {
+            console.warn("OpenRouter API key is not set. Generating mock response for development...");
             // For local development without API keys, wait 1 sec and return mock
             setTimeout(() => {
-                const stream = "[Mock Mode] The API key is missing, so I can't generate a real reply. Check the deployment settings on Vercel!";
+                const stream = "[Mock Mode] The VITE_OPENROUTER_API_KEY is missing, so I can't generate a real reply. Check the .env or deployment settings!";
                 res.setHeader('Content-Type', 'text/plain; charset=utf-8');
                 res.end(stream);
             }, 1000);
             return;
         }
 
-        const result = streamText({
-            model: anthropic('claude-3-7-sonnet-20250219'), // Mapping requested "claude-sonnet-4-20250514" to nearest valid latest sonnet model
-            system: systemPrompt,
-            messages,
+        const model = process.env.VITE_OPENROUTER_MODEL || process.env.OPENROUTER_MODEL || 'anthropic/claude-3.5-sonnet:beta';
+
+        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${apiKey}`,
+                "HTTP-Referer": "https://rustic-retreat.vercel.app", // Required by OpenRouter: your site URL
+                "X-Title": "Rustic Retreat Venue Chatbot", // Optional: your site name
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                model: model,
+                stream: true,
+                messages: [
+                    { role: "system", content: systemPrompt },
+                    ...messages
+                ],
+            })
         });
 
-        result.pipeTextStreamToResponse(res);
+        if (!response.ok) {
+            console.error("OpenRouter Error:", await response.text());
+            return res.status(500).json({ error: 'Failed to communicate with OpenRouter' });
+        }
+
+        res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
+        res.setHeader('Cache-Control', 'no-cache, no-transform');
+        res.setHeader('Connection', 'keep-alive');
+
+        // Simple passthrough of the stream
+        if (!response.body) {
+            throw new Error("No response body from OpenRouter");
+        }
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            const chunk = decoder.decode(value, { stream: true });
+
+            // Extract the content chunks here directly and just pass standard text.
+            const lines = chunk.split('\n');
+            for (const line of lines) {
+                if (line.startsWith('data: ') && line !== 'data: [DONE]') {
+                    try {
+                        const data = JSON.parse(line.trim().slice(6));
+                        if (data.choices && data.choices[0].delta && data.choices[0].delta.content) {
+                            res.write(data.choices[0].delta.content);
+                        }
+                    } catch (e) { /* ignore partial JSON objects from chunking */ }
+                }
+            }
+        }
+
+        res.end();
     } catch (err) {
         console.error('Error generating chat response:', err);
         res.status(500).json({ error: 'Internal Server Error' });
