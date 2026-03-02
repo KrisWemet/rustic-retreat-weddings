@@ -8,13 +8,8 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
-import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import ceremonyVowsGazebo from "@/assets/gallery/Images/ceremony-vows-gazebo-2.jpeg";
-import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.jpg";
-import meadowSunsetKiss from "@/assets/gallery/veil-kiss-misty-forest.jpg";
-import faqImage1 from "@/assets/gallery/unused-wedding-portrait.jpeg";
-import faqImage2 from "@/assets/gallery/Images/bride&groom-in-field.jpg";
 
 const FAQs = () => {
   const faqs = [
@@ -144,75 +139,24 @@ const FAQs = () => {
         {/* FAQs Accordion */}
         <section className="section">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-start">
-              <div>
-                <Accordion type="single" collapsible className="space-y-4">
-                  {faqs.map((faq, index) => (
-                    <ScrollReveal key={index} delay={index * 50}>
-                      <AccordionItem
-                        value={`item-${index}`}
-                        className="bg-card border-2 px-6 hover:border-secondary transition-colors"
-                      >
-                        <AccordionTrigger className="text-left font-semibold hover:text-primary">
-                          {faq.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground pt-2">
-                          {faq.answer}
-                        </AccordionContent>
-                      </AccordionItem>
-                    </ScrollReveal>
-                  ))}
-                </Accordion>
-              </div>
-              <ScrollReveal delay={150}>
-                <div className="relative max-w-md mx-auto lg:max-w-none">
-                  <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
-                  <div className="relative grid gap-4">
-                    <img
-                      src={faqImage1}
-                      alt="A beautiful, intimate wedding portrait at Rustic Retreat"
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-56 sm:h-64 lg:h-72 object-contain bg-card rounded-3xl shadow-elegant"
-                    />
-                    <img
-                      src={faqImage2}
-                      alt="Bride and groom standing in an open grassy field"
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-56 sm:h-64 lg:h-72 object-contain bg-card rounded-3xl shadow-soft"
-                    />
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Visual Break - Showcase the Experience */}
-        <section className="section bg-background">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <ScrollReveal delay={0}>
-                <HoverImage
-                  src={meadowSunsetKiss}
-                  alt="Romantic sunset kiss in wildflower meadow at Rustic Retreat"
-                  description="Golden hour magic in the meadow"
-                  category="Romance"
-                  className="h-64 md:h-72 rounded-2xl shadow-lg bg-card"
-                  imageClassName="object-contain"
-                />
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <HoverImage
-                  src={firstDanceSparklers}
-                  alt="First dance with sparklers at Alberta wedding venue"
-                  description="Your celebration under the stars"
-                  category="Reception"
-                  className="h-64 md:h-72 rounded-2xl shadow-lg bg-card"
-                  imageClassName="object-contain"
-                />
-              </ScrollReveal>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <ScrollReveal key={index} delay={index * 50}>
+                    <AccordionItem
+                      value={`item-${index}`}
+                      className="bg-card border-2 px-6 hover:border-secondary transition-colors"
+                    >
+                      <AccordionTrigger className="text-left font-semibold hover:text-primary">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground pt-2">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </ScrollReveal>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
@@ -223,7 +167,7 @@ const FAQs = () => {
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Still Have Questions?</h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto text-primary-foreground/90">
-                The best way to get answers is during a property visit. Walk the land with us.
+                The best way to get answers is during a property visit. Walk the land with us. Still have questions? Feel free to <a href="sms:+17802106252" className="underline hover:text-secondary transition-colors">text us at (780) 210-6252</a>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

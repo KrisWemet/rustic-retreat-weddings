@@ -14,11 +14,9 @@ import weddingParty from "@/assets/gallery/wedding-party-cheer.jpg";
 import familyPortrait from "@/assets/gallery/wedding-party-formal.jpg";
 import campfireNight from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-sparkler-moment-on-dance-floor-35.jpg";
 import twoBridesDancing from "@/assets/gallery/couple-walking-trail.jpg";
-import groomsmenCheers from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groomsmen-toast-with-whiskey-bottle-forest-trail-14.jpg";
-import coupleForestKiss from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-forest-trail-41.jpg";
 import cabinExterior from "@/assets/gallery/seo/couple-sunset-meadow.jpg";
 import meadowLandscape from "@/assets/gallery/Images/hero-sunset-meadow.jpeg";
-import { Heart, MapPin, Users, Sparkles, Home, TreePine, Sun, CheckCircle } from "lucide-react";
+import { Heart, Sparkles, Home, TreePine, Sun } from "lucide-react";
 
 const About = () => {
   return (
@@ -208,105 +206,6 @@ const About = () => {
                   category="Celebration"
                   className="rounded-3xl shadow-xl"
                 />
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* What We Actually Do */}
-        <section className="section">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <ScrollReveal>
-                <div className="text-center mb-12">
-                  <p className="section-label">HOW IT WORKS</p>
-                  <h2 className="text-3xl md:text-4xl font-serif mb-4">What We Actually Do</h2>
-                  <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    Here's the truth: we're hands-on hosts, but this is your weekend, not ours.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={100}>
-                <p className="text-lg text-center mb-12 max-w-3xl mx-auto">
-                  When you book Rustic Retreat, you get the blank canvas—65 acres, exclusive access, freedom to create exactly what you envision. We're around during your weekend in case you need anything from the venue itself, but we're not hovering. <strong>We trust you to bring your vision to life.</strong>
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={150}>
-                <div className="grid md:grid-cols-2 gap-4 mb-12">
-                  <img
-                    src={groomsmenCheers}
-                    alt="Groomsmen celebrating with drinks on a forest path at Rustic Retreat"
-                    className="w-full h-56 md:h-64 object-cover rounded-2xl shadow-soft"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <img
-                    src={coupleForestKiss}
-                    alt="Couple kissing on the forest trail at Rustic Retreat"
-                    className="w-full h-56 md:h-64 object-cover rounded-2xl shadow-soft"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </ScrollReveal>
-
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <ScrollReveal delay={0}>
-                  <Card className="border-2 border-secondary h-full">
-                    <CardContent className="p-8">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
-                          <CheckCircle className="w-5 h-5 text-secondary" />
-                        </div>
-                        <h3 className="text-xl font-semibold">What's Included</h3>
-                      </div>
-                      <ul className="space-y-3 text-muted-foreground">
-                        <li>Modern picnic tables & rustic ceremony benches</li>
-                        <li>Two-speaker sound system with wireless microphones</li>
-                        <li>Arch options & selection of decor</li>
-                        <li>Giant outdoor games & hammocks</li>
-                        <li>Firewood & BBQ with propane</li>
-                        <li>Trampoline, playset & treehouse for kids</li>
-                        <li>Cabin (sleeps 4) with Keurig & meal prep basics</li>
-                        <li>Farm-fresh eggs when the chickens are laying</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </ScrollReveal>
-
-                <ScrollReveal delay={100}>
-                  <Card className="border-2 h-full">
-                    <CardContent className="p-8">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Users className="w-5 h-5 text-primary" />
-                        </div>
-                        <h3 className="text-xl font-semibold">Your Creative Freedom</h3>
-                      </div>
-                      <ul className="space-y-3 text-muted-foreground">
-                        <li>Selecting your dream vendor team</li>
-                        <li>Styling and personalizing the spaces</li>
-                        <li>End-of-weekend packing & cleanup</li>
-                      </ul>
-                      <div className="mt-6 p-4 bg-primary/5 border border-primary/10 rounded-lg">
-                        <p className="text-sm">
-                          We believe your wedding shouldn't be a generic template. <strong>You have total flexibility</strong> to bring in your own decor and design the celebration exactly how you envision it.
-                        </p>
-                      </div>
-                      <p className="mt-4 text-sm text-muted-foreground">
-                        While the styling and cleanup are in your hands, we're always here to offer advice, share our favorite local vendors, or suggest layouts that work beautifully on the property!
-                      </p>
-                    </CardContent>
-                  </Card>
-                </ScrollReveal>
-              </div>
-
-              <ScrollReveal delay={200}>
-                <p className="text-center text-lg">
-                  We're constantly adding things we think will elevate your experience. <strong>If you have an idea or need something we don't have yet, tell us. We're listening.</strong>
-                </p>
               </ScrollReveal>
             </div>
           </div>
