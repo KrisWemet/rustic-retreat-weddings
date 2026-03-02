@@ -21,22 +21,22 @@ const FAQs = () => {
     {
       category: "Booking & Scheduling",
       question: "Which package would be best for me?",
-      answer: "The 3-day package (Friday-Sunday) gives you 60 hours together—perfect for tighter schedules. The 5-day package (Thursday-Monday) provides 108 hours and is our most popular option. With 5 days, guests bond before your wedding, creating a community atmosphere. We're happy to help you decide during your property visit."
+      answer: "The 3-day package (Friday–Sunday) is a beautiful choice for couples who want a heartfelt, focused celebration. The wedding weekend comes together warmly and intentionally, with everyone present for the moments that matter most.\n\nThe 5-day package (Thursday–Monday or Friday–Tuesday) is our most popular option, and it's easy to see why — it's where the full Rustic Retreat experience truly unfolds. The extra days give everyone room to arrive, settle in, and just be together. Evenings gather naturally around the campfire, laughter carries through the trees, and by the time your wedding day arrives, it already feels like a cherished reunion. There's space for an activity day, unhurried meals, and the kind of slow, sweet visiting that guests will carry home in their hearts.\n\nUltimately, the choice comes down to how immersive you want your celebration to be. It's also worth thinking about your decorating plans — if you're bringing in vendors to handle setup and takedown, a 3-day package can work beautifully. But if you're envisioning a more personal touch, with friends and family pitching in to help bring your vision to life, the extra days give everyone the time and space to do that joyfully — without it feeling rushed.\n\nWe'd love to help you find the perfect fit during your property visit."
     },
     {
       category: "Guest Accommodations",
       question: "How many guests can you accommodate?",
-      answer: "Up to 80 guests for ceremony and reception. We have room for 60 guests to camp on the property—you choose where to set up. Half a dozen Airbnbs sit 5-15 minutes away around the lake, or RVezy.com can deliver trailers directly to your camping area."
+      answer: "We can welcome up to 80 guests for your ceremony and reception.\n\nFor those spending the night or the full weekend with you, we have a main camping area perfect for both RVs and tents — just know that this is true boondocking, with no electrical hookups or water connections.\n\nThink starlit skies, crackling fires, and waking up surrounded by nature.\n\nIt's rustic at its finest, and guests tend to absolutely love it."
     },
     {
       category: "Guest Accommodations",
       question: "What if some of our guests don't want to camp?",
-      answer: "Perfect! Half a dozen Airbnb properties sit within 5-15 minutes around the lake. RVezy.com delivers trailers right to your camping area—all the coziness, none of the setup."
+      answer: "No problem at all — there's something for everyone!\n\nA handful of beautiful Airbnb properties are located just 5–15 minutes away along the shores of Lac la Nonne, with several stunning lakefront options that make for a little retreat of their own.\n\nFor guests who prefer to stay closer to the action, RVezy.com is a wonderful option. Some trailers on the platform offer delivery and full setup right on the property — and pickup again at the end of the weekend. Just be sure to select the delivery option when browsing to find the listings that offer this service. All your guests need to do is bring their supplies, enjoy every moment, tidy up, and head home. No owning, no towing, no fuss. It's the perfect way to experience the magic of camping on site without any of the hassle.\n\nFor those who prefer a more traditional stay, hotels are available approximately 15 minutes away in both Barrhead and Onoway."
     },
     {
       category: "Packages & Pricing",
       question: "What's included in the wedding package price?",
-      answer: "Everything you need for 80 guests is already here: exclusive property access, the newlywed cabin, flexible camping for your group, picnic tables and ceremony benches, our full Wedding Décor Collection, groomed trails, outdoor games, campfire areas, and the clear-top gazebo. Consumables like batteries and candles are available at cost."
+      answer: "Everything you need for 80 guests is already here: exclusive property access, the newlywed cabin (with Keurig & meal prep basics), flexible camping for your group, picnic tables and ceremony benches, a two-speaker sound system with wireless microphones, firewood and BBQ with propane, our full Wedding Décor Collection with arch options, groomed trails, lawn games, a trampoline and playhouse for the kids, campfire areas, and the clear-top gazebo. We even include farm-fresh eggs when the chickens are laying! Consumables like batteries and candles are available at cost."
     },
     {
       category: "Planning & Flexibility",
@@ -151,7 +151,11 @@ const FAQs = () => {
                         {faq.question}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground pt-2">
-                        {faq.answer}
+                        <div className="space-y-3">
+                          {faq.answer.split('\n\n').map((paragraph, i) => (
+                            <p key={i}>{paragraph}</p>
+                          ))}
+                        </div>
                       </AccordionContent>
                     </AccordionItem>
                   </ScrollReveal>

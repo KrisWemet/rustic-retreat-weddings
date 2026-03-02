@@ -276,8 +276,8 @@ const Packages = () => {
                   <h3 className="font-semibold mb-2">Accommodations</h3>
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• The Cabin: Sleeps 4 (newlywed suite)</li>
-                    <li>• Room for 60 guests to camp</li>
-                    <li>• You choose where to set up—no defined sites</li>
+                    <li>• Keurig & meal prep basics in Cabin</li>
+                    <li>• Room for 60 guests to camp (no defined sites)</li>
                     <li>• Shower facilities ready for 2027 season</li>
                     <li>• Airbnbs 5-15 minutes away</li>
                   </ul>
@@ -289,9 +289,11 @@ const Packages = () => {
                   <DollarSign className="w-8 h-8 text-secondary mb-3" />
                   <h3 className="font-semibold mb-2">Furniture & Essentials</h3>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Modern picnic tables and rustic benches for 80 guests</li>
-                    <li>• No rental fees!</li>
-                    <li>• Setup flexibility</li>
+                    <li>• Modern picnic tables & rustic benches for 80</li>
+                    <li>• Two-speaker sound system with wireless mics</li>
+                    <li>• Firewood & BBQ with propane included</li>
+                    <li>• Reliable off-grid solar power</li>
+                    <li>• No rental fees & setup flexibility</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -302,6 +304,7 @@ const Packages = () => {
                   <h3 className="font-semibold mb-2">Wedding Décor Collection</h3>
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Curated selection of décor pieces</li>
+                    <li>• Wide variety of ceremony arch options</li>
                     <li>• Vintage pieces & centerpieces</li>
                     <li>• Free to use—no rental fees</li>
                     <li>• Add your own touches</li>
@@ -314,10 +317,10 @@ const Packages = () => {
                   <Users className="w-8 h-8 text-secondary mb-3" />
                   <h3 className="font-semibold mb-2">Activity Amenities</h3>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Giant Jenga, Cornhole, Bocce Ball</li>
-                    <li>• Badminton, Yardzee</li>
-                    <li>• Trampoline & treehouse</li>
-                    <li>• Play set & hammocks</li>
+                    <li>• Lawn Games: Jenga, Cornhole, Connect 4, Yardzee</li>
+                    <li>• Trampoline, children's playhouse & treehouse</li>
+                    <li>• Hammocks for lounging under the trees</li>
+                    <li>• Farm-fresh eggs (when chickens are laying!)</li>
                   </ul>
                 </CardContent>
               </Card>

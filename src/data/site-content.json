@@ -39,11 +39,26 @@
         "previewDescription": "Extended midweek-to-weekend access with full property amenities, cabin + camping, décor collection, and space for multiple events.",
         "timelineTitle": "The Timeline (Wednesday Arrival Option):",
         "timeline": [
-          { "day": "Wednesday:", "desc": "Arrival day. People trickle in. Camp setup. First dinner together. Early bedtime." },
-          { "day": "Thursday:", "desc": "The \"settling in\" day. Morning hike. Afternoon games. Evening bonfire. Walls start coming down." },
-          { "day": "Friday:", "desc": "Pre-wedding festivities. Rehearsal dinner. The anticipation builds." },
-          { "day": "Saturday:", "desc": "YOUR DAY. Ceremony at golden hour, reception under stars." },
-          { "day": "Sunday:", "desc": "The goodbye. But softer. Extended. \"We should do this every year\" becomes a real plan." }
+          {
+            "day": "Wednesday:",
+            "desc": "Arrival day. People trickle in. Camp setup. First dinner together. Early bedtime."
+          },
+          {
+            "day": "Thursday:",
+            "desc": "The \"settling in\" day. Morning hike. Afternoon games. Evening bonfire. Walls start coming down."
+          },
+          {
+            "day": "Friday:",
+            "desc": "Pre-wedding festivities. Rehearsal dinner. The anticipation builds."
+          },
+          {
+            "day": "Saturday:",
+            "desc": "YOUR DAY. Ceremony at golden hour, reception under stars."
+          },
+          {
+            "day": "Sunday:",
+            "desc": "The goodbye. But softer. Extended. \"We should do this every year\" becomes a real plan."
+          }
         ],
         "perfectForTitle": "The complete experience:",
         "perfectForText": "Couples who want families to actually bond. Anyone who's left a 6-hour wedding thinking \"I barely talked to anyone.\" Those who understand that the best celebrations unfold naturally, not on a tight schedule.",
@@ -65,10 +80,22 @@
         "previewDescription": "Weekend access Fri–Sun with ceremony + reception areas, cabin stay, décor collection, and room for camping guests.",
         "timelineTitle": "The Timeline:",
         "timeline": [
-          { "day": "Friday:", "desc": "Gates open. Your people arrive throughout the day. Tents up, gear settled, the weekend officially begins." },
-          { "day": "Friday afternoon/evening:", "desc": "Exploration, campfires, the first wave of reconnection" },
-          { "day": "Saturday:", "desc": "Your wedding day, dawn to starlight" },
-          { "day": "Sunday:", "desc": "Slow morning, tearful goodbyes, promises to do this again" }
+          {
+            "day": "Friday:",
+            "desc": "Gates open. Your people arrive throughout the day. Tents up, gear settled, the weekend officially begins."
+          },
+          {
+            "day": "Friday afternoon/evening:",
+            "desc": "Exploration, campfires, the first wave of reconnection"
+          },
+          {
+            "day": "Saturday:",
+            "desc": "Your wedding day, dawn to starlight"
+          },
+          {
+            "day": "Sunday:",
+            "desc": "Slow morning, tearful goodbyes, promises to do this again"
+          }
         ],
         "perfectForTitle": "Perfect for:",
         "perfectForText": "Couples working with tighter schedules or budgets, or guests traveling from far away who need defined arrival/departure times. You still get that \"wedding weekend\" magic—exponentially more connection than a single-day event—in a contained timeframe.",
@@ -89,8 +116,14 @@
         "previewDescription": "Full property access, ceremony + reception spaces, cabin suite, décor collection, and essentials for a simple weekday celebration.",
         "timelineTitle": "The Timeline:",
         "timeline": [
-          { "day": "Day 1:", "desc": "Arrive, settle in, rehearse if you wish. Evening bonfire under the stars." },
-          { "day": "Day 2:", "desc": "Your wedding day—intimate, unhurried, exactly as you dreamed." }
+          {
+            "day": "Day 1:",
+            "desc": "Arrive, settle in, rehearse if you wish. Evening bonfire under the stars."
+          },
+          {
+            "day": "Day 2:",
+            "desc": "Your wedding day—intimate, unhurried, exactly as you dreamed."
+          }
         ],
         "perfectForTitle": "Perfect for:",
         "perfectForText": "Couples seeking an intimate elopement experience with just your closest people. All the magic of Rustic Retreat in a focused, meaningful two-day celebration.",
@@ -134,11 +167,12 @@
       "rusticRetreat": {
         "title": "Rustic Retreat Multi-Day Package:",
         "items": [
-          "Venue for 3-5 full days",
-          "Accommodation for 60 guests on-property",
-          "Tables, benches, décor included",
-          "Property guidance and support",
-          "All activities and amenities"
+          "Venue for 2-5 full days",
+          "Cabin + camping for 60 guests on-property",
+          "Tables, benches, décor, arch & sound system included",
+          "Firewood, BBQ & Keurig meal prep basics included",
+          "Yard games, play structures & all property amenities",
+          "Property guidance and support"
         ],
         "priceRange": "$5,000–$7,500*"
       }
