@@ -16,42 +16,42 @@ const FAQs = () => {
     {
       category: "Booking & Scheduling",
       question: "When can we book our wedding at Rustic Retreat?",
-      answer: "Every booking starts with a visit to the property. We want you to walk the land, feel the space, and know for certain that this is where you want to get married. After your tour, if you're ready to make it official, we can get everything started that same day. Or if you'd like a few days to let it sink in, that's completely fine too — we'll follow your lead. No pressure, no rush."
+      answer: "Every booking starts with a visit to the property. We want you to walk the land, feel the space, and know for certain that this is where you want to get married. After your tour, if you're ready to make it official, we can get everything started that same day. Or if you'd like a few days to let it sink in, that's completely fine too. We'll follow your lead. No pressure, no rush."
     },
     {
       category: "Booking & Scheduling",
       question: "Which package would be best for me?",
-      answer: "The 3-day package (Friday–Sunday) is a beautiful choice for couples who want a heartfelt, focused celebration. The wedding weekend comes together warmly and intentionally, with everyone present for the moments that matter most.\n\nThe 5-day package (Thursday–Monday or Friday–Tuesday) is our most popular option, and it's easy to see why — it's where the full Rustic Retreat experience truly unfolds. The extra days give everyone room to arrive, settle in, and just be together. Evenings gather naturally around the campfire, laughter carries through the trees, and by the time your wedding day arrives, it already feels like a cherished reunion. There's space for an activity day, unhurried meals, and the kind of slow, sweet visiting that guests will carry home in their hearts.\n\nUltimately, the choice comes down to how immersive you want your celebration to be. It's also worth thinking about your decorating plans — if you're bringing in vendors to handle setup and takedown, a 3-day package can work beautifully. But if you're envisioning a more personal touch, with friends and family pitching in to help bring your vision to life, the extra days give everyone the time and space to do that joyfully — without it feeling rushed.\n\nWe'd love to help you find the perfect fit during your property visit."
+      answer: "The 3-day package (Friday–Sunday) is a beautiful choice for couples who want a heartfelt, focused celebration. The wedding weekend comes together warmly and intentionally, with everyone present for the moments that matter most.\n\nThe 5-day package (Thursday–Monday or Friday–Tuesday) is our most popular option, and it's easy to see why. It's where the full Rustic Retreat experience truly unfolds. The extra days give everyone room to arrive, settle in, and just be together. Evenings gather naturally around the campfire, laughter carries through the trees, and by the time your wedding day arrives, it already feels like a cherished reunion. There's space for an activity day, unhurried meals, and the kind of slow, sweet visiting that guests will carry home in their hearts.\n\nUltimately, the choice comes down to how immersive you want your celebration to be. It's also worth thinking about your decorating plans. If you're bringing in vendors to handle setup and takedown, a 3-day package can work beautifully. But if you're envisioning a more personal touch, with friends and family pitching in to help bring your vision to life, the extra days give everyone the time and space to do that joyfully, without it feeling rushed.\n\nWe'd love to help you find the perfect fit during your property visit."
     },
     {
       category: "Guest Accommodations",
       question: "How many guests can you accommodate?",
-      answer: "We can welcome up to 80 guests for your ceremony and reception.\n\nFor those spending the night or the full weekend with you, we have a main camping area perfect for both RVs and tents — just know that this is true boondocking, with no electrical hookups or water connections.\n\nThink starlit skies, crackling fires, and waking up surrounded by nature.\n\nIt's rustic at its finest, and guests tend to absolutely love it."
+      answer: "We can welcome up to 80 guests for your ceremony and reception.\n\nFor those spending the night or the full weekend with you, we have a main camping area perfect for both RVs and tents. Just know that this is true boondocking, with no electrical hookups or water connections.\n\nThink starlit skies, crackling fires, and waking up surrounded by nature.\n\nIt's rustic at its finest, and guests tend to absolutely love it."
     },
     {
       category: "Guest Accommodations",
       question: "What if some of our guests don't want to camp?",
-      answer: "No problem at all — there's something for everyone!\n\nA handful of beautiful Airbnb properties are located just 5–15 minutes away along the shores of Lac la Nonne, with several stunning lakefront options that make for a little retreat of their own.\n\nFor guests who prefer to stay closer to the action, RVezy.com is a wonderful option. Some trailers on the platform offer delivery and full setup right on the property — and pickup again at the end of the weekend. Just be sure to select the delivery option when browsing to find the listings that offer this service. All your guests need to do is bring their supplies, enjoy every moment, tidy up, and head home. No owning, no towing, no fuss. It's the perfect way to experience the magic of camping on site without any of the hassle.\n\nFor those who prefer a more traditional stay, hotels are available approximately 15 minutes away in both Barrhead and Onoway."
+      answer: "No problem at all. There's something for everyone!\n\nA handful of beautiful Airbnb properties are located just 5–15 minutes away along the shores of Lac la Nonne, with several stunning lakefront options that make for a little retreat of their own.\n\nFor guests who prefer to stay closer to the action, RVezy.com is a wonderful option. Some trailers on the platform offer delivery and full setup right on the property, with pickup again at the end of the weekend. Just be sure to select the delivery option when browsing to find the listings that offer this service. All your guests need to do is bring their supplies, enjoy every moment, tidy up, and head home. No owning, no towing, no fuss. It's the perfect way to experience the magic of camping on site without any of the hassle.\n\nFor those who prefer a more traditional stay, hotels are available approximately 15 minutes away in both Barrhead and Onoway."
     },
     {
       category: "Packages & Pricing",
       question: "What's included in the wedding package price?",
-      answer: "Everything you need for 80 guests is already here: exclusive property access, the newlywed cabin (with Keurig & meal prep basics), flexible camping for your group, picnic tables and ceremony benches, a two-speaker sound system with wireless microphones, firewood and BBQ with propane, our full Wedding Décor Collection with arch options, groomed trails, lawn games, a trampoline and playhouse for the kids, campfire areas, and the clear-top gazebo. We even include farm-fresh eggs when the chickens are laying! Consumables like batteries and candles are available at cost."
+      answer: "Quite a lot, actually.\n\nYou get exclusive access to the full venue grounds: the ceremony spaces, the clear-top gazebo, the groomed trails, the campfire areas, and everything in between. We live on the property and are nearby if you need anything, but your celebration spaces are entirely yours. Picnic tables and rustic ceremony benches for up to 80 guests are already set up and ready.\n\nThe newlywed cabin is yours for the weekend, stocked with a Keurig, pods, and the basics you need for a relaxed morning after.\n\nOur Bluetooth two-speaker sound system with wireless microphones is included, along with firewood and a BBQ with propane for all those meals and late-night fires.\n\nYou also get full access to our Wedding Décor Collection: arch options, table styling pieces, vintage accents, and more, all at no extra cost. It's a living collection that keeps growing.\n\nFor the little ones (and the young at heart), there's a trampoline, a playhouse, a full lineup of lawn games, and a selection of board games for rainy days or whenever the mood strikes.\n\nOh, and farm-fresh eggs when the chickens are laying. It's one of those little things guests always remember.\n\nConsumables like batteries and candles are available for an additional fee."
     },
     {
       category: "Planning & Flexibility",
       question: "Can we have a rehearsal dinner or other events?",
-      answer: "Your time is yours. Whether that means a rehearsal dinner, morning yoga, or late-night bonfire—you set the schedule. You're renting the land, so enjoy it however fits your vision."
+      answer: "Absolutely, and this is where a Rustic Retreat wedding really shines.\n\nYour time here is truly yours, and we love seeing every couple make it their own. Whether you envision a relaxed rehearsal dinner under the stars, a lively lawn games tournament featuring some fierce Connect Four competition, a group hike through the trees, or a quiet afternoon where everyone simply naps, reads, and recharges. You set the schedule.\n\nMornings might start with yoga on the grass, afternoons could unfold into lawn games, good conversation, and easy laughter, and evenings have a way of naturally drifting toward the campfire with a drink in hand and stories being shared.\n\nNo itinerary but your own. You're renting the space, and we encourage you to fill it with whatever brings you and your favourite people joy."
     },
     {
       category: "Planning & Flexibility",
       question: "Can we bring our own vendors?",
-      answer: "Flexibility to choose. Use our preferred vendors or bring your own team. This is your celebration, your vision."
+      answer: "Absolutely! When it comes to vendors, you have complete flexibility to celebrate exactly the way you envision.\n\nWhether you have a beloved photographer you've already fallen in love with, a caterer who makes your favourite foods, or a florist whose style speaks to your heart, bring them along. Almost any vendor you choose is welcome here.\n\nPrefer to keep things close and personal? Many of our couples choose to DIY their weekend entirely, leaning on the love and helping hands of family and friends to bring their vision to life. There's something really special about that.\n\nIf you're looking for guidance, we're also happy to recommend vendors we've had the pleasure of working with and trust to help make your day beautiful. However you choose to approach it, we're here to support you."
     },
     {
       category: "Booking & Scheduling",
       question: "When is wedding season?",
-      answer: "June through September—when Alberta weather is at its best."
+      answer: "June through September, when Alberta weather is at its best."
     },
     {
       category: "Property Rules & Policies",
@@ -71,7 +71,7 @@ const FAQs = () => {
     {
       category: "Location & Access",
       question: "How far is Rustic Retreat from Edmonton?",
-      answer: "99 kilometres northwest of Edmonton — about an hour's drive. Close enough to make the trip easy, far enough that it actually feels like a true escape."
+      answer: "99 kilometres northwest of Edmonton, about an hour's drive. Close enough to make the trip easy, far enough that it actually feels like a true escape."
     },
     {
       category: "Exclusivity & Privacy",
