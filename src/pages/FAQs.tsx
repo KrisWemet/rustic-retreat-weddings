@@ -16,7 +16,7 @@ const FAQs = () => {
     {
       category: "Booking & Scheduling",
       question: "When can we book our wedding at Rustic Retreat?",
-      answer: "Every booking starts with a visit to the property. We want you to walk the land, feel the space, and know for certain that this is where you want to get married. It's not a sales tactic. It's just our way of making sure you're certain."
+      answer: "Every booking starts with a visit to the property. We want you to walk the land, feel the space, and know for certain that this is where you want to get married. After your tour, if you're ready to make it official, we can get everything started that same day. Or if you'd like a few days to let it sink in, that's completely fine too — we'll follow your lead. No pressure, no rush."
     },
     {
       category: "Booking & Scheduling",
@@ -36,7 +36,7 @@ const FAQs = () => {
     {
       category: "Packages & Pricing",
       question: "What's included in the wedding package price?",
-      answer: "Exclusive property access, the cabin, flexible camping areas for your group, modern picnic tables and rustic benches for 80 guests, access to our Wedding Décor Collection (consumables like batteries and candles available at cost), groomed trails, outdoor games, campfire areas, and clear-top gazebo."
+      answer: "Everything you need for 80 guests is already here: exclusive property access, the newlywed cabin, flexible camping for your group, picnic tables and ceremony benches, our full Wedding Décor Collection, groomed trails, outdoor games, campfire areas, and the clear-top gazebo. Consumables like batteries and candles are available at cost."
     },
     {
       category: "Planning & Flexibility",
@@ -71,7 +71,7 @@ const FAQs = () => {
     {
       category: "Location & Access",
       question: "How far is Rustic Retreat from Edmonton?",
-      answer: "99 kilometers (approximately 1-hour drive) northwest of Edmonton, near Lac La Nonne."
+      answer: "99 kilometres northwest of Edmonton — about an hour's drive. Close enough to make the trip easy, far enough that it actually feels like a true escape."
     },
     {
       category: "Exclusivity & Privacy",

@@ -1,21 +1,29 @@
 # Rustic Retreat Weddings
 
+> A family-owned, off-grid wedding venue on 65 private acres near Lac La Nonne, Alberta — about 1 hour northwest of Edmonton. Opened to weddings in 2025. One wedding per weekend, exclusive property access, no mandatory vendors.
+
 ## Site Information
 - Name: Rustic Retreat Weddings
-- Base URL: https://www.rusticretreat.xyz
-- Location: Near Lac La Nonne, Alberta, Canada (99 km NW of Edmonton)
-
-## Summary
-Rustic Retreat Weddings is a multi-day outdoor wedding venue on 65 private acres. We offer three packages: 2-day ($5,000), 3-day ($6,500), and 5-day ($7,500, recommended). GST not included. All include exclusive property access, cabin accommodation for 4, camping for 60 guests, ceremony/reception seating for 80, and a curated décor collection. Wedding season runs June through September.
-
-## Key Pages
-- Full Venue Information (AI/Press): https://www.rusticretreat.xyz/llm.html
-- Packages & Pricing: https://www.rusticretreat.xyz/packages
-- The Venue: https://www.rusticretreat.xyz/venue
-- FAQs: https://www.rusticretreat.xyz/faqs
-- Contact & Book a Tour: https://www.rusticretreat.xyz/contact
-- Photo Gallery: https://www.rusticretreat.xyz/gallery
-
-## Contact
+- Base URL: https://www.rusticretreatweddings.ca
+- Location: Near Lac La Nonne, Alberta, Canada (99 km northwest of Edmonton)
+- Season: June through September
 - Phone: (780) 210-6252
 - Email: rusticretreatalberta@gmail.com
+
+## Summary
+Family-owned since 2006 by Wilf and Patsy Ouimet. Their son Chris and his wife Shannon moved to the property full-time after their own wedding here in 2019 and opened to weddings in 2025. Three packages available: 2-day weekday ($5,000), 3-day weekend ($6,500), and 5-day ($7,500, most popular). All include exclusive property access, a newlywed cabin for 4, camping for 60 guests, ceremony and reception seating for 80, and a curated décor collection at no extra cost. No mandatory vendors. GST not included.
+
+## Plain Text Pages (for AI/LLM reading)
+- FAQs: https://www.rusticretreatweddings.ca/faqs.txt
+- The Venue: https://www.rusticretreatweddings.ca/venue.txt
+- Packages & Pricing: https://www.rusticretreatweddings.ca/packages.txt
+- Our Story: https://www.rusticretreatweddings.ca/about.txt
+
+## Web Pages
+- Home: https://www.rusticretreatweddings.ca
+- The Venue: https://www.rusticretreatweddings.ca/venue
+- Packages & Pricing: https://www.rusticretreatweddings.ca/packages
+- FAQs: https://www.rusticretreatweddings.ca/faqs
+- Our Story: https://www.rusticretreatweddings.ca/about
+- Gallery: https://www.rusticretreatweddings.ca/gallery
+- Contact & Book a Tour: https://www.rusticretreatweddings.ca/contact
