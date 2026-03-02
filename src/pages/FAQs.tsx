@@ -16,7 +16,7 @@ const FAQs = () => {
     {
       category: "Booking & Scheduling",
       question: "When can we book our wedding at Rustic Retreat?",
-      answer: "We don't let couples book until they visit the property. This isn't a sales tactic—it's our commitment to making sure you're certain, not just convinced."
+      answer: "Every booking starts with a visit to the property. We want you to walk the land, feel the space, and know for certain that this is where you want to get married. It's not a sales tactic. It's just our way of making sure you're certain."
     },
     {
       category: "Booking & Scheduling",
