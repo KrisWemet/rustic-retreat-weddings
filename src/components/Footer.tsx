@@ -66,7 +66,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="/Rustic_Retreat_Site_Rules.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                <a href="/rustic-retreat-site-rules.html" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
                   Rules & Guidelines
                 </a>
               </li>

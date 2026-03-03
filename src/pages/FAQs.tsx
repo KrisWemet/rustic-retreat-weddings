@@ -104,7 +104,7 @@ const FAQs = () => {
       category: "Property Rules & Policies",
       question: "Are there any specific site rules or curfews we should know about?",
       answer: "At Rustic Retreat, we believe your wedding weekend should feel as relaxed and free as possible. Because we are an open, off-grid property surrounded by nature, we do have a few common-sense guidelines in place to ensure the safety of your guests, the protection of the land, and the comfort of our neighbors.\n\nThis includes a 11:00 PM noise-reduction hour for amplified music (extended to midnight on the night of your wedding), fire safety protocols, and a few small decoration requests to keep the local wildlife safe.",
-      link: { url: "/Rustic_Retreat_Site_Rules.pdf", text: "View our complete Site Rules and Guidelines document here." }
+      link: { url: "/rustic-retreat-site-rules.html", text: "View our complete Site Rules and Guidelines document here." }
     },
   ];
 
