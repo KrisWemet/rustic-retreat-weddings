@@ -135,7 +135,7 @@ const Rules = () => {
                             </div>
                         </ScrollReveal>
 
-                        <ScrollReveal delay={200}>
+                        <div>
                             <RuleSection id="s1" number="1" title="Fire Safety & Smoking">
                                 <Subsection title="1.1 Fire Pits & Open Fires">
                                     <WarnAlert title="Fire Safety — Rural Property Rules Strictly Enforced">
@@ -558,10 +558,10 @@ const Rules = () => {
                                     </div>
                                 </Subsection>
                             </RuleSection>
-                        </ScrollReveal>
+                        </div>
 
                         {/* Quick Reference Emergency Contacts grid */}
-                        <ScrollReveal delay={200}>
+                        <div>
                             <section id="s13">
                                 <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 mt-16 shadow-xl relative overflow-hidden">
                                     {/* Decorative background overlay pattern */}
@@ -616,7 +616,7 @@ const Rules = () => {
                                     </div>
                                 </div>
                             </section>
-                        </ScrollReveal>
+                        </div>
 
                     </div>
                 </main>

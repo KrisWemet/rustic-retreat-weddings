@@ -166,9 +166,6 @@ const Packages = () => {
                   <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none mb-3">
                     From intimate elopements to the ultimate retreat—find the package that fits your vision.
                   </p>
-                  <p className="text-sm text-secondary font-medium">
-                    2027 Season: Only 16 weekend dates available. June and September book first.
-                  </p>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={150}>

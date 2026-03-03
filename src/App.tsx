@@ -18,7 +18,6 @@ const RealWeddings = lazy(() => import("./pages/RealWeddings"));
 const WeddingStory = lazy(() => import("./pages/WeddingStory"));
 const FAQs = lazy(() => import("./pages/FAQs"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Rules = lazy(() => import("./pages/Rules"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -44,8 +43,8 @@ const App = () => (
               <Route path="/real-weddings/:slug" element={<WeddingStory />} />
               <Route path="/faqs" element={<FAQs />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/rules" element={<Rules />} />
-              <Route path="/guidelines" element={<Navigate to="/rules" replace />} />
+              <Route path="/rules" element={<Navigate to="/rustic-retreat-site-rules.html" replace />} />
+              <Route path="/guidelines" element={<Navigate to="/rustic-retreat-site-rules.html" replace />} />
               {/* Redirects for old URLs */}
               <Route path="/cabin" element={<Navigate to="/venue" replace />} />
               <Route path="/decor" element={<Navigate to="/venue" replace />} />

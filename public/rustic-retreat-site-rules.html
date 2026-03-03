@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Rules & Guest Guidelines — Rustic Retreat</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Matching the main website design system exactly */
+    --background:      hsl(40, 30%, 96%);   /* warm cream */
+    --card:            hsl(40, 25%, 98%);   /* soft white */
+    --foreground:      hsl(25, 20%, 25%);   /* dark warm brown */
+    --primary:         hsl(25, 20%, 30%);   /* warm brown (header, buttons) */
+    --primary-fg:      hsl(40, 30%, 96%);   /* cream on dark */
+    --secondary:       hsl(12, 45%, 65%);   /* terracotta / dusty rose */
+    --secondary-light: hsl(12, 40%, 75%);   /* terracotta light */
+    --muted:           hsl(40, 20%, 92%);   /* light cream bg */
+    --muted-fg:        hsl(25, 15%, 45%);   /* medium warm brown text */
+    --border:          hsl(40, 15%, 88%);   /* subtle warm border */
+    --warn-bg:         hsl(40, 60%, 96%);
+    --warn-border:     hsl(12, 45%, 65%);
+    --danger-bg:       hsl(12, 40%, 95%);
+    --danger-border:   hsl(12, 50%, 55%);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+  }
+
+  /* Header — matches site primary colour */
+  .site-header {
+    background: linear-gradient(180deg, hsl(25, 20%, 30%) 0%, hsl(25, 25%, 22%) 100%);
+    color: var(--primary-fg);
+    text-align: center;
+    padding: 56px 24px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    color: var(--primary-fg);
+    position: relative;
+  }
+  .site-header .tagline {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: hsl(40, 30%, 80%);
+    position: relative;
+  }
+  .header-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--secondary);
+    margin: 20px auto;
+    position: relative;
+  }
+
+  /* Info bar */
+  .info-bar {
+    background: var(--card);
+    color: var(--muted-fg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
+  }
+  .info-bar-item {
+    padding: 12px 24px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .info-bar-item:last-child { border-right: none; }
+  .info-bar-item strong { color: var(--foreground); font-weight: 600; }
+  .info-bar-item a { color: var(--secondary); text-decoration: none; }
+  .info-bar-item a:hover { text-decoration: underline; }
+
+  /* Emergency banner */
+  .emergency-banner {
+    background: hsl(0, 55%, 30%);
+    color: #fff;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+  }
+  .emergency-banner strong { font-size: 1rem; }
+  .emergency-banner a { color: hsl(0, 60%, 85%); }
+
+  /* Layout */
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  /* Intro */
+  .intro-box {
+    background: var(--card);
+    border-left: 4px solid var(--secondary);
+    padding: 20px 24px;
+    margin-bottom: 48px;
+    font-size: 0.93rem;
+    color: var(--muted-fg);
+    font-style: italic;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 4px 16px hsl(25, 20%, 25% / 0.06);
+  }
+
+  /* Table of contents */
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 56px;
+    box-shadow: 0 4px 16px hsl(25, 20%, 25% / 0.06);
+  }
+  .toc h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    color: var(--foreground);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 6px 24px;
+  }
+  .toc a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 0;
+    transition: color 0.2s;
+  }
+  .toc a:hover { color: var(--primary); }
+  .toc a::before {
+    content: '→';
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+
+  /* Sections */
+  .section {
+    margin-bottom: 40px;
+    scroll-margin-top: 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 16px hsl(25, 20%, 25% / 0.05);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-number {
+    background: hsl(12, 45%, 65% / 0.15);
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.2rem, 3vw, 1.55rem);
+    font-weight: 600;
+    color: var(--foreground);
+  }
+
+  /* Subsection */
+  .subsection { margin-bottom: 28px; }
+  .subsection h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--secondary);
+    margin-bottom: 12px;
+  }
+
+  /* Alert boxes */
+  .alert {
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+  }
+  .alert-warn {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+  }
+  .alert-danger {
+    background: var(--danger-bg);
+    border-left: 4px solid var(--danger-border);
+  }
+  .alert-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .alert-warn .alert-label { color: hsl(12, 45%, 50%); }
+  .alert-danger .alert-label { color: hsl(12, 50%, 45%); }
+  .alert ul { padding-left: 18px; margin-top: 6px; }
+  .alert li { margin-bottom: 4px; }
+  .alert p { margin-top: 4px; }
+
+  /* Rules list */
+  ul.rules {
+    list-style: none;
+    padding: 0;
+  }
+  ul.rules li {
+    padding: 8px 0 8px 22px;
+    position: relative;
+    font-size: 0.93rem;
+    border-bottom: 1px solid var(--muted);
+    color: var(--foreground);
+  }
+  ul.rules li:last-child { border-bottom: none; }
+  ul.rules li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 17px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--secondary-light);
+  }
+
+  /* Tables */
+  .rules-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+  .rules-table th {
+    background: var(--primary);
+    color: var(--primary-fg);
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+  }
+  .rules-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .rules-table tr:nth-child(even) td { background: var(--muted); }
+  .rules-table tr:last-child td { border-bottom: none; }
+
+  /* Emergency contacts */
+  .quick-ref {
+    background: linear-gradient(180deg, hsl(25, 20%, 30%) 0%, hsl(25, 25%, 22%) 100%);
+    color: var(--primary-fg);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin-top: 48px;
+    box-shadow: 0 12px 28px hsl(25, 20%, 25% / 0.2);
+  }
+  .quick-ref h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    color: #fff;
+    text-align: center;
+  }
+  .quick-ref-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .contact-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 14px 18px;
+  }
+  .contact-card .label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: hsl(12, 40%, 75%);
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  .contact-card .value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .contact-card .value a { color: hsl(40, 40%, 85%); text-decoration: none; }
+  .contact-card .value a:hover { text-decoration: underline; }
+  .contact-card.emergency { border-color: hsl(0, 60%, 55%); background: rgba(160, 30, 30, 0.3); }
+  .contact-card.emergency .value { font-size: 1.4rem; color: hsl(0, 80%, 85%); }
+
+  /* Footer */
+  .site-footer {
+    background: hsl(25, 20%, 25%);
+    color: hsl(40, 25%, 75%);
+    text-align: center;
+    padding: 24px;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* Back to top */
+  .back-top {
+    display: inline-block;
+    margin-top: 40px;
+    color: var(--secondary);
+    font-size: 0.85rem;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--secondary-light);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+  .back-top:hover { color: var(--primary); border-color: var(--primary); }
+
+  @media (max-width: 600px) {
+    .container { padding: 32px 16px 60px; }
+    .quick-ref { padding: 28px 20px; }
+    .info-bar-item { padding: 10px 14px; font-size: 0.78rem; }
+    .toc-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="top"></div>
+
+<header class="site-header">
+  <h1>Rustic Retreat</h1>
+  <div class="header-divider"></div>
+  <p class="tagline">Site Rules &amp; Guest Guidelines</p>
+</header>
+
+<div class="info-bar">
+  <div class="info-bar-item">📍 <span>3121 TWP RD 572A, Lac Ste. Anne County, Alberta</span></div>
+  <div class="info-bar-item">🔥 <span>Fire Ban Status: <a href="http://www.albertafirebans.ca" target="_blank">albertafirebans.ca</a> | <a href="http://www.lsac.ca/fire" target="_blank">lsac.ca/fire</a></span></div>
+  <div class="info-bar-item">☎️ <span>Event Emergency: <strong>(780) 210-6252</strong></span></div>
+</div>
+
+<div class="emergency-banner">
+  🚨 <strong>ALL EMERGENCIES: Call 9-1-1</strong> &nbsp;|&nbsp; Non-Emergency RCMP: (780) 967-2020 &nbsp;|&nbsp; Poison Control: 1-800-332-1414
+</div>
+
+<main class="container">
+
+  <div class="intro-box">
+    These site rules apply to all guests, vendors, contractors, and staff present on the property during events. The event host is responsible for ensuring all guests are aware of and comply with these rules. Violations may result in removal from the property and forfeiture of the security deposit.
+  </div>
+
+  <nav class="toc">
+    <h2>Sections</h2>
+    <div class="toc-grid">
+      <a href="#s1">Fire Safety &amp; Smoking</a>
+      <a href="#s2">Noise &amp; Quiet Hours</a>
+      <a href="#s3">Camping &amp; RV Rules</a>
+      <a href="#s4">Vehicle &amp; Traffic</a>
+      <a href="#s5">Alcohol &amp; Responsible Service</a>
+      <a href="#s6">Waste &amp; Environment</a>
+      <a href="#s7">Pets</a>
+      <a href="#s8">Prohibited Activities</a>
+      <a href="#s9">Children &amp; Safety</a>
+      <a href="#s10">Weather &amp; Emergencies</a>
+      <a href="#s11">Respect &amp; Conduct</a>
+      <a href="#s12">Booking &amp; Contracts</a>
+      <a href="#contacts">Emergency Contacts</a>
+    </div>
+  </nav>
+
+  <!-- Section 1 -->
+  <section class="section" id="s1">
+    <div class="section-header">
+      <span class="section-number">Section 1</span>
+      <h2>Fire Safety &amp; Smoking</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>1.1 Fire Pits &amp; Open Fires</h3>
+      <div class="alert alert-warn">
+        <div class="alert-label">⚠ Fire Safety — Rural Property Rules Strictly Enforced</div>
+        <ul>
+          <li>Check fire ban status before every event: <a href="http://www.albertafirebans.ca" target="_blank">albertafirebans.ca</a> | <a href="http://www.lsac.ca/fire" target="_blank">lsac.ca/fire</a></li>
+          <li>No fires of any kind are permitted during a Fire Ban or Fire Advisory</li>
+          <li>Violations may result in fines under the Alberta Forest and Prairie Protection Act</li>
+        </ul>
+      </div>
+      <ul class="rules">
+        <li>Designated fire pits only — no fires outside marked fire pit locations</li>
+        <li>Fire pits must be attended at all times — never leave a fire unattended</li>
+        <li>Fires must be fully extinguished before guests retire for the night and before departure</li>
+        <li>Dead-out check required — ashes must be cold to the touch; use water or sand to extinguish</li>
+        <li>Maximum fire size: 1 metre diameter, 60 cm height</li>
+        <li>No fires during any Fire Ban or Fire Advisory — no exceptions</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>1.2 Smoking</h3>
+      <ul class="rules">
+        <li>Use cigarette disposal containers or fire pit</li>
+        <li>No smoking inside any buildings — all structures are non-smoking</li>
+        <li>If smoking while walking through forested trail or grassy areas: fully extinguish cigarette safely (with water or in a dirt patch) and dispose of butt appropriately. Do not flick into grass, brush, forest, or discard on the ground.</li>
+        <li>Enhanced caution during dry conditions — no smoking while walking through forested or grassy areas during any Fire Advisory period</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>1.3 Fireworks Policy</h3>
+      <div class="alert alert-warn">
+        <div class="alert-label">Note</div>
+        <p>All fireworks at this venue are managed exclusively by venue staff. Guest-supplied fireworks are strictly prohibited.</p>
+      </div>
+      <ul class="rules">
+        <li>Venue-coordinated only — all fireworks must be approved, organized, and purchased through the venue</li>
+        <li>Venue handles all permits and approvals — County Fire Services approval secured when required</li>
+        <li>Professional setup, discharge, and cleanup — venue staff will handle all aspects of any firework display</li>
+        <li>Advance booking required — fireworks must be requested and confirmed during final event planning</li>
+        <li>No fireworks during any Fire Ban, Fire Advisory, or Restriction</li>
+        <li>Fire safety measures maintained — fire extinguishers, water supply, and safety personnel present during all displays</li>
+        <li>Post-discharge inspection — venue staff will inspect discharge area for smoldering materials</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>1.4 Candles &amp; Decorative Flames</h3>
+      <ul class="rules">
+        <li>LED flameless candles strongly encouraged — preferred over real candles for all décor</li>
+        <li>Real candles: must be in stable holders, attended at all times, and extinguished before leaving area unattended</li>
+        <li>No candles in tents or fabric structures — serious fire hazard</li>
+        <li>Tiki torches: must be secured, positioned away from structures, and extinguished before leaving unattended</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="section" id="s2">
+    <div class="section-header">
+      <span class="section-number">Section 2</span>
+      <h2>Noise &amp; Quiet Hours</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>2.1 Music &amp; Amplified Sound</h3>
+      <table class="rules-table">
+        <thead><tr><th>Noise Reduction Time</th><th>Requirement</th></tr></thead>
+        <tbody>
+          <tr><td>11:00 PM (Sunday–Thursday)</td><td>Music reduced to reasonable conversational level</td></tr>
+          <tr><td>12:00 Midnight (Friday–Saturday / Wedding Night)</td><td>Music reduced to be minimally audible at property line</td></tr>
+        </tbody>
+      </table>
+      <ul class="rules">
+        <li>Music must be minimally audible at the property line after noise reduction time</li>
+        <li>Speakers must be aimed inward under gazebo, away from property lines</li>
+        <li>DJ/sound equipment: professional setup only; volume monitored by staff</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>2.2 Generator Use</h3>
+      <ul class="rules">
+        <li>Guest generators off by 10:00 PM — mandatory shutoff time, no exceptions</li>
+        <li>Exhaust must be directed away from people and structures</li>
+        <li>Generator refueling: unit must be turned off and allowed to cool before refueling</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>2.3 Guest Noise</h3>
+      <ul class="rules">
+        <li>Respect noise reduction hours for the comfort of fellow guests and neighbours</li>
+        <li>Vehicle noise: no revving engines, loud exhaust, or car stereos after 10:00 PM</li>
+        <li>Respect other campers and guests — keep noise to a reasonable level at all times</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="section" id="s3">
+    <div class="section-header">
+      <span class="section-number">Section 3</span>
+      <h2>Camping &amp; RV Rules</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>3.1 RV Guidelines</h3>
+      <div class="alert alert-danger">
+        <div class="alert-label">⚠ Wastewater Discharge is Strictly Prohibited</div>
+        <ul>
+          <li>No greywater or blackwater may be discharged anywhere on this property</li>
+          <li>Violations are subject to environmental cleanup fees per contract</li>
+          <li>Self-contained RVs only — no hookups of any kind are available on-site</li>
+        </ul>
+      </div>
+      <ul class="rules">
+        <li>Maximum RVs per event as stated in contract — capacity is strictly enforced</li>
+        <li>Self-contained RVs only — all RVs must have functional fresh water and holding tanks</li>
+        <li>No hookups provided — no electrical, water, or sewer connections; off-grid / boondocking only</li>
+        <li>No RV dump station on-site — guests must be self-sufficient or use off-site facilities</li>
+        <li>Guest generators off by 10:00 PM — RV generators are subject to the same generator rules</li>
+        <li>Slide-outs and awnings: ensure adequate clearance from neighbouring units and trees</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>3.2 Tent Camping</h3>
+      <ul class="rules">
+        <li>Respect spacing — maintain reasonable distance from other campers</li>
+        <li>Proper waste disposal — use provided facilities and waste bins</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>3.3 General Camping Rules</h3>
+      <ul class="rules">
+        <li>Maximum overnight guests as stated in contract — capacity enforced</li>
+        <li>Campfires in designated pits only — no personal fires outside approved areas</li>
+        <li>Pack in, pack out — leave your camping area cleaner than you found it</li>
+        <li>Respect property — no damage to trees, plants, structures, or facilities</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="section" id="s4">
+    <div class="section-header">
+      <span class="section-number">Section 4</span>
+      <h2>Vehicle &amp; Traffic Rules</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>4.1 Parking &amp; Traffic Flow</h3>
+      <ul class="rules">
+        <li>On-site parking only — no parking on TWP RD 572A or any County roads</li>
+        <li>Emergency access lane must remain clear at all times — <strong>no parking on the gravel driveway</strong></li>
+        <li>Speed limit: 15 km/h on all internal roads and driveways</li>
+        <li>Watch for pedestrians, animals, and wildlife — guests frequently walk to/from camping areas</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>4.2 Arrivals &amp; Departures</h3>
+      <table class="rules-table">
+        <tbody>
+          <tr><td><strong>Check-In</strong></td><td>After 8:00 AM on Day 1</td></tr>
+          <tr><td><strong>Check-Out</strong></td><td>By 8:00 PM on final day (or as specified by event host)</td></tr>
+          <tr><td><strong>RVs over 30 feet</strong></td><td>Use alternate exit route for safer departure: 572A → RR31 → 570 → Hwy 33</td></tr>
+        </tbody>
+      </table>
+      <ul class="rules">
+        <li>Headlights on at dusk and night — improve visibility on internal roads</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>4.3 Vehicle Safety</h3>
+      <div class="alert alert-danger">
+        <div class="alert-label">⚠ Zero Tolerance — Impaired Driving</div>
+        <ul>
+          <li>No impaired driving under any circumstances</li>
+          <li>Arrange a sober driver before the event, use a shuttle/taxi, or stay overnight on-site</li>
+          <li>Venue staff and event hosts are empowered to hold keys if impaired driving is suspected</li>
+        </ul>
+      </div>
+      <ul class="rules">
+        <li>Secure loads — use tarps and straps on trailers and truck beds</li>
+        <li>Children supervised near vehicles — drivers must watch carefully for children at play</li>
+        <li>No vehicle maintenance on-site — oil changes, repairs, and vehicle washing are prohibited</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 5 -->
+  <section class="section" id="s5">
+    <div class="section-header">
+      <span class="section-number">Section 5</span>
+      <h2>Alcohol &amp; Responsible Service</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>5.1 Alcohol Policies</h3>
+      <ul class="rules">
+        <li>AGLC Special Event Licence required — event host is responsible for obtaining the licence when alcohol is being served</li>
+        <li>No alcohol service to minors — ID checks required for anyone appearing under 25</li>
+        <li>Drink responsibly — know your limits; water and food should be provided by host throughout the event</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>5.2 Safe Transportation</h3>
+      <ul class="rules">
+        <li>Designated drivers encouraged — arrange a designated driver before the event begins</li>
+        <li>Overnight camping encouraged — guests consuming alcohol are encouraged to stay on-site</li>
+        <li>Keys held if necessary — hosts and venue staff may intervene to prevent impaired driving</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 6 -->
+  <section class="section" id="s6">
+    <div class="section-header">
+      <span class="section-number">Section 6</span>
+      <h2>Waste, Recycling &amp; Environmental Protection</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>6.1 Waste Disposal</h3>
+      <table class="rules-table">
+        <thead><tr><th>Bin Type</th><th>Colour / Label</th><th>Accepted Materials</th></tr></thead>
+        <tbody>
+          <tr><td>General Waste</td><td>Black / General Waste Bins</td><td>Non-recyclable waste and garbage</td></tr>
+          <tr><td>Recycling</td><td>Blue Bins</td><td>Cans and bottles</td></tr>
+          <tr><td>Organics / Compost</td><td>White Bins (where provided)</td><td>Food scraps and organic waste</td></tr>
+        </tbody>
+      </table>
+      <ul class="rules">
+        <li>No littering — pack out what you pack in</li>
+        <li>Cigarette butts in disposal containers or fire pit only — not on ground or in vegetation</li>
+        <li>Event cleanup prior to departure — event hosts are responsible for post-event cleanup</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>6.2 Sanitation</h3>
+      <ul class="rules">
+        <li>Use designated washroom facilities — outhouses and/or portable toilets are provided</li>
+        <li>No outdoor urination or defecation — use provided facilities at all times</li>
+        <li>RV holding tanks: no dumping of greywater or blackwater on property</li>
+        <li>Report facility issues — contact on-site staff immediately if toilets are full or require servicing</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>6.3 Environmental Stewardship</h3>
+      <ul class="rules">
+        <li>Leave no trace — minimize your impact on the land</li>
+        <li>Stay on paths and roads — avoid trampling vegetation or creating new trails</li>
+        <li>No tree cutting or damage — do not cut, carve, or damage trees in any way</li>
+        <li>No firewood collection from property — firewood is provided (refills available for a fee); do not cut trees or branches</li>
+        <li>Protect wildlife — observe from a safe distance; do not feed or harass animals</li>
+        <li>No dumping of any kind — fuel, chemicals, wastewater, and garbage must be disposed of properly</li>
+        <li>Spill reporting — report any fuel, chemical, or sewage spills to staff immediately</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 7 -->
+  <section class="section" id="s7">
+    <div class="section-header">
+      <span class="section-number">Section 7</span>
+      <h2>Pets</h2>
+    </div>
+    <ul class="rules">
+      <li>Pets allowed with advance approval — event host must notify venue in advance (pet fee may apply)</li>
+      <li>Leashed at all times in main areas — maximum 6-foot leash</li>
+      <li>Off-leash permitted in back field and on walking trails — pet must remain under owner's verbal control</li>
+      <li>Owner responsible for control — pets must be under owner's control at all times as there are other animals on the property including chickens, goats, turkeys, ducks, cats and dogs</li>
+      <li>Clean up after pets — waste bags are provided; dispose in designated bins</li>
+      <li>No aggressive animals — pets showing aggression must be removed from the property immediately</li>
+      <li>No pets in Bridal Suite or Décor Shed — these buildings are pet-free zones</li>
+      <li>Quiet pets only — excessive barking or noise is not permitted and may result in removal</li>
+      <li>Tie-outs in camping area only — pets may be tied to trees/stakes only in camping areas to prevent tripping hazards in common areas</li>
+    </ul>
+  </section>
+
+  <!-- Section 8 -->
+  <section class="section" id="s8">
+    <div class="section-header">
+      <span class="section-number">Section 8</span>
+      <h2>Prohibited Activities</h2>
+    </div>
+    <div class="alert alert-danger">
+      <div class="alert-label">⚠ Strictly Prohibited — Zero Tolerance</div>
+      <ul>
+        <li>ATVs, UTVs, dirt bikes, or off-road vehicles — motorized recreation vehicles prohibited (mobility devices excepted)</li>
+        <li>Hunting or firearms — hunting is prohibited; no firearms permitted on property during events</li>
+        <li>Weapons — knives (except small pocket knives), bows, and other weapons prohibited</li>
+        <li>Illegal drugs or substances — possession or use will result in immediate removal and authorities contacted</li>
+        <li>Unauthorized fires — only fires in designated pits; no personal campfires outside approved areas</li>
+        <li>Firewood collection — do not cut or collect any wood from the property</li>
+        <li>Tree cutting, carving, or damage — respect all vegetation</li>
+        <li>Unauthorized use of buildings or equipment — gazebo, buildings, sound system, etc. for event use only</li>
+        <li>Fishing or swimming in the pond</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 9 -->
+  <section class="section" id="s9">
+    <div class="section-header">
+      <span class="section-number">Section 9</span>
+      <h2>Children &amp; Safety</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>9.1 Supervision Requirements</h3>
+      <ul class="rules">
+        <li>Children supervised at all times — parents and guardians are responsible for supervision at all times</li>
+        <li>No unattended children near fire pits — adult supervision is mandatory at all fires</li>
+        <li>Watch for vehicle traffic — children must be supervised near parking areas and internal roads</li>
+        <li>Pond safety — children are not permitted near the pond without direct adult supervision</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>9.2 Natural Environment &amp; Wildlife Awareness</h3>
+      <div class="alert alert-warn">
+        <div class="alert-label">Rural Property Notice</div>
+        <p>This is a natural, wooded rural property. Wildlife including deer, coyotes, porcupines, skunks, and various bird species can be present and active at any time.</p>
+      </div>
+      <ul class="rules">
+        <li>Always know where your children are — young children can wander quickly in forested areas</li>
+        <li>Do not approach or feed wildlife — observe from a safe distance; wildlife can be unpredictable</li>
+        <li>Be aware at dawn and dusk — wildlife is most active during these periods</li>
+        <li>Secure food and garbage — prevent attracting wildlife to camping areas</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>9.3 General Hazards</h3>
+      <ul class="rules">
+        <li>Stay away from equipment and machinery — generators, sound equipment, etc. are not toys</li>
+        <li>No climbing on structures — gazebo, buildings, fences, and other structures are not for climbing</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 10 -->
+  <section class="section" id="s10">
+    <div class="section-header">
+      <span class="section-number">Section 10</span>
+      <h2>Weather &amp; Emergency Procedures</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>10.1 Severe Weather</h3>
+      <ul class="rules">
+        <li>Monitor weather conditions — staff will provide updates if severe weather is approaching</li>
+        <li>Stay indoors during lightning — avoid open areas, tents, and elevated ground during lightning</li>
+        <li>Follow staff directions — in extreme severe weather, evacuate to designated shelter immediately</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>10.2 Fire Emergency</h3>
+      <div class="alert alert-danger">
+        <div class="alert-label">⚠ Fire Emergency Response — All Guests Must Know This</div>
+        <ul>
+          <li><strong>Assembly Point:</strong> Venue Administration Building (Residence 2) — evacuate here immediately</li>
+          <li>Call 911 immediately — do NOT assume someone else has called</li>
+          <li>Notify staff immediately — event emergency number: <strong>(780) 210-6252</strong></li>
+          <li>Do NOT re-enter any building — wait outside for Fire Department all-clear</li>
+          <li>Fire extinguishers located at: gazebo, bridal suite, and generator area — use ONLY if trained and safe to do so</li>
+          <li>Wildfire: Evacuate the entire property immediately — do not shelter in buildings</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>10.3 Medical Emergency</h3>
+      <table class="rules-table">
+        <tbody>
+          <tr><td><strong>First Aid Kits</strong></td><td>Bridal Suite and Couple's Cabin</td></tr>
+          <tr><td><strong>Serious Injuries</strong></td><td>Call 911 immediately — do not delay treatment</td></tr>
+          <tr><td><strong>Event Emergency Hotline</strong></td><td><strong>(780) 210-6252</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Section 11 -->
+  <section class="section" id="s11">
+    <div class="section-header">
+      <span class="section-number">Section 11</span>
+      <h2>Respect &amp; Conduct</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>11.1 General Conduct</h3>
+      <ul class="rules">
+        <li>Respect other guests — be courteous and considerate at all times</li>
+        <li>Respect property and facilities — treat the venue as if it were your own home</li>
+        <li>Respect neighbours — keep noise reasonable</li>
+        <li>No harassment or discrimination — all guests deserve a safe and welcoming environment</li>
+        <li>Follow staff directions — on-site operators and marshals are present for your safety and comfort</li>
+        <li>Photography etiquette — respect the couple's wishes regarding photos and social media posting</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>11.2 Property Respect</h3>
+      <ul class="rules">
+        <li>No vandalism or damage — any damage will be charged to the event host</li>
+        <li>Return the venue as you found it — return all picnic tables, ceremony benches, arches, hammocks, and other items to their original locations</li>
+        <li>Return borrowed items — décor, lawn chairs, games, fire extinguishers, first aid kits, and equipment must be returned to original locations, clean and properly stored</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 12 -->
+  <section class="section" id="s12">
+    <div class="section-header">
+      <span class="section-number">Section 12</span>
+      <h2>Booking &amp; Contract Provisions</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>12.1 Guest Responsibilities</h3>
+      <ul class="rules">
+        <li>Event host responsible for guest conduct — the event host is liable for all guest violations</li>
+        <li>Environmental fee clause — guests are liable for cleanup costs if any wastewater violation occurs</li>
+        <li>Damage deposit — the refundable deposit may be held for property damage and/or cleanup; event host is liable for any additional fees</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h3>12.2 Violation Consequences</h3>
+      <table class="rules-table">
+        <thead><tr><th>Violation Level</th><th>Consequence</th></tr></thead>
+        <tbody>
+          <tr><td>First violation</td><td>Verbal warning, documented by staff</td></tr>
+          <tr><td>Repeat violation</td><td>Removal from property without refund</td></tr>
+          <tr><td>Serious violation (safety / fire / environmental)</td><td><strong>Immediate removal from property and authorities contacted</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Emergency Contacts Quick Reference -->
+  <section id="contacts">
+    <div class="quick-ref">
+      <h2>Quick Reference — Emergency Contacts</h2>
+      <div class="quick-ref-grid">
+        <div class="contact-card emergency">
+          <div class="label">All Emergencies</div>
+          <div class="value">9-1-1</div>
+        </div>
+        <div class="contact-card">
+          <div class="label">Event Emergency Hotline</div>
+          <div class="value">(780) 210-6252</div>
+        </div>
+        <div class="contact-card">
+          <div class="label">Non-Emergency RCMP</div>
+          <div class="value">(780) 967-2020</div>
+        </div>
+        <div class="contact-card">
+          <div class="label">Poison Control</div>
+          <div class="value">1-800-332-1414</div>
+        </div>
+        <div class="contact-card">
+          <div class="label">Fire Ban Status</div>
+          <div class="value"><a href="http://www.albertafirebans.ca" target="_blank">albertafirebans.ca</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="label">Assembly Point (Fire)</div>
+          <div class="value" style="font-size:0.9rem;">Venue Administration Building (Residence 2)</div>
+        </div>
+        <div class="contact-card">
+          <div class="label">First Aid Kits</div>
+          <div class="value" style="font-size:0.9rem;">Bridal Suite &amp; Couple's Cabin</div>
+        </div>
+        <div class="contact-card">
+          <div class="label">Fire Extinguishers</div>
+          <div class="value" style="font-size:0.9rem;">Gazebo, Bridal Suite, Generator Area</div>
+        </div>
+        <div class="contact-card">
+          <div class="label">Property Address</div>
+          <div class="value" style="font-size:0.9rem;">3121 TWP RD 572A, Lac Ste. Anne County, AB</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center;">
+    <a href="#top" class="back-top">↑ Back to Top</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>Rustic Retreat &nbsp;|&nbsp; 3121 TWP RD 572A, Lac Ste. Anne County, Alberta &nbsp;|&nbsp; Event Emergency: (780) 210-6252</p>
+</footer>
+
+</body>
+</html>

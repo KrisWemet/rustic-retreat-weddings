@@ -226,8 +226,8 @@ const Index = () => {
             <Link to="/contact" className="flex w-full max-w-xl items-center justify-center gap-3 bg-primary/10 hover:bg-primary/20 px-5 py-3 rounded-full transition-colors cursor-pointer group text-center">
               <Calendar className="w-5 h-5 text-primary" />
               <span className="text-primary font-medium group-hover:underline">
-                2027: Only a few select weekends left
-                <span className="block">Booking now open for 2028 & 2029</span>
+                2026: Only a few select weekends left
+                <span className="block">Booking now open for 2027 & 2028</span>
               </span>
             </Link>
           </div>
