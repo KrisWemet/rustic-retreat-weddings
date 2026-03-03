@@ -11,8 +11,15 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import ceremonyVowsGazebo from "@/assets/gallery/Images/ceremony-vows-gazebo-2.webp";
 
+type FAQEntry = {
+  category: string;
+  question: string;
+  answer: string;
+  link?: { url: string; text: string };
+};
+
 const FAQs = () => {
-  const faqs = [
+  const faqs: FAQEntry[] = [
     {
       category: "Booking & Scheduling",
       question: "When can we book our wedding at Rustic Retreat?",
@@ -96,7 +103,8 @@ const FAQs = () => {
     {
       category: "Property Rules & Policies",
       question: "Are there any specific site rules or curfews we should know about?",
-      answer: "At Rustic Retreat, we believe your wedding weekend should feel as relaxed and free as possible. Because we are an open, off-grid property surrounded by nature, we do have a few common-sense guidelines in place to ensure the safety of your guests, the protection of the land, and the comfort of our neighbors.\n\nThis includes a 11:00 PM noise-reduction hour for amplified music (extended to midnight on the night of your wedding), fire safety protocols, and a few small decoration requests to keep the local wildlife safe.\n\nWe've put everything together on a single, easy-to-read page. [You can view our complete Site Rules and Guidelines here](/rules)."
+      answer: "At Rustic Retreat, we believe your wedding weekend should feel as relaxed and free as possible. Because we are an open, off-grid property surrounded by nature, we do have a few common-sense guidelines in place to ensure the safety of your guests, the protection of the land, and the comfort of our neighbors.\n\nThis includes a 11:00 PM noise-reduction hour for amplified music (extended to midnight on the night of your wedding), fire safety protocols, and a few small decoration requests to keep the local wildlife safe.",
+      link: { url: "/Rustic_Retreat_Site_Rules.pdf", text: "View our complete Site Rules and Guidelines document here." }
     },
   ];
 
@@ -160,6 +168,13 @@ const FAQs = () => {
                           {faq.answer.split('\n\n').map((paragraph, i) => (
                             <p key={i}>{paragraph}</p>
                           ))}
+                          {faq.link && (
+                            <p className="mt-2 text-primary font-medium hover:underline">
+                              <a href={faq.link.url} target="_blank" rel="noopener noreferrer">
+                                {faq.link.text}
+                              </a>
+                            </p>
+                          )}
                         </div>
                       </AccordionContent>
                     </AccordionItem>
