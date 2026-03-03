@@ -18,6 +18,7 @@ const RealWeddings = lazy(() => import("./pages/RealWeddings"));
 const WeddingStory = lazy(() => import("./pages/WeddingStory"));
 const FAQs = lazy(() => import("./pages/FAQs"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Guidelines = lazy(() => import("./pages/Guidelines"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
