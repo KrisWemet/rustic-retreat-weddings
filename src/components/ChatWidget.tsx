@@ -17,6 +17,8 @@ const isAllowedResponseContentType = (response: Response) => {
     return contentType.includes("text/event-stream") || contentType.includes("application/json");
 };
 
+const STREAM_STALL_TIMEOUT_MS = 25_000;
+
 export default function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
@@ -28,35 +30,52 @@ export default function ChatWidget() {
     ]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [isStalled, setIsStalled] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
+    const abortControllerRef = useRef<AbortController | null>(null);
+    const stallTimerRef = useRef<number | null>(null);
+    const activeRequestRef = useRef<Promise<void> | null>(null);
+    const cancelReasonRef = useRef<"cancel" | "retry" | null>(null);
+    const lastRequestMessagesRef = useRef<Message[] | null>(null);
 
-    // Scroll to bottom
-    useEffect(() => {
-        if (messagesEndRef.current && isOpen) {
-            messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    const clearStallTimer = () => {
+        if (stallTimerRef.current !== null) {
+            window.clearTimeout(stallTimerRef.current);
+            stallTimerRef.current = null;
         }
-    }, [messages, isOpen]);
+    };
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!input.trim() || isLoading) return;
+    const armStallTimer = () => {
+        clearStallTimer();
+        setIsStalled(false);
+        stallTimerRef.current = window.setTimeout(() => {
+            setIsStalled(true);
+        }, STREAM_STALL_TIMEOUT_MS);
+    };
 
-        const userMessage: Message = { id: Date.now().toString(), role: 'user', content: input.trim() };
-        setMessages((prev) => [...prev, userMessage]);
-        setInput('');
+    const runRequest = async (requestMessages: Message[]) => {
         setIsLoading(true);
+        setIsStalled(false);
+        lastRequestMessagesRef.current = requestMessages;
 
-        const newMessages = [...messages, userMessage];
-        const apiMessages = toApiMessages(newMessages);
+        const apiMessages = toApiMessages(requestMessages);
+        const controller = new AbortController();
+        abortControllerRef.current = controller;
+        cancelReasonRef.current = null;
+        armStallTimer();
+
+        let assistantMessageId: string | null = null;
 
         try {
             const requestInit: RequestInit = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ messages: apiMessages }),
+                signal: controller.signal,
             };
             const response = await fetch('/api/chat', requestInit);
             const contentType = (response.headers.get('content-type') || '').toLowerCase();
+            armStallTimer();
 
             if (!response.ok) {
                 const errorBody = await response.text();
@@ -101,19 +120,18 @@ export default function ChatWidget() {
             const reader = response.body.getReader();
             const decoder = new TextDecoder();
             let assistantContent = '';
-
-            const assistantMessageId = (Date.now() + 1).toString();
+            assistantMessageId = (Date.now() + 1).toString();
 
             setMessages((prev) => [
                 ...prev,
-                { id: assistantMessageId, role: 'assistant', content: '' }
+                { id: assistantMessageId as string, role: 'assistant', content: '' }
             ]);
 
-            // Read the raw text stream
             while (true) {
                 const { value, done } = await reader.read();
                 if (done) break;
 
+                armStallTimer();
                 const chunk = decoder.decode(value, { stream: true });
                 assistantContent += chunk;
 
@@ -126,14 +144,102 @@ export default function ChatWidget() {
                 );
             }
         } catch (error) {
+            const isAbort = error instanceof DOMException && error.name === "AbortError";
+            const fallback = "Sorry, I’m having trouble connecting right now. Please try again in a moment, or contact us at rusticretreatalberta@gmail.com or (780) 210-6252.";
+
+            if (isAbort) {
+                if (cancelReasonRef.current === "cancel") {
+                    setMessages((prev) => [
+                        ...prev,
+                        { id: Date.now().toString(), role: 'assistant', content: "Request canceled. You can retry whenever you're ready." }
+                    ]);
+                }
+                return;
+            }
+
             console.error('Chat error:', error);
-            setMessages((prev) => [
-                ...prev,
-                { id: Date.now().toString(), role: 'assistant', content: "Sorry, I’m having trouble connecting right now. Please try again in a moment, or contact us at rusticretreatalberta@gmail.com or (780) 210-6252." }
-            ]);
+            if (assistantMessageId) {
+                setMessages((prev) =>
+                    prev.map((msg) =>
+                        msg.id === assistantMessageId
+                            ? { ...msg, content: fallback }
+                            : msg
+                    )
+                );
+            } else {
+                setMessages((prev) => [
+                    ...prev,
+                    { id: Date.now().toString(), role: 'assistant', content: fallback }
+                ]);
+            }
         } finally {
+            clearStallTimer();
+            setIsStalled(false);
             setIsLoading(false);
+            abortControllerRef.current = null;
+            cancelReasonRef.current = null;
         }
+    };
+
+    const startRequest = (requestMessages: Message[]) => {
+        const requestPromise = runRequest(requestMessages);
+        activeRequestRef.current = requestPromise;
+        return requestPromise.finally(() => {
+            if (activeRequestRef.current === requestPromise) {
+                activeRequestRef.current = null;
+            }
+        });
+    };
+
+    // Scroll to bottom
+    useEffect(() => {
+        if (messagesEndRef.current && isOpen) {
+            messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [messages, isOpen]);
+
+    useEffect(() => {
+        return () => {
+            clearStallTimer();
+            abortControllerRef.current?.abort();
+        };
+    }, []);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!input.trim() || isLoading) return;
+
+        const userMessage: Message = { id: Date.now().toString(), role: 'user', content: input.trim() };
+        setMessages((prev) => [...prev, userMessage]);
+        setInput('');
+        const newMessages = [...messages, userMessage];
+        void startRequest(newMessages);
+    };
+
+    const handleCancel = () => {
+        if (!isLoading || !abortControllerRef.current) return;
+        cancelReasonRef.current = "cancel";
+        abortControllerRef.current.abort();
+    };
+
+    const handleRetry = async () => {
+        const snapshot = lastRequestMessagesRef.current;
+        if (!snapshot) return;
+
+        if (isLoading && abortControllerRef.current) {
+            cancelReasonRef.current = "retry";
+            abortControllerRef.current.abort();
+        }
+
+        if (activeRequestRef.current) {
+            try {
+                await activeRequestRef.current;
+            } catch {
+                // Ignore - failure UI is handled inside runRequest.
+            }
+        }
+
+        void startRequest(snapshot);
     };
 
     return (
@@ -179,6 +285,29 @@ export default function ChatWidget() {
                                 <div className="bg-white border border-primary/10 rounded-2xl rounded-bl-sm px-4 py-3 shadow-sm flex items-center gap-2">
                                     <Loader2 className="w-4 h-4 animate-spin text-secondary" />
                                     <span className="text-xs text-muted-foreground">Typing...</span>
+                                </div>
+                            </div>
+                        )}
+                        {isLoading && isStalled && (
+                            <div className="flex justify-start">
+                                <div className="bg-white border border-primary/10 rounded-2xl rounded-bl-sm px-4 py-3 shadow-sm">
+                                    <p className="text-xs text-muted-foreground mb-2">Still working...</p>
+                                    <div className="flex items-center gap-2">
+                                        <button
+                                            type="button"
+                                            onClick={handleCancel}
+                                            className="text-xs px-2.5 py-1.5 rounded-md border border-primary/20 hover:bg-primary/5 transition-colors"
+                                        >
+                                            Cancel
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={handleRetry}
+                                            className="text-xs px-2.5 py-1.5 rounded-md bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors"
+                                        >
+                                            Retry
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         )}
