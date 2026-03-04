@@ -8,6 +8,11 @@ type Message = {
 };
 
 type ChatApiMessage = Pick<Message, "role" | "content">;
+type MarkdownInlinePart = { type: "text" | "link"; content: string; href?: string };
+type MarkdownBlock =
+    | { type: "paragraph"; lines: string[] }
+    | { type: "ul"; items: string[] }
+    | { type: "ol"; items: string[] };
 
 const toApiMessages = (messages: Message[]): ChatApiMessage[] =>
     messages.map(({ role, content }) => ({ role, content }));
@@ -18,6 +23,186 @@ const isAllowedResponseContentType = (response: Response) => {
 };
 
 const STREAM_STALL_TIMEOUT_MS = 25_000;
+const CHAT_SESSION_STORAGE_KEY = "rr_chat_session_id";
+
+const generateSessionId = () => {
+    if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
+        return crypto.randomUUID();
+    }
+
+    return `session-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+};
+
+const getOrCreateChatSessionId = () => {
+    if (typeof window === "undefined") {
+        return generateSessionId();
+    }
+
+    try {
+        const existing = window.localStorage.getItem(CHAT_SESSION_STORAGE_KEY);
+        if (existing) {
+            return existing;
+        }
+
+        const created = generateSessionId();
+        window.localStorage.setItem(CHAT_SESSION_STORAGE_KEY, created);
+        return created;
+    } catch {
+        return generateSessionId();
+    }
+};
+
+const isSafeHref = (href: string) => {
+    const value = href.trim();
+    if (!value) return false;
+
+    if (/^tel:\+?[0-9]+$/i.test(value)) return true;
+    if (/^sms:\+?[0-9]+$/i.test(value)) return true;
+    if (/^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/i.test(value)) return true;
+    if (/^https?:\/\/[^\s]+$/i.test(value)) return true;
+    if (/^\/[A-Za-z0-9\-._~/?#=&%+]*$/.test(value)) return true;
+
+    return false;
+};
+
+const parseInlineMarkdown = (text: string): MarkdownInlinePart[] => {
+    const parts: MarkdownInlinePart[] = [];
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+
+    while ((match = linkRegex.exec(text)) !== null) {
+        const [fullMatch, label, href] = match;
+        if (match.index > lastIndex) {
+            parts.push({ type: "text", content: text.slice(lastIndex, match.index) });
+        }
+
+        if (isSafeHref(href)) {
+            parts.push({ type: "link", content: label, href: href.trim() });
+        } else {
+            parts.push({ type: "text", content: fullMatch });
+        }
+
+        lastIndex = match.index + fullMatch.length;
+    }
+
+    if (lastIndex < text.length) {
+        parts.push({ type: "text", content: text.slice(lastIndex) });
+    }
+
+    return parts.length > 0 ? parts : [{ type: "text", content: text }];
+};
+
+const parseSafeMarkdownBlocks = (content: string): MarkdownBlock[] => {
+    const lines = content.replace(/\r\n/g, "\n").split("\n");
+    const blocks: MarkdownBlock[] = [];
+    let paragraphBuffer: string[] = [];
+    let listBuffer: string[] = [];
+    let listType: "ul" | "ol" | null = null;
+
+    const flushParagraph = () => {
+        if (paragraphBuffer.length > 0) {
+            blocks.push({ type: "paragraph", lines: paragraphBuffer });
+            paragraphBuffer = [];
+        }
+    };
+
+    const flushList = () => {
+        if (listType && listBuffer.length > 0) {
+            blocks.push({ type: listType, items: listBuffer });
+            listType = null;
+            listBuffer = [];
+        }
+    };
+
+    lines.forEach((line) => {
+        const trimmed = line.trim();
+        const unordered = trimmed.match(/^[-*]\s+(.*)$/);
+        const ordered = trimmed.match(/^\d+\.\s+(.*)$/);
+
+        if (!trimmed) {
+            flushParagraph();
+            flushList();
+            return;
+        }
+
+        if (unordered) {
+            flushParagraph();
+            if (listType !== "ul") {
+                flushList();
+                listType = "ul";
+            }
+            listBuffer.push(unordered[1]);
+            return;
+        }
+
+        if (ordered) {
+            flushParagraph();
+            if (listType !== "ol") {
+                flushList();
+                listType = "ol";
+            }
+            listBuffer.push(ordered[1]);
+            return;
+        }
+
+        flushList();
+        paragraphBuffer.push(trimmed);
+    });
+
+    flushParagraph();
+    flushList();
+    return blocks;
+};
+
+const renderInlineParts = (parts: MarkdownInlinePart[]) =>
+    parts.map((part, index) => {
+        if (part.type === "link" && part.href) {
+            const isExternal = /^https?:\/\//i.test(part.href);
+            return (
+                <a
+                    key={`link-${index}-${part.href}`}
+                    href={part.href}
+                    className="underline underline-offset-2 text-secondary hover:text-secondary/80"
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                >
+                    {part.content}
+                </a>
+            );
+        }
+
+        return <React.Fragment key={`text-${index}`}>{part.content}</React.Fragment>;
+    });
+
+const renderSafeMarkdown = (content: string) =>
+    parseSafeMarkdownBlocks(content).map((block, blockIndex) => {
+        if (block.type === "paragraph") {
+            return (
+                <p key={`p-${blockIndex}`} className="leading-relaxed">
+                    {renderInlineParts(parseInlineMarkdown(block.lines.join(" ")))}
+                </p>
+            );
+        }
+
+        if (block.type === "ul") {
+            return (
+                <ul key={`ul-${blockIndex}`} className="list-disc pl-5 space-y-1">
+                    {block.items.map((item, itemIndex) => (
+                        <li key={`uli-${itemIndex}`}>{renderInlineParts(parseInlineMarkdown(item))}</li>
+                    ))}
+                </ul>
+            );
+        }
+
+        return (
+            <ol key={`ol-${blockIndex}`} className="list-decimal pl-5 space-y-1">
+                {block.items.map((item, itemIndex) => (
+                    <li key={`oli-${itemIndex}`}>{renderInlineParts(parseInlineMarkdown(item))}</li>
+                ))}
+            </ol>
+        );
+    });
 
 export default function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +222,8 @@ export default function ChatWidget() {
     const activeRequestRef = useRef<Promise<void> | null>(null);
     const cancelReasonRef = useRef<"cancel" | "retry" | null>(null);
     const lastRequestMessagesRef = useRef<Message[] | null>(null);
+    const sessionIdRef = useRef<string>(getOrCreateChatSessionId());
+    const [hasShownAiDisclosure, setHasShownAiDisclosure] = useState(false);
 
     const clearStallTimer = () => {
         if (stallTimerRef.current !== null) {
@@ -69,7 +256,10 @@ export default function ChatWidget() {
         try {
             const requestInit: RequestInit = {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Session-Id': sessionIdRef.current,
+                },
                 body: JSON.stringify({ messages: apiMessages }),
                 signal: controller.signal,
             };
@@ -205,6 +395,22 @@ export default function ChatWidget() {
         };
     }, []);
 
+    useEffect(() => {
+        if (!isOpen || hasShownAiDisclosure) {
+            return;
+        }
+
+        setMessages((prev) => [
+            ...prev,
+            {
+                id: `ai-disclosure-${Date.now()}`,
+                role: "assistant",
+                content: "I’m Rustic Retreat Chatbot (AI), not a live agent. For urgent or important questions, please call (780) 210-6252 or email rusticretreatalberta@gmail.com.",
+            },
+        ]);
+        setHasShownAiDisclosure(true);
+    }, [isOpen, hasShownAiDisclosure]);
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!input.trim() || isLoading) return;
@@ -247,20 +453,45 @@ export default function ChatWidget() {
             {isOpen && (
                 <div className="mb-4 bg-background w-[320px] sm:w-[380px] h-[450px] max-h-[75vh] rounded-2xl shadow-2xl border border-primary/10 flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 fade-in-20 duration-300">
                     {/* Header */}
-                    <div className="bg-primary/5 border-b border-primary/10 text-foreground px-4 py-3 flex justify-between items-center bg-stone-50">
-                        <div className="flex items-center gap-2">
-                            <div className="bg-secondary/20 p-1.5 rounded-full text-secondary">
-                                <MessageCircle className="w-5 h-5" />
+                    <div className="bg-primary/5 border-b border-primary/10 text-foreground px-4 py-3 bg-stone-50">
+                        <div className="flex justify-between items-center">
+                            <div className="flex items-center gap-2">
+                                <div className="bg-secondary/20 p-1.5 rounded-full text-secondary">
+                                    <MessageCircle className="w-5 h-5" />
+                                </div>
+                                <span className="font-semibold text-primary">Rustic Retreat Chatbot (AI)</span>
                             </div>
-                            <span className="font-semibold text-primary">Venue Chat</span>
+                            <button
+                                onClick={() => setIsOpen(false)}
+                                className="text-muted-foreground hover:text-foreground transition-colors p-1"
+                                aria-label="Close chat"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
                         </div>
-                        <button
-                            onClick={() => setIsOpen(false)}
-                            className="text-muted-foreground hover:text-foreground transition-colors p-1"
-                            aria-label="Close chat"
-                        >
-                            <X className="w-5 h-5" />
-                        </button>
+                        <p className="text-[11px] text-muted-foreground mt-2">
+                            Not a live agent. For urgent/important questions contact us.
+                        </p>
+                        <div className="mt-2 flex gap-2">
+                            <a
+                                href="tel:+17802106252"
+                                className="text-[11px] px-2.5 py-1 rounded-md border border-primary/20 hover:bg-primary/5 transition-colors"
+                            >
+                                Contact a human (Call)
+                            </a>
+                            <a
+                                href="sms:+17802106252"
+                                className="text-[11px] px-2.5 py-1 rounded-md border border-primary/20 hover:bg-primary/5 transition-colors"
+                            >
+                                Contact a human (Text)
+                            </a>
+                            <a
+                                href="mailto:rusticretreatalberta@gmail.com"
+                                className="text-[11px] px-2.5 py-1 rounded-md border border-primary/20 hover:bg-primary/5 transition-colors"
+                            >
+                                Contact a human (Email)
+                            </a>
+                        </div>
                     </div>
 
                     {/* Messages */}
@@ -276,7 +507,9 @@ export default function ChatWidget() {
                                             : 'bg-white border border-primary/10 text-foreground rounded-bl-sm'
                                         }`}
                                 >
-                                    <p className="leading-relaxed whitespace-pre-wrap">{message.content}</p>
+                                    <div className="space-y-2">
+                                        {renderSafeMarkdown(message.content)}
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -315,9 +548,32 @@ export default function ChatWidget() {
                     </div>
 
                     {/* Input Area */}
+                    <div className="px-3 pt-2 pb-1 bg-white border-t border-primary/10">
+                        <div className="flex gap-2">
+                            <a
+                                href="tel:+17802106252"
+                                className="text-[11px] px-2.5 py-1 rounded-md border border-primary/20 hover:bg-primary/5 transition-colors"
+                            >
+                                Call
+                            </a>
+                            <a
+                                href="sms:+17802106252"
+                                className="text-[11px] px-2.5 py-1 rounded-md border border-primary/20 hover:bg-primary/5 transition-colors"
+                            >
+                                Text
+                            </a>
+                            <a
+                                href="mailto:rusticretreatalberta@gmail.com"
+                                className="text-[11px] px-2.5 py-1 rounded-md border border-primary/20 hover:bg-primary/5 transition-colors"
+                            >
+                                Email
+                            </a>
+                        </div>
+                    </div>
+
                     <form
                         onSubmit={handleSubmit}
-                        className="p-3 bg-white border-t border-primary/10 flex items-center gap-2"
+                        className="p-3 bg-white flex items-center gap-2"
                     >
                         <input
                             type="text"
