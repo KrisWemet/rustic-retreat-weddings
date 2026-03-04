@@ -42,13 +42,14 @@ import goldCakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.webp";
 import firstDanceBW from "@/assets/gallery/Images/first-dance-string-lights.webp";
 import sweetheartTable from "@/assets/gallery/Images/sweetheart-table-laughing.webp";
 import dressGazebo from "@/assets/gallery/dress-forest-gazebo.webp";
-import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag } from "lucide-react";
+import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import content from "@/data/site-content.json";
 import { fetchSanityHomepageContent, toSanityImageUrl } from "@/lib/sanity-homepage";
 import { HomepageBuilderSection, HomepageCmsContent } from "@/types/homepage-cms";
 import { createDataAttribute } from "@sanity/visual-editing";
+import { FAQS } from "@/content/faqs";
 
 const Index = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -59,6 +60,7 @@ const Index = () => {
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [isVideoNear, setIsVideoNear] = useState(false);
   const [cmsHomepage, setCmsHomepage] = useState<HomepageCmsContent | null>(null);
+  const [openHomeFaqIndex, setOpenHomeFaqIndex] = useState<number | null>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -153,6 +155,7 @@ const Index = () => {
   const heroSecondaryCtaHref = cmsHomepage?.heroSecondaryCtaHref || "/packages";
   const introCards = cmsHomepage?.introCards?.filter((card) => Boolean(card?.text)) || content.homepage.intro.text.map((text) => ({ text }));
   const builderSections = cmsHomepage?.pageBuilder?.filter((section) => Boolean(section?._type)) || [];
+  const homeFaqs = FAQS.slice(0, 2);
   const sanityDataAttribute = cmsHomepage?._id && cmsHomepage?._type
     ? createDataAttribute({
       id: cmsHomepage._id,
@@ -183,7 +186,7 @@ const Index = () => {
     const sectionDataSanity = sanityDataAttribute ? sanityDataAttribute(sectionPath) : undefined;
     if (section._type === "homeImageBlock" && section.imageUrl) {
       return (
-        <div className="group overflow-hidden rounded-3xl border border-secondary/20 bg-card shadow-soft" data-sanity={sectionDataSanity}>
+        <div className="group overflow-hidden rounded-3xl border border-secondary/20 bg-card shadow-soft img-card" data-sanity={sectionDataSanity}>
           <img
             src={toSanityImageUrl(section.imageUrl, 1400) || section.imageUrl}
             alt={section.imageAlt || section.heading || "Homepage image block"}
@@ -512,35 +515,35 @@ const Index = () => {
                     alt="Wedding party lineup portrait in the forest at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
-                    className="col-span-2 aspect-[16/9] w-full object-cover rounded-3xl shadow-elegant"
+                    className="col-span-2 aspect-[16/9] w-full object-cover rounded-3xl shadow-elegant img-card"
                   />
                   <img
                     src={meadowSunsetKiss}
                     alt="Romantic sunset kiss in a meadow at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
-                    className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
+                    className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
                   />
                   <img
                     src={img7625}
                     alt="Wedding reception moment under floral draping at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
-                    className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
+                    className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
                   />
                   <img
                     src={loveMarqueeArch}
                     alt="LOVE marquee letters with ceremony arch in a forest clearing"
                     loading="lazy"
                     decoding="async"
-                    className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
+                    className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
                   />
                   <img
                     src={headTable}
                     alt="Rustic head table with candles and florals at a wedding reception"
                     loading="lazy"
                     decoding="async"
-                    className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft"
+                    className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
                   />
                 </div>
               </div>
@@ -550,7 +553,7 @@ const Index = () => {
       </section>
 
       {/* Visual Reset - Full Width Moment */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden img-card">
         <div className="relative">
           <img
             src={dressGazebo}
@@ -559,7 +562,6 @@ const Index = () => {
             decoding="async"
             className="w-full h-[70vh] sm:h-[80vh] md:h-auto object-cover object-[center_60%] md:object-center block"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-transparent" />
         </div>
         <div className="absolute inset-0 z-10">
           <div className="container mx-auto px-4 py-12 md:py-16 h-full flex items-start">
@@ -602,7 +604,7 @@ const Index = () => {
             <ScrollReveal delay={150}>
               <div className="relative lg:order-1 flex justify-center lg:justify-start">
                 <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
-                <div className="relative overflow-hidden rounded-3xl shadow-elegant w-full max-w-[520px]">
+                <div className="relative overflow-hidden rounded-3xl shadow-elegant w-full max-w-[520px] img-card">
                   <img
                     src={beyondCeremonyImage}
                     alt="Couple portrait with sparkler heart light painting at Rustic Retreat"
@@ -610,7 +612,6 @@ const Index = () => {
                     decoding="async"
                     className="block w-full h-auto"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
                 </div>
               </div>
             </ScrollReveal>
@@ -741,22 +742,40 @@ const Index = () => {
               </ScrollReveal>
 
               <div className="space-y-4">
-                <ScrollReveal delay={100}>
-                  <div className="bg-card p-5 rounded-xl shadow-soft">
-                    <h3 className="font-semibold mb-2">What if it rains?</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Our clear-top gazebo seats 80. Alberta weather has never stopped a party here.
-                    </p>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={200}>
-                  <div className="bg-card p-5 rounded-xl shadow-soft">
-                    <h3 className="font-semibold mb-2">Where do guests sleep?</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Cabin sleeps 4. Room for 60 to camp. Airbnbs nearby for non-campers.
-                    </p>
-                  </div>
-                </ScrollReveal>
+                {homeFaqs.map((faq, index) => (
+                  <ScrollReveal key={faq.question} delay={100 + index * 100}>
+                    <div className="bg-card rounded-xl shadow-soft border border-border/60 overflow-hidden">
+                      <button
+                        type="button"
+                        id={`home-faq-trigger-${index}`}
+                        aria-expanded={openHomeFaqIndex === index}
+                        aria-controls={`home-faq-panel-${index}`}
+                        onClick={() => setOpenHomeFaqIndex(openHomeFaqIndex === index ? null : index)}
+                        className="w-full p-5 text-left flex items-center justify-between gap-4 hover:bg-muted/30 transition-colors"
+                      >
+                        <span className="font-semibold">{faq.question}</span>
+                        <ChevronDown
+                          className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${openHomeFaqIndex === index ? "rotate-180" : "rotate-0"}`}
+                        />
+                      </button>
+
+                      <div
+                        id={`home-faq-panel-${index}`}
+                        role="region"
+                        aria-labelledby={`home-faq-trigger-${index}`}
+                        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none ${openHomeFaqIndex === index ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+                      >
+                        <div className="overflow-hidden">
+                          <div className="px-5 pb-5 space-y-3 text-sm text-muted-foreground">
+                            {faq.answer.split("\n\n").map((paragraph, paragraphIndex) => (
+                              <p key={paragraphIndex}>{paragraph}</p>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                ))}
               </div>
 
               <ScrollReveal delay={300}>
@@ -772,16 +791,16 @@ const Index = () => {
 
             <ScrollReveal direction="right">
               <div className="grid grid-cols-2 gap-3">
-                <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft" />
+                <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft img-card" />
                 <img
                   src={receptionGazebo}
                   alt="Couple and friends in an open field at Rustic Retreat"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-40 md:h-52 object-cover shadow-soft"
+                  className="w-full h-40 md:h-52 object-cover shadow-soft img-card"
                   style={{ objectPosition: "center 80%" }}
                 />
-                <img src={pavilionReception} alt="Rustic pavilion reception with guests cheering" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2" />
+                <img src={pavilionReception} alt="Rustic pavilion reception with guests cheering" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2 img-card" />
               </div>
             </ScrollReveal>
           </div>
@@ -800,7 +819,7 @@ const Index = () => {
                   alt="Newlyweds walking hand in hand down a forest trail at Rustic Retreat"
                   loading="lazy"
                   decoding="async"
-                  className="relative block w-full max-w-md h-auto rounded-3xl shadow-elegant"
+                  className="relative block w-full max-w-md h-auto rounded-3xl shadow-elegant img-card"
                 />
               </div>
             </ScrollReveal>
@@ -823,7 +842,7 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-32 overflow-hidden img-card">
         <div className="absolute inset-0">
           <img
             src={weddingPartyCheer}

@@ -362,7 +362,7 @@ const Gallery = () => {
                   <p className="section-label">REAL MOMENTS</p>
                   <h2 className="text-2xl md:text-3xl font-serif mb-4">See the full story behind every photo</h2>
                   <p className="text-muted-foreground max-w-xl lg:max-w-none">
-                    Tap any image to view it full size and read the story behind it. These are real weddings, real couples, and the kind of candid moments a weekend celebration makes possible.
+                    Tap any image to view it full size. These are real weddings, real couples, and the kind of candid moments a weekend celebration makes possible.
                   </p>
                 </div>
               </ScrollReveal>
@@ -374,7 +374,7 @@ const Gallery = () => {
                     alt="Outdoor wedding ceremony in a forest clearing at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
-                    className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant"
+                    className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant img-card"
                   />
                 </div>
               </ScrollReveal>
@@ -411,7 +411,7 @@ const Gallery = () => {
               {filteredImages.map((image, index) => (
                 <div 
                   key={index}
-                  className="gallery-item group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+                  className="gallery-item group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer img-card"
                   style={{ animationDelay: `${Math.min(index * 75, 600)}ms` }}
                   onClick={() => setSelectedImageIndex(index)}
                 >
@@ -422,16 +422,6 @@ const Gallery = () => {
                     decoding="async"
                     className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end">
-                    <div className="p-6 text-primary-foreground">
-                      <p className="text-xs font-medium uppercase tracking-wider mb-2 text-secondary">
-                        {image.category}
-                      </p>
-                      <p className="text-sm leading-relaxed">
-                        {image.description}
-                      </p>
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
@@ -447,16 +437,8 @@ const Gallery = () => {
                   src={selectedImage.src} 
                   alt={selectedImage.alt}
                   decoding="async"
-                  className="w-full h-auto max-h-[85vh] object-contain"
+                  className="w-full h-auto max-h-[85vh] object-contain img-card"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6 text-primary-foreground">
-                  <p className="text-xs font-medium uppercase tracking-wider mb-2 text-secondary">
-                    {selectedImage.category}
-                  </p>
-                  <p className="text-base leading-relaxed">
-                    {selectedImage.description}
-                  </p>
-                </div>
                 {totalImages > 1 && (
                   <>
                     <button 

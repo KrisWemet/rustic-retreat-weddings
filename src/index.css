@@ -202,6 +202,16 @@ All colors MUST be HSL.
   .image-gallery {
     @apply overflow-hidden shadow-soft transition-transform duration-300 hover:scale-[1.02];
   }
+
+  /* Shared rounded styling for non-hero images and image containers */
+  .img-card {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  img.img-card {
+    border-radius: 20px;
+  }
   
   /* Animations */
   @keyframes fade-in-up {

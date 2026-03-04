@@ -114,7 +114,7 @@ const WeddingStory = () => {
                       alt={`${story.coupleNames} wedding moment at Rustic Retreat`}
                       loading="lazy"
                       decoding="async"
-                      className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant"
+                      className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant img-card"
                     />
                   </div>
                 </ScrollReveal>
@@ -214,13 +214,8 @@ const WeddingStory = () => {
                   src={story.galleryImages[selectedImageIndex].src} 
                   alt={story.galleryImages[selectedImageIndex].alt}
                   decoding="async"
-                  className="w-full h-auto max-h-[85vh] object-contain"
+                  className="w-full h-auto max-h-[85vh] object-contain img-card"
                 />
-                {story.galleryImages[selectedImageIndex].caption && (
-                  <p className="absolute bottom-0 left-0 right-0 bg-primary/80 text-primary-foreground text-center py-3 px-4">
-                    {story.galleryImages[selectedImageIndex].caption}
-                  </p>
-                )}
                 {selectedImageIndex > 0 && (
                   <button 
                     onClick={handlePrevImage}

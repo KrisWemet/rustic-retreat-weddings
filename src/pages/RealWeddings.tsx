@@ -56,7 +56,7 @@ const RealWeddings = () => {
                   <Card className="overflow-hidden border-2 hover:border-secondary transition-all duration-300">
                     <div className="grid lg:grid-cols-2 gap-0">
                       {/* Image Side */}
-                      <div className="relative overflow-hidden">
+                      <div className="relative overflow-hidden img-card">
                         <img
                           src={story.heroImage}
                           alt={`${story.coupleNames} wedding at Rustic Retreat Alberta`}
@@ -64,11 +64,6 @@ const RealWeddings = () => {
                           decoding="async"
                           className="w-full h-72 lg:h-full object-cover"
                         />
-                        <div className="absolute bottom-4 left-4">
-                          <span className="bg-secondary text-secondary-foreground text-xs px-3 py-1 rounded-full font-medium">
-                            {story.packageUsed}
-                          </span>
-                        </div>
                       </div>
                       
                       {/* Content Side */}

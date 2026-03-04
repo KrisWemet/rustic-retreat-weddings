@@ -286,7 +286,7 @@ const Contact = () => {
                       alt="Rustic Retreat Alberta wedding venue"
                       loading="lazy"
                       decoding="async"
-                      className="relative w-full h-[240px] sm:h-[280px] object-cover rounded-2xl shadow-elegant"
+                      className="relative w-full h-[240px] sm:h-[280px] object-cover rounded-2xl shadow-elegant img-card"
                     />
                   </div>
                 </ScrollReveal>
@@ -358,7 +358,7 @@ const Contact = () => {
                         </ul>
                       </CardContent>
                     </Card>
-                    <div className="w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-soft shrink-0">
+                    <div className="w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-soft shrink-0 img-card">
                       <img
                         src={contactExpectImage}
                         alt="Couple portrait in the forest at Rustic Retreat"

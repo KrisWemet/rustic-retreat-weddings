@@ -125,7 +125,7 @@ const Packages = () => {
                   alt="Wedding party celebrating at Rustic Retreat"
                   loading="lazy"
                   decoding="async"
-                  className="rounded-lg shadow-lg w-full h-[300px] object-cover"
+                  className="rounded-lg shadow-lg w-full h-[300px] object-cover img-card"
                 />
               </div>
 
@@ -133,21 +133,21 @@ const Packages = () => {
                 <img
                   src={groomsmenToast}
                   alt="Groomsmen cheering with drinks on a forest trail at Rustic Retreat"
-                  className="rounded-lg shadow-lg w-full h-[240px] object-cover"
+                  className="rounded-lg shadow-lg w-full h-[240px] object-cover img-card"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
                   src={loveMarquee}
                   alt="LOVE marquee letters with ceremony backdrop in a forest clearing"
-                  className="rounded-lg shadow-lg w-full h-[240px] object-cover"
+                  className="rounded-lg shadow-lg w-full h-[240px] object-cover img-card"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
                   src={brideDancing}
                   alt="Bride dancing at the rustic pavilion reception at Rustic Retreat"
-                  className="rounded-lg shadow-lg w-full h-[240px] object-cover"
+                  className="rounded-lg shadow-lg w-full h-[240px] object-cover img-card"
                   loading="lazy"
                   decoding="async"
                 />
@@ -176,7 +176,7 @@ const Packages = () => {
                     alt="Evening outdoor wedding reception celebration at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
-                    className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant"
+                    className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant img-card"
                   />
                 </div>
               </ScrollReveal>
@@ -456,21 +456,21 @@ const Packages = () => {
                 alt="Rustic card box on wine barrel at wedding reception"
                 loading="lazy"
                 decoding="async"
-                className="rounded-lg shadow-md w-full h-48 object-cover"
+                className="rounded-lg shadow-md w-full h-48 object-cover img-card"
               />
               <img
                 src={guestFavorBox}
                 alt="Wedding guest favor boxes with rustic details"
                 loading="lazy"
                 decoding="async"
-                className="rounded-lg shadow-md w-full h-48 object-cover"
+                className="rounded-lg shadow-md w-full h-48 object-cover img-card"
               />
               <img
                 src={firstDanceSparklers}
                 alt="First dance with sparklers at evening reception"
                 loading="lazy"
                 decoding="async"
-                className="rounded-lg shadow-md w-full h-48 object-cover"
+                className="rounded-lg shadow-md w-full h-48 object-cover img-card"
               />
             </div>
           </div>
@@ -661,14 +661,14 @@ const Packages = () => {
                 alt="Forest ceremony setup with decorated arch at Rustic Retreat Weddings"
                 loading="lazy"
                 decoding="async"
-                className="shadow-xl w-full h-full object-cover"
+                className="shadow-xl w-full h-full object-cover img-card"
               />
               <img
                 src={receptionTable}
                 alt="Evening outdoor wedding reception celebration at Rustic Retreat"
                 loading="lazy"
                 decoding="async"
-                className="shadow-xl w-full h-full object-cover"
+                className="shadow-xl w-full h-full object-cover img-card"
               />
             </div>
           </div>

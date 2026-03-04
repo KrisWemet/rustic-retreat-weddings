@@ -102,7 +102,7 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={100}>
-                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
+                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft img-card">
                   <img src={cabinFullExterior} alt="Cabin exterior nestled in the forest" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </div>
               </ScrollReveal>
@@ -121,7 +121,7 @@ const Venue = () => {
 
               {/* Row 2 */}
               <ScrollReveal delay={300}>
-                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
+                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft img-card">
                   <img src={cabinInterior} alt="Cozy cabin interior" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </div>
               </ScrollReveal>
@@ -139,7 +139,7 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={500}>
-                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
+                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft img-card">
                   <img src={cabinBed} alt="Comfortable bed in the cabin" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </div>
               </ScrollReveal>
@@ -158,7 +158,7 @@ const Venue = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={700}>
-                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
+                <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft img-card">
                   <img src={campfireSetting} alt="Campfire setting near the cabin" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </div>
               </ScrollReveal>
@@ -365,7 +365,7 @@ const Venue = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               <ScrollReveal delay={100}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-48 overflow-hidden img-card">
                     <img src={extrasGiantConnectFour} alt="Giant Connect Four at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
@@ -380,7 +380,7 @@ const Venue = () => {
 
               <ScrollReveal delay={200}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-48 overflow-hidden img-card">
                     <img src={extrasPlayhouse} alt="Children's play house at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
@@ -395,7 +395,7 @@ const Venue = () => {
 
               <ScrollReveal delay={300}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-48 overflow-hidden img-card">
                     <img src={extrasTrampolineKids} alt="Trampoline at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
@@ -410,7 +410,7 @@ const Venue = () => {
 
               <ScrollReveal delay={400}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-48 overflow-hidden img-card">
                     <img src={extrasFirePitNight} alt="Fire pit at night at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">

@@ -14,8 +14,6 @@ interface HoverImageProps {
 const HoverImage = ({
   src,
   alt,
-  description,
-  category,
   className,
   imageClassName,
   aspectRatio = 'auto',
@@ -30,7 +28,7 @@ const HoverImage = ({
   return (
     <div 
       className={cn(
-        'group relative overflow-hidden cursor-pointer',
+        'group relative overflow-hidden cursor-pointer img-card',
         aspectClasses[aspectRatio],
         className
       )}
@@ -45,16 +43,6 @@ const HoverImage = ({
           imageClassName
         )}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-        {category && (
-          <span className="text-secondary text-xs uppercase tracking-wider mb-1">
-            {category}
-          </span>
-        )}
-        <p className="text-primary-foreground text-sm md:text-base leading-snug">
-          {description}
-        </p>
-      </div>
     </div>
   );
 };

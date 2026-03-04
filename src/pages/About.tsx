@@ -86,7 +86,7 @@ const About = () => {
                     alt="Evening campfire gathering under stars at Rustic Retreat Weddings Alberta"
                     loading="lazy"
                     decoding="async"
-                    className="relative w-full h-[320px] sm:h-[380px] md:h-[440px] object-cover rounded-3xl shadow-elegant"
+                    className="relative w-full h-[320px] sm:h-[380px] md:h-[440px] object-cover rounded-3xl shadow-elegant img-card"
                   />
                 </div>
               </ScrollReveal>
@@ -255,7 +255,7 @@ const About = () => {
                     alt="Rustic cabin exterior surrounded by forest at Rustic Retreat"
                     loading="lazy"
                     decoding="async"
-                    className="relative w-full h-[320px] sm:h-[380px] md:h-[440px] object-cover rounded-3xl shadow-elegant"
+                    className="relative w-full h-[320px] sm:h-[380px] md:h-[440px] object-cover rounded-3xl shadow-elegant img-card"
                   />
                 </div>
               </ScrollReveal>
