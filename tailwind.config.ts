@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Playfair Display', 'Georgia', 'serif'],
+        handwriting: ['Dancing Script', 'cursive'],
       },
 			colors: {
 				border: "hsl(var(--border))",

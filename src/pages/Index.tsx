@@ -10,13 +10,6 @@ import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import OrganizationSchema from "@/components/OrganizationSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from "@/components/ui/carousel";
 
 // Hero & Property Images
 import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.webp";
@@ -42,14 +35,32 @@ import goldCakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.webp";
 import firstDanceBW from "@/assets/gallery/Images/first-dance-string-lights.webp";
 import sweetheartTable from "@/assets/gallery/Images/sweetheart-table-laughing.webp";
 import dressGazebo from "@/assets/gallery/dress-forest-gazebo.webp";
-import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag, ChevronDown } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useRef, useEffect, type KeyboardEvent } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import content from "@/data/site-content.json";
 import { fetchSanityHomepageContent, toSanityImageUrl } from "@/lib/sanity-homepage";
 import { HomepageBuilderSection, HomepageCmsContent } from "@/types/homepage-cms";
 import { createDataAttribute } from "@sanity/visual-editing";
 import { FAQS } from "@/content/faqs";
+
+const TESTIMONIALS = [
+  {
+    quote: "The property is stunning, featuring a romantic couples cabin, enchanting forested areas, and a breathtaking gazebo adorned with lights and ample space. The seamless flow to a gorgeous dance floor and field area, endless paths, and an inviting fire pit hangout near the couples suite made for a fun way to end a long night of dancing. Roasting hotdogs and smores, camping with family and friends added an extra layer of joy to our wedding.",
+    name: "Tabitha",
+    date: "September 2025",
+  },
+  {
+    quote: "Such an amazing experience from the moment we contacted Rustic Retreat to the time we checked out. The venue is absolutely beautiful and you will not be disappointed. I will absolutely recommend this amazing place to anyone and everyone looking for a small to medium romantic wedding. When you check in you are greeted by amazing hospitality.",
+    name: "Ali",
+    date: "August 2025",
+  },
+  {
+    quote: "My husband and I got married here two weeks ago (planned a wedding in just over a month)—let me tell ya, it was an absolute blast! Shannon and her husband went above and beyond to make sure everything went smoothly for us.",
+    name: "Viktoria",
+    date: "June 2025",
+  },
+];
 
 const Index = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -61,6 +72,8 @@ const Index = () => {
   const [isVideoNear, setIsVideoNear] = useState(false);
   const [cmsHomepage, setCmsHomepage] = useState<HomepageCmsContent | null>(null);
   const [openHomeFaqIndex, setOpenHomeFaqIndex] = useState<number | null>(null);
+  const testimonialTrackRef = useRef<HTMLDivElement>(null);
+  const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
 
   useEffect(() => {
     let isMounted = true;
@@ -80,6 +93,16 @@ const Index = () => {
     return () => {
       isMounted = false;
     };
+  }, []);
+
+  useEffect(() => {
+    const track = testimonialTrackRef.current;
+    if (!track) return;
+
+    requestAnimationFrame(() => {
+      const firstSlide = track.querySelector<HTMLElement>('[data-testimonial-index="0"]');
+      firstSlide?.scrollIntoView({ behavior: "auto", inline: "center", block: "nearest" });
+    });
   }, []);
 
   useEffect(() => {
@@ -179,6 +202,57 @@ const Index = () => {
       return <a href={href} className={className} target="_blank" rel="noreferrer">{label}</a>;
     }
     return <Link to={href} className={className}>{label}</Link>;
+  };
+
+  const scrollToTestimonial = (index: number) => {
+    const track = testimonialTrackRef.current;
+    if (!track) return;
+
+    const total = TESTIMONIALS.length;
+    const normalizedIndex = ((index % total) + total) % total;
+    const slide = track.querySelector<HTMLElement>(`[data-testimonial-index="${normalizedIndex}"]`);
+    if (!slide) return;
+
+    slide.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    setActiveTestimonialIndex(normalizedIndex);
+  };
+
+  const handleTestimonialScroll = () => {
+    const track = testimonialTrackRef.current;
+    if (!track) return;
+
+    const slides = Array.from(track.querySelectorAll<HTMLElement>("[data-testimonial-index]"));
+    if (slides.length === 0) return;
+
+    const viewportCenter = track.scrollLeft + track.clientWidth / 2;
+    let closestIndex = 0;
+    let closestDistance = Number.POSITIVE_INFINITY;
+
+    slides.forEach((slide, index) => {
+      const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+      const distance = Math.abs(slideCenter - viewportCenter);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    if (closestIndex !== activeTestimonialIndex) {
+      setActiveTestimonialIndex(closestIndex);
+    }
+  };
+
+  const handleTestimonialKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      scrollToTestimonial(activeTestimonialIndex + 1);
+    }
+
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      scrollToTestimonial(activeTestimonialIndex - 1);
+    }
   };
 
   const renderBuilderSection = (section: HomepageBuilderSection, index: number) => {
@@ -318,7 +392,7 @@ const Index = () => {
         </section>
       )}
 
-      {/* Testimonial Carousel - Immediate Social Proof */}
+      {/* Testimonials - Social Proof */}
       <section className="section-compact section-cream relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-secondary/15 blur-3xl" />
@@ -328,48 +402,69 @@ const Index = () => {
         </div>
         <div className="container mx-auto px-4 relative">
           <ScrollReveal>
-            <div className="text-center mb-8 md:mb-10">
-              <p className="section-label">REAL WORDS, REAL WEEKENDS</p>
+            <div className="text-center mb-10 md:mb-14">
+              <p className="section-label">Real words, real weekends</p>
               <h2 className="text-3xl md:text-4xl font-serif text-primary">
-                What brides had to say about Rustic Retreat
+                What couples had to say about Rustic Retreat
               </h2>
             </div>
           </ScrollReveal>
           <ScrollReveal>
-            <Carousel opts={{
-              align: "center",
-              loop: true
-            }} className="w-full pb-6 md:pb-10 overflow-visible">
-              <CarouselContent className="-ml-4 md:-ml-8">
-                <CarouselItem className="pl-4 md:pl-8 basis-[90%] sm:basis-[80%] md:basis-[70%] lg:basis-[50%]">
-                  <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full transition-opacity duration-300">
-                    <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
-                    <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
-                      "The property is stunning, featuring a romantic couples cabin, enchanting forested areas, and a breathtaking gazebo adorned with lights and ample space. The seamless flow to a gorgeous dance floor and field area, endless paths, and an inviting fire pit hangout near the couples suite made for a fun way to end a long night of dancing. Roasting hotdogs and smores, camping with family and friends added an extra layer of joy to our wedding."
-                    </blockquote>
-                    <p className="text-sm text-muted-foreground">— Tabitha, September 2025</p>
-                  </div>
-                </CarouselItem>
-                <CarouselItem className="pl-4 md:pl-8 basis-[90%] sm:basis-[80%] md:basis-[70%] lg:basis-[50%]">
-                  <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full transition-opacity duration-300">
-                    <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
-                    <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
-                      "Such an amazing experience from the moment we contacted Rustic Retreat to the time we checked out. The venue is absolutely beautiful and you will not be disappointed. I will absolutely recommend this amazing place to anyone and everyone looking for a small to medium romantic wedding. When you check in you are greeted by amazing hospitality."
-                    </blockquote>
-                    <p className="text-sm text-muted-foreground">— Ali, August 2025</p>
-                  </div>
-                </CarouselItem>
-                <CarouselItem className="pl-4 md:pl-8 basis-[90%] sm:basis-[80%] md:basis-[70%] lg:basis-[50%]">
-                  <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl border border-secondary/10 px-6 py-10 md:px-12 md:py-12 shadow-soft flex flex-col h-full transition-opacity duration-300">
-                    <Quote className="w-10 h-10 text-secondary/40 mx-auto mb-6" />
-                    <blockquote className="text-base md:text-lg font-serif italic text-primary leading-relaxed mb-6">
-                      "My husband and I got married here two weeks ago (planned a wedding in just over a month)—let me tell ya, it was an absolute blast! Shannon and her husband went above and beyond to make sure everything went smoothly for us."
-                    </blockquote>
-                    <p className="text-sm text-muted-foreground">— Viktoria, June 2025</p>
-                  </div>
-                </CarouselItem>
-              </CarouselContent>
-            </Carousel>
+            <div className="relative w-full pb-6 md:pb-0">
+              {/* Mobile: swipe carousel | Desktop: 3-col grid */}
+              <div
+                className="outline-none focus-visible:ring-2 focus-visible:ring-secondary/50"
+                tabIndex={0}
+                onKeyDown={handleTestimonialKeyDown}
+                aria-label="Testimonials"
+              >
+                <div
+                  ref={testimonialTrackRef}
+                  onScroll={handleTestimonialScroll}
+                  className="flex md:grid md:grid-cols-3 gap-5 lg:gap-8 overflow-x-auto md:overflow-visible scroll-smooth snap-x snap-mandatory md:snap-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-4 md:px-0"
+                >
+                  {TESTIMONIALS.map((testimonial, index) => (
+                    <article
+                      key={testimonial.name}
+                      data-testimonial-index={index}
+                      className="snap-center shrink-0 md:shrink md:flex-1 w-[88%] sm:w-[80%] md:w-auto"
+                    >
+                      <div className="bg-white/70 backdrop-blur-sm rounded-2xl border border-secondary/15 px-7 py-8 shadow-soft flex flex-col h-full text-center">
+                        {/* Stars */}
+                        <div className="flex justify-center gap-1 mb-5">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                          ))}
+                        </div>
+                        {/* Decorative opening quote */}
+                        <div className="font-serif text-[6rem] leading-none text-secondary/20 -mb-4 select-none" aria-hidden="true">"</div>
+                        <blockquote className="font-serif italic text-primary/90 leading-relaxed text-[0.95rem] mb-7">
+                          {testimonial.quote}
+                        </blockquote>
+                        <div className="mt-auto">
+                          <p className="font-handwriting text-secondary text-2xl leading-none">{testimonial.name}</p>
+                          <p className="text-xs text-muted-foreground mt-1.5 tracking-widest uppercase">{testimonial.date}</p>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+
+              {/* Dot indicators — mobile only */}
+              <div className="mt-5 flex md:hidden items-center justify-center gap-2">
+                {TESTIMONIALS.map((testimonial, index) => (
+                  <button
+                    key={`${testimonial.name}-dot`}
+                    type="button"
+                    aria-label={`Go to testimonial ${index + 1}`}
+                    aria-current={activeTestimonialIndex === index ? "true" : undefined}
+                    onClick={() => scrollToTestimonial(index)}
+                    className={`h-2 rounded-full transition-all ${activeTestimonialIndex === index ? "w-6 bg-secondary" : "w-2 bg-secondary/35 hover:bg-secondary/60"}`}
+                  />
+                ))}
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </section>
