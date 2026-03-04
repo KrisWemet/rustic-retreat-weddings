@@ -268,10 +268,10 @@ const Index = () => {
           fetchpriority="high"
           className="absolute inset-0 h-full w-full object-cover object-[50%_40%]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_40%,rgba(0,0,0,0.75)_85%,rgba(0,0,0,0.9)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_40%,rgba(0,0,0,0.84)_85%,rgba(0,0,0,0.96)_100%)]" />
         <div className="absolute inset-0 z-10 flex items-end justify-center pb-8 md:pb-12 lg:pb-16">
           <div className="mx-auto w-full max-w-6xl px-4 md:px-8 text-center text-white">
-            <div className="mx-auto max-w-2xl rounded-2xl md:rounded-3xl bg-black/35 px-6 py-6 md:px-10 md:py-7 lg:px-12 lg:py-8">
+            <div className="mx-auto max-w-2xl rounded-2xl md:rounded-3xl bg-[linear-gradient(to_bottom,rgba(0,0,0,0.62),rgba(0,0,0,0.53),rgba(0,0,0,0.43))] px-6 py-6 md:px-10 md:py-7 lg:px-12 lg:py-8">
               <p className="text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-white/85" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroKicker") : undefined}>
                 {heroKicker}
               </p>
