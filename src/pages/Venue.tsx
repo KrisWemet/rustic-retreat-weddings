@@ -140,7 +140,7 @@ const Venue = () => {
 
               <ScrollReveal delay={500}>
                 <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft img-card">
-                  <img src={cabinBed} alt="Comfortable bed in the cabin" loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                  <img src={cabinBed} alt="Comfortable bed in the cabin" loading="lazy" decoding="async" className="w-full h-full object-cover rotate-90 scale-110 md:scale-125" />
                 </div>
               </ScrollReveal>
 
