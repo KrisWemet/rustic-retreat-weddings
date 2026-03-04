@@ -22,7 +22,6 @@ import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.webp";
 import pavilionReception from "@/assets/gallery/pavilion-reception.webp";
 import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.webp";
 import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.webp";
-import chrisShannonUpscale from "@/assets/gallery/chris-shannon-upscale.webp";
 import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.webp";
 import weddingPartyLineup from "@/assets/gallery/wedding-party-lineup.webp";
 import img7625 from "@/assets/gallery/wedding-party-woods-hero.webp";
@@ -35,7 +34,7 @@ import goldCakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.webp";
 import firstDanceBW from "@/assets/gallery/Images/first-dance-string-lights.webp";
 import sweetheartTable from "@/assets/gallery/Images/sweetheart-table-laughing.webp";
 import dressGazebo from "@/assets/gallery/dress-forest-gazebo.webp";
-import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, ArrowRight, Bath, Film, Music, Flag, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, Bath, Film, Music, Flag, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useRef, useEffect, type KeyboardEvent } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import content from "@/data/site-content.json";
@@ -902,40 +901,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Origin Story Teaser */}
-      <section className="section section-cream">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <ScrollReveal>
-              <div className="relative lg:order-2 flex justify-center lg:justify-end">
-                <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
-                <img
-                  src={chrisShannonUpscale}
-                  alt="Newlyweds walking hand in hand down a forest trail at Rustic Retreat"
-                  loading="lazy"
-                  decoding="async"
-                  className="relative block w-full max-w-md h-auto rounded-3xl shadow-elegant img-card"
-                />
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={150}>
-              <div className="bg-card/80 backdrop-blur-sm rounded-3xl border border-secondary/10 p-8 md:p-10 shadow-soft lg:order-1">
-                <p className="section-label">OUR STORY</p>
-                <h2 className="text-2xl md:text-3xl font-serif mb-6 italic">
-                  "It poured for months beforehand, so the rubber boots were real—but our four-day wedding weekend stayed dry, and everyone had the time of their lives."
-                </h2>
-                <p className="text-muted-foreground mb-8">
-                  In 2019, we threw our own 120-person wedding right here—complete with a 40x60' pole barn, paintball, axe throwing, and a giant slip-and-slide. That's when we realized: other couples deserve this too.
-                </p>
-                <Link to="/real-weddings" className="inline-flex items-center gap-2 text-secondary hover:text-secondary-dark font-medium transition-colors">
-                  Read our full story <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
+      {/* Placeholder: "Our Story" section intentionally hidden for now. Re-enable once additional bride stories are available. */}
       {/* Final CTA */}
       <section className="relative py-32 overflow-hidden img-card">
         <div className="absolute inset-0">
