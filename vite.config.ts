@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => ({
     mode === "development" && componentTagger(),
     ViteImageOptimizer({
       webp: {
-        quality: 80,
+        quality: 65,
       }
     })
   ].filter(Boolean),

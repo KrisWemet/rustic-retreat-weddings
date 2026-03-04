@@ -46,6 +46,9 @@ import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, V
 import { useState, useRef, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import content from "@/data/site-content.json";
+import { fetchSanityHomepageContent, toSanityImageUrl } from "@/lib/sanity-homepage";
+import { HomepageBuilderSection, HomepageCmsContent } from "@/types/homepage-cms";
+import { createDataAttribute } from "@sanity/visual-editing";
 
 const Index = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -55,6 +58,28 @@ const Index = () => {
   const videoSectionRef = useRef<HTMLDivElement>(null);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [isVideoNear, setIsVideoNear] = useState(false);
+  const [cmsHomepage, setCmsHomepage] = useState<HomepageCmsContent | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadHomepageContent = async () => {
+      try {
+        const cmsResponse = await fetchSanityHomepageContent();
+        if (isMounted && cmsResponse.result) {
+          setCmsHomepage(cmsResponse.result);
+        }
+      } catch (error) {
+        console.error("Failed to load homepage content from Sanity:", error);
+      }
+    };
+
+    loadHomepageContent();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   useEffect(() => {
     const element = videoSectionRef.current;
     if (!element) return;
@@ -114,9 +139,114 @@ const Index = () => {
       }
     }
   }, [isVideoVisible, videoSrc]);
+
+  const heroImage = toSanityImageUrl(cmsHomepage?.heroImageUrl) || heroSunsetMeadow;
+  const heroImageAlt = cmsHomepage?.heroImageAlt || "Couple in the woodland at Rustic Retreat";
+  const heroKicker = cmsHomepage?.heroKicker || "You're not booking for hours or a single day...";
+  const heroHeadlinePart1 = cmsHomepage?.heroHeadlinePart1 || content.homepage.hero.headline.part1;
+  const heroHeadlinePart2 = cmsHomepage?.heroHeadlinePart2 || content.homepage.hero.headline.part2;
+  const heroHeadlineHighlight = cmsHomepage?.heroHeadlineHighlight || content.homepage.hero.headline.part3;
+  const heroSubheadline = cmsHomepage?.heroSubheadline || content.homepage.hero.subheadline;
+  const heroPrimaryCtaText = cmsHomepage?.heroPrimaryCtaText || content.homepage.hero.ctaText.visit;
+  const heroSecondaryCtaText = cmsHomepage?.heroSecondaryCtaText || content.homepage.hero.ctaText.packages;
+  const heroPrimaryCtaHref = cmsHomepage?.heroPrimaryCtaHref || "/contact";
+  const heroSecondaryCtaHref = cmsHomepage?.heroSecondaryCtaHref || "/packages";
+  const introCards = cmsHomepage?.introCards?.filter((card) => Boolean(card?.text)) || content.homepage.intro.text.map((text) => ({ text }));
+  const builderSections = cmsHomepage?.pageBuilder?.filter((section) => Boolean(section?._type)) || [];
+  const sanityDataAttribute = cmsHomepage?._id && cmsHomepage?._type
+    ? createDataAttribute({
+      id: cmsHomepage._id,
+      type: cmsHomepage._type,
+      projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
+      dataset: import.meta.env.VITE_SANITY_DATASET,
+      baseUrl: import.meta.env.VITE_SANITY_STUDIO_URL || "http://localhost:3333",
+    })
+    : null;
+
+  const getArrayItemPath = (fieldName: string, key: string | undefined, index: number, suffix = "") => {
+    if (key) {
+      return `${fieldName}[_key=="${key}"]${suffix}`;
+    }
+    return `${fieldName}[${index}]${suffix}`;
+  };
+
+  const isExternalHref = (href: string) => /^https?:\/\//i.test(href);
+  const renderHeroCta = (href: string, label: string, className: string) => {
+    if (isExternalHref(href)) {
+      return <a href={href} className={className} target="_blank" rel="noreferrer">{label}</a>;
+    }
+    return <Link to={href} className={className}>{label}</Link>;
+  };
+
+  const renderBuilderSection = (section: HomepageBuilderSection, index: number) => {
+    const sectionPath = getArrayItemPath("pageBuilder", section._key, index);
+    const sectionDataSanity = sanityDataAttribute ? sanityDataAttribute(sectionPath) : undefined;
+    if (section._type === "homeImageBlock" && section.imageUrl) {
+      return (
+        <div className="group overflow-hidden rounded-3xl border border-secondary/20 bg-card shadow-soft" data-sanity={sectionDataSanity}>
+          <img
+            src={toSanityImageUrl(section.imageUrl, 1400) || section.imageUrl}
+            alt={section.imageAlt || section.heading || "Homepage image block"}
+            loading="lazy"
+            decoding="async"
+            className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          {(section.heading || section.body) && (
+            <div className="space-y-3 p-6">
+              {section.heading && (
+                <h3 className="text-2xl font-serif text-primary" data-sanity={sanityDataAttribute ? sanityDataAttribute(`${sectionPath}.heading`) : undefined}>
+                  {section.heading}
+                </h3>
+              )}
+              {section.body && (
+                <p className="text-muted-foreground" data-sanity={sanityDataAttribute ? sanityDataAttribute(`${sectionPath}.body`) : undefined}>
+                  {section.body}
+                </p>
+              )}
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    return (
+      <div className="rounded-3xl border border-secondary/20 bg-card p-8 shadow-soft" data-sanity={sectionDataSanity}>
+        {section.heading && (
+          <h3 className="mb-4 text-2xl font-serif text-primary" data-sanity={sanityDataAttribute ? sanityDataAttribute(`${sectionPath}.heading`) : undefined}>
+            {section.heading}
+          </h3>
+        )}
+        {section.body && (
+          <p className="mb-5 text-muted-foreground leading-relaxed" data-sanity={sanityDataAttribute ? sanityDataAttribute(`${sectionPath}.body`) : undefined}>
+            {section.body}
+          </p>
+        )}
+        {section.ctaLabel && section.ctaHref && (
+          isExternalHref(section.ctaHref) ? (
+            <a
+              href={section.ctaHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-full bg-secondary px-5 py-2.5 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/90"
+            >
+              {section.ctaLabel}
+            </a>
+          ) : (
+            <Link
+              to={section.ctaHref}
+              className="inline-flex items-center rounded-full bg-secondary px-5 py-2.5 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/90"
+            >
+              {section.ctaLabel}
+            </Link>
+          )
+        )}
+      </div>
+    );
+  };
+
   return <PageTransition>
     <SEO
-      image={heroSunsetMeadow}
+      image={heroImage}
       keywords={["edmonton wedding venue", "outdoor wedding alberta", "multi-day wedding", "camping wedding venue", "rustic wedding alberta", "private wedding property", "weekend wedding venue"]}
     />
     <OrganizationSchema />
@@ -127,11 +257,11 @@ const Index = () => {
       {/* Hero Section - Locked Composition */}
       <section className="relative w-full min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px]">
         <img
-          src={heroSunsetMeadow}
-          alt="Couple in the woodland at Rustic Retreat"
+          src={heroImage}
+          alt={heroImageAlt}
           loading="eager"
           decoding="async"
-          // @ts-ignore - React 18 types don't support lowercase fetchpriority, but React runtime complains about camelCase
+          // @ts-expect-error - React 18 types don't support lowercase fetchpriority, but React runtime complains about camelCase
           fetchpriority="high"
           className="absolute inset-0 h-full w-full object-cover object-[50%_40%]"
         />
@@ -139,29 +269,51 @@ const Index = () => {
         <div className="absolute inset-0 z-10 flex items-end justify-center pb-8 md:pb-12 lg:pb-16">
           <div className="mx-auto w-full max-w-6xl px-4 md:px-8 text-center text-white">
             <div className="mx-auto max-w-2xl rounded-2xl md:rounded-3xl bg-black/35 px-6 py-6 md:px-10 md:py-7 lg:px-12 lg:py-8">
-              <p className="text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-white/85">
-                You're not booking for hours or a single day...
+              <p className="text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-white/85" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroKicker") : undefined}>
+                {heroKicker}
               </p>
               <h1 className="mt-3 md:mt-4 lg:mt-5 font-serif font-normal leading-[1.05] [text-wrap:balance] [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
-                <span className="block text-white text-3xl md:text-5xl lg:text-6xl">{content.homepage.hero.headline.part1}</span>
-                <span className="block text-white text-3xl md:text-5xl lg:text-6xl">{content.homepage.hero.headline.part2}</span>
-                <span className="block text-[#D8A799] italic text-4xl md:text-6xl lg:text-7xl">{content.homepage.hero.headline.part3}</span>
+                <span className="block text-white text-3xl md:text-5xl lg:text-6xl" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroHeadlinePart1") : undefined}>{heroHeadlinePart1}</span>
+                <span className="block text-white text-3xl md:text-5xl lg:text-6xl" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroHeadlinePart2") : undefined}>{heroHeadlinePart2}</span>
+                <span className="block text-[#D8A799] italic text-4xl md:text-6xl lg:text-7xl" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroHeadlineHighlight") : undefined}>{heroHeadlineHighlight}</span>
               </h1>
-              <p className="mx-auto mt-3 md:mt-4 lg:mt-5 max-w-3xl text-sm md:text-base lg:text-lg text-white/95">
-                {content.homepage.hero.subheadline}
+              <p className="mx-auto mt-3 md:mt-4 lg:mt-5 max-w-3xl text-sm md:text-base lg:text-lg text-white/95" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroSubheadline") : undefined}>
+                {heroSubheadline}
               </p>
               <div className="mt-5 md:mt-6 lg:mt-7 flex flex-col items-center gap-3 md:gap-4 sm:flex-row sm:justify-center">
-                <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center bg-[#D8A799] text-white px-8 md:px-10 lg:px-12 py-3 md:py-4 rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-[#cfa08f] transition-colors">
-                  {content.homepage.hero.ctaText.visit}
-                </Link>
-                <Link to="/packages" className="w-full sm:w-auto inline-flex items-center justify-center border border-white/70 bg-white/10 text-white px-8 md:px-10 lg:px-12 py-3 md:py-4 rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-white/20 transition-colors">
-                  {content.homepage.hero.ctaText.packages}
-                </Link>
+                {renderHeroCta(
+                  heroPrimaryCtaHref,
+                  heroPrimaryCtaText,
+                  "w-full sm:w-auto inline-flex items-center justify-center bg-[#D8A799] text-white px-8 md:px-10 lg:px-12 py-3 md:py-4 rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-[#cfa08f] transition-colors"
+                )}
+                {renderHeroCta(
+                  heroSecondaryCtaHref,
+                  heroSecondaryCtaText,
+                  "w-full sm:w-auto inline-flex items-center justify-center border border-white/70 bg-white/10 text-white px-8 md:px-10 lg:px-12 py-3 md:py-4 rounded-full text-sm md:text-base lg:text-lg font-medium hover:bg-white/20 transition-colors"
+                )}
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {builderSections.length > 0 && (
+        <section className="section bg-background border-b border-border/50" data-sanity={sanityDataAttribute ? sanityDataAttribute("pageBuilder") : undefined}>
+          <div className="container mx-auto px-4">
+            <div className="mb-8 text-center">
+              <p className="section-label">SANITY PAGE BUILDER</p>
+              <h2 className="text-3xl md:text-4xl font-serif text-primary">Live Editable Homepage Blocks</h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              {builderSections.map((section, index) => (
+                <ScrollReveal key={section._key || `${section._type}-${index}`} delay={Math.min(index * 100, 500)}>
+                  {renderBuilderSection(section, index)}
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Testimonial Carousel - Immediate Social Proof */}
       <section className="section-compact section-cream relative overflow-hidden">
@@ -283,8 +435,8 @@ const Index = () => {
                 muted={isMuted}
                 loop
                 playsInline
-                preload="auto"
-                poster="/videos/venue-tour-poster.webp"
+                preload="metadata"
+                poster="/videos/venue-tour-poster.jpg"
                 className="w-full h-auto"
                 src={videoSrc || undefined}
                 onCanPlay={() => {
@@ -315,7 +467,7 @@ const Index = () => {
               autoPlay
               loop
               preload="metadata"
-              poster="/videos/venue-tour-poster.webp"
+              poster="/videos/venue-tour-poster.jpg"
               className="w-full h-auto max-h-[80vh]"
               src="/videos/venue-tour.mp4"
             >
@@ -337,10 +489,15 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             <div className="grid sm:grid-cols-2 gap-4">
-              {content.homepage.intro.text.map((text, index) => (
-                <ScrollReveal key={index} delay={index * 100}>
+              {introCards.map((card, index) => (
+                <ScrollReveal key={card._key || index} delay={index * 100}>
                   <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
-                    <p className="font-medium">{text}</p>
+                    <p
+                      className="font-medium"
+                      data-sanity={sanityDataAttribute ? sanityDataAttribute(getArrayItemPath("introCards", card._key, index, ".text")) : undefined}
+                    >
+                      {card.text}
+                    </p>
                   </div>
                 </ScrollReveal>
               ))}

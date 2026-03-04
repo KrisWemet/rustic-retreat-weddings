@@ -103,7 +103,7 @@ const Venue = () => {
 
               <ScrollReveal delay={100}>
                 <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
-                  <img src={cabinFullExterior} alt="Cabin exterior nestled in the forest" className="w-full h-full object-cover" />
+                  <img src={cabinFullExterior} alt="Cabin exterior nestled in the forest" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </div>
               </ScrollReveal>
 
@@ -122,7 +122,7 @@ const Venue = () => {
               {/* Row 2 */}
               <ScrollReveal delay={300}>
                 <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
-                  <img src={cabinInterior} alt="Cozy cabin interior" className="w-full h-full object-cover" />
+                  <img src={cabinInterior} alt="Cozy cabin interior" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </div>
               </ScrollReveal>
 
@@ -140,7 +140,7 @@ const Venue = () => {
 
               <ScrollReveal delay={500}>
                 <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
-                  <img src={cabinBed} alt="Comfortable bed in the cabin" className="w-full h-full object-cover" />
+                  <img src={cabinBed} alt="Comfortable bed in the cabin" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </div>
               </ScrollReveal>
 
@@ -159,7 +159,7 @@ const Venue = () => {
 
               <ScrollReveal delay={700}>
                 <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-soft">
-                  <img src={campfireSetting} alt="Campfire setting near the cabin" className="w-full h-full object-cover" />
+                  <img src={campfireSetting} alt="Campfire setting near the cabin" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </div>
               </ScrollReveal>
 
@@ -366,7 +366,7 @@ const Venue = () => {
               <ScrollReveal delay={100}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
-                    <img src={extrasGiantConnectFour} alt="Giant Connect Four at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={extrasGiantConnectFour} alt="Giant Connect Four at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
                     <Trophy className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
@@ -381,7 +381,7 @@ const Venue = () => {
               <ScrollReveal delay={200}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
-                    <img src={extrasPlayhouse} alt="Children's play house at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={extrasPlayhouse} alt="Children's play house at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
                     <Baby className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
@@ -396,7 +396,7 @@ const Venue = () => {
               <ScrollReveal delay={300}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
-                    <img src={extrasTrampolineKids} alt="Trampoline at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={extrasTrampolineKids} alt="Trampoline at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
                     <Zap className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
@@ -411,7 +411,7 @@ const Venue = () => {
               <ScrollReveal delay={400}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
                   <div className="h-48 overflow-hidden">
-                    <img src={extrasFirePitNight} alt="Fire pit at night at Rustic Retreat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={extrasFirePitNight} alt="Fire pit at night at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardContent className="pt-6 text-center lg:text-left">
                     <Flame className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />

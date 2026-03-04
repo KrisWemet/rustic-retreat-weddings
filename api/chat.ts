@@ -1,36 +1,159 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
-export const maxDuration = 30; // 30 seconds limit
+export const maxDuration = 30;
 
-export default async function handler(req: any, res: any) {
-    // CORS headers for local dev vs production
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+type ChatRole = "user" | "assistant";
 
-    if (req.method === 'OPTIONS') {
-        return res.status(200).end();
-    }
+type ChatMessage = {
+  role: ChatRole;
+  content: string;
+};
 
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method Not Allowed' });
-    }
+type ApiRequest = {
+  method?: string;
+  headers: Record<string, string | undefined>;
+  body?: unknown;
+};
 
+type ApiResponse = {
+  status: (statusCode: number) => ApiResponse;
+  json: (body: unknown) => ApiResponse;
+  setHeader: (key: string, value: string) => void;
+  end: (body?: string) => void;
+  write: (body: string) => void;
+};
+
+type ChatRequestBody = {
+  messages?: unknown;
+};
+
+type OpenRouterStreamChunk = {
+  choices?: Array<{
+    delta?: {
+      content?: string;
+    };
+  }>;
+};
+
+type OpenRouterCompletion = {
+  choices?: Array<{
+    message?: {
+      content?: string;
+    };
+  }>;
+};
+
+const readPublicFile = (filename: string) => {
+  try {
+    return fs.readFileSync(path.join(process.cwd(), "public", filename), "utf8");
+  } catch {
+    console.warn(`Missing ${filename}`);
+    return "";
+  }
+};
+
+const parseBody = (body: unknown): ChatRequestBody => {
+  if (!body) {
+    return {};
+  }
+
+  if (typeof body === "string") {
     try {
-        const { messages } = req.body;
+      const parsed = JSON.parse(body);
+      if (parsed && typeof parsed === "object") {
+        return parsed as ChatRequestBody;
+      }
+    } catch {
+      return {};
+    }
+    return {};
+  }
 
-        // Load available information documents built into the repo via public folder
-        const publicDir = path.join(process.cwd(), 'public');
-        let faqs = '';
-        let venue = '';
-        let packages = '';
+  if (typeof body === "object") {
+    return body as ChatRequestBody;
+  }
 
-        try { faqs = fs.readFileSync(path.join(publicDir, 'faqs.txt'), 'utf8'); } catch (e) { console.warn("Missing faqs.txt"); }
-        try { venue = fs.readFileSync(path.join(publicDir, 'venue.txt'), 'utf8'); } catch (e) { console.warn("Missing venue.txt"); }
-        try { packages = fs.readFileSync(path.join(publicDir, 'packages.txt'), 'utf8'); } catch (e) { console.warn("Missing packages.txt"); }
+  return {};
+};
 
-        const systemPrompt = `You are a helpful, warm, friendly, and rustic-style assistant for Rustic Retreat Weddings, a beautiful 65-acre off-grid wedding venue in Alberta.
+const normalizeMessages = (rawMessages: unknown) => {
+  if (!Array.isArray(rawMessages)) {
+    return [] as ChatMessage[];
+  }
+
+  return rawMessages
+    .flatMap((message) => {
+      if (!message || typeof message !== "object") {
+        return [];
+      }
+
+      const rawRole = (message as { role?: unknown }).role;
+      const rawContent = (message as { content?: unknown }).content;
+
+      if ((rawRole !== "user" && rawRole !== "assistant") || typeof rawContent !== "string") {
+        return [];
+      }
+
+      const content = rawContent.trim();
+      if (!content) {
+        return [];
+      }
+
+      return [{ role: rawRole, content }];
+    })
+    .slice(-20);
+};
+
+const writeStreamChunk = (line: string, res: ApiResponse) => {
+  if (!line.startsWith("data:")) {
+    return;
+  }
+
+  const payload = line.slice(5).trim();
+  if (!payload || payload === "[DONE]") {
+    return;
+  }
+
+  try {
+    const parsed = JSON.parse(payload) as OpenRouterStreamChunk;
+    const content = parsed.choices?.[0]?.delta?.content;
+    if (typeof content === "string" && content.length > 0) {
+      res.write(content);
+    }
+  } catch {
+    // Ignore malformed or partial chunks
+  }
+};
+
+const OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1";
+
+export default async function handler(req: ApiRequest, res: ApiResponse) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method Not Allowed" });
+  }
+
+  try {
+    const body = parseBody(req.body);
+    const messages = normalizeMessages(body.messages);
+
+    if (messages.length === 0) {
+      return res.status(400).json({ error: "At least one valid message is required." });
+    }
+
+    const faqs = readPublicFile("faqs.txt");
+    const venue = readPublicFile("venue.txt");
+    const packages = readPublicFile("packages.txt");
+
+    const systemPrompt = `You are a helpful, warm, friendly, and rustic-style assistant for Rustic Retreat Weddings, a beautiful 65-acre off-grid wedding venue in Alberta.
 
 Answer the user's questions based strictly on the provided information below.
 
@@ -48,78 +171,107 @@ ${venue}
 ${packages}
 `;
 
-        // Make sure API key exists
-        const apiKey = process.env.VITE_OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEY;
-        if (!apiKey) {
-            console.warn("OpenRouter API key is not set. Generating mock response for development...");
-            // For local development without API keys, wait 1 sec and return mock
-            setTimeout(() => {
-                const stream = "[Mock Mode] The VITE_OPENROUTER_API_KEY is missing, so I can't generate a real reply. Check the .env or deployment settings!";
-                res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-                res.end(stream);
-            }, 1000);
-            return;
-        }
+    const apiKey = process.env.OPENROUTER_API_KEY;
+    if (!apiKey) {
+      return res.status(500).json({ error: "OPENROUTER_API_KEY missing" });
+    }
 
-        const model = process.env.VITE_OPENROUTER_MODEL || process.env.OPENROUTER_MODEL || 'anthropic/claude-3.5-sonnet:beta';
+    const model = process.env.OPENROUTER_MODEL || "anthropic/claude-3.5-sonnet:beta";
+    const siteUrl = process.env.OPENROUTER_SITE_URL || "https://rustic-retreat-weddings.vercel.app";
+    const requestBody = {
+      model,
+      messages: [{ role: "system", content: systemPrompt }, ...messages],
+    };
 
-        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-            method: "POST",
-            headers: {
-                "Authorization": `Bearer ${apiKey}`,
-                "HTTP-Referer": "https://rustic-retreat.vercel.app", // Required by OpenRouter: your site URL
-                "X-Title": "Rustic Retreat Venue Chatbot", // Optional: your site name
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                model: model,
-                stream: true,
-                messages: [
-                    { role: "system", content: systemPrompt },
-                    ...messages
-                ],
-            })
+    const requestHeaders: Record<string, string> = {
+      Authorization: `Bearer ${apiKey}`,
+      "HTTP-Referer": siteUrl,
+      "X-Title": "Rustic Retreat Venue Chatbot",
+      "Content-Type": "application/json",
+    };
+
+    const response = await fetch(`${OPENROUTER_BASE_URL}/chat/completions`, {
+      method: "POST",
+      headers: requestHeaders,
+      body: JSON.stringify({
+        ...requestBody,
+        stream: true,
+      }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("OpenRouter Error:", errorText);
+
+      if (response.status === 429) {
+        const fallbackResponse = await fetch(`${OPENROUTER_BASE_URL}/chat/completions`, {
+          method: "POST",
+          headers: requestHeaders,
+          body: JSON.stringify({
+            ...requestBody,
+            stream: false,
+          }),
         });
 
-        if (!response.ok) {
-            console.error("OpenRouter Error:", await response.text());
-            return res.status(500).json({ error: 'Failed to communicate with OpenRouter' });
+        if (fallbackResponse.ok) {
+          const data = (await fallbackResponse.json()) as OpenRouterCompletion;
+          const content = data.choices?.[0]?.message?.content;
+          if (typeof content === "string" && content.length > 0) {
+            res.setHeader("Content-Type", "text/event-stream; charset=utf-8");
+            res.setHeader("Cache-Control", "no-cache, no-transform");
+            res.setHeader("Connection", "keep-alive");
+            res.write(content);
+            return res.end();
+          }
+        } else {
+          console.error("OpenRouter fallback error:", await fallbackResponse.text());
         }
+      }
 
-        res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
-        res.setHeader('Cache-Control', 'no-cache, no-transform');
-        res.setHeader('Connection', 'keep-alive');
-
-        // Simple passthrough of the stream
-        if (!response.body) {
-            throw new Error("No response body from OpenRouter");
-        }
-        const reader = response.body.getReader();
-        const decoder = new TextDecoder("utf-8");
-
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-
-            const chunk = decoder.decode(value, { stream: true });
-
-            // Extract the content chunks here directly and just pass standard text.
-            const lines = chunk.split('\n');
-            for (const line of lines) {
-                if (line.startsWith('data: ') && line !== 'data: [DONE]') {
-                    try {
-                        const data = JSON.parse(line.trim().slice(6));
-                        if (data.choices && data.choices[0].delta && data.choices[0].delta.content) {
-                            res.write(data.choices[0].delta.content);
-                        }
-                    } catch (e) { /* ignore partial JSON objects from chunking */ }
-                }
-            }
-        }
-
-        res.end();
-    } catch (err) {
-        console.error('Error generating chat response:', err);
-        res.status(500).json({ error: 'Internal Server Error' });
+      const statusCode = response.status === 429 ? 429 : 500;
+      const errorMessage = response.status === 429
+        ? "The chatbot is temporarily busy. Please try again in a moment."
+        : "Failed to communicate with OpenRouter";
+      return res.status(statusCode).json({ error: errorMessage });
     }
+
+    if (!response.body) {
+      throw new Error("No response body from OpenRouter");
+    }
+
+    res.setHeader("Content-Type", "text/event-stream; charset=utf-8");
+    res.setHeader("Cache-Control", "no-cache, no-transform");
+    res.setHeader("Connection", "keep-alive");
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder("utf-8");
+    let buffer = "";
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) {
+        break;
+      }
+
+      buffer += decoder.decode(value, { stream: true });
+
+      let newLineIndex = buffer.indexOf("\n");
+      while (newLineIndex !== -1) {
+        const line = buffer.slice(0, newLineIndex).trim();
+        buffer = buffer.slice(newLineIndex + 1);
+        writeStreamChunk(line, res);
+        newLineIndex = buffer.indexOf("\n");
+      }
+    }
+
+    const tail = buffer.trim();
+    if (tail) {
+      writeStreamChunk(tail, res);
+    }
+
+    res.end();
+  } catch (error) {
+    console.error("Error generating chat response:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 }

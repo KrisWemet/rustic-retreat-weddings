@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
-import logoLight from "@/assets/logo/rustic-retreat-logo-light.webp";
+import logoLight from "@/assets/logo/rustic-retreat-logo-light-small.webp";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -162,7 +162,7 @@ const Navigation = () => {
               src={logoLight}
               alt="Rustic Retreat logo"
               className="h-8 w-8 object-contain"
-              loading="eager"
+              loading="lazy"
               decoding="async"
             />
             <h2 className="font-serif italic text-xl text-primary">Rustic Retreat</h2>

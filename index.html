@@ -5,8 +5,6 @@
   <meta charset="UTF-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <!-- Preload critical hero image for LCP optimization -->
-  <link rel="preload" href="/src/assets/gallery/Images/hero-sunset-meadow.webp" as="image" />
   <title>Rustic Retreat Weddings | Multi-Day Outdoor Wedding Venue Near Edmonton</title>
   <meta name="description"
     content="65 private acres for your dream wedding weekend. Rustic Retreat offers 3 and 5-day celebration packages with cabin accommodation, campfire evenings, and complete creative freedom near Lac La Nonne, Alberta.">
@@ -97,13 +95,26 @@
     </div>
   </noscript>
 
-  <!-- Google Analytics (Deferred to prevent render-blocking) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFRXXKP748"></script>
+  <!-- Google Analytics (Delayed until browser is idle) -->
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-SFRXXKP748');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    const initAnalytics = () => {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-SFRXXKP748";
+      document.head.appendChild(script);
+      gtag("js", new Date());
+      gtag("config", "G-SFRXXKP748");
+    };
+
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(initAnalytics, { timeout: 4000 });
+    } else {
+      window.addEventListener("load", () => window.setTimeout(initAnalytics, 1200), { once: true });
+    }
   </script>
 </body>
 

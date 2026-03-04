@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
-import logoLight from "@/assets/logo/rustic-retreat-logo-light.webp";
+import logoLight from "@/assets/logo/rustic-retreat-logo-light-small.webp";
 import content from "@/data/site-content.json";
 
 const FacebookIcon = ({ className }: { className?: string }) => (

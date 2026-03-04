@@ -7,6 +7,16 @@ type Message = {
     content: string;
 };
 
+type ChatApiMessage = Pick<Message, "role" | "content">;
+
+const toApiMessages = (messages: Message[]): ChatApiMessage[] =>
+    messages.map(({ role, content }) => ({ role, content }));
+
+const isAllowedResponseContentType = (response: Response) => {
+    const contentType = (response.headers.get("content-type") || "").toLowerCase();
+    return contentType.includes("text/event-stream") || contentType.includes("application/json");
+};
+
 export default function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
@@ -37,16 +47,53 @@ export default function ChatWidget() {
         setIsLoading(true);
 
         const newMessages = [...messages, userMessage];
+        const apiMessages = toApiMessages(newMessages);
 
         try {
-            const response = await fetch('/api/chat', {
+            const requestInit: RequestInit = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ messages: newMessages }),
-            });
+                body: JSON.stringify({ messages: apiMessages }),
+            };
+            const response = await fetch('/api/chat', requestInit);
+            const contentType = (response.headers.get('content-type') || '').toLowerCase();
 
             if (!response.ok) {
-                throw new Error('Chat API returned an error');
+                const errorBody = await response.text();
+                console.error('Chat API error response:', errorBody);
+                throw new Error('Unable to get a response right now.');
+            }
+
+            if (!isAllowedResponseContentType(response)) {
+                const unexpectedBody = await response.text();
+                console.error('Unexpected chat response content-type:', contentType, unexpectedBody);
+                throw new Error('Unexpected server response format.');
+            }
+
+            if (contentType.includes('application/json')) {
+                const data = await response.json() as { content?: string; message?: string; error?: string };
+
+                if (typeof data.error === 'string' && data.error.trim()) {
+                    console.error('Chat API JSON error payload:', data.error);
+                    throw new Error('Unable to get a response right now.');
+                }
+
+                const assistantContent = typeof data.content === 'string'
+                    ? data.content
+                    : typeof data.message === 'string'
+                        ? data.message
+                        : '';
+
+                if (!assistantContent.trim()) {
+                    console.error('Chat API JSON payload missing content:', data);
+                    throw new Error('Unexpected server response format.');
+                }
+
+                setMessages((prev) => [
+                    ...prev,
+                    { id: (Date.now() + 1).toString(), role: 'assistant', content: assistantContent }
+                ]);
+                return;
             }
 
             if (!response.body) throw new Error("No response body");
@@ -82,7 +129,7 @@ export default function ChatWidget() {
             console.error('Chat error:', error);
             setMessages((prev) => [
                 ...prev,
-                { id: Date.now().toString(), role: 'assistant', content: "Oops, I'm having trouble connecting right now. Please reach out to rusticretreatalberta@gmail.com or (780) 210-6252 instead!" }
+                { id: Date.now().toString(), role: 'assistant', content: "Sorry, I’m having trouble connecting right now. Please try again in a moment, or contact us at rusticretreatalberta@gmail.com or (780) 210-6252." }
             ]);
         } finally {
             setIsLoading(false);
