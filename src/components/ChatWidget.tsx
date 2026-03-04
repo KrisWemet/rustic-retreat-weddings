@@ -472,26 +472,6 @@ export default function ChatWidget() {
                         <p className="text-[11px] text-muted-foreground mt-2">
                             Not a live agent. For urgent/important questions contact us.
                         </p>
-                        <div className="mt-2 flex gap-2">
-                            <a
-                                href="tel:+17802106252"
-                                className="text-[11px] px-2.5 py-1 rounded-md border border-primary/20 hover:bg-primary/5 transition-colors"
-                            >
-                                Contact a human (Call)
-                            </a>
-                            <a
-                                href="sms:+17802106252"
-                                className="text-[11px] px-2.5 py-1 rounded-md border border-primary/20 hover:bg-primary/5 transition-colors"
-                            >
-                                Contact a human (Text)
-                            </a>
-                            <a
-                                href="mailto:rusticretreatalberta@gmail.com"
-                                className="text-[11px] px-2.5 py-1 rounded-md border border-primary/20 hover:bg-primary/5 transition-colors"
-                            >
-                                Contact a human (Email)
-                            </a>
-                        </div>
                     </div>
 
                     {/* Messages */}
