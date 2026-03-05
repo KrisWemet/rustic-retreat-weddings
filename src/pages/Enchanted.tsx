@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import { CheckCircle2, Clock, Sparkles } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -363,25 +362,6 @@ const Enchanted = () => {
                   .
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section section-muted text-center">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Need A Quick Overview First?</h2>
-            <p className="text-muted-foreground mb-6">
-              You can download the Enchanted information package as a PDF any time.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild className="rounded-full px-7">
-                <a href="/downloads/enchanted.pdf" download>
-                  Download Enchanted PDF
-                </a>
-              </Button>
-              <Button asChild variant="outline" className="rounded-full px-7">
-                <Link to="/contact">Contact Us Directly</Link>
-              </Button>
             </div>
           </div>
         </section>
