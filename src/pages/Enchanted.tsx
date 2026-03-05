@@ -263,10 +263,6 @@ const Enchanted = () => {
                         </div>
 
                         <h2 className="text-2xl font-bold mb-2">Apply To Be The Couple</h2>
-                        <p className="text-sm text-muted-foreground mb-6">
-                          This matches the questionnaire from Enchanted.md so we can review your application with all required details.
-                        </p>
-
                         <form
                           ref={formRef}
                           onSubmit={handleSubmit}
@@ -425,8 +421,8 @@ const Enchanted = () => {
 
                           <div>
                             <Label htmlFor="budget">11. What is your approximate budget for this package? *</Label>
-                            <p className="text-xs text-muted-foreground mt-1">Our package starts at approximately $18,000 and final pricing depends on selected add-ons.</p>
-                            <Input id="budget" name="budget" required className="mt-2" placeholder="$18,000+" />
+                            <p className="text-xs text-muted-foreground mt-1">Our package starts at approximately $19,500 and final pricing depends on selected add-ons.</p>
+                            <Input id="budget" name="budget" required className="mt-2" placeholder="$22,000" />
                           </div>
 
                           <label className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -444,13 +440,6 @@ const Enchanted = () => {
                   </CardContent>
                 </Card>
 
-                <p className="text-xs text-muted-foreground mt-3 text-center">
-                  Prefer email? Send your application to{" "}
-                  <a href="mailto:rusticretreatalberta@gmail.com" className="text-secondary hover:underline">
-                    rusticretreatalberta@gmail.com
-                  </a>
-                  .
-                </p>
               </div>
             </div>
           </div>
