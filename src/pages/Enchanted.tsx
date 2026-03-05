@@ -30,6 +30,7 @@ const OPTIONAL_ADDONS = [
 ];
 
 const ENCHANTED_APPLICATION_EMAIL = "rusticretreatalberta@gmail.com";
+const ENCHANTED_FORM_ENDPOINT = `https://formsubmit.co/ajax/${ENCHANTED_APPLICATION_EMAIL}`;
 
 const escapeHtml = (value: string) =>
   value
@@ -135,11 +136,14 @@ const Enchanted = () => {
     if (typeof replyTo === "string" && replyTo.trim().length > 0) {
       formData.set("_replyto", replyTo.trim());
     }
-    formData.set("to_email", ENCHANTED_APPLICATION_EMAIL);
-    formData.set("destination_email", ENCHANTED_APPLICATION_EMAIL);
+    formData.set("_subject", "New Enchanted Wedding Application");
+    formData.set("_template", "table");
+    formData.set("_captcha", "false");
+    formData.delete("to_email");
+    formData.delete("destination_email");
 
     try {
-      const response = await fetch("https://formspree.io/f/mgooaleg", {
+      const response = await fetch(ENCHANTED_FORM_ENDPOINT, {
         method: "POST",
         body: formData,
         headers: {
@@ -148,7 +152,8 @@ const Enchanted = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Form submission failed");
+        const errorText = await response.text();
+        throw new Error(errorText || "Form submission failed");
       }
 
       setIsSubmitted(true);
