@@ -63,7 +63,7 @@ SATURDAY
 OPTIONAL ADD-ONS
 
 Bar service staff
-Fireworks display
+Private fireworks display
 Photo booth
 Midnight taco bar or BBQ
 Optional light lunch
@@ -105,8 +105,6 @@ Licensed officiant - included.
 Cake and cupcakes vendor - included.
 Photography vendor - included.
 Videography vendor - included.
-Rentals vendor - included.
-Lighting vendor - included.
 Customization options - add-ons to make it uniquely yours.
 
 Here's the real math:
@@ -128,10 +126,9 @@ A few important things to know:
 
 Outhouses on site with a two-stall shower house for guests
 No electrical hookups - trailer guests are welcome to boondock (maximum 15 RVs)
-Limited cell service
 Pet friendly - pets must be leashed in the main area but are welcome off-leash on the trails and back field
 
-This is a rustic, nature-forward experience. It is intentional, beautiful, and unlike anything you will find at a traditional venue - but we want to make sure it is the right fit for you and your guests.
+This is a rustic, nature-forward experience. It is intentional, beautiful, and unlike anything you will find at a traditional venue - but we want to make sure it is the right fit for you, your guests, and your vision for your perfect day.
 
 
 ACCOMMODATIONS
@@ -142,9 +139,7 @@ Bridal Suite Cabin - Included. Brand new this year. Where the bride and her ladi
 
 Guest Camping - Included. Guests bring their own tents and trailers and camp together on the property all weekend. No hookups, boondocking only. Maximum 15 RVs.
 
-Nearby Lakefront AirBnB - Optional add-on. Available for the full weekend if the couple would like additional accommodation or to spend the night before the wedding apart.
-
-For guests who prefer not to camp, hotels are available in nearby Barrhead and Onoway. For those who want to stay on site but prefer something more comfortable than a tent, RVs can be rented through RVEazy.
+For guests who prefer not to camp, hotels are available in nearby Barrhead and Onoway, and numerous nearby Airbnbs are also available. For those who want to stay on site but prefer something more comfortable than a tent, RVs can be rented through RVEzy.
 
 
 PROPERTY AMENITIES
@@ -152,7 +147,7 @@ PROPERTY AMENITIES
 Clear-top gazebo
 Outdoor dance floor
 Rustic ceremony benches
-Octagon arch
+Ceremony arches
 Sweetheart table
 Double wine barrel table
 Whiskey barrel
@@ -195,7 +190,7 @@ We have plenty to keep kids happy and entertained - we just love to know the mix
 We work within a defined look and feel, so we would love to know how aligned you are with our vision.
 
 7. Which optional add-ons are you most interested in?
-Bar service staff, fireworks display, photo booth, midnight taco bar or BBQ, optional light lunch, full weekend catering, Sunday outdoor activity day, additional days.
+Bar service staff, private fireworks display, photo booth, midnight taco bar or BBQ, optional light lunch, full weekend catering, Sunday outdoor activity day, additional days.
 
 8. Is there anything else you would like us to know about you, your guests, or your vision for the weekend?
 Anything at all - we are all ears.

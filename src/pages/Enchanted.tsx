@@ -17,7 +17,7 @@ import enchantedMarkdown from "../../Enchanted.md?raw";
 
 const OPTIONAL_ADDONS = [
   "Bar service staff",
-  "Fireworks display",
+  "Private fireworks display",
   "Photo booth",
   "Midnight taco bar or BBQ",
   "Optional light lunch",
@@ -262,7 +262,7 @@ const Enchanted = () => {
                           <span className="font-medium">Application Form</span>
                         </div>
 
-                        <h2 className="text-2xl font-bold mb-2">Apply To Be The Couple</h2>
+                        <h2 className="text-2xl font-bold mb-2">Apply to be our Enchanted Couple</h2>
                         <form
                           ref={formRef}
                           onSubmit={handleSubmit}
@@ -339,7 +339,7 @@ const Enchanted = () => {
 
                           <div>
                             <Label className="mb-3 block">7. Which optional add-ons are you most interested in? *</Label>
-                            <p className="text-xs text-muted-foreground mt-1 mb-3">Bar service staff, fireworks display, photo booth, midnight taco bar or BBQ, optional light lunch, full weekend catering, Sunday outdoor activity day, additional days.</p>
+                            <p className="text-xs text-muted-foreground mt-1 mb-3">Bar service staff, private fireworks display, photo booth, midnight taco bar or BBQ, optional light lunch, full weekend catering, Sunday outdoor activity day, additional days.</p>
                             <div className="grid sm:grid-cols-2 gap-2">
                               {OPTIONAL_ADDONS.map((addon) => (
                                 <label
