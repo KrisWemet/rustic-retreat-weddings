@@ -34,7 +34,7 @@ const PageHero = ({
           alt={backgroundImageAlt || title}
           loading="eager"
           decoding="async"
-          fetchpriority="high"
+          fetchPriority="high"
           className="h-full w-full object-cover"
         />
         {overlayOpacity !== "none" && (

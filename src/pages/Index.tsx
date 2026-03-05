@@ -39,7 +39,7 @@ import { useState, useRef, useEffect, type KeyboardEvent } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import content from "@/data/site-content.json";
 import { fetchSanityHomepageContent, toSanityImageUrl } from "@/lib/sanity-homepage";
-import { HomepageBuilderSection, HomepageCmsContent } from "@/types/homepage-cms";
+import { HomepageBuilderSection, HomepageCmsContent, HomepageIntroCard } from "@/types/homepage-cms";
 import { createDataAttribute } from "@sanity/visual-editing";
 import { FAQS } from "@/content/faqs";
 
@@ -175,7 +175,9 @@ const Index = () => {
   const heroSecondaryCtaText = cmsHomepage?.heroSecondaryCtaText || content.homepage.hero.ctaText.packages;
   const heroPrimaryCtaHref = cmsHomepage?.heroPrimaryCtaHref || "/contact";
   const heroSecondaryCtaHref = cmsHomepage?.heroSecondaryCtaHref || "/packages";
-  const introCards = cmsHomepage?.introCards?.filter((card) => Boolean(card?.text)) || content.homepage.intro.text.map((text) => ({ text }));
+  const introCards: HomepageIntroCard[] =
+    cmsHomepage?.introCards?.filter((card) => Boolean(card?.text)) ||
+    content.homepage.intro.text.map((text) => ({ text }));
   const builderSections = cmsHomepage?.pageBuilder?.filter((section) => Boolean(section?._type)) || [];
   const homeFaqs = FAQS.slice(0, 2);
   const sanityDataAttribute = cmsHomepage?._id && cmsHomepage?._type
