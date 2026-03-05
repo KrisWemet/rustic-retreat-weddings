@@ -16,7 +16,8 @@ const BreadcrumbSchema = () => {
     '/gallery': 'Gallery',
     '/about': 'About',
     '/faqs': 'FAQs',
-    '/contact': 'Contact'
+    '/contact': 'Contact',
+    '/enchanted-wedding': 'Enchanted Wedding',
   };
 
   const getBreadcrumbs = (): BreadcrumbItem[] => {

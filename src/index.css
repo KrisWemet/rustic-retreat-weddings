@@ -254,6 +254,44 @@ All colors MUST be HSL.
     animation: shimmer 3s infinite;
   }
 
+  .enchanted-markdown h2,
+  .enchanted-markdown h3,
+  .enchanted-markdown h4 {
+    @apply font-serif text-primary mt-8 mb-3;
+  }
+
+  .enchanted-markdown h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  .enchanted-markdown h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  .enchanted-markdown p {
+    @apply text-foreground leading-relaxed mb-4;
+  }
+
+  .enchanted-markdown strong {
+    @apply text-primary font-semibold;
+  }
+
+  .enchanted-markdown em {
+    @apply italic;
+  }
+
+  .enchanted-markdown a {
+    @apply text-secondary underline underline-offset-2;
+  }
+
+  .enchanted-markdown code {
+    @apply bg-muted px-1.5 py-0.5 rounded text-sm;
+  }
+
+  .enchanted-markdown hr {
+    @apply my-6 border-border;
+  }
+
   /* Gallery Soft Reveal */
   .gallery-item {
     @apply opacity-0;

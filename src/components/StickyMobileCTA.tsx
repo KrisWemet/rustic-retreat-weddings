@@ -8,7 +8,7 @@ const StickyMobileCTA = () => {
   const location = useLocation();
 
   // Don't show on contact page (already has form)
-  const hideOnPages = ["/contact"];
+  const hideOnPages = ["/contact", "/enchanted-wedding", "/enchanted", "/enchated"];
   const shouldHide = hideOnPages.includes(location.pathname);
 
   useEffect(() => {

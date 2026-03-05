@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
-import logoLight from "@/assets/logo/rustic-retreat-logo-light-small.webp";
+import LeafIcon from "@/components/LeafIcon";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,6 +14,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "The Venue", path: "/venue" },
     { name: "Packages", path: "/packages" },
+    { name: "Enchanted Wedding", path: "/enchanted-wedding" },
     // { name: "Love Stories", path: "/real-weddings" }, // Hidden temporarily
     { name: "Gallery", path: "/gallery" },
     { name: "About", path: "/about" },
@@ -76,24 +77,22 @@ const Navigation = () => {
             </button>
 
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
-              <img
-                src={logoLight}
-                alt="Rustic Retreat logo"
-                className={cn(
-                  "object-contain",
-                  isScrolled ? "h-6 w-6 md:h-7 md:w-7" : "h-7 w-7 md:h-8 md:w-8"
-                )}
-                loading="eager"
-                decoding="async"
-              />
+            <Link to="/" className="text-primary">
               <h1
                 className={cn(
-                  "font-serif italic text-primary transition-all duration-300",
+                  "font-serif italic transition-all duration-300",
                   isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
                 )}
               >
-                Rustic Retreat
+                <div className="logo inline-flex items-center gap-2" style={{ color: "var(--brandText)" }}>
+                  <LeafIcon
+                    className={cn(
+                      "leaf shrink-0",
+                      isScrolled ? "h-8 w-6 md:h-10 md:w-8" : "h-10 w-8 md:h-12 md:w-9"
+                    )}
+                  />
+                  <span>Rustic Retreat</span>
+                </div>
               </h1>
             </Link>
 
@@ -157,15 +156,13 @@ const Navigation = () => {
       >
         {/* Menu Header */}
         <div className="flex items-center justify-between p-4 border-b border-border">
-          <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2">
-            <img
-              src={logoLight}
-              alt="Rustic Retreat logo"
-              className="h-8 w-8 object-contain"
-              loading="lazy"
-              decoding="async"
-            />
-            <h2 className="font-serif italic text-xl text-primary">Rustic Retreat</h2>
+          <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-primary">
+            <h2 className="font-serif italic text-xl">
+              <div className="logo inline-flex items-center gap-2" style={{ color: "var(--brandText)" }}>
+                <LeafIcon className="leaf h-10 w-8 md:h-12 md:w-9" />
+                <span>Rustic Retreat</span>
+              </div>
+            </h2>
           </Link>
           <button
             onClick={() => setIsMenuOpen(false)}

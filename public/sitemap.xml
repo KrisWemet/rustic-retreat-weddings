@@ -43,6 +43,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rusticretreat.xyz/enchanted-wedding</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rusticretreat.xyz/prerender/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -70,6 +76,11 @@
   <url>
     <loc>https://www.rusticretreat.xyz/prerender/contact.html</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.rusticretreat.xyz/prerender/enchanted-wedding.html</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
-import logoLight from "@/assets/logo/rustic-retreat-logo-light-small.webp";
 import content from "@/data/site-content.json";
+import LeafIcon from "@/components/LeafIcon";
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
@@ -17,14 +17,10 @@ const Footer = () => {
           {/* About */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img
-                src={logoLight}
-                alt="Rustic Retreat logo"
-                className="h-9 w-9 object-contain"
-                loading="lazy"
-                decoding="async"
-              />
-              <h3 className="text-xl font-bold font-serif">Rustic Retreat Weddings</h3>
+              <div className="logo inline-flex items-center gap-2 text-xl font-bold font-serif" style={{ color: "var(--brandText)" }}>
+                <LeafIcon className="leaf h-10 w-8 md:h-12 md:w-9" />
+                <span>Rustic Retreat</span>
+              </div>
             </div>
             <p className="text-primary-foreground/80 text-sm">
               {content.footer.tagline}
@@ -48,6 +44,11 @@ const Footer = () => {
               <li>
                 <Link to="/gallery" className="hover:text-secondary transition-colors">
                   Gallery
+                </Link>
+              </li>
+              <li>
+                <Link to="/enchanted-wedding" className="hover:text-secondary transition-colors">
+                  Enchanted Wedding
                 </Link>
               </li>
               <li>

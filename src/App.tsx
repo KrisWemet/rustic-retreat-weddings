@@ -14,6 +14,7 @@ const RealWeddings = lazy(() => import("./pages/RealWeddings"));
 const WeddingStory = lazy(() => import("./pages/WeddingStory"));
 const FAQs = lazy(() => import("./pages/FAQs"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Enchanted = lazy(() => import("./pages/Enchanted"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ChatWidget = lazy(() => import("./components/ChatWidget"));
 const SanityVisualEditing = lazy(() => import("./components/SanityVisualEditing"));
@@ -89,6 +90,9 @@ const App = () => {
             <Route path="/real-weddings/:slug" element={<WeddingStory />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/enchanted-wedding" element={<Enchanted />} />
+            <Route path="/enchanted" element={<Navigate to="/enchanted-wedding" replace />} />
+            <Route path="/enchated" element={<Navigate to="/enchanted-wedding" replace />} />
             <Route path="/rules" element={<Navigate to="/rustic-retreat-site-rules.html" replace />} />
             <Route path="/guidelines" element={<Navigate to="/rustic-retreat-site-rules.html" replace />} />
             {/* Redirects for old URLs */}
