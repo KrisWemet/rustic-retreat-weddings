@@ -20,7 +20,7 @@ const OPTIONAL_ADDONS = [
   "Fireworks display",
   "Photo booth",
   "Midnight taco bar or BBQ",
-  "Optional light lunch",
+  "Light lunch",
   "Full weekend catering",
   "Sunday outdoor activity day",
   "Additional days",
@@ -282,27 +282,27 @@ const Enchanted = () => {
                           <div className="grid sm:grid-cols-2 gap-4">
                             <div>
                               <Label htmlFor="fullNames">Full Name(s) *</Label>
-                              <Input id="fullNames" name="full_names" required className="mt-2" placeholder="Jane & John" />
+                              <Input id="fullNames" name="full_names" required className="mt-2" />
                             </div>
                             <div>
                               <Label htmlFor="email">Email *</Label>
-                              <Input id="email" name="email" type="email" required className="mt-2" placeholder="you@example.com" />
+                              <Input id="email" name="email" type="email" required className="mt-2" />
                             </div>
                           </div>
 
                           <div className="grid sm:grid-cols-2 gap-4">
                             <div>
                               <Label htmlFor="phone">Phone *</Label>
-                              <Input id="phone" name="phone" type="tel" required className="mt-2" placeholder="(780) 555-0123" />
+                              <Input id="phone" name="phone" type="tel" required className="mt-2" />
                             </div>
                             <div>
                               <Label htmlFor="location">City / Region *</Label>
-                              <Input id="location" name="location" required className="mt-2" placeholder="Edmonton, AB" />
+                              <Input id="location" name="location" required className="mt-2" />
                             </div>
                           </div>
 
                           <div>
-                            <Label htmlFor="reason">1. What made you reach out to us? *</Label>
+                            <Label htmlFor="reason">1. First things first - what made you reach out to us? *</Label>
                             <p className="text-xs text-muted-foreground mt-1">What caught your eye? What resonated with you?</p>
                             <Textarea id="reason" name="reason_for_reaching_out" required className="mt-2 min-h-24" />
                           </div>
@@ -322,13 +322,13 @@ const Enchanted = () => {
                           <div>
                             <Label htmlFor="guestCount">4. How many guests are you envisioning? *</Label>
                             <p className="text-xs text-muted-foreground mt-1">Up to 50 guests, not including the two of you.</p>
-                            <Input id="guestCount" name="guest_count" required className="mt-2" placeholder="e.g., 45 guests" />
+                            <Input id="guestCount" name="guest_count" required className="mt-2" />
                           </div>
 
                           <div>
                             <Label htmlFor="kids">5. Will any little ones be joining the celebration? *</Label>
-                            <p className="text-xs text-muted-foreground mt-1">We have plenty to keep kids happy and entertained.</p>
-                            <Textarea id="kids" name="children_attending" required className="mt-2 min-h-20" placeholder="Yes / No and any details" />
+                            <p className="text-xs text-muted-foreground mt-1">We have plenty to keep kids happy and entertained - we just love to know the mix ahead of time so the weekend feels perfectly balanced for everyone, especially you two.</p>
+                            <Textarea id="kids" name="children_attending" required className="mt-2 min-h-20" />
                           </div>
 
                           <div>
@@ -339,6 +339,7 @@ const Enchanted = () => {
 
                           <div>
                             <Label className="mb-3 block">7. Which optional add-ons are you most interested in? *</Label>
+                            <p className="text-xs text-muted-foreground mt-1 mb-3">Bar service staff, fireworks display, photo booth, midnight taco bar or BBQ, light lunch, full weekend catering, Sunday outdoor activity day, additional days.</p>
                             <div className="grid sm:grid-cols-2 gap-2">
                               {OPTIONAL_ADDONS.map((addon) => (
                                 <label
@@ -354,18 +355,20 @@ const Enchanted = () => {
 
                           <div>
                             <Label htmlFor="extra">8. Is there anything else you would like us to know about you, your guests, or your vision for the weekend? *</Label>
+                            <p className="text-xs text-muted-foreground mt-1">Anything at all - we are all ears.</p>
                             <Textarea id="extra" name="additional_info" required className="mt-2 min-h-20" />
                           </div>
 
                           <div>
                             <Label htmlFor="questions">9. Do you have any questions for us at this stage? *</Label>
+                            <p className="text-xs text-muted-foreground mt-1">Nothing is too small to ask - we want you to feel informed and comfortable from the very first conversation.</p>
                             <Textarea id="questions" name="questions" required className="mt-2 min-h-20" />
                           </div>
 
                           <div>
                             <Label htmlFor="photoWilling">10. Would you be willing to share a photo of the two of you? *</Label>
-                            <p className="text-xs text-muted-foreground mt-1">We would love to put a face to the names.</p>
-                            <Input id="photoWilling" name="photo_willing" required className="mt-2" placeholder="Yes / No" />
+                            <p className="text-xs text-muted-foreground mt-1">We would love to put a face to the names!</p>
+                            <Input id="photoWilling" name="photo_willing" required className="mt-2" />
                           </div>
 
                           <div>
@@ -421,8 +424,8 @@ const Enchanted = () => {
 
                           <div>
                             <Label htmlFor="budget">11. What is your approximate budget for this package? *</Label>
-                            <p className="text-xs text-muted-foreground mt-1">Our package starts at approximately $19,500 and final pricing depends on selected add-ons.</p>
-                            <Input id="budget" name="budget" required className="mt-2" placeholder="$22,000" />
+                            <p className="text-xs text-muted-foreground mt-1">Our package starts at approximately $19,500 - final pricing depends on your chosen add-ons and a few other factors we will walk through together.</p>
+                            <Input id="budget" name="budget" required className="mt-2" />
                           </div>
 
                           <label className="flex items-start gap-2 text-sm text-muted-foreground">

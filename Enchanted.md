@@ -218,4 +218,4 @@ Nothing is too small to ask - we want you to feel informed and comfortable from 
 We would love to put a face to the names!
 
 11. What is your approximate budget for this package?
-Our package starts at approximately $18,000 - final pricing depends on your chosen add-ons and a few other factors we will walk through together.
+Our package starts at approximately $19,500 - final pricing depends on your chosen add-ons and a few other factors we will walk through together.
