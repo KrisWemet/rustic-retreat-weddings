@@ -77,11 +77,10 @@ Hair and makeup
 WHAT YOU'LL TAKE CARE OF
 
 Wedding attire and wedding party attire
-Hair and makeup (you are responsible, but we can help coordinate it)
+Hair and makeup
 Vows
-Musician and song selections
+Music and Ceremony song selections
 Menu preferences
-Wedding party size
 All refreshments (alcoholic and non-alcoholic beverages) are the couple's responsibility
 The personal details that make it yours
 
