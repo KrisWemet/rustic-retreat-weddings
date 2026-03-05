@@ -108,11 +108,27 @@ We will be with you every step of the way to help with every decision.
 
 PRICING AND PHOTO RELEASE
 
-This package is priced at $19,500 - a discounted rate from the regular base package value of approximately $32,500. Final pricing depends on your selected add-ons.
+The Base Package - Everything You Need to Say "I Do"
+Here's what's included:
 
-The discounted rate is made possible because all vendor services are offered at a reduced rate in exchange for the use of photos and video in future advertising. Both you and your guests will be asked to sign a photo release - images and video may be used across vendor social media, websites, and marketing materials.
+Venue + Full Setup - Completely decorated and ready. You arrive, get married, celebrate. No hauling decor. No day-of stress.
+Professional Photography - Candids, portraits, details-the moments that matter
+Professional Videography - A film of your day to relive forever
+Floral Design - Custom flowers throughout the space
+Cake & Catering Coordination - We source and manage it all
+Core Vendor Team - Catering, DJ/entertainment, rentals, lighting-no piecing together a wedding from scratch
+Day-of Coordination - Your dedicated point person keeps everything flowing seamlessly
+Customization Options - Add-ons to make it uniquely yours
 
-We believe in full transparency from the start - no surprises, ever.
+Here's the real math:
+Booking these vendors separately? You're looking at $32,500+ before you even start comparing quotes and negotiating.
+Our all-in package: $19,500 (plus any add-ons you choose)
+That's a $13,000+ savings right there.
+
+How we make this possible:
+Our vendor partners offer us preferred rates in exchange for featuring your wedding in their portfolio, social media, and marketing-which means you get world-class vendors at a fraction of the cost. In return, you and your guest will sign a waiver allowing select images to be used across their channels.
+It's a win-win: You save thousands. They get real wedding content. Everyone benefits.
+No hidden fees. No surprises. Just clarity.
 
 
 THE PROPERTY
