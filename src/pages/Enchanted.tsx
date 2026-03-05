@@ -130,14 +130,17 @@ const Enchanted = () => {
 
   const setPhotoFiles = (files: FileList | File[]) => {
     const imageFiles = Array.from(files).filter((file) => file.type.startsWith("image/"));
-    setPhotoNames(imageFiles.map((file) => file.name));
+    const firstImage = imageFiles[0];
+    setPhotoNames(firstImage ? [firstImage.name] : []);
 
     if (!photoInputRef.current) {
       return;
     }
 
     const transfer = new DataTransfer();
-    imageFiles.forEach((file) => transfer.items.add(file));
+    if (firstImage) {
+      transfer.items.add(firstImage);
+    }
     photoInputRef.current.files = transfer.files;
   };
 
@@ -147,6 +150,31 @@ const Enchanted = () => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const selectedAddons = formData.getAll("addons");
+    if (selectedAddons.length === 0) {
+      setIsSubmitting(false);
+      toast({
+        title: "Please complete all required fields",
+        description: "Select at least one optional add-on.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const attachedPhoto = photoInputRef.current?.files?.[0];
+    if (!attachedPhoto) {
+      setIsSubmitting(false);
+      toast({
+        title: "Please complete all required fields",
+        description: "Upload one image file of the two of you.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    formData.delete("attachment");
+    formData.set("attachment", attachedPhoto);
+
     const replyTo = formData.get("email");
     if (typeof replyTo === "string" && replyTo.trim().length > 0) {
       formData.set("_replyto", replyTo.trim());
@@ -277,8 +305,8 @@ const Enchanted = () => {
                               <Input id="phone" name="phone" type="tel" required className="mt-2" placeholder="(780) 555-0123" />
                             </div>
                             <div>
-                              <Label htmlFor="location">City / Region</Label>
-                              <Input id="location" name="location" className="mt-2" placeholder="Edmonton, AB" />
+                              <Label htmlFor="location">City / Region *</Label>
+                              <Input id="location" name="location" required className="mt-2" placeholder="Edmonton, AB" />
                             </div>
                           </div>
 
@@ -307,19 +335,19 @@ const Enchanted = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="kids">5. Will any little ones be joining the celebration?</Label>
+                            <Label htmlFor="kids">5. Will any little ones be joining the celebration? *</Label>
                             <p className="text-xs text-muted-foreground mt-1">We have plenty to keep kids happy and entertained.</p>
-                            <Textarea id="kids" name="children_attending" className="mt-2 min-h-20" placeholder="Yes / No and any details" />
+                            <Textarea id="kids" name="children_attending" required className="mt-2 min-h-20" placeholder="Yes / No and any details" />
                           </div>
 
                           <div>
-                            <Label htmlFor="aesthetic">6. Have you had a chance to peek at our vision board? Do you love the aesthetic we have curated, or do you have something else in mind?</Label>
+                            <Label htmlFor="aesthetic">6. Have you had a chance to peek at our vision board? Do you love the aesthetic we have curated, or do you have something else in mind? *</Label>
                             <p className="text-xs text-muted-foreground mt-1">We work within a defined look and feel, so we would love to know how aligned you are with our vision.</p>
-                            <Textarea id="aesthetic" name="vision_alignment" className="mt-2 min-h-20" />
+                            <Textarea id="aesthetic" name="vision_alignment" required className="mt-2 min-h-20" />
                           </div>
 
                           <div>
-                            <Label className="mb-3 block">7. Which optional add-ons are you most interested in?</Label>
+                            <Label className="mb-3 block">7. Which optional add-ons are you most interested in? *</Label>
                             <div className="grid sm:grid-cols-2 gap-2">
                               {OPTIONAL_ADDONS.map((addon) => (
                                 <label
@@ -334,30 +362,30 @@ const Enchanted = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="extra">8. Is there anything else you would like us to know about you, your guests, or your vision for the weekend?</Label>
-                            <Textarea id="extra" name="additional_info" className="mt-2 min-h-20" />
+                            <Label htmlFor="extra">8. Is there anything else you would like us to know about you, your guests, or your vision for the weekend? *</Label>
+                            <Textarea id="extra" name="additional_info" required className="mt-2 min-h-20" />
                           </div>
 
                           <div>
-                            <Label htmlFor="questions">9. Do you have any questions for us at this stage?</Label>
-                            <Textarea id="questions" name="questions" className="mt-2 min-h-20" />
+                            <Label htmlFor="questions">9. Do you have any questions for us at this stage? *</Label>
+                            <Textarea id="questions" name="questions" required className="mt-2 min-h-20" />
                           </div>
 
                           <div>
-                            <Label htmlFor="photoWilling">10. Would you be willing to share a photo of the two of you?</Label>
+                            <Label htmlFor="photoWilling">10. Would you be willing to share a photo of the two of you? *</Label>
                             <p className="text-xs text-muted-foreground mt-1">We would love to put a face to the names.</p>
-                            <Input id="photoWilling" name="photo_willing" className="mt-2" placeholder="Yes / No" />
+                            <Input id="photoWilling" name="photo_willing" required className="mt-2" placeholder="Yes / No" />
                           </div>
 
                           <div>
-                            <Label htmlFor="photoUpload">Drop photo(s) here (optional)</Label>
+                            <Label htmlFor="photoUpload">Drop photo here *</Label>
                             <input
                               ref={photoInputRef}
                               id="photoUpload"
-                              name="couple_photos"
+                              name="attachment"
                               type="file"
                               accept="image/*"
-                              multiple
+                              required
                               className="sr-only"
                               onChange={(event) => {
                                 if (event.target.files) {
@@ -390,8 +418,8 @@ const Enchanted = () => {
                               }`}
                             >
                               <Upload className="w-5 h-5 mx-auto mb-2 text-secondary" />
-                              <p className="text-sm font-medium">Drop image files here or click to upload</p>
-                              <p className="text-xs text-muted-foreground mt-1">JPG, PNG, HEIC and other image files</p>
+                              <p className="text-sm font-medium">Drop one image file here or click to upload</p>
+                              <p className="text-xs text-muted-foreground mt-1">JPG, PNG, HEIC and other image files (single file)</p>
                             </div>
                             {photoNames.length > 0 && (
                               <p className="text-xs text-muted-foreground mt-2">
