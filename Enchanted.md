@@ -1,6 +1,6 @@
 THE ENCHANTED WEDDING WEEKEND AT RUSTIC RETREAT
 
-Welcome - and thank you for being here. If you have found your way to this page, chances are something about this vision spoke to you. All the details are below, and we hope by the end you will feel exactly the same way we do - that this is something truly special.
+Welcome - and thank you for being here. If you have found your way to this page, chances are something about this vision spoke to you. All the details below (vision board above), and we hope by the end you will feel exactly the same way we do - that this is something truly special.
 
 This experience is a collaboration between Rustic Retreat and [Ever So Memorable Events](https://eversomemorableevents.ca), and together we are offering it to one couple only. We are looking for the right fit on both sides - a couple whose vision aligns with ours and who is ready to show up, celebrate, and let us handle the rest.
 
