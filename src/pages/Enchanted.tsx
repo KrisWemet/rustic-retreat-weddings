@@ -16,7 +16,7 @@ import { useToast } from "@/hooks/use-toast";
 import enchantedMarkdown from "../../Enchanted.md?raw";
 
 const OPTIONAL_ADDONS = [
-  "Bar service",
+  "Bar service staff",
   "Fireworks display",
   "Photo booth",
   "Midnight taco bar or BBQ",
@@ -29,7 +29,6 @@ const OPTIONAL_ADDONS = [
 ];
 
 const ENCHANTED_APPLICATION_EMAIL = "rusticretreatalberta@gmail.com";
-const ENCHANTED_FORM_ENDPOINT = `https://formsubmit.co/ajax/${ENCHANTED_APPLICATION_EMAIL}`;
 
 const escapeHtml = (value: string) =>
   value
@@ -121,7 +120,10 @@ const Enchanted = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isDragActive, setIsDragActive] = useState(false);
   const [photoNames, setPhotoNames] = useState<string[]>([]);
+  const [submitAttempted, setSubmitAttempted] = useState(false);
+  const formRef = useRef<HTMLFormElement | null>(null);
   const photoInputRef = useRef<HTMLInputElement | null>(null);
+  const replyToInputRef = useRef<HTMLInputElement | null>(null);
 
   const detailsHtml = useMemo(() => {
     const eventDetailsOnly = getEventDetailsMarkdown(enchantedMarkdown);
@@ -144,7 +146,7 @@ const Enchanted = () => {
     photoInputRef.current.files = transfer.files;
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -172,52 +174,36 @@ const Enchanted = () => {
       return;
     }
 
-    formData.delete("attachment");
-    formData.set("attachment", attachedPhoto);
-
     const replyTo = formData.get("email");
-    if (typeof replyTo === "string" && replyTo.trim().length > 0) {
-      formData.set("_replyto", replyTo.trim());
+    if (typeof replyTo === "string" && replyTo.trim().length > 0 && replyToInputRef.current) {
+      replyToInputRef.current.value = replyTo.trim();
     }
-    formData.set("_subject", "New Enchanted Wedding Application");
-    formData.set("_template", "table");
-    formData.set("_captcha", "false");
-    formData.delete("to_email");
-    formData.delete("destination_email");
 
-    try {
-      const response = await fetch(ENCHANTED_FORM_ENDPOINT, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
+    setSubmitAttempted(true);
+    form.submit();
+  };
 
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(errorText || "Form submission failed");
-      }
-
-      setIsSubmitted(true);
-      setPhotoNames([]);
-      if (photoInputRef.current) {
-        photoInputRef.current.value = "";
-      }
-      toast({
-        title: "Application sent",
-        description: "Thank you. Your application was sent to rusticretreatalberta@gmail.com.",
-      });
-      form.reset();
-    } catch (error) {
-      toast({
-        title: "Unable to submit right now",
-        description: "Please try again or email rusticretreatalberta@gmail.com.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
+  const handleIframeLoad = () => {
+    if (!submitAttempted) {
+      return;
     }
+
+    setSubmitAttempted(false);
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    setPhotoNames([]);
+
+    if (photoInputRef.current) {
+      photoInputRef.current.value = "";
+    }
+    if (formRef.current) {
+      formRef.current.reset();
+    }
+
+    toast({
+      title: "Application sent",
+      description: "Thank you. Your application was sent to rusticretreatalberta@gmail.com.",
+    });
   };
 
   return (
@@ -281,12 +267,21 @@ const Enchanted = () => {
                           This matches the questionnaire from Enchanted.md so we can review your application with all required details.
                         </p>
 
-                        <form onSubmit={handleSubmit} className="space-y-5">
+                        <form
+                          ref={formRef}
+                          onSubmit={handleSubmit}
+                          action={`https://formsubmit.co/${ENCHANTED_APPLICATION_EMAIL}`}
+                          method="POST"
+                          encType="multipart/form-data"
+                          target="enchanted-form-target"
+                          className="space-y-5"
+                        >
                           <input type="hidden" name="_subject" value="New Enchanted Wedding Application" />
+                          <input type="hidden" name="_replyto" ref={replyToInputRef} />
+                          <input type="hidden" name="_template" value="table" />
+                          <input type="hidden" name="_captcha" value="false" />
                           <input type="hidden" name="form_type" value="enchanted_wedding_application" />
                           <input type="hidden" name="page" value="/enchanted-wedding" />
-                          <input type="hidden" name="to_email" value={ENCHANTED_APPLICATION_EMAIL} />
-                          <input type="hidden" name="destination_email" value={ENCHANTED_APPLICATION_EMAIL} />
 
                           <div className="grid sm:grid-cols-2 gap-4">
                             <div>
@@ -443,6 +438,7 @@ const Enchanted = () => {
                             {isSubmitting ? "Submitting Application..." : "Submit Application"}
                           </CTAButton>
                         </form>
+                        <iframe title="Enchanted form submission target" name="enchanted-form-target" onLoad={handleIframeLoad} className="hidden" />
                       </>
                     )}
                   </CardContent>

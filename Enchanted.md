@@ -80,7 +80,7 @@ All property amenities (see below)
 
 OPTIONAL ADD-ONS
 
-Bar service
+Bar service staff
 Fireworks display
 Photo booth
 Midnight taco bar or BBQ
@@ -100,6 +100,7 @@ Vows
 Musician and song selections
 Menu preferences
 Wedding party size
+All refreshments
 The personal details that make it yours
 
 We will be with you every step of the way to help with every decision.
@@ -189,7 +190,7 @@ We have plenty to keep kids happy and entertained - we just love to know the mix
 We work within a defined look and feel, so we would love to know how aligned you are with our vision.
 
 7. Which optional add-ons are you most interested in?
-Bar service, fireworks display, photo booth, midnight taco bar or BBQ, light lunch, full weekend catering, Sunday outdoor activity day, additional days.
+Bar service staff, fireworks display, photo booth, midnight taco bar or BBQ, light lunch, full weekend catering, Sunday outdoor activity day, additional days.
 
 8. Is there anything else you would like us to know about you, your guests, or your vision for the weekend?
 Anything at all - we are all ears.
