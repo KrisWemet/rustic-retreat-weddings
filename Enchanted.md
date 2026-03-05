@@ -39,23 +39,20 @@ SATURDAY
 3:45 PM      Couples portraits
 4:15 PM      Family formals
 5:05 PM      Bridal party photos
-5:30 PM      Photo wrap, guests begin arriving and are seated
+5:30 PM      Guests begin arriving and are seated
 5:55 PM      Grand entrance
 6:10 PM      Welcome remarks and toasts
 6:30 PM      Dinner served
 7:30 PM      Dinner wraps, dessert
 7:45 PM      Guests enjoy cocktail hour, lawn games and mingling
 7:45 PM      Couple slips away for golden hour portraits
-8:30 PM      Couple rejoins guests
 8:45 PM      Guests move to ceremony space
-8:50 PM      Guests seated, candles lit, pre-ceremony music plays
 9:00 PM      Ceremony begins
 9:30 PM      Ceremony ends, recessional
 9:35 PM      First dance
 9:40 PM      Parent dances
-9:50 PM      Open dancing begins
+9:50 PM      Dancefloor opens
 10:15 PM     Cake cutting
-11:25 PM     Guests move outside - optional fireworks display (add-on)
 11:30 PM     Optional fireworks (add-on)
 11:55 PM     MC announces optional midnight snack (add-on)
 12:00 AM     Optional midnight taco bar opens, music transitions to ambient (add-on)
