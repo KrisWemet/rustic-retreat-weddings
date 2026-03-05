@@ -20,7 +20,7 @@ const OPTIONAL_ADDONS = [
   "Fireworks display",
   "Photo booth",
   "Midnight taco bar or BBQ",
-  "Light lunch",
+  "Optional light lunch",
   "Full weekend catering",
   "Sunday outdoor activity day",
   "Additional days",
@@ -339,7 +339,7 @@ const Enchanted = () => {
 
                           <div>
                             <Label className="mb-3 block">7. Which optional add-ons are you most interested in? *</Label>
-                            <p className="text-xs text-muted-foreground mt-1 mb-3">Bar service staff, fireworks display, photo booth, midnight taco bar or BBQ, light lunch, full weekend catering, Sunday outdoor activity day, additional days.</p>
+                            <p className="text-xs text-muted-foreground mt-1 mb-3">Bar service staff, fireworks display, photo booth, midnight taco bar or BBQ, optional light lunch, full weekend catering, Sunday outdoor activity day, additional days.</p>
                             <div className="grid sm:grid-cols-2 gap-2">
                               {OPTIONAL_ADDONS.map((addon) => (
                                 <label

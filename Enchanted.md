@@ -63,30 +63,15 @@ SATURDAY
 12:15 AM+   Night winds down naturally at the firepit and lounge areas
 
 
-WHAT'S INCLUDED IN THE ENCHANTED PACKAGE
-
-Full wedding planning and coordination
-Catering
-Florals and decor
-DJ
-Licensed officiant
-Wedding cake and cupcakes
-Photographer and videographer
-Rustic cabin (full weekend)
-Bridal suite cabin (wedding day)
-Complete setup and takedown
-All property amenities (see below)
-
-
 OPTIONAL ADD-ONS
 
 Bar service staff
 Fireworks display
 Photo booth
 Midnight taco bar or BBQ
-Optional light lunch served to getting-ready suite
+Optional light lunch
 Full weekend catering (no cooking or cleaning for anyone all weekend)
-Sunday outdoor event
+Sunday outdoor activity day
 Additional days
 Nearby lakefront AirBnB for groom and groomsmen to get ready
 Hair and makeup
@@ -95,12 +80,12 @@ Hair and makeup
 WHAT YOU'LL TAKE CARE OF
 
 Wedding attire and wedding party attire
-Hair and makeup (or we organize it for you)
+Hair and makeup (you are responsible, but we can help coordinate it)
 Vows
 Musician and song selections
 Menu preferences
 Wedding party size
-All refreshments
+All refreshments (alcoholic and non-alcoholic beverages) are the couple's responsibility
 The personal details that make it yours
 
 We will be with you every step of the way to help with every decision.
@@ -112,13 +97,21 @@ The Base Package - Everything You Need to Say "I Do"
 Here's what's included:
 
 Venue + Full Setup - Completely decorated and ready. You arrive, get married, celebrate. No hauling decor. No day-of stress.
-Professional Photography - Candids, portraits, details-the moments that matter
-Professional Videography - A film of your day to relive forever
-Floral Design - Custom flowers throughout the space
-Cake & Catering Coordination - We source and manage it all
-Core Vendor Team - Catering, DJ/entertainment, rentals, lighting-no piecing together a wedding from scratch
-Day-of Coordination - Your dedicated point person keeps everything flowing seamlessly
-Customization Options - Add-ons to make it uniquely yours
+Full wedding planning and coordination - from pre-planning through wedding day flow.
+Complete setup and takedown - decor, layout, and teardown are all handled for you.
+Rustic cabin (full weekend) + bridal suite cabin (wedding day).
+All property amenities (see below) are included.
+Planning and coordination vendor - included.
+Catering (reception dinner) - included.
+Floral and decor vendor - included.
+DJ/entertainment vendor - included.
+Licensed officiant - included.
+Cake and cupcakes vendor - included.
+Photography vendor - included.
+Videography vendor - included.
+Rentals vendor - included.
+Lighting vendor - included.
+Customization options - add-ons to make it uniquely yours.
 
 Here's the real math:
 Booking these vendors separately? You're looking at $32,500+ before you even start comparing quotes and negotiating.
@@ -206,7 +199,7 @@ We have plenty to keep kids happy and entertained - we just love to know the mix
 We work within a defined look and feel, so we would love to know how aligned you are with our vision.
 
 7. Which optional add-ons are you most interested in?
-Bar service staff, fireworks display, photo booth, midnight taco bar or BBQ, light lunch, full weekend catering, Sunday outdoor activity day, additional days.
+Bar service staff, fireworks display, photo booth, midnight taco bar or BBQ, optional light lunch, full weekend catering, Sunday outdoor activity day, additional days.
 
 8. Is there anything else you would like us to know about you, your guests, or your vision for the weekend?
 Anything at all - we are all ears.
