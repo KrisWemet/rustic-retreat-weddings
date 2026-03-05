@@ -164,7 +164,7 @@ const Packages = () => {
                 <div className="text-center lg:text-left">
                   <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Perfect Timeline</h2>
                   <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none mb-3">
-                    From intimate elopements to the ultimate retreat—find the package that fits your vision.
+                    From intimate elopements to the ultimate retreat-find the package that fits your vision.
                   </p>
                 </div>
               </ScrollReveal>
@@ -303,7 +303,7 @@ const Packages = () => {
                     <li>• Curated selection of décor pieces</li>
                     <li>• Wide variety of ceremony arch options</li>
                     <li>• Vintage pieces & centerpieces</li>
-                    <li>• Free to use—no rental fees</li>
+                    <li>• Free to use-no rental fees</li>
                     <li>• Add your own touches</li>
                   </ul>
                 </CardContent>
@@ -346,7 +346,7 @@ const Packages = () => {
               <p className="text-sm uppercase tracking-widest text-secondary mb-4">BEYOND THE CEREMONY</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Your Weekend. Your Way.</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Rustic Retreat isn't only about the ceremony and reception—<strong>the whole weekend should show who you are as a couple.</strong> When you rent the land, you'll have the freedom to make it yours. A few ideas to spark your planning.
+                Rustic Retreat isn't only about the ceremony and reception-<strong>the whole weekend should show who you are as a couple.</strong> When you rent the land, you'll have the freedom to make it yours. A few ideas to spark your planning.
               </p>
             </div>
 
@@ -512,7 +512,7 @@ const Packages = () => {
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  Half a dozen Airbnb properties sit within 5-15 minutes around the lake. For guests who want on-site comfort without tent camping, RVezy.com delivers trailers right to your camping area—all the coziness, none of the setup.
+                  Half a dozen Airbnb properties sit within 5-15 minutes around the lake. For guests who want on-site comfort without tent camping, RVezy.com delivers trailers right to your camping area-all the coziness, none of the setup.
                 </p>
 
                 <div className="bg-secondary/10 p-6 rounded-lg border-l-4 border-secondary">
@@ -570,7 +570,7 @@ const Packages = () => {
                   <CardContent className="p-6">
                     <h3 className="font-semibold text-xl mb-3">Arrival Day</h3>
                     <p className="text-muted-foreground mb-4">
-                      The property is yours from the start of your booking. Guests can arrive whenever works for them throughout the day—no strict check-in time.
+                      The property is yours from the start of your booking. Guests can arrive whenever works for them throughout the day-no strict check-in time.
                     </p>
                     <p className="text-sm">
                       Early birds can set up camp at dawn. Night owls can roll in after dinner. Everyone arrives on their own schedule.
@@ -630,7 +630,7 @@ const Packages = () => {
                       ))}
                     </ul>
                     <p className="font-bold text-lg">{content.packages.pricingComparison.rusticRetreat.priceRange}</p>
-                    <p className="text-sm mt-2">Based on your timeline—all in ONE connected place</p>
+                    <p className="text-sm mt-2">Based on your timeline-all in ONE connected place</p>
                   </CardContent>
                 </Card>
               </div>

@@ -45,7 +45,7 @@ They chose the 5-day package, giving their families time to really connect. What
 
 "By day two, people who'd never met were sharing breakfast and planning hiking adventures," Mike shares. "My college roommates were teaching Sarah's nephews how to skip rocks."
 
-The ceremony was intimate—just 65 of their closest people in the birch grove. "No rushing, no timeline pressure," Sarah remembers. "We actually got to talk to everyone."
+The ceremony was intimate-just 65 of their closest people in the birch grove. "No rushing, no timeline pressure," Sarah remembers. "We actually got to talk to everyone."
 
 But it's the unplanned moments they treasure most: the 2am guitar circle around the bonfire. Her father's impromptu speech the morning after.
 
@@ -60,13 +60,13 @@ But it's the unplanned moments they treasure most: the 2am guitar circle around 
     favoriteMemory: "Watching both grandmothers share a bottle of wine by the fire, becoming fast friends.",
     photographerCredit: "Emily Rose Photography",
     // New case study fields
-    testimonialQuote: "We had time. That's what I remember most—we actually had time.",
+    testimonialQuote: "We had time. That's what I remember most-we actually had time.",
     whatMadeItSpecial: [
       "Five days gave families time to truly bond",
       "No rushing between formal events",
       "Unplanned moments became the highlights",
     ],
-    unexpectedMoment: "Her father's impromptu sunrise speech the morning after the wedding—there wasn't a dry eye at the campfire.",
+    unexpectedMoment: "Her father's impromptu sunrise speech the morning after the wedding-there wasn't a dry eye at the campfire.",
   },
   {
     id: "2",
@@ -82,11 +82,11 @@ But it's the unplanned moments they treasure most: the 2am guitar circle around 
       { src: veilKiss, alt: "Intimate veil kiss moment", caption: "Stolen moments" },
       { src: bridalPortrait, alt: "Jenna on the cabin porch", caption: "Morning calm" },
     ],
-    story: `Jenna had always dreamed of a fall wedding—the colors, the crisp air, the cozy atmosphere. When she and Tyler discovered Rustic Retreat, she knew the birch grove was meant to be their altar.
+    story: `Jenna had always dreamed of a fall wedding-the colors, the crisp air, the cozy atmosphere. When she and Tyler discovered Rustic Retreat, she knew the birch grove was meant to be their altar.
 
 "We didn't want a stage," Tyler explains. "We wanted to stand in nature, surrounded by trees that had seen a hundred seasons."
 
-Their September weekend was blessed with perfect weather—warm days, cool nights, and leaves just beginning to turn. Guests arrived Thursday, setting up camp and helping string lights through the trees.
+Their September weekend was blessed with perfect weather-warm days, cool nights, and leaves just beginning to turn. Guests arrived Thursday, setting up camp and helping string lights through the trees.
 
 "Everyone contributed something," Jenna remembers. "Tyler's dad built the arch. My sister arranged all the flowers."
 
@@ -125,7 +125,7 @@ Their reception extended late into the night, guests wrapped in blankets around 
       { src: coupleWalkingTrail, alt: "Walking the forest path together", caption: "Just the two of us" },
       { src: cakeCutting, alt: "Sunset portraits", caption: "The day we'll never forget" },
     ],
-    story: `For Amanda and Chris, the biggest challenge wasn't the flowers or the food—it was that their families lived 4,000 kilometers apart and had never met.
+    story: `For Amanda and Chris, the biggest challenge wasn't the flowers or the food-it was that their families lived 4,000 kilometers apart and had never met.
 
 "We knew we had about 6 hours at a traditional wedding for them to connect," Amanda explains. "That wasn't going to cut it."
 
@@ -152,7 +152,7 @@ Their families now have a group text. They've visited each other three times sin
       "Shared meals created lasting connections",
       "The wedding became a family reunion",
     ],
-    unexpectedMoment: "Chris's mother and Amanda's mother now talk weekly—they've become close friends.",
+    unexpectedMoment: "Chris's mother and Amanda's mother now talk weekly-they've become close friends.",
   },
 ];
 

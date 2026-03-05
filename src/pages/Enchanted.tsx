@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageTransition from "@/components/PageTransition";
-import heroImage from "@/assets/gallery/wedding-party-formal.webp";
+import heroImage from "@/assets/gallery/enchanted/generated-image.png";
 import { useToast } from "@/hooks/use-toast";
 import enchantedMarkdown from "../../Enchanted.md?raw";
 
@@ -181,40 +181,19 @@ const Enchanted = () => {
       <div className="min-h-screen">
         <Navigation />
 
-        <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden mt-20">
-          <div className="absolute inset-0">
-            <img
-              src={heroImage}
-              alt="Wedding celebration at Rustic Retreat"
-              className="h-full w-full object-cover object-center"
-              loading="eager"
-              decoding="async"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/75" />
-          </div>
-          <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
-            <p className="font-handwriting text-3xl md:text-4xl text-accent mb-3">Temporary Feature Event</p>
-            <h1 className="text-4xl md:text-6xl font-bold mb-5">Enchanted Wedding</h1>
-            <p className="max-w-3xl mx-auto text-lg md:text-xl text-primary-foreground/90">
-              One couple. One weekend. A fully set-up celebration experience at Rustic Retreat.
-            </p>
-          </div>
+        <section className="mt-20">
+          <img
+            src={heroImage}
+            alt="Wedding celebration at Rustic Retreat"
+            className="block w-full h-auto"
+            loading="eager"
+            decoding="async"
+          />
         </section>
 
         <section id="details" className="section">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <div className="grid sm:grid-cols-2 gap-3 mb-5">
-                <div className="rounded-xl border border-border bg-card p-4">
-                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mb-1">Dates</p>
-                  <p className="font-semibold text-primary">August 21 to 23</p>
-                </div>
-                <div className="rounded-xl border border-border bg-card p-4">
-                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mb-1">Capacity</p>
-                  <p className="font-semibold text-primary">Up to 50 guests</p>
-                </div>
-              </div>
-
               <Card className="border-2 shadow-soft">
                 <CardContent className="p-6 md:p-8">
                   <div
@@ -287,13 +266,13 @@ const Enchanted = () => {
 
                           <div>
                             <Label htmlFor="story">2. Tell us a little about yourselves! How did you meet, and how long have you been together? *</Label>
-                            <p className="text-xs text-muted-foreground mt-1">We love a good love story — don't hold back.</p>
+                            <p className="text-xs text-muted-foreground mt-1">We love a good love story - don't hold back.</p>
                             <Textarea id="story" name="love_story" required className="mt-2 min-h-24" />
                           </div>
 
                           <div>
                             <Label htmlFor="vision">3. What does your ideal wedding weekend look and feel like? What matters most to you? *</Label>
-                            <p className="text-xs text-muted-foreground mt-1">Atmosphere, flow, those non-negotiable moments — tell us what is at the heart of it for you.</p>
+                            <p className="text-xs text-muted-foreground mt-1">Atmosphere, flow, those non-negotiable moments - tell us what is at the heart of it for you.</p>
                             <Textarea id="vision" name="ideal_vision" required className="mt-2 min-h-24" />
                           </div>
 

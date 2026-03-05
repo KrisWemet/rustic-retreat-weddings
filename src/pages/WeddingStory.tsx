@@ -159,7 +159,7 @@ const WeddingStory = () => {
                     <blockquote className="text-xl font-serif italic text-primary leading-relaxed mb-4">
                       "{story.favoriteMemory}"
                     </blockquote>
-                    <p className="text-muted-foreground">— {story.coupleNames.split(' & ')[0]}'s favorite memory</p>
+                    <p className="text-muted-foreground">- {story.coupleNames.split(' & ')[0]}'s favorite memory</p>
                   </div>
                 </ScrollReveal>
               )}

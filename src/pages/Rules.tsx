@@ -138,7 +138,7 @@ const Rules = () => {
                         <div>
                             <RuleSection id="s1" number="1" title="Fire Safety & Smoking">
                                 <Subsection title="1.1 Fire Pits & Open Fires">
-                                    <WarnAlert title="Fire Safety — Rural Property Rules Strictly Enforced">
+                                    <WarnAlert title="Fire Safety - Rural Property Rules Strictly Enforced">
                                         <ul className="list-disc pl-5 mt-2 space-y-1">
                                             <li>Check fire ban status before every event: <a href="http://www.albertafirebans.ca" target="_blank" rel="noreferrer" className="underline hover:text-amber-700">albertafirebans.ca</a></li>
                                             <li>No fires of any kind are permitted during a Fire Ban or Fire Advisory</li>
@@ -146,21 +146,21 @@ const Rules = () => {
                                         </ul>
                                     </WarnAlert>
                                     <RuleList items={[
-                                        "Designated fire pits only — no fires outside marked fire pit locations",
-                                        "Fire pits must be attended at all times — never leave a fire unattended",
+                                        "Designated fire pits only - no fires outside marked fire pit locations",
+                                        "Fire pits must be attended at all times - never leave a fire unattended",
                                         "Fires must be fully extinguished before guests retire for the night and before departure",
-                                        "Dead-out check required — ashes must be cold to the touch; use water or sand to extinguish",
+                                        "Dead-out check required - ashes must be cold to the touch; use water or sand to extinguish",
                                         "Maximum fire size: 1 metre diameter, 60 cm height",
-                                        <strong key="noshow" className="text-foreground">No fires during any Fire Ban or Fire Advisory — no exceptions</strong>
+                                        <strong key="noshow" className="text-foreground">No fires during any Fire Ban or Fire Advisory - no exceptions</strong>
                                     ]} />
                                 </Subsection>
 
                                 <Subsection title="1.2 Smoking">
                                     <RuleList items={[
                                         "Use cigarette disposal containers or fire pit",
-                                        <span key="1"><strong>No smoking inside any buildings</strong> — all structures are non-smoking</span>,
+                                        <span key="1"><strong>No smoking inside any buildings</strong> - all structures are non-smoking</span>,
                                         "If smoking while walking through forested trail or grassy areas: fully extinguish cigarette safely (with water or in a dirt patch) and dispose of butt appropriately. Do not flick into grass, brush, forest, or discard on the ground.",
-                                        "Enhanced caution during dry conditions — no smoking while walking through forested or grassy areas during any Fire Advisory period"
+                                        "Enhanced caution during dry conditions - no smoking while walking through forested or grassy areas during any Fire Advisory period"
                                     ]} />
                                 </Subsection>
 
@@ -169,21 +169,21 @@ const Rules = () => {
                                         All fireworks at this venue are managed exclusively by venue staff. Guest-supplied fireworks are strictly prohibited.
                                     </WarnAlert>
                                     <RuleList items={[
-                                        "Venue-coordinated only — all fireworks must be approved, organized, and purchased through the venue",
-                                        "Venue handles all permits and approvals — County Fire Services approval secured when required",
-                                        "Professional setup, discharge, and cleanup — venue staff will handle all aspects of any firework display",
-                                        "Advance booking required — fireworks must be requested and confirmed during final event planning",
+                                        "Venue-coordinated only - all fireworks must be approved, organized, and purchased through the venue",
+                                        "Venue handles all permits and approvals - County Fire Services approval secured when required",
+                                        "Professional setup, discharge, and cleanup - venue staff will handle all aspects of any firework display",
+                                        "Advance booking required - fireworks must be requested and confirmed during final event planning",
                                         "No fireworks during any Fire Ban, Fire Advisory, or Restriction",
-                                        "Fire safety measures maintained — fire extinguishers, water supply, and safety personnel present during all displays",
-                                        "Post-discharge inspection — venue staff will inspect discharge area for smoldering materials"
+                                        "Fire safety measures maintained - fire extinguishers, water supply, and safety personnel present during all displays",
+                                        "Post-discharge inspection - venue staff will inspect discharge area for smoldering materials"
                                     ]} />
                                 </Subsection>
 
                                 <Subsection title="1.4 Candles & Decorative Flames">
                                     <RuleList items={[
-                                        "LED flameless candles strongly encouraged — preferred over real candles for all décor",
+                                        "LED flameless candles strongly encouraged - preferred over real candles for all décor",
                                         "Real candles: must be in stable holders, attended at all times, and extinguished before leaving area unattended",
-                                        "No candles in tents or fabric structures — serious fire hazard",
+                                        "No candles in tents or fabric structures - serious fire hazard",
                                         "Tiki torches: must be secured, positioned away from structures, and extinguished before leaving unattended"
                                     ]} />
                                 </Subsection>
@@ -220,7 +220,7 @@ const Rules = () => {
 
                                 <Subsection title="2.2 Generator Use">
                                     <RuleList items={[
-                                        <span key="gen"><strong>Guest generators off by 10:00 PM</strong> — mandatory shutoff time, no exceptions</span>,
+                                        <span key="gen"><strong>Guest generators off by 10:00 PM</strong> - mandatory shutoff time, no exceptions</span>,
                                         "Exhaust must be directed away from people and structures",
                                         "Generator refueling: unit must be turned off and allowed to cool before refueling"
                                     ]} />
@@ -230,7 +230,7 @@ const Rules = () => {
                                     <RuleList items={[
                                         "Respect noise reduction hours for the comfort of fellow guests and neighbours",
                                         "Vehicle noise: no revving engines, loud exhaust, or car stereos after 10:00 PM",
-                                        "Respect other campers and guests — keep noise to a reasonable level at all times"
+                                        "Respect other campers and guests - keep noise to a reasonable level at all times"
                                     ]} />
                                 </Subsection>
                             </RuleSection>
@@ -241,32 +241,32 @@ const Rules = () => {
                                         <ul className="list-disc pl-5 mt-2 space-y-1">
                                             <li>No greywater or blackwater may be discharged anywhere on this property</li>
                                             <li>Violations are subject to environmental cleanup fees per contract</li>
-                                            <li>Self-contained RVs only — no hookups of any kind are available on-site</li>
+                                            <li>Self-contained RVs only - no hookups of any kind are available on-site</li>
                                         </ul>
                                     </DangerAlert>
                                     <RuleList items={[
-                                        "Maximum RVs per event as stated in contract — capacity is strictly enforced",
-                                        "Self-contained RVs only — all RVs must have functional fresh water and holding tanks",
-                                        "No hookups provided — no electrical, water, or sewer connections; off-grid / boondocking only",
-                                        "No RV dump station on-site — guests must be self-sufficient or use off-site facilities",
-                                        "Guest generators off by 10:00 PM — RV generators are subject to the same generator rules",
+                                        "Maximum RVs per event as stated in contract - capacity is strictly enforced",
+                                        "Self-contained RVs only - all RVs must have functional fresh water and holding tanks",
+                                        "No hookups provided - no electrical, water, or sewer connections; off-grid / boondocking only",
+                                        "No RV dump station on-site - guests must be self-sufficient or use off-site facilities",
+                                        "Guest generators off by 10:00 PM - RV generators are subject to the same generator rules",
                                         "Slide-outs and awnings: ensure adequate clearance from neighbouring units and trees"
                                     ]} />
                                 </Subsection>
 
                                 <Subsection title="3.2 Tent Camping">
                                     <RuleList items={[
-                                        "Respect spacing — maintain reasonable distance from other campers",
-                                        "Proper waste disposal — use provided facilities and waste bins"
+                                        "Respect spacing - maintain reasonable distance from other campers",
+                                        "Proper waste disposal - use provided facilities and waste bins"
                                     ]} />
                                 </Subsection>
 
                                 <Subsection title="3.3 General Camping Rules">
                                     <RuleList items={[
-                                        "Maximum overnight guests as stated in contract — capacity enforced",
-                                        "Campfires in designated pits only — no personal fires outside approved areas",
-                                        "Pack in, pack out — leave your camping area cleaner than you found it",
-                                        "Respect property — no damage to trees, plants, structures, or facilities"
+                                        "Maximum overnight guests as stated in contract - capacity enforced",
+                                        "Campfires in designated pits only - no personal fires outside approved areas",
+                                        "Pack in, pack out - leave your camping area cleaner than you found it",
+                                        "Respect property - no damage to trees, plants, structures, or facilities"
                                     ]} />
                                 </Subsection>
                             </RuleSection>
@@ -274,10 +274,10 @@ const Rules = () => {
                             <RuleSection id="s4" number="4" title="Vehicle & Traffic Rules">
                                 <Subsection title="4.1 Parking & Traffic Flow">
                                     <RuleList items={[
-                                        "On-site parking only — no parking on TWP RD 572A or any County roads",
-                                        <span key="park">Emergency access lane must remain clear at all times — <strong>no parking on the gravel driveway</strong></span>,
+                                        "On-site parking only - no parking on TWP RD 572A or any County roads",
+                                        <span key="park">Emergency access lane must remain clear at all times - <strong>no parking on the gravel driveway</strong></span>,
                                         "Speed limit: 15 km/h on all internal roads and driveways",
-                                        "Watch for pedestrians, animals, and wildlife — guests frequently walk to/from camping areas"
+                                        "Watch for pedestrians, animals, and wildlife - guests frequently walk to/from camping areas"
                                     ]} />
                                 </Subsection>
 
@@ -301,12 +301,12 @@ const Rules = () => {
                                         </table>
                                     </div>
                                     <RuleList items={[
-                                        "Headlights on at dusk and night — improve visibility on internal roads"
+                                        "Headlights on at dusk and night - improve visibility on internal roads"
                                     ]} />
                                 </Subsection>
 
                                 <Subsection title="4.3 Vehicle Safety">
-                                    <DangerAlert title="Zero Tolerance — Impaired Driving">
+                                    <DangerAlert title="Zero Tolerance - Impaired Driving">
                                         <ul className="list-disc pl-5 mt-2 space-y-1">
                                             <li>No impaired driving under any circumstances</li>
                                             <li>Arrange a sober driver before the event, use a shuttle/taxi, or stay overnight on-site</li>
@@ -314,9 +314,9 @@ const Rules = () => {
                                         </ul>
                                     </DangerAlert>
                                     <RuleList items={[
-                                        "Secure loads — use tarps and straps on trailers and truck beds",
-                                        "Children supervised near vehicles — drivers must watch carefully for children at play",
-                                        "No vehicle maintenance on-site — oil changes, repairs, and vehicle washing are prohibited"
+                                        "Secure loads - use tarps and straps on trailers and truck beds",
+                                        "Children supervised near vehicles - drivers must watch carefully for children at play",
+                                        "No vehicle maintenance on-site - oil changes, repairs, and vehicle washing are prohibited"
                                     ]} />
                                 </Subsection>
                             </RuleSection>
@@ -324,16 +324,16 @@ const Rules = () => {
                             <RuleSection id="s5" number="5" title="Alcohol & Responsible Service">
                                 <Subsection title="5.1 Alcohol Policies">
                                     <RuleList items={[
-                                        "AGLC Special Event Licence required — event host is responsible for obtaining the licence when alcohol is being served",
-                                        "No alcohol service to minors — ID checks required for anyone appearing under 25",
-                                        "Drink responsibly — know your limits; water and food should be provided by host throughout the event"
+                                        "AGLC Special Event Licence required - event host is responsible for obtaining the licence when alcohol is being served",
+                                        "No alcohol service to minors - ID checks required for anyone appearing under 25",
+                                        "Drink responsibly - know your limits; water and food should be provided by host throughout the event"
                                     ]} />
                                 </Subsection>
                                 <Subsection title="5.2 Safe Transportation">
                                     <RuleList items={[
-                                        "Designated drivers encouraged — arrange a designated driver before the event begins",
-                                        "Overnight camping encouraged — guests consuming alcohol are encouraged to stay on-site",
-                                        "Keys held if necessary — hosts and venue staff may intervene to prevent impaired driving"
+                                        "Designated drivers encouraged - arrange a designated driver before the event begins",
+                                        "Overnight camping encouraged - guests consuming alcohol are encouraged to stay on-site",
+                                        "Keys held if necessary - hosts and venue staff may intervene to prevent impaired driving"
                                     ]} />
                                 </Subsection>
                             </RuleSection>
@@ -369,59 +369,59 @@ const Rules = () => {
                                         </table>
                                     </div>
                                     <RuleList items={[
-                                        "No littering — pack out what you pack in",
-                                        "Cigarette butts in disposal containers or fire pit only — not on ground or in vegetation",
-                                        "Event cleanup prior to departure — event hosts are responsible for post-event cleanup"
+                                        "No littering - pack out what you pack in",
+                                        "Cigarette butts in disposal containers or fire pit only - not on ground or in vegetation",
+                                        "Event cleanup prior to departure - event hosts are responsible for post-event cleanup"
                                     ]} />
                                 </Subsection>
 
                                 <Subsection title="6.2 Sanitation">
                                     <RuleList items={[
-                                        "Use designated washroom facilities — outhouses and/or portable toilets are provided",
-                                        "No outdoor urination or defecation — use provided facilities at all times",
+                                        "Use designated washroom facilities - outhouses and/or portable toilets are provided",
+                                        "No outdoor urination or defecation - use provided facilities at all times",
                                         "RV holding tanks: no dumping of greywater or blackwater on property",
-                                        "Report facility issues — contact on-site staff immediately if toilets are full or require servicing"
+                                        "Report facility issues - contact on-site staff immediately if toilets are full or require servicing"
                                     ]} />
                                 </Subsection>
 
                                 <Subsection title="6.3 Environmental Stewardship">
                                     <RuleList items={[
-                                        "Leave no trace — minimize your impact on the land",
-                                        "Stay on paths and roads — avoid trampling vegetation or creating new trails",
-                                        "No tree cutting or damage — do not cut, carve, or damage trees in any way",
-                                        "No firewood collection from property — firewood is provided (refills available for a fee); do not cut trees or branches",
-                                        "Protect wildlife — observe from a safe distance; do not feed or harass animals",
-                                        "No dumping of any kind — fuel, chemicals, wastewater, and garbage must be disposed of properly",
-                                        "Spill reporting — report any fuel, chemical, or sewage spills to staff immediately"
+                                        "Leave no trace - minimize your impact on the land",
+                                        "Stay on paths and roads - avoid trampling vegetation or creating new trails",
+                                        "No tree cutting or damage - do not cut, carve, or damage trees in any way",
+                                        "No firewood collection from property - firewood is provided (refills available for a fee); do not cut trees or branches",
+                                        "Protect wildlife - observe from a safe distance; do not feed or harass animals",
+                                        "No dumping of any kind - fuel, chemicals, wastewater, and garbage must be disposed of properly",
+                                        "Spill reporting - report any fuel, chemical, or sewage spills to staff immediately"
                                     ]} />
                                 </Subsection>
                             </RuleSection>
 
                             <RuleSection id="s7" number="7" title="Pets">
                                 <RuleList items={[
-                                    "Pets allowed with advance approval — event host must notify venue in advance (pet fee may apply)",
-                                    "Leashed at all times in main areas — maximum 6-foot leash",
-                                    "Off-leash permitted in back field and on walking trails — pet must remain under owner's verbal control",
-                                    "Owner responsible for control — pets must be under owner's control at all times as there are other animals on the property including chickens, goats, turkeys, ducks, cats and dogs",
-                                    "Clean up after pets — waste bags are provided; dispose in designated bins",
-                                    "No aggressive animals — pets showing aggression must be removed from the property immediately",
-                                    "No pets in Bridal Suite or Décor Shed — these buildings are pet-free zones",
-                                    "Quiet pets only — excessive barking or noise is not permitted and may result in removal",
-                                    "Tie-outs in camping area only — pets may be tied to trees/stakes only in camping areas to prevent tripping hazards in common areas"
+                                    "Pets allowed with advance approval - event host must notify venue in advance (pet fee may apply)",
+                                    "Leashed at all times in main areas - maximum 6-foot leash",
+                                    "Off-leash permitted in back field and on walking trails - pet must remain under owner's verbal control",
+                                    "Owner responsible for control - pets must be under owner's control at all times as there are other animals on the property including chickens, goats, turkeys, ducks, cats and dogs",
+                                    "Clean up after pets - waste bags are provided; dispose in designated bins",
+                                    "No aggressive animals - pets showing aggression must be removed from the property immediately",
+                                    "No pets in Bridal Suite or Décor Shed - these buildings are pet-free zones",
+                                    "Quiet pets only - excessive barking or noise is not permitted and may result in removal",
+                                    "Tie-outs in camping area only - pets may be tied to trees/stakes only in camping areas to prevent tripping hazards in common areas"
                                 ]} />
                             </RuleSection>
 
                             <RuleSection id="s8" number="8" title="Prohibited Activities">
-                                <DangerAlert title="Strictly Prohibited — Zero Tolerance">
+                                <DangerAlert title="Strictly Prohibited - Zero Tolerance">
                                     <ul className="list-disc pl-5 mt-2 space-y-1">
-                                        <li>ATVs, UTVs, dirt bikes, or off-road vehicles — motorized recreation vehicles prohibited (mobility devices excepted)</li>
-                                        <li>Hunting or firearms — hunting is prohibited; no firearms permitted on property during events</li>
-                                        <li>Weapons — knives (except small pocket knives), bows, and other weapons prohibited</li>
-                                        <li>Illegal drugs or substances — possession or use will result in immediate removal and authorities contacted</li>
-                                        <li>Unauthorized fires — only fires in designated pits; no personal campfires outside approved areas</li>
-                                        <li>Firewood collection — do not cut or collect any wood from the property</li>
-                                        <li>Tree cutting, carving, or damage — respect all vegetation</li>
-                                        <li>Unauthorized use of buildings or equipment — gazebo, buildings, sound system, etc. for event use only</li>
+                                        <li>ATVs, UTVs, dirt bikes, or off-road vehicles - motorized recreation vehicles prohibited (mobility devices excepted)</li>
+                                        <li>Hunting or firearms - hunting is prohibited; no firearms permitted on property during events</li>
+                                        <li>Weapons - knives (except small pocket knives), bows, and other weapons prohibited</li>
+                                        <li>Illegal drugs or substances - possession or use will result in immediate removal and authorities contacted</li>
+                                        <li>Unauthorized fires - only fires in designated pits; no personal campfires outside approved areas</li>
+                                        <li>Firewood collection - do not cut or collect any wood from the property</li>
+                                        <li>Tree cutting, carving, or damage - respect all vegetation</li>
+                                        <li>Unauthorized use of buildings or equipment - gazebo, buildings, sound system, etc. for event use only</li>
                                         <li>Fishing or swimming in the pond</li>
                                     </ul>
                                 </DangerAlert>
@@ -430,10 +430,10 @@ const Rules = () => {
                             <RuleSection id="s9" number="9" title="Children & Safety">
                                 <Subsection title="9.1 Supervision Requirements">
                                     <RuleList items={[
-                                        "Children supervised at all times — parents and guardians are responsible for supervision at all times",
-                                        "No unattended children near fire pits — adult supervision is mandatory at all fires",
-                                        "Watch for vehicle traffic — children must be supervised near parking areas and internal roads",
-                                        "Pond safety — children are not permitted near the pond without direct adult supervision"
+                                        "Children supervised at all times - parents and guardians are responsible for supervision at all times",
+                                        "No unattended children near fire pits - adult supervision is mandatory at all fires",
+                                        "Watch for vehicle traffic - children must be supervised near parking areas and internal roads",
+                                        "Pond safety - children are not permitted near the pond without direct adult supervision"
                                     ]} />
                                 </Subsection>
 
@@ -442,17 +442,17 @@ const Rules = () => {
                                         This is a natural, wooded rural property. Wildlife including deer, coyotes, porcupines, skunks, and various bird species can be present and active at any time.
                                     </WarnAlert>
                                     <RuleList items={[
-                                        "Always know where your children are — young children can wander quickly in forested areas",
-                                        "Do not approach or feed wildlife — observe from a safe distance; wildlife can be unpredictable",
-                                        "Be aware at dawn and dusk — wildlife is most active during these periods",
-                                        "Secure food and garbage — prevent attracting wildlife to camping areas"
+                                        "Always know where your children are - young children can wander quickly in forested areas",
+                                        "Do not approach or feed wildlife - observe from a safe distance; wildlife can be unpredictable",
+                                        "Be aware at dawn and dusk - wildlife is most active during these periods",
+                                        "Secure food and garbage - prevent attracting wildlife to camping areas"
                                     ]} />
                                 </Subsection>
 
                                 <Subsection title="9.3 General Hazards">
                                     <RuleList items={[
-                                        "Stay away from equipment and machinery — generators, sound equipment, etc. are not toys",
-                                        "No climbing on structures — gazebo, buildings, fences, and other structures are not for climbing"
+                                        "Stay away from equipment and machinery - generators, sound equipment, etc. are not toys",
+                                        "No climbing on structures - gazebo, buildings, fences, and other structures are not for climbing"
                                     ]} />
                                 </Subsection>
                             </RuleSection>
@@ -460,21 +460,21 @@ const Rules = () => {
                             <RuleSection id="s10" number="10" title="Weather & Emergency Procedures">
                                 <Subsection title="10.1 Severe Weather">
                                     <RuleList items={[
-                                        "Monitor weather conditions — staff will provide updates if severe weather is approaching",
-                                        "Stay indoors during lightning — avoid open areas, tents, and elevated ground during lightning",
-                                        "Follow staff directions — in extreme severe weather, evacuate to designated shelter immediately"
+                                        "Monitor weather conditions - staff will provide updates if severe weather is approaching",
+                                        "Stay indoors during lightning - avoid open areas, tents, and elevated ground during lightning",
+                                        "Follow staff directions - in extreme severe weather, evacuate to designated shelter immediately"
                                     ]} />
                                 </Subsection>
 
                                 <Subsection title="10.2 Fire Emergency">
-                                    <DangerAlert title="Fire Emergency Response — All Guests Must Know This">
+                                    <DangerAlert title="Fire Emergency Response - All Guests Must Know This">
                                         <ul className="list-disc pl-5 mt-2 space-y-1">
-                                            <li><strong>Assembly Point:</strong> Venue Administration Building (Residence 2) — evacuate here immediately</li>
-                                            <li>Call 911 immediately — do NOT assume someone else has called</li>
-                                            <li>Notify staff immediately — event emergency number: <strong>(780) 210-6252</strong></li>
-                                            <li>Do NOT re-enter any building — wait outside for Fire Department all-clear</li>
-                                            <li>Fire extinguishers located at: gazebo, bridal suite, and generator area — use ONLY if trained and safe to do so</li>
-                                            <li>Wildfire: Evacuate the entire property immediately — do not shelter in buildings</li>
+                                            <li><strong>Assembly Point:</strong> Venue Administration Building (Residence 2) - evacuate here immediately</li>
+                                            <li>Call 911 immediately - do NOT assume someone else has called</li>
+                                            <li>Notify staff immediately - event emergency number: <strong>(780) 210-6252</strong></li>
+                                            <li>Do NOT re-enter any building - wait outside for Fire Department all-clear</li>
+                                            <li>Fire extinguishers located at: gazebo, bridal suite, and generator area - use ONLY if trained and safe to do so</li>
+                                            <li>Wildfire: Evacuate the entire property immediately - do not shelter in buildings</li>
                                         </ul>
                                     </DangerAlert>
                                 </Subsection>
@@ -489,7 +489,7 @@ const Rules = () => {
                                                 </tr>
                                                 <tr>
                                                     <td className="p-3 border border-primary/20 bg-muted/40 font-bold text-red-700">Serious Injuries</td>
-                                                    <td className="p-3 border border-primary/20 bg-muted/10 text-muted-foreground">Call 911 immediately — do not delay treatment</td>
+                                                    <td className="p-3 border border-primary/20 bg-muted/10 text-muted-foreground">Call 911 immediately - do not delay treatment</td>
                                                 </tr>
                                                 <tr>
                                                     <td className="p-3 border border-primary/20 bg-muted/20 font-bold">Event Emergency Hotline</td>
@@ -504,20 +504,20 @@ const Rules = () => {
                             <RuleSection id="s11" number="11" title="Respect & Conduct">
                                 <Subsection title="11.1 General Conduct">
                                     <RuleList items={[
-                                        "Respect other guests — be courteous and considerate at all times",
-                                        "Respect property and facilities — treat the venue as if it were your own home",
-                                        "Respect neighbours — keep noise reasonable",
-                                        "No harassment or discrimination — all guests deserve a safe and welcoming environment",
-                                        "Follow staff directions — on-site operators and marshals are present for your safety and comfort",
-                                        "Photography etiquette — respect the couple's wishes regarding photos and social media posting"
+                                        "Respect other guests - be courteous and considerate at all times",
+                                        "Respect property and facilities - treat the venue as if it were your own home",
+                                        "Respect neighbours - keep noise reasonable",
+                                        "No harassment or discrimination - all guests deserve a safe and welcoming environment",
+                                        "Follow staff directions - on-site operators and marshals are present for your safety and comfort",
+                                        "Photography etiquette - respect the couple's wishes regarding photos and social media posting"
                                     ]} />
                                 </Subsection>
 
                                 <Subsection title="11.2 Property Respect">
                                     <RuleList items={[
-                                        "No vandalism or damage — any damage will be charged to the event host",
-                                        "Return the venue as you found it — return all picnic tables, ceremony benches, arches, hammocks, and other items to their original locations",
-                                        "Return borrowed items — décor, lawn chairs, games, fire extinguishers, first aid kits, and equipment must be returned to original locations, clean and properly stored"
+                                        "No vandalism or damage - any damage will be charged to the event host",
+                                        "Return the venue as you found it - return all picnic tables, ceremony benches, arches, hammocks, and other items to their original locations",
+                                        "Return borrowed items - décor, lawn chairs, games, fire extinguishers, first aid kits, and equipment must be returned to original locations, clean and properly stored"
                                     ]} />
                                 </Subsection>
                             </RuleSection>
@@ -525,9 +525,9 @@ const Rules = () => {
                             <RuleSection id="s12" number="12" title="Booking & Contract Provisions">
                                 <Subsection title="12.1 Guest Responsibilities">
                                     <RuleList items={[
-                                        "Event host responsible for guest conduct — the event host is liable for all guest violations",
-                                        "Environmental fee clause — guests are liable for cleanup costs if any wastewater violation occurs",
-                                        "Damage deposit — the refundable deposit may be held for property damage and/or cleanup; event host is liable for any additional fees"
+                                        "Event host responsible for guest conduct - the event host is liable for all guest violations",
+                                        "Environmental fee clause - guests are liable for cleanup costs if any wastewater violation occurs",
+                                        "Damage deposit - the refundable deposit may be held for property damage and/or cleanup; event host is liable for any additional fees"
                                     ]} />
                                 </Subsection>
 
@@ -567,7 +567,7 @@ const Rules = () => {
                                     {/* Decorative background overlay pattern */}
                                     <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }}></div>
 
-                                    <h2 className="font-playfair text-2xl md:text-3xl text-center mb-10 font-bold relative z-10 text-white">Quick Reference — Emergency Contacts</h2>
+                                    <h2 className="font-playfair text-2xl md:text-3xl text-center mb-10 font-bold relative z-10 text-white">Quick Reference - Emergency Contacts</h2>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
                                         <div className="bg-red-500/20 border-2 border-red-400 p-5 rounded-lg flex flex-col justify-center">

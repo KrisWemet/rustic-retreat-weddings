@@ -36,7 +36,7 @@ const About = () => {
           backgroundImage={weddingParty}
           backgroundImageAlt="Wedding party group photo in a forest clearing at Rustic Retreat"
           title="About Rustic Retreat"
-          subtitle="Family-owned since 2006. We built this place for ourselves—now we share it with couples who want something real."
+          subtitle="Family-owned since 2006. We built this place for ourselves-now we share it with couples who want something real."
         />
 
         {/* How It All Started */}
@@ -49,7 +49,7 @@ const About = () => {
                   <h2 className="text-3xl md:text-4xl font-serif mb-8">How It All Started</h2>
 
                   <p className="text-lg mb-6">
-                    In 2006, my parents bought 65 acres near Lac La Nonne with a dream of creating something self-sufficient—an off-grid homestead with pasture, forest, and everything they needed to live on their own terms. No power lines. No city noise. Just land that felt like theirs.
+                    In 2006, my parents bought 65 acres near Lac La Nonne with a dream of creating something self-sufficient-an off-grid homestead with pasture, forest, and everything they needed to live on their own terms. No power lines. No city noise. Just land that felt like theirs.
                   </p>
 
                   <p className="text-lg text-muted-foreground mb-6">
@@ -64,12 +64,12 @@ const About = () => {
                 <ScrollReveal delay={100}>
                   <div className="bg-secondary/10 p-8 rounded-2xl border-l-4 border-secondary mb-8">
                     <p className="text-lg leading-relaxed">
-                      What started as a single weekend became an annual tradition. Some years we'd have 80 people camping across the property—kids running wild during the day, adults around the campfire at night with music from every genre, impromptu dancing, laughter that carried through the trees. We'd play beer pong and cornhole and giant Jenga. We'd do potlucks where everyone brought their best recipes, and there was always too much food.
+                      What started as a single weekend became an annual tradition. Some years we'd have 80 people camping across the property-kids running wild during the day, adults around the campfire at night with music from every genre, impromptu dancing, laughter that carried through the trees. We'd play beer pong and cornhole and giant Jenga. We'd do potlucks where everyone brought their best recipes, and there was always too much food.
                     </p>
                   </div>
 
                   <p className="text-lg text-muted-foreground mb-6">
-                    Sometimes we'd plan structured activities—outdoor movie nights, birthday celebrations, anniversary parties. Other times we'd just… exist together. Slowed down. Undistracted.
+                    Sometimes we'd plan structured activities-outdoor movie nights, birthday celebrations, anniversary parties. Other times we'd just… exist together. Slowed down. Undistracted.
                   </p>
 
                   <p className="text-lg mb-8">
@@ -102,7 +102,7 @@ const About = () => {
                 <HoverImage
                   src={familyPortrait}
                   alt="Bride and groom with family in golden fall foliage at Rustic Retreat"
-                  description="Families come together—real moments in the autumn woods"
+                  description="Families come together-real moments in the autumn woods"
                   category="Family"
                   className="rounded-3xl shadow-xl"
                 />
@@ -121,7 +121,7 @@ const About = () => {
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  My brother got married here that same year. Then Shannon and I got married in 2019. After our wedding weekend, we couldn't stop hearing the same thing: <strong>"Best wedding ever."</strong> People told us stories about moments we'd missed—the connections made, the laughter shared, the way time seemed to stop for three days.
+                  My brother got married here that same year. Then Shannon and I got married in 2019. After our wedding weekend, we couldn't stop hearing the same thing: <strong>"Best wedding ever."</strong> People told us stories about moments we'd missed-the connections made, the laughter shared, the way time seemed to stop for three days.
                 </p>
 
                 <div className="bg-secondary/20 p-6 rounded-xl border-2 border-secondary">
@@ -147,7 +147,7 @@ const About = () => {
                 </p>
 
                 <p className="text-lg text-muted-foreground mb-6">
-                  My dad and Shannon fed off each other's excitement. We made big plans—a reception barn, developed campsites, all these grand visions. Then COVID hit. Wood prices skyrocketed. What was feasible became impossible overnight.
+                  My dad and Shannon fed off each other's excitement. We made big plans-a reception barn, developed campsites, all these grand visions. Then COVID hit. Wood prices skyrocketed. What was feasible became impossible overnight.
                 </p>
 
                 <p className="text-lg mb-6">
@@ -155,7 +155,7 @@ const About = () => {
                 </p>
 
                 <p className="text-lg text-muted-foreground mb-8">
-                  Instead of one massive project, we did dozens of smaller ones. We renovated the cabin. Extended the gazebo. Started manicuring parts of the land while keeping the wild beauty intact. We spent 2020 adjusting to off-grid life—living in our RV year-round and learning what this land needed. In 2023, we built our permanent house. In 2024, we started renting the cabin to families as weekend getaways, testing the waters.
+                  Instead of one massive project, we did dozens of smaller ones. We renovated the cabin. Extended the gazebo. Started manicuring parts of the land while keeping the wild beauty intact. We spent 2020 adjusting to off-grid life-living in our RV year-round and learning what this land needed. In 2023, we built our permanent house. In 2024, we started renting the cabin to families as weekend getaways, testing the waters.
                 </p>
 
                 <div className="bg-primary/5 p-8 rounded-2xl border-l-4 border-primary">
@@ -181,7 +181,7 @@ const About = () => {
                 </p>
 
                 <p className="mb-6">
-                  Started projects that are still in progress—a wash house, a bridal suite, a dedicated decor building, flush washrooms.
+                  Started projects that are still in progress-a wash house, a bridal suite, a dedicated decor building, flush washrooms.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
@@ -190,7 +190,7 @@ const About = () => {
 
                 <div className="bg-card p-6 rounded-xl shadow-soft">
                   <p className="text-muted-foreground text-sm mb-3">
-                    In 2024, a wildfire traveled through the west side of the property—it stayed low to the ground and cleared undergrowth but didn't climb the trees. You can still see signs of it if you walk that area, but new growth is filling back in.
+                    In 2024, a wildfire traveled through the west side of the property-it stayed low to the ground and cleared undergrowth but didn't climb the trees. You can still see signs of it if you walk that area, but new growth is filling back in.
                   </p>
                   <p className="font-medium">
                     The land heals itself. We're not trying to tame this place. We're trying to work with it.
@@ -221,7 +221,7 @@ const About = () => {
                   <h2 className="text-3xl md:text-4xl font-serif mb-8">What Drives Us</h2>
 
                   <p className="text-lg mb-6">
-                    So many venues charge $10,000+ for a single day and then lock you into mandatory minimums—you have to use their caterer, their bar staff, their timeline.
+                    So many venues charge $10,000+ for a single day and then lock you into mandatory minimums-you have to use their caterer, their bar staff, their timeline.
                   </p>
 
                   <p className="text-xl font-medium mb-6">
@@ -242,7 +242,7 @@ const About = () => {
                   </div>
 
                   <p className="text-lg">
-                    We're not in this to get rich. We're in this because we love hosting people. We love watching couples fall in love with this place the way we did. We love seeing memories get made. And we want you to do it <strong>your way</strong>—not ours, not some venue template, not what Instagram says weddings should look like.
+                    We're not in this to get rich. We're in this because we love hosting people. We love watching couples fall in love with this place the way we did. We love seeing memories get made. And we want you to do it <strong>your way</strong>-not ours, not some venue template, not what Instagram says weddings should look like.
                   </p>
                 </div>
               </ScrollReveal>
@@ -300,7 +300,7 @@ const About = () => {
                         <h3 className="text-xl font-semibold">Chris</h3>
                       </div>
                       <p className="text-muted-foreground">
-                        The steady hand behind the scenes. Chris keeps the land and logistics running—power management (solar + generator), setup, and all the practical details that make the weekend feel effortless. He builds, moves, fixes, and adapts fast, usually with a joke that breaks the tension at exactly the right moment.
+                        The steady hand behind the scenes. Chris keeps the land and logistics running-power management (solar + generator), setup, and all the practical details that make the weekend feel effortless. He builds, moves, fixes, and adapts fast, usually with a joke that breaks the tension at exactly the right moment.
                       </p>
                     </CardContent>
                   </Card>
@@ -314,7 +314,7 @@ const About = () => {
                         <h3 className="text-xl font-semibold">Wilf (aka Dad)</h3>
                       </div>
                       <p className="text-muted-foreground">
-                        Handles firewood refills at the cabin firepit. He builds the bigger projects—the gazebo was almost entirely him. Last year he worked on framing the dance floor. This winter, he's building the wash house. In the spring, Shannon and I will finish the bridal suite.
+                        Handles firewood refills at the cabin firepit. He builds the bigger projects-the gazebo was almost entirely him. Last year he worked on framing the dance floor. This winter, he's building the wash house. In the spring, Shannon and I will finish the bridal suite.
                       </p>
                     </CardContent>
                   </Card>
@@ -369,7 +369,7 @@ const About = () => {
                 </p>
 
                 <p className="mb-6 text-lg font-medium">
-                  You feel it immediately—you've entered somewhere different.
+                  You feel it immediately-you've entered somewhere different.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
@@ -382,7 +382,7 @@ const About = () => {
                     <p className="font-semibold">Completely Off-Grid</p>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    No power lines come into this property. Everything runs on solar—my dad's original vision of self-sufficiency made real. It's not a gimmick. It's just how we live.
+                    No power lines come into this property. Everything runs on solar-my dad's original vision of self-sufficiency made real. It's not a gimmick. It's just how we live.
                   </p>
                 </div>
               </ScrollReveal>
@@ -420,7 +420,7 @@ const About = () => {
                   If that sounds like what you're looking for, we'd love to meet you.
                 </p>
                 <p className="text-lg text-secondary font-medium">
-                  — Shannon & Chris
+                  - Shannon & Chris
                 </p>
               </ScrollReveal>
             </div>
@@ -434,7 +434,7 @@ const About = () => {
               <Heart className="w-10 h-10 text-secondary mx-auto mb-6" />
               <h2 className="text-3xl md:text-4xl font-serif mb-6">Come Feel the Difference</h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto text-primary-foreground/90">
-                Photos can only show so much. The feeling of standing in the meadow at golden hour—that you have to experience.
+                Photos can only show so much. The feeling of standing in the meadow at golden hour-that you have to experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

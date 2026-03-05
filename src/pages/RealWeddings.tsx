@@ -37,7 +37,7 @@ const RealWeddings = () => {
               <div className="max-w-4xl mx-auto text-center bg-card/80 backdrop-blur-sm rounded-3xl border border-secondary/20 px-6 py-8 shadow-soft">
                 <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-3">Coming Soon</p>
                 <p className="text-xl md:text-2xl font-serif text-primary">
-                  This page is on its way—like your weekend it’s worth the wait.
+                  This page is on its way-like your weekend it’s worth the wait.
                 </p>
                 <p className="text-sm text-muted-foreground mt-3">
                   We’re curating full weekend stories, photo galleries, and behind‑the‑scenes moments from real couples.

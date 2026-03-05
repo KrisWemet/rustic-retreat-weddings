@@ -57,7 +57,7 @@ const baseImages: GalleryImage[] = [
   { 
     src: ceremonyVows, 
     alt: "Couple exchanging vows under rustic gazebo at Rustic Retreat Alberta", 
-    description: "The moment that changes everything—exchanging vows surrounded by towering pines",
+    description: "The moment that changes everything-exchanging vows surrounded by towering pines",
     category: "Ceremony" 
   },
   { 
@@ -69,49 +69,49 @@ const baseImages: GalleryImage[] = [
   { 
     src: firstDanceSparklers, 
     alt: "First dance with sparklers at outdoor Alberta wedding reception", 
-    description: "Magic happens here—sparklers light up an unforgettable first dance under the stars",
+    description: "Magic happens here-sparklers light up an unforgettable first dance under the stars",
     category: "Reception" 
   },
   { 
     src: veilKiss, 
     alt: "Intimate veil kiss moment at forest wedding venue Edmonton area", 
-    description: "A stolen moment—the intimacy of a veil kiss in dappled forest light",
+    description: "A stolen moment-the intimacy of a veil kiss in dappled forest light",
     category: "Romance" 
   },
   { 
     src: firstDanceCloseup, 
     alt: "Close-up of couple during emotional first dance", 
-    description: "Lost in the moment—when the world disappears and only you two remain",
+    description: "Lost in the moment-when the world disappears and only you two remain",
     category: "Reception" 
   },
   { 
     src: cakeCuttingForest, 
     alt: "Couple cutting wedding cake in forest setting at outdoor reception", 
-    description: "Sweet celebration—cutting the cake surrounded by nature's beauty",
+    description: "Sweet celebration-cutting the cake surrounded by nature's beauty",
     category: "Reception" 
   },
   { 
     src: receptionTable3, 
     alt: "Elegant outdoor reception table with floral centerpiece", 
-    description: "Every detail matters—from linens to florals, the tables tell your story",
+    description: "Every detail matters-from linens to florals, the tables tell your story",
     category: "Details" 
   },
   { 
     src: licenseSigning, 
     alt: "Couple signing marriage license at ceremony", 
-    description: "Making it official—the moment your names join forever",
+    description: "Making it official-the moment your names join forever",
     category: "Ceremony" 
   },
   { 
     src: receptionTable4, 
     alt: "Rustic outdoor dining setup at forest wedding reception", 
-    description: "Gather, feast, celebrate—long tables bring everyone together",
+    description: "Gather, feast, celebrate-long tables bring everyone together",
     category: "Details" 
   },
   { 
     src: meadowKiss, 
     alt: "Romantic sunset kiss in wildflower meadow near Lac La Nonne Alberta", 
-    description: "Golden hour in the meadow—when the light is just right and love is in the air",
+    description: "Golden hour in the meadow-when the light is just right and love is in the air",
     category: "Romance" 
   },
   { 
@@ -123,19 +123,19 @@ const baseImages: GalleryImage[] = [
   { 
     src: bridalPortrait, 
     alt: "Bride with bouquet on rustic cabin porch Rustic Retreat Weddings", 
-    description: "Morning of magic—a quiet moment on the cabin porch before the day begins",
+    description: "Morning of magic-a quiet moment on the cabin porch before the day begins",
     category: "Bridal" 
   },
   { 
     src: dressGazebo, 
     alt: "Wedding dress displayed at forest gazebo", 
-    description: "Your dress deserves this backdrop—photographed in natural beauty",
+    description: "Your dress deserves this backdrop-photographed in natural beauty",
     category: "Details" 
   },
   { 
     src: weddingParty, 
     alt: "Full wedding party group photo at outdoor venue", 
-    description: "Your favorite people, all in one place—memories that last generations",
+    description: "Your favorite people, all in one place-memories that last generations",
     category: "Group" 
   },
   { 
@@ -153,13 +153,13 @@ const baseImages: GalleryImage[] = [
   { 
     src: brideHorse, 
     alt: "Bride posing with horse at rustic Alberta wedding venue", 
-    description: "Your wedding, your way—one bride brought her beloved horse for portraits",
+    description: "Your wedding, your way-one bride brought her beloved horse for portraits",
     category: "Portraits" 
   },
   { 
     src: guestFavor, 
     alt: "Elegant wedding favor box for guests", 
-    description: "Send guests home with love—small touches make big memories",
+    description: "Send guests home with love-small touches make big memories",
     category: "Details" 
   },
   { 
@@ -171,13 +171,13 @@ const baseImages: GalleryImage[] = [
   {
     src: ceremonyWideShot,
     alt: "Wide outdoor ceremony with wedding party in forest clearing at Rustic Retreat",
-    description: "Your ceremony in the heart of the forest—surrounded by nature and loved ones",
+    description: "Your ceremony in the heart of the forest-surrounded by nature and loved ones",
     category: "Ceremony"
   },
   {
     src: ringsBouquet,
     alt: "Wedding rings nestled in white bridal bouquet closeup",
-    description: "Forever begins here—a symbol of your commitment and love",
+    description: "Forever begins here-a symbol of your commitment and love",
     category: "Details"
   },
   {
@@ -189,13 +189,13 @@ const baseImages: GalleryImage[] = [
   {
     src: coupleWalkingTrail,
     alt: "Newlyweds walking hand in hand down forest trail",
-    description: "Just married—strolling the forest trails, just the two of you",
+    description: "Just married-strolling the forest trails, just the two of you",
     category: "Portraits"
   },
   {
     src: headTable,
     alt: "Rustic head table with candles and white florals at reception",
-    description: "Elegance meets nature—candles and florals create magic",
+    description: "Elegance meets nature-candles and florals create magic",
     category: "Reception"
   },
   {
@@ -207,7 +207,7 @@ const baseImages: GalleryImage[] = [
   {
     src: cakeCuttingPavilion,
     alt: "Cake cutting and first bite moment at rustic pavilion",
-    description: "Sweet moments—cutting the cake and sharing the first bite",
+    description: "Sweet moments-cutting the cake and sharing the first bite",
     category: "Reception"
   },
   {
@@ -219,7 +219,7 @@ const baseImages: GalleryImage[] = [
   {
     src: weddingCakeGold,
     alt: "Two-tier semi-naked wedding cake with florals and gold antler topper",
-    description: "Rustic elegance—your cake is a work of art",
+    description: "Rustic elegance-your cake is a work of art",
     category: "Details"
   },
   {
@@ -231,13 +231,13 @@ const baseImages: GalleryImage[] = [
   {
     src: weddingPartyCheer,
     alt: "Wedding party celebrating and cheering with couple kissing",
-    description: "Pure joy—your people celebrating your love",
+    description: "Pure joy-your people celebrating your love",
     category: "Wedding Party"
   },
   {
     src: pavilionReception,
     alt: "Rustic pavilion reception entrance with guests cheering",
-    description: "Welcome to the party—your reception under the rustic pavilion",
+    description: "Welcome to the party-your reception under the rustic pavilion",
     category: "Reception"
   },
 ];

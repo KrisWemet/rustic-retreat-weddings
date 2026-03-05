@@ -55,7 +55,7 @@ const TESTIMONIALS = [
     date: "August 2025",
   },
   {
-    quote: "My husband and I got married here two weeks ago (planned a wedding in just over a month)—let me tell ya, it was an absolute blast! Shannon and her husband went above and beyond to make sure everything went smoothly for us.",
+    quote: "My husband and I got married here two weeks ago (planned a wedding in just over a month)-let me tell ya, it was an absolute blast! Shannon and her husband went above and beyond to make sure everything went smoothly for us.",
     name: "Viktoria",
     date: "June 2025",
   },
@@ -100,7 +100,12 @@ const Index = () => {
 
     requestAnimationFrame(() => {
       const firstSlide = track.querySelector<HTMLElement>('[data-testimonial-index="0"]');
-      firstSlide?.scrollIntoView({ behavior: "auto", inline: "center", block: "nearest" });
+      if (!firstSlide) return;
+
+      // Set the testimonial rail position without scrolling the page vertically.
+      const targetLeft = firstSlide.offsetLeft - (track.clientWidth - firstSlide.offsetWidth) / 2;
+      const clampedLeft = Math.max(0, Math.min(targetLeft, track.scrollWidth - track.clientWidth));
+      track.scrollTo({ left: clampedLeft, behavior: "auto" });
     });
   }, []);
 
@@ -452,7 +457,7 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Dot indicators — mobile only */}
+              {/* Dot indicators - mobile only */}
               <div className="mt-5 flex md:hidden items-center justify-center gap-2">
                 {TESTIMONIALS.map((testimonial, index) => (
                   <button
@@ -503,13 +508,13 @@ const Index = () => {
           {/* Cinematic Image Row */}
           <div className="grid grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
             <ScrollReveal delay={0}>
-              <HoverImage src={ceremonyWideShot} alt="Wide outdoor ceremony with wedding party in forest clearing at Rustic Retreat" description="Your ceremony in the heart of the forest—surrounded by nature and loved ones" category="Ceremony" className="h-48 md:h-72 shadow-soft" />
+              <HoverImage src={ceremonyWideShot} alt="Wide outdoor ceremony with wedding party in forest clearing at Rustic Retreat" description="Your ceremony in the heart of the forest-surrounded by nature and loved ones" category="Ceremony" className="h-48 md:h-72 shadow-soft" />
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <HoverImage src={coupleWalkingTrail} alt="Newlyweds walking hand in hand down forest trail at Lac La Nonne wedding venue" description="Just married—strolling the forest trails, just the two of you" category="Portraits" className="h-48 md:h-72 shadow-soft" />
+              <HoverImage src={coupleWalkingTrail} alt="Newlyweds walking hand in hand down forest trail at Lac La Nonne wedding venue" description="Just married-strolling the forest trails, just the two of you" category="Portraits" className="h-48 md:h-72 shadow-soft" />
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <HoverImage src={cakeCutting} alt="Cake cutting and first bite moment under rustic pavilion" description="Sweet moments—cutting the cake and sharing the first bite" category="Reception" className="h-48 md:h-72 shadow-soft" />
+              <HoverImage src={cakeCutting} alt="Cake cutting and first bite moment under rustic pavilion" description="Sweet moments-cutting the cake and sharing the first bite" category="Reception" className="h-48 md:h-72 shadow-soft" />
             </ScrollReveal>
           </div>
         </div>
@@ -667,11 +672,11 @@ const Index = () => {
                   A weekend that is completely yours
                 </p>
                 <blockquote className="text-lg font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
-                  “We didn’t want to build just another venue. We wanted to create something deeper—a place where people could slow down, truly connect, and celebrate life and their unique individual love stories across an
+                  “We didn’t want to build just another venue. We wanted to create something deeper-a place where people could slow down, truly connect, and celebrate life and their unique individual love stories across an
                   <span className="block text-center -ml-[10%] text-[#D8A799] italic text-[1.2em]">entire weekend.”</span>
                 </blockquote>
                 <p className="mt-4 text-sm text-primary-foreground/80">
-                  — Chris & Shannon
+                  - Chris & Shannon
                   <br />
                   (Rustic Retreat)
                 </p>
@@ -771,7 +776,7 @@ const Index = () => {
                 </h2>
                 <div className="mx-auto h-1 w-16 rounded-full bg-secondary/60 mb-4" />
                 <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base mb-2">
-                  Pick the timeline that fits your vision—then make the land your own.
+                  Pick the timeline that fits your vision-then make the land your own.
                 </p>
                 <p className="text-xs text-secondary font-medium">
                   Popular dates book 12-18 months in advance

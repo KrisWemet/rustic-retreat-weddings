@@ -36,8 +36,9 @@ import ceremonyForest2 from "@/assets/gallery/Images/IMG_6758.webp";
 import extrasYardGames from "@/assets/gallery/Images/extras-yard-games.webp";
 import extrasTrampolineKids from "@/assets/gallery/Images/extras-trampoline-kids.webp";
 import extrasFirePitNight from "@/assets/gallery/Images/extras-firepit-night.webp";
-import extrasPlayhouse from "@/assets/gallery/Images/extras-playhouse.webp";
+import extrasPlayhouse from "@/assets/gallery/Images/Child-slide.jpeg";
 import extrasGiantConnectFour from "@/assets/gallery/Images/extras-giant-connect-four.webp";
+import extrasAndSoMuchMore from "@/assets/gallery/Images/IMG_7304.jpeg";
 
 import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, Waves, Compass, Flame, Trophy, Baby, Zap, Tent, Trees } from "lucide-react";
 
@@ -72,7 +73,7 @@ const Venue = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">The Cabin</h2>
 
                 <p className="text-lg mb-6 text-muted-foreground">
-                  The celebration keeps humming outside—voices drifting, the fire still crackling, that warm end-of-night glow settling in. When you’re ready, you step away without going far. Just a few steps from the fire, your cabin feels like a reset: quiet, cozy, and completely yours. It’s the kind of moment where everything slows down, you look at each other, and it finally sinks in… we did it.
+                  The celebration keeps humming outside, voices drifting, the fire still crackling, that warm end-of-night glow settling in. When you’re ready, you step away without going far. Just a few steps from the fire, your cabin feels like a reset: quiet, cozy, and completely yours. It’s the kind of moment where everything slows down, you look at each other, and it finally sinks in… we did it.
                 </p>
 
               </ScrollReveal>
@@ -132,7 +133,7 @@ const Venue = () => {
                     <Coffee className="w-8 h-8 text-secondary mb-3" />
                     <h3 className="font-semibold mb-2">Morning Coffee</h3>
                     <p className="text-sm text-muted-foreground">
-                      Keurig with pods provided—because the day-after conversations are sometimes the best part.
+                      Keurig with pods provided, because the day-after conversations are sometimes the best part.
                     </p>
                   </CardContent>
                 </Card>
@@ -327,22 +328,22 @@ const Venue = () => {
 
                 <div className="bg-secondary/10 p-8 rounded-2xl border-2 border-secondary/20 mb-10">
                   <p className="text-xl md:text-2xl font-bold text-primary italic">
-                    "Our curated Wedding Décor Collection is included in every booking—at zero extra cost."
+                    "The pieces most couples need are already here, at no extra cost."
                   </p>
                 </div>
 
                 <div className="space-y-6 text-left md:text-center">
                   <h3 className="text-2xl font-bold">A Living Collection</h3>
                   <p className="text-muted-foreground text-lg">
-                    The collection is always growing, shaped by new finds and the generosity of couples who leave pieces behind for the next story to unfold. It’s a flexible mix of ceremony arches, rustic wine barrels, table styling pieces, and vintage accents that you can weave into your own vision.
+                    The collection is made up of those supplemental pieces that most weddings use but few couples want to buy, arch options, hurricane vases, votive candle holders, wood signs, sheer fabrics, faux florals and greenery, and vintage accents. Think of it as a curated lending library of the little things that pull a celebration together. We are intentional about what we include, these are the pieces that show up at almost every wedding and then sit in a box in someone's garage forever. Use what works for your vision, leave the rest.
                   </p>
                   <p className="text-muted-foreground text-lg">
-                    During your tour, we’ll walk you through the collection and help you start picturing how these pieces can transform the space into something uniquely yours.
+                    Please note that the collection does not include full floral arrangements, table linens, napkins, or any food service pieces, those elements are yours to source and style as you see fit.
                   </p>
                 </div>
 
                 <div className="mt-10 p-4 bg-card border rounded-xl inline-block italic text-sm text-muted-foreground">
-                  Walk into a space where everything you need is already waiting for you.
+                  Walk in with your vision. The finishing touches are already waiting.
                 </div>
               </ScrollReveal>
             </div>
@@ -362,74 +363,76 @@ const Venue = () => {
               </ScrollReveal>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <ScrollReveal delay={100}>
-                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
-                  <div className="h-48 overflow-hidden img-card">
-                    <img src={extrasGiantConnectFour} alt="Giant Connect Four at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <CardContent className="pt-6 text-center lg:text-left">
-                    <Trophy className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
-                    <h3 className="text-xl font-bold mb-2">Yard Games Galore</h3>
-                    <p className="text-muted-foreground">
-                      Giant Jenga, Connect Four, cornhole, and more. Keep the energy high and the guests laughing during cocktail hour or throughout the weekend.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
+            <div className="max-w-5xl mx-auto space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <ScrollReveal delay={100}>
+                  <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden img-card">
+                      <img src={extrasGiantConnectFour} alt="Giant Connect Four at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <CardContent className="pt-6 text-center lg:text-left">
+                      <Trophy className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                      <h3 className="text-xl font-bold mb-2">Yard Games Galore</h3>
+                      <p className="text-muted-foreground">
+                        Giant Jenga, Connect Four, cornhole, and more. Keep the energy high and the guests laughing during cocktail hour or throughout the weekend.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
 
-              <ScrollReveal delay={200}>
-                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
-                  <div className="h-48 overflow-hidden img-card">
-                    <img src={extrasPlayhouse} alt="Children's play house at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <CardContent className="pt-6 text-center lg:text-left">
-                    <Baby className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
-                    <h3 className="text-xl font-bold mb-2">Children's Play House</h3>
-                    <p className="text-muted-foreground">
-                      A dedicated space for the little ones to let their imaginations run wild, keeping them entertained while the adults celebrate.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
+                <ScrollReveal delay={200}>
+                  <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden img-card">
+                      <img src={extrasPlayhouse} alt="Children's play house at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <CardContent className="pt-6 text-center lg:text-left">
+                      <Baby className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                      <h3 className="text-xl font-bold mb-2">Children's Play House</h3>
+                      <p className="text-muted-foreground">
+                        A dedicated space for the little ones to let their imaginations run wild, keeping them entertained while the adults celebrate.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
 
-              <ScrollReveal delay={300}>
-                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
-                  <div className="h-48 overflow-hidden img-card">
-                    <img src={extrasTrampolineKids} alt="Trampoline at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <CardContent className="pt-6 text-center lg:text-left">
-                    <Zap className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
-                    <h3 className="text-xl font-bold mb-2">The Trampoline</h3>
-                    <p className="text-muted-foreground">
-                      For the young (and the young at heart). A fun addition to the property that adds a bit of bounce to your wedding weekend.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
+                <ScrollReveal delay={300}>
+                  <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
+                    <div className="overflow-hidden img-card">
+                      <img src={extrasTrampolineKids} alt="Trampoline at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-auto group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <CardContent className="pt-6 text-center lg:text-left">
+                      <Zap className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                      <h3 className="text-xl font-bold mb-2">The Trampoline</h3>
+                      <p className="text-muted-foreground">
+                        For the young (and the young at heart). A fun addition to the property that adds a bit of bounce to your wedding weekend.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
 
-              <ScrollReveal delay={400}>
-                <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
-                  <div className="h-48 overflow-hidden img-card">
-                    <img src={extrasFirePitNight} alt="Fire pit at night at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <CardContent className="pt-6 text-center lg:text-left">
-                    <Flame className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
-                    <h3 className="text-xl font-bold mb-2">The Fire Pit</h3>
-                    <p className="text-muted-foreground">
-                      The heart of late-night conversations. We provide the pit and the setting; you bring the stories (and maybe some s'mores).
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
+                <ScrollReveal delay={400}>
+                  <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
+                    <div className="overflow-hidden img-card">
+                      <img src={extrasFirePitNight} alt="Fire pit at night at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-auto group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <CardContent className="pt-6 text-center lg:text-left">
+                      <Flame className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                      <h3 className="text-xl font-bold mb-2">The Fire Pit</h3>
+                      <p className="text-muted-foreground">
+                        The heart of late-night conversations. We provide the pit and the setting; you bring the stories (and maybe some s'mores).
+                      </p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
+              </div>
 
               <ScrollReveal delay={500}>
                 <Card className="border-2 h-full hover:border-secondary/50 transition-all group bg-card overflow-hidden">
-                  <div className="h-48 flex items-center justify-center bg-secondary/10">
-                    <Sparkles className="w-16 h-16 text-secondary/40" />
+                  <div className="h-64 md:h-72 lg:h-80 overflow-hidden img-card">
+                    <img src={extrasAndSoMuchMore} alt="Guests enjoying extra moments around the property at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
-                  <CardContent className="pt-6 text-center lg:text-left">
-                    <Sparkles className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
+                  <CardContent className="pt-6 text-center md:text-left">
+                    <Sparkles className="w-10 h-10 text-secondary mb-4 mx-auto md:mx-0" />
                     <h3 className="text-xl font-bold mb-2">And So Much More</h3>
                     <p className="text-muted-foreground">
                       From unexpected photo ops to quiet corners, the property is full of little surprises waiting to be discovered.

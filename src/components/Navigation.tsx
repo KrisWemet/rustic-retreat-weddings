@@ -23,6 +23,13 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleLinkClick = (path: string) => {
+    if (location.pathname === path) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   // Scroll detection for navbar shrink/blur effect
   useEffect(() => {
     const handleScroll = () => {
@@ -77,7 +84,7 @@ const Navigation = () => {
             </button>
 
             {/* Logo */}
-            <Link to="/" className="text-primary">
+            <Link to="/" onClick={() => handleLinkClick("/")} className="text-primary">
               <h1
                 className={cn(
                   "font-serif italic transition-all duration-300",
@@ -102,6 +109,7 @@ const Navigation = () => {
                 <Link
                   key={link.path}
                   to={link.path}
+                  onClick={() => handleLinkClick(link.path)}
                   className={cn(
                     "nav-link text-sm transition-colors py-1",
                     isActive(link.path)
@@ -115,7 +123,7 @@ const Navigation = () => {
                   )}
                 </Link>
               ))}
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => handleLinkClick("/contact")}>
                 <Button
                   className={cn(
                     "bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105",
@@ -128,7 +136,7 @@ const Navigation = () => {
             </div>
 
             {/* Mobile CTA Button */}
-            <Link to="/contact" className="lg:hidden">
+            <Link to="/contact" onClick={() => handleLinkClick("/contact")} className="lg:hidden">
               <Button size="sm" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark text-white rounded-full px-4 shadow-md text-xs">
                 Schedule your tour
               </Button>
@@ -156,7 +164,7 @@ const Navigation = () => {
       >
         {/* Menu Header */}
         <div className="flex items-center justify-between p-4 border-b border-border">
-          <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-primary">
+          <Link to="/" onClick={() => handleLinkClick("/")} className="text-primary">
             <h2 className="font-serif italic text-xl">
               <div className="logo inline-flex items-center gap-2" style={{ color: "var(--brandText)" }}>
                 <LeafIcon className="leaf h-10 w-8 md:h-12 md:w-9" />
@@ -181,7 +189,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => handleLinkClick(link.path)}
                 className={cn(
                   "block px-6 py-4 text-lg transition-colors border-l-4",
                   isActive(link.path)
@@ -194,7 +202,7 @@ const Navigation = () => {
             ))}
             <Link
               to="/contact"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleLinkClick("/contact")}
               className={cn(
                 "block px-6 py-4 text-lg transition-colors border-l-4",
                 isActive("/contact")
@@ -237,7 +245,7 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="p-4 border-t border-border">
-            <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block">
+            <Link to="/contact" onClick={() => handleLinkClick("/contact")} className="block">
               <Button
                 size="lg"
                 className="w-full bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white rounded-full shadow-elegant"

@@ -119,7 +119,7 @@ const Contact = () => {
                         </div>
 
                         <h2 className="text-2xl font-bold mb-2">Request Your Visit</h2>
-                        <p className="text-sm text-muted-foreground mb-6">Tell us a bit about yourselves. No pressure—this is just the start of a conversation.</p>
+                        <p className="text-sm text-muted-foreground mb-6">Tell us a bit about yourselves. No pressure-this is just the start of a conversation.</p>
                         <form onSubmit={handleSubmit} className="space-y-6">
                           <div className="grid md:grid-cols-2 gap-4">
                             <div>
@@ -346,7 +346,7 @@ const Contact = () => {
                       <CardContent className="p-6 md:p-8">
                         <h3 className="text-xl md:text-2xl font-bold mb-3">What to Expect</h3>
                         <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
-                          Expect a laid-back country vibe. We aren't here to pressure you to book—if you want to take time to walk the grounds and talk things over just the two of you without us hovering, you can absolutely do that.
+                          Expect a laid-back country vibe. We aren't here to pressure you to book-if you want to take time to walk the grounds and talk things over just the two of you without us hovering, you can absolutely do that.
                         </p>
                         <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-4 text-sm md:text-base text-muted-foreground">
                           <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Full property tour (1-1.5 hours)</span></li>
@@ -382,7 +382,7 @@ const Contact = () => {
                 <HoverImage
                   src={contactBottomLeft}
                   alt="Stunning sunset silhouette at Rustic Retreat"
-                  description="Connect with nature—your day, your way"
+                  description="Connect with nature-your day, your way"
                   category="Bridal"
                   className="shadow-lg rounded-2xl"
                 />

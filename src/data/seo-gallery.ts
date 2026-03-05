@@ -45,7 +45,7 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
   {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-bride-and-groom-walking-field-black-and-white-45.webp",
     alt: "Bride and groom walking through the field (black and white) at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
-    description: "Bride and groom walking through the field (black and white) captured at Rustic Retreat Weddings near Lac La Nonne, Alberta—a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
+    description: "Bride and groom walking through the field (black and white) captured at Rustic Retreat Weddings near Lac La Nonne, Alberta-a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
     category: "Portraits"
   },
   {
@@ -69,7 +69,7 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
   {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-couple-kissing-forest-trail-41.webp",
     alt: "Couple kissing on the forest trail at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
-    description: "Couple kissing on the forest trail captured at Rustic Retreat Weddings near Lac La Nonne, Alberta—a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
+    description: "Couple kissing on the forest trail captured at Rustic Retreat Weddings near Lac La Nonne, Alberta-a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
     category: "Romance"
   },
   {
@@ -129,7 +129,7 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
   {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-love-marquee-letters-ceremony-arch-42.webp",
     alt: "LOVE marquee letters at the ceremony arch at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
-    description: "LOVE marquee letters at the ceremony arch captured at Rustic Retreat Weddings near Lac La Nonne, Alberta—a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
+    description: "LOVE marquee letters at the ceremony arch captured at Rustic Retreat Weddings near Lac La Nonne, Alberta-a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
     category: "Ceremony"
   },
   {
@@ -141,7 +141,7 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
   {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-sweetheart-table-laughter-under-draped-arbor-forest-04.webp",
     alt: "Bride and groom laughing at their sweetheart table under a draped arbor in the woods at Rustic Retreat Weddings.",
-    description: "Bride and groom sharing a laugh at their sweetheart table under a draped arbor, surrounded by forest—Rustic Retreat Weddings near Lac La Nonne, Alberta.",
+    description: "Bride and groom sharing a laugh at their sweetheart table under a draped arbor, surrounded by forest-Rustic Retreat Weddings near Lac La Nonne, Alberta.",
     category: "Reception"
   },
   {
@@ -153,7 +153,7 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
   {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-in-white-rose-43.webp",
     alt: "Wedding rings tucked into a white rose at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
-    description: "Wedding rings tucked into a white rose captured at Rustic Retreat Weddings near Lac La Nonne, Alberta—a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
+    description: "Wedding rings tucked into a white rose captured at Rustic Retreat Weddings near Lac La Nonne, Alberta-a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
     category: "Details"
   },
   {
@@ -165,19 +165,19 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
   {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-on-white-flower-closeup-44.webp",
     alt: "Close-up of wedding rings on a white flower at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
-    description: "Close-up of wedding rings on a white flower captured at Rustic Retreat Weddings near Lac La Nonne, Alberta—a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
+    description: "Close-up of wedding rings on a white flower captured at Rustic Retreat Weddings near Lac La Nonne, Alberta-a private forest wedding venue built for full-weekend celebrations with camping and space to roam.",
     category: "Details"
   },
   {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-welcome-sign-mirror-display-39.webp",
     alt: "Wedding welcome sign and mirror display under a rustic pavilion at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
-    description: "A styled welcome and seating display under Rustic Retreat’s rustic structures—perfect for outdoor weddings near Lac La Nonne, Alberta.",
+    description: "A styled welcome and seating display under Rustic Retreat’s rustic structures-perfect for outdoor weddings near Lac La Nonne, Alberta.",
     category: "Reception"
   },
   {
     file: "rustic-retreat-weddings-lac-la-nonne-alberta-wide-outdoor-ceremony-arch-wedding-party-forest-clearing-03.webp",
     alt: "Wide view of an outdoor wedding ceremony in a forest clearing with an arch, wedding party, and guests at Rustic Retreat Weddings.",
-    description: "Wide ceremony scene in a forest clearing with a decorated arch, wedding party lined up, and guests seated—captured at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
+    description: "Wide ceremony scene in a forest clearing with a decorated arch, wedding party lined up, and guests seated-captured at Rustic Retreat Weddings near Lac La Nonne, Alberta.",
     category: "Ceremony"
   },
   {
