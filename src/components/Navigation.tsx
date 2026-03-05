@@ -14,7 +14,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "The Venue", path: "/venue" },
     { name: "Packages", path: "/packages" },
-    { name: "Enchanted Wedding", path: "/enchanted-wedding" },
+    { name: "The Enchanted Wedding", path: "/enchanted-wedding" },
     // { name: "Love Stories", path: "/real-weddings" }, // Hidden temporarily
     { name: "Gallery", path: "/gallery" },
     { name: "About", path: "/about" },

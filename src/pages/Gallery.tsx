@@ -13,39 +13,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { seoGalleryMeta } from "@/data/seo-gallery";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
-// Gallery imports
-import bridalPortrait from "@/assets/gallery/bridal-portrait-porch.webp";
-import cakeCuttingForest from "@/assets/gallery/cake-cutting-forest.webp";
-import ceremonyVows from "@/assets/gallery/ceremony-vows-gazebo.webp";
-import ceremonySetup from "@/assets/gallery/ceremony-setup-wide.webp";
-import licenseSigning from "@/assets/gallery/marriage-license-signing.webp";
-import meadowKiss from "@/assets/gallery/meadow-sunset-kiss.webp";
-import veilKiss from "@/assets/gallery/veil-kiss-romantic.webp";
-import weddingParty from "@/assets/gallery/wedding-party-group.webp";
-import brideHorse from "@/assets/gallery/bride-with-horse.webp";
-import weddingRings from "@/assets/gallery/rings-bouquet.webp";
-import firstDanceCloseup from "@/assets/gallery/first-dance-closeup.webp";
-import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.webp";
-import cakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.webp";
-import guestFavor from "@/assets/gallery/guest-favor-box.webp";
-import cardBox from "@/assets/gallery/card-box-wine-barrel.webp";
-import receptionTable3 from "@/assets/gallery/reception-table-3.webp";
-import receptionTable4 from "@/assets/gallery/reception-table-4.webp";
-import dressGazebo from "@/assets/gallery/dress-forest-gazebo.webp";
-import dressPavilion from "@/assets/gallery/dress-forest-pavilion.webp";
-import ceremonyWideShot from "@/assets/gallery/ceremony-wide-shot.webp";
-import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.webp";
-import veilKissMistyForest from "@/assets/gallery/veil-kiss-misty-forest.webp";
-import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.webp";
-import headTable from "@/assets/gallery/head-table.webp";
-import firstDanceColor from "@/assets/gallery/first-dance-color.webp";
-import cakeCuttingPavilion from "@/assets/gallery/cake-cutting.webp";
-import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.webp";
-import ringsBouquet from "@/assets/gallery/rings-bouquet.webp";
-import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.webp";
-import pavilionReception from "@/assets/gallery/pavilion-reception.webp";
-import weddingCakeGold from "@/assets/gallery/Images/wedding-cake-gold-antler.webp";
-
 interface GalleryImage {
   src: string;
   alt: string;
@@ -53,249 +20,107 @@ interface GalleryImage {
   category: string;
 }
 
-const baseImages: GalleryImage[] = [
-  { 
-    src: ceremonyVows, 
-    alt: "Couple exchanging vows under rustic gazebo at Rustic Retreat Alberta", 
-    description: "The moment that changes everything-exchanging vows surrounded by towering pines",
-    category: "Ceremony" 
-  },
-  { 
-    src: ceremonySetup, 
-    alt: "Outdoor ceremony space with white chairs at private Alberta venue", 
-    description: "Where your guests will witness your love story unfold",
-    category: "Ceremony" 
-  },
-  { 
-    src: firstDanceSparklers, 
-    alt: "First dance with sparklers at outdoor Alberta wedding reception", 
-    description: "Magic happens here-sparklers light up an unforgettable first dance under the stars",
-    category: "Reception" 
-  },
-  { 
-    src: veilKiss, 
-    alt: "Intimate veil kiss moment at forest wedding venue Edmonton area", 
-    description: "A stolen moment-the intimacy of a veil kiss in dappled forest light",
-    category: "Romance" 
-  },
-  { 
-    src: firstDanceCloseup, 
-    alt: "Close-up of couple during emotional first dance", 
-    description: "Lost in the moment-when the world disappears and only you two remain",
-    category: "Reception" 
-  },
-  { 
-    src: cakeCuttingForest, 
-    alt: "Couple cutting wedding cake in forest setting at outdoor reception", 
-    description: "Sweet celebration-cutting the cake surrounded by nature's beauty",
-    category: "Reception" 
-  },
-  { 
-    src: receptionTable3, 
-    alt: "Elegant outdoor reception table with floral centerpiece", 
-    description: "Every detail matters-from linens to florals, the tables tell your story",
-    category: "Details" 
-  },
-  { 
-    src: licenseSigning, 
-    alt: "Couple signing marriage license at ceremony", 
-    description: "Making it official-the moment your names join forever",
-    category: "Ceremony" 
-  },
-  { 
-    src: receptionTable4, 
-    alt: "Rustic outdoor dining setup at forest wedding reception", 
-    description: "Gather, feast, celebrate-long tables bring everyone together",
-    category: "Details" 
-  },
-  { 
-    src: meadowKiss, 
-    alt: "Romantic sunset kiss in wildflower meadow near Lac La Nonne Alberta", 
-    description: "Golden hour in the meadow-when the light is just right and love is in the air",
-    category: "Romance" 
-  },
-  { 
-    src: cardBox, 
-    alt: "Rustic wine barrel card box at wedding reception", 
-    description: "Collect well-wishes in style with our wine barrel card box",
-    category: "Details" 
-  },
-  { 
-    src: bridalPortrait, 
-    alt: "Bride with bouquet on rustic cabin porch Rustic Retreat Weddings", 
-    description: "Morning of magic-a quiet moment on the cabin porch before the day begins",
-    category: "Bridal" 
-  },
-  { 
-    src: dressGazebo, 
-    alt: "Wedding dress displayed at forest gazebo", 
-    description: "Your dress deserves this backdrop-photographed in natural beauty",
-    category: "Details" 
-  },
-  { 
-    src: weddingParty, 
-    alt: "Full wedding party group photo at outdoor venue", 
-    description: "Your favorite people, all in one place-memories that last generations",
-    category: "Group" 
-  },
-  { 
-    src: dressPavilion, 
-    alt: "Bridal gown at forest pavilion venue", 
-    description: "The pavilion frames your gown in woodland elegance",
-    category: "Details" 
-  },
-  {
-    src: cakeCuttingSet,
-    alt: "Gold cake cutting knife set from venue Décor Collection",
-    description: "The little touches that tell your story",
-    category: "Details"
-  },
-  { 
-    src: brideHorse, 
-    alt: "Bride posing with horse at rustic Alberta wedding venue", 
-    description: "Your wedding, your way-one bride brought her beloved horse for portraits",
-    category: "Portraits" 
-  },
-  { 
-    src: guestFavor, 
-    alt: "Elegant wedding favor box for guests", 
-    description: "Send guests home with love-small touches make big memories",
-    category: "Details" 
-  },
-  { 
-    src: weddingRings, 
-    alt: "Wedding rings resting on flower petals", 
-    description: "The rings that seal your promise, nestled in nature's beauty",
-    category: "Details" 
-  },
-  {
-    src: ceremonyWideShot,
-    alt: "Wide outdoor ceremony with wedding party in forest clearing at Rustic Retreat",
-    description: "Your ceremony in the heart of the forest-surrounded by nature and loved ones",
-    category: "Ceremony"
-  },
-  {
-    src: ringsBouquet,
-    alt: "Wedding rings nestled in white bridal bouquet closeup",
-    description: "Forever begins here-a symbol of your commitment and love",
-    category: "Details"
-  },
-  {
-    src: veilKissMistyForest,
-    alt: "Romantic veil kiss in misty forest at Rustic Retreat Weddings",
-    description: "Dreamy moments under the veil in the enchanted forest",
-    category: "Romance"
-  },
-  {
-    src: coupleWalkingTrail,
-    alt: "Newlyweds walking hand in hand down forest trail",
-    description: "Just married-strolling the forest trails, just the two of you",
-    category: "Portraits"
-  },
-  {
-    src: headTable,
-    alt: "Rustic head table with candles and white florals at reception",
-    description: "Elegance meets nature-candles and florals create magic",
-    category: "Reception"
-  },
-  {
-    src: firstDanceColor,
-    alt: "Outdoor first dance under string lights at forest venue",
-    description: "Your first dance under the open sky and twinkling lights",
-    category: "Reception"
-  },
-  {
-    src: cakeCuttingPavilion,
-    alt: "Cake cutting and first bite moment at rustic pavilion",
-    description: "Sweet moments-cutting the cake and sharing the first bite",
-    category: "Reception"
-  },
-  {
-    src: loveMarqueeArch,
-    alt: "LOVE marquee letters with ceremony arch in forest clearing",
-    description: "Iconic LOVE sign lights up your ceremony backdrop",
-    category: "Ceremony"
-  },
-  {
-    src: weddingCakeGold,
-    alt: "Two-tier semi-naked wedding cake with florals and gold antler topper",
-    description: "Rustic elegance-your cake is a work of art",
-    category: "Details"
-  },
-  {
-    src: weddingPartyFormal,
-    alt: "Wedding party formal portrait with lavender bridesmaids in forest",
-    description: "Your favorite people, all dressed up in the woods",
-    category: "Wedding Party"
-  },
-  {
-    src: weddingPartyCheer,
-    alt: "Wedding party celebrating and cheering with couple kissing",
-    description: "Pure joy-your people celebrating your love",
-    category: "Wedding Party"
-  },
-  {
-    src: pavilionReception,
-    alt: "Rustic pavilion reception entrance with guests cheering",
-    description: "Welcome to the party-your reception under the rustic pavilion",
-    category: "Reception"
-  },
-];
-
-const seoImageMap = import.meta.glob("../assets/gallery/seo/*.{jpg,jpeg,png}", {
+const galleryImageMap = import.meta.glob("../assets/gallery/**/*.{webp,jpg,jpeg,png,avif}", {
   eager: true,
   import: "default"
 }) as Record<string, string>;
 
-const seoImages: GalleryImage[] = seoGalleryMeta
-  .map((image) => ({
-    src: seoImageMap[`../assets/gallery/seo/${image.file}`],
-    alt: image.alt,
-    description: image.description,
-    category: image.category
-  }))
-  .filter((image) => image.src);
+const seoMetaByFile = new Map(
+  seoGalleryMeta.map((image) => [image.file.toLowerCase(), image])
+);
 
 const normalizeCategory = (category: string) => {
   if (category === "Group") return "Wedding Party";
   return category;
 };
 
-const interleaveImages = (primary: GalleryImage[], secondary: GalleryImage[]) => {
-  const mixed: GalleryImage[] = [];
-  const max = Math.max(primary.length, secondary.length);
-  for (let i = 0; i < max; i += 1) {
-    if (primary[i]) mixed.push(primary[i]);
-    if (secondary[i]) mixed.push(secondary[i]);
+const getFileName = (filePath: string) => filePath.split("/").pop() || filePath;
+const stripExtension = (fileName: string) => fileName.replace(/\.[^/.]+$/, "");
+const toTitle = (value: string) =>
+  value
+    .split(/[-_]+/)
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+const inferCategory = (filePath: string, fileBase: string) => {
+  const value = `${filePath.toLowerCase()} ${fileBase.toLowerCase()}`;
+  if (/ceremony|aisle|vows|officiant|arch/.test(value)) return "Ceremony";
+  if (/reception|dance|table|cake|dinner|toast|dj|head-table/.test(value)) return "Reception";
+  if (/wedding-party|groomsmen|bridesmaid|family|group/.test(value)) return "Wedding Party";
+  if (/portrait|couple|kiss|romantic|sunset|veil|walking/.test(value)) return "Romance";
+  if (/bride|bridal|dress/.test(value)) return "Bridal";
+  if (/ring|detail|favor|decor|bouquet|card-box|sign|cupcake/.test(value)) return "Details";
+  if (/cabin|gazebo|venue|property|woods|forest|meadow|trail|playhouse|trampoline|yard|firepit/.test(value)) return "Property";
+  return "Moments";
+};
+
+const dedupeKey = (fileName: string) =>
+  stripExtension(fileName)
+    .toLowerCase()
+    .replace(/^rustic-retreat-weddings-lac-la-nonne-alberta-/, "")
+    .replace(/-\d+$/, "")
+    .replace(/[_\s]+/g, "-");
+
+const stableHash = (value: string) => {
+  let hash = 0;
+  for (let i = 0; i < value.length; i += 1) {
+    hash = (hash * 31 + value.charCodeAt(i)) >>> 0;
   }
-  return mixed;
+  return hash;
 };
 
-const images: GalleryImage[] = interleaveImages(baseImages, seoImages).map((image) => ({
-  ...image,
-  category: normalizeCategory(image.category)
-}));
+const peopleKeywords = /\b(couple|bride|groom|wedding party|wedding-party|bridesmaid|bridesmaids|groomsmen|family|guest|guests|portrait|portraits|kiss|kissing|dance|dancing|newlywed|newlyweds|chris|shannon|man|woman|women|men|child|children|kids|parents|father|mother|party lined up|group|crowd)\b/i;
+const nonPeopleKeywords = /\b(ring|rings|cake|cupcake|table|decor|d[eé]cor|bouquet|card box|card-box|favor|favour|sign|venue setup|empty|landscape|cabin|gazebo-empty|details)\b/i;
 
-const categoryOrder = ["Ceremony", "Reception", "Romance", "Portraits", "Wedding Party", "Bridal", "Details", "Property"];
-const categories = [
-  "All",
-  ...categoryOrder.filter((category) => images.some((img) => img.category === category)),
-  ...Array.from(new Set(images.map((img) => img.category))).filter((category) => !categoryOrder.includes(category))
-];
-
-// Count images per category
-const getCategoryCount = (category: string) => {
-  if (category === "All") return images.length;
-  return images.filter(img => img.category === category).length;
+const hasPeople = (image: GalleryImage, sourceHint: string) => {
+  const combined = `${image.alt} ${image.description} ${sourceHint}`;
+  if (nonPeopleKeywords.test(combined)) {
+    return false;
+  }
+  return peopleKeywords.test(combined);
 };
+
+const dedupedImages = new Map<string, GalleryImage & { hasSeoMeta: boolean }>();
+for (const [filePath, src] of Object.entries(galleryImageMap)) {
+  if (filePath.includes("/enchanted/") || filePath.includes("/Cabin/")) {
+    continue;
+  }
+
+  const fileName = getFileName(filePath);
+  const baseName = stripExtension(fileName);
+  const key = dedupeKey(fileName);
+  const seoMeta = seoMetaByFile.get(fileName.toLowerCase());
+  const candidate = {
+    src,
+    alt: seoMeta?.alt || `Rustic Retreat gallery photo: ${toTitle(baseName)}`,
+    description: seoMeta?.description || `Gallery image: ${toTitle(baseName)}`,
+    category: normalizeCategory(seoMeta?.category || inferCategory(filePath, baseName)),
+    hasSeoMeta: Boolean(seoMeta)
+  };
+
+  const existing = dedupedImages.get(key);
+  if (!existing || (candidate.hasSeoMeta && !existing.hasSeoMeta)) {
+    dedupedImages.set(key, candidate);
+  }
+}
+
+const images: GalleryImage[] = Array.from(dedupedImages.entries())
+  .filter(([, image]) => hasPeople(image, image.src))
+  .sort(([a], [b]) => stableHash(a) - stableHash(b))
+  .map(([, image]) => ({
+    src: image.src,
+    alt: image.alt,
+    description: image.description,
+    category: image.category
+  }));
+
+const galleryHero = images.find((image) => image.category === "Romance")?.src || images[0]?.src || "";
 
 const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
-  const filteredImages = activeCategory === "All" 
-    ? images 
-    : images.filter(img => img.category === activeCategory);
+  const filteredImages = images;
 
   const selectedImage = selectedImageIndex !== null ? filteredImages[selectedImageIndex] : null;
   const totalImages = filteredImages.length;
@@ -330,17 +155,13 @@ const Gallery = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleNextImage, handlePrevImage, selectedImageIndex]);
 
-  useEffect(() => {
-    setSelectedImageIndex(null);
-  }, [activeCategory]);
-
   return (
     <PageTransition>
       <SEO
         title="Wedding Photo Gallery"
         description="Browse real wedding photos from Rustic Retreat. See ceremony setups, reception details, romantic portraits, and more from couples who celebrated on our 65-acre Alberta property."
         path="/gallery"
-        image={veilKissMistyForest}
+        image={galleryHero}
         keywords={["wedding photos edmonton venue", "rustic wedding photography alberta", "outdoor wedding gallery", "wedding venue photo inspiration", "forest wedding photos", "alberta wedding venue pictures"]}
       />
       <BreadcrumbSchema />
@@ -348,33 +169,11 @@ const Gallery = () => {
         <Navigation />
 
         <PageHero
-          backgroundImage={veilKissMistyForest}
+          backgroundImage={galleryHero}
           backgroundImageAlt="Romantic veil kiss in a misty forest at Rustic Retreat"
           title="Wedding Photo Gallery"
           subtitle="Every photo is a real couple. A real moment. A real celebration."
         />
-
-        {/* Category Filter */}
-        <section className="py-8 bg-card border-b border-border">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={activeCategory === category ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setActiveCategory(category)}
-                  className="rounded-full"
-                >
-                  {category}
-                  <span className="ml-1.5 text-xs opacity-70">
-                    ({getCategoryCount(category)})
-                  </span>
-                </Button>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Gallery Grid with Soft Reveal */}
         <section className="section">

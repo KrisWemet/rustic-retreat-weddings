@@ -4,18 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
-import HoverImage from "@/components/HoverImage";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import weddingParty from "@/assets/gallery/wedding-party-cheer.webp";
-import familyPortrait from "@/assets/gallery/wedding-party-formal.webp";
-import campfireNight from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-sparkler-moment-on-dance-floor-35.webp";
-import twoBridesDancing from "@/assets/gallery/couple-walking-trail.webp";
-import cabinExterior from "@/assets/gallery/seo/couple-sunset-meadow.webp";
-import meadowLandscape from "@/assets/gallery/Images/hero-sunset-meadow.webp";
 import { Heart, Sparkles, Home, TreePine, Sun } from "lucide-react";
 
 const About = () => {
@@ -25,24 +17,25 @@ const About = () => {
         title="Our Story"
         description="Family-owned since 2006. What started as annual gatherings became a wedding venue after we threw our own celebrations here. Now we share 65 acres with couples who want something different."
         path="/about"
-        image={weddingParty}
         keywords={["family owned wedding venue alberta", "rustic retreat story", "edmonton wedding venue owners", "personal wedding venue alberta", "intimate wedding venue near edmonton", "private property wedding alberta"]}
       />
       <BreadcrumbSchema />
       <div className="min-h-screen">
         <Navigation />
 
-        <PageHero
-          backgroundImage={weddingParty}
-          backgroundImageAlt="Wedding party group photo in a forest clearing at Rustic Retreat"
-          title="About Rustic Retreat"
-          subtitle="Family-owned since 2006. We built this place for ourselves-now we share it with couples who want something real."
-        />
+        <section className="section section-cream mt-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-serif mb-6">About Rustic Retreat</h1>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
+              Family-owned since 2006. We built this place for ourselves-now we share it with couples who want something real.
+            </p>
+          </div>
+        </section>
 
         {/* How It All Started */}
         <section className="section">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
+            <div className="max-w-4xl mx-auto">
               <div>
                 <ScrollReveal>
                   <p className="section-label">THE BEGINNING</p>
@@ -77,19 +70,6 @@ const About = () => {
                   </p>
                 </ScrollReveal>
               </div>
-
-              <ScrollReveal delay={150}>
-                <div className="relative">
-                  <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
-                  <img
-                    src={campfireNight}
-                    alt="Evening campfire gathering under stars at Rustic Retreat Weddings Alberta"
-                    loading="lazy"
-                    decoding="async"
-                    className="relative w-full h-[320px] sm:h-[380px] md:h-[440px] object-cover rounded-3xl shadow-elegant img-card"
-                  />
-                </div>
-              </ScrollReveal>
             </div>
           </div>
         </section>
@@ -97,17 +77,7 @@ const About = () => {
         {/* The Seed Gets Planted */}
         <section className="section section-muted">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <ScrollReveal direction="left">
-                <HoverImage
-                  src={familyPortrait}
-                  alt="Bride and groom with family in golden fall foliage at Rustic Retreat"
-                  description="Families come together-real moments in the autumn woods"
-                  category="Family"
-                  className="rounded-3xl shadow-xl"
-                />
-              </ScrollReveal>
-
+            <div className="max-w-4xl mx-auto">
               <ScrollReveal direction="right">
                 <p className="section-label">THE TURNING POINT</p>
                 <h2 className="text-3xl md:text-4xl font-serif mb-6">The Seed Gets Planted</h2>
@@ -171,7 +141,7 @@ const About = () => {
         {/* What We Learned */}
         <section className="section section-muted">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-4xl mx-auto">
               <ScrollReveal direction="left">
                 <p className="section-label">CONSTANT EVOLUTION</p>
                 <h2 className="text-3xl md:text-4xl font-serif mb-6">What We Learned (And Keep Learning)</h2>
@@ -198,15 +168,6 @@ const About = () => {
                 </div>
               </ScrollReveal>
 
-              <ScrollReveal direction="right">
-                <HoverImage
-                  src={twoBridesDancing}
-                  alt="Two brides dancing under a circle arch in a forest clearing"
-                  description="Joyful, unposed moments in the woods"
-                  category="Celebration"
-                  className="rounded-3xl shadow-xl"
-                />
-              </ScrollReveal>
             </div>
           </div>
         </section>
@@ -214,9 +175,9 @@ const About = () => {
         {/* What Drives Us */}
         <section className="section section-cream">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
+            <div className="max-w-4xl mx-auto">
               <ScrollReveal>
-                <div className="lg:order-2">
+                <div>
                   <p className="section-label">OUR PHILOSOPHY</p>
                   <h2 className="text-3xl md:text-4xl font-serif mb-8">What Drives Us</h2>
 
@@ -244,19 +205,6 @@ const About = () => {
                   <p className="text-lg">
                     We're not in this to get rich. We're in this because we love hosting people. We love watching couples fall in love with this place the way we did. We love seeing memories get made. And we want you to do it <strong>your way</strong>-not ours, not some venue template, not what Instagram says weddings should look like.
                   </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={150}>
-                <div className="relative lg:order-1">
-                  <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
-                  <img
-                    src={cabinExterior}
-                    alt="Rustic cabin exterior surrounded by forest at Rustic Retreat"
-                    loading="lazy"
-                    decoding="async"
-                    className="relative w-full h-[320px] sm:h-[380px] md:h-[440px] object-cover rounded-3xl shadow-elegant img-card"
-                  />
                 </div>
               </ScrollReveal>
             </div>
@@ -349,17 +297,7 @@ const About = () => {
         {/* What Makes This Land Special */}
         <section className="section section-muted">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <ScrollReveal direction="left">
-                <HoverImage
-                  src={meadowLandscape}
-                  alt="Open meadow and forest horizon at sunset on the Rustic Retreat property"
-                  description="The quiet, open landscape that makes this place feel different"
-                  category="The Experience"
-                  className="rounded-3xl shadow-xl"
-                />
-              </ScrollReveal>
-
+            <div className="max-w-4xl mx-auto">
               <ScrollReveal direction="right">
                 <p className="section-label">THE FEELING</p>
                 <h2 className="text-3xl md:text-4xl font-serif mb-6">What Makes This Land Special</h2>
