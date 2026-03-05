@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import { CheckCircle2, Clock, Sparkles } from "lucide-react";
+import { useMemo, useRef, useState } from "react";
+import { CheckCircle2, Clock, Sparkles, Upload } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -119,11 +119,27 @@ const Enchanted = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isDragActive, setIsDragActive] = useState(false);
+  const [photoNames, setPhotoNames] = useState<string[]>([]);
+  const photoInputRef = useRef<HTMLInputElement | null>(null);
 
   const detailsHtml = useMemo(() => {
     const eventDetailsOnly = getEventDetailsMarkdown(enchantedMarkdown);
     return markdownToHtml(eventDetailsOnly);
   }, []);
+
+  const setPhotoFiles = (files: FileList | File[]) => {
+    const imageFiles = Array.from(files).filter((file) => file.type.startsWith("image/"));
+    setPhotoNames(imageFiles.map((file) => file.name));
+
+    if (!photoInputRef.current) {
+      return;
+    }
+
+    const transfer = new DataTransfer();
+    imageFiles.forEach((file) => transfer.items.add(file));
+    photoInputRef.current.files = transfer.files;
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -156,6 +172,10 @@ const Enchanted = () => {
       }
 
       setIsSubmitted(true);
+      setPhotoNames([]);
+      if (photoInputRef.current) {
+        photoInputRef.current.value = "";
+      }
       toast({
         title: "Application sent",
         description: "Thank you. Your application was sent to rusticretreatalberta@gmail.com.",
@@ -330,8 +350,54 @@ const Enchanted = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="photoLink">Photo link (optional)</Label>
-                            <Input id="photoLink" name="couple_photo_link" className="mt-2" placeholder="Google Drive / Dropbox / Instagram URL" />
+                            <Label htmlFor="photoUpload">Drop photo(s) here (optional)</Label>
+                            <input
+                              ref={photoInputRef}
+                              id="photoUpload"
+                              name="couple_photos"
+                              type="file"
+                              accept="image/*"
+                              multiple
+                              className="sr-only"
+                              onChange={(event) => {
+                                if (event.target.files) {
+                                  setPhotoFiles(event.target.files);
+                                }
+                              }}
+                            />
+                            <div
+                              role="button"
+                              tabIndex={0}
+                              onClick={() => photoInputRef.current?.click()}
+                              onKeyDown={(event) => {
+                                if (event.key === "Enter" || event.key === " ") {
+                                  event.preventDefault();
+                                  photoInputRef.current?.click();
+                                }
+                              }}
+                              onDragOver={(event) => {
+                                event.preventDefault();
+                                setIsDragActive(true);
+                              }}
+                              onDragLeave={() => setIsDragActive(false)}
+                              onDrop={(event) => {
+                                event.preventDefault();
+                                setIsDragActive(false);
+                                setPhotoFiles(event.dataTransfer.files);
+                              }}
+                              className={`mt-2 rounded-xl border-2 border-dashed p-5 text-center transition-colors cursor-pointer ${
+                                isDragActive ? "border-secondary bg-secondary/10" : "border-border bg-card"
+                              }`}
+                            >
+                              <Upload className="w-5 h-5 mx-auto mb-2 text-secondary" />
+                              <p className="text-sm font-medium">Drop image files here or click to upload</p>
+                              <p className="text-xs text-muted-foreground mt-1">JPG, PNG, HEIC and other image files</p>
+                            </div>
+                            {photoNames.length > 0 && (
+                              <p className="text-xs text-muted-foreground mt-2">
+                                Attached: {photoNames.join(", ")}
+                              </p>
+                            )}
                           </div>
 
                           <div>
