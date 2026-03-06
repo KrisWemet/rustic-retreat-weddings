@@ -18,7 +18,7 @@ import weddingParty from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-no
 import cardBoxWineBarrel from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-welcome-sign-mirror-display-39.webp";
 import guestFavorBox from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-in-white-rose-43.webp";
 import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.webp";
-import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Waves, Compass, Target, Bath, Film, Music, Flag } from "lucide-react";
+import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Target, Film, Music } from "lucide-react";
 import content from "@/data/site-content.json";
 
 const Packages = () => {
@@ -59,10 +59,10 @@ const Packages = () => {
     <>
       <SEO
         title="Wedding Packages & Pricing"
-        description="Choose from 3-day ($6,500) or 5-day ($7,500) wedding packages at Rustic Retreat. Both include exclusive property access, cabin accommodation, décor collection, and complete creative freedom."
+        description="Choose from 2-day ($5,000), 3-day ($6,500), or 5-day ($7,500) wedding packages at Rustic Retreat. All include exclusive property access, couples cabin access, camping space, and décor collection."
         path="/packages"
         image={loveMarqueeArch}
-        keywords={["wedding packages edmonton", "weekend wedding pricing alberta", "multi-day wedding cost", "all-inclusive wedding venue edmonton", "wedding venue pricing alberta", "3 day wedding package", "5 day wedding package"]}
+        keywords={["wedding packages edmonton", "weekend wedding pricing alberta", "multi-day wedding cost", "all-inclusive wedding venue edmonton", "wedding venue pricing alberta", "2 day wedding package", "3 day wedding package", "5 day wedding package"]}
       />
       <BreadcrumbSchema />
       <Helmet>
@@ -184,6 +184,26 @@ const Packages = () => {
               </ScrollReveal>
             </div>
 
+            <Card className="border-2 max-w-6xl mx-auto mb-10 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="grid grid-cols-3 bg-primary/10 text-sm font-semibold">
+                  <p className="px-4 py-3">Duration</p>
+                  <p className="px-4 py-3">Best For</p>
+                  <p className="px-4 py-3 text-right">Price</p>
+                </div>
+                {content.packages.packages.map((pkg, idx) => (
+                  <div
+                    key={pkg.shortName}
+                    className={`grid grid-cols-3 text-sm ${idx > 0 ? "border-t border-border" : ""}`}
+                  >
+                    <p className="px-4 py-3">{pkg.duration}</p>
+                    <p className="px-4 py-3">{pkg.subtitle}</p>
+                    <p className="px-4 py-3 text-right font-semibold">${pkg.price}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
               {content.packages.packages.map((pkg, idx) => (
                 <Card
@@ -236,13 +256,11 @@ const Packages = () => {
 
             <div className="text-center">
               <p className="text-muted-foreground mb-4">
-                Not sure which package is right for you? Let's talk during your property visit.
+                Compare package details below, then book a visit when you're ready.
               </p>
-              <Link to="/contact">
-                <CTAButton className="text-lg px-10 py-4">
-                  Schedule Your Visit
-                </CTAButton>
-              </Link>
+              <a href="#pricing-comparison">
+                <Button className="text-lg px-10 py-4">Compare Pricing Breakdown</Button>
+              </a>
               <p className="text-xs text-muted-foreground mt-3">* GST not included.</p>
             </div>
           </div>
@@ -277,7 +295,6 @@ const Packages = () => {
                     <li>• Keurig & meal prep basics in Cabin</li>
                     <li>• Room for 60 guests to camp (no defined sites)</li>
                     <li>• Shower facilities</li>
-                    <li>• Nearby off-site accommodations available</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -345,7 +362,7 @@ const Packages = () => {
               <p className="text-sm uppercase tracking-widest text-secondary mb-4">BEYOND THE CEREMONY</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Your Weekend. Your Way.</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Rustic Retreat isn't only about the ceremony and reception-<strong>the whole weekend should show who you are as a couple.</strong> When you rent the land, you'll have the freedom to make it yours. A few ideas to spark your planning.
+                Rustic Retreat is not only about the ceremony and reception. <strong>The whole weekend should reflect who you are as a couple.</strong> Here are a few ideas to spark your planning.
               </p>
             </div>
 
@@ -360,42 +377,10 @@ const Packages = () => {
 
               <div className="bg-background p-6 rounded-xl shadow-md text-center">
                 <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Waves className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Giant Slip-and-Slide</h3>
-                <p className="text-sm text-muted-foreground">Set one up and turn the meadow into your personal water park.</p>
-              </div>
-
-              <div className="bg-background p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Compass className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Treasure Hunts</h3>
-                <p className="text-sm text-muted-foreground">Create a treasure hunt with surprises across 65 acres.</p>
-              </div>
-
-              <div className="bg-background p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
                   <Target className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="font-semibold mb-2">Games & Adventures</h3>
                 <p className="text-sm text-muted-foreground">Bring paintball, lawn games, or forest explorations.</p>
-              </div>
-
-              <div className="bg-background p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Flag className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Inflatable Obstacle Course</h3>
-                <p className="text-sm text-muted-foreground">Rent a giant course for playful, laugh-out-loud races.</p>
-              </div>
-
-              <div className="bg-background p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Bath className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Portable Hot Tub</h3>
-                <p className="text-sm text-muted-foreground">Bring in a rental for a cozy soak under the stars.</p>
               </div>
 
               <div className="bg-background p-6 rounded-xl shadow-md text-center">
@@ -414,6 +399,9 @@ const Packages = () => {
                 <p className="text-sm text-muted-foreground">Cue up a playlist and pass the mic around the fire.</p>
               </div>
             </div>
+            <p className="text-center text-sm text-muted-foreground max-w-3xl mx-auto mb-12">
+              And more: treasure hunts, slip-and-slides, inflatable obstacle courses, and other activities that fit your group.
+            </p>
 
             <div className="bg-background p-8 rounded-xl shadow-md max-w-4xl mx-auto">
               <div className="text-center mb-6">
@@ -431,11 +419,11 @@ const Packages = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
-                  <span>Complete creative control</span>
+                  <span>No strict check-in windows for your guests</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
-                  <span>65 private acres to make your own</span>
+                  <span>Space for ceremony, reception, and activities</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
@@ -511,7 +499,7 @@ const Packages = () => {
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  Half a dozen Airbnb properties sit within 5-15 minutes around the lake. For guests who want on-site comfort without tent camping, RVezy.com delivers trailers right to your camping area-all the coziness, none of the setup.
+                  For guests who prefer a bed, nearby off-site stays and optional RVezy trailer delivery make it easy to stay close to the celebration.
                 </p>
 
                 <div className="bg-secondary/10 p-6 rounded-lg border-l-4 border-secondary">
@@ -598,7 +586,7 @@ const Packages = () => {
         </section>
 
         {/* Pricing Comparison */}
-        <section className="section">
+        <section id="pricing-comparison" className="section">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Your Wedding Weekend Costs (And Why It's Smarter)</h2>
