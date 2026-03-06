@@ -156,7 +156,7 @@ const Packages = () => {
           </div>
         </section>
 
-        {/* Four Package Options */}
+        {/* Package Options */}
         <section className="section section-muted">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center mb-12">
@@ -275,8 +275,8 @@ const Packages = () => {
                     <li>• The Cabin: Sleeps 4 (newlywed suite)</li>
                     <li>• Keurig & meal prep basics in Cabin</li>
                     <li>• Room for 60 guests to camp (no defined sites)</li>
-                    <li>• Shower facilities ready for 2027 season</li>
-                    <li>• Airbnbs 5-15 minutes away</li>
+                    <li>• Shower facilities</li>
+                    <li>• Nearby off-site accommodations available</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -290,7 +290,7 @@ const Packages = () => {
                     <li>• Two-speaker sound system with wireless mics</li>
                     <li>• Firewood & BBQ with propane included</li>
                     <li>• Reliable off-grid solar power</li>
-                    <li>• No rental fees & setup flexibility</li>
+                    <li>• Setup flexibility</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -301,8 +301,8 @@ const Packages = () => {
                   <h3 className="font-semibold mb-2">Wedding Décor Collection</h3>
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Curated selection of décor pieces</li>
-                    <li>• Wide variety of ceremony arch options</li>
-                    <li>• Vintage pieces & centerpieces</li>
+                    <li>• It is not a full collection, but it helps fill in the pieces you are missing</li>
+                    <li>• Variety of ceremony arch options</li>
                     <li>• Free to use-no rental fees</li>
                     <li>• Add your own touches</li>
                   </ul>
@@ -317,7 +317,6 @@ const Packages = () => {
                     <li>• Lawn Games: Jenga, Cornhole, Connect 4, Yardzee</li>
                     <li>• Trampoline, children's playhouse & treehouse</li>
                     <li>• Hammocks for lounging under the trees</li>
-                    <li>• Farm-fresh eggs (when chickens are laying!)</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -328,7 +327,6 @@ const Packages = () => {
                   <h3 className="font-semibold mb-2">Planning Support</h3>
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Vendor recommendations</li>
-                    <li>• Emergency kit</li>
                     <li>• Property guidance and tips</li>
                     <li>• Optional paid coordination available</li>
                   </ul>
@@ -440,7 +438,7 @@ const Packages = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
-                  <span>You'll have the freedom to make it yours</span>
+                  <span>Set your own weekend timeline and activity flow</span>
                 </div>
               </div>
             </div>
@@ -508,7 +506,7 @@ const Packages = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">For the Guests Who Don't Camp</h2>
 
                 <p className="mb-6 text-lg">
-                  Your outdoor-loving friends will pitch tents and call it heaven. Your grandmother? She needs air conditioning and a real bed. <strong>Both can attend your 5-day celebration without stress.</strong>
+                  Your outdoor-loving friends will pitch tents and call it heaven. Your grandmother? She needs air conditioning and a real bed. <strong>Both can attend your celebration without stress.</strong>
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
@@ -642,11 +640,9 @@ const Packages = () => {
                 <p className="text-muted-foreground mb-6">
                   Payment plans available • Down payment holds your date • No hidden fees • Transparent pricing
                 </p>
-                <Link to="/contact">
-                  <CTAButton>
-                    Schedule Your Visit to Discuss Pricing
-                  </CTAButton>
-                </Link>
+                <p className="font-medium">
+                  We will walk through exact pricing together during your visit.
+                </p>
               </div>
             </div>
           </div>
