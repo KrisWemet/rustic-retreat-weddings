@@ -73,7 +73,7 @@ const Packages = () => {
         <Navigation />
 
         {/* Hero */}
-        <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden mt-20">
+        <section className="relative min-h-[420px] sm:min-h-[480px] md:min-h-[540px] flex items-center justify-center overflow-hidden mt-20">
           <div className="absolute inset-0">
             <img
               src={loveMarqueeArch}
@@ -85,12 +85,12 @@ const Packages = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary/70" />
           </div>
 
-          <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+          <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center text-primary-foreground">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl leading-tight font-bold mb-5 sm:mb-6 animate-fade-in-up">
               <span className="block">The question isn't ...</span>
               <span className="block">"Where should we get married?"</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto animate-fade-in-up text-primary-foreground/90">
+            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto animate-fade-in-up text-primary-foreground/90">
               <span className="block">You already know where. You can feel it. The real question is:</span>
               <span className="block mt-2">"How many days should we give ourselves to do this right?"</span>
             </p>
@@ -101,7 +101,7 @@ const Packages = () => {
         <section className="section">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg mb-4 text-muted-foreground">
+              <p className="text-base sm:text-lg mb-4 text-muted-foreground">
                 Let's be honest about what's happening right now.
               </p>
 
@@ -109,8 +109,8 @@ const Packages = () => {
                 You've toured venues around Edmonton and central Alberta. Watched a hundred wedding videos. Scrolled Instagram until the pretty pictures all blurred together. You've said "yes, but..." to a dozen options that were fine, gorgeous even, but not quite <em>right</em>.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-6 items-center my-8">
-                <div className="bg-primary/5 p-8 rounded-lg border-l-4 border-primary">
+              <div className="grid md:grid-cols-2 gap-5 md:gap-6 items-center my-8">
+                <div className="bg-primary/5 p-6 sm:p-8 rounded-lg border-l-4 border-primary">
                   <p className="text-xl font-bold mb-3">
                     And then you found this place.
                   </p>
@@ -126,29 +126,29 @@ const Packages = () => {
                   alt="Wedding party celebrating at Rustic Retreat"
                   loading="lazy"
                   decoding="async"
-                  className="rounded-lg shadow-lg w-full h-[300px] object-cover img-card"
+                  className="rounded-lg shadow-lg w-full h-[260px] sm:h-[300px] object-cover img-card"
                 />
               </div>
 
-              <div className="grid md:grid-cols-3 gap-4 mb-10">
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
                 <img
                   src={groomsmenToast}
                   alt="Groomsmen cheering with drinks on a forest trail at Rustic Retreat"
-                  className="rounded-lg shadow-lg w-full h-[240px] object-cover img-card"
+                  className="rounded-lg shadow-lg w-full h-[220px] sm:h-[240px] object-cover img-card"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
                   src={loveMarquee}
                   alt="LOVE marquee letters with ceremony backdrop in a forest clearing"
-                  className="rounded-lg shadow-lg w-full h-[240px] object-cover img-card"
+                  className="rounded-lg shadow-lg w-full h-[220px] sm:h-[240px] object-cover img-card"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
                   src={brideDancing}
                   alt="Bride dancing at the rustic pavilion reception at Rustic Retreat"
-                  className="rounded-lg shadow-lg w-full h-[240px] object-cover img-card"
+                  className="rounded-lg shadow-lg w-full h-[220px] sm:h-[240px] object-cover img-card"
                   loading="lazy"
                   decoding="async"
                 />
@@ -160,11 +160,11 @@ const Packages = () => {
         {/* Package Options */}
         <section className="section section-muted">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center mb-12">
+            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 lg:gap-10 items-center mb-12">
               <ScrollReveal>
                 <div className="text-center lg:text-left">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Perfect Timeline</h2>
-                  <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none mb-3">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Choose Your Perfect Timeline</h2>
+                  <p className="text-base sm:text-lg text-muted-foreground max-w-2xl lg:max-w-none mb-3">
                     From intimate elopements to the ultimate retreat-find the package that fits your vision.
                   </p>
                 </div>
@@ -189,14 +189,14 @@ const Packages = () => {
                   key={idx}
                   className={`border-2 hover:shadow-xl transition-shadow ${pkg.isRecommended ? "border-secondary bg-secondary/5" : ""}`}
                 >
-                  <CardContent className="p-8">
+                  <CardContent className="p-6 sm:p-8">
                     {pkg.isRecommended && (
                       <div className="inline-block bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
                         ⭐ Our Recommendation
                       </div>
                     )}
-                    <h3 className="text-3xl font-bold mb-3">{pkg.name}</h3>
-                    <p className="text-lg text-muted-foreground mb-6">{pkg.duration}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-3">{pkg.name}</h3>
+                    <p className="text-base sm:text-lg text-muted-foreground mb-6">{pkg.duration}</p>
 
                     <div className="mb-6">
                       <h4 className="font-semibold mb-3">{pkg.timelineTitle}</h4>
@@ -223,7 +223,7 @@ const Packages = () => {
                       ))}
                     </div>
 
-                    <div className={`${pkg.isRecommended ? "bg-secondary/20 border-secondary" : "bg-primary/10 border-primary"} p-6 rounded-lg mb-6 border-2`}>
+                    <div className={`${pkg.isRecommended ? "bg-secondary/20 border-secondary" : "bg-primary/10 border-primary"} p-5 sm:p-6 rounded-lg mb-6 border-2`}>
                       <p className="text-3xl font-bold mb-2">${pkg.price}*</p>
                       <p className={`text-sm ${!pkg.isRecommended ? "text-muted-foreground" : ""}`}>2027 Package Price</p>
                     </div>
@@ -242,7 +242,7 @@ const Packages = () => {
         {/* What's Included */}
         <section className="section">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What's Included in Every Rustic Retreat Wedding Package</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">What's Included in Every Rustic Retreat Wedding Package</h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <Card className="border-2">
@@ -333,8 +333,8 @@ const Packages = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-sm uppercase tracking-widest text-secondary mb-4">BEYOND THE CEREMONY</p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Your Weekend. Your Way.</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Your Weekend. Your Way.</h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
                 Rustic Retreat is not only about the ceremony and reception. <strong>The whole weekend should reflect who you are as a couple.</strong> Here are a few ideas to spark your planning.
               </p>
             </div>
@@ -376,29 +376,30 @@ const Packages = () => {
               And more: treasure hunts, slip-and-slides, inflatable obstacle courses, and other activities that fit your group.
             </p>
 
-            <div className="bg-background p-8 rounded-xl shadow-md max-w-4xl mx-auto">
-              <div className="text-center mb-6">
-                <p className="text-lg font-medium mb-4">
-                  Morning yoga. Campfire karaoke. Stargazing parties. Group hikes. Whatever brings your people joy.
+            <div className="bg-background p-6 sm:p-8 rounded-xl shadow-md max-w-4xl mx-auto">
+              <div className="text-center mb-8">
+                <p className="text-base sm:text-lg font-medium leading-relaxed max-w-3xl mx-auto mb-6">
+                  <span className="block">Morning yoga. Campfire karaoke. Stargazing parties.</span>
+                  <span className="block">Group hikes. Whatever brings your people joy.</span>
                 </p>
-                <p className="text-muted-foreground italic">
+                <p className="text-muted-foreground italic text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto">
                   "The ceremony is just the beginning. The weekend is where the real magic happens."
                 </p>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4 text-sm">
-                <div className="flex items-center gap-2">
+              <div className="grid sm:grid-cols-2 gap-4 text-sm max-w-5xl mx-auto">
+                <div className="flex items-start sm:items-center gap-3 rounded-lg border bg-secondary/5 px-4 py-4 h-full">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
                   <span>No other weddings during your weekend</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-start sm:items-center gap-3 rounded-lg border bg-secondary/5 px-4 py-4 h-full">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
                   <span>No strict check-in windows for your guests</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-start sm:items-center gap-3 rounded-lg border bg-secondary/5 px-4 py-4 h-full">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
                   <span>Space for ceremony, reception, and activities</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-start sm:items-center gap-3 rounded-lg border bg-secondary/5 px-4 py-4 h-full">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
                   <span>Set your own weekend timeline and activity flow</span>
                 </div>
@@ -439,7 +440,7 @@ const Packages = () => {
         {/* Capacity */}
         <section className="section section-muted">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Ceremony & Reception Capacity</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">Ceremony & Reception Capacity</h2>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {content.packages.capacity.map((item, idx) => (
@@ -465,9 +466,9 @@ const Packages = () => {
           <div className="container mx-auto px-4">
             <Card className="border-2 max-w-6xl mx-auto">
               <CardContent className="p-6 md:p-10">
-                <h2 className="text-3xl md:text-4xl font-bold mb-5">For the Guests Who Don't Camp</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">For the Guests Who Don't Camp</h2>
 
-                <p className="mb-4 text-lg max-w-4xl">
+                <p className="mb-4 text-base sm:text-lg max-w-4xl">
                   Your outdoor-loving friends will pitch tents and call it heaven. Your grandmother? She may need air conditioning and a real bed. <strong>Both can attend your celebration without stress.</strong>
                 </p>
 
@@ -506,7 +507,7 @@ const Packages = () => {
                   </div>
                 </div>
 
-                <p className="mt-8 font-medium text-lg">
+                <p className="mt-8 font-medium text-base sm:text-lg">
                   Everyone gets to participate fully in your multi-day wedding package. That's the whole point.
                 </p>
               </CardContent>
@@ -520,7 +521,7 @@ const Packages = () => {
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center gap-3 mb-6">
                 <Clock className="w-10 h-10 text-secondary" />
-                <h2 className="text-3xl md:text-4xl font-bold">Flexible Arrival & Departure</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Flexible Arrival & Departure</h2>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
@@ -549,7 +550,7 @@ const Packages = () => {
                 </Card>
               </div>
 
-              <p className="text-center mt-8 text-xl font-medium">
+              <p className="text-center mt-8 text-lg sm:text-xl font-medium">
                 You paid for these days. We give you every hour of them.
               </p>
             </div>
@@ -560,7 +561,7 @@ const Packages = () => {
         <section id="pricing-comparison" className="section">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Your Wedding Weekend Costs (And Why It's Smarter)</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">What Your Wedding Weekend Costs (And Why It's Smarter)</h2>
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <Card className="border-2">
@@ -593,8 +594,8 @@ const Packages = () => {
                 </Card>
               </div>
 
-              <div className="bg-primary/5 p-8 rounded-lg border-l-4 border-primary text-center">
-                <p className="text-2xl font-bold mb-3">
+              <div className="bg-primary/5 p-6 sm:p-8 rounded-lg border-l-4 border-primary text-center">
+                <p className="text-xl sm:text-2xl font-bold mb-3">
                   You're not spending more. You're spending smarter.
                 </p>
                 <p className="text-muted-foreground mb-6">
@@ -633,8 +634,8 @@ const Packages = () => {
         {/* CTA Section */}
         <section className="section bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Walk the Land With Us</h2>
-            <p className="text-xl mb-6 max-w-2xl mx-auto text-primary-foreground/90">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6">Walk the Land With Us</h2>
+            <p className="text-lg sm:text-xl mb-6 max-w-2xl mx-auto text-primary-foreground/90">
               We don't let couples book until they visit. Experience Rustic Retreat in person and discover why couples call this their best decision.
             </p>
             <Link to="/contact">
