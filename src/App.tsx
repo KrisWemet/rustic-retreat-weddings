@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { Suspense, lazy, useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import ScrollToTop from "./components/ScrollToTop";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 
@@ -109,6 +110,7 @@ const App = () => {
           </Suspense>
         )}
       </BrowserRouter>
+      <Analytics />
     </HelmetProvider>
   );
 };
