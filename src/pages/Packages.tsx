@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Button } from "@/components/ui/button";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -184,26 +183,6 @@ const Packages = () => {
               </ScrollReveal>
             </div>
 
-            <Card className="border-2 max-w-6xl mx-auto mb-10 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-3 bg-primary/10 text-sm font-semibold">
-                  <p className="px-4 py-3">Duration</p>
-                  <p className="px-4 py-3">Best For</p>
-                  <p className="px-4 py-3 text-right">Price</p>
-                </div>
-                {content.packages.packages.map((pkg, idx) => (
-                  <div
-                    key={pkg.shortName}
-                    className={`grid grid-cols-3 text-sm ${idx > 0 ? "border-t border-border" : ""}`}
-                  >
-                    <p className="px-4 py-3">{pkg.duration}</p>
-                    <p className="px-4 py-3">{pkg.subtitle}</p>
-                    <p className="px-4 py-3 text-right font-semibold">${pkg.price}</p>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
               {content.packages.packages.map((pkg, idx) => (
                 <Card
@@ -255,13 +234,7 @@ const Packages = () => {
             </div>
 
             <div className="text-center">
-              <p className="text-muted-foreground mb-4">
-                Compare package details below, then book a visit when you're ready.
-              </p>
-              <a href="#pricing-comparison">
-                <Button className="text-lg px-10 py-4">Compare Pricing Breakdown</Button>
-              </a>
-              <p className="text-xs text-muted-foreground mt-3">* GST not included.</p>
+              <p className="text-xs text-muted-foreground">* GST not included.</p>
             </div>
           </div>
         </section>
@@ -495,7 +468,7 @@ const Packages = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-5">For the Guests Who Don't Camp</h2>
 
                 <p className="mb-4 text-lg max-w-4xl">
-                  Your outdoor-loving friends will pitch tents and call it heaven. Your grandmother? She needs air conditioning and a real bed. <strong>Both can attend your celebration without stress.</strong>
+                  Your outdoor-loving friends will pitch tents and call it heaven. Your grandmother? She may need air conditioning and a real bed. <strong>Both can attend your celebration without stress.</strong>
                 </p>
 
                 <p className="mb-8 text-muted-foreground max-w-4xl">
