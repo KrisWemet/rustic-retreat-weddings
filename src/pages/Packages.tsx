@@ -88,10 +88,12 @@ const Packages = () => {
 
           <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-              The Question Isn't "Where Should We Get Married?"
+              <span className="block">The question isn't ...</span>
+              <span className="block">"Where should we get married?"</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto animate-fade-in-up text-primary-foreground/90">
-              You already know where. You can feel it. The real question is: "How many days do we give ourselves to do this right?"
+              <span className="block">You already know where. You can feel it. The real question is:</span>
+              <span className="block mt-2">"How many days should we give ourselves to do this right?"</span>
             </p>
           </div>
         </section>
@@ -261,7 +263,6 @@ const Packages = () => {
                     <li>• Ceremony space framed by Alberta forest</li>
                     <li>• Flexible reception area</li>
                     <li>• Groomed walking trails</li>
-                    <li>• Multiple campfire locations</li>
                     <li>• Clear-top gazebo</li>
                   </ul>
                 </CardContent>
@@ -272,7 +273,7 @@ const Packages = () => {
                   <Home className="w-8 h-8 text-secondary mb-3" />
                   <h3 className="font-semibold mb-2">Accommodations</h3>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• The Cabin: Sleeps 4 (newlywed suite)</li>
+                    <li>• The Cabin: Sleeps 4 (couples cabin)</li>
                     <li>• Keurig & meal prep basics in Cabin</li>
                     <li>• Room for 60 guests to camp (no defined sites)</li>
                     <li>• Shower facilities</li>
