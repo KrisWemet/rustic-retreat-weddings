@@ -490,34 +490,28 @@ const Packages = () => {
         {/* Non-Camping Guests */}
         <section className="section">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">For the Guests Who Don't Camp</h2>
+            <Card className="border-2 max-w-6xl mx-auto">
+              <CardContent className="p-6 md:p-10">
+                <h2 className="text-3xl md:text-4xl font-bold mb-5">For the Guests Who Don't Camp</h2>
 
-                <p className="mb-6 text-lg">
+                <p className="mb-4 text-lg max-w-4xl">
                   Your outdoor-loving friends will pitch tents and call it heaven. Your grandmother? She needs air conditioning and a real bed. <strong>Both can attend your celebration without stress.</strong>
                 </p>
 
-                <p className="mb-6 text-muted-foreground">
-                  For guests who prefer a bed, nearby off-site stays and optional RVezy trailer delivery make it easy to stay close to the celebration.
+                <p className="mb-8 text-muted-foreground max-w-4xl">
+                  For guests who prefer a bed, nearby off-site stays make it easy to stay close to the celebration.
                 </p>
 
-                <div className="bg-secondary/10 p-6 rounded-lg border-l-4 border-secondary">
-                  <p className="font-medium mb-2">The result?</p>
-                  <p className="text-muted-foreground text-sm">
-                    Your non-camping guests wake up, drive a few minutes, and arrive for sunrise yoga or breakfast prep or just quiet coffee before the property fully wakes. They're not missing anything. They're not disconnected. They're just sleeping in a bed instead of a tent, and that's perfect.
-                  </p>
-                </div>
+                <div className="grid lg:grid-cols-2 gap-6">
+                  <div className="bg-secondary/10 p-6 rounded-lg border border-secondary/20">
+                    <h3 className="font-semibold text-lg mb-3">The result</h3>
+                    <p className="text-muted-foreground">
+                      Your non-camping guests wake up, drive a few minutes, and arrive for sunrise yoga or breakfast prep or just quiet coffee before the property fully wakes. They are not missing anything. They are not disconnected. They are just sleeping in a bed instead of a tent, and that is perfect.
+                    </p>
+                  </div>
 
-                <p className="mt-6 font-medium text-lg">
-                  Everyone gets to participate fully in your multi-day wedding package. That's the whole point.
-                </p>
-              </div>
-
-              <div>
-                <Card className="border-2">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-lg mb-4">Nearby Accommodation:</h3>
+                  <div className="bg-background p-6 rounded-lg border">
+                    <h3 className="font-semibold text-lg mb-4">Nearby Accommodation</h3>
                     <ul className="space-y-3 text-muted-foreground">
                       <li className="flex items-start gap-2">
                         <Home className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
@@ -536,10 +530,14 @@ const Packages = () => {
                         <span>Comfortable for elderly guests or families with infants</span>
                       </li>
                     </ul>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+                  </div>
+                </div>
+
+                <p className="mt-8 font-medium text-lg">
+                  Everyone gets to participate fully in your multi-day wedding package. That's the whole point.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
