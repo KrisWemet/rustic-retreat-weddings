@@ -8,6 +8,7 @@ interface SEOProps {
   keywords?: string[];
   publishedTime?: string;
   modifiedTime?: string;
+  noindex?: boolean;
 }
 
 const BASE_URL = "https://www.rusticretreat.xyz";
@@ -21,6 +22,7 @@ const SEO = ({
   keywords,
   publishedTime,
   modifiedTime,
+  noindex = false,
 }: SEOProps) => {
   const canonicalUrl = `${BASE_URL}${path}`;
   const fullTitle = path === "" ? title : `${title} | Rustic Retreat Weddings`;
@@ -45,6 +47,9 @@ const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
+
+      {/* Robots - noindex for hidden pages */}
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* Keywords */}
       {keywords && keywords.length > 0 && (

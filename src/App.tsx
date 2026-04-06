@@ -17,6 +17,8 @@ const FAQs = lazy(() => import("./pages/FAQs"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Enchanted = lazy(() => import("./pages/Enchanted"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Booking2026 = lazy(() => import("./pages/Booking2026"));
+const Booking2027 = lazy(() => import("./pages/Booking2027"));
 const ChatWidget = lazy(() => import("./components/ChatWidget"));
 const SanityVisualEditing = lazy(() => import("./components/SanityVisualEditing"));
 
@@ -100,6 +102,9 @@ const App = () => {
             <Route path="/cabin" element={<Navigate to="/venue" replace />} />
             <Route path="/decor" element={<Navigate to="/venue" replace />} />
             <Route path="/weddings" element={<Navigate to="/packages" replace />} />
+            {/* Hidden booking forms - not linked in navigation */}
+            <Route path="/booking-2026" element={<Booking2026 />} />
+            <Route path="/booking-2027" element={<Booking2027 />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
