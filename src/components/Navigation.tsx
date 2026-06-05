@@ -94,7 +94,7 @@ const Navigation = () => {
                 <div className="logo inline-flex items-center gap-2" style={{ color: "var(--brandText)" }}>
                   <LeafIcon
                     className={cn(
-                      "leaf shrink-0 invert mix-blend-multiply",
+                      "leaf shrink-0",
                       isScrolled ? "h-8 w-6 md:h-10 md:w-8" : "h-10 w-8 md:h-12 md:w-9"
                     )}
                   />
@@ -167,7 +167,7 @@ const Navigation = () => {
           <Link to="/" onClick={() => handleLinkClick("/")} className="text-primary">
             <h2 className="font-serif italic text-xl">
               <div className="logo inline-flex items-center gap-2" style={{ color: "var(--brandText)" }}>
-                <LeafIcon className="leaf h-10 w-8 md:h-12 md:w-9 invert mix-blend-multiply" />
+                <LeafIcon className="leaf h-10 w-8 md:h-12 md:w-9" />
                 <span>Rustic Retreat</span>
               </div>
             </h2>
