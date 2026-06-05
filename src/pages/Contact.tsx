@@ -115,10 +115,10 @@ const Contact = () => {
                         {/* Response Time Badge */}
                         <div className="flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm mb-6 w-fit">
                           <Clock className="w-4 h-4" />
-                          <span className="font-medium">We do our absolute best to respond to all inquries within 24 hours</span>
+                          <span className="font-medium">We respond within 24 hours.</span>
                         </div>
 
-                        <h2 className="text-2xl font-bold mb-2">Request Your Visit</h2>
+                        <h2 className="text-2xl font-bold mb-2">Tell Us About Your Wedding</h2>
                         <p className="text-sm text-muted-foreground mb-6">Tell us a bit about yourselves. No pressure-this is just the start of a conversation.</p>
                         <form onSubmit={handleSubmit} className="space-y-6">
                           <div className="grid md:grid-cols-2 gap-4">
@@ -276,7 +276,7 @@ const Contact = () => {
                             className="w-full text-lg py-6"
                             disabled={isSubmitting}
                           >
-                            {isSubmitting ? "Sending..." : "Request Property Visit"}
+                            {isSubmitting ? "Sending..." : "Let's Talk"}
                           </CTAButton>
 
                         </form>
@@ -310,8 +310,9 @@ const Contact = () => {
                           <div>
                             <p className="font-medium">Location</p>
                             <p className="text-muted-foreground text-sm">
-                              99 km NW of Edmonton<br />
-                              Near Lac La Nonne, Alberta
+                              About 1 hour from Edmonton<br />
+                              Near Lac La Nonne, Alberta<br />
+                              Weekday tours by appointment, May–September
                             </p>
                           </div>
                         </div>
@@ -356,10 +357,10 @@ const Contact = () => {
                       <CardContent className="p-6 md:p-8">
                         <h3 className="text-xl md:text-2xl font-bold mb-3">What to Expect</h3>
                         <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
-                          Expect a laid-back country vibe. We aren't here to pressure you to book-if you want to take time to walk the grounds and talk things over just the two of you without us hovering, you can absolutely do that.
+                          Come as you are. Walk the property, ask every question, take all the time you need.
                         </p>
                         <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-4 text-sm md:text-base text-muted-foreground">
-                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Full property tour (1-1.5 hours)</span></li>
+                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Up to 90 minutes at your pace</span></li>
                           <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Walk ceremony and reception spaces</span></li>
                           <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>See the cabin and camping areas</span></li>
                           <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Browse the Wedding Décor Collection</span></li>
