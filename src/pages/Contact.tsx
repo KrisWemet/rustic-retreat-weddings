@@ -180,12 +180,14 @@ const Contact = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="phone">Phone Number</Label>
+                            <Label htmlFor="phone">
+                              Phone Number
+                              <span className="text-xs text-muted-foreground ml-1">(optional)</span>
+                            </Label>
                             <Input
                               id="phone"
                               name="phone"
                               type="tel"
-                              required
                               className="mt-2"
                               placeholder="(780) 555-0123"
                             />
@@ -216,17 +218,6 @@ const Contact = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="tourDates">When would you like to schedule your visit? (only available between May through September)</Label>
-                            <Textarea
-                              id="tourDates"
-                              name="tourDates"
-                              required
-                              className="mt-2 min-h-20"
-                              placeholder="Please provide 2-3 dates that work for you (we schedule around existing bookings)"
-                            />
-                          </div>
-
-                          <div>
                             <Label htmlFor="weddingDate">What is your ideal wedding date?</Label>
                             <Input
                               id="weddingDate"
@@ -235,6 +226,17 @@ const Contact = () => {
                               required
                               className="mt-2"
                               placeholder="e.g., Summer 2027, August 14th, 2027, etc."
+                            />
+                          </div>
+
+                          <div>
+                            <Label htmlFor="tourDates">When would you like to schedule your visit? (only available between May through September)</Label>
+                            <Textarea
+                              id="tourDates"
+                              name="tourDates"
+                              required
+                              className="mt-2 min-h-20"
+                              placeholder="Please provide 2-3 dates that work for you (we schedule around existing bookings)"
                             />
                           </div>
 
