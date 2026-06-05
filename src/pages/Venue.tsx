@@ -444,6 +444,26 @@ const Venue = () => {
           </div>
         </section>
 
+        {/* Growing Venue Section */}
+        <section className="section bg-card">
+          <div className="container mx-auto px-4">
+            <ScrollReveal>
+              <div className="max-w-3xl mx-auto">
+                <p className="section-label">THE VENUE TODAY</p>
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">
+                  The venue is growing — and we like it that way.
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  The bones are here: 65 acres, the ceremony clearing, the gazebo,
+                  the couples cabin, the fire pit, the field. What we're adding over
+                  the coming seasons are the finishing touches that take it from
+                  beautiful to extraordinary. Couples booking now are part of that story.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="section bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
