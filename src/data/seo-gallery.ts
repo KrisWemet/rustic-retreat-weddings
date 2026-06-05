@@ -228,4 +228,28 @@ export const seoGalleryMeta: SeoGalleryMeta[] = [
     description: "A candid stroll down the lane with a custom wedding sign in view.",
     category: "Portraits"
   },
+  {
+    file: "a7308414.jpg",
+    alt: "Large wedding party cheering with the couple and family in an open meadow",
+    description: "A joyful group portrait with the couple, family, and wedding party celebrating together in the field.",
+    category: "Wedding Party"
+  },
+  {
+    file: "img_0564.jpeg",
+    alt: "Bride, groom, and horse portrait in the field at Rustic Retreat",
+    description: "An outdoor portrait of the bride and groom with their horse in the meadow during the wedding celebration.",
+    category: "Portraits"
+  },
+  {
+    file: "img_6707.jpeg",
+    alt: "Bride pinning family photos on a memory display before the ceremony",
+    description: "A candid wedding moment as the bride hangs family photos on a memorial display in the forest.",
+    category: "Moments"
+  },
+  {
+    file: "img_6758.jpeg",
+    alt: "Black and white ceremony photo of couple with officiant under the arch",
+    description: "A black and white ceremony portrait showing the couple and officiant under the ceremony arch.",
+    category: "Ceremony"
+  },
 ];
