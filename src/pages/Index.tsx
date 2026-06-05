@@ -495,7 +495,6 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="max-w-4xl mx-auto text-center">
-              <p className="section-label">THIS QUESTION CHANGES EVERYTHING</p>
               <h2 className="text-3xl md:text-5xl font-serif mb-8 leading-tight">
                 While traditional venues say<br /><span className="italic text-muted-foreground">"this is what you're allowed to do, and the schedule you'll follow,"</span><br />we ask <span className="italic text-secondary">"what do you want to create?"</span>
               </h2>
@@ -671,9 +670,9 @@ const Index = () => {
                 <p className="text-sm uppercase tracking-[0.3em] text-primary-foreground/80 mb-4">
                   A weekend that is completely yours
                 </p>
-                <blockquote className="text-lg font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
-                  “We didn’t want to build just another venue. We wanted to create something deeper-a place where people could slow down, truly connect, and celebrate life and their unique individual love stories across an
-                  <span className="block text-center -ml-[10%] text-[#D8A799] italic text-[1.2em]">entire weekend.”</span>
+                <blockquote className=”text-lg font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]”>
+                  “We didn’t want to build just another venue. We wanted to create something deeper-a place where people could slow down, truly connect, and celebrate life and love across an
+                  <span className=”block text-center -ml-[10%] text-[#D8A799] italic text-[1.2em]”>entire weekend.”</span>
                 </blockquote>
                 <p className="mt-4 text-sm text-primary-foreground/80">
                   - Chris & Shannon
