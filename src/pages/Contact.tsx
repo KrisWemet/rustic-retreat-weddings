@@ -229,12 +229,22 @@ const Contact = () => {
                             />
                           </div>
 
+                          <div className="relative my-2">
+                            <div className="absolute inset-0 flex items-center">
+                              <span className="w-full border-t border-border" />
+                            </div>
+                            <div className="relative flex justify-center">
+                              <span className="bg-card px-3 text-sm font-medium text-muted-foreground">
+                                Help us make your tour count (optional but helpful)
+                              </span>
+                            </div>
+                          </div>
+
                           <div>
-                            <Label htmlFor="tourDates">When would you like to schedule your visit? (only available between May through September)</Label>
+                            <Label htmlFor="tourDates">Preferred tour dates (weekday appointments, May–September)</Label>
                             <Textarea
                               id="tourDates"
                               name="tourDates"
-                              required
                               className="mt-2 min-h-20"
                               placeholder="Please provide 2-3 dates that work for you (we schedule around existing bookings)"
                             />
@@ -246,18 +256,16 @@ const Contact = () => {
                               id="guestCount"
                               name="guestCount"
                               type="text"
-                              required
                               className="mt-2"
                               placeholder="e.g., 50-60 guests, or 'not sure yet'"
                             />
                           </div>
 
                           <div>
-                            <Label htmlFor="message">Share with us your vision for your perfect wedding weekend in a couple sentences (or paragraphs), we want to hear about it all</Label>
+                            <Label htmlFor="message">Tell us about your vision</Label>
                             <Textarea
                               id="message"
                               name="message"
-                              required
                               className="mt-2 min-h-32"
                               placeholder="What would make this weekend unforgettable for you and your guests?"
                             />
