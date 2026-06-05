@@ -18,7 +18,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="logo inline-flex items-center gap-2 text-xl font-bold font-serif" style={{ color: "var(--brandText)" }}>
-                <LeafIcon className="leaf h-10 w-8 md:h-12 md:w-9" />
+                <LeafIcon className="leaf h-10 w-8 md:h-12 md:w-9 mix-blend-screen" />
                 <span>Rustic Retreat</span>
               </div>
             </div>

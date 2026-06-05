@@ -670,9 +670,9 @@ const Index = () => {
                 <p className="text-sm uppercase tracking-[0.3em] text-primary-foreground/80 mb-4">
                   A weekend that is completely yours
                 </p>
-                <blockquote className=”text-lg font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]”>
-                  “We didn’t want to build just another venue. We wanted to create something deeper-a place where people could slow down, truly connect, and celebrate life and love across an
-                  <span className=”block text-center -ml-[10%] text-[#D8A799] italic text-[1.2em]”>entire weekend.”</span>
+                <blockquote className="text-lg font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
+                  "We didn't want to build just another venue. We wanted to create something deeper-a place where people could slow down, truly connect, and celebrate life and love across an
+                  <span className="block text-center -ml-[10%] text-[#D8A799] italic text-[1.2em]">entire weekend."</span>
                 </blockquote>
                 <p className="mt-4 text-sm text-primary-foreground/80">
                   - Chris & Shannon
