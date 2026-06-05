@@ -92,6 +92,39 @@ const Contact = () => {
         {/* Contact Section */}
         <section className="section">
           <div className="container mx-auto px-4">
+            {/* What to Expect - full-width above the grid */}
+            <div className="max-w-6xl mx-auto mb-8">
+              <ScrollReveal>
+                <div className="flex flex-col gap-6">
+                  <Card className="border-2 border-primary bg-primary/5 w-full">
+                    <CardContent className="p-6 md:p-8">
+                      <h3 className="text-xl md:text-2xl font-bold mb-3">What to Expect</h3>
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
+                        Come as you are. Walk the property, ask every question, take all the time you need.
+                      </p>
+                      <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-4 text-sm md:text-base text-muted-foreground">
+                        <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Up to 90 minutes at your pace</span></li>
+                        <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Walk ceremony and reception spaces</span></li>
+                        <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>See the cabin and camping areas</span></li>
+                        <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Browse the Wedding Décor Collection</span></li>
+                        <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Discuss packages and pricing openly</span></li>
+                        <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Just an honest, relaxed conversation</span></li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                  <div className="w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-soft shrink-0 img-card">
+                    <img
+                      src={contactExpectImage}
+                      alt="Couple portrait in the forest at Rustic Retreat"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+
             <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               {/* Contact Form */}
               <ScrollReveal direction="left">
@@ -351,35 +384,6 @@ const Contact = () => {
                   </Card>
                 </ScrollReveal>
 
-                <ScrollReveal direction="right" delay={200}>
-                  <div className="flex flex-col gap-6">
-                    <Card className="border-2 border-primary bg-primary/5 w-full">
-                      <CardContent className="p-6 md:p-8">
-                        <h3 className="text-xl md:text-2xl font-bold mb-3">What to Expect</h3>
-                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
-                          Come as you are. Walk the property, ask every question, take all the time you need.
-                        </p>
-                        <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-4 text-sm md:text-base text-muted-foreground">
-                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Up to 90 minutes at your pace</span></li>
-                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Walk ceremony and reception spaces</span></li>
-                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>See the cabin and camping areas</span></li>
-                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Browse the Wedding Décor Collection</span></li>
-                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Discuss packages and pricing openly</span></li>
-                          <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Just an honest, relaxed conversation</span></li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                    <div className="w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-soft shrink-0 img-card">
-                      <img
-                        src={contactExpectImage}
-                        alt="Couple portrait in the forest at Rustic Retreat"
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover object-center"
-                      />
-                    </div>
-                  </div>
-                </ScrollReveal>
               </div>
             </div>
           </div>
