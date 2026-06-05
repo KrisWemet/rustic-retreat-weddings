@@ -193,6 +193,10 @@ const Gallery = () => {
                     decoding="async"
                     className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/25 transition-colors duration-500 pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-gradient-to-t from-black/65 to-transparent p-4 pointer-events-none">
+                    <p className="text-white/90 text-sm font-medium tracking-wide">{image.category}</p>
+                  </div>
                 </div>
               ))}
             </div>

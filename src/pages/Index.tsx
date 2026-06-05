@@ -72,6 +72,7 @@ const Index = () => {
   const [cmsHomepage, setCmsHomepage] = useState<HomepageCmsContent | null>(null);
   const [openHomeFaqIndex, setOpenHomeFaqIndex] = useState<number | null>(null);
   const testimonialTrackRef = useRef<HTMLDivElement>(null);
+  const heroImgRef = useRef<HTMLImageElement>(null);
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
 
   useEffect(() => {
@@ -168,6 +169,17 @@ const Index = () => {
       }
     }
   }, [isVideoVisible, videoSrc]);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const img = heroImgRef.current;
+    if (!img) return;
+    const onScroll = () => {
+      img.style.transform = `translateY(${window.scrollY * 0.22}px)`;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const heroImage = toSanityImageUrl(cmsHomepage?.heroImageUrl) || heroSunsetMeadow;
   const heroImageAlt = cmsHomepage?.heroImageAlt || "Couple in the woodland at Rustic Retreat";
@@ -338,15 +350,17 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section - Locked Composition */}
-      <section className="relative w-full min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px]">
+      <section className="relative w-full overflow-hidden min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px]">
         <img
+          ref={heroImgRef}
           src={heroImage}
           alt={heroImageAlt}
           loading="eager"
           decoding="async"
           // @ts-expect-error - React 18 types don't support lowercase fetchpriority, but React runtime complains about camelCase
           fetchpriority="high"
-          className="absolute inset-0 h-full w-full object-cover object-[50%_40%]"
+          className="absolute w-full object-cover object-[50%_40%] will-change-transform"
+          style={{ top: "-8%", height: "116%" }}
         />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_40%,rgba(0,0,0,0.84)_85%,rgba(0,0,0,0.96)_100%)]" />
         <div className="absolute inset-0 z-10 flex items-end justify-center pb-8 md:pb-12 lg:pb-16">

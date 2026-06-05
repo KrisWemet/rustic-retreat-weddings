@@ -60,7 +60,7 @@ const Navigation = () => {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 pt-[env(safe-area-inset-top)]",
+          "fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500 ease-in-out pt-[env(safe-area-inset-top)]",
           isScrolled
             ? "bg-background/98 backdrop-blur-lg border-border/50 shadow-sm"
             : "bg-background/95 backdrop-blur-md border-border/30"
@@ -126,7 +126,7 @@ const Navigation = () => {
               <Link to="/contact" onClick={() => handleLinkClick("/contact")}>
                 <Button
                   className={cn(
-                    "bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105",
+                    "btn-shimmer bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105",
                     isScrolled ? "px-5 text-sm" : "px-6"
                   )}
                 >
@@ -137,7 +137,7 @@ const Navigation = () => {
 
             {/* Mobile CTA Button */}
             <Link to="/contact" onClick={() => handleLinkClick("/contact")} className="lg:hidden">
-              <Button size="sm" className="bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark text-white rounded-full px-4 shadow-md text-xs">
+              <Button size="sm" className="btn-shimmer bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark text-white rounded-full px-4 shadow-md text-xs">
                 Schedule your tour
               </Button>
             </Link>
@@ -248,7 +248,7 @@ const Navigation = () => {
             <Link to="/contact" onClick={() => handleLinkClick("/contact")} className="block">
               <Button
                 size="lg"
-                className="w-full bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white rounded-full shadow-elegant"
+                className="btn-shimmer w-full bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white rounded-full shadow-elegant"
               >
                 Discover Your Venue
               </Button>
