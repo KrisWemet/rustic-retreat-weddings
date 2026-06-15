@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageTransition from "@/components/PageTransition";
 import HoverImage from "@/components/HoverImage";
+import Flourish from "@/components/Flourish";
+import Fireflies from "@/components/Fireflies";
 import SEO from "@/components/SEO";
 import OrganizationSchema from "@/components/OrganizationSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -363,21 +365,24 @@ const Index = () => {
           style={{ top: "-8%", height: "116%" }}
         />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_40%,rgba(0,0,0,0.84)_85%,rgba(0,0,0,0.96)_100%)]" />
+        <Fireflies count={32} className="z-[5]" />
         <div className="absolute inset-0 z-10 flex items-end justify-center pb-8 md:pb-12 lg:pb-16">
           <div className="mx-auto w-full max-w-6xl px-4 md:px-8 text-center text-white">
             <div className="mx-auto max-w-2xl rounded-2xl md:rounded-3xl bg-[linear-gradient(to_bottom,rgba(0,0,0,0.62),rgba(0,0,0,0.53),rgba(0,0,0,0.43))] px-6 py-6 md:px-10 md:py-7 lg:px-12 lg:py-8">
-              <p className="text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-white/85" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroKicker") : undefined}>
+              <p className="hero-rise text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-white/85" style={{ "--rise-delay": "0.1s" } as React.CSSProperties} data-sanity={sanityDataAttribute ? sanityDataAttribute("heroKicker") : undefined}>
                 {heroKicker}
               </p>
               <h1 className="mt-3 md:mt-4 lg:mt-5 font-serif font-normal leading-[1.05] [text-wrap:balance] [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
-                <span className="block text-white text-3xl md:text-5xl lg:text-6xl" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroHeadlinePart1") : undefined}>{heroHeadlinePart1}</span>
-                <span className="block text-white text-3xl md:text-5xl lg:text-6xl" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroHeadlinePart2") : undefined}>{heroHeadlinePart2}</span>
-                <span className="block text-[#D8A799] italic text-4xl md:text-6xl lg:text-7xl" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroHeadlineHighlight") : undefined}>{heroHeadlineHighlight}</span>
+                <span className="hero-rise block text-white text-3xl md:text-5xl lg:text-6xl" style={{ "--rise-delay": "0.25s" } as React.CSSProperties} data-sanity={sanityDataAttribute ? sanityDataAttribute("heroHeadlinePart1") : undefined}>{heroHeadlinePart1}</span>
+                <span className="hero-rise block text-white text-3xl md:text-5xl lg:text-6xl" style={{ "--rise-delay": "0.4s" } as React.CSSProperties} data-sanity={sanityDataAttribute ? sanityDataAttribute("heroHeadlinePart2") : undefined}>{heroHeadlinePart2}</span>
+                <span className="hero-rise block" style={{ "--rise-delay": "0.55s" } as React.CSSProperties}>
+                  <span className="text-enchanted italic text-4xl md:text-6xl lg:text-7xl" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroHeadlineHighlight") : undefined}>{heroHeadlineHighlight}</span>
+                </span>
               </h1>
-              <p className="mx-auto mt-3 md:mt-4 lg:mt-5 max-w-3xl text-sm md:text-base lg:text-lg text-white/95" data-sanity={sanityDataAttribute ? sanityDataAttribute("heroSubheadline") : undefined}>
+              <p className="hero-rise mx-auto mt-3 md:mt-4 lg:mt-5 max-w-3xl text-sm md:text-base lg:text-lg text-white/95" style={{ "--rise-delay": "0.72s" } as React.CSSProperties} data-sanity={sanityDataAttribute ? sanityDataAttribute("heroSubheadline") : undefined}>
                 {heroSubheadline}
               </p>
-              <div className="mt-5 md:mt-6 lg:mt-7 flex flex-col items-center gap-3 md:gap-4 sm:flex-row sm:justify-center">
+              <div className="hero-rise mt-5 md:mt-6 lg:mt-7 flex flex-col items-center gap-3 md:gap-4 sm:flex-row sm:justify-center" style={{ "--rise-delay": "0.88s" } as React.CSSProperties}>
                 {renderHeroCta(
                   heroPrimaryCtaHref,
                   heroPrimaryCtaText,
@@ -424,9 +429,10 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mb-10 md:mb-14">
               <p className="section-label">Real words, real weekends</p>
-              <h2 className="text-3xl md:text-4xl font-serif text-primary">
+              <h2 className="display-lg font-serif text-primary">
                 What couples had to say about Rustic Retreat
               </h2>
+              <Flourish className="text-secondary/60 mt-5" size="md" />
             </div>
           </ScrollReveal>
           <ScrollReveal>
@@ -449,7 +455,7 @@ const Index = () => {
                       data-testimonial-index={index}
                       className="snap-center shrink-0 md:shrink md:flex-1 w-[88%] sm:w-[80%] md:w-auto"
                     >
-                      <div className="bg-white/70 backdrop-blur-sm rounded-2xl border border-secondary/15 px-7 py-8 shadow-soft flex flex-col h-full text-center">
+                      <div className="card-enchant bg-white/70 backdrop-blur-sm rounded-2xl border border-secondary/15 px-7 py-8 shadow-soft flex flex-col h-full text-center">
                         {/* Stars */}
                         <div className="flex justify-center gap-1 mb-5">
                           {[...Array(5)].map((_, i) => (
@@ -457,7 +463,7 @@ const Index = () => {
                           ))}
                         </div>
                         {/* Decorative opening quote */}
-                        <div className="font-serif text-[6rem] leading-none text-secondary/20 -mb-4 select-none" aria-hidden="true">"</div>
+                        <div className="quote-glyph font-serif text-[6rem] -mb-4 select-none" aria-hidden="true">"</div>
                         <blockquote className="font-serif italic text-primary/90 leading-relaxed text-[0.95rem] mb-7">
                           {testimonial.quote}
                         </blockquote>
@@ -515,6 +521,7 @@ const Index = () => {
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 No rigid timelines. No cookie-cutter packages. Just you, your people, and multiple days to bring your celebration to life.
               </p>
+              <Flourish className="text-secondary/55" size="lg" />
             </div>
           </ScrollReveal>
 
@@ -539,9 +546,10 @@ const Index = () => {
           <ScrollReveal>
             <div className="max-w-4xl mx-auto text-center mb-8">
               <p className="section-label">EXPERIENCE THE PROPERTY</p>
-              <h2 className="text-3xl md:text-4xl font-serif mb-4">
+              <h2 className="display-lg font-serif mb-4">
                 Take a virtual walk with us
               </h2>
+              <Flourish className="text-secondary/55" size="md" />
             </div>
           </ScrollReveal>
 
@@ -600,7 +608,8 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center lg:text-left mb-10">
               <p className="section-label">IS THIS YOUR PLACE?</p>
-              <h2 className="text-3xl md:text-4xl font-serif mb-4">This is for couples who want...</h2>
+              <h2 className="display-lg font-serif mb-4">This is for couples who want...</h2>
+              <Flourish className="text-secondary/55 lg:mx-0" size="md" />
             </div>
           </ScrollReveal>
 
@@ -608,7 +617,7 @@ const Index = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               {introCards.map((card, index) => (
                 <ScrollReveal key={card._key || index} delay={index * 100}>
-                  <div className="bg-card p-5 rounded-2xl shadow-soft h-full">
+                  <div className="card-enchant bg-card p-5 rounded-2xl shadow-soft h-full border border-secondary/10">
                     <p
                       className="font-medium"
                       data-sanity={sanityDataAttribute ? sanityDataAttribute(getArrayItemPath("introCards", card._key, index, ".text")) : undefined}
@@ -718,7 +727,7 @@ const Index = () => {
             <ScrollReveal delay={150}>
               <div className="relative lg:order-1 flex justify-center lg:justify-start">
                 <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
-                <div className="relative overflow-hidden rounded-3xl shadow-elegant w-full max-w-[520px] img-card">
+                <div className="relative overflow-hidden rounded-3xl enchanted-glow w-full max-w-[520px] img-card">
                   <img
                     src={beyondCeremonyImage}
                     alt="Couple portrait with sparkler heart light painting at Rustic Retreat"
@@ -733,7 +742,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <ScrollReveal delay={0}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
+              <div className="card-enchant bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
                   <Sparkles className="w-6 h-6 text-secondary" />
                 </div>
@@ -743,7 +752,7 @@ const Index = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={100}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
+              <div className="card-enchant bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
                   <Music className="w-6 h-6 text-secondary" />
                 </div>
@@ -753,7 +762,7 @@ const Index = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
+              <div className="card-enchant bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
                   <Flag className="w-6 h-6 text-secondary" />
                 </div>
@@ -763,7 +772,7 @@ const Index = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={300}>
-              <div className="bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
+              <div className="card-enchant bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
                   <Film className="w-6 h-6 text-secondary" />
                 </div>
@@ -784,10 +793,10 @@ const Index = () => {
                 <div className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.3em] mb-4">
                   Packages
                 </div>
-                <h2 className="text-3xl md:text-5xl font-serif mb-3 text-primary">
+                <h2 className="display-lg font-serif mb-3 text-primary">
                   Choose your weekend
                 </h2>
-                <div className="mx-auto h-1 w-16 rounded-full bg-secondary/60 mb-4" />
+                <Flourish className="text-secondary/60 mb-4" size="md" />
                 <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base mb-2">
                   Pick the timeline that fits your vision-then make the land your own.
                 </p>
@@ -801,9 +810,9 @@ const Index = () => {
               {[...content.packages.packages].reverse().map((pkg, index) => (
                 <ScrollReveal key={index} delay={index * 100}>
                   <Card
-                    className={`bg-card group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background ${pkg.isRecommended
+                    className={`card-enchant bg-card group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background ${pkg.isRecommended
                       ? "border-2 border-secondary shadow-medium"
-                      : "border border-border hover:border-secondary transition-all hover:shadow-medium"
+                      : "border border-border"
                       }`}
                     tabIndex={0}
                   >
@@ -933,14 +942,16 @@ const Index = () => {
             className="h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-primary/85" />
+          <Fireflies count={36} className="z-[1]" />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <ScrollReveal>
-            <Heart className="w-10 h-10 text-secondary mx-auto mb-6" />
-            <h2 className="text-3xl md:text-5xl font-serif text-primary-foreground mb-6">
-              Come see if this is where your <span className="italic text-secondary">Forever</span> begins
+            <Heart className="w-10 h-10 text-secondary mx-auto mb-6 animate-float" />
+            <h2 className="display-lg font-serif text-primary-foreground mb-6">
+              Come see if this is where your <span className="italic text-enchanted">Forever</span> begins
             </h2>
+            <Flourish className="text-secondary/70 mb-6" size="md" />
             <p className="text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto">
               Most couples know within 10 minutes of walking the property.
             </p>

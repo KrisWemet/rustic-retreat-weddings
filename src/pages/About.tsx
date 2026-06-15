@@ -8,6 +8,7 @@ import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import Flourish from "@/components/Flourish";
 import { Heart, Sparkles, Home, TreePine, Sun } from "lucide-react";
 
 const About = () => {
@@ -25,7 +26,8 @@ const About = () => {
 
         <section className="section section-cream mt-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-serif mb-6">About Rustic Retreat</h1>
+            <h1 className="display-xl font-serif mb-5">About Rustic Retreat</h1>
+            <Flourish className="text-secondary/60 mb-6" size="md" />
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
               Family-owned since 2006. We built this place for ourselves-now we share it with couples who want something real.
             </p>

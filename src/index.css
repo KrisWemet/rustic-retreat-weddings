@@ -407,4 +407,179 @@ All colors MUST be HSL.
       transform: translateY(-10px);
     }
   }
+
+  /* ============================================================
+     ENCHANTED / FAIRY-TALE LAYER
+     Ambient atmosphere, ornaments, and refined motion that give
+     the site a storybook, woodland-romance feel.
+     ============================================================ */
+
+  /* Dramatic editorial display scale for hero / section headlines */
+  .display-xl {
+    font-size: clamp(2.75rem, 6vw, 5rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+  }
+
+  .display-lg {
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+  }
+
+  /* Section labels get a softer, warmer, more luminous treatment */
+  .section-label {
+    @apply text-secondary;
+    text-shadow: 0 0 18px hsl(var(--terracotta) / 0.18);
+  }
+
+  /* Fireflies ---------------------------------------------------- */
+  .firefly {
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(
+      circle,
+      var(--firefly-core, hsl(40 90% 88% / 0.95)) 0%,
+      var(--firefly-glow, hsl(38 80% 72%)) 42%,
+      hsl(30 60% 60% / 0) 72%
+    );
+    box-shadow:
+      0 0 6px 1px var(--firefly-glow, hsl(40 90% 80%)),
+      0 0 14px 4px var(--firefly-glow, hsl(35 80% 70%));
+    opacity: 0;
+    animation:
+      firefly-drift var(--drift-duration, 12s) ease-in-out infinite,
+      firefly-twinkle var(--twinkle-duration, 3.5s) ease-in-out infinite;
+    animation-delay: var(--firefly-delay, 0s);
+    will-change: transform, opacity;
+  }
+
+  @keyframes firefly-twinkle {
+    0%, 100% { opacity: 0; }
+    18% { opacity: calc(var(--firefly-peak, 0.9) * 0.2); }
+    50% { opacity: var(--firefly-peak, 0.9); }
+    82% { opacity: calc(var(--firefly-peak, 0.9) * 0.3); }
+  }
+
+  @keyframes firefly-drift {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(14px, -18px); }
+    50%  { transform: translate(-10px, -34px); }
+    75%  { transform: translate(-20px, -16px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  /* Flourish self-draw: vines trace in, leaves sprout, sparkle pops last */
+  .flourish-vine {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0.95s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  }
+
+  .flourish-leaf {
+    opacity: 0;
+    transform: scale(0.3);
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .flourish-bloom {
+    opacity: 0;
+    transform: scale(0.2);
+    transform-origin: center;
+    transform-box: fill-box;
+    transition:
+      opacity 0.5s ease 0.85s,
+      transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.85s;
+  }
+
+  .flourish.is-drawn .flourish-vine { stroke-dashoffset: 0; }
+  .flourish.is-drawn .flourish-leaf { opacity: 0.5; transform: scale(1); }
+  .flourish.is-drawn .flourish-bloom { opacity: 1; transform: scale(1); }
+
+  /* Staggered hero entrance */
+  .hero-rise {
+    opacity: 0;
+    animation: hero-rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--rise-delay, 0s);
+  }
+
+  @keyframes hero-rise {
+    from { opacity: 0; transform: translateY(26px); filter: blur(2px); }
+    to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+  }
+
+  /* Enchanted card: gentle lift, warm glow, and a hairline that
+     blooms terracotta on hover. Drop onto any rounded card. */
+  .card-enchant {
+    position: relative;
+    transition:
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.45s ease;
+    will-change: transform;
+  }
+
+  .card-enchant:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 48px -12px hsl(var(--terracotta) / 0.4);
+    border-color: hsl(var(--terracotta) / 0.5);
+  }
+
+  /* Soft halo behind a focal element */
+  .enchanted-glow {
+    box-shadow: 0 0 0 1px hsl(var(--terracotta) / 0.18),
+      0 22px 60px -18px hsl(var(--terracotta) / 0.45);
+  }
+
+  /* Decorative drop-cap quotation glyph for testimonials */
+  .quote-glyph {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    line-height: 0;
+    color: hsl(var(--terracotta) / 0.28);
+    text-shadow: 0 2px 12px hsl(var(--terracotta) / 0.15);
+  }
+
+  /* Shimmering rose-gold text for magical accent words */
+  .text-enchanted {
+    background: linear-gradient(
+      100deg,
+      hsl(15 45% 62%) 0%,
+      hsl(15 60% 78%) 45%,
+      hsl(40 70% 82%) 55%,
+      hsl(15 45% 62%) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: enchanted-sheen 6s linear infinite;
+  }
+
+  @keyframes enchanted-sheen {
+    to { background-position: 200% center; }
+  }
+
+  /* Soft vignette + grain overlay for atmospheric depth on imagery */
+  .atmosphere::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(120% 90% at 50% 30%, transparent 55%, hsl(25 25% 12% / 0.28) 100%);
+  }
+
+  /* Respect reduced-motion: still beautiful, just calm */
+  @media (prefers-reduced-motion: reduce) {
+    .firefly-field { display: none; }
+    .text-enchanted { animation: none; }
+    .card-enchant { transition: box-shadow 0.3s ease, border-color 0.3s ease; }
+    .card-enchant:hover { transform: none; }
+    .flourish-vine,
+    .flourish-leaf,
+    .flourish-bloom { transition: none !important; }
+    .hero-rise { animation: none; opacity: 1; }
+  }
 }

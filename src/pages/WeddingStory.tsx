@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import HoverImage from "@/components/HoverImage";
+import Fireflies from "@/components/Fireflies";
 import SEO from "@/components/SEO";
 import { getStoryBySlug, weddingStories } from "@/data/wedding-stories";
 import { Calendar, Users, Camera, Heart, Quote, ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
@@ -63,8 +64,9 @@ const WeddingStory = () => {
               className="h-full w-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent" />
+            <Fireflies count={28} className="z-[1]" />
           </div>
-          
+
           <div className="relative z-10 container mx-auto px-4 pb-16 pt-32 text-primary-foreground">
             <ScrollReveal>
               <Link 

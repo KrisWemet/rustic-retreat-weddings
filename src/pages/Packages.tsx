@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ScrollReveal from "@/components/ScrollReveal";
+import Fireflies from "@/components/Fireflies";
+import Flourish from "@/components/Flourish";
 import loveMarqueeArch from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-first-dance-with-love-marquee-sign-32.webp";
 import receptionTable from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-sweetheart-table-chandelier-draping-neon-sign-05.webp";
 import ceremonySetupWide from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wide-outdoor-ceremony-arch-wedding-party-forest-clearing-03.webp";
@@ -83,13 +85,15 @@ const Packages = () => {
               className="h-full w-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary/70" />
+            <Fireflies count={28} className="z-[1]" />
           </div>
 
           <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center text-primary-foreground">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl leading-tight font-bold mb-5 sm:mb-6 animate-fade-in-up">
+            <h1 className="display-xl font-serif leading-tight mb-5 sm:mb-6 animate-fade-in-up [text-shadow:_0_2px_18px_rgba(0,0,0,0.45)]">
               <span className="block">The question isn't ...</span>
-              <span className="block">"Where should we get married?"</span>
+              <span className="block italic text-enchanted">"Where should we get married?"</span>
             </h1>
+            <Flourish className="text-primary-foreground/70 mb-6 animate-fade-in-up" size="md" />
             <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto animate-fade-in-up text-primary-foreground/90">
               <span className="block">You already know where. You can feel it. The real question is:</span>
               <span className="block mt-2">"How many days should we give ourselves to do this right?"</span>
