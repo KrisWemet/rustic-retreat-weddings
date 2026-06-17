@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageTransition from "@/components/PageTransition";
-import heroImage from "@/assets/gallery/enchanted/generated-image.png";
+import heroImage from "@/assets/gallery/enchanted/Enchanted_Wedding.png";
 import { useToast } from "@/hooks/use-toast";
 import enchantedMarkdown from "../../Enchanted.md?raw";
 
