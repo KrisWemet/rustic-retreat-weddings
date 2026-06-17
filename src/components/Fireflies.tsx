@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 interface FirefliesProps {
   /** Number of fireflies to render. */
@@ -30,9 +30,22 @@ const lerp = (i: number, [min, max]: number[], steps = 9) =>
  * Purely decorative; hidden for users who prefer reduced motion.
  */
 const Fireflies = ({ count = 14, className = "" }: FirefliesProps) => {
+  // Thin the field on small / touch screens: dozens of blurred, glowing,
+  // continuously-animating sprites are cheap on a desktop GPU but cause
+  // visible jank on phones. Roughly halve the count below the md breakpoint.
+  const [effectiveCount, setEffectiveCount] = useState(count);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const apply = () => setEffectiveCount(mq.matches ? Math.ceil(count * 0.5) : count);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, [count]);
+
   const sprites = useMemo(
     () =>
-      Array.from({ length: count }).map((_, i) => {
+      Array.from({ length: effectiveCount }).map((_, i) => {
         // Weight toward far/mid layers so the near ones feel special.
         const layer = LAYERS[i % 3 === 2 ? 2 : i % 2];
         const hue = HUES[(i * 5) % HUES.length];
@@ -45,7 +58,7 @@ const Fireflies = ({ count = 14, className = "" }: FirefliesProps) => {
         const delay = (i % 9) * 0.6;
         return { layer, hue, left, top, size, peak, driftDuration, twinkleDuration, delay, key: i };
       }),
-    [count]
+    [effectiveCount]
   );
 
   return (
