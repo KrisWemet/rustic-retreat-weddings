@@ -257,6 +257,25 @@ const getClientIp = (req: ApiRequest) => {
   return req.headers["x-real-ip"] || req.headers["cf-connecting-ip"] || "unknown";
 };
 
+// Same-origin callers only. Reflect the request Origin when it matches one of
+// the venue's own domains (or a Vercel preview), otherwise fall back to the
+// canonical site. Avoids the "Access-Control-Allow-Origin: *" wildcard.
+const ALLOWED_ORIGINS = new Set([
+  "https://rusticretreat.xyz",
+  "https://www.rusticretreat.xyz",
+  "https://rusticretreatalberta.ca",
+  "https://www.rusticretreatalberta.ca",
+  "https://rusticretreatweddings.ca",
+  "https://www.rusticretreatweddings.ca",
+]);
+
+const resolveAllowedOrigin = (origin: string | undefined) => {
+  if (origin && (ALLOWED_ORIGINS.has(origin) || /^https:\/\/[a-z0-9-]+\.vercel\.app$/.test(origin))) {
+    return origin;
+  }
+  return "https://www.rusticretreat.xyz";
+};
+
 const isRateLimited = (ip: string, now = Date.now()) => {
   const requests = ipRequestLog.get(ip) || [];
   const recentRequests = requests.filter((timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS);
@@ -458,7 +477,8 @@ const logExchange = async ({
 };
 
 export default async function handler(req: ApiRequest, res: ApiResponse) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", resolveAllowedOrigin(req.headers["origin"]));
+  res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, X-Session-Id");
 
