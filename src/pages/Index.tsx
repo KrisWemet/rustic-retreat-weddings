@@ -344,7 +344,7 @@ const Index = () => {
   return <PageTransition>
     <SEO
       image={heroImage}
-      keywords={["edmonton wedding venue", "outdoor wedding alberta", "multi-day wedding", "camping wedding venue", "rustic wedding alberta", "private wedding property", "weekend wedding venue"]}
+      keywords={["edmonton wedding venue", "outdoor wedding alberta", "multi-day wedding", "camping wedding venue", "rustic wedding alberta", "private wedding property", "weekend wedding venue", "wedding venue with accommodation", "diy wedding venue alberta", "byob wedding venue", "dog friendly wedding venue alberta"]}
     />
     <OrganizationSchema />
     <BreadcrumbSchema />

@@ -60,7 +60,7 @@ const Packages = () => {
     <>
       <SEO
         title="Wedding Packages & Pricing"
-        description="Choose from 2-day ($5,000), 3-day ($6,500), or 5-day ($7,500) wedding packages at Rustic Retreat. All include exclusive property access, couples cabin access, camping for up to 60 guests, and décor collection."
+        description="Weekend wedding packages with transparent all-in pricing: 2-day $5,000, 3-day $6,500, 5-day $7,500. Exclusive 65-acre access, cabin, camping for 60 guests, décor included - no per-plate minimums."
         path="/packages"
         image={loveMarqueeArch}
         keywords={["wedding packages edmonton", "weekend wedding pricing alberta", "multi-day wedding cost", "all-inclusive wedding venue edmonton", "wedding venue pricing alberta", "2 day wedding package", "3 day wedding package", "5 day wedding package"]}
