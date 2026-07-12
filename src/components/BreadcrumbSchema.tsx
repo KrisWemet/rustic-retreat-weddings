@@ -44,7 +44,7 @@ const BreadcrumbSchema = () => {
       "@type": "ListItem",
       position: index + 1,
       name: crumb.name,
-      item: `https://rusticretreatweddings.ca${crumb.path}`
+      item: `https://www.rusticretreatalberta.ca${crumb.path}`
     }))
   };
 

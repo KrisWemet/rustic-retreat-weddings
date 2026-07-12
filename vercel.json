@@ -1,5 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/enchanted", "destination": "/enchanted-wedding", "permanent": true },
+    { "source": "/enchated", "destination": "/enchanted-wedding", "permanent": true },
+    { "source": "/rules", "destination": "/rustic-retreat-site-rules.html", "permanent": true },
+    { "source": "/guidelines", "destination": "/rustic-retreat-site-rules.html", "permanent": true },
+    { "source": "/cabin", "destination": "/venue", "permanent": true },
+    { "source": "/decor", "destination": "/venue", "permanent": true },
+    { "source": "/weddings", "destination": "/packages", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/((?!api/).*)",
@@ -7,6 +16,15 @@
     }
   ],
   "headers": [
+    {
+      "source": "/booking-202(6|7)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [

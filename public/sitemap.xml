@@ -1,95 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.rusticretreat.xyz/</loc>
-    <lastmod>2026-01-25</lastmod>
+    <loc>https://www.rusticretreatalberta.ca/</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.rusticretreat.xyz/about</loc>
-    <lastmod>2026-01-25</lastmod>
+    <loc>https://www.rusticretreatalberta.ca/about</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.rusticretreat.xyz/venue</loc>
-    <lastmod>2026-01-25</lastmod>
+    <loc>https://www.rusticretreatalberta.ca/venue</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.rusticretreat.xyz/packages</loc>
-    <lastmod>2026-01-25</lastmod>
+    <loc>https://www.rusticretreatalberta.ca/packages</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.rusticretreat.xyz/gallery</loc>
-    <lastmod>2026-01-25</lastmod>
+    <loc>https://www.rusticretreatalberta.ca/gallery</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.rusticretreat.xyz/faqs</loc>
-    <lastmod>2026-01-25</lastmod>
+    <loc>https://www.rusticretreatalberta.ca/faqs</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rusticretreat.xyz/contact</loc>
-    <lastmod>2026-01-25</lastmod>
+    <loc>https://www.rusticretreatalberta.ca/contact</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rusticretreat.xyz/enchanted-wedding</loc>
-    <lastmod>2026-03-05</lastmod>
+    <loc>https://www.rusticretreatalberta.ca/enchanted-wedding</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rusticretreat.xyz/prerender/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.rusticretreat.xyz/prerender/venue.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.rusticretreat.xyz/prerender/packages.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.rusticretreat.xyz/prerender/gallery.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.rusticretreat.xyz/prerender/faqs.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.rusticretreat.xyz/prerender/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.rusticretreat.xyz/prerender/enchanted-wedding.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.rusticretreat.xyz/llm.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.rusticretreat.xyz/llms.txt</loc>
+    <loc>https://www.rusticretreatalberta.ca/llm.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

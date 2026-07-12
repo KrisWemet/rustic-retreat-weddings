@@ -6,9 +6,9 @@ const OrganizationSchema = () => {
     "@type": ["Organization", "LocalBusiness", "EventVenue"],
     name: "Rustic Retreat Weddings",
     description: "Multi-day outdoor wedding venue near Edmonton with 65 private acres, cabin accommodation, and complete décor collection",
-    url: "https://rusticretreatweddings.ca",
-    logo: "https://rusticretreatweddings.ca/logo.webp",
-    image: "https://rusticretreatweddings.ca/hero-couple.webp",
+    url: "https://www.rusticretreatalberta.ca",
+    logo: "https://www.rusticretreatalberta.ca/favicon.svg",
+    image: "https://www.rusticretreatalberta.ca/og-image.jpg",
     telephone: "+17802106252",
     email: "rusticretreatalberta@gmail.com",
     address: {
@@ -35,18 +35,32 @@ const OrganizationSchema = () => {
       itemListElement: [
         {
           "@type": "Offer",
+          price: "5000",
+          priceCurrency: "CAD",
           itemOffered: {
             "@type": "Service",
-            name: "3-Day Weekend Package",
-            description: "Friday-Sunday exclusive property access"
+            name: "2-Day Weekday Escape",
+            description: "Weekday exclusive property access for intimate elopements (2027 season)"
           }
         },
         {
           "@type": "Offer",
+          price: "6500",
+          priceCurrency: "CAD",
+          itemOffered: {
+            "@type": "Service",
+            name: "3-Day Weekend Package",
+            description: "Friday-Sunday exclusive property access (2027 season)"
+          }
+        },
+        {
+          "@type": "Offer",
+          price: "7500",
+          priceCurrency: "CAD",
           itemOffered: {
             "@type": "Service",
             name: "5-Day Extended Package",
-            description: "Thursday-Monday exclusive property access"
+            description: "Wednesday-Sunday or Thursday-Monday exclusive property access (2027 season)"
           }
         }
       ]

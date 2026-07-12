@@ -27,7 +27,7 @@ const Packages = () => {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
     name: "Rustic Retreat Wedding Packages",
-    url: "https://www.rusticretreat.xyz/packages",
+    url: "https://www.rusticretreatalberta.ca/packages",
     itemListElement: [
       {
         "@type": "Offer",

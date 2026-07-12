@@ -261,19 +261,15 @@ const getClientIp = (req: ApiRequest) => {
 // the venue's own domains (or a Vercel preview), otherwise fall back to the
 // canonical site. Avoids the "Access-Control-Allow-Origin: *" wildcard.
 const ALLOWED_ORIGINS = new Set([
-  "https://rusticretreat.xyz",
-  "https://www.rusticretreat.xyz",
   "https://rusticretreatalberta.ca",
   "https://www.rusticretreatalberta.ca",
-  "https://rusticretreatweddings.ca",
-  "https://www.rusticretreatweddings.ca",
 ]);
 
 const resolveAllowedOrigin = (origin: string | undefined) => {
   if (origin && (ALLOWED_ORIGINS.has(origin) || /^https:\/\/[a-z0-9-]+\.vercel\.app$/.test(origin))) {
     return origin;
   }
-  return "https://www.rusticretreat.xyz";
+  return "https://www.rusticretreatalberta.ca";
 };
 
 const isRateLimited = (ip: string, now = Date.now()) => {
