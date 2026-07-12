@@ -19,7 +19,7 @@ export const FAQS: FAQEntry[] = [
     {
       category: "Guest Accommodations",
       question: "How many guests can you accommodate?",
-      answer: "We can welcome up to 80 guests for your ceremony and reception.\n\nFor those spending the night or the full weekend with you, we have a main camping area perfect for both RVs and tents. Just know that this is true boondocking, with no electrical hookups or water connections.\n\nThink starlit skies, crackling fires, and waking up surrounded by nature.\n\nIt's rustic at its finest, and guests tend to absolutely love it."
+      answer: "We can welcome up to 80 guests for your ceremony and reception.\n\nFor those spending the night or the full weekend with you, overnight camping is included with every package for up to 60 guests. Our main camping area is perfect for both RVs and tents. Just know that this is true boondocking, with no electrical hookups or water connections.\n\nThink starlit skies, crackling fires, and waking up surrounded by nature.\n\nIt's rustic at its finest, and guests tend to absolutely love it."
     },
     {
       category: "Guest Accommodations",
