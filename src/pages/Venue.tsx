@@ -319,7 +319,7 @@ const Venue = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Camping Under the Stars — Included for Up to 60 Guests</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  This is what makes a camping wedding weekend different from a one-day event: your people don't drive home when the music winds down. Overnight camping is included with every package for up to 60 guests, with room for both tents and RVs in our main camping area. Guests choose their own spot, set up for the weekend, and stay for every campfire, every slow morning, and every moment in between.
+                  This is what makes a camping wedding weekend different from a one-day event: your people don't drive home when the music winds down. Overnight camping is included with every package for up to 60 guests, with room for tents and up to 8 RVs in our main camping area (we can host up to 15 RVs total). Guests choose their own spot, set up for the weekend, and stay for every campfire, every slow morning, and every moment in between.
                 </p>
                 <p className="text-lg mb-6 text-muted-foreground">
                   Fair warning: this is true boondocking — no electrical hookups, no water connections. Just starlit skies, crackling fires, and waking up surrounded by 65 acres of Alberta forest. Guests tend to absolutely love it. Prefer wheels over tent poles? RVs and trailers are welcome, and RVezy.com can even deliver a rental trailer right to the camping area.
@@ -332,7 +332,7 @@ const Venue = () => {
                       <Tent className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Tents & RVs Welcome</h3>
                       <p className="text-sm text-muted-foreground">
-                        Up to 60 guests camp on-property, included in every package. Pick your spot in the main camping area — no defined sites, no extra nightly fees.
+                        Up to 60 guests camp on-property, included in every package — with space for 8 RVs included and up to 15 total. Pick your spot in the main camping area; no defined sites, no extra nightly fees.
                       </p>
                     </CardContent>
                   </Card>

@@ -548,7 +548,7 @@ If the answer cannot be found in the provided context:
 Core constraints you must always honor:
 - Maximum 80 guests for ceremony/reception.
 - Maximum 60 guests camping on-site.
-- Up to 15 RVs on-site.
+- Overnight camping included with every package: up to 60 guests, with 8 RVs included and a maximum of 15 RVs total on-site (overage fees apply beyond included allowances).
 - Events-only venue bookings (no camping-only bookings).
 - $500 damage deposit is due on check-in day.
 - Wedding inquiries require direct conversation with the venue team before booking.
