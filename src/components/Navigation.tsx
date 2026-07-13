@@ -2,26 +2,34 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin, ChevronDown } from "lucide-react";
 import LeafIcon from "@/components/LeafIcon";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isStylesOpen, setIsStylesOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "The Venue", path: "/venue" },
     { name: "Packages", path: "/packages" },
-    { name: "The Enchanted Wedding", path: "/enchanted-wedding" },
     // { name: "Love Stories", path: "/real-weddings" }, // Hidden temporarily
     { name: "Gallery", path: "/gallery" },
     { name: "About", path: "/about" },
     { name: "FAQs", path: "/faqs" },
   ];
 
+  const weddingStyles = [
+    { name: "The Enchanted Wedding", path: "/enchanted-wedding" },
+    { name: "Camping Weddings", path: "/camping-wedding" },
+    { name: "DIY Weddings", path: "/diy-wedding-venue-alberta" },
+    { name: "Elopements & Small Weddings", path: "/elopements" },
+  ];
+
   const isActive = (path: string) => location.pathname === path;
+  const isStylesActive = weddingStyles.some((link) => location.pathname === link.path);
 
   const handleLinkClick = (path: string) => {
     if (location.pathname === path) {
@@ -123,6 +131,48 @@ const Navigation = () => {
                   )}
                 </Link>
               ))}
+
+              {/* Wedding Styles Dropdown */}
+              <div className="relative group">
+                <button
+                  type="button"
+                  className={cn(
+                    "nav-link text-sm transition-colors py-1 inline-flex items-center gap-1",
+                    isStylesActive
+                      ? "text-foreground font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                  aria-haspopup="true"
+                >
+                  Wedding Styles
+                  <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" />
+                </button>
+                <div
+                  className={cn(
+                    "absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 translate-y-1 pointer-events-none transition-all duration-200",
+                    "group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto",
+                    "group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto"
+                  )}
+                >
+                  <div className="w-64 rounded-2xl border border-border/60 bg-background/98 backdrop-blur-lg shadow-lg py-2">
+                    {weddingStyles.map((link) => (
+                      <Link
+                        key={link.path}
+                        to={link.path}
+                        onClick={() => handleLinkClick(link.path)}
+                        className={cn(
+                          "block px-5 py-2.5 text-sm transition-colors",
+                          isActive(link.path)
+                            ? "text-foreground font-medium bg-secondary/10"
+                            : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+                        )}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
               <Link to="/contact" onClick={() => handleLinkClick("/contact")}>
                 <Button
                   className={cn(
@@ -200,6 +250,49 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
+
+            {/* Wedding Styles Expandable Group */}
+            <button
+              type="button"
+              onClick={() => setIsStylesOpen((open) => !open)}
+              aria-expanded={isStylesOpen}
+              className={cn(
+                "w-full flex items-center justify-between px-6 py-4 text-lg transition-colors border-l-4 text-left",
+                isStylesActive
+                  ? "text-primary font-medium border-secondary bg-secondary/5"
+                  : "text-foreground hover:text-primary border-transparent hover:border-secondary/50 hover:bg-muted/50"
+              )}
+            >
+              Wedding Styles
+              <ChevronDown
+                className={cn(
+                  "w-5 h-5 transition-transform duration-200",
+                  isStylesOpen && "rotate-180"
+                )}
+              />
+            </button>
+            <div
+              className={cn(
+                "overflow-hidden transition-all duration-300",
+                isStylesOpen ? "max-h-72" : "max-h-0"
+              )}
+            >
+              {weddingStyles.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => handleLinkClick(link.path)}
+                  className={cn(
+                    "block pl-10 pr-6 py-3 text-base transition-colors border-l-4",
+                    isActive(link.path)
+                      ? "text-primary font-medium border-secondary bg-secondary/5"
+                      : "text-muted-foreground hover:text-primary border-transparent hover:border-secondary/50 hover:bg-muted/50"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
             <Link
               to="/contact"
               onClick={() => handleLinkClick("/contact")}

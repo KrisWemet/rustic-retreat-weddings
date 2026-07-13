@@ -16,6 +16,9 @@ const WeddingStory = lazy(() => import("./pages/WeddingStory"));
 const FAQs = lazy(() => import("./pages/FAQs"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Enchanted = lazy(() => import("./pages/Enchanted"));
+const CampingWedding = lazy(() => import("./pages/CampingWedding"));
+const DIYWedding = lazy(() => import("./pages/DIYWedding"));
+const Elopements = lazy(() => import("./pages/Elopements"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Booking2026 = lazy(() => import("./pages/Booking2026"));
 const Booking2027 = lazy(() => import("./pages/Booking2027"));
@@ -94,6 +97,9 @@ const App = () => {
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/enchanted-wedding" element={<Enchanted />} />
+            <Route path="/camping-wedding" element={<CampingWedding />} />
+            <Route path="/diy-wedding-venue-alberta" element={<DIYWedding />} />
+            <Route path="/elopements" element={<Elopements />} />
             <Route path="/enchanted" element={<Navigate to="/enchanted-wedding" replace />} />
             <Route path="/enchated" element={<Navigate to="/enchanted-wedding" replace />} />
             <Route path="/rules" element={<Navigate to="/rustic-retreat-site-rules.html" replace />} />

@@ -18,6 +18,9 @@ const BreadcrumbSchema = () => {
     '/faqs': 'FAQs',
     '/contact': 'Contact',
     '/enchanted-wedding': 'Enchanted Wedding',
+    '/camping-wedding': 'Camping Weddings',
+    '/diy-wedding-venue-alberta': 'DIY Weddings',
+    '/elopements': 'Elopements & Small Weddings',
   };
 
   const getBreadcrumbs = (): BreadcrumbItem[] => {
