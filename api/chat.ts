@@ -261,19 +261,15 @@ const getClientIp = (req: ApiRequest) => {
 // the venue's own domains (or a Vercel preview), otherwise fall back to the
 // canonical site. Avoids the "Access-Control-Allow-Origin: *" wildcard.
 const ALLOWED_ORIGINS = new Set([
-  "https://rusticretreat.xyz",
-  "https://www.rusticretreat.xyz",
   "https://rusticretreatalberta.ca",
   "https://www.rusticretreatalberta.ca",
-  "https://rusticretreatweddings.ca",
-  "https://www.rusticretreatweddings.ca",
 ]);
 
 const resolveAllowedOrigin = (origin: string | undefined) => {
   if (origin && (ALLOWED_ORIGINS.has(origin) || /^https:\/\/[a-z0-9-]+\.vercel\.app$/.test(origin))) {
     return origin;
   }
-  return "https://www.rusticretreat.xyz";
+  return "https://www.rusticretreatalberta.ca";
 };
 
 const isRateLimited = (ip: string, now = Date.now()) => {
@@ -552,7 +548,7 @@ If the answer cannot be found in the provided context:
 Core constraints you must always honor:
 - Maximum 80 guests for ceremony/reception.
 - Maximum 60 guests camping on-site.
-- Up to 15 RVs on-site.
+- Overnight camping included with every package: up to 60 guests, with 8 RVs included and a maximum of 15 RVs total on-site (overage fees apply beyond included allowances).
 - Events-only venue bookings (no camping-only bookings).
 - $500 damage deposit is due on check-in day.
 - Wedding inquiries require direct conversation with the venue team before booking.

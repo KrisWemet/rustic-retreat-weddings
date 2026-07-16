@@ -17,6 +17,9 @@ const BreadcrumbSchema = () => {
     '/about': 'About',
     '/faqs': 'FAQs',
     '/contact': 'Contact',
+    '/camping-wedding': 'Camping Weddings',
+    '/diy-wedding-venue-alberta': 'DIY Weddings',
+    '/elopements': 'Elopements & Small Weddings',
   };
 
   const getBreadcrumbs = (): BreadcrumbItem[] => {
@@ -43,7 +46,7 @@ const BreadcrumbSchema = () => {
       "@type": "ListItem",
       position: index + 1,
       name: crumb.name,
-      item: `https://rusticretreatweddings.ca${crumb.path}`
+      item: `https://www.rusticretreatalberta.ca${crumb.path}`
     }))
   };
 
