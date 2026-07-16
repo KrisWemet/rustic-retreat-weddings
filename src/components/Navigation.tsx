@@ -143,7 +143,7 @@ const Navigation = () => {
                   )}
                   aria-haspopup="true"
                 >
-                  Wedding Styles
+                  The Experience
                   <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" />
                 </button>
                 <div
@@ -262,7 +262,7 @@ const Navigation = () => {
                   : "text-foreground hover:text-primary border-transparent hover:border-secondary/50 hover:bg-muted/50"
               )}
             >
-              Wedding Styles
+              The Experience
               <ChevronDown
                 className={cn(
                   "w-5 h-5 transition-transform duration-200",
