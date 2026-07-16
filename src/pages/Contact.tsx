@@ -28,7 +28,7 @@ const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [preferredContact, setPreferredContact] = useState("email");
+  const [preferredContact, setPreferredContact] = useState("text");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -236,16 +236,16 @@ const Contact = () => {
                               className="flex gap-6"
                             >
                               <div className="flex items-center space-x-2">
+                                <RadioGroupItem value="text" id="contact-text" />
+                                <Label htmlFor="contact-text" className="font-normal cursor-pointer">Text message</Label>
+                              </div>
+                              <div className="flex items-center space-x-2">
                                 <RadioGroupItem value="email" id="contact-email" />
                                 <Label htmlFor="contact-email" className="font-normal cursor-pointer">Email</Label>
                               </div>
                               <div className="flex items-center space-x-2">
                                 <RadioGroupItem value="phone" id="contact-phone" />
                                 <Label htmlFor="contact-phone" className="font-normal cursor-pointer">Phone call</Label>
-                              </div>
-                              <div className="flex items-center space-x-2">
-                                <RadioGroupItem value="text" id="contact-text" />
-                                <Label htmlFor="contact-text" className="font-normal cursor-pointer">Text message</Label>
                               </div>
                             </RadioGroup>
                           </div>
