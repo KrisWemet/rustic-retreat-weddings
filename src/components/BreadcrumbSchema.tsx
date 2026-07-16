@@ -17,7 +17,6 @@ const BreadcrumbSchema = () => {
     '/about': 'About',
     '/faqs': 'FAQs',
     '/contact': 'Contact',
-    '/enchanted-wedding': 'Enchanted Wedding',
   };
 
   const getBreadcrumbs = (): BreadcrumbItem[] => {
