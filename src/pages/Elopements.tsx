@@ -39,7 +39,7 @@ const Elopements = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">A Small Wedding on a Big Property</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  There's something incredibly beautiful about a small wedding on a big property. The space doesn't overwhelm you — it holds you. No minimum guest count, no venue that feels half-empty, no strangers from another event in the background of your photos. Some of our most memorable weekends have been elopements: a couple, a handful of their closest people, golden-hour vows in the meadow, and a quiet fire afterward under more stars than you've seen in years.
+                  There's something incredibly beautiful about a small wedding on a big property. The space doesn't overwhelm you — it holds you. No minimum guest count, no venue that feels half-empty, no strangers from another event in the background of your photos. Picture it: a couple, a handful of their closest people, golden-hour vows in the meadow, and a quiet fire afterward under more stars than you've seen in years. This property was made for exactly that kind of weekend.
                 </p>
                 <p className="text-lg mb-6 text-muted-foreground">
                   We're an hour northwest of Edmonton near Lac La Nonne — close enough for an easy drive, far enough that the city disappears completely.
