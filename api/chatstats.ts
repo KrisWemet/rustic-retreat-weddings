@@ -1,4 +1,12 @@
+import { timingSafeEqual } from "crypto";
 import { computeChatStats } from "./chat-analytics";
+
+const safeEqual = (a: string, b: string) => {
+  const aBuffer = Buffer.from(a, "utf8");
+  const bBuffer = Buffer.from(b, "utf8");
+  if (aBuffer.length !== bBuffer.length) return false;
+  return timingSafeEqual(aBuffer, bBuffer);
+};
 
 type ApiRequest = {
   method?: string;
@@ -27,12 +35,17 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
+  // Fail closed: chat stats include verbatim user messages, so refuse to serve
+  // them unless an API key is configured and matches.
   const requiredKey = process.env.CHATSTATS_API_KEY;
-  if (requiredKey) {
-    const provided = req.headers["x-api-key"] || getQueryParam(req, "key");
-    if (provided !== requiredKey) {
-      return res.status(401).json({ error: "Unauthorized" });
-    }
+  if (!requiredKey) {
+    console.error("CHATSTATS_API_KEY is not configured; refusing to serve chat stats.");
+    return res.status(500).json({ error: "Server not configured" });
+  }
+
+  const provided = req.headers["x-api-key"] || getQueryParam(req, "key");
+  if (typeof provided !== "string" || !safeEqual(provided, requiredKey)) {
+    return res.status(401).json({ error: "Unauthorized" });
   }
 
   try {

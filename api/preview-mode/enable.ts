@@ -1,5 +1,6 @@
 import { createClient } from "@sanity/client";
 import { validatePreviewUrl } from "@sanity/preview-url-secret";
+import { buildPreviewCookie, createPreviewToken, sanitizeRedirectPath } from "./previewCookie";
 
 type ApiRequest = {
   method?: string;
@@ -16,14 +17,6 @@ type ApiResponse = {
 
 const parseHost = (req: ApiRequest) => req.headers["x-forwarded-host"] || req.headers.host || "localhost";
 const parseProtocol = (req: ApiRequest) => req.headers["x-forwarded-proto"] || "https";
-const isLocalHost = (host: string) => host.includes("localhost") || host.startsWith("127.0.0.1");
-
-const buildPreviewCookie = (enabled: boolean, host: string) => {
-  const sameSite = isLocalHost(host) ? "Lax" : "None";
-  const secureFlag = isLocalHost(host) ? "" : " Secure;";
-  const maxAge = enabled ? 60 * 60 : 0;
-  return `__sanity_preview=${enabled ? "1" : "0"}; Path=/; Max-Age=${maxAge}; SameSite=${sameSite};${secureFlag}`;
-};
 
 export default async function handler(req: ApiRequest, res: ApiResponse) {
   if (req.method !== "GET") {
@@ -33,15 +26,15 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
   const projectId = process.env.SANITY_PROJECT_ID || process.env.VITE_SANITY_PROJECT_ID;
   const dataset = process.env.SANITY_DATASET || process.env.VITE_SANITY_DATASET || "production";
   const apiVersion = process.env.SANITY_API_VERSION || process.env.VITE_SANITY_API_VERSION || "2024-10-01";
-  const token = process.env.SANITY_VIEWER_TOKEN;
+  const viewerToken = process.env.SANITY_VIEWER_TOKEN;
 
-  if (!projectId || !token) {
+  if (!projectId || !viewerToken) {
     return res.status(500).json({
       error: "Missing SANITY_PROJECT_ID or SANITY_VIEWER_TOKEN in environment.",
     });
   }
 
-  const client = createClient({ projectId, dataset, apiVersion, useCdn: false, token });
+  const client = createClient({ projectId, dataset, apiVersion, useCdn: false, token: viewerToken });
   const host = parseHost(req);
   const protocol = parseProtocol(req);
   const absoluteUrl = `${protocol}://${host}${req.url}`;
@@ -52,8 +45,13 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
       return res.status(401).json({ error: "Invalid preview URL secret." });
     }
 
-    res.setHeader("Set-Cookie", buildPreviewCookie(true, host));
-    res.setHeader("Location", redirectTo);
+    const previewToken = createPreviewToken();
+    if (!previewToken) {
+      return res.status(500).json({ error: "Preview signing secret is not configured." });
+    }
+
+    res.setHeader("Set-Cookie", buildPreviewCookie(host, previewToken));
+    res.setHeader("Location", sanitizeRedirectPath(redirectTo));
     return res.status(307).end();
   } catch (error) {
     console.error("Failed to enable preview mode", error);

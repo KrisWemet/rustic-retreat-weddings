@@ -37,7 +37,11 @@ const App = () => {
     const hasPreviewCookie = document.cookie
       .split(";")
       .map((cookie) => cookie.trim())
-      .some((cookie) => cookie.startsWith("__sanity_preview=1"));
+      .some((cookie) => {
+        if (!cookie.startsWith("__sanity_preview=")) return false;
+        const value = cookie.slice("__sanity_preview=".length);
+        return value.length > 0 && value !== "0";
+      });
     const searchParams = new URLSearchParams(window.location.search);
     const hasPreviewFlag = searchParams.get("sanity-preview") === "1";
     setIsSanityPreviewEnabled(hasPreviewCookie || hasPreviewFlag);

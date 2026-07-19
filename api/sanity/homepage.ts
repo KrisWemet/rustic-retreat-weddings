@@ -1,4 +1,5 @@
 import { createClient } from "@sanity/client";
+import { PREVIEW_COOKIE_NAME, verifyPreviewToken } from "../preview-mode/previewCookie";
 
 type ApiRequest = {
   method?: string;
@@ -71,7 +72,7 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
   }
 
   const cookies = parseCookies(req.headers.cookie || "");
-  const previewEnabled = cookies.__sanity_preview === "1";
+  const previewEnabled = verifyPreviewToken(cookies[PREVIEW_COOKIE_NAME]);
   const hasDraftAccess = previewEnabled && Boolean(token);
 
   const client = createClient({
