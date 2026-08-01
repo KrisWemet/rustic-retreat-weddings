@@ -10,7 +10,6 @@ import HoverImage from "@/components/HoverImage";
 import Flourish from "@/components/Flourish";
 import Fireflies from "@/components/Fireflies";
 import SEO from "@/components/SEO";
-import OrganizationSchema from "@/components/OrganizationSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 // Hero & Property Images
@@ -346,7 +345,6 @@ const Index = () => {
       image={heroImage}
       keywords={["edmonton wedding venue", "outdoor wedding alberta", "multi-day wedding", "camping wedding venue", "rustic wedding alberta", "private wedding property", "weekend wedding venue", "wedding venue with accommodation", "diy wedding venue alberta", "byob wedding venue", "dog friendly wedding venue alberta"]}
     />
-    <OrganizationSchema />
     <BreadcrumbSchema />
     <div className="min-h-screen bg-background">
       <Navigation />

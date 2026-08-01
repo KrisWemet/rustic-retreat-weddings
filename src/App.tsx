@@ -5,6 +5,7 @@ import { Suspense, lazy, useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import ScrollToTop from "./components/ScrollToTop";
 import StickyMobileCTA from "./components/StickyMobileCTA";
+import OrganizationSchema from "./components/OrganizationSchema";
 
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
@@ -18,6 +19,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const CampingWedding = lazy(() => import("./pages/CampingWedding"));
 const DIYWedding = lazy(() => import("./pages/DIYWedding"));
 const Elopements = lazy(() => import("./pages/Elopements"));
+const WeddingVenuesNearEdmonton = lazy(() => import("./pages/WeddingVenuesNearEdmonton"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Booking2026 = lazy(() => import("./pages/Booking2026"));
 const Booking2027 = lazy(() => import("./pages/Booking2027"));
@@ -75,6 +77,7 @@ const App = () => {
 
   return (
     <HelmetProvider>
+      <OrganizationSchema />
       <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Toaster />
         <ScrollToTop />
@@ -98,6 +101,7 @@ const App = () => {
             <Route path="/camping-wedding" element={<CampingWedding />} />
             <Route path="/diy-wedding-venue-alberta" element={<DIYWedding />} />
             <Route path="/elopements" element={<Elopements />} />
+            <Route path="/wedding-venues-near-edmonton" element={<WeddingVenuesNearEdmonton />} />
             <Route path="/enchanted-wedding" element={<Navigate to="/" replace />} />
             <Route path="/enchanted" element={<Navigate to="/" replace />} />
             <Route path="/enchated" element={<Navigate to="/" replace />} />

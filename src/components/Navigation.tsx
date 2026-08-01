@@ -92,7 +92,9 @@ const Navigation = () => {
 
             {/* Logo */}
             <Link to="/" onClick={() => handleLinkClick("/")} className="text-primary">
-              <h1
+              {/* Logo wordmark — deliberately not a heading, so each page's own
+                  <h1> stays the single, descriptive heading for search engines. */}
+              <div
                 className={cn(
                   "font-serif italic transition-all duration-300",
                   isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
@@ -107,7 +109,7 @@ const Navigation = () => {
                   />
                   <span>Rustic Retreat</span>
                 </div>
-              </h1>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -214,12 +216,12 @@ const Navigation = () => {
         {/* Menu Header */}
         <div className="flex items-center justify-between p-4 border-b border-border">
           <Link to="/" onClick={() => handleLinkClick("/")} className="text-primary">
-            <h2 className="font-serif italic text-xl">
+            <div className="font-serif italic text-xl">
               <div className="logo inline-flex items-center gap-2" style={{ color: "var(--brandText)" }}>
                 <LeafIcon className="leaf h-10 w-8 md:h-12 md:w-9" />
                 <span>Rustic Retreat</span>
               </div>
-            </h2>
+            </div>
           </Link>
           <button
             onClick={() => setIsMenuOpen(false)}

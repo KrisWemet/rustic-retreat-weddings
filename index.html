@@ -5,32 +5,36 @@
   <meta charset="UTF-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Rustic Retreat Weddings | Multi-Day Camping & Outdoor Wedding Venue Near Edmonton</title>
-  <meta name="description"
+  <title>Outdoor Wedding Venue Near Edmonton | Rustic Retreat Weddings</title>
+  <!-- SEO tags below carry data-rh="true" so react-helmet-async claims and REPLACES
+       them on mount instead of leaving a second, homepage-valued copy on every route.
+       Without it each subpage ships two canonicals — the first pointing at "/".
+       Values here are the homepage defaults, used as-is by non-JS crawlers. -->
+  <meta data-rh="true" name="description"
     content="65 private acres for your dream wedding weekend. Rustic Retreat offers 2, 3, and 5-day celebration packages with camping included for up to 60 guests, cabin accommodation, campfire evenings, and complete creative freedom near Lac La Nonne, Alberta.">
   <meta name="author" content="Rustic Retreat Weddings" />
-  <link rel="canonical" href="https://www.rusticretreatalberta.ca/" />
+  <link data-rh="true" rel="canonical" href="https://www.rusticretreatalberta.ca/" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
   <!-- Keywords -->
-  <meta name="keywords"
-    content="Alberta wedding venue, Edmonton wedding venue, rustic wedding venue, multi-day wedding, 5-day wedding package, outdoor wedding venue, camping wedding venue, intimate wedding Alberta, Lac La Nonne wedding">
+  <meta data-rh="true" name="keywords"
+    content="wedding venue near Edmonton, wedding venues near Edmonton, Alberta wedding venue, outdoor wedding venue Edmonton, rustic wedding venue Alberta, camping wedding venue, multi-day wedding, 5-day wedding package, wedding venue Barrhead, wedding venue Onoway, intimate wedding Alberta, Lac La Nonne wedding">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Rustic Retreat Weddings" />
-  <meta property="og:title" content="Rustic Retreat Weddings | Multi-Day Camping & Outdoor Wedding Venue Near Edmonton" />
-  <meta property="og:description"
+  <meta data-rh="true" property="og:type" content="website" />
+  <meta data-rh="true" property="og:site_name" content="Rustic Retreat Weddings" />
+  <meta data-rh="true" property="og:title" content="Outdoor Wedding Venue Near Edmonton | Rustic Retreat Weddings" />
+  <meta data-rh="true" property="og:description"
     content="65 private acres for your dream wedding weekend. Rustic Retreat offers 2, 3, and 5-day celebration packages with camping included for up to 60 guests, cabin accommodation, campfire evenings, and complete creative freedom near Lac La Nonne, Alberta." />
-  <meta property="og:url" content="https://www.rusticretreatalberta.ca/" />
-  <meta property="og:image" content="https://www.rusticretreatalberta.ca/og-image.jpg" />
+  <meta data-rh="true" property="og:url" content="https://www.rusticretreatalberta.ca/" />
+  <meta data-rh="true" property="og:image" content="https://www.rusticretreatalberta.ca/og-image.jpg" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rustic Retreat Weddings | Multi-Day Camping & Outdoor Wedding Venue Near Edmonton" />
-  <meta name="twitter:description"
+  <meta data-rh="true" name="twitter:card" content="summary_large_image" />
+  <meta data-rh="true" name="twitter:title" content="Outdoor Wedding Venue Near Edmonton | Rustic Retreat Weddings" />
+  <meta data-rh="true" name="twitter:description"
     content="65 private acres for your dream wedding weekend. Rustic Retreat offers 2, 3, and 5-day celebration packages with camping included for up to 60 guests, cabin accommodation, campfire evenings, and complete creative freedom near Lac La Nonne, Alberta." />
-  <meta name="twitter:image" content="https://www.rusticretreatalberta.ca/og-image.jpg" />
+  <meta data-rh="true" name="twitter:image" content="https://www.rusticretreatalberta.ca/og-image.jpg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,26 +48,55 @@
   <link rel="alternate" type="text/html" href="/llm.html" title="Full venue information for AI and press" />
 
   <!-- Structured Data -->
+  <!-- Static copy of the canonical venue entity for crawlers that don't run JS.
+       Shares its "@id" with src/components/OrganizationSchema.tsx so both blocks
+       resolve to a single entity — keep the two in sync when facts change. -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "EventVenue",
+      "@type": ["Organization", "LocalBusiness", "EventVenue"],
+      "@id": "https://www.rusticretreatalberta.ca/#venue",
       "name": "Rustic Retreat Weddings",
-      "description": "Multi-day outdoor wedding venue on 65 private acres near Edmonton, Alberta. Offering 2-day, 3-day, and 5-day celebration packages with cabin accommodation, camping, and complete creative freedom.",
+      "description": "Multi-day outdoor wedding venue on 65 private acres near Lac La Nonne, Alberta — about an hour northwest of Edmonton. Offering 2-day, 3-day, and 5-day celebration packages with cabin accommodation, camping, and complete creative freedom.",
       "url": "https://www.rusticretreatalberta.ca",
+      "logo": "https://www.rusticretreatalberta.ca/logo.png",
+      "image": "https://www.rusticretreatalberta.ca/og-image.jpg",
       "telephone": "+1-780-210-6252",
       "email": "rusticretreatalberta@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Lac La Nonne",
-        "addressRegion": "Alberta",
-        "addressCountry": "CA"
+        "addressRegion": "AB",
+        "addressCountry": "CA",
+        "description": "99 km northwest of Edmonton"
       },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 53.95,
         "longitude": -114.3
       },
+      "areaServed": [
+        {"@type": "City", "name": "Edmonton"},
+        {"@type": "City", "name": "St. Albert"},
+        {"@type": "City", "name": "Spruce Grove"},
+        {"@type": "Town", "name": "Stony Plain"},
+        {"@type": "Town", "name": "Barrhead"},
+        {"@type": "Town", "name": "Onoway"},
+        {"@type": "Town", "name": "Westlock"},
+        {"@type": "Place", "name": "Alberta Beach"},
+        {"@type": "Place", "name": "Lac La Nonne"},
+        {"@type": "State", "name": "Alberta"}
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59",
+        "description": "Wedding season June through September, property tours by appointment"
+      },
+      "currenciesAccepted": "CAD",
+      "priceRange": "$$$",
+      "sameAs": ["https://www.facebook.com/share/1J4ztXhiSk/?mibextid=wwXIfr"],
       "maximumAttendeeCapacity": 80,
       "makesOffer": [
         {
@@ -115,8 +148,8 @@
       </p>
       <p>Wedding season: June through September</p>
       <p><strong>Contact:</strong> (780) 210-6252 | rusticretreatalberta@gmail.com</p>
-      <p><a href="/llm.html">View full venue information</a> | <a href="/packages">Packages</a> | <a
-          href="/contact">Contact Us</a></p>
+      <p><a href="/llm.html">View full venue information</a> | <a href="/wedding-venues-near-edmonton">Wedding Venues
+          Near Edmonton</a> | <a href="/packages">Packages</a> | <a href="/contact">Contact Us</a></p>
     </div>
   </noscript>
 
