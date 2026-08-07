@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -17,7 +18,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import TrustBadges from "@/components/TrustBadges";
 import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2, MailWarning } from "lucide-react";
 import receptionEvening from "@/assets/gallery/reception-evening-lights.webp";
 import contactMiddleImage from "@/assets/gallery/rustic-retreat-venue-exterior.webp";
 import contactBottomLeft from "@/assets/gallery/sunset-silhouette-couple.webp";
@@ -29,9 +30,21 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [preferredContact, setPreferredContact] = useState("text");
+  const [junkMailAcknowledged, setJunkMailAcknowledged] = useState(false);
+  const [showJunkMailError, setShowJunkMailError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!junkMailAcknowledged) {
+      setShowJunkMailError(true);
+      document.getElementById("junkMailAcknowledged")?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     const form = e.currentTarget;
@@ -53,6 +66,7 @@ const Contact = () => {
           description: "We'll be in touch within 24 hours to schedule your property visit.",
         });
         form.reset();
+        setJunkMailAcknowledged(false);
       } else {
         throw new Error("Form submission failed");
       }
@@ -137,6 +151,22 @@ const Contact = () => {
                         <p className="text-muted-foreground mb-6">
                           We'll be in touch within 24 hours to schedule your property visit.
                         </p>
+                        <div className="rounded-xl border-2 border-secondary/40 bg-secondary/5 p-4 mb-6 text-left">
+                          <div className="flex items-start gap-3">
+                            <MailWarning className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                              <span className="font-medium text-foreground">
+                                Don't forget to check your junk mail.
+                              </span>{" "}
+                              If you haven't heard from us in 24 hours, look in your junk or spam
+                              folder. You can also call or text us at{" "}
+                              <a href="tel:+17802106252" className="text-primary hover:underline">
+                                (780) 210-6252
+                              </a>
+                              .
+                            </p>
+                          </div>
+                        </div>
                         <p className="text-sm text-muted-foreground">
                           In the meantime, feel free to explore more of the property through our{" "}
                           <a href="/gallery" className="text-secondary hover:underline">photo gallery</a> or{" "}
@@ -302,6 +332,69 @@ const Contact = () => {
                               className="mt-2 min-h-32"
                               placeholder="What would make this weekend unforgettable for you and your guests?"
                             />
+                          </div>
+
+                          {/* Junk Mail Notice */}
+                          <div
+                            className={`rounded-xl border-2 p-4 transition-colors ${
+                              showJunkMailError && !junkMailAcknowledged
+                                ? "border-destructive bg-destructive/5"
+                                : "border-secondary/40 bg-secondary/5"
+                            }`}
+                          >
+                            <div className="flex items-start gap-3">
+                              <MailWarning className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                              <div>
+                                <p className="font-medium text-sm">Please check your junk mail</p>
+                                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                                  We reply within 24 hours, but our emails sometimes land in junk or
+                                  spam folders. If you haven't heard from us by then, please look
+                                  there before assuming we missed you. You can also call or text us
+                                  anytime at{" "}
+                                  <a href="tel:+17802106252" className="text-primary hover:underline">
+                                    (780) 210-6252
+                                  </a>
+                                  .
+                                </p>
+                              </div>
+                            </div>
+                            <input
+                              type="hidden"
+                              name="junkMailAcknowledged"
+                              value={junkMailAcknowledged ? "Yes" : "No"}
+                            />
+                            <div className="flex items-start gap-3 mt-4">
+                              <Checkbox
+                                id="junkMailAcknowledged"
+                                checked={junkMailAcknowledged}
+                                onCheckedChange={(checked) => {
+                                  setJunkMailAcknowledged(checked === true);
+                                  if (checked === true) setShowJunkMailError(false);
+                                }}
+                                aria-describedby={
+                                  showJunkMailError && !junkMailAcknowledged
+                                    ? "junkMailAcknowledged-error"
+                                    : undefined
+                                }
+                                className="mt-0.5 h-5 w-5 rounded-[4px]"
+                              />
+                              <Label
+                                htmlFor="junkMailAcknowledged"
+                                className="font-normal cursor-pointer text-sm leading-relaxed"
+                              >
+                                Got it. I'll check my junk mail folder if I don't hear back within
+                                24 hours.
+                              </Label>
+                            </div>
+                            {showJunkMailError && !junkMailAcknowledged && (
+                              <p
+                                id="junkMailAcknowledged-error"
+                                role="alert"
+                                className="text-sm text-destructive mt-3"
+                              >
+                                Please check this box so we know you'll find our reply.
+                              </p>
+                            )}
                           </div>
 
                           <CTAButton

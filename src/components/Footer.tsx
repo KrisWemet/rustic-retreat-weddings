@@ -62,6 +62,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/wedding-venues-near-edmonton" className="hover:text-secondary transition-colors">
+                  Wedding Venues Near Edmonton
+                </Link>
+              </li>
+              <li>
                 <Link to="/faqs" className="hover:text-secondary transition-colors">
                   FAQs
                 </Link>

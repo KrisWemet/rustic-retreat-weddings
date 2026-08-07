@@ -20,6 +20,8 @@ const BreadcrumbSchema = () => {
     '/camping-wedding': 'Camping Weddings',
     '/diy-wedding-venue-alberta': 'DIY Weddings',
     '/elopements': 'Elopements & Small Weddings',
+    '/real-weddings': 'Real Weddings',
+    '/wedding-venues-near-edmonton': 'Wedding Venues Near Edmonton',
   };
 
   const getBreadcrumbs = (): BreadcrumbItem[] => {
