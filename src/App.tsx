@@ -119,6 +119,7 @@ const App = () => {
             <SanityVisualEditing />
           </Suspense>
         )}
+        <Analytics />
       </BrowserRouter>
       <Analytics />
     </HelmetProvider>
