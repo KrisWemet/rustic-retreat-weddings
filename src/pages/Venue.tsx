@@ -40,17 +40,17 @@ import extrasPlayhouse from "@/assets/gallery/Images/Child-slide.jpeg";
 import extrasGiantConnectFour from "@/assets/gallery/Images/extras-giant-connect-four.webp";
 import extrasAndSoMuchMore from "@/assets/gallery/Images/IMG_7304.jpeg";
 
-import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, Waves, Compass, Flame, Trophy, Baby, Zap, Tent, Trees } from "lucide-react";
+import { Home, Coffee, Sparkles, Sun, Users, Battery, Package, Heart, Gift, Waves, Compass, Flame, Trophy, Baby, Zap, Tent, Trees, ShowerHead, Scissors } from "lucide-react";
 
 const Venue = () => {
   return (
     <PageTransition>
       <SEO
         title="The Venue — 65 Acres with Camping for 60 Guests"
-        description="Explore our private cabin for newlyweds, 65-acre forest property with camping included for up to 60 guests (tents and RVs), and curated wedding décor collection. Off-grid solar power near Edmonton."
+        description="Explore our private cabin for newlyweds, 65-acre forest property with camping included for up to 60 guests (tents and RVs), a wash house with two shower stalls, a bridal suite with two hair and makeup stations, and a curated wedding décor collection. Off-grid solar power near Edmonton."
         path="/venue"
         image={venueHero}
-        keywords={["camping wedding venue alberta", "wedding venue cabin alberta", "private wedding property edmonton", "65 acre wedding venue", "outdoor wedding ceremony spaces", "wedding décor collection alberta", "off-grid wedding venue"]}
+        keywords={["camping wedding venue alberta", "wedding venue cabin alberta", "private wedding property edmonton", "65 acre wedding venue", "outdoor wedding ceremony spaces", "wedding décor collection alberta", "off-grid wedding venue", "wedding venue with bridal suite alberta", "wedding venue with showers alberta"]}
       />
       <BreadcrumbSchema />
       <div className="min-h-screen">
@@ -364,6 +364,72 @@ const Venue = () => {
           </div>
         </section>
 
+        {/* Wash House & Bridal Suite Section */}
+        <section className="section section-muted">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <ScrollReveal>
+                <p className="text-secondary font-semibold uppercase tracking-[0.18em] mb-4">Comfort On Property</p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">The Wash House & The Bridal Suite</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Off-grid doesn't have to mean roughing it. Two of the newest buildings on the property handle the
+                  parts of a wedding weekend that camping alone can't: a proper shower after a night by the fire,
+                  and a real space to get ready in on the day itself.
+                </p>
+              </ScrollReveal>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <ScrollReveal delay={0}>
+                <Card className="border-2 hover:border-secondary transition-colors h-full">
+                  <CardContent className="pt-6">
+                    <ShowerHead className="w-10 h-10 text-secondary mb-4" />
+                    <h3 className="text-xl font-bold mb-2">The Wash House</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Two private shower stalls, on site and ready for your weekend. Guests camping for three or five
+                      days no longer have to drive into town or plan around a campground schedule — they can rinse off
+                      the campfire, freshen up before the ceremony, and start the day feeling human again.
+                    </p>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Two separate shower stalls</li>
+                      <li>• Steps from the main camping area</li>
+                      <li>• Included with every package, no extra charge</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+
+              <ScrollReveal delay={100}>
+                <Card className="border-2 hover:border-secondary transition-colors h-full">
+                  <CardContent className="pt-6">
+                    <Scissors className="w-10 h-10 text-secondary mb-4" />
+                    <h3 className="text-xl font-bold mb-2">The Bridal Suite</h3>
+                    <p className="text-muted-foreground mb-4">
+                      A dedicated getting-ready space with two hair and makeup stations, so your stylists can work on
+                      two people at once and the morning never turns into a queue. Somewhere to hang the dress, spread
+                      out the garment bags, and let the whole slow, giddy build-up happen in one place.
+                    </p>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Two hair and makeup stations</li>
+                      <li>• Room for your wedding party and your stylists</li>
+                      <li>• Pet-free building, with a first aid kit on hand</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            </div>
+
+            <ScrollReveal delay={200}>
+              <div className="max-w-3xl mx-auto mt-10 text-center">
+                <div className="p-4 bg-card border rounded-xl inline-block italic text-sm text-muted-foreground">
+                  Both buildings are family-built, like most things here. Outhouses remain on site as well, and a
+                  bathroom house with two flush toilets is in the works for the 2027 season.
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
         {/* Abundance & Décor Section - Combined and moved up */}
         <section className="section">
           <div className="container mx-auto px-4">
@@ -507,9 +573,10 @@ const Venue = () => {
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   The bones are here: 65 acres, the ceremony clearing, the gazebo,
-                  the couples cabin, the fire pit, the field. What we're adding over
-                  the coming seasons are the finishing touches that take it from
-                  beautiful to extraordinary. Couples booking now are part of that story.
+                  the couples cabin, the wash house, the bridal suite, the fire pit,
+                  the field. What we're adding over the coming seasons are the
+                  finishing touches that take it from beautiful to extraordinary.
+                  Couples booking now are part of that story.
                 </p>
               </div>
             </ScrollReveal>

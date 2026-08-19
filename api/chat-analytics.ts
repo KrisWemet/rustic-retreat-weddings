@@ -95,7 +95,7 @@ const getKeywordCluster = (normalizedQuestion: string) => {
     { cluster: "Pricing & Deposits", keywords: ["price", "cost", "package", "deposit", "fee", "budget"] },
     { cluster: "Availability & Booking", keywords: ["book", "booking", "date", "available", "season", "inquiry"] },
     { cluster: "Capacity & Camping", keywords: ["guest", "capacity", "camp", "rv", "accommodate"] },
-    { cluster: "Amenities & Facilities", keywords: ["amenities", "water", "power", "electric", "bathroom", "shower", "wifi", "outhouse"] },
+    { cluster: "Amenities & Facilities", keywords: ["amenities", "water", "power", "electric", "bathroom", "shower", "wash house", "bridal suite", "getting ready", "hair", "makeup", "wifi", "outhouse"] },
     { cluster: "Rules & Policies", keywords: ["rule", "policy", "cleanup", "noise", "pet", "dog", "decor", "drone", "alcohol"] },
     { cluster: "Location & Logistics", keywords: ["location", "distance", "drive", "edmonton", "parking", "hotel"] },
     { cluster: "Accessibility", keywords: ["access", "accessible", "mobility", "wheelchair"] },

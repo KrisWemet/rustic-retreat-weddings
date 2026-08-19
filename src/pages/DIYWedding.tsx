@@ -120,7 +120,7 @@ const DIYWedding = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">What a DIY Wedding Weekend Costs</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  2027 season venue pricing is all-in and transparent: a 2-day weekday escape is $5,000, the classic 3-day weekend is $6,500, and the full 5-day experience is $7,500 (CAD, GST extra; payment plans available). Every package includes exclusive property access, the newlywed cabin, overnight camping for up to 60 guests, seating for 80, the décor collection, and a stocked firewood shed. Because there are no forced spends on top, many couples host their entire multi-day celebration for less than a single evening costs at a traditional venue.
+                  2027 season venue pricing is all-in and transparent: a 2-day weekday escape is $5,000, the classic 3-day weekend is $6,500, and the full 5-day experience is $7,500 (CAD, GST extra; payment plans available). Every package includes exclusive property access, the newlywed cabin, overnight camping for up to 60 guests, seating for 80, the wash house, the bridal suite, the décor collection, and a stocked firewood shed. Because there are no forced spends on top, many couples host their entire multi-day celebration for less than a single evening costs at a traditional venue.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link to="/packages">

@@ -153,7 +153,7 @@ const About = () => {
                 </p>
 
                 <p className="mb-6">
-                  Started projects that are still in progress-a wash house, a bridal suite, a dedicated decor building, flush washrooms.
+                  Built a wash house with two shower stalls and a bridal suite with two hair and makeup stations. Other projects are still in progress-a dedicated decor building, flush washrooms.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
@@ -264,7 +264,7 @@ const About = () => {
                         <h3 className="text-xl font-semibold">Wilf (aka Dad)</h3>
                       </div>
                       <p className="text-muted-foreground">
-                        Handles firewood refills at the cabin firepit. He builds the bigger projects-the gazebo was almost entirely him. Last year he worked on framing the dance floor. This winter, he's building the wash house. In the spring, Shannon and I will finish the bridal suite.
+                        Handles firewood refills at the cabin firepit. He builds the bigger projects-the gazebo was almost entirely him. He framed the dance floor, and he built the wash house over the winter. Shannon and I finished the bridal suite in the spring.
                       </p>
                     </CardContent>
                   </Card>
