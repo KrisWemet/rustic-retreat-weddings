@@ -106,7 +106,7 @@ const CampingWedding = () => {
                       <Moon className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">True Boondocking</h3>
                       <p className="text-sm text-muted-foreground">
-                        Honest heads-up: no electrical hookups or water connections. Outhouses on site, a wash house with two shower stalls, and generators welcome until 10pm. It's rustic at its finest.
+                        Honest heads-up: no electrical hookups or water connections at your campsite. Outhouses on site, a wash house with two shower stalls and on-demand hot water, and generators welcome until 10pm. It's rustic at its finest.
                       </p>
                     </CardContent>
                   </Card>

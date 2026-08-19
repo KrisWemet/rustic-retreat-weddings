@@ -153,7 +153,7 @@ const About = () => {
                 </p>
 
                 <p className="mb-6">
-                  Built a wash house with two shower stalls and a bridal suite with two hair and makeup stations. Other projects are still in progress-a dedicated decor building, flush washrooms.
+                  Built a wash house with two shower stalls and on-demand hot water, and a bridal suite with two hair and makeup stations. Other projects are still in progress-a dedicated decor building, flush washrooms.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">

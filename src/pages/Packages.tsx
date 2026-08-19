@@ -271,7 +271,7 @@ const Packages = () => {
                     <li>• The Cabin: Sleeps 4 (couples cabin)</li>
                     <li>• Keurig & meal prep basics in Cabin</li>
                     <li>• Room for 60 guests to camp (no defined sites)</li>
-                    <li>• Wash house with two shower stalls</li>
+                    <li>• Wash house: two shower stalls, on-demand hot water</li>
                     <li>• Bridal suite with two hair & makeup stations</li>
                   </ul>
                 </CardContent>

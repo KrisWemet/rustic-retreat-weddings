@@ -47,7 +47,7 @@ const Venue = () => {
     <PageTransition>
       <SEO
         title="The Venue — 65 Acres with Camping for 60 Guests"
-        description="Explore our private cabin for newlyweds, 65-acre forest property with camping included for up to 60 guests (tents and RVs), a wash house with two shower stalls, a bridal suite with two hair and makeup stations, and a curated wedding décor collection. Off-grid solar power near Edmonton."
+        description="Explore our private cabin for newlyweds, 65-acre forest property with camping included for up to 60 guests (tents and RVs), a wash house with two hot-water shower stalls, a bridal suite with two hair and makeup stations, and a curated wedding décor collection. Off-grid solar power near Edmonton."
         path="/venue"
         image={venueHero}
         keywords={["camping wedding venue alberta", "wedding venue cabin alberta", "private wedding property edmonton", "65 acre wedding venue", "outdoor wedding ceremony spaces", "wedding décor collection alberta", "off-grid wedding venue", "wedding venue with bridal suite alberta", "wedding venue with showers alberta"]}
@@ -373,7 +373,7 @@ const Venue = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">The Wash House & The Bridal Suite</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Off-grid doesn't have to mean roughing it. Two of the newest buildings on the property handle the
-                  parts of a wedding weekend that camping alone can't: a proper shower after a night by the fire,
+                  parts of a wedding weekend that camping alone can't: a hot shower after a night by the fire,
                   and a real space to get ready in on the day itself.
                 </p>
               </ScrollReveal>
@@ -386,12 +386,14 @@ const Venue = () => {
                     <ShowerHead className="w-10 h-10 text-secondary mb-4" />
                     <h3 className="text-xl font-bold mb-2">The Wash House</h3>
                     <p className="text-muted-foreground mb-4">
-                      Two private shower stalls, on site and ready for your weekend. Guests camping for three or five
-                      days no longer have to drive into town or plan around a campground schedule — they can rinse off
-                      the campfire, freshen up before the ceremony, and start the day feeling human again.
+                      Two private shower stalls running on on-demand hot water — no tank to run dry, no waiting for
+                      it to warm up, and pressure that actually feels like a shower. Guests camping for three or five
+                      days don't have to drive into town or plan around a campground schedule; they can rinse off the
+                      campfire, freshen up before the ceremony, and start the day feeling human again.
                     </p>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• Two separate shower stalls</li>
+                      <li>• On-demand hot water — near-instant, with great pressure</li>
                       <li>• Steps from the main camping area</li>
                       <li>• Included with every package, no extra charge</li>
                     </ul>
