@@ -105,34 +105,6 @@
           "Intimate outdoor wedding with accommodation",
           "Private venue without $10,000+ price tag"
         ]
-      },
-      {
-        "name": "The Intimate 2-Day Escape",
-        "shortName": "2-Day",
-        "subtitle": "Intimate elopements",
-        "duration": "Weekdays Only",
-        "price": "5,000",
-        "description": "2-day weekday elopement experience with full property access.",
-        "previewDescription": "Full property access, ceremony + reception spaces, cabin suite, décor collection, and essentials for a simple weekday celebration.",
-        "timelineTitle": "The Timeline:",
-        "timeline": [
-          {
-            "day": "Day 1:",
-            "desc": "Arrive, settle in, rehearse if you wish. Evening bonfire under the stars."
-          },
-          {
-            "day": "Day 2:",
-            "desc": "Your wedding day-intimate, unhurried, exactly as you dreamed."
-          }
-        ],
-        "perfectForTitle": "Perfect for:",
-        "perfectForText": "Couples seeking an intimate elopement experience with just your closest people. All the magic of Rustic Retreat in a focused, meaningful two-day celebration.",
-        "features": [
-          "Intimate elopement experience",
-          "Weekday availability",
-          "Most affordable option",
-          "Full property access"
-        ]
       }
     ],
     "capacity": [
@@ -174,7 +146,7 @@
           "Yard games, play structures & all property amenities",
           "Property guidance and support"
         ],
-        "priceRange": "$5,000–$7,500*"
+        "priceRange": "$6,500–$7,500*"
       }
     }
   },

@@ -17,7 +17,7 @@ const Elopements = () => {
     <PageTransition>
       <SEO
         title="Elopement & Small Wedding Venue Near Edmonton"
-        description="Elope on 65 private acres an hour from Edmonton. The 2-day weekday escape ($5,000, 2027 season) includes the whole property, a newlywed cabin, camping for your closest people, and zero crowds."
+        description="Elope on 65 private acres an hour from Edmonton. Every package includes the whole property, a newlywed cabin, camping for your closest people, and zero crowds — with no minimum guest count."
         path="/elopements"
         image={heroImage}
         keywords={["elopement venue alberta", "elopement venue near edmonton", "small wedding venue edmonton", "intimate wedding venue alberta", "micro wedding alberta", "weekday wedding venue"]}
@@ -53,16 +53,16 @@ const Elopements = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <ScrollReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">The 2-Day Weekday Escape — $5,000</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Your Elopement Includes</h2>
               </ScrollReveal>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <ScrollReveal delay={0}>
                   <Card className="border-2 hover:border-secondary transition-colors h-full">
                     <CardContent className="pt-6">
                       <CalendarDays className="w-8 h-8 text-secondary mb-3" />
-                      <h3 className="font-semibold mb-2">Two Unhurried Days</h3>
+                      <h3 className="font-semibold mb-2">Unhurried Days</h3>
                       <p className="text-sm text-muted-foreground">
-                        Arrive, settle in, rehearse if you like, and spend the evening by the fire. Day two is yours: an intimate ceremony, exactly as you dreamed it. Weekday dates, 2027 season pricing.
+                        Arrive, settle in, rehearse if you like, and spend the evening by the fire. The next day is yours: an intimate ceremony, exactly as you dreamed it. No minimum guest count, ever.
                       </p>
                     </CardContent>
                   </Card>
@@ -103,7 +103,7 @@ const Elopements = () => {
               </div>
               <ScrollReveal>
                 <p className="text-center text-muted-foreground mt-10 max-w-3xl mx-auto">
-                  Want your small wedding to stretch into a full weekend? The 3-day ($6,500) and 5-day ($7,500) packages work beautifully for intimate groups too — the property makes 20 guests feel just as right as 80.
+                  Both packages work beautifully for intimate groups — the property makes 20 guests feel just as right as 80. The 3-day weekend is $6,500, and the full 5-day experience is $7,500 (2027 season, GST extra).
                 </p>
               </ScrollReveal>
             </div>

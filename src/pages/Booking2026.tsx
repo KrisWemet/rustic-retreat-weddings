@@ -11,7 +11,6 @@ const MUTED   = '#666666';
 const SUBTLE  = '#999999';
 
 const packages = [
-  { label: '2-Day Weekday', price: '$3,000', value: '2-Day Weekday ($3,000)' },
   { label: '3-Day Weekend', price: '$4,500', value: '3-Day Weekend ($4,500)' },
   { label: '5-Day Weekend', price: '$5,500', value: '5-Day Weekend ($5,500)' },
 ];

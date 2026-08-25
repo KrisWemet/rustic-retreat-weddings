@@ -35,16 +35,6 @@ const OrganizationSchema = () => {
       itemListElement: [
         {
           "@type": "Offer",
-          price: "5000",
-          priceCurrency: "CAD",
-          itemOffered: {
-            "@type": "Service",
-            name: "2-Day Weekday Escape",
-            description: "Weekday exclusive property access for intimate elopements (2027 season)"
-          }
-        },
-        {
-          "@type": "Offer",
           price: "6500",
           priceCurrency: "CAD",
           itemOffered: {

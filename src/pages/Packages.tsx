@@ -45,14 +45,6 @@ const Packages = () => {
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
       },
-      {
-        "@type": "Offer",
-        name: "The Intimate 2-Day Escape",
-        description: "2-day weekday elopement experience with full property access.",
-        price: "5000",
-        priceCurrency: "CAD",
-        availability: "https://schema.org/InStock",
-      },
     ],
   };
 
@@ -60,10 +52,10 @@ const Packages = () => {
     <>
       <SEO
         title="Wedding Packages & Pricing"
-        description="Weekend wedding packages with transparent all-in pricing: 2-day $5,000, 3-day $6,500, 5-day $7,500. Exclusive 65-acre access, cabin, camping for 60 guests, décor included - no per-plate minimums."
+        description="Weekend wedding packages with transparent all-in pricing: 3-day $6,500, 5-day $7,500. Exclusive 65-acre access, cabin, camping for 60 guests, décor included - no per-plate minimums."
         path="/packages"
         image={loveMarqueeArch}
-        keywords={["wedding packages edmonton", "weekend wedding pricing alberta", "multi-day wedding cost", "all-inclusive wedding venue edmonton", "wedding venue pricing alberta", "2 day wedding package", "3 day wedding package", "5 day wedding package"]}
+        keywords={["wedding packages edmonton", "weekend wedding pricing alberta", "multi-day wedding cost", "all-inclusive wedding venue edmonton", "wedding venue pricing alberta", "3 day wedding package", "5 day wedding package"]}
       />
       <BreadcrumbSchema />
       <Helmet>

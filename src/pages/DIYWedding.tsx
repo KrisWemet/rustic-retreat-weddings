@@ -17,7 +17,7 @@ const DIYWedding = () => {
     <PageTransition>
       <SEO
         title="DIY Wedding Venue in Alberta — No Mandatory Vendors"
-        description="A true DIY wedding venue near Edmonton: bring any caterer, run your own bar with no corkage fees, use our free décor collection, and take days — not hours — to set up. All-in pricing from $5,000."
+        description="A true DIY wedding venue near Edmonton: bring any caterer, run your own bar with no corkage fees, use our free décor collection, and take days — not hours — to set up. All-in pricing from $6,500."
         path="/diy-wedding-venue-alberta"
         image={heroImage}
         keywords={["diy wedding venue alberta", "no mandatory vendors wedding venue", "byob wedding venue alberta", "bring your own vendors wedding", "no corkage fee wedding venue", "affordable wedding venue near edmonton"]}
@@ -120,7 +120,7 @@ const DIYWedding = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">What a DIY Wedding Weekend Costs</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  2027 season venue pricing is all-in and transparent: a 2-day weekday escape is $5,000, the classic 3-day weekend is $6,500, and the full 5-day experience is $7,500 (CAD, GST extra; payment plans available). Every package includes exclusive property access, the newlywed cabin, overnight camping for up to 60 guests, seating for 80, the wash house, the bridal suite, the décor collection, and a stocked firewood shed. Because there are no forced spends on top, many couples host their entire multi-day celebration for less than a single evening costs at a traditional venue.
+                  2027 season venue pricing is all-in and transparent: the classic 3-day weekend is $6,500, and the full 5-day experience is $7,500 (CAD, GST extra; payment plans available). Every package includes exclusive property access, the newlywed cabin, overnight camping for up to 60 guests, seating for 80, the wash house, the bridal suite, the décor collection, and a stocked firewood shed. Because there are no forced spends on top, many couples host their entire multi-day celebration for less than a single evening costs at a traditional venue.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link to="/packages">
