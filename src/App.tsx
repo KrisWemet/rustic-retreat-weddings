@@ -4,6 +4,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Suspense, lazy, useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import ScrollToTop from "./components/ScrollToTop";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 
 const Index = lazy(() => import("./pages/Index"));
@@ -78,6 +79,7 @@ const App = () => {
       <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Toaster />
         <ScrollToTop />
+        <AnalyticsTracker />
         <StickyMobileCTA />
         {isChatWidgetReady && (
           <Suspense fallback={null}>

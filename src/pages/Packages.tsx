@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CTAButton } from "@/components/ui/cta-button";
@@ -21,8 +22,15 @@ import guestFavorBox from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-n
 import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.webp";
 import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Target, Film, Music } from "lucide-react";
 import content from "@/data/site-content.json";
+import { trackViewContent } from "@/lib/analytics";
 
 const Packages = () => {
+  // Reading pricing is the strongest intent signal on the site — worth its own
+  // retargeting audience, separate from general traffic.
+  useEffect(() => {
+    trackViewContent("Packages & Pricing");
+  }, []);
+
   const packageSchema = {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",

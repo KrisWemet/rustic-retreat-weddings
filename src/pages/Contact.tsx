@@ -23,6 +23,7 @@ import contactMiddleImage from "@/assets/gallery/rustic-retreat-venue-exterior.w
 import contactBottomLeft from "@/assets/gallery/sunset-silhouette-couple.webp";
 import contactBottomRight from "@/assets/gallery/wedding-details-rings.webp";
 import contactExpectImage from "@/assets/gallery/couple-portrait-forest-tall.webp";
+import { trackLead } from "@/lib/analytics";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -48,6 +49,7 @@ const Contact = () => {
 
       if (response.ok) {
         setIsSubmitted(true);
+        trackLead({ source: "Contact enquiry" });
         toast({
           title: "Message sent!",
           description: "We'll be in touch within 24 hours to schedule your property visit.",

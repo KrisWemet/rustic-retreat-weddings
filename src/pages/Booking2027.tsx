@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SEO from "@/components/SEO";
+import { trackLead } from "@/lib/analytics";
 
 const DARK    = '#1C2B1E';
 const MID     = '#3A5C3E';
@@ -156,6 +157,7 @@ export default function Booking2027() {
       });
       if (!res.ok) throw new Error('Failed');
       setStatus('success');
+      trackLead({ source: 'Booking request 2027' });
     } catch {
       setStatus('error');
     }
