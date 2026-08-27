@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import content from "@/data/site-content.json";
-import LeafIcon from "@/components/LeafIcon";
+import BrandMark from "@/components/BrandMark";
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
@@ -18,7 +18,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="logo inline-flex items-center gap-2 text-xl font-bold font-serif" style={{ color: "var(--brandText)" }}>
-                <LeafIcon className="leaf h-10 w-8 md:h-12 md:w-9" />
+                <BrandMark className="brand-mark shrink-0 h-8 md:h-10" />
                 <span>Rustic Retreat</span>
               </div>
             </div>

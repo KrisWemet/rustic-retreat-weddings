@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X, Phone, Mail, MapPin, ChevronDown } from "lucide-react";
-import LeafIcon from "@/components/LeafIcon";
+import BrandMark from "@/components/BrandMark";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -99,10 +99,10 @@ const Navigation = () => {
                 )}
               >
                 <div className="logo inline-flex items-center gap-2" style={{ color: "var(--brandText)" }}>
-                  <LeafIcon
+                  <BrandMark
                     className={cn(
-                      "leaf shrink-0",
-                      isScrolled ? "h-8 w-6 md:h-10 md:w-8" : "h-10 w-8 md:h-12 md:w-9"
+                      "brand-mark shrink-0",
+                      isScrolled ? "h-7 md:h-8" : "h-8 md:h-10"
                     )}
                   />
                   <span>Rustic Retreat</span>
@@ -216,7 +216,7 @@ const Navigation = () => {
           <Link to="/" onClick={() => handleLinkClick("/")} className="text-primary">
             <h2 className="font-serif italic text-xl">
               <div className="logo inline-flex items-center gap-2" style={{ color: "var(--brandText)" }}>
-                <LeafIcon className="leaf h-10 w-8 md:h-12 md:w-9" />
+                <BrandMark className="brand-mark shrink-0 h-8 md:h-10" />
                 <span>Rustic Retreat</span>
               </div>
             </h2>
