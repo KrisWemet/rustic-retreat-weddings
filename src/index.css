@@ -573,7 +573,11 @@ All colors MUST be HSL.
 
   /* Respect reduced-motion: still beautiful, just calm */
   @media (prefers-reduced-motion: reduce) {
-    .firefly-field { display: none; }
+    /* Show fireflies as static glowing dots instead of hiding them */
+    .firefly {
+      animation: none !important;
+      opacity: var(--firefly-peak, 0.7);
+    }
     .text-enchanted { animation: none; }
     .card-enchant { transition: box-shadow 0.3s ease, border-color 0.3s ease; }
     .card-enchant:hover { transform: none; }
