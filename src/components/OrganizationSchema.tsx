@@ -27,7 +27,8 @@ const OrganizationSchema = () => {
     },
     priceRange: "$$$",
     sameAs: [
-      "https://www.facebook.com/share/1J4ztXhiSk/?mibextid=wwXIfr"
+      "https://www.facebook.com/share/1J4ztXhiSk/?mibextid=wwXIfr",
+      "https://maps.app.goo.gl/QLX79xtop3uLpnTq9"
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
