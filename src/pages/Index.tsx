@@ -805,11 +805,11 @@ const Index = () => {
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
               {[...content.packages.packages].reverse().map((pkg, index) => (
                 <ScrollReveal key={index} delay={index * 100}>
                   <Card
-                    className={`card-enchant bg-card group h-full min-h-[220px] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background ${pkg.isRecommended
+                    className={`card-enchant bg-card group h-full min-h-[300px] relative overflow-hidden flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background ${pkg.isRecommended
                       ? "border-2 border-secondary shadow-medium"
                       : "border border-border"
                       }`}
@@ -826,7 +826,7 @@ const Index = () => {
                         <span>Most Desired</span>
                       </div>
                     )}
-                    <CardContent className={`p-6 text-center ${pkg.isRecommended ? "pt-10" : ""}`}>
+                    <CardContent className={`w-full p-6 text-center ${pkg.isRecommended ? "pt-10" : ""}`}>
                       <h3 className="text-xl font-serif font-semibold mb-1">{pkg.shortName}</h3>
                       <p className="text-xs text-muted-foreground mb-4">{pkg.duration}</p>
                       <p className="text-3xl font-serif text-secondary mb-1">${pkg.price}*</p>
