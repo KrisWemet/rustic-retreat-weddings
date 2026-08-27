@@ -19,6 +19,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const CampingWedding = lazy(() => import("./pages/CampingWedding"));
 const DIYWedding = lazy(() => import("./pages/DIYWedding"));
 const Elopements = lazy(() => import("./pages/Elopements"));
+const Privacy = lazy(() => import("./pages/Privacy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Booking2026 = lazy(() => import("./pages/Booking2026"));
 const Booking2027 = lazy(() => import("./pages/Booking2027"));
@@ -97,6 +98,7 @@ const App = () => {
             <Route path="/real-weddings/:slug" element={<WeddingStory />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="/camping-wedding" element={<CampingWedding />} />
             <Route path="/diy-wedding-venue-alberta" element={<DIYWedding />} />
             <Route path="/elopements" element={<Elopements />} />

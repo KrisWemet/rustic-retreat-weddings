@@ -131,6 +131,11 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
           <p>&copy; {new Date().getFullYear()} {content.footer.copyright}</p>
+          <p className="mt-2">
+            <Link to="/privacy" className="hover:text-secondary transition-colors">
+              Privacy Policy
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

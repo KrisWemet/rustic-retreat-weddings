@@ -16,7 +16,7 @@ const DEFAULT_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 const SEO = ({
   title = "Rustic Retreat Weddings | Multi-Day Camping & Outdoor Wedding Venue Near Edmonton",
-  description = "65 private acres for your dream wedding weekend. Rustic Retreat offers 2, 3, and 5-day celebration packages with camping included for up to 60 guests, cabin accommodation, campfire evenings, and complete creative freedom near Lac La Nonne, Alberta.",
+  description = "65 private acres for your dream wedding weekend. Rustic Retreat offers 3-day and 5-day celebration packages with camping included for up to 60 guests, cabin accommodation, campfire evenings, and complete creative freedom near Lac La Nonne, Alberta.",
   path = "",
   image = DEFAULT_IMAGE,
   keywords,

@@ -20,6 +20,7 @@ const BreadcrumbSchema = () => {
     '/camping-wedding': 'Camping Weddings',
     '/diy-wedding-venue-alberta': 'DIY Weddings',
     '/elopements': 'Elopements & Small Weddings',
+    '/privacy': 'Privacy Policy',
   };
 
   const getBreadcrumbs = (): BreadcrumbItem[] => {
