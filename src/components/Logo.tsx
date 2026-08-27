@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import leafLogoRaw from "@/assets/logo/leaf-logo.svg?raw";
+import BrandMark from "@/components/BrandMark";
 
 type LogoProps = {
   className?: string;
@@ -16,11 +16,7 @@ const Logo = ({
 }: LogoProps) => {
   return (
     <span className={cn("inline-flex items-center gap-2 leading-none", className)}>
-      <span
-        aria-hidden="true"
-        className={cn("shrink-0 block [&>svg]:h-full [&>svg]:w-full", iconClassName)}
-        dangerouslySetInnerHTML={{ __html: leafLogoRaw }}
-      />
+      <BrandMark className={cn("shrink-0 h-8 md:h-10", iconClassName)} />
       <span className={cn(textClassName)}>{text}</span>
     </span>
   );
