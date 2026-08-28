@@ -46,8 +46,8 @@ const Venue = () => {
   return (
     <PageTransition>
       <SEO
-        title="The Venue — 65 Acres with Camping for 60 Guests"
-        description="Explore our private cabin for newlyweds, 65-acre forest property with camping included for up to 60 guests (tents and RVs), a wash house with two hot-water shower stalls, a bridal suite with two hair and makeup stations, and a curated wedding décor collection. Off-grid solar power near Edmonton."
+        title="65-Acre Wedding Venue in Alberta"
+        description="Tour our 65-acre wedding venue an hour from Edmonton: forest trails, a clear-top gazebo, a newlywed cabin, and camping for up to 60 guests."
         path="/venue"
         image={venueHero}
         keywords={["camping wedding venue alberta", "wedding venue cabin alberta", "private wedding property edmonton", "65 acre wedding venue", "outdoor wedding ceremony spaces", "wedding décor collection alberta", "off-grid wedding venue", "wedding venue with bridal suite alberta", "wedding venue with showers alberta"]}

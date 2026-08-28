@@ -17,7 +17,7 @@ const CampingWedding = () => {
     <PageTransition>
       <SEO
         title="Camping Wedding Venue in Alberta"
-        description="Host a true camping wedding weekend near Edmonton: overnight camping included for up to 60 guests (tents and RVs), nightly campfires, and 65 private acres. One wedding per weekend."
+        description="A camping wedding venue near Edmonton. Overnight camping is included for up to 60 guests in tents and RVs, with campfires on 65 private acres."
         path="/camping-wedding"
         image={heroImage}
         keywords={["camping wedding venue alberta", "camping wedding venue near edmonton", "campout wedding", "festival style wedding alberta", "wedding venue where guests can camp", "weekend wedding under the stars"]}

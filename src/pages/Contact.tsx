@@ -72,8 +72,8 @@ const Contact = () => {
   return (
     <PageTransition>
       <SEO
-        title="Book Your Property Tour"
-        description="Schedule a property tour at Rustic Retreat, an hour northwest of Edmonton near Barrhead, Onoway, and Alberta Beach. Walk the 65-acre grounds, see ceremony spaces, and discuss your wedding vision."
+        title="Book a Venue Tour Near Edmonton"
+        description="Book a tour of Rustic Retreat, an outdoor wedding venue an hour northwest of Edmonton near Barrhead, Onoway and Alberta Beach. By appointment."
         path="/contact"
         image={receptionEvening}
         keywords={["wedding venue tour edmonton", "property visit rustic retreat", "wedding venue consultation alberta", "book wedding venue viewing", "outdoor wedding venue edmonton contact"]}

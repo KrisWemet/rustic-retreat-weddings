@@ -25,7 +25,7 @@ const Privacy = () => {
     <PageTransition>
       <SEO
         title="Privacy Policy"
-        description="How Rustic Retreat Weddings collects, uses, and protects the personal information you share with us through our enquiry form, booking forms, chat assistant, and website analytics."
+        description="How Rustic Retreat Weddings collects, uses and protects the personal information you share with us through our forms."
         path="/privacy"
         image={heroImage}
       />

@@ -59,8 +59,8 @@ const Packages = () => {
   return (
     <>
       <SEO
-        title="Wedding Packages & Pricing"
-        description="Weekend wedding packages with transparent all-in pricing: 3-day $6,500, 5-day $7,500. Exclusive 65-acre access, cabin, camping for 60 guests, décor included - no per-plate minimums."
+        title="Wedding Venue Packages & Pricing"
+        description="All-in wedding packages near Edmonton: 3 days for $6,500 or 5 days for $7,500. Exclusive use of 65 acres and camping for 60 guests."
         path="/packages"
         image={loveMarqueeArch}
         keywords={["wedding packages edmonton", "weekend wedding pricing alberta", "multi-day wedding cost", "all-inclusive wedding venue edmonton", "wedding venue pricing alberta", "3 day wedding package", "5 day wedding package"]}

@@ -158,8 +158,8 @@ const Gallery = () => {
   return (
     <PageTransition>
       <SEO
-        title="Wedding Photo Gallery"
-        description="Browse real wedding photos from Rustic Retreat. See ceremony setups, reception details, romantic portraits, and more from couples who celebrated on our 65-acre Alberta property."
+        title="Wedding Venue Photo Gallery"
+        description="Photos of our wedding venue near Edmonton: ceremonies at the gazebo, receptions under lights, forest portraits and camping on 65 private acres."
         path="/gallery"
         image={galleryHero}
         keywords={["wedding photos edmonton venue", "rustic wedding photography alberta", "outdoor wedding gallery", "wedding venue photo inspiration", "forest wedding photos", "alberta wedding venue pictures"]}

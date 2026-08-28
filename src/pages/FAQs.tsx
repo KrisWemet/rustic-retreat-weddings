@@ -34,8 +34,8 @@ const FAQs = () => {
   return (
     <PageTransition>
       <SEO
-        title="Frequently Asked Questions"
-        description="Answers about Rustic Retreat wedding packages and costs, overnight camping for guests, bring-your-own vendors and bar, pet-friendly policies, and more. Everything to know before booking your tour."
+        title="Wedding Venue FAQs"
+        description="Answers about our wedding packages and prices, overnight camping for guests, bringing your own vendors and bar, and getting here from Edmonton."
         path="/faqs"
         image={faqHeroImage}
       />

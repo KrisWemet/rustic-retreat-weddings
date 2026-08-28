@@ -16,8 +16,8 @@ const Elopements = () => {
   return (
     <PageTransition>
       <SEO
-        title="Elopement & Small Wedding Venue Near Edmonton"
-        description="Elope on 65 private acres an hour from Edmonton. Every package includes the whole property, a newlywed cabin, camping for your closest people, and zero crowds — with no minimum guest count."
+        title="Elopement Packages in Alberta"
+        description="Elopement and small wedding packages an hour from Edmonton. No minimum guest count, and the whole 65-acre property is yours for 3 or 5 days."
         path="/elopements"
         image={heroImage}
         keywords={["elopement venue alberta", "elopement venue near edmonton", "small wedding venue edmonton", "intimate wedding venue alberta", "micro wedding alberta", "weekday wedding venue"]}

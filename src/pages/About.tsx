@@ -16,7 +16,7 @@ const About = () => {
     <PageTransition>
       <SEO
         title="Our Story"
-        description="Family-owned since 2006. What started as annual gatherings became a wedding venue after we threw our own celebrations here. Now we share 65 acres with couples who want something different."
+        description="Family-owned since 2006. We opened our 65 acres near Edmonton to weddings in 2025, after hosting our own celebrations on the property."
         path="/about"
         keywords={["family owned wedding venue alberta", "rustic retreat story", "edmonton wedding venue owners", "personal wedding venue alberta", "intimate wedding venue near edmonton", "private property wedding alberta"]}
       />

@@ -16,8 +16,8 @@ const DIYWedding = () => {
   return (
     <PageTransition>
       <SEO
-        title="DIY Wedding Venue in Alberta — No Mandatory Vendors"
-        description="A true DIY wedding venue near Edmonton: bring any caterer, run your own bar with no corkage fees, use our free décor collection, and take days — not hours — to set up. All-in pricing from $6,500."
+        title="DIY Wedding Venue in Alberta"
+        description="A DIY wedding venue near Edmonton with no mandatory vendors, no per-plate minimums and no corkage fees. Bring any caterer and run your own bar."
         path="/diy-wedding-venue-alberta"
         image={heroImage}
         keywords={["diy wedding venue alberta", "no mandatory vendors wedding venue", "byob wedding venue alberta", "bring your own vendors wedding", "no corkage fee wedding venue", "affordable wedding venue near edmonton"]}
