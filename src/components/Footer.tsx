@@ -93,11 +93,17 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span className="text-primary-foreground/80">
-                  99 km NW of Edmonton, near Lac La Nonne, Alberta
-                </span>
+              <li>
+                <a
+                  href={content.sitewide.location.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Get directions to Rustic Retreat — 99 km NW of Edmonton, near Lac La Nonne, Alberta (opens Google Maps in a new tab)"
+                  className="flex items-start gap-2 hover:text-secondary transition-colors text-primary-foreground/80"
+                >
+                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                  <span>{content.sitewide.location.displayShort}</span>
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />

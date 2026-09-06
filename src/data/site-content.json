@@ -1,7 +1,11 @@
 {
   "sitewide": {
     "phone": "(780) 210-6252",
-    "email": "rusticretreatalberta@gmail.com"
+    "email": "rusticretreatalberta@gmail.com",
+    "location": {
+      "displayShort": "99 km NW of Edmonton, near Lac La Nonne, Alberta",
+      "mapsUrl": "https://maps.app.goo.gl/QLX79xtop3uLpnTq9"
+    }
   },
   "homepage": {
     "hero": {
