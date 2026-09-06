@@ -107,7 +107,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <a href={`sms:+1${content.sitewide.phone.replace(/\D/g, '')}`} aria-label="Text Rustic Retreat">
+                <a href={`sms:+1${content.sitewide.phone.replace(/\D/g, '')}`} aria-label="Text Rustic Retreat" className="hover:text-secondary transition-colors text-primary-foreground/80">
                   <MessageCircle className="w-4 h-4 flex-shrink-0" />
                 </a>
                 <a href={`tel:+1${content.sitewide.phone.replace(/\D/g, '')}`} className="hover:text-secondary transition-colors text-primary-foreground/80">
