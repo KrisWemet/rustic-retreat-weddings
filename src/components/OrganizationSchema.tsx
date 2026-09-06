@@ -18,6 +18,12 @@ const OrganizationSchema = () => {
       addressCountry: "CA",
       description: "99 km northwest of Edmonton"
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "53.9249453",
+      longitude: "-114.3413119"
+    },
+    hasMap: "https://maps.app.goo.gl/QLX79xtop3uLpnTq9",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],

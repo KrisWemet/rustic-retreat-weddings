@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X, Phone, Mail, MapPin, ChevronDown } from "lucide-react";
 import BrandMark from "@/components/BrandMark";
+import content from "@/data/site-content.json";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -328,9 +329,17 @@ const Navigation = () => {
                   rusticretreatalberta@gmail.com
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="w-4 h-4 text-secondary mt-0.5" />
-                <span>99 km NW of Edmonton<br />near Lac La Nonne, Alberta</span>
+              <li>
+                <a
+                  href={content.sitewide.location.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Get directions to Rustic Retreat — 99 km NW of Edmonton, near Lac La Nonne, Alberta (opens Google Maps in a new tab)"
+                  className="flex items-start gap-3 text-foreground hover:text-primary transition-colors"
+                >
+                  <MapPin className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" aria-hidden="true" />
+                  <span className="text-balance">{content.sitewide.location.displayShort}</span>
+                </a>
               </li>
             </ul>
           </div>
