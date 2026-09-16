@@ -44,24 +44,7 @@ import { fetchSanityHomepageContent, toSanityImageUrl } from "@/lib/sanity-homep
 import { HomepageBuilderSection, HomepageCmsContent, HomepageIntroCard } from "@/types/homepage-cms";
 import { createDataAttribute } from "@sanity/visual-editing";
 import { FAQS } from "@/content/faqs";
-
-const TESTIMONIALS = [
-  {
-    quote: "The property is stunning, featuring a romantic couples cabin, enchanting forested areas, and a breathtaking gazebo adorned with lights and ample space. The seamless flow to a gorgeous dance floor and field area, endless paths, and an inviting fire pit hangout near the couples suite made for a fun way to end a long night of dancing. Roasting hotdogs and smores, camping with family and friends added an extra layer of joy to our wedding.",
-    name: "Tabitha",
-    date: "September 2025",
-  },
-  {
-    quote: "Such an amazing experience from the moment we contacted Rustic Retreat to the time we checked out. The venue is absolutely beautiful and you will not be disappointed. I will absolutely recommend this amazing place to anyone and everyone looking for a small to medium romantic wedding. When you check in you are greeted by amazing hospitality.",
-    name: "Ali",
-    date: "August 2025",
-  },
-  {
-    quote: "My husband and I got married here two weeks ago (planned a wedding in just over a month)-let me tell ya, it was an absolute blast! Shannon and her husband went above and beyond to make sure everything went smoothly for us.",
-    name: "Viktoria",
-    date: "June 2025",
-  },
-];
+import { TESTIMONIALS, GOOGLE_REVIEWS_URL } from "@/data/testimonials";
 
 const Index = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -223,6 +206,10 @@ const Index = () => {
     }
     return <Link to={href} className={className}>{label}</Link>;
   };
+
+  // Three reviews fit one desktop row; any more and the rail becomes a carousel
+  // at every breakpoint so extra reviews never leave a ragged trailing row.
+  const testimonialsOverflowDesktop = TESTIMONIALS.length > 3;
 
   const scrollToTestimonial = (index: number) => {
     const track = testimonialTrackRef.current;
@@ -447,13 +434,19 @@ const Index = () => {
                 <div
                   ref={testimonialTrackRef}
                   onScroll={handleTestimonialScroll}
-                  className="flex md:grid md:grid-cols-3 gap-5 lg:gap-8 overflow-x-auto md:overflow-visible scroll-smooth snap-x snap-mandatory md:snap-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-4 md:px-0"
+                  className={`flex gap-5 lg:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-4 md:px-0 ${
+                    testimonialsOverflowDesktop ? "" : "md:grid md:grid-cols-3 md:overflow-visible md:snap-none"
+                  }`}
                 >
                   {TESTIMONIALS.map((testimonial, index) => (
                     <article
-                      key={testimonial.name}
+                      key={`${testimonial.name}-${testimonial.date}`}
                       data-testimonial-index={index}
-                      className="snap-center shrink-0 md:shrink md:flex-1 w-[88%] sm:w-[80%] md:w-auto"
+                      className={`snap-center shrink-0 w-[88%] sm:w-[80%] ${
+                        testimonialsOverflowDesktop
+                          ? "md:w-[calc((100%-2.5rem)/3)] lg:w-[calc((100%-4rem)/3)]"
+                          : "md:shrink md:flex-1 md:w-auto"
+                      }`}
                     >
                       <div className="card-enchant bg-white/70 backdrop-blur-sm rounded-2xl border border-secondary/15 px-7 py-8 shadow-soft flex flex-col h-full text-center">
                         {/* Stars */}
@@ -477,11 +470,13 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Dot indicators - mobile only */}
-              <div className="mt-5 flex md:hidden items-center justify-center gap-2">
+              {/* Dot indicators - shown wherever the rail scrolls */}
+              <div className={`mt-5 flex items-center justify-center gap-2 ${
+                testimonialsOverflowDesktop ? "" : "md:hidden"
+              }`}>
                 {TESTIMONIALS.map((testimonial, index) => (
                   <button
-                    key={`${testimonial.name}-dot`}
+                    key={`${testimonial.name}-${testimonial.date}-dot`}
                     type="button"
                     aria-label={`Go to testimonial ${index + 1}`}
                     aria-current={activeTestimonialIndex === index ? "true" : undefined}
@@ -489,6 +484,19 @@ const Index = () => {
                     className={`h-2 rounded-full transition-all ${activeTestimonialIndex === index ? "w-6 bg-secondary" : "w-2 bg-secondary/35 hover:bg-secondary/60"}`}
                   />
                 ))}
+              </div>
+
+              {/* Link out to the full, independently hosted review list */}
+              <div className="mt-8 text-center">
+                <a
+                  href={GOOGLE_REVIEWS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-primary/80 hover:text-primary underline underline-offset-4 decoration-secondary/40 hover:decoration-secondary transition-colors"
+                >
+                  Read every review on Google
+                  <ChevronRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </ScrollReveal>
