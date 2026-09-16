@@ -37,7 +37,7 @@ import firstDanceBW from "@/assets/gallery/Images/first-dance-string-lights.webp
 import sweetheartTable from "@/assets/gallery/Images/sweetheart-table-laughing.webp";
 import dressGazebo from "@/assets/gallery/dress-forest-gazebo.webp";
 import { Calendar, MapPin, Sparkles, Users, Heart, Quote, Star, Play, Volume2, VolumeX, Waves, Compass, Target, Bath, Film, Music, Flag, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useRef, useEffect, type KeyboardEvent } from "react";
+import { useState, useRef, useEffect, type KeyboardEvent, type ReactNode } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import content from "@/data/site-content.json";
 import { fetchSanityHomepageContent, toSanityImageUrl } from "@/lib/sanity-homepage";
@@ -45,6 +45,111 @@ import { HomepageBuilderSection, HomepageCmsContent, HomepageIntroCard } from "@
 import { createDataAttribute } from "@sanity/visual-editing";
 import { FAQS } from "@/content/faqs";
 import { TESTIMONIALS, GOOGLE_REVIEWS_URL } from "@/data/testimonials";
+import { Testimonial } from "@/types/testimonial";
+
+type ExpandedQuotePanelProps = {
+  testimonial: Testimonial;
+  children: ReactNode;
+};
+
+// The open card. It sits inside the card because the rail is a horizontal scroll
+// container and clips its children on both axes, so a long review scrolls here
+// rather than overflowing. A fade marks that there is more, but only when the
+// text actually overflows - otherwise it would sit over the reviewer's name.
+const ExpandedQuotePanel = ({ testimonial, children }: ExpandedQuotePanelProps) => {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [hasMoreBelow, setHasMoreBelow] = useState(false);
+
+  useEffect(() => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+
+    const update = () => {
+      setHasMoreBelow(
+        scroller.scrollHeight - scroller.clientHeight - scroller.scrollTop > 4,
+      );
+    };
+
+    update();
+    scroller.addEventListener("scroll", update, { passive: true });
+    const observer = new ResizeObserver(update);
+    observer.observe(scroller);
+
+    return () => {
+      scroller.removeEventListener("scroll", update);
+      observer.disconnect();
+    };
+  }, [testimonial.quote]);
+
+  return (
+    <div className="absolute inset-0 z-30 overflow-hidden rounded-2xl border border-secondary/25 bg-white shadow-xl">
+      <div
+        ref={scrollerRef}
+        className="h-full overflow-y-auto overscroll-contain px-7 py-8 text-center"
+      >
+        {children}
+      </div>
+      {hasMoreBelow && (
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 rounded-b-2xl bg-gradient-to-t from-white via-white/85 to-transparent" />
+      )}
+    </div>
+  );
+};
+
+// Quotes are trimmed to eight lines before the reader has to open them - tuned so
+// the longest review that already fitted sits just under the limit, keeping the
+// cards to a similar length without cutting anything that did not need it.
+// Tailwind's line-clamp utility is what emits the -webkit-box display and
+// box-orient that Safari and Firefox both require; setting -webkit-line-clamp
+// alone only happens to work in Chromium.
+const QUOTE_CLAMP_CLASS = "line-clamp-[8]";
+
+type QuotePreviewProps = {
+  testimonial: Testimonial;
+  isClamped: boolean;
+  isExpanded: boolean;
+  onToggle: () => void;
+  registerQuote: (element: HTMLElement | null) => void;
+};
+
+const QuotePreview = ({
+  testimonial,
+  isClamped,
+  isExpanded,
+  onToggle,
+  registerQuote,
+}: QuotePreviewProps) => {
+  // Paragraph breaks are worth their space in the full review but waste lines in
+  // a trimmed preview, so the preview runs them together.
+  const preview = testimonial.quote.replace(/\s*\n+\s*/g, " ");
+
+  const quote = (
+    <blockquote
+      ref={registerQuote}
+      className={`font-serif italic text-primary/90 leading-relaxed text-[0.95rem] ${QUOTE_CLAMP_CLASS}`}
+    >
+      {preview}
+    </blockquote>
+  );
+
+  if (!isClamped) {
+    return <div className="mb-7">{quote}</div>;
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-expanded={isExpanded}
+      className="mb-7 block w-full cursor-pointer rounded-lg text-center transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50"
+    >
+      {quote}
+      <span className="mt-3 inline-block text-xs uppercase tracking-widest text-secondary/80 underline underline-offset-4">
+        Read full review
+      </span>
+    </button>
+  );
+};
 
 const Index = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -65,6 +170,18 @@ const Index = () => {
   const programmaticScrollTimeoutRef = useRef<number | null>(null);
   // Once the reader drives the rail themselves, stop repositioning it for them.
   const hasUserDrivenRailRef = useRef(false);
+
+  // Long reviews are clamped to a fixed number of lines so every card reads at a
+  // similar length; the full text opens on hover, focus or tap.
+  const [expandedQuote, setExpandedQuote] = useState<number | null>(null);
+  const expandedQuoteRef = useRef<number | null>(null);
+  // Dismissing a card while the pointer is still over it would otherwise reopen
+  // it instantly: unmounting the panel under the cursor re-fires the card's
+  // mouseenter. Hover stays suppressed until the pointer actually leaves.
+  const [hoverSuppressedFor, setHoverSuppressedFor] = useState<number | null>(null);
+  // Which reviews actually overflow the clamp - only those get an affordance.
+  const [clampedQuotes, setClampedQuotes] = useState<Set<number>>(new Set());
+  const quoteElementsRef = useRef(new Map<number, HTMLElement>());
 
   // Three reviews fit one desktop row; any more and the rail becomes a carousel
   // at every breakpoint so extra reviews never leave a ragged trailing row.
@@ -193,6 +310,55 @@ const Index = () => {
       observer.disconnect();
     };
   }, [loopStartPosition]);
+
+  useEffect(() => {
+    const measure = () => {
+      // Skip while a card is open: its clamp is lifted, so it would measure as
+      // not overflowing and the affordance would vanish under the reader.
+      if (expandedQuoteRef.current !== null) return;
+
+      const next = new Set<number>();
+      quoteElementsRef.current.forEach((element, realIndex) => {
+        if (element.scrollHeight > element.clientHeight + 1) next.add(realIndex);
+      });
+
+      setClampedQuotes((previous) => {
+        const unchanged =
+          previous.size === next.size && [...next].every((index) => previous.has(index));
+        return unchanged ? previous : next;
+      });
+    };
+
+    measure();
+
+    // Card width and font swap both change where the clamp falls.
+    const observer = new ResizeObserver(measure);
+    quoteElementsRef.current.forEach((element) => observer.observe(element));
+    let cancelled = false;
+    document.fonts?.ready.then(() => {
+      if (!cancelled) measure();
+    });
+
+    return () => {
+      cancelled = true;
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    expandedQuoteRef.current = expandedQuote;
+  }, [expandedQuote]);
+
+  useEffect(() => {
+    if (expandedQuote === null) return;
+    const onKeyDown = (event: globalThis.KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setHoverSuppressedFor(expandedQuote);
+      setExpandedQuote(null);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [expandedQuote]);
 
   useEffect(
     () => () => {
@@ -579,7 +745,11 @@ const Index = () => {
                     testimonialsOverflowDesktop ? "" : "md:grid md:grid-cols-3 md:overflow-visible md:snap-none"
                   }`}
                 >
-                  {railSlides.map(({ testimonial, realIndex, copy }, position) => (
+                  {railSlides.map(({ testimonial, realIndex, copy }, position) => {
+                    const isClamped = clampedQuotes.has(realIndex);
+                    const isExpanded = expandedQuote === position;
+
+                    return (
                     <article
                       key={`${copy}-${testimonial.name}-${testimonial.date}`}
                       data-slide-position={position}
@@ -592,7 +762,18 @@ const Index = () => {
                           : "md:shrink md:flex-1 md:w-auto"
                       }`}
                     >
-                      <div className="card-enchant bg-white/70 backdrop-blur-sm rounded-2xl border border-secondary/15 px-7 py-8 shadow-soft flex flex-col h-full text-center">
+                      <div
+                        className="card-enchant relative bg-white/70 backdrop-blur-sm rounded-2xl border border-secondary/15 px-7 py-8 shadow-soft flex flex-col h-full text-center"
+                        onMouseEnter={() => {
+                          if (isClamped && hoverSuppressedFor !== position) setExpandedQuote(position);
+                        }}
+                        onMouseLeave={() => {
+                          setExpandedQuote((open) => (open === position ? null : open));
+                          setHoverSuppressedFor((suppressed) =>
+                            suppressed === position ? null : suppressed,
+                          );
+                        }}
+                      >
                         {/* Stars */}
                         <div className="flex justify-center gap-1 mb-5">
                           {[...Array(5)].map((_, i) => (
@@ -604,9 +785,22 @@ const Index = () => {
                         <div className="flex-1 flex flex-col justify-center">
                           {/* Decorative opening quote */}
                           <div className="quote-glyph font-serif text-[6rem] -mb-4 select-none" aria-hidden="true">"</div>
-                          <blockquote className="font-serif italic text-primary/90 leading-relaxed text-[0.95rem] mb-7">
-                            {testimonial.quote}
-                          </blockquote>
+                          <QuotePreview
+                            testimonial={testimonial}
+                            isClamped={isClamped}
+                            isExpanded={isExpanded}
+                            onToggle={() => {
+                              const closing = expandedQuote === position;
+                              setHoverSuppressedFor(closing ? position : null);
+                              setExpandedQuote(closing ? null : position);
+                            }}
+                            registerQuote={(element) => {
+                              // Measure one copy per review; the clones are identical.
+                              if (copy !== middleCopy) return;
+                              if (element) quoteElementsRef.current.set(realIndex, element);
+                              else quoteElementsRef.current.delete(realIndex);
+                            }}
+                          />
                         </div>
                         <div className="mt-auto">
                           <p className="font-handwriting text-secondary text-2xl leading-none">{testimonial.name}</p>
@@ -617,9 +811,36 @@ const Index = () => {
                             )}
                           </p>
                         </div>
+
+                        {/* The full review covers the card rather than growing it,
+                            so opening one never resizes the rail or shunts its
+                            neighbours. It has to sit inside the card: the rail is a
+                            horizontal scroll container, which clips its children on
+                            both axes, so a panel overflowing the card is cut off.
+                            Long reviews scroll within it instead. */}
+                        {isExpanded && (
+                          <ExpandedQuotePanel testimonial={testimonial}>
+                            <div className="flex justify-center gap-1 mb-5">
+                              {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                              ))}
+                            </div>
+                            <blockquote className="font-serif italic text-primary/90 leading-relaxed text-[0.95rem] whitespace-pre-line">
+                              {testimonial.quote}
+                            </blockquote>
+                            <p className="font-handwriting text-secondary text-2xl leading-none mt-6">{testimonial.name}</p>
+                            <p className="text-xs text-muted-foreground mt-1.5 tracking-widest uppercase">
+                              {testimonial.date}
+                              {testimonial.source === "Google" && (
+                                <span className="text-muted-foreground/70"> &middot; via Google</span>
+                              )}
+                            </p>
+                          </ExpandedQuotePanel>
+                        )}
                       </div>
                     </article>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
 

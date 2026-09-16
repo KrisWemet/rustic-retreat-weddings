@@ -13,7 +13,8 @@ export const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/QLX79xtop3uLpnTq9";
  * carousel handles any number of reviews. Keep `public/llm.html` and
  * `public/llms.txt` in step when this list changes.
  *
- * Quotes are verbatim. Google shows relative dates ("2 weeks ago"), so entries
+ * Quotes are verbatim and complete; the card clamps long ones and lets the
+ * reader open the rest. Google shows relative dates ("2 weeks ago"), so entries
  * sourced from Google carry the month they were captured: 16 September 2026.
  *
  * Ordered newest first, but reordered within a month so that reviews from the
@@ -24,9 +25,8 @@ export const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/QLX79xtop3uLpnTq9";
  */
 export const TESTIMONIALS: Testimonial[] = [
   {
-    // Excerpt of a considerably longer review - contiguous verbatim text, with the
-    // omission marked. The full review is on the Google Business Profile.
-    quote: "We had our wedding at Rustic Retreat Weddings & Events Ltd, and we truly couldn't have asked for a better experience. Shannon and her husband were absolutely wonderful to deal with from beginning to end. They were welcoming, friendly, easygoing, and genuinely cared about making sure our day went smoothly. … By the end of the weekend, it honestly felt like we had two extra family members there supporting us and people we could lean on whenever we needed something.",
+    quote:
+      "We had our wedding at Rustic Retreat Weddings & Events Ltd, and we truly couldn't have asked for a better experience. Shannon and her husband were absolutely wonderful to deal with from beginning to end. They were welcoming, friendly, easygoing, and genuinely cared about making sure our day went smoothly.\n\nThey went above and beyond in so many ways — helping wherever they were needed, taking behind-the-scenes photos for us, keeping things running smoothly, and even running to get our rings when we realized they had been forgotten! 😂\n\nWhat meant the most to us was that they didn't just feel like the owners of the venue. By the end of the weekend, it honestly felt like we had two extra family members there supporting us and people we could lean on whenever we needed something. Having that kind of support on such a busy and emotional day meant more than we can say.\n\nIt was all of those little things that really stood out. They didn't just provide us with a beautiful place to have our wedding — they helped make the entire experience special, memorable, and so much less stressful.\n\nThe property was beautiful, we felt completely at home, and Shannon and her husband have such wonderful personalities. We are so thankful we chose Rustic Retreat Weddings & Events Ltd for our wedding and would absolutely recommend them to anyone looking for a beautiful, welcoming venue with people who truly care about your day.\n\nThank you both for everything you did for us and for making us feel like family. ❤️\n\n— Janelle & Brian",
     name: "Janelle Hewson",
     date: "September 2026",
     source: "Google",
