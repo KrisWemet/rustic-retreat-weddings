@@ -806,8 +806,8 @@ const Index = () => {
                           <p className="font-handwriting text-secondary text-2xl leading-none">{testimonial.name}</p>
                           <p className="text-xs text-muted-foreground mt-1.5 tracking-widest uppercase">
                             {testimonial.date}
-                            {testimonial.source === "Google" && (
-                              <span className="text-muted-foreground/70"> &middot; via Google</span>
+                            {testimonial.source && testimonial.source !== "Direct" && (
+                              <span className="text-muted-foreground/70"> &middot; via {testimonial.source}</span>
                             )}
                           </p>
                         </div>
@@ -831,8 +831,8 @@ const Index = () => {
                             <p className="font-handwriting text-secondary text-2xl leading-none mt-6">{testimonial.name}</p>
                             <p className="text-xs text-muted-foreground mt-1.5 tracking-widest uppercase">
                               {testimonial.date}
-                              {testimonial.source === "Google" && (
-                                <span className="text-muted-foreground/70"> &middot; via Google</span>
+                              {testimonial.source && testimonial.source !== "Direct" && (
+                                <span className="text-muted-foreground/70"> &middot; via {testimonial.source}</span>
                               )}
                             </p>
                           </ExpandedQuotePanel>
