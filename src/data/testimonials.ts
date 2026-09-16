@@ -15,15 +15,14 @@ export const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/QLX79xtop3uLpnTq9";
  *
  * Quotes are verbatim. Google shows relative dates ("2 weeks ago"), so entries
  * sourced from Google carry the month they were captured: 16 September 2026.
- * Newest first.
+ *
+ * Ordered newest first, but reordered within a month so that reviews from the
+ * same household are never on screen together - three cards are visible at once
+ * on desktop, so these stay at least three apart: Brian Dodd / Janelle Hewson
+ * (one couple), Christine / Kevin Williams, and Kail Jo / Kailyn Johnson (which
+ * may be one person under two Google accounts).
  */
 export const TESTIMONIALS: Testimonial[] = [
-  {
-    quote: "This is THE place I would recommend to host a wedding. We enjoyed every aspect of our entire weekend. We were greeted with a warm welcome as soon as we arrived. The owners went above and beyond to ensure everything was perfect for wedding and helping with anything we needed. It was nice to have camping on-site so many guests can stay late and enjoy the evening.",
-    name: "Brian Dodd",
-    date: "September 2026",
-    source: "Google",
-  },
   {
     // Excerpt of a considerably longer review - contiguous verbatim text, with the
     // omission marked. The full review is on the Google Business Profile.
@@ -41,6 +40,12 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     quote: "Absolutely loved the location and privacy, very accommodating and the owners did an amazing job helping out wherever they were needed. Highly recommend for weddings, family reunions and even birthday events.",
     name: "Christine Williams",
+    date: "September 2026",
+    source: "Google",
+  },
+  {
+    quote: "This is THE place I would recommend to host a wedding. We enjoyed every aspect of our entire weekend. We were greeted with a warm welcome as soon as we arrived. The owners went above and beyond to ensure everything was perfect for wedding and helping with anything we needed. It was nice to have camping on-site so many guests can stay late and enjoy the evening.",
+    name: "Brian Dodd",
     date: "September 2026",
     source: "Google",
   },
