@@ -59,6 +59,61 @@ const Index = () => {
   const testimonialTrackRef = useRef<HTMLDivElement>(null);
   const heroImgRef = useRef<HTMLImageElement>(null);
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
+  // Set while a smooth scroll is running, so the loop recentring does not
+  // cancel the animation by reassigning scrollLeft mid-flight.
+  const isProgrammaticScrollRef = useRef(false);
+  const programmaticScrollTimeoutRef = useRef<number | null>(null);
+  // Once the reader drives the rail themselves, stop repositioning it for them.
+  const hasUserDrivenRailRef = useRef(false);
+
+  // Three reviews fit one desktop row; any more and the rail becomes a carousel
+  // at every breakpoint so extra reviews never leave a ragged trailing row.
+  const testimonialsOverflowDesktop = TESTIMONIALS.length > 3;
+
+  // The carousel loops by rendering three copies of the list and silently
+  // recentring on the middle one whenever the reader drifts into an outer copy.
+  // Because every copy is identical the jump is invisible, and native scrolling,
+  // snapping and touch momentum all keep working. The outer copies are hidden
+  // from assistive tech so the reviews are only announced once.
+  const TESTIMONIAL_COPIES = 3;
+  const middleCopy = Math.floor(TESTIMONIAL_COPIES / 2);
+  const railSlides = testimonialsOverflowDesktop
+    ? Array.from({ length: TESTIMONIAL_COPIES }, (_, copy) =>
+        TESTIMONIALS.map((testimonial, realIndex) => ({ testimonial, realIndex, copy })),
+      ).flat()
+    : TESTIMONIALS.map((testimonial, realIndex) => ({ testimonial, realIndex, copy: 0 }));
+
+  // Index within railSlides where the middle copy starts.
+  const loopStartPosition = testimonialsOverflowDesktop ? middleCopy * TESTIMONIALS.length : 0;
+
+  const getRailSlides = (track: HTMLDivElement) =>
+    Array.from(track.querySelectorAll<HTMLElement>("[data-slide-position]"));
+
+  // Distance between the same card in consecutive copies, gap included.
+  const getCopyWidth = (slides: HTMLElement[]) =>
+    slides.length > TESTIMONIALS.length
+      ? slides[TESTIMONIALS.length].offsetLeft - slides[0].offsetLeft
+      : 0;
+
+  // Keep the scroll position inside the middle copy so there is always a full
+  // copy of runway in either direction.
+  const recentreLoop = (track: HTMLDivElement) => {
+    if (!testimonialsOverflowDesktop || isProgrammaticScrollRef.current) return;
+
+    const slides = getRailSlides(track);
+    const copyWidth = getCopyWidth(slides);
+    if (copyWidth <= 0) return;
+
+    // "instant" is required, not cosmetic: the rail sets CSS scroll-behavior:
+    // smooth, which both scrollLeft assignment and behavior:"auto" defer to, and
+    // an animated jump would visibly whip the rail back a whole copy.
+    const base = slides[loopStartPosition].offsetLeft;
+    if (track.scrollLeft < base - copyWidth / 2) {
+      track.scrollTo({ left: track.scrollLeft + copyWidth, behavior: "instant" });
+    } else if (track.scrollLeft > base + copyWidth / 2) {
+      track.scrollTo({ left: track.scrollLeft - copyWidth, behavior: "instant" });
+    }
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -84,16 +139,69 @@ const Index = () => {
     const track = testimonialTrackRef.current;
     if (!track) return;
 
-    requestAnimationFrame(() => {
-      const firstSlide = track.querySelector<HTMLElement>('[data-testimonial-index="0"]');
+    // Open on the first review of the middle copy, so there is a full copy of
+    // rail to scroll through in either direction before anything recentres.
+    const applyStartPosition = () => {
+      const slides = getRailSlides(track);
+      if (slides.length === 0) return;
+
+      // Centring the first review would park the previous one (the oldest) on its
+      // left, since a looping rail has no left edge. Centre the middle of the
+      // visible run instead, so the rail opens on the newest reviews exactly as a
+      // non-looping one did: three across on desktop, one on mobile.
+      const pitch = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : 0;
+      const visibleCount = pitch > 0 ? Math.max(1, Math.round(track.clientWidth / pitch)) : 1;
+      const centreOffset = Math.floor(visibleCount / 2);
+
+      const firstSlide = track.querySelector<HTMLElement>(
+        `[data-slide-position="${loopStartPosition + centreOffset}"]`,
+      );
       if (!firstSlide) return;
 
       // Set the testimonial rail position without scrolling the page vertically.
       const targetLeft = firstSlide.offsetLeft - (track.clientWidth - firstSlide.offsetWidth) / 2;
       const clampedLeft = Math.max(0, Math.min(targetLeft, track.scrollWidth - track.clientWidth));
-      track.scrollTo({ left: clampedLeft, behavior: "auto" });
+      track.scrollTo({ left: clampedLeft, behavior: "instant" });
+    };
+
+    const frame = requestAnimationFrame(applyStartPosition);
+
+    // Web fonts and the reveal animation land after mount and reflow the rail,
+    // which drags its scroll offset along. With three copies there is no left
+    // edge to clamp against any more, so without this the rail can settle in the
+    // middle of the list. Re-apply until the reader takes over.
+    const reapply = () => {
+      if (!hasUserDrivenRailRef.current) applyStartPosition();
+    };
+
+    // The track's own box is fixed by its container, so watch a card instead -
+    // the cards are what reflow as fonts swap in and heights equalise.
+    const observer = new ResizeObserver(reapply);
+    observer.observe(track);
+    const firstCard = track.firstElementChild;
+    if (firstCard) observer.observe(firstCard);
+
+    // Font swap reflows the rail after the observer has already settled once.
+    let cancelled = false;
+    document.fonts?.ready.then(() => {
+      if (!cancelled) requestAnimationFrame(reapply);
     });
-  }, []);
+
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
+  }, [loopStartPosition]);
+
+  useEffect(
+    () => () => {
+      if (programmaticScrollTimeoutRef.current !== null) {
+        window.clearTimeout(programmaticScrollTimeoutRef.current);
+      }
+    },
+    [],
+  );
 
   useEffect(() => {
     const element = videoSectionRef.current;
@@ -207,18 +315,37 @@ const Index = () => {
     return <Link to={href} className={className}>{label}</Link>;
   };
 
-  // Three reviews fit one desktop row; any more and the rail becomes a carousel
-  // at every breakpoint so extra reviews never leave a ragged trailing row.
-  const testimonialsOverflowDesktop = TESTIMONIALS.length > 3;
-
   const scrollToTestimonial = (index: number) => {
     const track = testimonialTrackRef.current;
     if (!track) return;
 
     const total = TESTIMONIALS.length;
     const normalizedIndex = ((index % total) + total) % total;
-    const slide = track.querySelector<HTMLElement>(`[data-testimonial-index="${normalizedIndex}"]`);
-    if (!slide) return;
+
+    // A looping rail holds the same review in every copy; scroll to whichever
+    // instance is closest, so stepping past the last card continues forwards
+    // into the next copy rather than rewinding the whole rail.
+    const matches = getRailSlides(track).filter(
+      (slide) => Number(slide.dataset.testimonialIndex) === normalizedIndex,
+    );
+    if (matches.length === 0) return;
+
+    const viewportCentre = track.scrollLeft + track.clientWidth / 2;
+    const slide = matches.reduce((closest, candidate) => {
+      const candidateDistance = Math.abs(candidate.offsetLeft + candidate.offsetWidth / 2 - viewportCentre);
+      const closestDistance = Math.abs(closest.offsetLeft + closest.offsetWidth / 2 - viewportCentre);
+      return candidateDistance < closestDistance ? candidate : closest;
+    });
+
+    isProgrammaticScrollRef.current = true;
+    if (programmaticScrollTimeoutRef.current !== null) {
+      window.clearTimeout(programmaticScrollTimeoutRef.current);
+    }
+    programmaticScrollTimeoutRef.current = window.setTimeout(() => {
+      isProgrammaticScrollRef.current = false;
+      programmaticScrollTimeoutRef.current = null;
+      if (testimonialTrackRef.current) recentreLoop(testimonialTrackRef.current);
+    }, 700);
 
     slide.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
     setActiveTestimonialIndex(normalizedIndex);
@@ -228,29 +355,40 @@ const Index = () => {
     const track = testimonialTrackRef.current;
     if (!track) return;
 
-    const slides = Array.from(track.querySelectorAll<HTMLElement>("[data-testimonial-index]"));
+    const slides = getRailSlides(track);
     if (slides.length === 0) return;
 
     const viewportCenter = track.scrollLeft + track.clientWidth / 2;
-    let closestIndex = 0;
+    let closestSlide = slides[0];
     let closestDistance = Number.POSITIVE_INFINITY;
 
-    slides.forEach((slide, index) => {
+    slides.forEach((slide) => {
       const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
       const distance = Math.abs(slideCenter - viewportCenter);
 
       if (distance < closestDistance) {
         closestDistance = distance;
-        closestIndex = index;
+        closestSlide = slide;
       }
     });
 
-    if (closestIndex !== activeTestimonialIndex) {
+    // Several copies share a real index, so read it off the slide rather than
+    // using its position in the rail.
+    const closestIndex = Number(closestSlide.dataset.testimonialIndex);
+    if (!Number.isNaN(closestIndex) && closestIndex !== activeTestimonialIndex) {
       setActiveTestimonialIndex(closestIndex);
     }
+
+    recentreLoop(track);
+  };
+
+  const markRailUserDriven = () => {
+    hasUserDrivenRailRef.current = true;
   };
 
   const handleTestimonialKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    markRailUserDriven();
+
     if (event.key === "ArrowRight") {
       event.preventDefault();
       scrollToTestimonial(activeTestimonialIndex + 1);
@@ -434,14 +572,20 @@ const Index = () => {
                 <div
                   ref={testimonialTrackRef}
                   onScroll={handleTestimonialScroll}
+                  onPointerDown={markRailUserDriven}
+                  onTouchStart={markRailUserDriven}
+                  onWheel={markRailUserDriven}
                   className={`flex gap-5 lg:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-4 md:px-0 ${
                     testimonialsOverflowDesktop ? "" : "md:grid md:grid-cols-3 md:overflow-visible md:snap-none"
                   }`}
                 >
-                  {TESTIMONIALS.map((testimonial, index) => (
+                  {railSlides.map(({ testimonial, realIndex, copy }, position) => (
                     <article
-                      key={`${testimonial.name}-${testimonial.date}`}
-                      data-testimonial-index={index}
+                      key={`${copy}-${testimonial.name}-${testimonial.date}`}
+                      data-slide-position={position}
+                      data-testimonial-index={realIndex}
+                      // Only the middle copy is announced; the rest are scroll runway.
+                      aria-hidden={testimonialsOverflowDesktop && copy !== middleCopy}
                       className={`snap-center shrink-0 w-[88%] sm:w-[80%] ${
                         testimonialsOverflowDesktop
                           ? "md:w-[calc((100%-2.5rem)/3)] lg:w-[calc((100%-4rem)/3)]"
@@ -489,7 +633,10 @@ const Index = () => {
                     type="button"
                     aria-label={`Go to testimonial ${index + 1}`}
                     aria-current={activeTestimonialIndex === index ? "true" : undefined}
-                    onClick={() => scrollToTestimonial(index)}
+                    onClick={() => {
+                      markRailUserDriven();
+                      scrollToTestimonial(index);
+                    }}
                     className={`h-2 rounded-full transition-all ${activeTestimonialIndex === index ? "w-6 bg-secondary" : "w-2 bg-secondary/35 hover:bg-secondary/60"}`}
                   />
                 ))}
