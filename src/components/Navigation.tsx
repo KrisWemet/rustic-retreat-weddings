@@ -70,7 +70,10 @@ const Navigation = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500 ease-in-out pt-[env(safe-area-inset-top)]",
           isScrolled
-            ? "bg-background/98 backdrop-blur-lg border-border/50 shadow-sm"
+            // Fully opaque. This was a 98% tint, but Tailwind's opacity scale
+            // runs in steps of five, so that matched no utility and silently
+            // emitted no background - the bar went transparent once scrolled.
+            ? "bg-background backdrop-blur-lg border-border/50 shadow-sm"
             : "bg-background/95 backdrop-blur-md border-border/30"
         )}
       >
@@ -154,7 +157,10 @@ const Navigation = () => {
                     "group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto"
                   )}
                 >
-                  <div className="w-64 rounded-2xl border border-border/60 bg-background/98 backdrop-blur-lg shadow-lg py-2">
+                  {/* Opaque for the same reason as the bar above: /98 is not on
+                      Tailwind's opacity scale and emitted nothing, leaving the
+                      menu unreadable over the hero image behind it. */}
+                  <div className="w-64 rounded-2xl border border-border/60 bg-background shadow-lg py-2">
                     {weddingStyles.map((link) => (
                       <Link
                         key={link.path}
