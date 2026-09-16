@@ -455,14 +455,23 @@ const Index = () => {
                             <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
                           ))}
                         </div>
-                        {/* Decorative opening quote */}
-                        <div className="quote-glyph font-serif text-[6rem] -mb-4 select-none" aria-hidden="true">"</div>
-                        <blockquote className="font-serif italic text-primary/90 leading-relaxed text-[0.95rem] mb-7">
-                          {testimonial.quote}
-                        </blockquote>
+                        {/* Quotes vary a lot in length; centre them so short ones
+                            don't leave a gap when cards stretch to equal height. */}
+                        <div className="flex-1 flex flex-col justify-center">
+                          {/* Decorative opening quote */}
+                          <div className="quote-glyph font-serif text-[6rem] -mb-4 select-none" aria-hidden="true">"</div>
+                          <blockquote className="font-serif italic text-primary/90 leading-relaxed text-[0.95rem] mb-7">
+                            {testimonial.quote}
+                          </blockquote>
+                        </div>
                         <div className="mt-auto">
                           <p className="font-handwriting text-secondary text-2xl leading-none">{testimonial.name}</p>
-                          <p className="text-xs text-muted-foreground mt-1.5 tracking-widest uppercase">{testimonial.date}</p>
+                          <p className="text-xs text-muted-foreground mt-1.5 tracking-widest uppercase">
+                            {testimonial.date}
+                            {testimonial.source === "Google" && (
+                              <span className="text-muted-foreground/70"> &middot; via Google</span>
+                            )}
+                          </p>
                         </div>
                       </div>
                     </article>
