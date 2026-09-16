@@ -96,13 +96,13 @@ const ExpandedQuotePanel = ({ testimonial, children }: ExpandedQuotePanelProps) 
   );
 };
 
-// Quotes are trimmed to eight lines before the reader has to open them - tuned so
-// the longest review that already fitted sits just under the limit, keeping the
-// cards to a similar length without cutting anything that did not need it.
+// Quotes are trimmed to six lines before the reader has to open them. Eight only
+// caught the two longest reviews and left the block as uneven as before; six
+// trims about half of them, so the quotes read at a similar length.
 // Tailwind's line-clamp utility is what emits the -webkit-box display and
 // box-orient that Safari and Firefox both require; setting -webkit-line-clamp
 // alone only happens to work in Chromium.
-const QUOTE_CLAMP_CLASS = "line-clamp-[8]";
+const QUOTE_CLAMP_CLASS = "line-clamp-[6]";
 
 type QuotePreviewProps = {
   testimonial: Testimonial;
