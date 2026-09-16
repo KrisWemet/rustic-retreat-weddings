@@ -314,6 +314,32 @@ const Contact = () => {
                             {isSubmitting ? "Sending..." : "Let's Talk"}
                           </CTAButton>
 
+                          {/* Carriers and inboxes filter unknown senders hard now, so
+                              a reply to a first-time enquiry can be silently binned.
+                              Asked for here, while they are still on the page. */}
+                          <div className="rounded-xl border border-secondary/25 bg-secondary/5 px-5 py-4">
+                            <p className="text-sm leading-relaxed text-muted-foreground">
+                              <span className="font-medium text-primary">One quick favour:</span>{" "}
+                              please save us to your contacts before you go —{" "}
+                              <a
+                                href="tel:+17802106252"
+                                className="whitespace-nowrap text-primary underline underline-offset-2 hover:no-underline"
+                              >
+                                (780) 210-6252
+                              </a>{" "}
+                              and{" "}
+                              <a
+                                href="mailto:rusticretreatalberta@gmail.com"
+                                className="break-words text-primary underline underline-offset-2 hover:no-underline"
+                              >
+                                rusticretreatalberta@gmail.com
+                              </a>
+                              . Phones and email providers now filter unknown senders
+                              aggressively, and we would hate for our reply to land in a spam
+                              folder you never check.
+                            </p>
+                          </div>
+
                         </form>
                       </>
                     )}
