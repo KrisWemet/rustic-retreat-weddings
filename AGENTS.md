@@ -35,3 +35,8 @@
 - Page metadata lives in `src/components/SEO.tsx` and is set per page.
 - When adding new routes, update `sitemap.xml` and consider adding a `public/prerender/` snapshot for crawler access.
 - Keep `llms.txt` and `llm.html` in sync with major content or pricing changes.
+- The review list inside `llm.html` is generated, not hand-edited: add reviews to
+  `src/data/testimonials.ts` only. `npm run build` regenerates the block between the
+  `reviews:start` / `reviews:end` markers; `npm run sync:reviews` does it on its own and
+  `npm run check:reviews` fails if the file is stale. Prose outside the markers is
+  still hand-written.
