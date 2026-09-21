@@ -37,6 +37,16 @@
       "permanent": true
     },
     {
+      "source": "/about-3",
+      "destination": "/venue",
+      "permanent": true
+    },
+    {
+      "source": "/about-4-1",
+      "destination": "/venue",
+      "permanent": true
+    },
+    {
       "source": "/weddings",
       "destination": "/packages",
       "permanent": true
