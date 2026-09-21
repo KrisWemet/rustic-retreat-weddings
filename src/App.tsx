@@ -110,6 +110,8 @@ const App = () => {
             {/* Redirects for old URLs */}
             <Route path="/cabin" element={<Navigate to="/venue" replace />} />
             <Route path="/decor" element={<Navigate to="/venue" replace />} />
+            <Route path="/about-3" element={<Navigate to="/venue" replace />} />
+            <Route path="/about-4-1" element={<Navigate to="/venue" replace />} />
             <Route path="/weddings" element={<Navigate to="/packages" replace />} />
             {/* Hidden booking forms - not linked in navigation */}
             <Route path="/booking-2026" element={<Booking2026 />} />
