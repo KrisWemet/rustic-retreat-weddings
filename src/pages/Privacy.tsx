@@ -65,9 +65,10 @@ const Privacy = () => {
                 <Section title="What we collect">
                   <p className="font-semibold text-foreground">When you send an enquiry</p>
                   <p>
-                    Our enquiry form asks for both partners' names, your email address, a phone number, your preferred
-                    way to be contacted, your wedding date or possible tour dates, an estimated guest count, and
-                    whatever you write in the message box.
+                    Our enquiry form asks for your name and email address. Tour requests also ask for your wedding
+                    month or date and estimated guest count. Your phone number is required only if you choose text
+                    or phone contact. Partner name, tour dates, and other details are optional. We also record the
+                    source of your visit when available so we can understand how couples find us.
                   </p>
 
                   <p className="font-semibold text-foreground">When you complete a booking form</p>

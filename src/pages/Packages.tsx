@@ -230,6 +230,7 @@ const Packages = () => {
                     <div className={`${pkg.isRecommended ? "bg-secondary/20 border-secondary" : "bg-primary/10 border-primary"} p-5 sm:p-6 rounded-lg mb-6 border-2`}>
                       <p className="text-3xl font-bold mb-2">${pkg.price}*</p>
                       <p className={`text-sm ${!pkg.isRecommended ? "text-muted-foreground" : ""}`}>2027 Package Price</p>
+                      <Link to="/contact" className="inline-flex mt-4 rounded-full bg-secondary px-5 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary-dark">Request a Tour</Link>
                     </div>
 
                   </CardContent>

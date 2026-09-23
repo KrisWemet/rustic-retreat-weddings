@@ -46,6 +46,7 @@ import { createDataAttribute } from "@sanity/visual-editing";
 import { FAQS } from "@/content/faqs";
 import { TESTIMONIALS, GOOGLE_REVIEWS_URL } from "@/data/testimonials";
 import { Testimonial } from "@/types/testimonial";
+import { useTouringSeasonOpen } from "@/lib/touring-season";
 
 type ExpandedQuotePanelProps = {
   testimonial: Testimonial;
@@ -164,6 +165,7 @@ const Index = () => {
   const testimonialTrackRef = useRef<HTMLDivElement>(null);
   const heroImgRef = useRef<HTMLImageElement>(null);
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
+  const touringSeasonOpen = useTouringSeasonOpen();
   // Set while a smooth scroll is running, so the loop recentring does not
   // cancel the animation by reassigning scrollLeft mid-flight.
   const isProgrammaticScrollRef = useRef(false);
@@ -690,6 +692,18 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="bg-primary text-primary-foreground py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="font-serif text-2xl md:text-3xl">2027 wedding weekends from $6,500*</p>
+          {touringSeasonOpen && <p className="mt-2 text-sm md:text-base">Tour appointments are available before our September 27 touring season ends. You can still inquire about 2027 dates afterward.</p>}
+          <div className="mt-5 flex flex-wrap justify-center gap-3">
+            <Link to="/contact"><CTAButton>Request a Tour</CTAButton></Link>
+            <Link to="/contact?intent=question"><Button variant="outline">Ask a Question</Button></Link>
+          </div>
+          <p className="mt-3 text-xs">* GST not included.</p>
+        </div>
+      </section>
+
       {builderSections.length > 0 && (
         <section className="section bg-background border-b border-border/50" data-sanity={sanityDataAttribute ? sanityDataAttribute("pageBuilder") : undefined}>
           <div className="container mx-auto px-4">
@@ -1060,6 +1074,9 @@ const Index = () => {
       </section>
 
       {/* Visual Reset - Full Width Moment */}
+      <div className="text-center py-8 bg-card">
+        <Link to="/contact"><CTAButton>Request a Tour</CTAButton></Link>
+      </div>
       <section className="relative overflow-hidden img-card">
         <div className="relative">
           <img
@@ -1216,6 +1233,7 @@ const Index = () => {
                       <p className="text-xs text-muted-foreground mb-4">{pkg.duration}</p>
                       <p className="text-3xl font-serif text-secondary mb-1">${pkg.price}*</p>
                       <p className="text-xs text-muted-foreground mb-4">{pkg.subtitle}</p>
+                      <Link to="/contact" className="inline-flex rounded-full bg-secondary px-5 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary-dark">Request a Tour</Link>
                     </CardContent>
                   </Card>
                 </ScrollReveal>
@@ -1229,6 +1247,7 @@ const Index = () => {
                     View Full Package Details
                   </Button>
                 </Link>
+                <div className="mt-4"><Link to="/contact"><CTAButton>Request a Tour</CTAButton></Link></div>
                 <p className="text-xs text-muted-foreground mt-3">* GST not included.</p>
               </div>
             </ScrollReveal>
@@ -1342,7 +1361,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <CTAButton className="text-lg px-12 py-6">
-                  Discover Your Venue
+                  Request a Tour
                 </CTAButton>
               </Link>
             </div>
