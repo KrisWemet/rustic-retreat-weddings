@@ -695,7 +695,7 @@ const Index = () => {
       <section className="bg-primary text-primary-foreground py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="font-serif text-2xl md:text-3xl">2027 wedding weekends from $6,500*</p>
-          <p className="mt-2 text-sm md:text-base">Some 2028 wedding weekends are already booked. Ask us about your preferred date.</p>
+          <p className="mt-2 text-sm md:text-base">Prime 2028 wedding dates are already being booked. Ask us about your preferred weekend.</p>
           {touringSeasonOpen && <p className="mt-2 text-sm md:text-base">Tour appointments are available before our September 27 touring season ends. You can still inquire about 2027 and 2028 dates afterward.</p>}
           <div className="mt-5 flex flex-wrap justify-center gap-3">
             <Link to="/contact"><CTAButton>Request a Tour</CTAButton></Link>
