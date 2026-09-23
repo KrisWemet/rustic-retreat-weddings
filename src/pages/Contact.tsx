@@ -183,7 +183,7 @@ const Contact = () => {
 
                         <h2 className="text-2xl font-bold mb-2">{isQuestion ? "Ask Us a Question" : "Request a Tour"}</h2>
                         <p className="text-sm text-muted-foreground mb-6">{isQuestion ? "Ask anything before deciding whether to visit." : "Come see what your wedding weekend could feel like. Walk the ceremony space, see the cabin and camping areas, and talk through your plans with Shannon and Chris. Tours are by appointment, and we'll reply within 24 hours."}</p>
-                        {touringSeasonOpen && !isQuestion && <p className="text-sm font-medium text-primary mb-6">Want to see the property in full bloom? Tour appointments are available before our September 27 touring season ends. You can still inquire about 2027 dates afterward.</p>}
+                        {touringSeasonOpen && !isQuestion && <p className="text-sm font-medium text-primary mb-6">Want to see the property in full bloom? Tour appointments are available before our September 27 touring season ends. You can still inquire about 2027 and 2028 dates afterward.</p>}
                         <p className="text-sm mb-6">{isQuestion ? <Link to="/contact" className="text-secondary underline">Ready to visit? Request a Tour</Link> : <Link to="/contact?intent=question" className="text-secondary underline">Have a question first? Ask us</Link>}</p>
                         <form onSubmit={handleSubmit} onFocus={() => { if (!formStarted) { setFormStarted(true); trackTourFormStart(isQuestion ? "question" : "tour"); } }} className="space-y-6">
                           <div>
