@@ -28,6 +28,7 @@ import { trackLead } from "@/lib/analytics";
 import { TESTIMONIALS } from "@/data/testimonials";
 import { trackTourFormStart, trackTourSubmission } from "@/lib/tour-analytics";
 import { useTouringSeasonOpen } from "@/lib/touring-season";
+import { copyInquiryToCrm } from "@/lib/crm-intake";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -51,6 +52,7 @@ const Contact = () => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    formData.set("submissionId", crypto.randomUUID());
     formData.set("inquiryType", isQuestion ? "Question" : "Tour request");
     formData.set("landingSource", sessionStorage.getItem("rustic_landing_source") || document.referrer || "Direct / unknown");
 
@@ -64,6 +66,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        void copyInquiryToCrm(Object.fromEntries(formData.entries()) as Record<string, string>);
         setIsSubmitted(true);
         trackLead({ source: isQuestion ? "Question" : "Tour request" });
         trackTourSubmission(isQuestion ? "question" : "tour");
@@ -186,6 +189,7 @@ const Contact = () => {
                         {touringSeasonOpen && !isQuestion && <p className="text-sm font-medium text-primary mb-6">Want to see the property in full bloom? Tour appointments are available before our September 27 touring season ends. You can still inquire about 2027 and 2028 dates afterward.</p>}
                         <p className="text-sm mb-6">{isQuestion ? <Link to="/contact" className="text-secondary underline">Ready to visit? Request a Tour</Link> : <Link to="/contact?intent=question" className="text-secondary underline">Have a question first? Ask us</Link>}</p>
                         <form onSubmit={handleSubmit} onFocus={() => { if (!formStarted) { setFormStarted(true); trackTourFormStart(isQuestion ? "question" : "tour"); } }} className="space-y-6">
+                          <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px]" />
                           <div>
                             <Label htmlFor="partner1FirstName">Your Name</Label>
                             <Input

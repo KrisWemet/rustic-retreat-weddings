@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SEO from "@/components/SEO";
 import { trackLead } from "@/lib/analytics";
+import { bookingQuestionnaireLead, copyInquiryToCrm } from "@/lib/crm-intake";
 
 const DARK    = '#1C2B1E';
 const MID     = '#3A5C3E';
@@ -147,6 +148,8 @@ export default function Booking2027() {
       Object.keys(form).forEach(key => {
         formData.append(key, form[key as keyof typeof form]);
       });
+      const submissionId = crypto.randomUUID();
+      formData.set('submissionId', submissionId);
 
       const res = await fetch('https://formspree.io/f/xwvwajyy', {
         method: 'POST',
@@ -156,6 +159,7 @@ export default function Booking2027() {
         },
       });
       if (!res.ok) throw new Error('Failed');
+      void copyInquiryToCrm(bookingQuestionnaireLead(form, 2027, submissionId));
       setStatus('success');
       trackLead({ source: 'Booking request 2027' });
     } catch {

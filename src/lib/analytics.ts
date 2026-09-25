@@ -42,7 +42,7 @@ let initialised = false;
 const canRun = () => typeof window !== "undefined" && typeof document !== "undefined";
 
 const onIdle = (fn: () => void) => {
-  if ("requestIdleCallback" in window) {
+  if (typeof window.requestIdleCallback === "function") {
     window.requestIdleCallback(fn, { timeout: 4000 });
   } else {
     window.setTimeout(fn, 1200);
