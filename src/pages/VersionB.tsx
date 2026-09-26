@@ -14,14 +14,14 @@ import together from "@/assets/gallery/Images/sweetheart-table-laughing.webp";
 const TOUR = "/contact";
 
 const VersionB = () => (
-  <div className="min-h-screen bg-[#fbf8f2] text-[#243127]">
+  <div className="min-h-screen bg-background text-foreground">
     <SEO title="Rustic Retreat Alberta | Your Wedding Weekend" description="A private multi-day outdoor wedding venue near Edmonton, Alberta. Make the land yours, gather your people, and create a wedding weekend that feels like you." />
     <Navigation />
 
     <main>
       <section className="relative min-h-[88vh] overflow-hidden flex items-end">
         <img src={hero} alt="Wedding party together in the woods at Rustic Retreat Alberta" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.4)_50%,rgba(0,0,0,0.05)_100%),linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.2)_60%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,hsla(25,25%,20%,0.72)_0%,hsla(25,25%,20%,0.42)_50%,hsla(25,25%,20%,0.06)_100%),linear-gradient(0deg,hsla(25,25%,20%,0.78)_0%,hsla(25,25%,20%,0.22)_60%,transparent_100%)]" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-16 pt-36 text-white md:pb-24">
           <p className="mb-5 text-sm font-semibold uppercase tracking-[0.22em]">A private wedding weekend on 65 acres</p>
           <h1 className="max-w-2xl font-serif text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.08]">Your wedding. Your people.<br />Your place for the weekend.</h1>
@@ -35,9 +35,9 @@ const VersionB = () => (
 
       <section className="px-6 py-20 md:py-28">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7b674c]">Before you choose a venue</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">Before you choose a venue</p>
           <h2 className="mt-4 font-serif text-4xl leading-tight md:text-6xl">What do you want your people to remember?</h2>
-          <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-[#4c574e]">The ceremony matters. So do the hours nobody schedules: coffee in the morning, decorating together, a long dinner, one more story around the fire, and waking up knowing nobody has to rush home.</p>
+          <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-muted-foreground">The ceremony matters. So do the hours nobody schedules: coffee in the morning, decorating together, a long dinner, one more story around the fire, and waking up knowing nobody has to rush home.</p>
         </div>
       </section>
 
@@ -51,7 +51,7 @@ const VersionB = () => (
         ))}
       </section>
 
-      <section className="bg-[#25372b] px-6 py-20 text-white md:py-28">
+      <section className="bg-primary px-6 py-20 text-primary-foreground md:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div>
@@ -71,9 +71,9 @@ const VersionB = () => (
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <img src={together} alt="A couple laughing together during their wedding reception" className="h-[520px] w-full rounded-3xl object-cover" />
             <div className="md:p-10">
-              <Quote className="h-9 w-9 text-[#927b58]" />
+              <Quote className="h-9 w-9 text-secondary" />
               <blockquote className="mt-5 font-serif text-3xl leading-snug md:text-4xl">“Pictures don't do it justice.”</blockquote>
-              <p className="mt-5 text-lg leading-relaxed text-[#4c574e]">That's something we hear from couples when they visit. A photograph can show the trees and the spaces. It can't really show you the quiet, the seclusion, or what it feels like to picture everyone you love here with you.</p>
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">That's something we hear from couples when they visit. A photograph can show the trees and the spaces. It can't really show you the quiet, the seclusion, or what it feels like to picture everyone you love here with you.</p>
               <p className="mt-5 font-semibold">That's why we'd rather show you.</p>
               <CTAButton asChild size="lg" className="mt-7"><Link to={TOUR}>Schedule a Tour <ArrowRight className="ml-2 h-4 w-4" /></Link></CTAButton>
             </div>
