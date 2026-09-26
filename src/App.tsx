@@ -7,7 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import AnalyticsTracker from "./components/AnalyticsTracker";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 
-const Index = lazy(() => import("./pages/Index"));
+const VersionB = lazy(() => import("./pages/VersionB"));
 const About = lazy(() => import("./pages/About"));
 const Venue = lazy(() => import("./pages/Venue"));
 const Packages = lazy(() => import("./pages/Packages"));
@@ -26,109 +26,24 @@ const Booking2027 = lazy(() => import("./pages/Booking2027"));
 const ChatWidget = lazy(() => import("./components/ChatWidget"));
 const SanityVisualEditing = lazy(() => import("./components/SanityVisualEditing"));
 
-type WindowWithIdleCallback = Window & {
-  requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
-  cancelIdleCallback?: (handle: number) => void;
-};
+type WindowWithIdleCallback = Window & { requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number; cancelIdleCallback?: (handle: number) => void; };
 
 const App = () => {
   const [isChatWidgetReady, setIsChatWidgetReady] = useState(false);
   const [isSanityPreviewEnabled, setIsSanityPreviewEnabled] = useState(false);
-
   useEffect(() => {
-    const hasPreviewCookie = document.cookie
-      .split(";")
-      .map((cookie) => cookie.trim())
-      .some((cookie) => cookie.startsWith("__sanity_preview=1"));
+    const hasPreviewCookie = document.cookie.split(";").map((cookie) => cookie.trim()).some((cookie) => cookie.startsWith("__sanity_preview=1"));
     const searchParams = new URLSearchParams(window.location.search);
-    const hasPreviewFlag = searchParams.get("sanity-preview") === "1";
-    setIsSanityPreviewEnabled(hasPreviewCookie || hasPreviewFlag);
+    setIsSanityPreviewEnabled(hasPreviewCookie || searchParams.get("sanity-preview") === "1");
   }, []);
-
   useEffect(() => {
-    const windowWithIdle = window as WindowWithIdleCallback;
-    let timeoutId: number | null = null;
-    let idleId: number | null = null;
-
-    const scheduleChatWidget = () => {
-      if (typeof windowWithIdle.requestIdleCallback === "function") {
-        idleId = windowWithIdle.requestIdleCallback(() => setIsChatWidgetReady(true), { timeout: 2500 });
-      } else {
-        timeoutId = window.setTimeout(() => setIsChatWidgetReady(true), 1200);
-      }
-    };
-
-    if (document.readyState === "complete") {
-      scheduleChatWidget();
-    } else {
-      window.addEventListener("load", scheduleChatWidget, { once: true });
-    }
-
-    return () => {
-      window.removeEventListener("load", scheduleChatWidget);
-      if (timeoutId !== null) {
-        window.clearTimeout(timeoutId);
-      }
-      if (idleId !== null && typeof windowWithIdle.cancelIdleCallback === "function") {
-        windowWithIdle.cancelIdleCallback(idleId);
-      }
-    };
+    const windowWithIdle = window as WindowWithIdleCallback; let timeoutId: number | null = null; let idleId: number | null = null;
+    const schedule = () => { if (typeof windowWithIdle.requestIdleCallback === "function") idleId = windowWithIdle.requestIdleCallback(() => setIsChatWidgetReady(true), { timeout: 2500 }); else timeoutId = window.setTimeout(() => setIsChatWidgetReady(true), 1200); };
+    if (document.readyState === "complete") schedule(); else window.addEventListener("load", schedule, { once: true });
+    return () => { window.removeEventListener("load", schedule); if (timeoutId !== null) window.clearTimeout(timeoutId); if (idleId !== null && typeof windowWithIdle.cancelIdleCallback === "function") windowWithIdle.cancelIdleCallback(idleId); };
   }, []);
-
-  return (
-    <HelmetProvider>
-      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-        <Toaster />
-        <ScrollToTop />
-        <AnalyticsTracker />
-        <StickyMobileCTA />
-        {isChatWidgetReady && (
-          <Suspense fallback={null}>
-            <ChatWidget />
-          </Suspense>
-        )}
-        <Suspense fallback={<div className="min-h-screen bg-background" />}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/venue" element={<Venue />} />
-            <Route path="/packages" element={<Packages />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/real-weddings" element={<RealWeddings />} />
-            <Route path="/real-weddings/:slug" element={<WeddingStory />} />
-            <Route path="/faqs" element={<FAQs />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/camping-wedding" element={<CampingWedding />} />
-            <Route path="/diy-wedding-venue-alberta" element={<DIYWedding />} />
-            <Route path="/elopements" element={<Elopements />} />
-            <Route path="/enchanted-wedding" element={<Navigate to="/" replace />} />
-            <Route path="/enchanted" element={<Navigate to="/" replace />} />
-            <Route path="/enchated" element={<Navigate to="/" replace />} />
-            <Route path="/rules" element={<Navigate to="/rustic-retreat-site-rules.html" replace />} />
-            <Route path="/guidelines" element={<Navigate to="/rustic-retreat-site-rules.html" replace />} />
-            {/* Redirects for old URLs */}
-            <Route path="/cabin" element={<Navigate to="/venue" replace />} />
-            <Route path="/decor" element={<Navigate to="/venue" replace />} />
-            <Route path="/about-3" element={<Navigate to="/venue" replace />} />
-            <Route path="/about-4-1" element={<Navigate to="/venue" replace />} />
-            <Route path="/weddings" element={<Navigate to="/packages" replace />} />
-            {/* Hidden booking forms - not linked in navigation */}
-            <Route path="/booking-2026" element={<Booking2026 />} />
-            <Route path="/booking-2027" element={<Booking2027 />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-        {isSanityPreviewEnabled && (
-          <Suspense fallback={null}>
-            <SanityVisualEditing />
-          </Suspense>
-        )}
-      </BrowserRouter>
-      <Analytics />
-    </HelmetProvider>
-  );
+  return <HelmetProvider><BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}><Toaster/><ScrollToTop/><AnalyticsTracker/><StickyMobileCTA/>{isChatWidgetReady && <Suspense fallback={null}><ChatWidget/></Suspense>}<Suspense fallback={<div className="min-h-screen bg-background"/>}><Routes>
+    <Route path="/" element={<VersionB/>}/><Route path="/about" element={<About/>}/><Route path="/venue" element={<Venue/>}/><Route path="/packages" element={<Packages/>}/><Route path="/gallery" element={<Gallery/>}/><Route path="/real-weddings" element={<RealWeddings/>}/><Route path="/real-weddings/:slug" element={<WeddingStory/>}/><Route path="/faqs" element={<FAQs/>}/><Route path="/contact" element={<Contact/>}/><Route path="/privacy" element={<Privacy/>}/><Route path="/camping-wedding" element={<CampingWedding/>}/><Route path="/diy-wedding-venue-alberta" element={<DIYWedding/>}/><Route path="/elopements" element={<Elopements/>}/><Route path="/enchanted-wedding" element={<Navigate to="/" replace/>}/><Route path="/enchanted" element={<Navigate to="/" replace/>}/><Route path="/enchated" element={<Navigate to="/" replace/>}/><Route path="/rules" element={<Navigate to="/rustic-retreat-site-rules.html" replace/>}/><Route path="/guidelines" element={<Navigate to="/rustic-retreat-site-rules.html" replace/>}/><Route path="/cabin" element={<Navigate to="/venue" replace/>}/><Route path="/decor" element={<Navigate to="/venue" replace/>}/><Route path="/about-3" element={<Navigate to="/venue" replace/>}/><Route path="/about-4-1" element={<Navigate to="/venue" replace/>}/><Route path="/weddings" element={<Navigate to="/packages" replace/>}/><Route path="/booking-2026" element={<Booking2026/>}/><Route path="/booking-2027" element={<Booking2027/>}/><Route path="*" element={<NotFound/>}/>
+  </Routes></Suspense>{isSanityPreviewEnabled && <Suspense fallback={null}><SanityVisualEditing/></Suspense>}</BrowserRouter><Analytics/></HelmetProvider>;
 };
-
 export default App;
