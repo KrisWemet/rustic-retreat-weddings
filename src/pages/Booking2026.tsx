@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { copyToCrm } from '@/lib/crm';
+import { submitEnquiry } from '@/lib/crm';
 import SEO from "@/components/SEO";
 import { trackLead } from "@/lib/analytics";
 
@@ -143,20 +143,13 @@ export default function Booking2026() {
   const handleSubmit = async () => {
     setStatus('submitting');
     try {
-      // Convert form state to FormData for Formspree
+      // Sent to the CRM first; Formspree is the backup (see src/lib/crm.ts)
       const formData = new FormData();
       Object.keys(form).forEach(key => {
         formData.append(key, form[key as keyof typeof form]);
       });
-      copyToCrm('booking-request', formData, { bookingForm: '2026' });
 
-      const res = await fetch('https://formspree.io/f/xqegwoga', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
-      });
+      const res = await submitEnquiry('booking-request', 'https://formspree.io/f/xqegwoga', formData, { bookingForm: '2026' });
       if (!res.ok) throw new Error('Failed');
       setStatus('success');
       trackLead({ source: 'Booking request 2026' });

@@ -24,7 +24,7 @@ import contactBottomLeft from "@/assets/gallery/sunset-silhouette-couple.webp";
 import contactBottomRight from "@/assets/gallery/wedding-details-rings.webp";
 import contactExpectImage from "@/assets/gallery/couple-portrait-forest-tall.webp";
 import { trackLead } from "@/lib/analytics";
-import { copyToCrm } from "@/lib/crm";
+import { submitEnquiry } from "@/lib/crm";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -38,16 +38,8 @@ const Contact = () => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    copyToCrm("website", formData);
-
     try {
-      const response = await fetch("https://formspree.io/f/mgooaleg", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
+      const response = await submitEnquiry("website", "https://formspree.io/f/mgooaleg", formData);
 
       if (response.ok) {
         setIsSubmitted(true);
