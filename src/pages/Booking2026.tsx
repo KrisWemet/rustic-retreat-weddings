@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { copyToCrm } from '@/lib/crm';
 import SEO from "@/components/SEO";
 import { trackLead } from "@/lib/analytics";
 
@@ -147,6 +148,7 @@ export default function Booking2026() {
       Object.keys(form).forEach(key => {
         formData.append(key, form[key as keyof typeof form]);
       });
+      copyToCrm('booking-request', formData, { bookingForm: '2026' });
 
       const res = await fetch('https://formspree.io/f/xqegwoga', {
         method: 'POST',
