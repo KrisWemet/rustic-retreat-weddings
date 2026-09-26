@@ -25,6 +25,22 @@ import contactBottomRight from "@/assets/gallery/wedding-details-rings.webp";
 import contactExpectImage from "@/assets/gallery/couple-portrait-forest-tall.webp";
 import { trackLead } from "@/lib/analytics";
 
+// The venue's CRM keeps a copy of every enquiry as an inquiry client, so no one
+// has to retype it from the Formspree email. Formspree stays the notification.
+const CRM_ENQUIRY_URL =
+  import.meta.env.VITE_CRM_ENQUIRY_URL || "https://crm.rusticretreatalberta.ca/api/inquire/website";
+
+// Fire-and-forget: the couple's confirmation depends only on Formspree, so a
+// CRM outage can never make the form look broken. URL-encoded and no-cors keep
+// it a simple request the browser sends without a CORS preflight.
+const copyToCrm = (formData: FormData) => {
+  const body = new URLSearchParams();
+  formData.forEach((value, key) => {
+    if (typeof value === "string") body.append(key, value);
+  });
+  fetch(CRM_ENQUIRY_URL, { method: "POST", body, mode: "no-cors", keepalive: true }).catch(() => {});
+};
+
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,6 +53,7 @@ const Contact = () => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    copyToCrm(formData);
 
     try {
       const response = await fetch("https://formspree.io/f/mgooaleg", {
@@ -156,6 +173,8 @@ const Contact = () => {
                         <h2 className="text-2xl font-bold mb-2">Tell Us About Your Wedding</h2>
                         <p className="text-sm text-muted-foreground mb-6">Tell us a bit about yourselves. No pressure-this is just the start of a conversation.</p>
                         <form onSubmit={handleSubmit} className="space-y-6">
+                          {/* Honeypot: people never see or fill this; bots do. Formspree and the CRM both drop those submissions. */}
+                          <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
                           <div className="grid md:grid-cols-2 gap-4">
                             <div>
                               <Label htmlFor="partner1FirstName">Your First Name</Label>
