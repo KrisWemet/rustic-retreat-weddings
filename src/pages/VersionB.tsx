@@ -21,11 +21,11 @@ const VersionB = () => (
     <main>
       <section className="relative min-h-[88vh] overflow-hidden flex items-end">
         <img src={hero} alt="Wedding party together in the woods at Rustic Retreat Alberta" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/10" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.4)_50%,rgba(0,0,0,0.05)_100%),linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.2)_60%,transparent_100%)]" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-16 pt-36 text-white md:pb-24">
           <p className="mb-5 text-sm font-semibold uppercase tracking-[0.22em]">A private wedding weekend on 65 acres</p>
-          <h1 className="max-w-4xl font-serif text-5xl leading-[1.02] md:text-7xl">Your wedding. Your people. Your place for the weekend.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">Not a few rushed hours in somebody else's space. Settle in, make it yours, and have the kind of wedding your favourite people will still talk about years from now.</p>
+          <h1 className="max-w-2xl font-serif text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.08]">Your wedding. Your people.<br />Your place for the weekend.</h1>
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-white md:text-xl">Settle in. Make it yours. And spend more than just a few hours with the people who matter most.</p>
           <div className="mt-9 flex flex-wrap gap-4">
             <CTAButton asChild size="lg"><Link to={TOUR}>Come See It for Yourself <ArrowRight className="ml-2 h-4 w-4" /></Link></CTAButton>
             <Link to="/gallery" className="inline-flex items-center px-5 py-3 text-sm font-semibold text-white underline underline-offset-4">See real weddings</Link>
