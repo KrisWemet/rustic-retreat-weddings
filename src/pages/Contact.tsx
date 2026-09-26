@@ -24,22 +24,7 @@ import contactBottomLeft from "@/assets/gallery/sunset-silhouette-couple.webp";
 import contactBottomRight from "@/assets/gallery/wedding-details-rings.webp";
 import contactExpectImage from "@/assets/gallery/couple-portrait-forest-tall.webp";
 import { trackLead } from "@/lib/analytics";
-
-// The venue's CRM keeps a copy of every enquiry as an inquiry client, so no one
-// has to retype it from the Formspree email. Formspree stays the notification.
-const CRM_ENQUIRY_URL =
-  import.meta.env.VITE_CRM_ENQUIRY_URL || "https://crm.rusticretreatalberta.ca/api/inquire/website";
-
-// Fire-and-forget: the couple's confirmation depends only on Formspree, so a
-// CRM outage can never make the form look broken. URL-encoded and no-cors keep
-// it a simple request the browser sends without a CORS preflight.
-const copyToCrm = (formData: FormData) => {
-  const body = new URLSearchParams();
-  formData.forEach((value, key) => {
-    if (typeof value === "string") body.append(key, value);
-  });
-  fetch(CRM_ENQUIRY_URL, { method: "POST", body, mode: "no-cors", keepalive: true }).catch(() => {});
-};
+import { submitEnquiry } from "@/lib/crm";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -53,16 +38,8 @@ const Contact = () => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    copyToCrm(formData);
-
     try {
-      const response = await fetch("https://formspree.io/f/mgooaleg", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
+      const response = await submitEnquiry("website", "https://formspree.io/f/mgooaleg", formData);
 
       if (response.ok) {
         setIsSubmitted(true);
