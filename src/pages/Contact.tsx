@@ -22,7 +22,7 @@ import receptionEvening from "@/assets/gallery/reception-evening-lights.webp";
 import contactMiddleImage from "@/assets/gallery/rustic-retreat-venue-exterior.webp";
 import contactBottomLeft from "@/assets/gallery/sunset-silhouette-couple.webp";
 import contactBottomRight from "@/assets/gallery/wedding-details-rings.webp";
-import contactExpectImage from "@/assets/gallery/couple-portrait-forest-tall.webp";
+import contactExpectImage from "@/assets/gallery/real-weddings/pavilion-couple-dog-portrait.webp";
 import { trackLead } from "@/lib/analytics";
 import { submitEnquiry } from "@/lib/crm";
 
@@ -111,10 +111,10 @@ const Contact = () => {
                   <div className="w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-soft shrink-0 img-card">
                     <img
                       src={contactExpectImage}
-                      alt="Couple portrait in the forest at Rustic Retreat"
+                      alt="Bride and groom with their dog beneath the pavilion ceremony backdrop"
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-cover object-center"
+                      className="w-full h-full object-contain bg-primary/5"
                     />
                   </div>
                 </div>

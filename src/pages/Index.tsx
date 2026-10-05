@@ -16,20 +16,20 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 // Hero & Property Images
 import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.webp";
 import cabinExterior from "@/assets/gallery/Cabin/cabin-exterior-woods.webp";
-import receptionGazebo from "@/assets/gallery/Images/gazebo-empty.webp";
+import receptionGazebo from "@/assets/gallery/real-weddings/pavilion-reception-tables-evening.webp";
 
 // Gallery Images for Storytelling
-import ceremonyWideShot from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-groom-lifts-bride-on-dance-floor-33.webp";
+import ceremonyWideShot from "@/assets/gallery/real-weddings/pavilion-aisle-newlyweds.webp";
 import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.webp";
-import pavilionReception from "@/assets/gallery/pavilion-reception.webp";
-import meadowSunsetKiss from "@/assets/gallery/meadow-sunset-kiss.webp";
-import coupleWalkingTrail from "@/assets/gallery/couple-walking-trail.webp";
+import pavilionReception from "@/assets/gallery/real-weddings/pavilion-couple-speech.webp";
+import meadowSunsetKiss from "@/assets/gallery/real-weddings/meadow-couple-lift.webp";
+import coupleWalkingTrail from "@/assets/gallery/real-weddings/forest-trail-couple-kiss.webp";
 import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.webp";
-import weddingPartyLineup from "@/assets/gallery/wedding-party-lineup.webp";
-import img7625 from "@/assets/gallery/wedding-party-woods-hero.webp";
+import weddingPartyLineup from "@/assets/gallery/real-weddings/meadow-wedding-party-playful.webp";
+import img7625 from "@/assets/gallery/real-weddings/lavender-bridesmaids-laughing.webp";
 import beyondCeremonyImage from "@/assets/gallery/beyond-ceremony-woods.webp";
 import cakeCutting from "@/assets/gallery/cake-cutting.webp";
-import headTable from "@/assets/gallery/head-table.webp";
+import headTable from "@/assets/gallery/real-weddings/pavilion-sweetheart-table.webp";
 import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.webp";
 import ringsBouquet from "@/assets/gallery/rings-bouquet.webp";
 import goldCakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.webp";
@@ -912,10 +912,10 @@ const Index = () => {
           {/* Cinematic Image Row */}
           <div className="grid grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
             <ScrollReveal delay={0}>
-              <HoverImage src={ceremonyWideShot} alt="Wide outdoor ceremony with wedding party in forest clearing at Rustic Retreat" description="Your ceremony in the heart of the forest-surrounded by nature and loved ones" category="Ceremony" className="h-48 md:h-72 shadow-soft" />
+              <HoverImage src={ceremonyWideShot} alt="Newlyweds walking down the pavilion aisle with their guests watching" description="Your first steps as newlyweds, surrounded by the people you love" category="Ceremony" className="h-48 md:h-72 shadow-soft" />
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <HoverImage src={coupleWalkingTrail} alt="Newlyweds walking hand in hand down forest trail at Lac La Nonne wedding venue" description="Just married-strolling the forest trails, just the two of you" category="Portraits" className="h-48 md:h-72 shadow-soft" />
+              <HoverImage src={coupleWalkingTrail} alt="Couple kissing on a secluded forest trail at Rustic Retreat" description="A quiet moment on the forest trails, just the two of you" category="Portraits" className="h-48 md:h-72 shadow-soft" />
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <HoverImage src={cakeCutting} alt="Cake cutting and first bite moment under rustic pavilion" description="Sweet moments-cutting the cake and sharing the first bite" category="Reception" className="h-48 md:h-72 shadow-soft" />
@@ -1019,21 +1019,22 @@ const Index = () => {
                 <div className="relative grid grid-cols-2 gap-3 lg:gap-4">
                   <img
                     src={weddingPartyLineup}
-                    alt="Wedding party lineup portrait in the forest at Rustic Retreat"
+                    alt="Bride and groomsmen sharing a playful moment in the meadow"
                     loading="lazy"
                     decoding="async"
                     className="col-span-2 aspect-[16/9] w-full object-cover rounded-3xl shadow-elegant img-card"
                   />
                   <img
                     src={meadowSunsetKiss}
-                    alt="Romantic sunset kiss in a meadow at Rustic Retreat"
+                    style={{ objectPosition: "50% 70%" }}
+                    alt="Groom lifting the bride in the meadow with a forest backdrop"
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
                   />
                   <img
                     src={img7625}
-                    alt="Wedding reception moment under floral draping at Rustic Retreat"
+                    alt="Bride laughing with bridesmaids in lavender dresses"
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
@@ -1047,7 +1048,7 @@ const Index = () => {
                   />
                   <img
                     src={headTable}
-                    alt="Rustic head table with candles and florals at a wedding reception"
+                    alt="Couple at their sweetheart table beneath warm pavilion lights"
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
@@ -1301,13 +1302,13 @@ const Index = () => {
                 <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft img-card" />
                 <img
                   src={receptionGazebo}
-                  alt="Couple and friends in an open field at Rustic Retreat"
+                  alt="Picnic tables set for an evening reception under the illuminated pavilion"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-40 md:h-52 object-cover shadow-soft img-card"
-                  style={{ objectPosition: "center 80%" }}
+                  style={{ objectPosition: "center" }}
                 />
-                <img src={pavilionReception} alt="Rustic pavilion reception with guests cheering" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2 img-card" />
+                <img src={pavilionReception} alt="Bride giving a speech beside the groom under the pavilion" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2 img-card" />
               </div>
             </ScrollReveal>
           </div>

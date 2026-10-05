@@ -11,12 +11,12 @@ import ScrollReveal from "@/components/ScrollReveal";
 import Fireflies from "@/components/Fireflies";
 import Flourish from "@/components/Flourish";
 import loveMarqueeArch from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-first-dance-with-love-marquee-sign-32.webp";
-import receptionTable from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-sweetheart-table-chandelier-draping-neon-sign-05.webp";
+import receptionTable from "@/assets/gallery/real-weddings/pavilion-sweetheart-table.webp";
 import ceremonySetupWide from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wide-outdoor-ceremony-arch-wedding-party-forest-clearing-03.webp";
-import groomsmenToast from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-groomsmen-lift-bride-funny-woods-photo-06.webp";
+import groomsmenToast from "@/assets/gallery/real-weddings/meadow-wedding-party-playful.webp";
 import loveMarquee from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-father-daughter-dance-love-marquee-37.webp";
 import brideDancing from "@/assets/gallery/first-dance-color.webp";
-import weddingParty from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-ceremony-signing-bride-groom-wooden-stand-02.webp";
+import weddingParty from "@/assets/gallery/real-weddings/pavilion-aisle-newlyweds.webp";
 import cardBoxWineBarrel from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-welcome-sign-mirror-display-39.webp";
 import guestFavorBox from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-in-white-rose-43.webp";
 import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.webp";
@@ -127,7 +127,7 @@ const Packages = () => {
                 </div>
                 <img
                   src={weddingParty}
-                  alt="Wedding party celebrating at Rustic Retreat"
+                  alt="Newlyweds walking down the pavilion aisle with their guests watching"
                   loading="lazy"
                   decoding="async"
                   className="rounded-lg shadow-lg w-full h-[260px] sm:h-[300px] object-cover img-card"
@@ -137,7 +137,7 @@ const Packages = () => {
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
                 <img
                   src={groomsmenToast}
-                  alt="Groomsmen cheering with drinks on a forest trail at Rustic Retreat"
+                  alt="Bride and groomsmen sharing a playful group pose in the meadow"
                   className="rounded-lg shadow-lg w-full h-[220px] sm:h-[240px] object-cover img-card"
                   loading="lazy"
                   decoding="async"
@@ -178,7 +178,7 @@ const Packages = () => {
                   <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                   <img
                     src={receptionTable}
-                    alt="Evening outdoor wedding reception celebration at Rustic Retreat"
+                    alt="Couple at their sweetheart table beneath warm pavilion lights"
                     loading="lazy"
                     decoding="async"
                     className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant img-card"
@@ -627,7 +627,7 @@ const Packages = () => {
               />
               <img
                 src={receptionTable}
-                alt="Evening outdoor wedding reception celebration at Rustic Retreat"
+                alt="Couple at their sweetheart table beneath warm pavilion lights"
                 loading="lazy"
                 decoding="async"
                 className="shadow-xl w-full h-full object-cover img-card"

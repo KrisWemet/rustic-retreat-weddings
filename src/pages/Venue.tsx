@@ -25,14 +25,14 @@ import coupleRomantic from "@/assets/gallery/Cabin/cabin-romantic-couple.webp";
 import cakeCuttingForest from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-cake-cutting-and-first-bite-40.webp";
 import receptionTable4 from "@/assets/gallery/head-table.webp";
 import receptionChairGame from "@/assets/gallery/ae544ad7d928a81729703820306114ae-xxxlarge.webp";
-import ceremonyPavilion from "@/assets/gallery/Images/IMG_0036.webp";
+import ceremonyPavilion from "@/assets/gallery/real-weddings/pavilion-ceremony-wide.webp";
 import ceremonyAisles from "@/assets/gallery/Images/4099316435379843506.webp";
 import ceremonyWide1 from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wide-outdoor-ceremony-arch-wedding-party-forest-clearing-03.webp";
-import ceremonyCloseUp from "@/assets/gallery/Images/IMG_0002.webp";
+import ceremonyCloseUp from "@/assets/gallery/real-weddings/ceremony-hands-black-white.webp";
 import ceremonySeating from "@/assets/gallery/Images/IMG_0030.webp";
-import ceremonyAisleWalk from "@/assets/gallery/Images/IMG_5018.webp";
-import ceremonyForest1 from "@/assets/gallery/Images/IMG_6716.webp";
-import ceremonyForest2 from "@/assets/gallery/Images/IMG_6758.webp";
+import ceremonyAisleWalk from "@/assets/gallery/real-weddings/pavilion-newlyweds-walking.webp";
+import ceremonyForest1 from "@/assets/gallery/real-weddings/outdoor-floral-arch-vows.webp";
+import ceremonyForest2 from "@/assets/gallery/real-weddings/pavilion-ceremony-kiss.webp";
 import extrasYardGames from "@/assets/gallery/Images/extras-yard-games.webp";
 import extrasTrampolineKids from "@/assets/gallery/Images/extras-trampoline-kids.webp";
 import extrasFirePitNight from "@/assets/gallery/Images/extras-firepit-night.webp";
@@ -262,8 +262,8 @@ const Venue = () => {
               <ScrollReveal delay={400} className="break-inside-avoid">
                 <HoverImage
                   src={ceremonyAisleWalk}
-                  alt="A father walking his daughter down the forest aisle"
-                  description="The emotional walk down a natural forest aisle towards the clearing"
+                  alt="Newlyweds smiling as they walk through the pavilion after their ceremony"
+                  description="Your first walk together after saying your vows"
                   category="The Processional"
                   className="w-full rounded-2xl"
                 />
@@ -272,8 +272,8 @@ const Venue = () => {
               <ScrollReveal delay={500} className="break-inside-avoid">
                 <HoverImage
                   src={ceremonyForest1}
-                  alt="Ceremony setup nestled deep in the forest trees"
-                  description="A sacred ceremony space tucked away where the trees form a natural cathedral"
+                  alt="Couple exchanging vows beneath a floral arch outdoors"
+                  description="Exchange your vows in the open air, surrounded by your people"
                   category="The Forest Cathedral"
                   className="w-full rounded-2xl"
                 />
@@ -282,8 +282,8 @@ const Venue = () => {
               <ScrollReveal delay={600} className="break-inside-avoid">
                 <HoverImage
                   src={ceremonyForest2}
-                  alt="Another beautiful forest ceremony spot with natural light"
-                  description="Soft afternoon light filtering through the trees during a quiet ceremony"
+                  alt="Newlyweds kissing under the timber pavilion with their wedding party nearby"
+                  description="The just-married moment beneath the pavilion timbers"
                   category="Woodland Sanctuary"
                   className="w-full rounded-2xl"
                 />
@@ -302,7 +302,7 @@ const Venue = () => {
               <ScrollReveal delay={800} className="break-inside-avoid">
                 <HoverImage
                   src={ceremonyPavilion}
-                  alt="Ceremony under the rustic pavilion at Rustic Retreat"
+                  alt="Wide view down the timber pavilion aisle during a wedding ceremony"
                   description="A beautiful ceremony setting under the hand-crafted pavilion timbers"
                   category="Pavilion Ceremony"
                   className="w-full rounded-2xl"
