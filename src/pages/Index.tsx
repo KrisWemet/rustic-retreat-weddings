@@ -1308,7 +1308,7 @@ const Index = () => {
                   className="w-full h-40 md:h-52 object-cover shadow-soft img-card"
                   style={{ objectPosition: "center" }}
                 />
-                <img src={pavilionReception} alt="Bride giving a speech beside the groom under the pavilion" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft col-span-2 img-card" />
+                <img src={pavilionReception} alt="Bride giving a speech beside the groom under the pavilion" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover object-[50%_20%] shadow-soft col-span-2 img-card" />
               </div>
             </ScrollReveal>
           </div>
