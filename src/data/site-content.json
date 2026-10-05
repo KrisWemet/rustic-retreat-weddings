@@ -39,6 +39,7 @@
         "subtitle": "The complete experience",
         "duration": "Wed–Sun or Thu–Mon",
         "price": "7,500",
+        "price2028": "8,500",
         "description": "5-day celebration (Wed-Sun or Thu-Mon) with immersive guest time.",
         "previewDescription": "Extended midweek-to-weekend access with full property amenities, cabin + camping, décor collection, and space for multiple events.",
         "timelineTitle": "The Timeline (Wednesday Arrival Option):",
@@ -80,6 +81,7 @@
         "subtitle": "Weekend wedding",
         "duration": "Friday through Sunday",
         "price": "6,500",
+        "price2028": "7,500",
         "description": "3-day Friday-to-Sunday wedding weekend with exclusive access.",
         "previewDescription": "Weekend access Fri–Sun with ceremony + reception areas, cabin stay, décor collection, and room for camping guests.",
         "timelineTitle": "The Timeline:",
@@ -150,7 +152,8 @@
           "Yard games, play structures & all property amenities",
           "Property guidance and support"
         ],
-        "priceRange": "$6,500–$7,500*"
+        "priceRange": "$6,500–$7,500*",
+        "priceRange2028": "$7,500–$8,500*"
       }
     }
   },

@@ -37,31 +37,23 @@ const Packages = () => {
     "@type": "OfferCatalog",
     name: "Rustic Retreat Wedding Packages",
     url: "https://www.rusticretreatalberta.ca/packages",
-    itemListElement: [
-      {
+    itemListElement: content.packages.packages.flatMap((pkg) =>
+      [["2027", pkg.price], ["2028", pkg.price2028]].map(([year, price]) => ({
         "@type": "Offer",
-        name: "The Full 5-Day Experience",
-        description: "5-day celebration (Wed-Sun or Thu-Mon) with immersive guest time.",
-        price: "7500",
+        name: `${pkg.name} (${year} season)`,
+        description: `${pkg.description} ${year} season; GST extra.`,
+        price: price.replace(/,/g, ""),
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
-      },
-      {
-        "@type": "Offer",
-        name: "The Classic 3-Day Weekend",
-        description: "3-day Friday-to-Sunday wedding weekend with exclusive access.",
-        price: "6500",
-        priceCurrency: "CAD",
-        availability: "https://schema.org/InStock",
-      },
-    ],
+      }))
+    ),
   };
 
   return (
     <>
       <SEO
         title="Wedding Venue Packages & Pricing"
-        description="All-in wedding packages near Edmonton: 3 days for $6,500 or 5 days for $7,500. Exclusive use of 65 acres and camping for 60 guests."
+        description="Wedding packages near Edmonton: 2027 three-day $6,500 / five-day $7,500; 2028 three-day $7,500 / five-day $8,500 CAD, plus GST. Exclusive use of 65 acres."
         path="/packages"
         image={loveMarqueeArch}
         keywords={["wedding packages edmonton", "weekend wedding pricing alberta", "multi-day wedding cost", "all-inclusive wedding venue edmonton", "wedding venue pricing alberta", "3 day wedding package", "5 day wedding package"]}
@@ -230,8 +222,14 @@ const Packages = () => {
                     </div>
 
                     <div className={`${pkg.isRecommended ? "bg-secondary/20 border-secondary" : "bg-primary/10 border-primary"} p-5 sm:p-6 rounded-lg mb-6 border-2`}>
-                      <p className="text-3xl font-bold mb-2">${pkg.price}*</p>
-                      <p className={`text-sm ${!pkg.isRecommended ? "text-muted-foreground" : ""}`}>2027 Package Price</p>
+                      <div className="grid grid-cols-2 gap-4">
+                        {[["2027", pkg.price], ["2028", pkg.price2028]].map(([year, price]) => (
+                          <div key={year}>
+                            <p className={`text-sm mb-2 ${!pkg.isRecommended ? "text-muted-foreground" : ""}`}>{year} Season</p>
+                            <p className="text-2xl sm:text-3xl font-bold">${price}*</p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
 
                   </CardContent>
@@ -595,7 +593,8 @@ const Packages = () => {
                         </li>
                       ))}
                     </ul>
-                    <p className="font-bold text-lg">{content.packages.pricingComparison.rusticRetreat.priceRange}</p>
+                    <p className="font-bold text-lg">2027: {content.packages.pricingComparison.rusticRetreat.priceRange}</p>
+                    <p className="font-bold text-lg">2028: {content.packages.pricingComparison.rusticRetreat.priceRange2028}</p>
                     <p className="text-sm mt-2">Based on your timeline-all in ONE connected place</p>
                   </CardContent>
                 </Card>

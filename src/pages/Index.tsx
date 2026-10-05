@@ -1215,7 +1215,14 @@ const Index = () => {
                     <CardContent className={`w-full p-6 text-center ${pkg.isRecommended ? "pt-10" : ""}`}>
                       <h3 className="text-xl font-serif font-semibold mb-1">{pkg.shortName}</h3>
                       <p className="text-xs text-muted-foreground mb-4">{pkg.duration}</p>
-                      <p className="text-3xl font-serif text-secondary mb-1">${pkg.price}*</p>
+                      <div className="grid grid-cols-2 gap-4 mb-3">
+                        {[["2027", pkg.price], ["2028", pkg.price2028]].map(([year, price]) => (
+                          <div key={year}>
+                            <p className="text-xs text-muted-foreground mb-1">{year} Season</p>
+                            <p className="text-2xl sm:text-3xl font-serif text-secondary">${price}*</p>
+                          </div>
+                        ))}
+                      </div>
                       <p className="text-xs text-muted-foreground mb-4">{pkg.subtitle}</p>
                     </CardContent>
                   </Card>

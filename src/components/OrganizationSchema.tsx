@@ -1,3 +1,4 @@
+import content from "@/data/site-content.json";
 import { Helmet } from "react-helmet-async";
 
 const OrganizationSchema = () => {
@@ -39,28 +40,18 @@ const OrganizationSchema = () => {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Wedding Packages",
-      itemListElement: [
-        {
+      itemListElement: content.packages.packages.flatMap((pkg) =>
+        [["2027", pkg.price], ["2028", pkg.price2028]].map(([year, price]) => ({
           "@type": "Offer",
-          price: "6500",
+          price: price.replace(/,/g, ""),
           priceCurrency: "CAD",
           itemOffered: {
             "@type": "Service",
-            name: "3-Day Weekend Package",
-            description: "Friday-Sunday exclusive property access (2027 season)"
+            name: `${pkg.name} (${year} season)`,
+            description: `${pkg.description} ${year} season; GST extra.`
           }
-        },
-        {
-          "@type": "Offer",
-          price: "7500",
-          priceCurrency: "CAD",
-          itemOffered: {
-            "@type": "Service",
-            name: "5-Day Extended Package",
-            description: "Wednesday-Sunday or Thursday-Monday exclusive property access (2027 season)"
-          }
-        }
-      ]
+        }))
+      )
     }
   };
 
