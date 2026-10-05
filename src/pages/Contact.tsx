@@ -18,10 +18,10 @@ import TrustBadges from "@/components/TrustBadges";
 import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
-import receptionEvening from "@/assets/gallery/reception-evening-lights.webp";
+import receptionEvening from "@/assets/gallery/Images/first-dance-string-lights.webp";
 import contactMiddleImage from "@/assets/gallery/rustic-retreat-venue-exterior.webp";
-import contactBottomLeft from "@/assets/gallery/sunset-silhouette-couple.webp";
-import contactBottomRight from "@/assets/gallery/wedding-details-rings.webp";
+import contactBottomLeft from "@/assets/gallery/real-weddings/woodland-couple-golden-light.webp";
+import contactBottomRight from "@/assets/gallery/real-weddings/forest-treehouse-couple.webp";
 import contactExpectImage from "@/assets/gallery/real-weddings/pavilion-couple-dog-portrait.webp";
 import { trackLead } from "@/lib/analytics";
 import { submitEnquiry } from "@/lib/crm";
@@ -78,7 +78,7 @@ const Contact = () => {
 
         <PageHero
           backgroundImage={receptionEvening}
-          backgroundImageAlt="Couple and friends in an open field at Rustic Retreat"
+          backgroundImageAlt="Couple dancing under string lights at Rustic Retreat"
           title="Discover Your Venue"
           subtitle="Property tours by appointment only, scheduled around existing bookings. Come feel the space and see if this is where your story wants to unfold."
           overlayOpacity="none"
@@ -420,7 +420,7 @@ const Contact = () => {
               <ScrollReveal delay={0}>
                 <HoverImage
                   src={contactBottomLeft}
-                  alt="Stunning sunset silhouette at Rustic Retreat"
+                  alt="Couple facing each other in golden sunlight among the forest trees"
                   description="Connect with nature-your day, your way"
                   category="Bridal"
                   className="shadow-lg rounded-2xl"
@@ -429,9 +429,9 @@ const Contact = () => {
               <ScrollReveal delay={100}>
                 <HoverImage
                   src={contactBottomRight}
-                  alt="Wedding details at Rustic Retreat"
-                  description="Your dress deserves a magical backdrop"
-                  category="Details"
+                  alt="Couple kissing beside a rustic treehouse in the forest"
+                  description="A quiet moment among the trees"
+                  category="Portraits"
                   className="shadow-lg rounded-2xl"
                 />
               </ScrollReveal>

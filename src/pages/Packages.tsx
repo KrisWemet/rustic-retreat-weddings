@@ -11,12 +11,13 @@ import ScrollReveal from "@/components/ScrollReveal";
 import Fireflies from "@/components/Fireflies";
 import Flourish from "@/components/Flourish";
 import loveMarqueeArch from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-first-dance-with-love-marquee-sign-32.webp";
-import receptionTable from "@/assets/gallery/real-weddings/pavilion-sweetheart-table.webp";
-import ceremonySetupWide from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wide-outdoor-ceremony-arch-wedding-party-forest-clearing-03.webp";
-import groomsmenToast from "@/assets/gallery/real-weddings/meadow-wedding-party-playful.webp";
+import cabinBridesmaids from "@/assets/gallery/real-weddings/cabin-bride-bridesmaids.webp";
+import receptionTable from "@/assets/gallery/real-weddings/barrel-dessert-table.webp";
+import ceremonySetupWide from "@/assets/gallery/real-weddings/cabin-couple-portrait.webp";
+import groomsmenToast from "@/assets/gallery/real-weddings/meadow-bride-wedding-party.webp";
 import loveMarquee from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-father-daughter-dance-love-marquee-37.webp";
 import brideDancing from "@/assets/gallery/first-dance-color.webp";
-import weddingParty from "@/assets/gallery/real-weddings/pavilion-aisle-newlyweds.webp";
+import weddingParty from "@/assets/gallery/real-weddings/pavilion-bride-family.webp";
 import cardBoxWineBarrel from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-welcome-sign-mirror-display-39.webp";
 import guestFavorBox from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-in-white-rose-43.webp";
 import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.webp";
@@ -127,7 +128,7 @@ const Packages = () => {
                 </div>
                 <img
                   src={weddingParty}
-                  alt="Newlyweds walking down the pavilion aisle with their guests watching"
+                  alt="Bride standing with family beneath the pavilion chandelier"
                   loading="lazy"
                   decoding="async"
                   className="rounded-lg shadow-lg w-full h-[260px] sm:h-[300px] object-cover img-card"
@@ -137,7 +138,8 @@ const Packages = () => {
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
                 <img
                   src={groomsmenToast}
-                  alt="Bride and groomsmen sharing a playful group pose in the meadow"
+                  alt="Bride and wedding party posing together in the open meadow"
+                  style={{ objectPosition: "50% 80%" }}
                   className="rounded-lg shadow-lg w-full h-[220px] sm:h-[240px] object-cover img-card"
                   loading="lazy"
                   decoding="async"
@@ -178,7 +180,7 @@ const Packages = () => {
                   <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                   <img
                     src={receptionTable}
-                    alt="Couple at their sweetheart table beneath warm pavilion lights"
+                    alt="Wedding cake and desserts on a rustic barrel-supported table"
                     loading="lazy"
                     decoding="async"
                     className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant img-card"
@@ -620,17 +622,17 @@ const Packages = () => {
             <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
               <img
                 src={ceremonySetupWide}
-                alt="Forest ceremony setup with decorated arch at Rustic Retreat Weddings"
+                alt="Bride seated outside the wooden cabin with the groom beside her"
                 loading="lazy"
                 decoding="async"
-                className="shadow-xl w-full h-full object-cover img-card"
+                className="shadow-xl w-full h-auto object-contain img-card"
               />
               <img
-                src={receptionTable}
-                alt="Couple at their sweetheart table beneath warm pavilion lights"
+                src={cabinBridesmaids}
+                alt="Bride and bridesmaids with bouquets inside the wooden cabin"
                 loading="lazy"
                 decoding="async"
-                className="shadow-xl w-full h-full object-cover img-card"
+                className="shadow-xl w-full h-auto object-contain img-card"
               />
             </div>
           </div>

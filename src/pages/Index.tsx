@@ -15,12 +15,12 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 // Hero & Property Images
 import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.webp";
-import cabinExterior from "@/assets/gallery/Cabin/cabin-exterior-woods.webp";
+import cabinExterior from "@/assets/gallery/Cabin/cabin-porch-view.webp";
 import receptionGazebo from "@/assets/gallery/real-weddings/pavilion-reception-tables-evening.webp";
 
 // Gallery Images for Storytelling
 import ceremonyWideShot from "@/assets/gallery/real-weddings/pavilion-aisle-newlyweds.webp";
-import loveMarqueeArch from "@/assets/gallery/love-marquee-arch.webp";
+import loveMarqueeArch from "@/assets/gallery/real-weddings/couple-donkey-portrait.webp";
 import pavilionReception from "@/assets/gallery/real-weddings/pavilion-couple-speech.webp";
 import meadowSunsetKiss from "@/assets/gallery/real-weddings/meadow-couple-lift.webp";
 import coupleWalkingTrail from "@/assets/gallery/real-weddings/forest-trail-couple-kiss.webp";
@@ -1041,7 +1041,7 @@ const Index = () => {
                   />
                   <img
                     src={loveMarqueeArch}
-                    alt="LOVE marquee letters with ceremony arch in a forest clearing"
+                    alt="Couple sharing a playful moment beside a donkey on the grass"
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
@@ -1299,7 +1299,7 @@ const Index = () => {
 
             <ScrollReveal direction="right">
               <div className="grid grid-cols-2 gap-3">
-                <img src={cabinExterior} alt="Cozy cabin exterior at Rustic Retreat Weddings" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft img-card" />
+                <img src={cabinExterior} alt="Cabin porch overlooking the woods at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft img-card" />
                 <img
                   src={receptionGazebo}
                   alt="Picnic tables set for an evening reception under the illuminated pavilion"

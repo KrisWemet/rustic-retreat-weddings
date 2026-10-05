@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/ui/cta-button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import PageHero from "@/components/PageHero";
+import Flourish from "@/components/Flourish";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
@@ -172,12 +172,15 @@ const Gallery = () => {
       <div className="min-h-screen">
         <Navigation />
 
-        <PageHero
-          backgroundImage={galleryHero.src}
-          backgroundImageAlt={galleryHero.alt}
-          title="Wedding Photo Gallery"
-          subtitle="Every photo is a real couple. A real moment. A real celebration."
-        />
+        <section className="relative bg-primary text-primary-foreground pt-36 pb-16 text-center">
+          <div className="container mx-auto px-4">
+            <h1 className="display-xl font-serif mb-5">Wedding Photo Gallery</h1>
+            <Flourish className="text-primary-foreground/70 mb-6" size="md" />
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
+              Every photo is a real couple. A real moment. A real celebration.
+            </p>
+          </div>
+        </section>
 
         {/* Gallery Grid with Soft Reveal */}
         <section className="section">
