@@ -21,7 +21,7 @@ import cabinPorchView from "@/assets/gallery/Cabin/cabin-porch-view.webp";
 import pavilionReceptionTables from "@/assets/gallery/real-weddings/pavilion-reception-tables-evening.webp";
 
 // Gallery Images for Storytelling
-import pavilionAisleNewlyweds from "@/assets/gallery/real-weddings/pavilion-aisle-newlyweds.webp";
+import outdoorFloralArchVows from "@/assets/gallery/real-weddings/outdoor-floral-arch-vows.webp";
 import coupleDonkeyPortrait from "@/assets/gallery/real-weddings/couple-donkey-portrait.webp";
 import pavilionCoupleSpeech from "@/assets/gallery/real-weddings/pavilion-couple-speech.webp";
 import meadowCoupleLift from "@/assets/gallery/real-weddings/meadow-couple-lift.webp";
@@ -915,13 +915,13 @@ const Index = () => {
           {/* Cinematic Image Row */}
           <div className="grid grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
             <ScrollReveal delay={0}>
-              <HoverImage src={pavilionAisleNewlyweds} alt="Newlyweds walking down the pavilion aisle with their guests watching" description="Your first steps as newlyweds, surrounded by the people you love" category="Ceremony" className="h-48 md:h-72 shadow-soft" />
+              <HoverImage src={outdoorFloralArchVows} alt="Couple holding hands as they exchange vows under a floral arch in the forest" description="Your vows in the open air, surrounded by the people you love" category="Ceremony" className="h-48 md:h-72 shadow-soft" imageClassName="object-[45%_40%]" />
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <HoverImage src={forestTrailCoupleKiss} alt="Couple kissing on a secluded forest trail at Rustic Retreat" description="A quiet moment on the forest trails, just the two of you" category="Portraits" className="h-48 md:h-72 shadow-soft" />
+              <HoverImage src={forestTrailCoupleKiss} alt="Couple kissing on a secluded forest trail at Rustic Retreat" description="A quiet moment on the forest trails, just the two of you" category="Portraits" className="h-48 md:h-72 shadow-soft" imageClassName="object-[50%_70%]" />
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <HoverImage src={cakeCutting} alt="Cake cutting and first bite moment under rustic pavilion" description="Sweet moments-cutting the cake and sharing the first bite" category="Reception" className="h-48 md:h-72 shadow-soft" />
+              <HoverImage src={cakeCutting} alt="Cake cutting and first bite moment under rustic pavilion" description="Sweet moments-cutting the cake and sharing the first bite" category="Reception" className="h-48 md:h-72 shadow-soft" imageClassName="object-[80%_40%]" />
             </ScrollReveal>
           </div>
         </div>
