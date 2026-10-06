@@ -18,11 +18,11 @@ import TrustBadges from "@/components/TrustBadges";
 import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
-import receptionEvening from "@/assets/gallery/reception-evening-lights.webp";
+import contactHeroImage from "@/assets/gallery/ceremony-wide-shot.webp";
 import contactMiddleImage from "@/assets/gallery/rustic-retreat-venue-exterior.webp";
-import contactBottomLeft from "@/assets/gallery/sunset-silhouette-couple.webp";
-import contactBottomRight from "@/assets/gallery/wedding-details-rings.webp";
-import contactExpectImage from "@/assets/gallery/couple-portrait-forest-tall.webp";
+import contactBottomLeft from "@/assets/gallery/real-weddings/woodland-couple-golden-light.webp";
+import contactBottomRight from "@/assets/gallery/real-weddings/forest-treehouse-couple.webp";
+import contactExpectImage from "@/assets/gallery/real-weddings/pavilion-couple-dog-portrait.webp";
 import { trackLead } from "@/lib/analytics";
 import { submitEnquiry } from "@/lib/crm";
 
@@ -69,7 +69,7 @@ const Contact = () => {
         title="Book a Venue Tour Near Edmonton"
         description="Book a tour of Rustic Retreat, an outdoor wedding venue an hour northwest of Edmonton near Barrhead, Onoway and Alberta Beach. By appointment."
         path="/contact"
-        image={receptionEvening}
+        image={contactHeroImage}
         keywords={["wedding venue tour edmonton", "property visit rustic retreat", "wedding venue consultation alberta", "book wedding venue viewing", "outdoor wedding venue edmonton contact"]}
       />
       <BreadcrumbSchema />
@@ -77,8 +77,8 @@ const Contact = () => {
         <Navigation />
 
         <PageHero
-          backgroundImage={receptionEvening}
-          backgroundImageAlt="Couple and friends in an open field at Rustic Retreat"
+          backgroundImage={contactHeroImage}
+          backgroundImageAlt="Outdoor ceremony with the wedding party in the forest clearing at Rustic Retreat"
           title="Discover Your Venue"
           subtitle="Property tours by appointment only, scheduled around existing bookings. Come feel the space and see if this is where your story wants to unfold."
           overlayOpacity="none"
@@ -111,10 +111,11 @@ const Contact = () => {
                   <div className="w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-soft shrink-0 img-card">
                     <img
                       src={contactExpectImage}
-                      alt="Couple portrait in the forest at Rustic Retreat"
+                      alt="Bride and groom with their dog beneath the pavilion ceremony backdrop"
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-cover object-center"
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: "50% 30%" }}
                     />
                   </div>
                 </div>
@@ -420,7 +421,7 @@ const Contact = () => {
               <ScrollReveal delay={0}>
                 <HoverImage
                   src={contactBottomLeft}
-                  alt="Stunning sunset silhouette at Rustic Retreat"
+                  alt="Couple facing each other in golden sunlight among the forest trees"
                   description="Connect with nature-your day, your way"
                   category="Bridal"
                   className="shadow-lg rounded-2xl"
@@ -429,9 +430,9 @@ const Contact = () => {
               <ScrollReveal delay={100}>
                 <HoverImage
                   src={contactBottomRight}
-                  alt="Wedding details at Rustic Retreat"
-                  description="Your dress deserves a magical backdrop"
-                  category="Details"
+                  alt="Couple kissing beside a rustic treehouse in the forest"
+                  description="A quiet moment among the trees"
+                  category="Portraits"
                   className="shadow-lg rounded-2xl"
                 />
               </ScrollReveal>

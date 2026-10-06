@@ -103,7 +103,7 @@ const Elopements = () => {
               </div>
               <ScrollReveal>
                 <p className="text-center text-muted-foreground mt-10 max-w-3xl mx-auto">
-                  Both packages work beautifully for intimate groups — the property makes 20 guests feel just as right as 80. The 3-day weekend is $6,500, and the full 5-day experience is $7,500 (2027 season, GST extra).
+                  Both packages work beautifully for intimate groups — the property makes 20 guests feel just as right as 80. For 2027, the 3-day weekend is $6,500 and the full 5-day experience is $7,500. For 2028, the 3-day weekend is $7,500 and the full 5-day experience is $8,500 (CAD, GST extra).
                 </p>
               </ScrollReveal>
             </div>

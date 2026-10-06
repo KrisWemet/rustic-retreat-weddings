@@ -10,6 +10,7 @@ import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { realWeddingPhotos } from "@/data/real-wedding-photos";
 import { seoGalleryMeta } from "@/data/seo-gallery";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -18,6 +19,9 @@ interface GalleryImage {
   alt: string;
   description: string;
   category: string;
+  width?: number;
+  height?: number;
+  objectPosition?: string;
 }
 
 const galleryImageMap = import.meta.glob("../assets/gallery/**/*.{webp,jpg,jpeg,png,avif}", {
@@ -83,7 +87,7 @@ const hasPeople = (image: GalleryImage, sourceHint: string) => {
 
 const dedupedImages = new Map<string, GalleryImage & { hasSeoMeta: boolean }>();
 for (const [filePath, src] of Object.entries(galleryImageMap)) {
-  if (filePath.includes("/enchanted/") || filePath.includes("/Cabin/")) {
+  if (filePath.includes("/enchanted/") || filePath.includes("/Cabin/") || filePath.includes("/real-weddings/")) {
     continue;
   }
 
@@ -105,7 +109,7 @@ for (const [filePath, src] of Object.entries(galleryImageMap)) {
   }
 }
 
-const images: GalleryImage[] = Array.from(dedupedImages.entries())
+const existingImages: GalleryImage[] = Array.from(dedupedImages.entries())
   .filter(([, image]) => hasPeople(image, image.src))
   .sort(([a], [b]) => stableHash(a) - stableHash(b))
   .map(([, image]) => ({
@@ -115,7 +119,8 @@ const images: GalleryImage[] = Array.from(dedupedImages.entries())
     category: image.category
   }));
 
-const galleryHero = images.find((image) => image.category === "Romance")?.src || images[0]?.src || "";
+const images: GalleryImage[] = [...realWeddingPhotos, ...existingImages];
+const galleryHero = realWeddingPhotos.find((image) => image.file === "pavilion-ceremony-kiss.webp") || realWeddingPhotos[0];
 
 const Gallery = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
@@ -161,7 +166,7 @@ const Gallery = () => {
         title="Wedding Venue Photo Gallery"
         description="Photos of our wedding venue near Edmonton: ceremonies at the gazebo, receptions under lights, forest portraits and camping on 65 private acres."
         path="/gallery"
-        image={galleryHero}
+        image={galleryHero.src}
         keywords={["wedding photos edmonton venue", "rustic wedding photography alberta", "outdoor wedding gallery", "wedding venue photo inspiration", "forest wedding photos", "alberta wedding venue pictures"]}
       />
       <BreadcrumbSchema />
@@ -169,8 +174,9 @@ const Gallery = () => {
         <Navigation />
 
         <PageHero
-          backgroundImage={galleryHero}
-          backgroundImageAlt="Romantic veil kiss in a misty forest at Rustic Retreat"
+          backgroundImage={galleryHero.src}
+          backgroundImageAlt={galleryHero.alt}
+          backgroundPosition="50% 60%"
           title="Wedding Photo Gallery"
           subtitle="Every photo is a real couple. A real moment. A real celebration."
         />
@@ -178,26 +184,31 @@ const Gallery = () => {
         {/* Gallery Grid with Soft Reveal */}
         <section className="section">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredImages.map((image, index) => (
-                <div 
-                  key={index}
-                  className="gallery-item group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer img-card"
+                <button
+                  type="button"
+                  aria-label={`View photo: ${image.alt}`}
+                  key={image.src}
+                  className="gallery-item block w-full aspect-[4/5] group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer img-card"
                   style={{ animationDelay: `${Math.min(index * 75, 600)}ms` }}
                   onClick={() => setSelectedImageIndex(index)}
                 >
                   <img
                     src={image.src}
                     alt={image.alt}
+                    width={image.width}
+                    height={image.height}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                    style={{ objectPosition: image.objectPosition || "center" }}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/25 transition-colors duration-500 pointer-events-none" />
                   <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-gradient-to-t from-black/65 to-transparent p-4 pointer-events-none">
                     <p className="text-white/90 text-sm font-medium tracking-wide">{image.category}</p>
                   </div>
-                </div>
+                </button>
               ))}
             </div>
           </div>

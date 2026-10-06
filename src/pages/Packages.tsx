@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CTAButton } from "@/components/ui/cta-button";
@@ -10,13 +10,17 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ScrollReveal from "@/components/ScrollReveal";
 import Fireflies from "@/components/Fireflies";
 import Flourish from "@/components/Flourish";
+import SeasonToggle from "@/components/SeasonToggle";
+import { DEFAULT_SEASON, priceFor, type Season } from "@/data/seasons";
 import loveMarqueeArch from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-first-dance-with-love-marquee-sign-32.webp";
-import receptionTable from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-sweetheart-table-chandelier-draping-neon-sign-05.webp";
-import ceremonySetupWide from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wide-outdoor-ceremony-arch-wedding-party-forest-clearing-03.webp";
-import groomsmenToast from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-groomsmen-lift-bride-funny-woods-photo-06.webp";
+import cabinBridesmaids from "@/assets/gallery/real-weddings/cabin-bride-bridesmaids.webp";
+import barrelDessertTable from "@/assets/gallery/real-weddings/barrel-dessert-table.webp";
+import cabinCouplePortrait from "@/assets/gallery/real-weddings/cabin-couple-portrait.webp";
+import meadowBrideWeddingParty from "@/assets/gallery/real-weddings/meadow-bride-wedding-party.webp";
 import loveMarquee from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-father-daughter-dance-love-marquee-37.webp";
 import brideDancing from "@/assets/gallery/first-dance-color.webp";
-import weddingParty from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-black-and-white-ceremony-signing-bride-groom-wooden-stand-02.webp";
+import pavilionSweetheartTable from "@/assets/gallery/real-weddings/pavilion-sweetheart-table.webp";
+import pavilionBrideFamily from "@/assets/gallery/real-weddings/pavilion-bride-family.webp";
 import cardBoxWineBarrel from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-welcome-sign-mirror-display-39.webp";
 import guestFavorBox from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-in-white-rose-43.webp";
 import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.webp";
@@ -25,6 +29,7 @@ import content from "@/data/site-content.json";
 import { trackViewContent } from "@/lib/analytics";
 
 const Packages = () => {
+  const [season, setSeason] = useState<Season>(DEFAULT_SEASON);
   // Reading pricing is the strongest intent signal on the site — worth its own
   // retargeting audience, separate from general traffic.
   useEffect(() => {
@@ -36,31 +41,23 @@ const Packages = () => {
     "@type": "OfferCatalog",
     name: "Rustic Retreat Wedding Packages",
     url: "https://www.rusticretreatalberta.ca/packages",
-    itemListElement: [
-      {
+    itemListElement: content.packages.packages.flatMap((pkg) =>
+      [["2027", pkg.price], ["2028", pkg.price2028]].map(([year, price]) => ({
         "@type": "Offer",
-        name: "The Full 5-Day Experience",
-        description: "5-day celebration (Wed-Sun or Thu-Mon) with immersive guest time.",
-        price: "7500",
+        name: `${pkg.name} (${year} season)`,
+        description: `${pkg.description} ${year} season; GST extra.`,
+        price: price.replace(/,/g, ""),
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
-      },
-      {
-        "@type": "Offer",
-        name: "The Classic 3-Day Weekend",
-        description: "3-day Friday-to-Sunday wedding weekend with exclusive access.",
-        price: "6500",
-        priceCurrency: "CAD",
-        availability: "https://schema.org/InStock",
-      },
-    ],
+      }))
+    ),
   };
 
   return (
     <>
       <SEO
         title="Wedding Venue Packages & Pricing"
-        description="All-in wedding packages near Edmonton: 3 days for $6,500 or 5 days for $7,500. Exclusive use of 65 acres and camping for 60 guests."
+        description="Wedding packages near Edmonton: 2027 three-day $6,500 / five-day $7,500; 2028 three-day $7,500 / five-day $8,500 CAD, plus GST. Exclusive use of 65 acres."
         path="/packages"
         image={loveMarqueeArch}
         keywords={["wedding packages edmonton", "weekend wedding pricing alberta", "multi-day wedding cost", "all-inclusive wedding venue edmonton", "wedding venue pricing alberta", "3 day wedding package", "5 day wedding package"]}
@@ -126,8 +123,8 @@ const Packages = () => {
                   </p>
                 </div>
                 <img
-                  src={weddingParty}
-                  alt="Wedding party celebrating at Rustic Retreat"
+                  src={pavilionBrideFamily}
+                  alt="Bride standing with family beneath the pavilion chandelier"
                   loading="lazy"
                   decoding="async"
                   className="rounded-lg shadow-lg w-full h-[260px] sm:h-[300px] object-cover img-card"
@@ -136,8 +133,9 @@ const Packages = () => {
 
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
                 <img
-                  src={groomsmenToast}
-                  alt="Groomsmen cheering with drinks on a forest trail at Rustic Retreat"
+                  src={meadowBrideWeddingParty}
+                  alt="Bride and wedding party posing together in the open meadow"
+                  style={{ objectPosition: "50% 80%" }}
                   className="rounded-lg shadow-lg w-full h-[220px] sm:h-[240px] object-cover img-card"
                   loading="lazy"
                   decoding="async"
@@ -177,8 +175,8 @@ const Packages = () => {
                 <div className="relative">
                   <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                   <img
-                    src={receptionTable}
-                    alt="Evening outdoor wedding reception celebration at Rustic Retreat"
+                    src={barrelDessertTable}
+                    alt="Wedding cake and desserts on a rustic barrel-supported table"
                     loading="lazy"
                     decoding="async"
                     className="relative w-full h-[260px] sm:h-[320px] object-cover rounded-3xl shadow-elegant img-card"
@@ -186,6 +184,8 @@ const Packages = () => {
                 </div>
               </ScrollReveal>
             </div>
+
+            <SeasonToggle value={season} onChange={setSeason} className="mb-10" />
 
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
               {content.packages.packages.map((pkg, idx) => (
@@ -228,8 +228,8 @@ const Packages = () => {
                     </div>
 
                     <div className={`${pkg.isRecommended ? "bg-secondary/20 border-secondary" : "bg-primary/10 border-primary"} p-5 sm:p-6 rounded-lg mb-6 border-2`}>
-                      <p className="text-3xl font-bold mb-2">${pkg.price}*</p>
-                      <p className={`text-sm ${!pkg.isRecommended ? "text-muted-foreground" : ""}`}>2027 Package Price</p>
+                      <p className="text-3xl font-bold mb-2">${priceFor(pkg, season)}*</p>
+                      <p className={`text-sm ${!pkg.isRecommended ? "text-muted-foreground" : ""}`}>{season} Package Price</p>
                     </div>
 
                   </CardContent>
@@ -237,8 +237,26 @@ const Packages = () => {
               ))}
             </div>
 
-            <div className="text-center">
-              <p className="text-xs text-muted-foreground">* GST not included.</p>
+            <p className="text-center text-xs text-muted-foreground mb-12">* GST not included.</p>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto rounded-3xl bg-secondary/10 p-6 sm:p-8">
+              <img
+                src={pavilionSweetheartTable}
+                alt="Couple seated at their sweetheart table beneath warm pavilion lights"
+                loading="lazy"
+                decoding="async"
+                className="w-full aspect-[4/3] object-cover rounded-2xl shadow-elegant img-card"
+              />
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl sm:text-3xl font-serif font-semibold mb-3">See it in person</h3>
+                <p className="text-muted-foreground mb-6">
+                  Walk the ceremony and reception spaces, see the cabin and camping areas, and ask us anything about
+                  packages and pricing. Tours are by appointment.
+                </p>
+                <Link to="/contact">
+                  <CTAButton className="px-8">Book a Tour</CTAButton>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -593,7 +611,8 @@ const Packages = () => {
                         </li>
                       ))}
                     </ul>
-                    <p className="font-bold text-lg">{content.packages.pricingComparison.rusticRetreat.priceRange}</p>
+                    <p className="font-bold text-lg">2027: {content.packages.pricingComparison.rusticRetreat.priceRange}</p>
+                    <p className="font-bold text-lg">2028: {content.packages.pricingComparison.rusticRetreat.priceRange2028}</p>
                     <p className="text-sm mt-2">Based on your timeline-all in ONE connected place</p>
                   </CardContent>
                 </Card>
@@ -619,18 +638,20 @@ const Packages = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
               <img
-                src={ceremonySetupWide}
-                alt="Forest ceremony setup with decorated arch at Rustic Retreat Weddings"
+                src={cabinCouplePortrait}
+                alt="Bride seated outside the wooden cabin with the groom beside her"
                 loading="lazy"
                 decoding="async"
-                className="shadow-xl w-full h-full object-cover img-card"
+                style={{ objectPosition: "50% 70%" }}
+                className="shadow-xl w-full aspect-[4/5] object-cover img-card"
               />
               <img
-                src={receptionTable}
-                alt="Evening outdoor wedding reception celebration at Rustic Retreat"
+                src={cabinBridesmaids}
+                alt="Bride and bridesmaids with bouquets inside the wooden cabin"
                 loading="lazy"
                 decoding="async"
-                className="shadow-xl w-full h-full object-cover img-card"
+                style={{ objectPosition: "50% 30%" }}
+                className="shadow-xl w-full aspect-[4/5] object-cover img-card"
               />
             </div>
           </div>

@@ -1,16 +1,11 @@
 import { AlertCircle } from "lucide-react";
-import { useEffect, useState } from "react";
+import content from "@/data/site-content.json";
+
+// Update weekendsLeft in src/data/site-content.json (packages.seasons) whenever a date is booked.
+const { weekendsLeft, months } = content.packages.seasons["2027"];
 
 const AvailabilityIndicator = () => {
-  const [availableWeekends, setAvailableWeekends] = useState<number>(12);
-
-  // In real implementation, fetch from Supabase or calendar API
-  useEffect(() => {
-    // Mock: Calculate remaining weekends in wedding season
-    // June-September = 4 months × 4 weekends = 16 weekends
-    // Subtract booked weekends (manually update this number or connect to booking system)
-    setAvailableWeekends(12);
-  }, []);
+  if (weekendsLeft === 0) return null;
 
   return (
     <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
@@ -20,7 +15,7 @@ const AvailabilityIndicator = () => {
           Limited Availability for 2027 Season
         </p>
         <p className="text-sm text-amber-800">
-          Only <strong>{availableWeekends} weekends</strong> remain for June-September 2027.
+          Only <strong>{weekendsLeft} weekend{weekendsLeft === 1 ? "" : "s"}</strong> remain for {months} 2027.
           Most couples book 8-12 months in advance.
         </p>
       </div>
