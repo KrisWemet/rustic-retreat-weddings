@@ -34,7 +34,7 @@
   "packages": {
     "seasons": {
       "2027": { "weekendsLeft": 4, "months": "June–September" },
-      "2028": { "months": "June–September" }
+      "2028": { "months": "June–September", "status": "2028 is already almost half booked." }
     },
     "packages": [
       {

@@ -1,7 +1,7 @@
 import content from "@/data/site-content.json";
 
 type Package = (typeof content.packages.packages)[number];
-type SeasonInfo = { weekendsLeft?: number; months: string };
+type SeasonInfo = { weekendsLeft?: number; months: string; status?: string };
 
 const seasonInfo: Record<string, SeasonInfo> = content.packages.seasons;
 
@@ -33,5 +33,5 @@ export const seasonNote = (season: Season) => {
     const saving = SEASON_SAVING ? `2027 weddings are $${SEASON_SAVING} less than 2028.` : "";
     return `${count}${saving}`.trim();
   }
-  return "2028 pricing applies to every 2028 wedding.";
+  return `${info?.status ?? ""} 2028 pricing applies to every 2028 wedding.`.trim();
 };
