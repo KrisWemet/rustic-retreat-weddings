@@ -12,6 +12,8 @@ import Fireflies from "@/components/Fireflies";
 import SEO from "@/components/SEO";
 import OrganizationSchema from "@/components/OrganizationSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import SeasonToggle from "@/components/SeasonToggle";
+import { DEFAULT_SEASON, priceFor, type Season } from "@/data/seasons";
 
 // Hero & Property Images
 import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.webp";
@@ -152,6 +154,7 @@ const QuotePreview = ({
 };
 
 const Index = () => {
+  const [season, setSeason] = useState<Season>(DEFAULT_SEASON);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [videoSrc, setVideoSrc] = useState<string | null>(null);
@@ -1191,6 +1194,8 @@ const Index = () => {
               </div>
             </ScrollReveal>
 
+            <SeasonToggle value={season} onChange={setSeason} className="mb-8" />
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
               {[...content.packages.packages].reverse().map((pkg, index) => (
                 <ScrollReveal key={index} delay={index * 100}>
@@ -1215,14 +1220,8 @@ const Index = () => {
                     <CardContent className={`w-full p-6 text-center ${pkg.isRecommended ? "pt-10" : ""}`}>
                       <h3 className="text-xl font-serif font-semibold mb-1">{pkg.shortName}</h3>
                       <p className="text-xs text-muted-foreground mb-4">{pkg.duration}</p>
-                      <div className="grid grid-cols-2 gap-4 mb-3">
-                        {[["2027", pkg.price], ["2028", pkg.price2028]].map(([year, price]) => (
-                          <div key={year}>
-                            <p className="text-xs text-muted-foreground mb-1">{year} Season</p>
-                            <p className="text-2xl sm:text-3xl font-serif text-secondary">${price}*</p>
-                          </div>
-                        ))}
-                      </div>
+                      <p className="text-3xl font-serif text-secondary mb-1">${priceFor(pkg, season)}*</p>
+                      <p className="text-xs text-muted-foreground mb-3">{season} Season</p>
                       <p className="text-xs text-muted-foreground mb-4">{pkg.subtitle}</p>
                     </CardContent>
                   </Card>

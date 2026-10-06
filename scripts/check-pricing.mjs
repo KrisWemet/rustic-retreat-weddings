@@ -7,7 +7,9 @@
  * page paragraphs repeat them as plain text. Any file that mentions one
  * package price must mention every current price (each season of each
  * package), so a file left on an older season fails the build instead of
- * shipping conflicting prices.
+ * shipping conflicting prices. Hand-written "Only N weekends left ... 2027"
+ * lines (count and year on one line) must also match packages.seasons in
+ * site-content.json.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -51,9 +53,23 @@ for (const file of files) {
   problems.push(`  ${file}: missing ${missing.join(", ")}`);
 }
 
+// Hand-written "Only N weekends left" lines, with the year on the same line, must match packages.seasons[year].weekendsLeft.
+for (const file of files) {
+  const text = fs.readFileSync(path.join(ROOT, file), "utf8");
+  for (const line of text.split("\n")) {
+    const count = line.match(/Only (\d+) weekends? (?:left|remain)/)?.[1];
+    const year = line.match(/\b(20\d\d)\b/)?.[1];
+    if (!count || !year) continue;
+    const expected = content.packages.seasons?.[year]?.weekendsLeft;
+    if (expected !== undefined && Number(count) !== expected) {
+      problems.push(`  ${file}: says ${count} weekends left for ${year}, site-content.json says ${expected}`);
+    }
+  }
+}
+
 if (problems.length) {
   console.error(
-    `Package prices are out of sync with src/data/site-content.json (${prices.map(({ label }) => label).join(", ")}):\n` +
+    `Pricing or availability is out of sync with src/data/site-content.json (${prices.map(({ label }) => label).join(", ")}):\n` +
       problems.join("\n")
   );
   process.exit(1);

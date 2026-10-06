@@ -32,6 +32,10 @@
     }
   },
   "packages": {
+    "seasons": {
+      "2027": { "weekendsLeft": 4, "months": "June–September" },
+      "2028": { "months": "June–September" }
+    },
     "packages": [
       {
         "name": "The Full 5-Day Experience",

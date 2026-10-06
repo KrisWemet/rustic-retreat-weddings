@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CTAButton } from "@/components/ui/cta-button";
@@ -10,6 +10,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ScrollReveal from "@/components/ScrollReveal";
 import Fireflies from "@/components/Fireflies";
 import Flourish from "@/components/Flourish";
+import SeasonToggle from "@/components/SeasonToggle";
+import { DEFAULT_SEASON, priceFor, type Season } from "@/data/seasons";
 import loveMarqueeArch from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-first-dance-with-love-marquee-sign-32.webp";
 import cabinBridesmaids from "@/assets/gallery/real-weddings/cabin-bride-bridesmaids.webp";
 import barrelDessertTable from "@/assets/gallery/real-weddings/barrel-dessert-table.webp";
@@ -17,6 +19,7 @@ import cabinCouplePortrait from "@/assets/gallery/real-weddings/cabin-couple-por
 import meadowBrideWeddingParty from "@/assets/gallery/real-weddings/meadow-bride-wedding-party.webp";
 import loveMarquee from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-father-daughter-dance-love-marquee-37.webp";
 import brideDancing from "@/assets/gallery/first-dance-color.webp";
+import pavilionSweetheartTable from "@/assets/gallery/real-weddings/pavilion-sweetheart-table.webp";
 import pavilionBrideFamily from "@/assets/gallery/real-weddings/pavilion-bride-family.webp";
 import cardBoxWineBarrel from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-welcome-sign-mirror-display-39.webp";
 import guestFavorBox from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-in-white-rose-43.webp";
@@ -26,6 +29,7 @@ import content from "@/data/site-content.json";
 import { trackViewContent } from "@/lib/analytics";
 
 const Packages = () => {
+  const [season, setSeason] = useState<Season>(DEFAULT_SEASON);
   // Reading pricing is the strongest intent signal on the site — worth its own
   // retargeting audience, separate from general traffic.
   useEffect(() => {
@@ -181,6 +185,8 @@ const Packages = () => {
               </ScrollReveal>
             </div>
 
+            <SeasonToggle value={season} onChange={setSeason} className="mb-10" />
+
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
               {content.packages.packages.map((pkg, idx) => (
                 <Card
@@ -222,14 +228,8 @@ const Packages = () => {
                     </div>
 
                     <div className={`${pkg.isRecommended ? "bg-secondary/20 border-secondary" : "bg-primary/10 border-primary"} p-5 sm:p-6 rounded-lg mb-6 border-2`}>
-                      <div className="grid grid-cols-2 gap-4">
-                        {[["2027", pkg.price], ["2028", pkg.price2028]].map(([year, price]) => (
-                          <div key={year}>
-                            <p className={`text-sm mb-2 ${!pkg.isRecommended ? "text-muted-foreground" : ""}`}>{year} Season</p>
-                            <p className="text-2xl sm:text-3xl font-bold">${price}*</p>
-                          </div>
-                        ))}
-                      </div>
+                      <p className="text-3xl font-bold mb-2">${priceFor(pkg, season)}*</p>
+                      <p className={`text-sm ${!pkg.isRecommended ? "text-muted-foreground" : ""}`}>{season} Package Price</p>
                     </div>
 
                   </CardContent>
@@ -237,8 +237,26 @@ const Packages = () => {
               ))}
             </div>
 
-            <div className="text-center">
-              <p className="text-xs text-muted-foreground">* GST not included.</p>
+            <p className="text-center text-xs text-muted-foreground mb-12">* GST not included.</p>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto rounded-3xl bg-secondary/10 p-6 sm:p-8">
+              <img
+                src={pavilionSweetheartTable}
+                alt="Couple seated at their sweetheart table beneath warm pavilion lights"
+                loading="lazy"
+                decoding="async"
+                className="w-full aspect-[4/3] object-cover rounded-2xl shadow-elegant img-card"
+              />
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl sm:text-3xl font-serif font-semibold mb-3">See it in person</h3>
+                <p className="text-muted-foreground mb-6">
+                  Walk the ceremony and reception spaces, see the cabin and camping areas, and ask us anything about
+                  packages and pricing. Tours are by appointment.
+                </p>
+                <Link to="/contact">
+                  <CTAButton className="px-8">Book a Tour</CTAButton>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
