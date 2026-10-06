@@ -12,12 +12,12 @@ import Fireflies from "@/components/Fireflies";
 import Flourish from "@/components/Flourish";
 import loveMarqueeArch from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-first-dance-with-love-marquee-sign-32.webp";
 import cabinBridesmaids from "@/assets/gallery/real-weddings/cabin-bride-bridesmaids.webp";
-import receptionTable from "@/assets/gallery/real-weddings/barrel-dessert-table.webp";
-import ceremonySetupWide from "@/assets/gallery/real-weddings/cabin-couple-portrait.webp";
-import groomsmenToast from "@/assets/gallery/real-weddings/meadow-bride-wedding-party.webp";
+import barrelDessertTable from "@/assets/gallery/real-weddings/barrel-dessert-table.webp";
+import cabinCouplePortrait from "@/assets/gallery/real-weddings/cabin-couple-portrait.webp";
+import meadowBrideWeddingParty from "@/assets/gallery/real-weddings/meadow-bride-wedding-party.webp";
 import loveMarquee from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-father-daughter-dance-love-marquee-37.webp";
 import brideDancing from "@/assets/gallery/first-dance-color.webp";
-import weddingParty from "@/assets/gallery/real-weddings/pavilion-bride-family.webp";
+import pavilionBrideFamily from "@/assets/gallery/real-weddings/pavilion-bride-family.webp";
 import cardBoxWineBarrel from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-welcome-sign-mirror-display-39.webp";
 import guestFavorBox from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-in-white-rose-43.webp";
 import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.webp";
@@ -119,7 +119,7 @@ const Packages = () => {
                   </p>
                 </div>
                 <img
-                  src={weddingParty}
+                  src={pavilionBrideFamily}
                   alt="Bride standing with family beneath the pavilion chandelier"
                   loading="lazy"
                   decoding="async"
@@ -129,7 +129,7 @@ const Packages = () => {
 
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
                 <img
-                  src={groomsmenToast}
+                  src={meadowBrideWeddingParty}
                   alt="Bride and wedding party posing together in the open meadow"
                   style={{ objectPosition: "50% 80%" }}
                   className="rounded-lg shadow-lg w-full h-[220px] sm:h-[240px] object-cover img-card"
@@ -171,7 +171,7 @@ const Packages = () => {
                 <div className="relative">
                   <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                   <img
-                    src={receptionTable}
+                    src={barrelDessertTable}
                     alt="Wedding cake and desserts on a rustic barrel-supported table"
                     loading="lazy"
                     decoding="async"
@@ -620,18 +620,20 @@ const Packages = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
               <img
-                src={ceremonySetupWide}
+                src={cabinCouplePortrait}
                 alt="Bride seated outside the wooden cabin with the groom beside her"
                 loading="lazy"
                 decoding="async"
-                className="shadow-xl w-full h-auto object-contain img-card"
+                style={{ objectPosition: "50% 70%" }}
+                className="shadow-xl w-full aspect-[4/5] object-cover img-card"
               />
               <img
                 src={cabinBridesmaids}
                 alt="Bride and bridesmaids with bouquets inside the wooden cabin"
                 loading="lazy"
                 decoding="async"
-                className="shadow-xl w-full h-auto object-contain img-card"
+                style={{ objectPosition: "50% 30%" }}
+                className="shadow-xl w-full aspect-[4/5] object-cover img-card"
               />
             </div>
           </div>

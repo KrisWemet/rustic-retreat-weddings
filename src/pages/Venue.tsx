@@ -264,7 +264,7 @@ const Venue = () => {
                   src={ceremonyAisleWalk}
                   alt="Newlyweds smiling as they walk through the pavilion after their ceremony"
                   description="Your first walk together after saying your vows"
-                  category="The Processional"
+                  category="The Recessional"
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>
@@ -284,7 +284,7 @@ const Venue = () => {
                   src={ceremonyForest2}
                   alt="Newlyweds kissing under the timber pavilion with their wedding party nearby"
                   description="The just-married moment beneath the pavilion timbers"
-                  category="Woodland Sanctuary"
+                  category="Under the Pavilion"
                   className="w-full rounded-2xl"
                 />
               </ScrollReveal>

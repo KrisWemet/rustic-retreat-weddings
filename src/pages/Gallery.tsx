@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/ui/cta-button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Flourish from "@/components/Flourish";
+import PageHero from "@/components/PageHero";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
@@ -21,6 +21,7 @@ interface GalleryImage {
   category: string;
   width?: number;
   height?: number;
+  objectPosition?: string;
 }
 
 const galleryImageMap = import.meta.glob("../assets/gallery/**/*.{webp,jpg,jpeg,png,avif}", {
@@ -119,7 +120,7 @@ const existingImages: GalleryImage[] = Array.from(dedupedImages.entries())
   }));
 
 const images: GalleryImage[] = [...realWeddingPhotos, ...existingImages];
-const galleryHero = realWeddingPhotos.find((image) => image.file === "meadow-couple-lift.webp") || realWeddingPhotos[0];
+const galleryHero = realWeddingPhotos.find((image) => image.file === "pavilion-ceremony-kiss.webp") || realWeddingPhotos[0];
 
 const Gallery = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
@@ -172,26 +173,24 @@ const Gallery = () => {
       <div className="min-h-screen">
         <Navigation />
 
-        <section className="relative bg-primary text-primary-foreground pt-36 pb-16 text-center">
-          <div className="container mx-auto px-4">
-            <h1 className="display-xl font-serif mb-5">Wedding Photo Gallery</h1>
-            <Flourish className="text-primary-foreground/70 mb-6" size="md" />
-            <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
-              Every photo is a real couple. A real moment. A real celebration.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          backgroundImage={galleryHero.src}
+          backgroundImageAlt={galleryHero.alt}
+          backgroundPosition="50% 60%"
+          title="Wedding Photo Gallery"
+          subtitle="Every photo is a real couple. A real moment. A real celebration."
+        />
 
         {/* Gallery Grid with Soft Reveal */}
         <section className="section">
           <div className="container mx-auto px-4">
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredImages.map((image, index) => (
                 <button
                   type="button"
                   aria-label={`View photo: ${image.alt}`}
                   key={image.src}
-                  className="gallery-item block w-full mb-6 break-inside-avoid group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer img-card"
+                  className="gallery-item block w-full aspect-[4/5] group relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer img-card"
                   style={{ animationDelay: `${Math.min(index * 75, 600)}ms` }}
                   onClick={() => setSelectedImageIndex(index)}
                 >
@@ -202,7 +201,8 @@ const Gallery = () => {
                     height={image.height}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                    style={{ objectPosition: image.objectPosition || "center" }}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/25 transition-colors duration-500 pointer-events-none" />
                   <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-gradient-to-t from-black/65 to-transparent p-4 pointer-events-none">

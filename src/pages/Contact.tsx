@@ -18,7 +18,7 @@ import TrustBadges from "@/components/TrustBadges";
 import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Calendar, Clock, CheckCircle2 } from "lucide-react";
-import receptionEvening from "@/assets/gallery/Images/first-dance-string-lights.webp";
+import contactHeroImage from "@/assets/gallery/ceremony-wide-shot.webp";
 import contactMiddleImage from "@/assets/gallery/rustic-retreat-venue-exterior.webp";
 import contactBottomLeft from "@/assets/gallery/real-weddings/woodland-couple-golden-light.webp";
 import contactBottomRight from "@/assets/gallery/real-weddings/forest-treehouse-couple.webp";
@@ -69,7 +69,7 @@ const Contact = () => {
         title="Book a Venue Tour Near Edmonton"
         description="Book a tour of Rustic Retreat, an outdoor wedding venue an hour northwest of Edmonton near Barrhead, Onoway and Alberta Beach. By appointment."
         path="/contact"
-        image={receptionEvening}
+        image={contactHeroImage}
         keywords={["wedding venue tour edmonton", "property visit rustic retreat", "wedding venue consultation alberta", "book wedding venue viewing", "outdoor wedding venue edmonton contact"]}
       />
       <BreadcrumbSchema />
@@ -77,8 +77,8 @@ const Contact = () => {
         <Navigation />
 
         <PageHero
-          backgroundImage={receptionEvening}
-          backgroundImageAlt="Couple dancing under string lights at Rustic Retreat"
+          backgroundImage={contactHeroImage}
+          backgroundImageAlt="Outdoor ceremony with the wedding party in the forest clearing at Rustic Retreat"
           title="Discover Your Venue"
           subtitle="Property tours by appointment only, scheduled around existing bookings. Come feel the space and see if this is where your story wants to unfold."
           overlayOpacity="none"
@@ -114,7 +114,8 @@ const Contact = () => {
                       alt="Bride and groom with their dog beneath the pavilion ceremony backdrop"
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-contain bg-primary/5"
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: "50% 30%" }}
                     />
                   </div>
                 </div>

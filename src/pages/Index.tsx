@@ -15,21 +15,21 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 // Hero & Property Images
 import heroSunsetMeadow from "@/assets/gallery/Images/hero-sunset-meadow.webp";
-import cabinExterior from "@/assets/gallery/Cabin/cabin-porch-view.webp";
-import receptionGazebo from "@/assets/gallery/real-weddings/pavilion-reception-tables-evening.webp";
+import cabinPorchView from "@/assets/gallery/Cabin/cabin-porch-view.webp";
+import pavilionReceptionTables from "@/assets/gallery/real-weddings/pavilion-reception-tables-evening.webp";
 
 // Gallery Images for Storytelling
-import ceremonyWideShot from "@/assets/gallery/real-weddings/pavilion-aisle-newlyweds.webp";
-import loveMarqueeArch from "@/assets/gallery/real-weddings/couple-donkey-portrait.webp";
-import pavilionReception from "@/assets/gallery/real-weddings/pavilion-couple-speech.webp";
-import meadowSunsetKiss from "@/assets/gallery/real-weddings/meadow-couple-lift.webp";
-import coupleWalkingTrail from "@/assets/gallery/real-weddings/forest-trail-couple-kiss.webp";
+import pavilionAisleNewlyweds from "@/assets/gallery/real-weddings/pavilion-aisle-newlyweds.webp";
+import coupleDonkeyPortrait from "@/assets/gallery/real-weddings/couple-donkey-portrait.webp";
+import pavilionCoupleSpeech from "@/assets/gallery/real-weddings/pavilion-couple-speech.webp";
+import meadowCoupleLift from "@/assets/gallery/real-weddings/meadow-couple-lift.webp";
+import forestTrailCoupleKiss from "@/assets/gallery/real-weddings/forest-trail-couple-kiss.webp";
 import weddingPartyCheer from "@/assets/gallery/wedding-party-cheer.webp";
-import weddingPartyLineup from "@/assets/gallery/real-weddings/meadow-wedding-party-playful.webp";
-import img7625 from "@/assets/gallery/real-weddings/lavender-bridesmaids-laughing.webp";
+import meadowWeddingPartyPlayful from "@/assets/gallery/real-weddings/meadow-wedding-party-playful.webp";
+import lavenderBridesmaidsLaughing from "@/assets/gallery/real-weddings/lavender-bridesmaids-laughing.webp";
 import beyondCeremonyImage from "@/assets/gallery/beyond-ceremony-woods.webp";
 import cakeCutting from "@/assets/gallery/cake-cutting.webp";
-import headTable from "@/assets/gallery/real-weddings/pavilion-sweetheart-table.webp";
+import pavilionSweetheartTable from "@/assets/gallery/real-weddings/pavilion-sweetheart-table.webp";
 import weddingPartyFormal from "@/assets/gallery/wedding-party-formal.webp";
 import ringsBouquet from "@/assets/gallery/rings-bouquet.webp";
 import goldCakeCuttingSet from "@/assets/gallery/gold-cake-cutting-set.webp";
@@ -912,10 +912,10 @@ const Index = () => {
           {/* Cinematic Image Row */}
           <div className="grid grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
             <ScrollReveal delay={0}>
-              <HoverImage src={ceremonyWideShot} alt="Newlyweds walking down the pavilion aisle with their guests watching" description="Your first steps as newlyweds, surrounded by the people you love" category="Ceremony" className="h-48 md:h-72 shadow-soft" />
+              <HoverImage src={pavilionAisleNewlyweds} alt="Newlyweds walking down the pavilion aisle with their guests watching" description="Your first steps as newlyweds, surrounded by the people you love" category="Ceremony" className="h-48 md:h-72 shadow-soft" />
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <HoverImage src={coupleWalkingTrail} alt="Couple kissing on a secluded forest trail at Rustic Retreat" description="A quiet moment on the forest trails, just the two of you" category="Portraits" className="h-48 md:h-72 shadow-soft" />
+              <HoverImage src={forestTrailCoupleKiss} alt="Couple kissing on a secluded forest trail at Rustic Retreat" description="A quiet moment on the forest trails, just the two of you" category="Portraits" className="h-48 md:h-72 shadow-soft" />
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <HoverImage src={cakeCutting} alt="Cake cutting and first bite moment under rustic pavilion" description="Sweet moments-cutting the cake and sharing the first bite" category="Reception" className="h-48 md:h-72 shadow-soft" />
@@ -1018,14 +1018,14 @@ const Index = () => {
                 <div className="absolute -inset-4 rounded-[32px] bg-secondary/10 blur-2xl" />
                 <div className="relative grid grid-cols-2 gap-3 lg:gap-4">
                   <img
-                    src={weddingPartyLineup}
+                    src={meadowWeddingPartyPlayful}
                     alt="Bride and groomsmen sharing a playful moment in the meadow"
                     loading="lazy"
                     decoding="async"
                     className="col-span-2 aspect-[16/9] w-full object-cover rounded-3xl shadow-elegant img-card"
                   />
                   <img
-                    src={meadowSunsetKiss}
+                    src={meadowCoupleLift}
                     style={{ objectPosition: "50% 70%" }}
                     alt="Groom lifting the bride in the meadow with a forest backdrop"
                     loading="lazy"
@@ -1033,21 +1033,21 @@ const Index = () => {
                     className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
                   />
                   <img
-                    src={img7625}
+                    src={lavenderBridesmaidsLaughing}
                     alt="Bride laughing with bridesmaids in lavender dresses"
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
                   />
                   <img
-                    src={loveMarqueeArch}
+                    src={coupleDonkeyPortrait}
                     alt="Couple sharing a playful moment beside a donkey on the grass"
                     loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover rounded-2xl shadow-soft img-card"
                   />
                   <img
-                    src={headTable}
+                    src={pavilionSweetheartTable}
                     alt="Couple at their sweetheart table beneath warm pavilion lights"
                     loading="lazy"
                     decoding="async"
@@ -1306,16 +1306,16 @@ const Index = () => {
 
             <ScrollReveal direction="right">
               <div className="grid grid-cols-2 gap-3">
-                <img src={cabinExterior} alt="Cabin porch overlooking the woods at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft img-card" />
+                <img src={cabinPorchView} alt="Cabin porch overlooking the woods at Rustic Retreat" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover shadow-soft img-card" />
                 <img
-                  src={receptionGazebo}
+                  src={pavilionReceptionTables}
                   alt="Picnic tables set for an evening reception under the illuminated pavilion"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-40 md:h-52 object-cover shadow-soft img-card"
                   style={{ objectPosition: "center" }}
                 />
-                <img src={pavilionReception} alt="Bride giving a speech beside the groom under the pavilion" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover object-[50%_20%] shadow-soft col-span-2 img-card" />
+                <img src={pavilionCoupleSpeech} alt="Bride giving a speech beside the groom under the pavilion" loading="lazy" decoding="async" className="w-full h-40 md:h-52 object-cover object-[50%_20%] shadow-soft col-span-2 img-card" />
               </div>
             </ScrollReveal>
           </div>

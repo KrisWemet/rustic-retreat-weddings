@@ -10,7 +10,7 @@ import SEO from "@/components/SEO";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Tent, Flame, Caravan, Moon, Users, MapPin } from "lucide-react";
 
-import heroImage from "@/assets/gallery/meadow-sunset-kiss.webp";
+import heroImage from "@/assets/gallery/Images/extras-firepit-night.webp";
 
 const CampingWedding = () => {
   return (
@@ -28,7 +28,7 @@ const CampingWedding = () => {
 
         <PageHero
           backgroundImage={heroImage}
-          backgroundImageAlt="Couple together in the meadow at sunset at Rustic Retreat"
+          backgroundImageAlt="Guests gathered around the campfire at night at Rustic Retreat"
           title="The Camping Wedding, Perfected"
           subtitle="Your favourite people, tents and campers in the trees, a fire that never quite goes out, and a wedding right in the middle of it."
         />
