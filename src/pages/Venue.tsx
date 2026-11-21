@@ -75,10 +75,6 @@ const Venue = () => {
                 <p className="text-lg mb-6 text-muted-foreground">
                   The newlywed cabin sits a few steps from the fire pit. When you're ready to call it a night, you can slip away while the party carries on outside, and still hear the fire crackling from the porch. It's quiet, it's yours, and it's a good place for it to finally sink in that you're married.
                 </p>
-                <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
-                  "The seamless flow to a gorgeous dance floor and field area, endless paths, and an inviting fire pit hangout near the couples suite made for a fun way to end a long night of dancing."
-                  <footer className="mt-2 text-sm not-italic">Tabitha, Facebook review</footer>
-                </blockquote>
 
               </ScrollReveal>
             </div>
@@ -586,6 +582,10 @@ const Venue = () => {
                   the field. We add something new every season, and couples who book
                   now will see the next round of it.
                 </p>
+                <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
+                  "The venue itself was stunning, the atmosphere was incredible, and everything was so well organized. The owners were friendly, professional, and attentive throughout the whole weekend."
+                  <footer className="mt-2 text-sm not-italic">Anthony Brassard, Google review</footer>
+                </blockquote>
               </div>
             </ScrollReveal>
           </div>

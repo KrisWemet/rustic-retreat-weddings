@@ -127,6 +127,10 @@ const CampingWedding = () => {
                   </Card>
                 </ScrollReveal>
               </div>
+              <blockquote className="mt-8 max-w-2xl mx-auto text-center italic text-muted-foreground">
+                "Roasting hotdogs and smores, camping with family and friends added an extra layer of joy to our wedding."
+                <footer className="mt-2 text-sm not-italic">Tabitha, Facebook review</footer>
+              </blockquote>
             </div>
           </div>
         </section>

@@ -69,7 +69,7 @@ export const FAQS: FAQEntry[] = [
     {
       category: "Booking & Scheduling",
       question: "Can we book on short notice?",
-      answer: "Yes, if your date is still open. One couple planned their whole wedding here in just over a month. If your wedding is less than 90 days away, the full price is due when you book."
+      answer: "Yes, if your date is still open. Viktoria, who got married here in 2025, \"planned a wedding in just over a month\" and called it \"an absolute blast.\" If your wedding is less than 90 days away, the full price is due when you book."
     },
     {
       category: "Booking & Scheduling",

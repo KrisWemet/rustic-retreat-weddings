@@ -347,6 +347,10 @@ const Packages = () => {
                 </CardContent>
               </Card>
             </div>
+            <blockquote className="mt-8 max-w-2xl mx-auto text-center italic text-muted-foreground">
+              "By the end of the weekend, it honestly felt like we had two extra family members there supporting us and people we could lean on whenever we needed something."
+              <footer className="mt-2 text-sm not-italic">Janelle &amp; Brian, Google review</footer>
+            </blockquote>
 
           </div>
         </section>
@@ -481,6 +485,10 @@ const Packages = () => {
                 </Card>
               ))}
             </div>
+            <blockquote className="mt-8 max-w-2xl mx-auto text-center italic text-muted-foreground">
+              "I will absolutely recommend this amazing place to anyone and everyone looking for a small to medium romantic wedding."
+              <footer className="mt-2 text-sm not-italic">Ali, Facebook review</footer>
+            </blockquote>
           </div>
         </section>
 

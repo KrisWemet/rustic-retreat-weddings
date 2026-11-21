@@ -908,6 +908,10 @@ const Index = () => {
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 Friday morning, the first tents go up between the poplars. By dark there's a fire going near the cabin and both families are swapping stories. Saturday you get married in the meadow and dance under the string lights in the gazebo. On Sunday nobody's in a hurry, because checkout isn't until 8pm.
               </p>
+              <blockquote className="mt-8 max-w-2xl mx-auto text-center italic text-muted-foreground">
+                "Absolutely loved the location and privacy, very accommodating and the owners did an amazing job helping out wherever they were needed."
+                <footer className="mt-2 text-sm not-italic">Christine Williams, Google review</footer>
+              </blockquote>
               <Flourish className="text-secondary/55" size="lg" />
             </div>
           </ScrollReveal>
@@ -1172,6 +1176,10 @@ const Index = () => {
               </div>
             </ScrollReveal>
           </div>
+          <blockquote className="mt-8 max-w-2xl mx-auto text-center italic text-muted-foreground">
+            "I had the opportunity to attend a wedding weekend at Rustic Retreat and had the best time."
+            <footer className="mt-2 text-sm not-italic">Kail Jo, Google review</footer>
+          </blockquote>
         </div>
       </section>
 

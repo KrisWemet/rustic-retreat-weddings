@@ -281,6 +281,10 @@ const About = () => {
                   <p className="text-lg">
                     It's a family business, and this is where we live.
                   </p>
+                  <blockquote className="mt-8 max-w-2xl mx-auto text-center italic text-muted-foreground">
+                    "Shannon and her husband went above and beyond to make sure everything went smoothly for us."
+                    <footer className="mt-2 text-sm not-italic">Viktoria, Facebook review</footer>
+                  </blockquote>
                 </div>
               </ScrollReveal>
             </div>

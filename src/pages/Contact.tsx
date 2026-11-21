@@ -107,6 +107,10 @@ const Contact = () => {
                         <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>A relaxed conversation, with no pressure to book</span></li>
                         <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Getting married soon? Ask about open dates</span></li>
                       </ul>
+                      <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
+                        "My husband and I got married here two weeks ago (planned a wedding in just over a month)-let me tell ya, it was an absolute blast!"
+                        <footer className="mt-2 text-sm not-italic">Viktoria, Facebook review</footer>
+                      </blockquote>
                     </CardContent>
                   </Card>
                   <div className="w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-soft shrink-0 img-card">

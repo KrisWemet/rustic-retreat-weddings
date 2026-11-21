@@ -111,7 +111,7 @@ const DIYWedding = () => {
                 </ScrollReveal>
               </div>
               <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
-                "By the end of the weekend, it honestly felt like we had two extra family members there supporting us and people we could lean on whenever we needed something."
+                "They went above and beyond in so many ways - helping wherever they were needed, taking behind-the-scenes photos for us, keeping things running smoothly, and even running to get our rings when we realized they had been forgotten!"
                 <footer className="mt-2 text-sm not-italic">Janelle &amp; Brian, Google review</footer>
               </blockquote>
             </div>
