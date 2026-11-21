@@ -5,7 +5,11 @@ const OrganizationSchema = () => {
   const schema = {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness", "EventVenue"],
+    // Same @id as the static schema in index.html and the venue node in llm.html, so all three describe one business.
+    "@id": "https://www.rusticretreatalberta.ca/#venue",
     name: "Rustic Retreat Weddings",
+    legalName: "Rustic Retreat Weddings & Events Ltd.",
+    alternateName: ["Rustic Retreat", "Rustic Retreat Alberta", "Rustic Retreat Weddings & Events"],
     description: "Multi-day outdoor forest wedding venue near Edmonton on 65 private acres of forest and meadow, with cabin accommodation, camping for 60 guests, and a complete décor collection",
     url: "https://www.rusticretreatalberta.ca",
     logo: "https://www.rusticretreatalberta.ca/logo-512.png",

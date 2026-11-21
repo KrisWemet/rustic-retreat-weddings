@@ -5,6 +5,11 @@ export type FAQEntry = {
   link?: { url: string; text: string };
 };
 
+// Bump this whenever an FAQ question or answer changes. It shows on the FAQs page,
+// goes into its schema as dateModified, and should match the "Last updated" lines in
+// public/faqs.txt and public/prerender/faqs.html.
+export const FAQS_LAST_UPDATED = "2026-11-21";
+
 export const FAQS: FAQEntry[] = [
     {
       category: "Booking & Scheduling",
