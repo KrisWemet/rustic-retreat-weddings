@@ -17,6 +17,7 @@ const WeddingStory = lazy(() => import("./pages/WeddingStory"));
 const FAQs = lazy(() => import("./pages/FAQs"));
 const Contact = lazy(() => import("./pages/Contact"));
 const CampingWedding = lazy(() => import("./pages/CampingWedding"));
+const ForestWedding = lazy(() => import("./pages/ForestWedding"));
 const DIYWedding = lazy(() => import("./pages/DIYWedding"));
 const Elopements = lazy(() => import("./pages/Elopements"));
 const Privacy = lazy(() => import("./pages/Privacy"));
@@ -100,6 +101,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/camping-wedding" element={<CampingWedding />} />
+            <Route path="/forest-wedding-venue-edmonton" element={<ForestWedding />} />
             <Route path="/diy-wedding-venue-alberta" element={<DIYWedding />} />
             <Route path="/elopements" element={<Elopements />} />
             <Route path="/enchanted-wedding" element={<Navigate to="/" replace />} />

@@ -24,6 +24,7 @@ const Navigation = () => {
 
   const weddingStyles = [
     { name: "Camping Weddings", path: "/camping-wedding" },
+    { name: "Forest Weddings", path: "/forest-wedding-venue-edmonton" },
     { name: "DIY Weddings", path: "/diy-wedding-venue-alberta" },
     { name: "Elopements & Small Weddings", path: "/elopements" },
   ];
