@@ -537,6 +537,7 @@ Required answer format:
 1) Give a concise factual answer.
 2) End with a source line in this exact format: Source: /path
 Use one or more source paths from the provided context.
+3) Write plain, friendly sentences. Never use em dashes; use commas, periods or parentheses instead.
 
 If the answer cannot be found in the provided context:
 - Start with exactly: I'm not sure.

@@ -3,7 +3,7 @@
  *
  * ── HOW TO TURN TRACKING ON ────────────────────────────────────────────────
  * Paste your ID between the quotes below and redeploy. That is the only edit
- * needed — everything else (script loading, page views on navigation, and the
+ * needed. Everything else (script loading, page views on navigation, and the
  * lead events on the enquiry and booking forms) is already wired up.
  *
  * While an ID is left empty, that platform stays completely switched off: no
@@ -16,7 +16,7 @@
  */
 
 /**
- * Meta (Facebook) pixel ID — a ~15-digit number.
+ * Meta (Facebook) pixel ID: a ~15-digit number.
  * Find it in Meta Events Manager → Data Sources → your pixel, under the name.
  * Example: "1234567890123456"
  * Env var: VITE_FACEBOOK_PIXEL_ID
@@ -24,7 +24,7 @@
 const FACEBOOK_PIXEL_ID = "";
 
 /**
- * Google Ads conversion ID — starts with "AW-".
+ * Google Ads conversion ID (starts with "AW-").
  * Find it in Google Ads → Goals → Conversions → Google tag.
  * This is what powers Google Ads remarketing audiences.
  * Example: "AW-123456789"
@@ -36,7 +36,7 @@ const FACEBOOK_PIXEL_ID = "";
 const GOOGLE_ADS_ID = "";
 
 /**
- * Google Ads conversion label for enquiry submissions — optional.
+ * Google Ads conversion label for enquiry submissions (optional).
  * In Google Ads, create a conversion action for "Submit lead form", then copy
  * the label from its tag snippet (the part after the slash in send_to).
  * Example: "AbC-D_efGhIjKlMnOp"

@@ -18,6 +18,7 @@ const BreadcrumbSchema = () => {
     '/faqs': 'FAQs',
     '/contact': 'Contact',
     '/camping-wedding': 'Camping Weddings',
+    '/forest-wedding-venue-edmonton': 'Forest Weddings',
     '/diy-wedding-venue-alberta': 'DIY Weddings',
     '/elopements': 'Elopements & Small Weddings',
     '/privacy': 'Privacy Policy',

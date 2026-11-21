@@ -16,7 +16,7 @@ const AvailabilityIndicator = () => {
         </p>
         <p className="text-sm text-amber-800">
           Only <strong>{weekendsLeft} weekend{weekendsLeft === 1 ? "" : "s"}</strong> remain for {months} 2027.
-          Most couples book 8-12 months in advance.
+          Popular dates book 12-18 months in advance.
         </p>
       </div>
     </div>

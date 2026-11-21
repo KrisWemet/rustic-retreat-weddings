@@ -17,7 +17,7 @@ const SIZES: Record<NonNullable<FlourishProps["size"]>, string> = {
  * A small botanical flourish used as an ornamental divider beneath
  * section labels and headings. Two trailing vines sweep out from a
  * central leaf-and-sparkle motif, and the whole ornament draws itself
- * in — vines tracing outward, leaves blooming — as it scrolls into view.
+ * in (vines tracing outward, leaves blooming) as it scrolls into view.
  */
 const Flourish = ({ className = "text-secondary/70", size = "md" }: FlourishProps) => {
   const ref = useRef<HTMLSpanElement>(null);

@@ -29,7 +29,7 @@ const DIYWedding = () => {
         <PageHero
           backgroundImage={heroImage}
           backgroundImageAlt="Evening reception under string lights at Rustic Retreat"
-          title="Your Wedding, Your Way — Actually"
+          title="Your Wedding, Actually Your Way"
           subtitle="No mandatory vendors. No per-plate minimums. No corkage fees. A DIY wedding venue that means it."
         />
 
@@ -39,7 +39,7 @@ const DIYWedding = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">What "No Restrictions" Really Means Here</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  Most venues say you have options, then hand you a preferred-vendor list and a bar minimum. Rustic Retreat works differently: you rent the entire 65-acre property for multiple days, and what happens on it is up to you. Bring the photographer you love, the caterer who makes your favourite food, the aunt who bakes better than any bakery — or do the whole thing yourselves with family pitching in. That's not a loophole here; it's the design.
+                  Most venues say you have options, then hand you a preferred-vendor list and a bar minimum. Rustic Retreat works differently: you rent the entire 65-acre property for multiple days, and what happens on it is up to you. Bring the photographer you love, the caterer who makes your favourite food, the aunt who bakes better than any bakery, or do the whole thing yourselves with family pitching in. That's not a loophole here; it's the design.
                 </p>
               </ScrollReveal>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
@@ -47,9 +47,9 @@ const DIYWedding = () => {
                   <Card className="border-2 hover:border-secondary transition-colors h-full">
                     <CardContent className="pt-6">
                       <ChefHat className="w-8 h-8 text-secondary mb-3" />
-                      <h3 className="font-semibold mb-2">Any Caterer — Or None</h3>
+                      <h3 className="font-semibold mb-2">Any Caterer, or None</h3>
                       <p className="text-sm text-muted-foreground">
-                        Food trucks, family potlucks, a hog roast, your favourite restaurant — no approved lists and no per-plate minimums. Just let caterers know we're off-grid and solar-powered.
+                        Food trucks, family potlucks, a hog roast, your favourite restaurant. No approved lists and no per-plate minimums. Just let caterers know we're off-grid and solar-powered.
                       </p>
                     </CardContent>
                   </Card>
@@ -60,7 +60,7 @@ const DIYWedding = () => {
                       <Wine className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Run Your Own Bar</h3>
                       <p className="text-sm text-muted-foreground">
-                        BYOB with zero corkage fees and zero drink minimums. Self-serve coolers or a full DIY bar — you just need an inexpensive AGLC Special Event Licence, and we'll guide you through it.
+                        BYOB with zero corkage fees and zero drink minimums. Self-serve coolers or a full DIY bar. You just need an inexpensive AGLC Special Event Licence, and we'll guide you through it.
                       </p>
                     </CardContent>
                   </Card>
@@ -71,7 +71,7 @@ const DIYWedding = () => {
                       <Sparkles className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Décor Collection Included</h3>
                       <p className="text-sm text-muted-foreground">
-                        Arches, table styling, hurricane vases, candle holders, faux florals, signage, sheer fabrics — a growing collection at no extra cost, so DIY doesn't mean buying everything.
+                        Arches, table styling, hurricane vases, candle holders, faux florals, signage, sheer fabrics. It's a growing collection at no extra cost, so DIY doesn't mean buying everything.
                       </p>
                     </CardContent>
                   </Card>
@@ -82,7 +82,7 @@ const DIYWedding = () => {
                       <Clock className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Days to Set Up, Not Hours</h3>
                       <p className="text-sm text-muted-foreground">
-                        DIY falls apart when you get the keys at 9am on wedding day. Here you check in days early — decorate slowly, with helpers, without panic. Check-in 8am day one, checkout 8pm final day.
+                        DIY falls apart when you get the keys at 9am on wedding day. Here you check in days early, so you can decorate slowly, with helpers, without panic. Check-in 8am day one, checkout 8pm final day.
                       </p>
                     </CardContent>
                   </Card>
@@ -104,7 +104,7 @@ const DIYWedding = () => {
                       <Wallet className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">A Budget You Control</h3>
                       <p className="text-sm text-muted-foreground">
-                        The venue is one flat price. Every other dollar — food, drink, flowers, photos — goes where you decide, at prices you negotiate. That's how DIY couples celebrate for less.
+                        The venue is one flat price. Every other dollar (food, drink, flowers, photos) goes where you decide, at prices you negotiate. That's how DIY couples celebrate for less.
                       </p>
                     </CardContent>
                   </Card>

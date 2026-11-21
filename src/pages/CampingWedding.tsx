@@ -39,10 +39,10 @@ const CampingWedding = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">What Is a Camping Wedding?</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  A camping wedding turns your wedding day into a wedding weekend. Instead of guests arriving at 3pm and driving home at midnight, everyone sets up camp and stays — Friday campfires, Saturday vows, Sunday morning coffee in the trees. It feels closer to a small festival with your favourite people than a scheduled event, and couples consistently tell us it's the reason their wedding actually felt like time together.
+                  A camping wedding turns your wedding day into a wedding weekend. Instead of guests arriving at 3pm and driving home at midnight, everyone sets up camp and stays: Friday campfires, Saturday vows, Sunday morning coffee in the trees. It feels closer to a small festival with your favourite people than a scheduled event, and couples consistently tell us it's the reason their wedding actually felt like time together.
                 </p>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  Rustic Retreat was built for exactly this. We're a family-owned, off-grid camping wedding venue on 65 private acres near Lac La Nonne, Alberta — about an hour northwest of Edmonton — and we host just one wedding per weekend, so the entire property is yours.
+                  Rustic Retreat was built for exactly this. We're a family-owned, off-grid camping wedding venue on 65 private acres near Lac La Nonne, Alberta, about an hour northwest of Edmonton, and we host just one wedding per weekend, so the entire property is yours.
                 </p>
               </ScrollReveal>
             </div>
@@ -53,7 +53,7 @@ const CampingWedding = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <ScrollReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Camping Is Included — Not an Upsell</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Camping Is Included, Not an Upsell</h2>
               </ScrollReveal>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <ScrollReveal delay={0}>
@@ -62,7 +62,7 @@ const CampingWedding = () => {
                       <Users className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Up to 60 Guests Camp Free</h3>
                       <p className="text-sm text-muted-foreground">
-                        Overnight camping for up to 60 guests is included in every package. No per-tent fees, no nightly charges — it's simply part of booking the property.
+                        Overnight camping for up to 60 guests is included in every package. No per-tent fees, no nightly charges. It's simply part of booking the property.
                       </p>
                     </CardContent>
                   </Card>
@@ -84,7 +84,7 @@ const CampingWedding = () => {
                       <Flame className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Firewood Stocked All Weekend</h3>
                       <p className="text-sm text-muted-foreground">
-                        A filled firewood shed comes with every booking. The fire pit is where your weekend actually happens — late-night stories, s'mores, and the goodbyes nobody wants to say.
+                        A filled firewood shed comes with every booking. The fire pit is where your weekend actually happens: late-night stories, s'mores, and the goodbyes nobody wants to say.
                       </p>
                     </CardContent>
                   </Card>
@@ -133,7 +133,7 @@ const CampingWedding = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">The Weekend, Not Just the Day</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  Every package is multi-day, because a camping wedding needs room to breathe. The 3-day weekend gives you Friday setup and campfires, Saturday vows, and a slow Sunday. The 5-day experience — our most popular — adds the settling-in days where guests actually bond before the big day arrives. And as the couple, you retreat each night to the newlywed cabin: private, stocked, and a few steps from the fire.
+                  Every package is multi-day, because a camping wedding needs room to breathe. The 3-day weekend gives you Friday setup and campfires, Saturday vows, and a slow Sunday. The 5-day experience, our most popular, adds the settling-in days where guests actually bond before the big day arrives. And as the couple, you retreat each night to the newlywed cabin: private, stocked, and a few steps from the fire.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link to="/packages">
@@ -153,7 +153,7 @@ const CampingWedding = () => {
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Come Walk the Land</h2>
               <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-                The camping area, the fire pit, the gazebo under the trees — it all makes more sense in person. Tours are by appointment, and evenings show the property at its best.
+                The camping area, the fire pit and the gazebo under the trees all make more sense in person. Tours are by appointment, and evenings show the property at its best.
               </p>
               <Link to="/contact">
                 <Button size="lg" variant="secondary" className="rounded-full px-8">Schedule Your Tour</Button>

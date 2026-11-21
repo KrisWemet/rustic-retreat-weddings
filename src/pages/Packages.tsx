@@ -30,7 +30,7 @@ import { trackViewContent } from "@/lib/analytics";
 
 const Packages = () => {
   const [season, setSeason] = useState<Season>(DEFAULT_SEASON);
-  // Reading pricing is the strongest intent signal on the site — worth its own
+  // Reading pricing is the strongest intent signal on the site, worth its own
   // retargeting audience, separate from general traffic.
   useEffect(() => {
     trackViewContent("Packages & Pricing");
