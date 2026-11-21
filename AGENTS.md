@@ -38,4 +38,5 @@
 - Every indexable route needs a `public/prerender/<route>.html` snapshot that matches the page. Crawlers that do not run JavaScript (including ChatGPT's) only see that snapshot; a route without one shows them the homepage's fallback text instead.
 - When FAQ content changes, bump `FAQS_LAST_UPDATED` in `src/content/faqs.ts` and the "Last updated" lines in `public/faqs.txt` and `public/prerender/faqs.html`. In `sitemap.xml`, set a page's `lastmod` to the date its content last changed, not the deploy date.
 - Production deploys notify Bing through IndexNow (`.github/workflows/indexnow.yml`, or `npm run indexnow` by hand). Keep the key file `public/<32 hex characters>.txt`.
-- Write copy without em dashes; use commas, periods, colons or parentheses.
+- Write copy without em dashes or en dashes; use commas, periods, colons or parentheses, and "to" for ranges (June to September, 5 to 15 minutes).
+- Run new or edited page copy through the humanizer skill in `.claude/skills/humanizer/` (from github.com/blader/humanizer, MIT) before publishing. Leave quoted customer reviews as written. If FAQ answers change, keep `public/faqs.txt` and `public/prerender/faqs.html` in step with `src/content/faqs.ts`.
