@@ -116,7 +116,7 @@ const Packages = () => {
                     Check-in is 8am on the first day, and checkout is 8pm on the last.
                   </p>
                   <p className="text-muted-foreground">
-                    The two extra days are when families get to know each other, over a Thursday hike or a fire that runs late. By Saturday your guests aren't strangers anymore, and if friends and family are decorating, nobody has to rush the setup.
+                    The two extra days are when families get to know each other, over a first dinner together or a fire that runs late. By Saturday your guests aren't strangers anymore, and if friends and family are decorating, nobody has to rush the setup.
                   </p>
                   <p className="mt-4 font-medium">
                     If you're hiring vendors to handle setup and takedown, the 3-day weekend works well.

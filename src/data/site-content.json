@@ -46,15 +46,11 @@
         "price2028": "8,500",
         "description": "5-day celebration (Wed-Sun or Thu-Mon) with more time for guests.",
         "previewDescription": "Five days on the property, midweek through the weekend, with the cabin, camping, the décor collection and time for more than one event.",
-        "timelineTitle": "The Timeline (Wednesday Arrival Option):",
+        "timelineTitle": "The Timeline (Thursday Arrival Option):",
         "timeline": [
           {
-            "day": "Wednesday:",
-            "desc": "Guests arrive through the day, set up camp and sit down to a first dinner together."
-          },
-          {
             "day": "Thursday:",
-            "desc": "A slower day to settle in, with a hike, some yard games and a fire in the evening."
+            "desc": "Guests arrive through the day, set up camp and sit down to a first dinner together."
           },
           {
             "day": "Friday:",
@@ -66,11 +62,15 @@
           },
           {
             "day": "Sunday:",
-            "desc": "A slow breakfast and long goodbyes, with checkout at 8pm."
+            "desc": "An activity day for everyone, like a group hike or a cornhole tournament, then a last night around the fire."
+          },
+          {
+            "day": "Monday:",
+            "desc": "Pack up and say goodbye to everyone, with checkout at 8pm."
           }
         ],
         "perfectForTitle": "Best for:",
-        "perfectForText": "Couples who want their families to get to know each other, and anyone who has left a six-hour wedding feeling they barely talked to the people they came to see.",
+        "perfectForText": "Couples who want to plan an activity day for everyone. It's been one of the highlights of the weekend for couples who've done it.",
         "features": [
           "108 hours on the property",
           "Time for families to get to know each other",
