@@ -107,7 +107,7 @@ const Packages = () => {
               </p>
 
               <p className="mb-6">
-                Both packages book the entire property, so you never share it with another wedding. The 3-day weekend runs Friday to Sunday. The 5-day experience runs Wednesday to Sunday or Thursday to Monday, and it's our most popular.
+                Both packages book the entire property for weddings of 60 to 80 guests, so you never share it with another wedding. The 3-day weekend runs Friday to Sunday. The 5-day experience runs Wednesday to Sunday or Thursday to Monday, and it's our most popular.
               </p>
 
               <div className="grid md:grid-cols-2 gap-5 md:gap-6 items-center my-8">
@@ -116,7 +116,7 @@ const Packages = () => {
                     Check-in is 8am on the first day, and checkout is 8pm on the last.
                   </p>
                   <p className="text-muted-foreground">
-                    The two extra days give guests time to arrive and get to know each other before the wedding, and they make setup much easier if friends and family are decorating.
+                    The two extra days are when families get to know each other, over a Thursday hike or a fire that runs late. By Saturday your guests aren't strangers anymore, and if friends and family are decorating, nobody has to rush the setup.
                   </p>
                   <p className="mt-4 font-medium">
                     If you're hiring vendors to handle setup and takedown, the 3-day weekend works well.
@@ -237,7 +237,7 @@ const Packages = () => {
               ))}
             </div>
 
-            <p className="text-center text-xs text-muted-foreground mb-12">* GST not included.</p>
+            <p className="text-center text-xs text-muted-foreground mb-12">* GST not included. Payment plans are available, and a deposit holds your date.</p>
 
             <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto rounded-3xl bg-secondary/10 p-6 sm:p-8">
               <img
@@ -251,7 +251,7 @@ const Packages = () => {
                 <h3 className="text-2xl sm:text-3xl font-serif font-semibold mb-3">See it in person</h3>
                 <p className="text-muted-foreground mb-6">
                   Walk the ceremony and reception spaces, see the cabin and camping areas, and ask us anything about
-                  packages and pricing. Tours are by appointment.
+                  packages and pricing. Tours are by appointment, and if you live too far away, a video call tour counts as your visit.
                 </p>
                 <Link to="/contact">
                   <CTAButton className="px-8">Book a Tour</CTAButton>
@@ -340,9 +340,9 @@ const Packages = () => {
                   <Calendar className="w-8 h-8 text-secondary mb-3" />
                   <h3 className="font-semibold mb-2">Planning Support</h3>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Vendor recommendations</li>
+                    <li>• Vendor recommendations, including caterers who've worked here</li>
                     <li>• Property guidance and tips</li>
-                    <li>• Optional paid coordination available</li>
+                    <li>• Coordination built around what you need (ask for a quote)</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -662,7 +662,7 @@ const Packages = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6">Walk the Land With Us</h2>
             <p className="text-lg sm:text-xl mb-6 max-w-2xl mx-auto text-primary-foreground/90">
-              Every booking starts with a visit, so come walk the property and ask us anything.
+              Every booking starts with a visit, in person or by video call, so come see the property and ask us anything.
             </p>
             <Link to="/contact">
               <CTAButton className="text-lg px-8">

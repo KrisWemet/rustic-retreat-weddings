@@ -29,7 +29,7 @@ const About = () => {
             <h1 className="display-xl font-serif mb-5">About Rustic Retreat</h1>
             <Flourish className="text-secondary/60 mb-6" size="md" />
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
-              Family-owned since 2006. We built this place for our own family gatherings, and now we share it with couples.
+              Family-owned since 2006. When my dad finished the first part of the gazebo in 2018, he said, "Looks nice. Good place to get married." In 2025, we opened to weddings.
             </p>
           </div>
         </section>

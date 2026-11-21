@@ -44,6 +44,10 @@ const CampingWedding = () => {
                 <p className="text-lg mb-6 text-muted-foreground">
                   Rustic Retreat was built for exactly this. We're a family-owned, off-grid camping wedding venue on 65 private acres near Lac La Nonne, Alberta, about an hour northwest of Edmonton, and we host just one wedding per weekend, so the entire property is yours.
                 </p>
+                <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
+                  "It was nice to have camping on-site so many guests can stay late and enjoy the evening."
+                  <footer className="mt-2 text-sm not-italic">Brian Dodd, Google review</footer>
+                </blockquote>
               </ScrollReveal>
             </div>
           </div>
@@ -106,7 +110,7 @@ const CampingWedding = () => {
                       <Moon className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">True Boondocking</h3>
                       <p className="text-sm text-muted-foreground">
-                        There are no electrical hookups or water connections at the campsites. There are outhouses, a wash house with two shower stalls and on-demand hot water, and generators are allowed until 10pm.
+                        There are no electrical hookups or water connections at the campsites. There are outhouses, a wash house with two shower stalls and on-demand hot water, and generators are allowed until 10pm. Pack bug spray too; some summers are buggier than others.
                       </p>
                     </CardContent>
                   </Card>
@@ -117,7 +121,7 @@ const CampingWedding = () => {
                       <MapPin className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Beds for the Non-Campers</h3>
                       <p className="text-sm text-muted-foreground">
-                        Lakefront Airbnbs on Lac la Nonne are 5 to 15 minutes away, and there are hotels in Barrhead and Onoway, about 15 minutes out.
+                        Grandma doesn't have to sleep in a tent. Lakefront Airbnbs on Lac la Nonne are 5 to 15 minutes away, there are hotels in Barrhead and Onoway about 15 minutes out, and RVezy can deliver a trailer that's set up before she arrives.
                       </p>
                     </CardContent>
                   </Card>

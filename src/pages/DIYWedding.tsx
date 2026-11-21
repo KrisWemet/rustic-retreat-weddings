@@ -49,7 +49,7 @@ const DIYWedding = () => {
                       <ChefHat className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Any Caterer, or None</h3>
                       <p className="text-sm text-muted-foreground">
-                        Food trucks, family potlucks, a hog roast, your favourite restaurant. There's no approved list and no per-plate minimum. Just let caterers know we're off-grid and solar-powered.
+                        Food trucks, family potlucks, a hog roast, your favourite restaurant. There's no approved list and no per-plate minimum. Just let caterers know we're off-grid and solar-powered. Laura Rose Catering and the Curbside by A Cappella food truck have both worked here.
                       </p>
                     </CardContent>
                   </Card>
@@ -93,7 +93,7 @@ const DIYWedding = () => {
                       <HandHeart className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Help When You Want It</h3>
                       <p className="text-sm text-muted-foreground">
-                        We live on the property and we're close by all weekend. Need a recommendation, a safety pin, or a hand figuring out layout? Ask. Prefer to be left alone? Also perfect.
+                        We live on the property and we're close by all weekend. Need a recommendation, a safety pin, or a hand figuring out layout? Ask. Prefer to be left alone? Also perfect. If you'd rather hand the day to someone, we offer coordination built around what you need.
                       </p>
                     </CardContent>
                   </Card>
@@ -110,6 +110,10 @@ const DIYWedding = () => {
                   </Card>
                 </ScrollReveal>
               </div>
+              <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
+                "By the end of the weekend, it honestly felt like we had two extra family members there supporting us and people we could lean on whenever we needed something."
+                <footer className="mt-2 text-sm not-italic">Janelle &amp; Brian, Google review</footer>
+              </blockquote>
             </div>
           </div>
         </section>

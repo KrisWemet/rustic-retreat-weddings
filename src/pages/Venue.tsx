@@ -75,6 +75,10 @@ const Venue = () => {
                 <p className="text-lg mb-6 text-muted-foreground">
                   The newlywed cabin sits a few steps from the fire pit. When you're ready to call it a night, you can slip away while the party carries on outside, and still hear the fire crackling from the porch. It's quiet, it's yours, and it's a good place for it to finally sink in that you're married.
                 </p>
+                <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
+                  "The seamless flow to a gorgeous dance floor and field area, endless paths, and an inviting fire pit hangout near the couples suite made for a fun way to end a long night of dancing."
+                  <footer className="mt-2 text-sm not-italic">Tabitha, Facebook review</footer>
+                </blockquote>
 
               </ScrollReveal>
             </div>
@@ -203,7 +207,7 @@ const Venue = () => {
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  In the evening, most couples move the party to the clear-top gazebo, which seats 80 under string lights with the sky overhead.
+                  In the evening, most couples move the party to the clear-top gazebo, which seats 80 under string lights with the sky overhead. Mosquitoes vary a lot from year to year, and a few Thermacell repellers (bring your own) keep the gazebo comfortable.
                 </p>
 
                 <div className="bg-primary/5 p-6 border-l-4 border-primary mt-6">
@@ -324,6 +328,10 @@ const Venue = () => {
                 <p className="text-lg mb-6 text-muted-foreground">
                   It's boondocking, so there are no electrical or water hookups at the campsites. Most guests are happy to trade those for a dark sky and a fire every night. If someone would rather not sleep in a tent, RVezy.com can deliver a rental trailer to the camping area.
                 </p>
+                <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
+                  "The stars at night were also a huge hit for myself!"
+                  <footer className="mt-2 text-sm not-italic">Kail Jo, Google review</footer>
+                </blockquote>
               </ScrollReveal>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
                 <ScrollReveal delay={0}>
@@ -385,8 +393,9 @@ const Venue = () => {
                     <ShowerHead className="w-10 h-10 text-secondary mb-4" />
                     <h3 className="text-xl font-bold mb-2">The Wash House</h3>
                     <p className="text-muted-foreground mb-4">
-                      Two private shower stalls with on-demand hot water, so it doesn't run out and the pressure is good.
-                      Guests camping for three or five days can shower here instead of driving into town.
+                      After a night by the fire, there's a hot shower waiting: two private stalls with on-demand hot water, so it
+                      doesn't run out and the pressure is good. Guests camping for three or five days never have to drive into
+                      town to clean up.
                     </p>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• Two separate shower stalls</li>
@@ -421,8 +430,9 @@ const Venue = () => {
             <ScrollReveal delay={200}>
               <div className="max-w-3xl mx-auto mt-10 text-center">
                 <div className="p-4 bg-card border rounded-xl inline-block italic text-sm text-muted-foreground">
-                  Both buildings are family-built, like most things here. Outhouses remain on site as well, and a
-                  bathroom house with two flush toilets is in the works for the 2027 season.
+                  Both buildings are family-built, like most things here. The outhouses are kept clean, we bring in an
+                  extra portable one for bigger groups, and a bathroom house with two flush toilets is in the works for
+                  the 2027 season.
                 </div>
               </div>
             </ScrollReveal>

@@ -43,12 +43,17 @@ const faqs = [
   {
     question: "How many guests can a forest wedding here hold?",
     answer:
-      "Up to 80 guests for the ceremony and reception. The clear-top gazebo seats all 80 for the reception. Overnight camping is included for up to 60 guests in tents and RVs (8 RVs included, up to 15 on site), with no hookups.",
+      "The property is set up for weddings of 60 to 80 guests, with seating for 80 at the ceremony and reception (we can host up to 100 at most). The clear-top gazebo seats all 80 for the reception. Overnight camping is included for up to 60 guests in tents and RVs (8 RVs included, up to 15 on site), with no hookups.",
   },
   {
     question: "What happens if it rains on a forest wedding?",
     answer:
       "The clear-top gazebo covers all 80 guests for the reception, and the ceremony can move under it too. There is also room on the property for a rented tent if you want extra peace of mind.",
+  },
+  {
+    question: "Are there a lot of mosquitoes in the forest?",
+    answer:
+      "It depends on the year; some summers are much buggier than others. Thermacell repellers work really well under the gazebo, so bring a few for the reception (we don't supply them), and pack bug spray for the trails and campsites.",
   },
   {
     question: "Do you host more than one wedding per weekend?",
@@ -135,6 +140,10 @@ const ForestWedding = () => {
                 <p className="text-lg mb-6 text-muted-foreground">
                   The land is a mix of poplar forest, meadow and groomed trails, with a hand-crafted gazebo set in the trees. Ceremonies happen wherever you choose. Receptions move to the clear-top gazebo under string lights, then carry on around the fire.
                 </p>
+                <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
+                  "The property is stunning, featuring a romantic couples cabin, enchanting forested areas, and a breathtaking gazebo adorned with lights and ample space."
+                  <footer className="mt-2 text-sm not-italic">Tabitha, Facebook review</footer>
+                </blockquote>
               </ScrollReveal>
             </div>
           </div>

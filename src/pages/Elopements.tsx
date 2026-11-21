@@ -115,7 +115,7 @@ const Elopements = () => {
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Start With a Quiet Walk</h2>
               <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-                Come see the property and find your spot. Every booking starts with a visit, and there's no pressure to decide that day.
+                Come see the property and find your spot. Every booking starts with a visit, in person or by video call, and there's no pressure to decide that day.
               </p>
               <Link to="/contact">
                 <Button size="lg" variant="secondary" className="rounded-full px-8">Book a Property Tour</Button>

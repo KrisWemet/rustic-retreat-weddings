@@ -80,7 +80,7 @@ const Contact = () => {
           backgroundImage={contactHeroImage}
           backgroundImageAlt="Outdoor ceremony with the wedding party in the forest clearing at Rustic Retreat"
           title="Book a Tour"
-          subtitle="Property tours are by appointment, scheduled around existing bookings."
+          subtitle="Property tours are by appointment, scheduled around existing bookings. Live far away? A video call tour counts as your visit."
           overlayOpacity="none"
           contentClassName="translate-y-[15vh] drop-shadow-md"
         />
@@ -105,6 +105,7 @@ const Contact = () => {
                         <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Browse the Wedding Décor Collection</span></li>
                         <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Discuss packages and pricing openly</span></li>
                         <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>A relaxed conversation, with no pressure to book</span></li>
+                        <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Getting married soon? Ask about open dates</span></li>
                       </ul>
                     </CardContent>
                   </Card>
@@ -145,7 +146,7 @@ const Contact = () => {
                         {/* Response Time Badge */}
                         <div className="flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm mb-6 w-fit">
                           <Clock className="w-4 h-4" />
-                          <span className="font-medium">We respond within 24 hours.</span>
+                          <span className="font-medium">Shannon replies within 24 hours to set up your tour.</span>
                         </div>
 
                         <h2 className="text-2xl font-bold mb-2">Tell Us About Your Wedding</h2>

@@ -458,7 +458,7 @@ const Index = () => {
     cmsHomepage?.introCards?.filter((card) => Boolean(card?.text)) ||
     content.homepage.intro.text.map((text) => ({ text }));
   const builderSections = cmsHomepage?.pageBuilder?.filter((section) => Boolean(section?._type)) || [];
-  const homeFaqs = FAQS.slice(0, 2);
+  const homeFaqs = FAQS.slice(0, 3);
   const sanityDataAttribute = cmsHomepage?._id && cmsHomepage?._type
     ? createDataAttribute({
       id: cmsHomepage._id,
@@ -903,10 +903,10 @@ const Index = () => {
           <ScrollReveal>
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-5xl font-serif mb-8 leading-tight">
-                Most venues start with their rules and their schedule.<br /><span className="italic text-secondary">We start with what you want to do.</span>
+                Your people, together<br /><span className="italic text-secondary">from the first tent to the last coffee.</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                You get the whole property for three or five days, and you decide how to spend them.
+                Friday morning, the first tents go up between the poplars. By dark there's a fire going near the cabin and both families are swapping stories. Saturday you get married in the meadow and dance under the string lights in the gazebo. On Sunday nobody's in a hurry, because checkout isn't until 8pm.
               </p>
               <Flourish className="text-secondary/55" size="lg" />
             </div>
@@ -936,6 +936,9 @@ const Index = () => {
               <h2 className="display-lg font-serif mb-4">
                 Take a virtual walk with us
               </h2>
+              <p className="text-muted-foreground mb-4">
+                Too far away to come for a tour? We can show you around on a video call, and it counts as your visit.
+              </p>
               <Flourish className="text-secondary/55" size="md" />
             </div>
           </ScrollReveal>
@@ -1236,7 +1239,7 @@ const Index = () => {
                     View Full Package Details
                   </Button>
                 </Link>
-                <p className="text-xs text-muted-foreground mt-3">* GST not included.</p>
+                <p className="text-xs text-muted-foreground mt-3">* GST not included. Payment plans are available, and a deposit holds your date.</p>
               </div>
             </ScrollReveal>
           </div>
@@ -1353,6 +1356,9 @@ const Index = () => {
                 </CTAButton>
               </Link>
             </div>
+            <p className="text-sm text-primary-foreground/80 mt-4">
+              Weekday tours run up to 90 minutes, in person or by video call, and there's no pressure to book that day.
+            </p>
           </ScrollReveal>
         </div>
       </section>
