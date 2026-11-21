@@ -1,7 +1,7 @@
 /**
  * Meta (Facebook) pixel and Google Ads tag.
  *
- * Both stay dormant until an ID is filled in at `@/config/analytics` — with no
+ * Both stay dormant until an ID is filled in at `@/config/analytics`. With no
  * ID, every function here returns immediately, so nothing loads and nothing is
  * sent. Google Analytics 4 is separate and keeps running from index.html.
  *
@@ -50,7 +50,7 @@ const onIdle = (fn: () => void) => {
 };
 
 /**
- * Meta's standard loader, minus the automatic first PageView — that is fired by
+ * Meta's standard loader, minus the automatic first PageView, which is fired by
  * the router listener instead so navigations and the initial load are counted
  * the same way.
  */
@@ -120,7 +120,7 @@ export const initAdTracking = () => {
 
 /**
  * Fires a page view. This is a single-page app, so in-app navigation never
- * reloads the document — without this, every visit would report as one page
+ * reloads the document. Without this, every visit would report as one page
  * view of whatever page the visitor happened to land on.
  */
 export const trackPageView = (path: string) => {
@@ -140,7 +140,7 @@ export const trackPageView = (path: string) => {
 
 /**
  * An enquiry or booking request was submitted successfully. This is the event
- * worth optimising ad delivery against — it means someone asked about a date,
+ * worth optimising ad delivery against: it means someone asked about a date,
  * not merely that they clicked an ad.
  */
 export const trackLead = (details?: { source?: string }) => {
@@ -158,7 +158,7 @@ export const trackLead = (details?: { source?: string }) => {
 };
 
 /**
- * A high-intent page was viewed — pricing in particular. Useful as a warm
+ * A high-intent page was viewed (pricing in particular). Useful as a warm
  * retargeting audience separate from general site traffic.
  */
 export const trackViewContent = (name: string) => {

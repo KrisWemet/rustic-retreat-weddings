@@ -318,7 +318,7 @@ const Contact = () => {
                           <div className="rounded-xl border border-secondary/25 bg-secondary/5 px-5 py-4">
                             <p className="text-sm leading-relaxed text-muted-foreground">
                               <span className="font-medium text-primary">One quick thing:</span>{" "}
-                              please add us to your contacts before you go —{" "}
+                              please add us to your contacts before you go:{" "}
                               <a
                                 href="tel:+17802106252"
                                 className="whitespace-nowrap text-primary underline underline-offset-2 hover:no-underline"

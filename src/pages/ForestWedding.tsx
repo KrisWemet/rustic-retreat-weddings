@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "Where is Rustic Retreat, and how far is it from Edmonton?",
     answer:
-      "We're at 3121 Township Road 572A in Lac Ste. Anne County, near Lac La Nonne: 99 km northwest of Edmonton, about an hour's drive, and about 20 minutes from both Barrhead and Onoway.",
+      "We're at 3121 Township Road 572A in Lac Ste. Anne County, near Lac La Nonne: 99 km northwest of Edmonton, about an hour's drive, and about 15 minutes from both Barrhead and Onoway.",
   },
   {
     question: "How much does a forest wedding at Rustic Retreat cost?",
@@ -130,7 +130,7 @@ const ForestWedding = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Vows Under the Trees</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  Rustic Retreat is a family-owned forest wedding venue on 65 private acres near Lac La Nonne, in Lac Ste. Anne County, Alberta. We're about an hour northwest of Edmonton and about 20 minutes from Barrhead. Couples come for a woodland ceremony and stay for the weekend: there's no ballroom ceiling, no rigid timeline, and nobody else's wedding on the property.
+                  Rustic Retreat is a family-owned forest wedding venue on 65 private acres near Lac La Nonne, in Lac Ste. Anne County, Alberta. We're about an hour northwest of Edmonton and about 15 minutes from Barrhead. Couples come for a woodland ceremony and stay for the weekend: there's no ballroom ceiling, no rigid timeline, and nobody else's wedding on the property.
                 </p>
                 <p className="text-lg mb-6 text-muted-foreground">
                   The land is a mix of poplar forest, meadow and groomed trails, with a hand-crafted gazebo set in the trees. Ceremonies happen wherever you choose. Receptions move to the clear-top gazebo under string lights, then carry on around the fire.

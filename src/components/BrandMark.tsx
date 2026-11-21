@@ -3,7 +3,7 @@ import brandMark from "@/assets/logo/rr-monogram.svg";
 /**
  * The mark is painted with currentColor through a CSS mask, so it inherits
  * whatever text colour its container sets. Callers size it with a height
- * class only — the aspect ratio here supplies the width.
+ * class only; the aspect ratio here supplies the width.
  */
 export default function BrandMark({ className = "" }: { className?: string }) {
   return (

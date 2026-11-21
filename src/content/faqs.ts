@@ -94,7 +94,7 @@ export const FAQS: FAQEntry[] = [
     {
       category: "Location & Access",
       question: "How far is Rustic Retreat from Edmonton?",
-      answer: "About an hour northwest of Edmonton - 99 kilometres from the city centre, near the shores of Lac la Nonne, and just 20 minutes from both Barrhead and Onoway.\n\nClose enough that your guests won’t dread the drive. Far enough that the moment you turn off the highway and head toward the property, the city genuinely feels like it belongs to another world.\n\nThe drive itself is pure Alberta - open fields, big skies, and the kind of quiet countryside that starts to slow your heart rate before you even arrive. For out-of-town guests travelling from Edmonton’s YEG airport, it’s a straightforward and scenic trip that sets the tone for the weekend ahead.\n\nNo traffic noise. No skyline. Just trees, sky, and the smell of nature when you step out of the car."
+      answer: "About an hour northwest of Edmonton - 99 kilometres from the city centre, near the shores of Lac la Nonne, and about 15 minutes from both Barrhead and Onoway.\n\nClose enough that your guests won’t dread the drive. Far enough that the moment you turn off the highway and head toward the property, the city genuinely feels like it belongs to another world.\n\nThe drive itself is pure Alberta - open fields, big skies, and the kind of quiet countryside that starts to slow your heart rate before you even arrive. For out-of-town guests travelling from Edmonton’s YEG airport, it’s a straightforward and scenic trip that sets the tone for the weekend ahead.\n\nNo traffic noise. No skyline. Just trees, sky, and the smell of nature when you step out of the car."
     },
     {
       category: "Guest Accommodations",

@@ -103,7 +103,7 @@ const Footer = () => {
                   href={content.sitewide.location.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Get directions to Rustic Retreat — 99 km NW of Edmonton, near Lac La Nonne, Alberta (opens Google Maps in a new tab)"
+                  aria-label="Get directions to Rustic Retreat, 99 km NW of Edmonton, near Lac La Nonne, Alberta (opens Google Maps in a new tab)"
                   className="flex items-start gap-2 hover:text-secondary transition-colors text-primary-foreground/80"
                 >
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />

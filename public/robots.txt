@@ -12,7 +12,7 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# AI assistant crawlers (welcome — see /llms.txt and /llm.html for venue facts)
+# AI assistant crawlers (welcome; see /llms.txt and /llm.html for venue facts)
 User-agent: GPTBot
 Allow: /
 
