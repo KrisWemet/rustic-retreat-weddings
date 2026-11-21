@@ -13,7 +13,7 @@ const LAYERS = [
   { size: [4, 6.5], blur: 0, peak: [0.8, 1], drift: [8, 13] },        // near
 ];
 
-// Warm woodland glow palette — pale gold through amber.
+// Warm woodland glow palette: pale gold through amber.
 const HUES = [
   { core: "46 95% 90%", glow: "44 90% 74%" }, // pale gold
   { core: "40 92% 84%", glow: "36 88% 68%" }, // honey

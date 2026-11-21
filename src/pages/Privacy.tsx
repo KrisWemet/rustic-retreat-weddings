@@ -83,7 +83,7 @@ const Privacy = () => {
                   <p>
                     Messages you type into the chat widget are sent to our AI provider to generate a reply, and they
                     are logged so we can see what couples commonly ask and improve our answers. Please do not type
-                    anything sensitive into the chat — use the enquiry form, email, or a phone call for that.
+                    anything sensitive into the chat. Use the enquiry form, email, or a phone call for that.
                   </p>
 
                   <p className="font-semibold text-foreground">Automatically, as you browse</p>
@@ -113,24 +113,24 @@ const Privacy = () => {
                   </p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>
-                      <span className="text-foreground font-medium">Formspree</span> — delivers our enquiry and booking
+                      <span className="text-foreground font-medium">Formspree</span> delivers our enquiry and booking
                       form submissions to our inbox.
                     </li>
                     <li>
-                      <span className="text-foreground font-medium">Vercel</span> — hosts the website and records basic
+                      <span className="text-foreground font-medium">Vercel</span> hosts the website and records basic
                       traffic measurements.
                     </li>
                     <li>
-                      <span className="text-foreground font-medium">Google Analytics</span> — tells us how the site is
+                      <span className="text-foreground font-medium">Google Analytics</span> tells us how the site is
                       being used, in aggregate.
                     </li>
                     <li>
-                      <span className="text-foreground font-medium">OpenRouter</span> — processes chat assistant
+                      <span className="text-foreground font-medium">OpenRouter</span> processes chat assistant
                       messages to generate replies.
                     </li>
                     <li>
-                      <span className="text-foreground font-medium">Meta (Facebook) and Google Ads</span> — when our
-                      advertising tools are active, these measure ad performance and let us show ads to people who
+                      <span className="text-foreground font-medium">Meta (Facebook) and Google Ads</span>, when our
+                      advertising tools are active, measure ad performance and let us show ads to people who
                       have visited the site.
                     </li>
                   </ul>
@@ -148,7 +148,7 @@ const Privacy = () => {
                   <p>
                     Analytics and advertising tools set cookies and similar identifiers in your browser so that
                     repeat visits can be recognised. You can block or delete these in your browser settings, and
-                    doing so will not stop you from using any part of this site — every page, form, and the chat
+                    doing so will not stop you from using any part of this site. Every page, form, and the chat
                     assistant work the same either way.
                   </p>
                   <p>
@@ -166,7 +166,7 @@ const Privacy = () => {
                     patterns and improving the site.
                   </p>
                   <p>
-                    If you would like your information removed sooner, just ask — see below.
+                    If you would like your information removed sooner, just ask (see below).
                   </p>
                 </Section>
 
@@ -186,8 +186,8 @@ const Privacy = () => {
                 <Section title="Security">
                   <p>
                     This site is served over an encrypted connection, and form submissions travel encrypted to our
-                    providers. No system is perfectly secure, so please avoid sending anything highly sensitive —
-                    such as financial details — through the website. We will never ask for payment card numbers by
+                    providers. No system is perfectly secure, so please avoid sending anything highly sensitive,
+                    such as financial details, through the website. We will never ask for payment card numbers by
                     email or through a web form.
                   </p>
                 </Section>

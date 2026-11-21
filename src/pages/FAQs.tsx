@@ -10,7 +10,12 @@ import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEO from "@/components/SEO";
 import faqHeroImage from "@/assets/gallery/faq-hero-6618.webp";
-import { FAQS } from "@/content/faqs";
+import { FAQS, FAQS_LAST_UPDATED } from "@/content/faqs";
+
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// Formatted by hand so the date never shifts a day with the visitor's time zone.
+const [updatedYear, updatedMonth, updatedDay] = FAQS_LAST_UPDATED.split("-").map(Number);
+const lastUpdated = `${MONTHS[updatedMonth - 1]} ${updatedDay}, ${updatedYear}`;
 
 const FAQs = () => {
   // Generate FAQ schema markup
@@ -38,6 +43,7 @@ const FAQs = () => {
         description="Answers about our wedding packages and prices, overnight camping for guests, bringing your own vendors and bar, and getting here from Edmonton."
         path="/faqs"
         image={faqHeroImage}
+        modifiedTime={FAQS_LAST_UPDATED}
       />
       <Helmet>
         <script type="application/ld+json">
@@ -58,6 +64,7 @@ const FAQs = () => {
         <section className="section">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
+              <p className="text-sm text-muted-foreground text-center mb-6">Last updated {lastUpdated}</p>
               <Accordion type="single" collapsible className="space-y-4">
                 {FAQS.map((faq, index) => (
                   <ScrollReveal key={index} delay={index * 50}>

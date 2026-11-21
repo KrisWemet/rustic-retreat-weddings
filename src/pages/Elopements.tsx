@@ -30,7 +30,7 @@ const Elopements = () => {
           backgroundImage={heroImage}
           backgroundImageAlt="Couple silhouetted against the sunset at Rustic Retreat"
           title="Elope, Beautifully"
-          subtitle="Just the two of you — or the twenty people you actually want there — on 65 acres that belong entirely to you."
+          subtitle="Just the two of you, or the twenty people you actually want there, on 65 acres that belong entirely to you."
         />
 
         <section className="section">
@@ -39,10 +39,10 @@ const Elopements = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">A Small Wedding on a Big Property</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  There's something incredibly beautiful about a small wedding on a big property. The space doesn't overwhelm you — it holds you. No minimum guest count, no venue that feels half-empty, no strangers from another event in the background of your photos. Picture it: a couple, a handful of their closest people, golden-hour vows in the meadow, and a quiet fire afterward under more stars than you've seen in years. This property was made for exactly that kind of weekend.
+                  There's something incredibly beautiful about a small wedding on a big property. The space doesn't overwhelm you. It holds you. No minimum guest count, no venue that feels half-empty, no strangers from another event in the background of your photos. Picture it: a couple, a handful of their closest people, golden-hour vows in the meadow, and a quiet fire afterward under more stars than you've seen in years. This property was made for exactly that kind of weekend.
                 </p>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  We're an hour northwest of Edmonton near Lac La Nonne — close enough for an easy drive, far enough that the city disappears completely.
+                  We're an hour northwest of Edmonton near Lac La Nonne, close enough for an easy drive, far enough that the city disappears completely.
                 </p>
               </ScrollReveal>
             </div>
@@ -73,7 +73,7 @@ const Elopements = () => {
                       <TreePine className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">The Whole Property</h3>
                       <p className="text-sm text-muted-foreground">
-                        All 65 acres are exclusively yours — meadow, forest trails, clear-top gazebo, fire pit. Choose the ceremony spot that feels like your story.
+                        All 65 acres are exclusively yours: meadow, forest trails, clear-top gazebo, fire pit. Choose the ceremony spot that feels like your story.
                       </p>
                     </CardContent>
                   </Card>
@@ -84,7 +84,7 @@ const Elopements = () => {
                       <Home className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">The Newlywed Cabin</h3>
                       <p className="text-sm text-muted-foreground">
-                        Private, stocked, and solar-powered — comfortable bedding, a Keurig, cookware, and a deck BBQ. Your guests can camp steps away if they're staying.
+                        Private, stocked, and solar-powered, with comfortable bedding, a Keurig, cookware, and a deck BBQ. Your guests can camp steps away if they're staying.
                       </p>
                     </CardContent>
                   </Card>
@@ -95,7 +95,7 @@ const Elopements = () => {
                       <Heart className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Everything Included</h3>
                       <p className="text-sm text-muted-foreground">
-                        The décor collection, ceremony benches, sound system, and firewood all come with the property. Bring your own officiant, photographer, and picnic — done.
+                        The décor collection, ceremony benches, sound system, and firewood all come with the property. Bring your own officiant, photographer, and picnic, and you're done.
                       </p>
                     </CardContent>
                   </Card>
@@ -103,7 +103,7 @@ const Elopements = () => {
               </div>
               <ScrollReveal>
                 <p className="text-center text-muted-foreground mt-10 max-w-3xl mx-auto">
-                  Both packages work beautifully for intimate groups — the property makes 20 guests feel just as right as 80. The 3-day weekend is $6,500, and the full 5-day experience is $7,500 (2027 season, GST extra).
+                  Both packages work beautifully for intimate groups. The property makes 20 guests feel just as right as 80. For 2027, the 3-day weekend is $6,500 and the full 5-day experience is $7,500. For 2028, the 3-day weekend is $7,500 and the full 5-day experience is $8,500 (CAD, GST extra).
                 </p>
               </ScrollReveal>
             </div>
@@ -115,7 +115,7 @@ const Elopements = () => {
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Start With a Quiet Walk</h2>
               <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-                Come see the property, find your spot, and picture the day. Every booking starts with a visit — no pressure, no rush.
+                Come see the property, find your spot, and picture the day. Every booking starts with a visit. No pressure, no rush.
               </p>
               <Link to="/contact">
                 <Button size="lg" variant="secondary" className="rounded-full px-8">Book a Property Tour</Button>

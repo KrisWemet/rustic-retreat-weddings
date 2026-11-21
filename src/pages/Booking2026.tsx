@@ -228,10 +228,10 @@ export default function Booking2026() {
             <div style={{ marginBottom: '1.6rem' }}>
               <SectionHeader>1 · Your Details</SectionHeader>
               <Grid>
-                <Field label="Client 1 — Full Legal Name"><TextInput name="client1Name" value={form.client1Name} onChange={handleChange} /></Field>
-                <Field label="Client 2 — Full Legal Name"><TextInput name="client2Name" value={form.client2Name} onChange={handleChange} /></Field>
-                <Field label="Client 1 — Phone Number"><TextInput name="client1Phone" value={form.client1Phone} onChange={handleChange} type="tel" /></Field>
-                <Field label="Client 2 — Phone Number"><TextInput name="client2Phone" value={form.client2Phone} onChange={handleChange} type="tel" /></Field>
+                <Field label="Client 1: Full Legal Name"><TextInput name="client1Name" value={form.client1Name} onChange={handleChange} /></Field>
+                <Field label="Client 2: Full Legal Name"><TextInput name="client2Name" value={form.client2Name} onChange={handleChange} /></Field>
+                <Field label="Client 1: Phone Number"><TextInput name="client1Phone" value={form.client1Phone} onChange={handleChange} type="tel" /></Field>
+                <Field label="Client 2: Phone Number"><TextInput name="client2Phone" value={form.client2Phone} onChange={handleChange} type="tel" /></Field>
               </Grid>
               <Field label="Primary Contact Email Address"><TextInput name="email" value={form.email} onChange={handleChange} type="email" /></Field>
               <Field label="Mailing Address (Street)"><TextInput name="address" value={form.address} onChange={handleChange} /></Field>
@@ -259,7 +259,7 @@ export default function Booking2026() {
               <SectionHeader>2 · Your Event</SectionHeader>
               <Grid>
                 <Field label="Wedding / Event Date" hint="DD/MM/YYYY"><TextInput name="eventDate" value={form.eventDate} onChange={handleChange} /></Field>
-                <Field label="Second-choice Date" hint="optional — DD/MM/YYYY"><TextInput name="backupDate" value={form.backupDate} onChange={handleChange} /></Field>
+                <Field label="Second-choice Date" hint="optional, DD/MM/YYYY"><TextInput name="backupDate" value={form.backupDate} onChange={handleChange} /></Field>
               </Grid>
               <CheckGroup label="Event Type" name="eventType"
                 options={['Weekend Wedding Celebration', 'Elopement', 'Other']}
@@ -306,7 +306,7 @@ export default function Booking2026() {
             {/* 4. GUEST COUNTS */}
             <div style={{ marginBottom: '1.6rem' }}>
               <SectionHeader>4 · Guest Counts</SectionHeader>
-              <NoteBox>The venue accommodates up to 80 ceremony &amp; reception guests (hard cap 100). Overnight camping is included for up to 60 guests, 12 tents, and 8 RVs. Children under 2 do not count toward the guest total. Guests beyond the included allowances are warmly welcome — overage fees will apply and will be outlined in your contract.</NoteBox>
+              <NoteBox>The venue accommodates up to 80 ceremony &amp; reception guests (hard cap 100). Overnight camping is included for up to 60 guests, 12 tents, and 8 RVs. Children under 2 do not count toward the guest total. Guests beyond the included allowances are warmly welcome, and overage fees will apply and will be outlined in your contract.</NoteBox>
               <Field label="Estimated Ceremony & Reception Guest Count" hint="children under 2 do not count">
                 <TextInput name="guestCount" value={form.guestCount} onChange={handleChange} />
               </Field>
@@ -314,7 +314,7 @@ export default function Booking2026() {
                 <TextInput name="totalGuestCount" value={form.totalGuestCount} onChange={handleChange} />
               </Field>
               <CheckGroup label="Are you expecting more than 80 ceremony/reception guests?" name="over80"
-                options={['Yes', 'No — we expect 80 or under', 'Not sure yet']} value={form.over80} onChange={handleCheck} />
+                options={['Yes', 'No, we expect 80 or under', 'Not sure yet']} value={form.over80} onChange={handleCheck} />
               {form.over80 === 'Yes' && (
                 <Field label="Approximately how many guests total?">
                   <TextInput name="over80Count" value={form.over80Count} onChange={handleChange} />
@@ -330,25 +330,25 @@ export default function Booking2026() {
             {/* 5. ON-SITE CONTACTS */}
             <div style={{ marginBottom: '1.6rem' }}>
               <SectionHeader>5 · On-Site Contacts</SectionHeader>
-              <NoteBox>Please designate two trusted people who will act as your on-site contacts on the day of your wedding. These are the people our team will reach out to — so you can stay fully present in your moment.</NoteBox>
+              <NoteBox>Please designate two trusted people who will act as your on-site contacts on the day of your wedding. These are the people our team will reach out to, so you can stay fully present in your moment.</NoteBox>
               <Grid>
-                <Field label="Contact 1 — Full Name"><TextInput name="contact1Name" value={form.contact1Name} onChange={handleChange} /></Field>
+                <Field label="Contact 1: Full Name"><TextInput name="contact1Name" value={form.contact1Name} onChange={handleChange} /></Field>
                 <Field label="Relationship / Role" hint="e.g. MOH, Best Man, Parent"><TextInput name="contact1Role" value={form.contact1Role} onChange={handleChange} /></Field>
               </Grid>
-              <Field label="Contact 1 — Phone Number"><TextInput name="contact1Phone" value={form.contact1Phone} onChange={handleChange} type="tel" /></Field>
+              <Field label="Contact 1: Phone Number"><TextInput name="contact1Phone" value={form.contact1Phone} onChange={handleChange} type="tel" /></Field>
               <div style={{ borderTop: `1px solid ${LINE}`, margin: '0.4rem 0 1.2rem' }} />
               <Grid>
-                <Field label="Contact 2 — Full Name"><TextInput name="contact2Name" value={form.contact2Name} onChange={handleChange} /></Field>
+                <Field label="Contact 2: Full Name"><TextInput name="contact2Name" value={form.contact2Name} onChange={handleChange} /></Field>
                 <Field label="Relationship / Role"><TextInput name="contact2Role" value={form.contact2Role} onChange={handleChange} /></Field>
               </Grid>
-              <Field label="Contact 2 — Phone Number"><TextInput name="contact2Phone" value={form.contact2Phone} onChange={handleChange} type="tel" /></Field>
+              <Field label="Contact 2: Phone Number"><TextInput name="contact2Phone" value={form.contact2Phone} onChange={handleChange} type="tel" /></Field>
             </div>
 
             {/* 6. ACTIVITIES */}
             <div style={{ marginBottom: '1.6rem' }}>
               <SectionHeader>6 · Activities &amp; Special Requests</SectionHeader>
               <CheckGroup label="Are you planning any special guest activities on the property?"
-                hint="e.g. paintball, inflatables, axe throwing — all require advance Venue approval"
+                hint="e.g. paintball, inflatables, axe throwing (all require advance Venue approval)"
                 name="activities" options={['Yes (describe below)', 'No', 'Not sure yet']}
                 value={form.activities} onChange={handleCheck} />
               {form.activities === 'Yes (describe below)' && (
@@ -360,7 +360,7 @@ export default function Booking2026() {
                 name="drones" options={['Yes', 'No', 'Not sure yet']}
                 value={form.drones} onChange={handleCheck} />
               <CheckGroup label="Do you have any temporary structures to install?"
-                hint="e.g. rental tent/canopy — all require Venue approval"
+                hint="e.g. rental tent/canopy (all require Venue approval)"
                 name="structures" options={['Yes (describe below)', 'No', 'Not sure yet']}
                 value={form.structures} onChange={handleCheck} />
               {form.structures === 'Yes (describe below)' && (
@@ -369,7 +369,7 @@ export default function Booking2026() {
                 </Field>
               )}
               <CheckGroup label="Do you have pets attending?"
-                hint="cabin stays only — $50 pet cleaning fee applies"
+                hint="cabin stays only; $50 pet cleaning fee applies"
                 name="pets" options={['Yes', 'No', 'Not sure yet']}
                 value={form.pets} onChange={handleCheck} />
             </div>
@@ -380,11 +380,11 @@ export default function Booking2026() {
               <NoteBox>Rustic Retreat operates on solar power. All electrical requirements must be disclosed in advance. A Power Requirements Form will be sent approximately 3 months before your event.</NoteBox>
               <CheckGroup label="Are you hiring a DJ or live band?" name="dj"
                 hint="Venue Bluetooth speakers &amp; microphones are available at no additional charge"
-                options={['Yes — hiring a DJ', 'Yes — live band', 'No — using Venue speakers', 'Not sure yet']} value={form.dj} onChange={handleCheck} />
+                options={['Yes, hiring a DJ', 'Yes, live band', 'No, using Venue speakers', 'Not sure yet']} value={form.dj} onChange={handleCheck} />
               <CheckGroup label="Are you hiring a caterer?" name="caterer"
                 options={['Yes', 'No', 'Self-catered', 'Pot luck', 'Not sure yet']} value={form.caterer} onChange={handleCheck} />
               <CheckGroup label="Do you anticipate needing a generator?"
-                hint="Venue-owned generators available as add-on — must be arranged in advance"
+                hint="Venue-owned generators available as an add-on (must be arranged in advance)"
                 name="generator" options={['Yes', 'No', 'Not sure yet']}
                 value={form.generator} onChange={handleCheck} />
               <Field label="Other vendors or items requiring power?" hint="e.g. photo booth, neon sign, projector, coffee station">
@@ -395,11 +395,11 @@ export default function Booking2026() {
             {/* 8. FIREWORKS */}
             <div style={{ marginBottom: '1.6rem' }}>
               <SectionHeader>8 · Fireworks Interest</SectionHeader>
-              <NoteBox>Fireworks displays are arranged exclusively through Rustic Retreat, subject to any active Fire Ban. Guest-supplied fireworks, sky lanterns, or pyrotechnics of any kind are strictly prohibited. This section is for interest only — no commitment required here.</NoteBox>
+              <NoteBox>Fireworks displays are arranged exclusively through Rustic Retreat, subject to any active Fire Ban. Guest-supplied fireworks, sky lanterns, or pyrotechnics of any kind are strictly prohibited. This section is for interest only, with no commitment required here.</NoteBox>
               <CheckGroup label="Are you interested in a private fireworks display?" name="fireworks"
-                options={["Yes — I'm interested", 'No — not interested', 'Maybe — tell me more']}
+                options={["Yes, I'm interested", 'No, not interested', 'Maybe, tell me more']}
                 value={form.fireworks} onChange={handleCheck} />
-              <Field label="Approximate budget" hint="optional — $100 ≈ 1 min of show time; $250 non-refundable service fee also applies">
+              <Field label="Approximate budget" hint="optional. $100 ≈ 1 min of show time; $250 non-refundable service fee also applies">
                 <TextInput name="fireworksBudget" value={form.fireworksBudget} onChange={handleChange} />
               </Field>
             </div>
@@ -408,7 +408,7 @@ export default function Booking2026() {
             <div style={{ marginBottom: '1.6rem' }}>
               <SectionHeader>9 · A Bit About You</SectionHeader>
               <p style={{ fontStyle: 'italic', color: SUBTLE, fontSize: '0.85rem', marginBottom: '0.9rem' }}>
-                This section is entirely optional — just for us to get to know you a little before we connect!
+                This section is entirely optional. It's just for us to get to know you a little before we connect!
               </p>
               <Field label="How did you hear about Rustic Retreat?">
                 <TextInput name="heardAbout" value={form.heardAbout} onChange={handleChange} />
@@ -419,7 +419,7 @@ export default function Booking2026() {
               <CheckGroup label="Photo & Story Permission"
                 hint="If you share photos with us after your event, do you give Rustic Retreat permission to share your love story and use your images on our website, in future advertising, and on social media?"
                 name="photoPermission"
-                options={['Yes — happy to share', 'No — prefer privacy', 'Not sure yet']}
+                options={['Yes, happy to share', 'No, prefer privacy', 'Not sure yet']}
                 value={form.photoPermission} onChange={handleCheck} />
             </div>
 

@@ -5,6 +5,8 @@ import Flourish from "@/components/Flourish";
 interface PageHeroProps {
   backgroundImage: string;
   backgroundImageAlt?: string;
+  /** CSS object-position for the background photo (default centered). */
+  backgroundPosition?: string;
   title: string;
   subtitle?: string;
   children?: ReactNode;
@@ -17,6 +19,7 @@ interface PageHeroProps {
 const PageHero = ({
   backgroundImage,
   backgroundImageAlt,
+  backgroundPosition,
   title,
   subtitle,
   children,
@@ -41,6 +44,7 @@ const PageHero = ({
           decoding="async"
           fetchPriority="high"
           className="h-full w-full object-cover"
+          style={backgroundPosition ? { objectPosition: backgroundPosition } : undefined}
         />
         {overlayOpacity !== "none" && (
           <div className={`absolute inset-0 bg-gradient-to-b ${overlayClasses[overlayOpacity]}`} />

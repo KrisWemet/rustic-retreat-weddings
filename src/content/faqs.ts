@@ -5,6 +5,11 @@ export type FAQEntry = {
   link?: { url: string; text: string };
 };
 
+// Bump this whenever an FAQ question or answer changes. It shows on the FAQs page,
+// goes into its schema as dateModified, and should match the "Last updated" lines in
+// public/faqs.txt and public/prerender/faqs.html.
+export const FAQS_LAST_UPDATED = "2026-11-21";
+
 export const FAQS: FAQEntry[] = [
     {
       category: "Booking & Scheduling",
@@ -14,7 +19,7 @@ export const FAQS: FAQEntry[] = [
     {
       category: "Booking & Scheduling",
       question: "Which package would be best for me?",
-      answer: "The 3-day package (Friday-Sunday) is a beautiful choice for couples who want a heartfelt, focused celebration. The wedding weekend comes together warmly and intentionally, with everyone present for the moments that matter most.\n\nThe 5-day package (Thursday-Monday or Friday-Tuesday) is our most popular option, and it's easy to see why. It's where the full Rustic Retreat experience truly unfolds. The extra days give everyone room to arrive, settle in, and just be together. Evenings gather naturally around the campfire, laughter carries through the trees, and by the time your wedding day arrives, it already feels like a cherished reunion. There's space for an activity day, unhurried meals, and the kind of slow, sweet visiting that guests will carry home in their hearts.\n\nUltimately, the choice comes down to how immersive you want your celebration to be. It's also worth thinking about your decorating plans. If you're bringing in vendors to handle setup and takedown, a 3-day package can work beautifully. But if you're envisioning a more personal touch, with friends and family pitching in to help bring your vision to life, the extra days give everyone the time and space to do that joyfully, without it feeling rushed.\n\nWhichever package you choose, check-in begins at 8am on your first day and the property is yours right through to 8pm on your last - every hour thoughtfully yours from start to finish.\n\nWe'd love to help you find the perfect fit during your property visit."
+      answer: "The 3-day package (Friday-Sunday) is a beautiful choice for couples who want a heartfelt, focused celebration. The wedding weekend comes together warmly and intentionally, with everyone present for the moments that matter most.\n\nThe 5-day package (Wednesday-Sunday or Thursday-Monday) is our most popular option, and it's easy to see why. It's where the full Rustic Retreat experience truly unfolds. The extra days give everyone room to arrive, settle in, and just be together. Evenings gather naturally around the campfire, laughter carries through the trees, and by the time your wedding day arrives, it already feels like a cherished reunion. There's space for an activity day, unhurried meals, and the kind of slow, sweet visiting that guests will carry home in their hearts.\n\nUltimately, the choice comes down to how immersive you want your celebration to be. It's also worth thinking about your decorating plans. If you're bringing in vendors to handle setup and takedown, a 3-day package can work beautifully. But if you're envisioning a more personal touch, with friends and family pitching in to help bring your vision to life, the extra days give everyone the time and space to do that joyfully, without it feeling rushed.\n\nWhichever package you choose, check-in begins at 8am on your first day and the property is yours right through to 8pm on your last - every hour thoughtfully yours from start to finish.\n\nWe'd love to help you find the perfect fit during your property visit."
     },
     {
       category: "Guest Accommodations",
@@ -39,7 +44,7 @@ export const FAQS: FAQEntry[] = [
     {
       category: "Packages & Pricing",
       question: "How much does a wedding at Rustic Retreat cost?",
-      answer: "Our 2027 season pricing is simple and all-in:\n\n- 3-Day Weekend: $6,500\n- 5-Day Experience: $7,500 (our most popular)\n\nEvery package includes exclusive use of the entire 65-acre property, the newlywed cabin, overnight camping for up to 60 guests, ceremony and reception seating for 80, the wash house, the bridal suite, the full décor collection, a stocked firewood shed, and the sound system. Prices are in CAD and GST is not included.\n\nJust as important is what you won't pay: no per-plate catering minimums, no mandatory vendors, no corkage fees, no per-night camping charges, and no surprise line items. Because you bring your own caterer, bar, and vendors, couples routinely host an entire multi-day celebration here for less than a single evening costs at many traditional venues.\n\nPayment plans are available, and a down payment holds your date."
+      answer: "Our season pricing is simple and all-in:\n\n2027 season:\n- 3-Day Weekend: $6,500\n- 5-Day Experience: $7,500 (our most popular)\n\n2028 season:\n- 3-Day Weekend: $7,500\n- 5-Day Experience: $8,500 (our most popular)\n\nEvery package includes exclusive use of the entire 65-acre property, the newlywed cabin, overnight camping for up to 60 guests, ceremony and reception seating for 80, the wash house, the bridal suite, the full décor collection, a stocked firewood shed, and the sound system. Prices are in CAD and GST is not included.\n\nJust as important is what you won't pay: no per-plate catering minimums, no mandatory vendors, no corkage fees, no per-night camping charges, and no surprise line items. Because you bring your own caterer, bar, and vendors, couples routinely host an entire multi-day celebration here for less than a single evening costs at many traditional venues.\n\nPayment plans are available, and a down payment holds your date."
     },
     {
       category: "Booking & Scheduling",
@@ -94,7 +99,7 @@ export const FAQS: FAQEntry[] = [
     {
       category: "Location & Access",
       question: "How far is Rustic Retreat from Edmonton?",
-      answer: "About an hour northwest of Edmonton - 99 kilometres from the city centre, near the shores of Lac la Nonne, and just 20 minutes from both Barrhead and Onoway.\n\nClose enough that your guests won’t dread the drive. Far enough that the moment you turn off the highway and head toward the property, the city genuinely feels like it belongs to another world.\n\nThe drive itself is pure Alberta - open fields, big skies, and the kind of quiet countryside that starts to slow your heart rate before you even arrive. For out-of-town guests travelling from Edmonton’s YEG airport, it’s a straightforward and scenic trip that sets the tone for the weekend ahead.\n\nNo traffic noise. No skyline. Just trees, sky, and the smell of nature when you step out of the car."
+      answer: "About an hour northwest of Edmonton - 99 kilometres from the city centre, near the shores of Lac la Nonne, and about 15 minutes from both Barrhead and Onoway.\n\nClose enough that your guests won’t dread the drive. Far enough that the moment you turn off the highway and head toward the property, the city genuinely feels like it belongs to another world.\n\nThe drive itself is pure Alberta - open fields, big skies, and the kind of quiet countryside that starts to slow your heart rate before you even arrive. For out-of-town guests travelling from Edmonton’s YEG airport, it’s a straightforward and scenic trip that sets the tone for the weekend ahead.\n\nNo traffic noise. No skyline. Just trees, sky, and the smell of nature when you step out of the car."
     },
     {
       category: "Guest Accommodations",
