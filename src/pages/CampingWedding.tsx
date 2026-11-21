@@ -29,7 +29,7 @@ const CampingWedding = () => {
         <PageHero
           backgroundImage={heroImage}
           backgroundImageAlt="Guests gathered around the campfire at night at Rustic Retreat"
-          title="The Camping Wedding, Perfected"
+          title="Camping Weddings Near Edmonton"
           subtitle="Your favourite people, tents and campers in the trees, a fire that never quite goes out, and a wedding right in the middle of it."
         />
 
@@ -53,7 +53,7 @@ const CampingWedding = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <ScrollReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Camping Is Included, Not an Upsell</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Camping Is Included</h2>
               </ScrollReveal>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <ScrollReveal delay={0}>
@@ -62,7 +62,7 @@ const CampingWedding = () => {
                       <Users className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Up to 60 Guests Camp Free</h3>
                       <p className="text-sm text-muted-foreground">
-                        Overnight camping for up to 60 guests is included in every package. No per-tent fees, no nightly charges. It's simply part of booking the property.
+                        Overnight camping for up to 60 guests comes with every package. There are no per-tent or nightly fees.
                       </p>
                     </CardContent>
                   </Card>
@@ -84,7 +84,7 @@ const CampingWedding = () => {
                       <Flame className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Firewood Stocked All Weekend</h3>
                       <p className="text-sm text-muted-foreground">
-                        A filled firewood shed comes with every booking. The fire pit is where your weekend actually happens: late-night stories, s'mores, and the goodbyes nobody wants to say.
+                        A filled firewood shed comes with every booking, and the fire pit is where most nights end up.
                       </p>
                     </CardContent>
                   </Card>
@@ -95,7 +95,7 @@ const CampingWedding = () => {
                       <Tent className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Pick Your Own Spot</h3>
                       <p className="text-sm text-muted-foreground">
-                        No numbered stalls or defined sites. Families cluster together, the night owls drift toward the fire, and the early sleepers tuck into the quiet edges of the forest.
+                        There are no numbered or assigned sites. Families cluster together, the night owls drift toward the fire, and the early sleepers tuck into the quiet edges of the forest.
                       </p>
                     </CardContent>
                   </Card>
@@ -106,7 +106,7 @@ const CampingWedding = () => {
                       <Moon className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">True Boondocking</h3>
                       <p className="text-sm text-muted-foreground">
-                        Honest heads-up: no electrical hookups or water connections at your campsite. Outhouses on site, a wash house with two shower stalls and on-demand hot water, and generators welcome until 10pm. It's rustic at its finest.
+                        There are no electrical hookups or water connections at the campsites. There are outhouses, a wash house with two shower stalls and on-demand hot water, and generators are allowed until 10pm.
                       </p>
                     </CardContent>
                   </Card>
@@ -117,7 +117,7 @@ const CampingWedding = () => {
                       <MapPin className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Beds for the Non-Campers</h3>
                       <p className="text-sm text-muted-foreground">
-                        Lakefront Airbnbs sit 5–15 minutes away on Lac la Nonne, and hotels in Barrhead and Onoway are about 15 minutes out. Everyone celebrates together; everyone sleeps their way.
+                        Lakefront Airbnbs on Lac la Nonne are 5 to 15 minutes away, and there are hotels in Barrhead and Onoway, about 15 minutes out.
                       </p>
                     </CardContent>
                   </Card>
@@ -131,7 +131,7 @@ const CampingWedding = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <ScrollReveal>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">The Weekend, Not Just the Day</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Three Days or Five</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
                   Every package is multi-day, because a camping wedding needs room to breathe. The 3-day weekend gives you Friday setup and campfires, Saturday vows, and a slow Sunday. The 5-day experience, our most popular, adds the settling-in days where guests actually bond before the big day arrives. And as the couple, you retreat each night to the newlywed cabin: private, stocked, and a few steps from the fire.
                 </p>

@@ -87,13 +87,13 @@ const Packages = () => {
 
           <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center text-primary-foreground">
             <h1 className="display-xl font-serif leading-tight mb-5 sm:mb-6 animate-fade-in-up [text-shadow:_0_2px_18px_rgba(0,0,0,0.45)]">
-              <span className="block">The question isn't ...</span>
-              <span className="block italic text-enchanted">"Where should we get married?"</span>
+              <span className="block">Packages and Pricing</span>
+              <span className="block italic text-enchanted">for 2027 and 2028</span>
             </h1>
             <Flourish className="text-primary-foreground/70 mb-6 animate-fade-in-up" size="md" />
             <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto animate-fade-in-up text-primary-foreground/90">
-              <span className="block">You already know where. You can feel it. The real question is:</span>
-              <span className="block mt-2">"How many days should we give ourselves to do this right?"</span>
+              <span className="block">Every package gives you the whole property, the newlywed cabin and camping for 60 guests.</span>
+              <span className="block mt-2">The main decision is how many days you want.</span>
             </p>
           </div>
         </section>
@@ -103,23 +103,23 @@ const Packages = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <p className="text-base sm:text-lg mb-4 text-muted-foreground">
-                Let's be honest about what's happening right now.
+                How to choose
               </p>
 
               <p className="mb-6">
-                You've toured venues around Edmonton and central Alberta. Watched a hundred wedding videos. Scrolled Instagram until the pretty pictures all blurred together. You've said "yes, but..." to a dozen options that were fine, gorgeous even, but not quite <em>right</em>.
+                Both packages book the entire property, so you never share it with another wedding. The 3-day weekend runs Friday to Sunday. The 5-day experience runs Wednesday to Sunday or Thursday to Monday, and it's our most popular.
               </p>
 
               <div className="grid md:grid-cols-2 gap-5 md:gap-6 items-center my-8">
                 <div className="bg-primary/5 p-6 sm:p-8 rounded-lg border-l-4 border-primary">
                   <p className="text-xl font-bold mb-3">
-                    And then you found this place.
+                    Check-in is 8am on the first day, and checkout is 8pm on the last.
                   </p>
                   <p className="text-muted-foreground">
-                    Something shifted when you saw those photos, didn't it? Read that description. Felt your heart start whispering, "Yes. This one. Here."
+                    The two extra days give guests time to arrive and get to know each other before the wedding, and they make setup much easier if friends and family are decorating.
                   </p>
                   <p className="mt-4 font-medium">
-                    That's not random. <strong>That's recognition. Your intuition already knows this is where your story wants to be told.</strong>
+                    If you're hiring vendors to handle setup and takedown, the 3-day weekend works well.
                   </p>
                 </div>
                 <img
@@ -165,9 +165,9 @@ const Packages = () => {
             <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 lg:gap-10 items-center mb-12">
               <ScrollReveal>
                 <div className="text-center lg:text-left">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Choose Your Perfect Timeline</h2>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Choose Your Timeline</h2>
                   <p className="text-base sm:text-lg text-muted-foreground max-w-2xl lg:max-w-none mb-3">
-                    From intimate elopements to the ultimate retreat-find the package that fits your vision.
+                    Both packages include the whole property. The difference is how many days you have it.
                   </p>
                 </div>
               </ScrollReveal>
@@ -196,7 +196,7 @@ const Packages = () => {
                   <CardContent className="p-6 sm:p-8">
                     {pkg.isRecommended && (
                       <div className="inline-block bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium mb-3">
-                        ⭐ Our Recommendation
+                        Most Popular
                       </div>
                     )}
                     <h3 className="text-2xl md:text-3xl font-bold mb-3">{pkg.name}</h3>
@@ -304,7 +304,7 @@ const Packages = () => {
                     <li>• Two-speaker sound system with wireless mics</li>
                     <li>• Firewood & BBQ with propane included</li>
                     <li>• Reliable off-grid solar power</li>
-                    <li>• Setup flexibility</li>
+                    <li>• Set the space up however you like</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -314,10 +314,10 @@ const Packages = () => {
                   <Sparkles className="w-8 h-8 text-secondary mb-3" />
                   <h3 className="font-semibold mb-2">Wedding Décor Collection</h3>
                   <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Curated selection of décor pieces</li>
-                    <li>• It is not a full collection, but it helps fill in the pieces you are missing</li>
+                    <li>• A selection of décor pieces</li>
+                    <li>• Fills in the pieces you're missing (it isn't a full décor package)</li>
                     <li>• Variety of ceremony arch options</li>
-                    <li>• Free to use-no rental fees</li>
+                    <li>• Free to use, with no rental fees</li>
                     <li>• Add your own touches</li>
                   </ul>
                 </CardContent>
@@ -356,9 +356,9 @@ const Packages = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-sm uppercase tracking-widest text-secondary mb-4">BEYOND THE CEREMONY</p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Your Weekend. Your Way.</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ideas for Your Weekend</h2>
               <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-                Rustic Retreat is not only about the ceremony and reception. <strong>The whole weekend should reflect who you are as a couple.</strong> Here are a few ideas to spark your planning.
+                You have the property for the whole booking, so there's time for a lot more than the ceremony and reception. Here are a few ideas.
               </p>
             </div>
 
@@ -368,7 +368,7 @@ const Packages = () => {
                   <Sparkles className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="font-semibold mb-2">Fireworks & Sparklers</h3>
-                <p className="text-sm text-muted-foreground">Plan a sparkler send-off or fireworks moment if it fits your weekend.</p>
+                <p className="text-sm text-muted-foreground">Plan a sparkler send-off or a fireworks display.</p>
               </div>
 
               <div className="bg-background p-6 rounded-xl shadow-md text-center">
@@ -376,7 +376,7 @@ const Packages = () => {
                   <Target className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="font-semibold mb-2">Games & Adventures</h3>
-                <p className="text-sm text-muted-foreground">Bring paintball, lawn games, or forest explorations.</p>
+                <p className="text-sm text-muted-foreground">Paintball, lawn games, or an afternoon on the forest trails.</p>
               </div>
 
               <div className="bg-background p-6 rounded-xl shadow-md text-center">
@@ -402,11 +402,11 @@ const Packages = () => {
             <div className="bg-background p-6 sm:p-8 rounded-xl shadow-md max-w-4xl mx-auto">
               <div className="text-center mb-8">
                 <p className="text-base sm:text-lg font-medium leading-relaxed max-w-3xl mx-auto mb-6">
-                  <span className="block">Morning yoga. Campfire karaoke. Stargazing parties.</span>
-                  <span className="block">Group hikes. Whatever brings your people joy.</span>
+                  <span className="block">Morning yoga, stargazing and group hikes</span>
+                  <span className="block">work well too.</span>
                 </p>
                 <p className="text-muted-foreground italic text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto">
-                  "The ceremony is just the beginning. The weekend is where the real magic happens."
+                  There's time for all of it over three or five days.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-4 text-sm max-w-5xl mx-auto">
@@ -492,7 +492,7 @@ const Packages = () => {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">For the Guests Who Don't Camp</h2>
 
                 <p className="mb-4 text-base sm:text-lg max-w-4xl">
-                  Your outdoor-loving friends will pitch tents and call it heaven. Your grandmother? She may need air conditioning and a real bed. <strong>Both can attend your celebration without stress.</strong>
+                  Some guests will love camping. Others, like grandparents, may want a real bed and air conditioning, and they can still be part of the whole weekend.
                 </p>
 
                 <p className="mb-8 text-muted-foreground max-w-4xl">
@@ -501,9 +501,9 @@ const Packages = () => {
 
                 <div className="grid lg:grid-cols-2 gap-6">
                   <div className="bg-secondary/10 p-6 rounded-lg border border-secondary/20">
-                    <h3 className="font-semibold text-lg mb-3">The result</h3>
+                    <h3 className="font-semibold text-lg mb-3">How it works</h3>
                     <p className="text-muted-foreground">
-                      Your non-camping guests wake up, drive a few minutes, and arrive for sunrise yoga or breakfast prep or just quiet coffee before the property fully wakes. They are not missing anything. They are not disconnected. They are just sleeping in a bed instead of a tent, and that is perfect.
+                      Guests staying nearby drive back in the morning in time for breakfast or coffee by the fire. The only thing they miss is the tent.
                     </p>
                   </div>
 
@@ -531,7 +531,7 @@ const Packages = () => {
                 </div>
 
                 <p className="mt-8 font-medium text-base sm:text-lg">
-                  Everyone gets to participate fully in your multi-day wedding package. That's the whole point.
+                  That way everyone can be there for the whole weekend.
                 </p>
               </CardContent>
             </Card>
@@ -552,10 +552,10 @@ const Packages = () => {
                   <CardContent className="p-6">
                     <h3 className="font-semibold text-xl mb-3">Arrival Day</h3>
                     <p className="text-muted-foreground mb-4">
-                      The property is yours from the start of your booking. Guests can arrive whenever works for them throughout the day-no strict check-in time.
+                      The property is yours from 8am on the first day, and guests can arrive whenever suits them after that.
                     </p>
                     <p className="text-sm">
-                      Early birds can set up camp at dawn. Night owls can roll in after dinner. Everyone arrives on their own schedule.
+                      Early risers can set up camp in the morning, and night owls can roll in after dinner.
                     </p>
                   </CardContent>
                 </Card>
@@ -564,17 +564,17 @@ const Packages = () => {
                   <CardContent className="p-6">
                     <h3 className="font-semibold text-xl mb-3">Departure Day</h3>
                     <p className="text-muted-foreground mb-4">
-                      You have the ENTIRE last day. Recovery breakfast at 10am? Do it. Afternoon final hike? Absolutely. Long goodbyes that stretch through dinner? That's the point.
+                      You have the whole last day, until 8pm. There's time for a late breakfast, one more hike, and goodbyes over dinner.
                     </p>
                     <p className="text-sm">
-                      No 11am hotel checkout rushing you. No "you've got 2 hours to clear out" stress.
+                      There's no 11am checkout like you'd get at a hotel.
                     </p>
                   </CardContent>
                 </Card>
               </div>
 
               <p className="text-center mt-8 text-lg sm:text-xl font-medium">
-                You paid for these days. We give you every hour of them.
+                Every hour of your booking is yours to use.
               </p>
             </div>
           </div>
@@ -584,7 +584,7 @@ const Packages = () => {
         <section id="pricing-comparison" className="section">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">What Your Wedding Weekend Costs (And Why It's Smarter)</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">What a Wedding Weekend Costs</h2>
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <Card className="border-2">
@@ -596,7 +596,7 @@ const Packages = () => {
                       ))}
                     </ul>
                     <p className="font-bold text-lg">Total: {content.packages.pricingComparison.traditional.total}</p>
-                    <p className="text-sm text-muted-foreground mt-2">For disconnected events</p>
+                    <p className="text-sm text-muted-foreground mt-2">Spread across separate venues</p>
                   </CardContent>
                 </Card>
 
@@ -613,14 +613,14 @@ const Packages = () => {
                     </ul>
                     <p className="font-bold text-lg">2027: {content.packages.pricingComparison.rusticRetreat.priceRange}</p>
                     <p className="font-bold text-lg">2028: {content.packages.pricingComparison.rusticRetreat.priceRange2028}</p>
-                    <p className="text-sm mt-2">Based on your timeline-all in ONE connected place</p>
+                    <p className="text-sm mt-2">Depending on the package, with everything in one place</p>
                   </CardContent>
                 </Card>
               </div>
 
               <div className="bg-primary/5 p-6 sm:p-8 rounded-lg border-l-4 border-primary text-center">
                 <p className="text-xl sm:text-2xl font-bold mb-3">
-                  You're not spending more. You're spending smarter.
+                  One booking covers the whole weekend.
                 </p>
                 <p className="text-muted-foreground mb-6">
                   Payment plans available • Down payment holds your date • No hidden fees • Transparent pricing
@@ -662,7 +662,7 @@ const Packages = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6">Walk the Land With Us</h2>
             <p className="text-lg sm:text-xl mb-6 max-w-2xl mx-auto text-primary-foreground/90">
-              We don't let couples book until they visit. Experience Rustic Retreat in person and discover why couples call this their best decision.
+              Every booking starts with a visit, so come walk the property and ask us anything.
             </p>
             <Link to="/contact">
               <CTAButton className="text-lg px-8">

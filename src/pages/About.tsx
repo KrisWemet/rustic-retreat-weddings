@@ -29,7 +29,7 @@ const About = () => {
             <h1 className="display-xl font-serif mb-5">About Rustic Retreat</h1>
             <Flourish className="text-secondary/60 mb-6" size="md" />
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
-              Family-owned since 2006. We built this place for ourselves-now we share it with couples who want something real.
+              Family-owned since 2006. We built this place for our own family gatherings, and now we share it with couples.
             </p>
           </div>
         </section>
@@ -44,7 +44,7 @@ const About = () => {
                   <h2 className="text-3xl md:text-4xl font-serif mb-8">How It All Started</h2>
 
                   <p className="text-lg mb-6">
-                    In 2006, my parents bought 65 acres near Lac La Nonne with a dream of creating something self-sufficient-an off-grid homestead with pasture, forest, and everything they needed to live on their own terms. No power lines. No city noise. Just land that felt like theirs.
+                    In 2006, my parents bought 65 acres near Lac La Nonne with a plan to live self-sufficiently: an off-grid homestead with pasture and forest, no power lines, and no city noise.
                   </p>
 
                   <p className="text-lg text-muted-foreground mb-6">
@@ -59,16 +59,16 @@ const About = () => {
                 <ScrollReveal delay={100}>
                   <div className="bg-secondary/10 p-8 rounded-2xl border-l-4 border-secondary mb-8">
                     <p className="text-lg leading-relaxed">
-                      What started as a single weekend became an annual tradition. Some years we'd have 80 people camping across the property-kids running wild during the day, adults around the campfire at night with music from every genre, impromptu dancing, laughter that carried through the trees. We'd play beer pong and cornhole and giant Jenga. We'd do potlucks where everyone brought their best recipes, and there was always too much food.
+                      That one weekend became an annual tradition. Some years we'd have 80 people camping across the property. The kids ran wild all day, and at night the adults sat around the campfire with music going until somebody started dancing. We played beer pong and cornhole and giant Jenga, and at the potlucks everyone brought their best recipe, so there was always too much food.
                     </p>
                   </div>
 
                   <p className="text-lg text-muted-foreground mb-6">
-                    Sometimes we'd plan structured activities-outdoor movie nights, birthday celebrations, anniversary parties. Other times we'd just… exist together. Slowed down. Undistracted.
+                    Some years we planned things, like an outdoor movie night or a birthday or anniversary party. Other years we just hung out.
                   </p>
 
                   <p className="text-lg mb-8">
-                    My parents fell in love with hosting. And the more they did it, the more the land evolved to welcome people. Close enough to Edmonton that friends could easily make the drive, but tucked away enough that it felt like a true escape.
+                    My parents loved hosting, and the more they did it, the more they set the land up for guests. It was close enough to Edmonton for friends to drive out, and far enough to feel like a getaway.
                   </p>
                 </ScrollReveal>
               </div>
@@ -82,23 +82,20 @@ const About = () => {
             <div className="max-w-4xl mx-auto">
               <ScrollReveal direction="right">
                 <p className="section-label">THE TURNING POINT</p>
-                <h2 className="text-3xl md:text-4xl font-serif mb-6">The Seed Gets Planted</h2>
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">Where the Idea Came From</h2>
 
                 <p className="mb-6 text-muted-foreground">
                   In 2018, my dad built the first part of the gazebo. After finishing it, he turned to my wife Shannon and said, <span className="italic">"Looks nice. Good place to get married."</span>
                 </p>
 
-                <p className="mb-6">
-                  He didn't know how right he'd be.
-                </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  My brother got married here that same year. Then Shannon and I got married in 2019. After our wedding weekend, we couldn't stop hearing the same thing: <strong>"Best wedding ever."</strong> People told us stories about moments we'd missed-the connections made, the laughter shared, the way time seemed to stop for three days.
+                  My brother got married here that same year. Then Shannon and I got married in 2019. For weeks after our wedding weekend, people kept telling us it was the best wedding they'd ever been to, and kept telling us stories about moments we'd missed.
                 </p>
 
                 <div className="bg-secondary/20 p-6 rounded-xl border-2 border-secondary">
                   <p className="font-medium text-lg">
-                    The seed wasn't just planted anymore. It had taken root.
+                    That's when we started talking seriously about hosting other couples' weddings.
                   </p>
                 </div>
               </ScrollReveal>
@@ -112,22 +109,19 @@ const About = () => {
             <div className="max-w-4xl mx-auto">
               <ScrollReveal>
                 <p className="section-label">THE JOURNEY</p>
-                <h2 className="text-3xl md:text-4xl font-serif mb-8">Building the Dream</h2>
+                <h2 className="text-3xl md:text-4xl font-serif mb-8">Building It</h2>
 
                 <p className="text-lg mb-6">
                   After our wedding, Shannon and I moved out to the property full-time. Suddenly there were four of us living here, and the idea of opening the land as a venue shifted from "someday maybe" to "we could actually do this."
                 </p>
 
                 <p className="text-lg text-muted-foreground mb-6">
-                  My dad and Shannon fed off each other's excitement. We made big plans-a reception barn, developed campsites, all these grand visions. Then COVID hit. Wood prices skyrocketed. What was feasible became impossible overnight.
+                  My dad and Shannon got each other excited, and we made big plans: a reception barn, developed campsites and more. Then COVID hit, wood prices shot up, and the big projects were suddenly out of reach.
                 </p>
 
-                <p className="text-lg mb-6">
-                  <strong>But we didn't stop. We just adapted.</strong>
-                </p>
 
                 <p className="text-lg text-muted-foreground mb-8">
-                  Instead of one massive project, we did dozens of smaller ones. We renovated the cabin. Extended the gazebo. Started manicuring parts of the land while keeping the wild beauty intact. We spent 2020 adjusting to off-grid life-living in our RV year-round and learning what this land needed. In 2023, we built our permanent house. In 2024, we started renting the cabin to families as weekend getaways, testing the waters.
+                  So we took on dozens of smaller projects instead. We renovated the cabin, extended the gazebo, and tidied up parts of the land while leaving the rest wild. We spent 2020 getting used to off-grid life, living in our RV year-round and learning what the land needed. In 2023, we built our permanent house. In 2024, we started renting the cabin to families as weekend getaways, testing the waters.
                 </p>
 
                 <div className="bg-primary/5 p-8 rounded-2xl border-l-4 border-primary">
@@ -146,26 +140,23 @@ const About = () => {
             <div className="max-w-4xl mx-auto">
               <ScrollReveal direction="left">
                 <p className="section-label">CONSTANT EVOLUTION</p>
-                <h2 className="text-3xl md:text-4xl font-serif mb-6">What We Learned (And Keep Learning)</h2>
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">What Each Wedding Taught Us</h2>
 
                 <p className="mb-6 text-muted-foreground">
-                  Each wedding taught us something. Each one showed us what was missing and what we needed to add. So we built an outdoor dance floor. Added modern picnic tables and rustic ceremony benches. Kept expanding our Décor Collection.
+                  Every wedding showed us something that was missing. So we built an outdoor dance floor, added picnic tables and rustic ceremony benches, and kept adding to the décor collection.
                 </p>
 
                 <p className="mb-6">
-                  Built a wash house with two shower stalls and on-demand hot water, and a bridal suite with two hair and makeup stations. Other projects are still in progress-a dedicated decor building, flush washrooms.
+                  Built a wash house with two shower stalls and on-demand hot water, and a bridal suite with two hair and makeup stations. A dedicated décor building and flush washrooms are still in progress.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  The land keeps evolving, but we're intentional about it. We don't clear trees unless absolutely necessary. When we create walking trails, we weave between the trunks instead of cutting them down.
+                  We're careful about how the land changes. We don't clear trees unless we have to. When we create walking trails, we weave between the trunks instead of cutting them down.
                 </p>
 
                 <div className="bg-card p-6 rounded-xl shadow-soft">
                   <p className="text-muted-foreground text-sm mb-3">
-                    In 2024, a wildfire traveled through the west side of the property-it stayed low to the ground and cleared undergrowth but didn't climb the trees. You can still see signs of it if you walk that area, but new growth is filling back in.
-                  </p>
-                  <p className="font-medium">
-                    The land heals itself. We're not trying to tame this place. We're trying to work with it.
+                    In 2024, a wildfire went through the west side of the property. It stayed low to the ground and cleared the undergrowth, but it didn't climb the trees. You can still see signs of it if you walk that area, but new growth is filling back in.
                   </p>
                 </div>
               </ScrollReveal>
@@ -181,31 +172,31 @@ const About = () => {
               <ScrollReveal>
                 <div>
                   <p className="section-label">OUR PHILOSOPHY</p>
-                  <h2 className="text-3xl md:text-4xl font-serif mb-8">What Drives Us</h2>
+                  <h2 className="text-3xl md:text-4xl font-serif mb-8">How We Run It</h2>
 
                   <p className="text-lg mb-6">
-                    So many venues charge $10,000+ for a single day and then lock you into mandatory minimums-you have to use their caterer, their bar staff, their timeline.
+                    Plenty of venues charge $10,000 or more for a single day and then require you to use their caterer, their bar staff and their timeline.
                   </p>
 
                   <p className="text-xl font-medium mb-6">
-                    We don't do that.
+                    We don't require any of that.
                   </p>
 
                   <p className="text-lg text-muted-foreground mb-8">
-                    We want you to build your day YOUR way. Bring in vendors for every detail and go extravagant? Great. DIY all your decor and do a potluck BBQ to keep costs low? Also great. We don't care how you spend your money. We care that you get to choose.
+                    You can hire vendors for every detail, or do your own décor and a potluck BBQ to keep costs down. How you spend your money is up to you.
                   </p>
 
                   <div className="bg-secondary/10 p-8 rounded-2xl border-2 border-secondary mb-8">
                     <p className="text-lg mb-4">
-                      <strong>Our goal is simple:</strong> be fully booked during our four-month season with one wedding per week, every year, with very little advertising.
+                      Our goal is to be fully booked every season, one wedding a week for four months, without much advertising.
                     </p>
                     <p className="text-muted-foreground">
-                      We want couples to hear about us from a friend who got married here and couldn't stop talking about it. Word of mouth. Real stories.
+                      We'd like most couples to hear about us from a friend who got married here.
                     </p>
                   </div>
 
                   <p className="text-lg">
-                    We're not in this to get rich. We're in this because we love hosting people. We love watching couples fall in love with this place the way we did. We love seeing memories get made. And we want you to do it <strong>your way</strong>-not ours, not some venue template, not what Instagram says weddings should look like.
+                    We do this because we love hosting people, and because we love watching couples fall for this place the way we did.
                   </p>
                 </div>
               </ScrollReveal>
@@ -236,7 +227,7 @@ const About = () => {
                         <h3 className="text-xl font-semibold">Shannon</h3>
                       </div>
                       <p className="text-muted-foreground">
-                        The heart of Rustic Retreat. Shannon guides couples from first message to final details with calm confidence and real care. She handles communication, scheduling, and the day-to-day rhythm of the venue, making the whole experience feel steady, personal, and easy. When nerves show up, she’s the voice that brings you back to what matters.
+                        Shannon is who you'll hear from, from your first message to the last details. She handles communication, scheduling and the day-to-day running of the venue, and she's good at calming nerves.
                       </p>
                     </CardContent>
                   </Card>
@@ -250,7 +241,7 @@ const About = () => {
                         <h3 className="text-xl font-semibold">Chris</h3>
                       </div>
                       <p className="text-muted-foreground">
-                        The steady hand behind the scenes. Chris keeps the land and logistics running-power management (solar + generator), setup, and all the practical details that make the weekend feel effortless. He builds, moves, fixes, and adapts fast, usually with a joke that breaks the tension at exactly the right moment.
+                        Chris looks after the land and the logistics: the solar and generator power, setup, and the practical details. He builds, moves and fixes things, usually with a joke ready.
                       </p>
                     </CardContent>
                   </Card>
@@ -264,7 +255,7 @@ const About = () => {
                         <h3 className="text-xl font-semibold">Wilf (aka Dad)</h3>
                       </div>
                       <p className="text-muted-foreground">
-                        Handles firewood refills at the cabin firepit. He builds the bigger projects-the gazebo was almost entirely him. He framed the dance floor, and he built the wash house over the winter. Shannon and I finished the bridal suite in the spring.
+                        Handles firewood refills at the cabin firepit. He builds the bigger projects; the gazebo was almost entirely him. He framed the dance floor, and he built the wash house over the winter. Shannon and I finished the bridal suite in the spring.
                       </p>
                     </CardContent>
                   </Card>
@@ -288,7 +279,7 @@ const About = () => {
               <ScrollReveal delay={400}>
                 <div className="mt-12 text-center">
                   <p className="text-lg">
-                    We're all invested. We all care. <strong>This isn't a side hustle or a passive income stream. This is our life.</strong>
+                    It's a family business, and this is where we live.
                   </p>
                 </div>
               </ScrollReveal>
@@ -302,18 +293,15 @@ const About = () => {
             <div className="max-w-4xl mx-auto">
               <ScrollReveal direction="right">
                 <p className="section-label">THE FEELING</p>
-                <h2 className="text-3xl md:text-4xl font-serif mb-6">What Makes This Land Special</h2>
+                <h2 className="text-3xl md:text-4xl font-serif mb-6">Arriving</h2>
 
                 <p className="mb-6">
-                  The moment you turn down our winding driveway and the trees close in around you, something shifts. The smell of nature hits you when you step out of your car. Birds singing. Sun filtering through branches.
+                  Our driveway winds in through the trees, and by the time you park, the city feels a long way off. Most people notice the smell of the forest and the birds before they've closed the car door.
                 </p>
 
-                <p className="mb-6 text-lg font-medium">
-                  You feel it immediately-you've entered somewhere different.
-                </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  There's a mix of open fields and forest. Trails winding between trees. Natural beauty around every turn. It feels like a place to explore, to let go of whatever stress you brought with you. Time slows down here. Or at least it feels that way.
+                  The land is a mix of open fields and forest, with trails winding between the trees. Time slows down here, or at least it feels that way.
                 </p>
 
                 <div className="bg-card p-6 rounded-xl shadow-soft">
@@ -322,7 +310,7 @@ const About = () => {
                     <p className="font-semibold">Completely Off-Grid</p>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    No power lines come into this property. Everything runs on solar-my dad's original vision of self-sufficiency made real. It's not a gimmick. It's just how we live.
+                    No power lines come into the property. Everything runs on solar, the way my dad planned it from the start, and it's simply how we live.
                   </p>
                 </div>
               </ScrollReveal>
@@ -338,12 +326,9 @@ const About = () => {
                 <p className="section-label">IN CLOSING</p>
                 <h2 className="text-3xl md:text-4xl font-serif mb-8">What We Want You to Know</h2>
 
-                <p className="text-xl font-medium mb-6">
-                  We are not your average wedding venue.
-                </p>
 
                 <p className="text-lg text-muted-foreground mb-6">
-                  We care almost as much about your wedding as you do. We want it to be exactly what you envision, and we'll give you the freedom to make that happen.
+                  We care almost as much about your wedding as you do, and we'll give you the room to make it what you want.
                 </p>
 
                 <p className="text-lg mb-8">
@@ -352,7 +337,7 @@ const About = () => {
 
                 <div className="bg-secondary/10 p-8 rounded-2xl border-2 border-secondary mb-8">
                   <p className="text-lg">
-                    That's what success looks like to us. Not revenue. Not metrics. <strong>Smiles on your faces. Memories being made. Stories we get to hear afterward.</strong>
+                    That, and hearing your stories afterward, is how we measure a good season.
                   </p>
                 </div>
 
@@ -372,14 +357,14 @@ const About = () => {
           <div className="container mx-auto px-4 text-center">
             <ScrollReveal>
               <Heart className="w-10 h-10 text-secondary mx-auto mb-6" />
-              <h2 className="text-3xl md:text-4xl font-serif mb-6">Come Feel the Difference</h2>
+              <h2 className="text-3xl md:text-4xl font-serif mb-6">Come for a Visit</h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto text-primary-foreground/90">
-                Photos can only show so much. The feeling of standing in the meadow at golden hour-that you have to experience.
+                Photos only show so much. Standing in the meadow at golden hour is something you have to do in person.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
                   <CTAButton className="px-8">
-                    Discover Your Venue
+                    Book a Tour
                   </CTAButton>
                 </Link>
                 <Link to="/packages">

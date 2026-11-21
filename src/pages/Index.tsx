@@ -445,7 +445,7 @@ const Index = () => {
 
   const heroImage = toSanityImageUrl(cmsHomepage?.heroImageUrl) || heroSunsetMeadow;
   const heroImageAlt = cmsHomepage?.heroImageAlt || "Couple in the woodland at Rustic Retreat";
-  const heroKicker = cmsHomepage?.heroKicker || "You're not booking for hours or a single day...";
+  const heroKicker = cmsHomepage?.heroKicker || "Multi-day outdoor weddings, an hour from Edmonton";
   const heroHeadlinePart1 = cmsHomepage?.heroHeadlinePart1 || content.homepage.hero.headline.part1;
   const heroHeadlinePart2 = cmsHomepage?.heroHeadlinePart2 || content.homepage.hero.headline.part2;
   const heroHeadlineHighlight = cmsHomepage?.heroHeadlineHighlight || content.homepage.hero.headline.part3;
@@ -903,10 +903,10 @@ const Index = () => {
           <ScrollReveal>
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-5xl font-serif mb-8 leading-tight">
-                While traditional venues say<br /><span className="italic text-muted-foreground">"this is what you're allowed to do, and the schedule you'll follow,"</span><br />we ask <span className="italic text-secondary">"what do you want to create?"</span>
+                Most venues start with their rules and their schedule.<br /><span className="italic text-secondary">We start with what you want to do.</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                No rigid timelines. No cookie-cutter packages. Just you, your people, and multiple days to bring your celebration to life.
+                You get the whole property for three or five days, and you decide how to spend them.
               </p>
               <Flourish className="text-secondary/55" size="lg" />
             </div>
@@ -1082,7 +1082,7 @@ const Index = () => {
                   A weekend that is completely yours
                 </p>
                 <blockquote className="text-lg font-serif leading-snug [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">
-                  "We didn't want to build just another venue. We wanted to create something deeper-a place where people could slow down, truly connect, and celebrate life and love across an
+                  "We wanted a place where the people you love could slow down and celebrate together for an
                   <span className="block text-center -ml-[10%] text-[#D8A799] italic text-[1.2em]">entire weekend."</span>
                 </blockquote>
                 <p className="mt-4 text-sm text-primary-foreground/80">
@@ -1104,11 +1104,11 @@ const Index = () => {
               <div className="text-center lg:text-left lg:order-2">
                 <p className="section-label">BEYOND THE CEREMONY</p>
                 <h2 className="text-3xl md:text-5xl font-serif mb-6">
-                  <span className="block">Your Weekend.</span>
-                  <span className="block italic text-secondary">Your Way.</span>
+                  <span className="block">Ideas for</span>
+                  <span className="block italic text-secondary">Your Weekend</span>
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl lg:max-w-none">
-                  When you book Rustic Retreat, you'll have the freedom to make it yours. A few ideas to spark your planning, your options are near endless.
+                  The property is yours for the whole booking, so there's room for a lot more than the ceremony. A few things you could plan:
                 </p>
               </div>
             </ScrollReveal>
@@ -1135,7 +1135,7 @@ const Index = () => {
                   <Sparkles className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="font-semibold mb-2">Fireworks & Sparklers</h3>
-                <p className="text-sm text-muted-foreground">Light up the night sky with an unforgettable full fireworks display and a sparkler send-off.</p>
+                <p className="text-sm text-muted-foreground">End the night with a full fireworks display or a sparkler send-off.</p>
               </div>
             </ScrollReveal>
 
@@ -1145,7 +1145,7 @@ const Index = () => {
                   <Music className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="font-semibold mb-2">Live Bands & DJs</h3>
-                <p className="text-sm text-muted-foreground">Go all out. Bring in an incredible live band or DJ to keep the dance floor packed late into the night.</p>
+                <p className="text-sm text-muted-foreground">Bring in a live band or a DJ and keep the dance floor busy late into the night.</p>
               </div>
             </ScrollReveal>
 
@@ -1154,8 +1154,8 @@ const Index = () => {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
                   <Flag className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="font-semibold mb-2">Epic Outdoor Activities</h3>
-                <p className="text-sm text-muted-foreground">Rent a giant inflatable obstacle course or set up a massive slip-and-slide for unapologetic fun.</p>
+                <h3 className="font-semibold mb-2">Outdoor Games</h3>
+                <p className="text-sm text-muted-foreground">Rent an inflatable obstacle course or set up a slip-and-slide.</p>
               </div>
             </ScrollReveal>
 
@@ -1164,8 +1164,8 @@ const Index = () => {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
                   <Film className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="font-semibold mb-2">Food Trucks & Late-Nights</h3>
-                <p className="text-sm text-muted-foreground">Hire your favorite food truck for midnight snacking, or set up a massive outdoor movie projector.</p>
+                <h3 className="font-semibold mb-2">Food Trucks & Late Nights</h3>
+                <p className="text-sm text-muted-foreground">Hire a food truck for midnight snacks, or set up an outdoor movie screen.</p>
               </div>
             </ScrollReveal>
           </div>
@@ -1186,7 +1186,7 @@ const Index = () => {
                 </h2>
                 <Flourish className="text-secondary/60 mb-4" size="md" />
                 <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base mb-2">
-                  Pick the timeline that fits your vision-then make the land your own.
+                  Pick the package that fits your plans.
                 </p>
                 <p className="text-xs text-secondary font-medium">
                   Popular dates book 12-18 months in advance
@@ -1214,7 +1214,7 @@ const Index = () => {
                     {pkg.isRecommended && (
                       <div className="absolute top-3 left-1/2 -translate-x-1/2 flex items-center gap-1 whitespace-nowrap rounded-full bg-gradient-to-r from-secondary to-secondary-dark text-secondary-foreground text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] px-3 py-1 shadow-lg">
                         <Star className="w-3 h-3" />
-                        <span>Most Desired</span>
+                        <span>Most Popular</span>
                       </div>
                     )}
                     <CardContent className={`w-full p-6 text-center ${pkg.isRecommended ? "pt-10" : ""}`}>
@@ -1251,7 +1251,7 @@ const Index = () => {
               <ScrollReveal direction="left">
                 <p className="section-label">PEACE OF MIND</p>
                 <h2 className="text-3xl md:text-4xl font-serif mb-6">
-                  We've thought of everything
+                  Common questions
                 </h2>
               </ScrollReveal>
 
@@ -1340,7 +1340,7 @@ const Index = () => {
           <ScrollReveal>
             <Heart className="w-10 h-10 text-secondary mx-auto mb-6 animate-float" />
             <h2 className="display-lg font-serif text-primary-foreground mb-6">
-              Come see if this is where your <span className="italic text-enchanted">Forever</span> begins
+              Come see it <span className="italic text-enchanted">in person</span>
             </h2>
             <Flourish className="text-secondary/70 mb-6" size="md" />
             <p className="text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto">
@@ -1349,7 +1349,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <CTAButton className="text-lg px-12 py-6">
-                  Discover Your Venue
+                  Book a Tour
                 </CTAButton>
               </Link>
             </div>

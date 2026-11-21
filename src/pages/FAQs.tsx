@@ -114,7 +114,7 @@ const FAQs = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
                   <CTAButton className="px-8">
-                    Discover Your Venue
+                    Book a Tour
                   </CTAButton>
                 </Link>
                 <Link to="/packages">

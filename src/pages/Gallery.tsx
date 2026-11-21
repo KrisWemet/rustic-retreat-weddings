@@ -178,7 +178,7 @@ const Gallery = () => {
           backgroundImageAlt={galleryHero.alt}
           backgroundPosition="50% 60%"
           title="Wedding Photo Gallery"
-          subtitle="Every photo is a real couple. A real moment. A real celebration."
+          subtitle="Every photo here is from a real wedding at Rustic Retreat."
         />
 
         {/* Gallery Grid with Soft Reveal */}
@@ -260,13 +260,13 @@ const Gallery = () => {
         <section className="section bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Your Story Belongs Here</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Like What You See?</h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto text-primary-foreground/90">
-                Ready to write your own chapter?
+                Come walk the property and find the spots from these photos.
               </p>
               <Link to="/contact">
                 <CTAButton className="px-8">
-                  Discover Your Venue
+                  Book a Tour
                 </CTAButton>
               </Link>
               <p className="text-sm text-primary-foreground/70 mt-4">

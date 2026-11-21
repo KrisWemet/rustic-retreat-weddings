@@ -60,7 +60,7 @@ const Venue = () => {
           backgroundImage={venueHero}
           backgroundImageAlt="A beautiful wedding ceremony setup by the gazebo at Rustic Retreat"
           title="The Venue"
-          subtitle="65 private acres of forest and meadow, a cozy cabin for newlyweds, and a treasure trove of décor waiting to be discovered."
+          subtitle="65 private acres of forest and meadow, a cabin for the two of you, and a shed full of décor you can use for free."
           overlayOpacity="none"
           contentClassName="max-w-4xl mx-auto bg-black/60 p-8 md:p-12 rounded-3xl shadow-xl"
         />
@@ -73,7 +73,7 @@ const Venue = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">The Cabin</h2>
 
                 <p className="text-lg mb-6 text-muted-foreground">
-                  The celebration keeps humming outside, voices drifting, the fire still crackling, that warm end-of-night glow settling in. When you’re ready, you step away without going far. Just a few steps from the fire, your cabin feels like a reset: quiet, cozy, and completely yours. It’s the kind of moment where everything slows down, you look at each other, and it finally sinks in… we did it.
+                  The newlywed cabin sits a few steps from the fire pit. When you're ready to call it a night, you can slip away while the party carries on outside, and still hear the fire crackling from the porch. It's quiet, it's yours, and it's a good place for it to finally sink in that you're married.
                 </p>
 
               </ScrollReveal>
@@ -85,7 +85,7 @@ const Venue = () => {
         <section className="section section-muted">
           <div className="container mx-auto px-4">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What's Inside Your Private Sanctuary</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Inside the Cabin</h2>
             </ScrollReveal>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
@@ -94,9 +94,9 @@ const Venue = () => {
                 <Card className="border-2 hover:border-secondary transition-colors">
                   <CardContent className="pt-6">
                     <Battery className="w-8 h-8 text-secondary mb-3" />
-                    <h3 className="font-semibold mb-2">Off-Grid Solar Power</h3>
+                    <h3 className="font-semibold mb-2">Solar Power</h3>
                     <p className="text-sm text-muted-foreground">
-                      Modern comfort without sacrificing the off-grid experience. All the electricity you need, powered by Alberta sunshine.
+                      The cabin runs on the property's solar system, so you have lights and outlets even though we're off the grid.
                     </p>
                   </CardContent>
                 </Card>
@@ -114,7 +114,7 @@ const Venue = () => {
                     <Users className="w-8 h-8 text-secondary mb-3" />
                     <h3 className="font-semibold mb-2">Room for Four</h3>
                     <p className="text-sm text-muted-foreground">
-                      Perfect for a wedding night retreat, or invite your parents Sunday morning for coffee and the best recap conversation of your life.
+                      It sleeps four. Some couples keep it to themselves; others have parents over on Sunday morning for coffee and a recap of the day.
                     </p>
                   </CardContent>
                 </Card>
@@ -133,7 +133,7 @@ const Venue = () => {
                     <Coffee className="w-8 h-8 text-secondary mb-3" />
                     <h3 className="font-semibold mb-2">Morning Coffee</h3>
                     <p className="text-sm text-muted-foreground">
-                      Keurig with pods provided, because the day-after conversations are sometimes the best part.
+                      There's a Keurig and a supply of pods for the morning after.
                     </p>
                   </CardContent>
                 </Card>
@@ -150,9 +150,9 @@ const Venue = () => {
                 <Card className="border-2 hover:border-secondary transition-colors">
                   <CardContent className="pt-6">
                     <Home className="w-8 h-8 text-secondary mb-3" />
-                    <h3 className="font-semibold mb-2">Comfortable Furnishings</h3>
+                    <h3 className="font-semibold mb-2">Furnishings</h3>
                     <p className="text-sm text-muted-foreground">
-                      Cozy bed, seating area, charming rustic touches that photograph beautifully.
+                      A comfortable bed, a seating area, and rustic furniture that looks good in photos.
                     </p>
                   </CardContent>
                 </Card>
@@ -170,7 +170,7 @@ const Venue = () => {
                     <Sun className="w-8 h-8 text-secondary mb-3" />
                     <h3 className="font-semibold mb-2">Forest Views</h3>
                     <p className="text-sm text-muted-foreground">
-                      Wake up to Alberta wilderness stretching in every direction. No buildings. No roads. Just trees and sky.
+                      You wake up to trees in every direction, with no other buildings or roads in sight.
                     </p>
                   </CardContent>
                 </Card>
@@ -183,32 +183,32 @@ const Venue = () => {
         <section className="section section-muted">
           <div className="container mx-auto px-4">
             <ScrollReveal className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold">Ceremony Settings & Reception Glow</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Ceremony and Reception Spaces</h2>
             </ScrollReveal>
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <ScrollReveal direction="left">
                 <div className="bg-primary/5 p-6 border-l-4 border-primary">
                   <p className="font-medium text-lg mb-2">
-                    The Land Speaks for Itself
+                    Choosing Your Spot
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    Most couples choose their ceremony spot by simply walking the grounds until a particular clearing or view feels right. We encourage you to take that time during your visit to feel which space resonates with your story.
+                    Most couples pick their ceremony spot by walking the land during their visit and seeing which place feels right.
                   </p>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal direction="right">
                 <p className="mb-6 text-muted-foreground">
-                  The land has its own way of guiding you. Whether it’s the sun-drenched open meadow, the quiet filter of light through the poplar grove, or the intimacy of a forest clearing, we invite you to wander the 65 acres and find the exact spot where your story feels most at home.
+                  The choices include the open meadow, the poplar grove with its filtered light, a smaller forest clearing, and the gazebo, and you're welcome to wander all 65 acres to compare them.
                 </p>
 
                 <p className="mb-6 text-muted-foreground">
-                  When the sun dips low, most couples move the celebration to the clear-top gazebo. Under the glow of string lights and an open night sky, the space transforms into something truly magical.
+                  In the evening, most couples move the party to the clear-top gazebo, which seats 80 under string lights with the sky overhead.
                 </p>
 
                 <div className="bg-primary/5 p-6 border-l-4 border-primary mt-6">
                   <p className="font-medium text-lg mb-2">
-                    We’ll walk you through ceremony options during your visit and help you choose the right flow for the day.
+                    We'll go through the ceremony options with you on your visit and help you plan the order of the day.
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Want to see the gazebo lit up? Schedule an evening tour.
@@ -223,7 +223,7 @@ const Venue = () => {
                 <HoverImage
                   src={ceremonyAisles}
                   alt="Ceremony setup with flower-lined aisles at Rustic Retreat"
-                  description="A sun-drenched meadow ceremony with hand-crafted benches and wildflower-lined aisles"
+                  description="A meadow ceremony with hand-built benches and wildflowers along the aisle"
                   category="Meadow Ceremony"
                   className="w-full rounded-2xl"
                 />
@@ -233,7 +233,7 @@ const Venue = () => {
                 <HoverImage
                   src={ceremonyWide1}
                   alt="Wide shot of a wedding ceremony in the forest at Rustic Retreat"
-                  description="Vows exchanged in a grand forest clearing with guests seated under the ancient poplar canopy"
+                  description="Vows in a forest clearing, with guests seated under the poplars"
                   category="Forest Clearing"
                   className="w-full rounded-2xl"
                 />
@@ -243,7 +243,7 @@ const Venue = () => {
                 <HoverImage
                   src={ceremonyCloseUp}
                   alt="Close up of a couple exchanging rings during the ceremony"
-                  description="An intimate moment shared between the couple at the altar in the woods"
+                  description="Exchanging rings at a ceremony in the woods"
                   category="The Vows"
                   className="w-full rounded-2xl"
                 />
@@ -253,7 +253,7 @@ const Venue = () => {
                 <HoverImage
                   src={ceremonySeating}
                   alt="Ceremony seating setup in a quiet forest grove"
-                  description="Rustic wooden benches perfectly placed for an intimate ceremony in a secluded forest grove"
+                  description="Wooden benches set up for a small ceremony in a forest grove"
                   category="Forest Grove Seating"
                   className="w-full rounded-2xl"
                 />
@@ -293,7 +293,7 @@ const Venue = () => {
                 <HoverImage
                   src={receptionChairGame}
                   alt="The couple playing the shoe game during the reception"
-                  description="Laughter and joy during the reception shoe game under the glowing pavilion lights"
+                  description="The shoe game at the reception, under the pavilion lights"
                   category="Reception Fun"
                   className="w-full rounded-2xl"
                 />
@@ -303,7 +303,7 @@ const Venue = () => {
                 <HoverImage
                   src={ceremonyPavilion}
                   alt="Wide view down the timber pavilion aisle during a wedding ceremony"
-                  description="A beautiful ceremony setting under the hand-crafted pavilion timbers"
+                  description="A ceremony under the hand-built pavilion"
                   category="Pavilion Ceremony"
                   className="w-full rounded-2xl"
                 />
@@ -319,10 +319,10 @@ const Venue = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Camping Under the Stars, Included for Up to 60 Guests</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  This is what makes a camping wedding weekend different from a one-day event: your people don't drive home when the music winds down. Everyone stays overnight, right on the property. Camping is included with every package for up to 60 guests, with room for tents and up to 8 RVs in our main camping area (we can host up to 15 RVs total). Guests choose their own spot, set up for the weekend, and stay for every campfire, every slow morning, and every moment in between.
+                  At a camping wedding, nobody has to drive home when the music winds down, because everyone stays on the property. Camping is included with every package for up to 60 guests, with room for tents and 8 RVs in the main camping area (up to 15 RVs in total). Guests pick their own spot and stay for the whole weekend.
                 </p>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  Fair warning: this is true boondocking, with no electrical hookups and no water connections. Just starlit skies, crackling fires, and waking up surrounded by 65 acres of Alberta forest. Guests tend to absolutely love it. Prefer wheels over tent poles? RVs and trailers are welcome, and RVezy.com can even deliver a rental trailer right to the camping area.
+                  It's boondocking, so there are no electrical or water hookups at the campsites. Most guests are happy to trade those for a dark sky and a fire every night. If someone would rather not sleep in a tent, RVezy.com can deliver a rental trailer to the camping area.
                 </p>
               </ScrollReveal>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
@@ -332,7 +332,7 @@ const Venue = () => {
                       <Tent className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Tents & RVs Welcome</h3>
                       <p className="text-sm text-muted-foreground">
-                        Up to 60 guests camp on-property, included in every package, with space for 8 RVs included and up to 15 total. Pick your spot in the main camping area; no defined sites, no extra nightly fees.
+                        Up to 60 guests can camp on the property with any package. Eight RVs are included and up to 15 fit. There are no assigned sites and no nightly fees.
                       </p>
                     </CardContent>
                   </Card>
@@ -343,7 +343,7 @@ const Venue = () => {
                       <Flame className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Campfires Every Night</h3>
                       <p className="text-sm text-muted-foreground">
-                        A filled firewood shed is included for your whole stay. Evenings drift naturally to the fire pit for stories, s'mores, and the kind of visiting a six-hour reception never allows.
+                        A full firewood shed is included for your whole stay, and most evenings end at the fire pit.
                       </p>
                     </CardContent>
                   </Card>
@@ -354,7 +354,7 @@ const Venue = () => {
                       <Trees className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Options for Non-Campers</h3>
                       <p className="text-sm text-muted-foreground">
-                        Lakefront Airbnbs sit 5–15 minutes away on Lac la Nonne, with hotels in Barrhead and Onoway about 15 minutes out. Everyone celebrates together; everyone sleeps how they like.
+                        Lakefront Airbnbs on Lac la Nonne are 5 to 15 minutes away, and there are hotels in Barrhead and Onoway, about 15 minutes out.
                       </p>
                     </CardContent>
                   </Card>
@@ -369,12 +369,11 @@ const Venue = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-12">
               <ScrollReveal>
-                <p className="text-secondary font-semibold uppercase tracking-[0.18em] mb-4">Comfort On Property</p>
+                <p className="text-secondary font-semibold uppercase tracking-[0.18em] mb-4">Comfort on the Property</p>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">The Wash House & The Bridal Suite</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Off-grid doesn't have to mean roughing it. Two of the newest buildings on the property handle the
-                  parts of a wedding weekend that camping alone can't: a hot shower after a night by the fire,
-                  and a real space to get ready in on the day itself.
+                  Two of the newest buildings on the property cover what camping can't: hot showers, and a proper
+                  place to get ready on the wedding day.
                 </p>
               </ScrollReveal>
             </div>
@@ -386,10 +385,8 @@ const Venue = () => {
                     <ShowerHead className="w-10 h-10 text-secondary mb-4" />
                     <h3 className="text-xl font-bold mb-2">The Wash House</h3>
                     <p className="text-muted-foreground mb-4">
-                      Two private shower stalls running on on-demand hot water, so there's no tank to run dry, no waiting for
-                      it to warm up, and pressure that actually feels like a shower. Guests camping for three or five
-                      days don't have to drive into town or plan around a campground schedule; they can rinse off the
-                      campfire, freshen up before the ceremony, and start the day feeling human again.
+                      Two private shower stalls with on-demand hot water, so it doesn't run out and the pressure is good.
+                      Guests camping for three or five days can shower here instead of driving into town.
                     </p>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• Two separate shower stalls</li>
@@ -407,9 +404,9 @@ const Venue = () => {
                     <Scissors className="w-10 h-10 text-secondary mb-4" />
                     <h3 className="text-xl font-bold mb-2">The Bridal Suite</h3>
                     <p className="text-muted-foreground mb-4">
-                      A dedicated getting-ready space with two hair and makeup stations, so your stylists can work on
-                      two people at once and the morning never turns into a queue. Somewhere to hang the dress, spread
-                      out the garment bags, and let the whole slow, giddy build-up happen in one place.
+                      A building just for getting ready, with two hair and makeup stations so your stylists can work on
+                      two people at once. There's room to hang the dress and spread out, so the wedding party can get
+                      ready together.
                     </p>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• Two hair and makeup stations</li>
@@ -438,12 +435,12 @@ const Venue = () => {
             <div className="max-w-4xl mx-auto text-center">
               <ScrollReveal>
                 <div className="flex flex-col items-center mb-8">
-                  <p className="text-secondary font-semibold uppercase tracking-[0.18em] mb-4">The Decor Collection</p>
-                  <h2 className="text-3xl md:text-4xl font-bold">Abundance Without the Added Cost</h2>
+                  <p className="text-secondary font-semibold uppercase tracking-[0.18em] mb-4">The Décor Collection</p>
+                  <h2 className="text-3xl md:text-4xl font-bold">Included at No Extra Cost</h2>
                 </div>
 
                 <p className="text-lg md:text-xl mb-8 text-muted-foreground leading-relaxed">
-                  Your wedding should feel like a celebration, not a series of line items on an invoice. While most venues charge per piece for rentals and decor, we believe in abundance.
+                  A lot of venues rent décor by the piece. Ours comes with every booking.
                 </p>
 
                 <div className="bg-secondary/10 p-8 rounded-2xl border-2 border-secondary/20 mb-10">
@@ -453,12 +450,12 @@ const Venue = () => {
                 </div>
 
                 <div className="space-y-6 text-left md:text-center">
-                  <h3 className="text-2xl font-bold">A Living Collection</h3>
+                  <h3 className="text-2xl font-bold">What's in It</h3>
                   <p className="text-muted-foreground text-lg">
-                    The collection is made up of those supplemental pieces that most weddings use but few couples want to buy, arch options, hurricane vases, votive candle holders, wood signs, sheer fabrics, faux florals and greenery, and vintage accents. Think of it as a curated lending library of the little things that pull a celebration together. We are intentional about what we include, these are the pieces that show up at almost every wedding and then sit in a box in someone's garage forever. Use what works for your vision, leave the rest.
+                    The collection covers the pieces most weddings use but few couples want to buy: arches, hurricane vases, votive candle holders, wood signs, sheer fabrics, faux florals and greenery, and vintage accents. They're the things that get used once and then sit in a box in someone's garage. Use whatever fits your plans and leave the rest.
                   </p>
                   <p className="text-muted-foreground text-lg">
-                    Please note that the collection does not include full floral arrangements, table linens, napkins, or any food service pieces, those elements are yours to source and style as you see fit.
+                    It doesn't include full floral arrangements, table linens, napkins, or anything for serving food, so you'll need to bring those.
                   </p>
                 </div>
 
@@ -475,10 +472,10 @@ const Venue = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-12">
               <ScrollReveal>
-                <p className="text-secondary font-semibold uppercase tracking-[0.18em] mb-4">The Little Details</p>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">All the Extras, Because We Got You</h2>
+                <p className="text-secondary font-semibold uppercase tracking-[0.18em] mb-4">For Your Guests</p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">The Extras</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We know that it’s the small things that make a weekend unforgettable. We’ve built, gathered, and curated these "extras" so you don’t have to worry about the entertainment or the logistics. It's all here, ready for your guests to enjoy.
+                  Over the years we've built or collected a few things to keep guests of all ages busy between the big moments.
                 </p>
               </ScrollReveal>
             </div>
@@ -492,9 +489,9 @@ const Venue = () => {
                     </div>
                     <CardContent className="pt-6 text-center lg:text-left">
                       <Trophy className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
-                      <h3 className="text-xl font-bold mb-2">Yard Games Galore</h3>
+                      <h3 className="text-xl font-bold mb-2">Yard Games</h3>
                       <p className="text-muted-foreground">
-                        Giant Jenga, Connect Four, cornhole, and more. Keep the energy high and the guests laughing during cocktail hour or throughout the weekend.
+                        Giant Jenga, Connect Four, cornhole and more, for cocktail hour or any time during the weekend.
                       </p>
                     </CardContent>
                   </Card>
@@ -507,9 +504,9 @@ const Venue = () => {
                     </div>
                     <CardContent className="pt-6 text-center lg:text-left">
                       <Baby className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
-                      <h3 className="text-xl font-bold mb-2">Children's Play House</h3>
+                      <h3 className="text-xl font-bold mb-2">Playhouse</h3>
                       <p className="text-muted-foreground">
-                        A dedicated space for the little ones to let their imaginations run wild, keeping them entertained while the adults celebrate.
+                        A playhouse where kids can play while the adults visit.
                       </p>
                     </CardContent>
                   </Card>
@@ -524,7 +521,7 @@ const Venue = () => {
                       <Zap className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
                       <h3 className="text-xl font-bold mb-2">The Trampoline</h3>
                       <p className="text-muted-foreground">
-                        For the young (and the young at heart). A fun addition to the property that adds a bit of bounce to your wedding weekend.
+                        For the kids, and for any adults who want a turn.
                       </p>
                     </CardContent>
                   </Card>
@@ -539,7 +536,7 @@ const Venue = () => {
                       <Flame className="w-10 h-10 text-secondary mb-4 mx-auto lg:mx-0" />
                       <h3 className="text-xl font-bold mb-2">The Fire Pit</h3>
                       <p className="text-muted-foreground">
-                        The heart of late-night conversations. We provide the pit and the setting; you bring the stories (and maybe some s'mores).
+                        Where most nights end up. The firewood is on us; bring the s'mores.
                       </p>
                     </CardContent>
                   </Card>
@@ -553,9 +550,9 @@ const Venue = () => {
                   </div>
                   <CardContent className="pt-6 text-center md:text-left">
                     <Sparkles className="w-10 h-10 text-secondary mb-4 mx-auto md:mx-0" />
-                    <h3 className="text-xl font-bold mb-2">And So Much More</h3>
+                    <h3 className="text-xl font-bold mb-2">And More</h3>
                     <p className="text-muted-foreground">
-                      From unexpected photo ops to quiet corners, the property is full of little surprises waiting to be discovered.
+                      A treehouse, board games for rainy afternoons, and quiet spots along the trails.
                     </p>
                   </CardContent>
                 </Card>
@@ -571,14 +568,13 @@ const Venue = () => {
               <div className="max-w-3xl mx-auto">
                 <p className="section-label">THE VENUE TODAY</p>
                 <h2 className="text-3xl md:text-4xl font-serif mb-6">
-                  The venue is growing, and we like it that way.
+                  The venue is still growing.
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  The bones are here: 65 acres, the ceremony clearing, the gazebo,
-                  the couples cabin, the wash house, the bridal suite, the fire pit,
-                  the field. What we're adding over the coming seasons are the
-                  finishing touches that take it from beautiful to extraordinary.
-                  Couples booking now are part of that story.
+                  The main pieces are in place: 65 acres, the ceremony clearing, the gazebo,
+                  the couples cabin, the wash house, the bridal suite, the fire pit and
+                  the field. We add something new every season, and couples who book
+                  now will see the next round of it.
                 </p>
               </div>
             </ScrollReveal>
@@ -589,14 +585,14 @@ const Venue = () => {
         <section className="section bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">See It In Person</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">See It in Person</h2>
               <p className="text-lg mb-6 max-w-2xl mx-auto text-primary-foreground/90">
-                Experience the cabin, explore the décor collection, and feel the magic of this space in person.
+                Come see the cabin, the décor shed and the gazebo for yourself.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
                   <CTAButton className="px-8">
-                    Discover Your Venue
+                    Book a Tour
                   </CTAButton>
                 </Link>
                 <Link to="/packages">
