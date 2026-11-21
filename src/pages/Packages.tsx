@@ -24,9 +24,44 @@ import pavilionBrideFamily from "@/assets/gallery/real-weddings/pavilion-bride-f
 import cardBoxWineBarrel from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-welcome-sign-mirror-display-39.webp";
 import guestFavorBox from "@/assets/gallery/seo/rustic-retreat-weddings-lac-la-nonne-alberta-wedding-rings-in-white-rose-43.webp";
 import firstDanceSparklers from "@/assets/gallery/first-dance-sparklers.webp";
-import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Target, Film, Music } from "lucide-react";
+import { CheckCircle, Clock, Users, Home, MapPin, Calendar, DollarSign, Sparkles, Target, Film, Music, Waves, MoonStar } from "lucide-react";
 import content from "@/data/site-content.json";
 import { trackViewContent } from "@/lib/analytics";
+
+// "Ideas for Your Weekend" cards. Slip-and-slides, inflatable obstacle courses and Nerf wars
+// are things past couples have planned (per the owners).
+const weekendIdeas = [
+  {
+    icon: Waves,
+    title: "Slip-and-Slides & Nerf Wars",
+    text: "Roll out a slip-and-slide, rent an inflatable obstacle course or arm everyone for a Nerf war. Couples here have done all three.",
+  },
+  {
+    icon: Target,
+    title: "Games & Adventures",
+    text: "Paintball, lawn games, a treasure hunt or an afternoon on the forest trails.",
+  },
+  {
+    icon: MoonStar,
+    title: "Yoga & Stargazing",
+    text: "Start the morning with yoga in the meadow, and end the night under more stars than you'll see in the city.",
+  },
+  {
+    icon: Film,
+    title: "Outdoor Movie Night",
+    text: "Set up a screen and host a movie under the trees.",
+  },
+  {
+    icon: Music,
+    title: "Campfire Karaoke",
+    text: "Cue up a playlist and pass the mic around the fire.",
+  },
+  {
+    icon: Sparkles,
+    title: "Fireworks & Sparklers",
+    text: "End the night with fireworks, or have everyone light sparklers as you leave.",
+  },
+];
 
 const Packages = () => {
   const [season, setSeason] = useState<Season>(DEFAULT_SEASON);
@@ -362,54 +397,27 @@ const Packages = () => {
               <p className="text-sm uppercase tracking-widest text-secondary mb-4">BEYOND THE CEREMONY</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ideas for Your Weekend</h2>
               <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-                You have the property for the whole booking, so there's time for a lot more than the ceremony and reception. Here are a few ideas.
+                You have the property for the whole booking, so fill it with whatever fits the two of you. Here are a few ideas to start.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-              <div className="bg-background p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Fireworks & Sparklers</h3>
-                <p className="text-sm text-muted-foreground">Plan a sparkler send-off or a fireworks display.</p>
-              </div>
-
-              <div className="bg-background p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Target className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Games & Adventures</h3>
-                <p className="text-sm text-muted-foreground">Paintball, lawn games, or an afternoon on the forest trails.</p>
-              </div>
-
-              <div className="bg-background p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Film className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Outdoor Movie Night</h3>
-                <p className="text-sm text-muted-foreground">Set up a screen and host a movie under the trees.</p>
-              </div>
-
-              <div className="bg-background p-6 rounded-xl shadow-md text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Music className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold mb-2">Campfire Karaoke</h3>
-                <p className="text-sm text-muted-foreground">Cue up a playlist and pass the mic around the fire.</p>
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+              {weekendIdeas.map(({ icon: Icon, title, text }, idx) => (
+                <ScrollReveal key={title} delay={(idx % 3) * 100}>
+                  <div className="card-enchant bg-background p-6 rounded-2xl shadow-soft text-center h-full border border-secondary/10">
+                    <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-secondary" />
+                    </div>
+                    <h3 className="font-semibold mb-2">{title}</h3>
+                    <p className="text-sm text-muted-foreground text-balance">{text}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
-            <p className="text-center text-sm text-muted-foreground max-w-3xl mx-auto mb-12">
-              And more: treasure hunts, slip-and-slides, inflatable obstacle courses, and other activities that fit your group.
-            </p>
 
             <div className="bg-background p-6 sm:p-8 rounded-xl shadow-md max-w-4xl mx-auto">
               <div className="text-center mb-8">
-                <p className="text-base sm:text-lg font-medium leading-relaxed max-w-3xl mx-auto mb-6">
-                  <span className="block">Morning yoga, stargazing and group hikes</span>
-                  <span className="block">work well too.</span>
-                </p>
-                <p className="text-muted-foreground italic text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto">
+                <p className="text-lg sm:text-xl font-medium leading-relaxed max-w-3xl mx-auto">
                   There's time for all of it over three or five days.
                 </p>
               </div>
