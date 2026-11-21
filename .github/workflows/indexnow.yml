@@ -2,10 +2,16 @@ name: Notify Bing of changes (IndexNow)
 
 # After Vercel finishes a production deploy, send the sitemap's pages to
 # IndexNow so Bing (which ChatGPT search draws on) recrawls them the same day.
-# Preview deploys are skipped. "Run workflow" in the Actions tab sends them by hand.
+# Preview deploys are skipped. "Run workflow" in the Actions tab sends them by hand
+# (tick "dry run" to only print what would be sent).
 on:
   deployment_status:
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: only print what would be sent"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -20,8 +26,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
-      - run: node scripts/indexnow.mjs
+          node-version: 24
+      - run: node scripts/indexnow.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
