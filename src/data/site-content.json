@@ -41,12 +41,12 @@
         "name": "The Full 5-Day Experience",
         "shortName": "5-Day",
         "subtitle": "The complete experience",
-        "duration": "Wed-Sun or Thu-Mon",
+        "duration": "Thursday through Monday",
         "price": "7,500",
         "price2028": "8,500",
-        "description": "5-day celebration (Wed-Sun or Thu-Mon) with more time for guests.",
-        "previewDescription": "Five days on the property, midweek through the weekend, with the cabin, camping, the décor collection and time for more than one event.",
-        "timelineTitle": "The Timeline (Thursday Arrival Option):",
+        "description": "5-day celebration (Thursday to Monday) with more time for guests.",
+        "previewDescription": "Five days on the property, Thursday to Monday, with the cabin, camping, the décor collection and time for more than one event.",
+        "timelineTitle": "The Timeline:",
         "timeline": [
           {
             "day": "Thursday:",

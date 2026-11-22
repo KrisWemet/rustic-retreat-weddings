@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: "How much does a forest wedding at Rustic Retreat cost?",
-    answer: `The 3-day weekend (Friday to Sunday) is ${priceLine(threeDay)}. The 5-day experience (Wednesday to Sunday or Thursday to Monday), our most popular, is ${priceLine(fiveDay)}. Prices are in CAD and GST is extra. Every package includes exclusive use of the whole property, the newlywed cabin, overnight camping for up to 60 guests, the décor collection, a dance floor and sound system, and firewood for the weekend. There are no mandatory vendors and no catering minimums.`,
+    answer: `The 3-day weekend (Friday to Sunday) is ${priceLine(threeDay)}. The 5-day experience (Thursday to Monday), our most popular, is ${priceLine(fiveDay)}. Prices are in CAD and GST is extra. Every package includes exclusive use of the whole property, the newlywed cabin, overnight camping for up to 60 guests, the décor collection, a dance floor and sound system, and firewood for the weekend. There are no mandatory vendors and no catering minimums.`,
   },
   {
     question: "How many guests can a forest wedding here hold?",

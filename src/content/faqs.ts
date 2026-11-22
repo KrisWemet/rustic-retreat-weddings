@@ -8,7 +8,7 @@ export type FAQEntry = {
 // Bump this whenever an FAQ question or answer changes. It shows on the FAQs page,
 // goes into its schema as dateModified, and should match the "Last updated" lines in
 // public/faqs.txt and public/prerender/faqs.html.
-export const FAQS_LAST_UPDATED = "2026-11-21";
+export const FAQS_LAST_UPDATED = "2026-11-22";
 
 export const FAQS: FAQEntry[] = [
     {
@@ -74,7 +74,7 @@ export const FAQS: FAQEntry[] = [
     {
       category: "Booking & Scheduling",
       question: "Which package would be best for me?",
-      answer: "The 3-day package (Friday to Sunday) suits couples who want a shorter, focused weekend with everyone there for the main events.\n\nThe 5-day package (Wednesday to Sunday or Thursday to Monday) is our most popular. The extra days give everyone time to arrive and settle in before the wedding, with room for an activity day, long meals and evenings around the campfire. The activity day has been one of the highlights for couples who've done it, and by the wedding day your families have already spent a few days together.\n\nYour decorating plans matter too. If vendors are handling setup and takedown, three days can work well. If friends and family are helping you decorate, the extra days mean nobody has to rush.\n\nWith either package, check-in starts at 8am on your first day and checkout is at 8pm on your last. We're happy to talk it through on your property visit."
+      answer: "The 3-day package (Friday to Sunday) suits couples who want a shorter, focused weekend with everyone there for the main events.\n\nThe 5-day package (Thursday to Monday) is our most popular. The extra days give everyone time to settle in before the wedding and a whole day after it for an activity, along with long meals and evenings around the campfire. The activity day has been one of the highlights for couples who've done it, and by the wedding day your families have already spent two days together.\n\nYour decorating plans matter too. If vendors are handling setup and takedown, three days can work well. If friends and family are helping you decorate, the extra days mean nobody has to rush.\n\nWith either package, check-in starts at 8am on your first day and checkout is at 8pm on your last. We're happy to talk it through on your property visit."
     },
     {
       category: "Booking & Scheduling",

@@ -142,7 +142,7 @@ const Packages = () => {
               </p>
 
               <p className="mb-6">
-                Both packages book the entire property for weddings of 60 to 80 guests, so you never share it with another wedding. The 3-day weekend runs Friday to Sunday. The 5-day experience runs Wednesday to Sunday or Thursday to Monday, and it's our most popular.
+                Both packages book the entire property for weddings of 60 to 80 guests, so you never share it with another wedding. The 3-day weekend runs Friday to Sunday. The 5-day experience runs Thursday to Monday, and it's our most popular.
               </p>
 
               <div className="grid md:grid-cols-2 gap-5 md:gap-6 items-center my-8">
