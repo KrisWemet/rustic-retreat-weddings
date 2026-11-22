@@ -201,11 +201,11 @@ const Rules = () => {
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td className="p-3 border border-primary/20 bg-muted/20 font-medium">11:00 PM (Sunday–Thursday)</td>
+                                                    <td className="p-3 border border-primary/20 bg-muted/20 font-medium">11:00 PM (Sunday to Thursday)</td>
                                                     <td className="p-3 border border-primary/20 bg-card text-muted-foreground">Music reduced to reasonable conversational level</td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="p-3 border border-primary/20 bg-muted/40 font-medium">12:00 Midnight (Friday–Saturday / Wedding Night)</td>
+                                                    <td className="p-3 border border-primary/20 bg-muted/40 font-medium">12:00 Midnight (Friday to Saturday / Wedding Night)</td>
                                                     <td className="p-3 border border-primary/20 bg-muted/10 text-muted-foreground">Music reduced to be minimally audible at property line</td>
                                                 </tr>
                                             </tbody>

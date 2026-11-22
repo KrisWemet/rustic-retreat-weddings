@@ -29,17 +29,17 @@ const DIYWedding = () => {
         <PageHero
           backgroundImage={heroImage}
           backgroundImageAlt="Evening reception under string lights at Rustic Retreat"
-          title="Your Wedding, Actually Your Way"
-          subtitle="No mandatory vendors. No per-plate minimums. No corkage fees. A DIY wedding venue that means it."
+          title="Bring Your Own Vendors"
+          subtitle="A DIY wedding venue near Edmonton with no mandatory vendors, no per-plate minimums and no corkage fees."
         />
 
         <section className="section">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <ScrollReveal>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">What "No Restrictions" Really Means Here</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">How It Works</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  Most venues say you have options, then hand you a preferred-vendor list and a bar minimum. Rustic Retreat works differently: you rent the entire 65-acre property for multiple days, and what happens on it is up to you. Bring the photographer you love, the caterer who makes your favourite food, the aunt who bakes better than any bakery, or do the whole thing yourselves with family pitching in. That's not a loophole here; it's the design.
+                  Most venues say you have options, then hand you a preferred-vendor list and a bar minimum. Rustic Retreat works differently: you rent the entire 65-acre property for multiple days, and what happens on it is up to you. Bring the photographer you love, the caterer who makes your favourite food, the aunt who bakes better than any bakery, or do the whole thing yourselves with family pitching in.
                 </p>
               </ScrollReveal>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
@@ -49,7 +49,7 @@ const DIYWedding = () => {
                       <ChefHat className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Any Caterer, or None</h3>
                       <p className="text-sm text-muted-foreground">
-                        Food trucks, family potlucks, a hog roast, your favourite restaurant. No approved lists and no per-plate minimums. Just let caterers know we're off-grid and solar-powered.
+                        Food trucks, family potlucks, a hog roast, your favourite restaurant. There's no approved list and no per-plate minimum. Just let caterers know we're off-grid and solar-powered. Laura Rose Catering and the Curbside by A Cappella food truck have both worked here.
                       </p>
                     </CardContent>
                   </Card>
@@ -60,7 +60,7 @@ const DIYWedding = () => {
                       <Wine className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Run Your Own Bar</h3>
                       <p className="text-sm text-muted-foreground">
-                        BYOB with zero corkage fees and zero drink minimums. Self-serve coolers or a full DIY bar. You just need an inexpensive AGLC Special Event Licence, and we'll guide you through it.
+                        Bring your own alcohol, with no corkage fees or drink minimums. Self-serve coolers and a full DIY bar both work. You'll need an AGLC Special Event Licence, which is inexpensive, and we'll walk you through getting one.
                       </p>
                     </CardContent>
                   </Card>
@@ -80,9 +80,9 @@ const DIYWedding = () => {
                   <Card className="border-2 hover:border-secondary transition-colors h-full">
                     <CardContent className="pt-6">
                       <Clock className="w-8 h-8 text-secondary mb-3" />
-                      <h3 className="font-semibold mb-2">Days to Set Up, Not Hours</h3>
+                      <h3 className="font-semibold mb-2">Days to Set Up</h3>
                       <p className="text-sm text-muted-foreground">
-                        DIY falls apart when you get the keys at 9am on wedding day. Here you check in days early, so you can decorate slowly, with helpers, without panic. Check-in 8am day one, checkout 8pm final day.
+                        DIY is hard when you only get the keys on the morning of the wedding. Here you check in days ahead, so you and your helpers can decorate without rushing. Check-in is 8am on day one and checkout is 8pm on the last day.
                       </p>
                     </CardContent>
                   </Card>
@@ -93,7 +93,7 @@ const DIYWedding = () => {
                       <HandHeart className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">Help When You Want It</h3>
                       <p className="text-sm text-muted-foreground">
-                        We live on the property and we're close by all weekend. Need a recommendation, a safety pin, or a hand figuring out layout? Ask. Prefer to be left alone? Also perfect.
+                        We live on the property and we're close by all weekend. Need a recommendation, a safety pin, or a hand figuring out layout? Ask. Prefer to be left alone? Also perfect. If you'd rather hand the day to someone, we offer coordination built around what you need.
                       </p>
                     </CardContent>
                   </Card>
@@ -104,12 +104,16 @@ const DIYWedding = () => {
                       <Wallet className="w-8 h-8 text-secondary mb-3" />
                       <h3 className="font-semibold mb-2">A Budget You Control</h3>
                       <p className="text-sm text-muted-foreground">
-                        The venue is one flat price. Every other dollar (food, drink, flowers, photos) goes where you decide, at prices you negotiate. That's how DIY couples celebrate for less.
+                        The venue is one flat price. Every other dollar (food, drink, flowers, photos) goes where you decide, at prices you negotiate, which is how DIY couples keep costs down.
                       </p>
                     </CardContent>
                   </Card>
                 </ScrollReveal>
               </div>
+              <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
+                "They went above and beyond in so many ways - helping wherever they were needed, taking behind-the-scenes photos for us, keeping things running smoothly, and even running to get our rings when we realized they had been forgotten!"
+                <footer className="mt-2 text-sm not-italic">Janelle &amp; Brian, Google review</footer>
+              </blockquote>
             </div>
           </div>
         </section>
@@ -138,9 +142,9 @@ const DIYWedding = () => {
         <section className="section bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Bring Your Vision. We'll Bring the Land.</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Plan It on a Visit</h2>
               <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-                Walk the property, see the décor shed, and start sketching your weekend. Tours are by appointment and completely pressure-free.
+                Walk the property, see the décor shed, and start sketching your weekend. Tours are by appointment, and there's no pressure to book.
               </p>
               <Link to="/contact">
                 <Button size="lg" variant="secondary" className="rounded-full px-8">Schedule Your Tour</Button>

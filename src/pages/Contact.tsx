@@ -79,8 +79,8 @@ const Contact = () => {
         <PageHero
           backgroundImage={contactHeroImage}
           backgroundImageAlt="Outdoor ceremony with the wedding party in the forest clearing at Rustic Retreat"
-          title="Discover Your Venue"
-          subtitle="Property tours by appointment only, scheduled around existing bookings. Come feel the space and see if this is where your story wants to unfold."
+          title="Book a Tour"
+          subtitle="Property tours are by appointment, scheduled around existing bookings. Live far away? A video call tour counts as your visit."
           overlayOpacity="none"
           contentClassName="translate-y-[15vh] drop-shadow-md"
         />
@@ -96,7 +96,7 @@ const Contact = () => {
                     <CardContent className="p-6 md:p-8">
                       <h3 className="text-xl md:text-2xl font-bold mb-3">What to Expect</h3>
                       <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
-                        Come as you are. Walk the property, ask every question, take all the time you need.
+                        Walk the property, ask whatever you like, and take your time.
                       </p>
                       <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-4 text-sm md:text-base text-muted-foreground">
                         <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Up to 90 minutes at your pace</span></li>
@@ -104,8 +104,13 @@ const Contact = () => {
                         <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>See the cabin and camping areas</span></li>
                         <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Browse the Wedding Décor Collection</span></li>
                         <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Discuss packages and pricing openly</span></li>
-                        <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Just an honest, relaxed conversation</span></li>
+                        <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>A relaxed conversation, with no pressure to book</span></li>
+                        <li className="flex items-start"><span className="mr-2 flex-shrink-0">•</span><span>Getting married soon? Ask about open dates</span></li>
                       </ul>
+                      <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
+                        "My husband and I got married here two weeks ago (planned a wedding in just over a month)-let me tell ya, it was an absolute blast!"
+                        <footer className="mt-2 text-sm not-italic">Viktoria, Facebook review</footer>
+                      </blockquote>
                     </CardContent>
                   </Card>
                   <div className="w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-soft shrink-0 img-card">
@@ -145,11 +150,11 @@ const Contact = () => {
                         {/* Response Time Badge */}
                         <div className="flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm mb-6 w-fit">
                           <Clock className="w-4 h-4" />
-                          <span className="font-medium">We respond within 24 hours.</span>
+                          <span className="font-medium">Shannon replies within 24 hours to set up your tour.</span>
                         </div>
 
                         <h2 className="text-2xl font-bold mb-2">Tell Us About Your Wedding</h2>
-                        <p className="text-sm text-muted-foreground mb-6">Tell us a bit about yourselves. No pressure-this is just the start of a conversation.</p>
+                        <p className="text-sm text-muted-foreground mb-6">Tell us a bit about yourselves, and we'll get back to you about a tour.</p>
                         <form onSubmit={handleSubmit} className="space-y-6">
                           {/* Honeypot: people never see or fill this; bots do. Formspree and the CRM both drop those submissions. */}
                           <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
@@ -273,7 +278,7 @@ const Contact = () => {
                           </div>
 
                           <div>
-                            <Label htmlFor="tourDates">Preferred tour dates (weekday appointments, May–September)</Label>
+                            <Label htmlFor="tourDates">Preferred tour dates (weekday appointments, May to September)</Label>
                             <Textarea
                               id="tourDates"
                               name="tourDates"
@@ -370,7 +375,7 @@ const Contact = () => {
                             <p className="text-muted-foreground text-sm">
                               About 1 hour from Edmonton<br />
                               Near Lac La Nonne, Alberta<br />
-                              Weekday tours by appointment, May–September
+                              Weekday tours by appointment, May to September
                             </p>
                           </div>
                         </div>

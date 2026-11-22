@@ -38,17 +38,22 @@ const faqs = [
   },
   {
     question: "How much does a forest wedding at Rustic Retreat cost?",
-    answer: `The 3-day weekend (Friday to Sunday) is ${priceLine(threeDay)}. The 5-day experience (Wednesday to Sunday or Thursday to Monday), our most popular, is ${priceLine(fiveDay)}. Prices are in CAD and GST is extra. Every package includes exclusive use of the whole property, the newlywed cabin, overnight camping for up to 60 guests, the décor collection, a dance floor and sound system, and firewood for the weekend. There are no mandatory vendors and no catering minimums.`,
+    answer: `The 3-day weekend (Friday to Sunday) is ${priceLine(threeDay)}. The 5-day experience (Thursday to Monday), our most popular, is ${priceLine(fiveDay)}. Prices are in CAD and GST is extra. Every package includes exclusive use of the whole property, the newlywed cabin, overnight camping for up to 60 guests, the décor collection, a dance floor and sound system, and firewood for the weekend. There are no mandatory vendors and no catering minimums.`,
   },
   {
     question: "How many guests can a forest wedding here hold?",
     answer:
-      "Up to 80 guests for the ceremony and reception. The clear-top gazebo seats all 80 for the reception. Overnight camping is included for up to 60 guests in tents and RVs (8 RVs included, up to 15 on site), with no hookups.",
+      "The property is set up for weddings of 60 to 80 guests, with seating for 80 at the ceremony and reception (we can host up to 100 at most). The clear-top gazebo seats all 80 for the reception. Overnight camping is included for up to 60 guests in tents and RVs (8 RVs included, up to 15 on site), with no hookups.",
   },
   {
     question: "What happens if it rains on a forest wedding?",
     answer:
       "The clear-top gazebo covers all 80 guests for the reception, and the ceremony can move under it too. There is also room on the property for a rented tent if you want extra peace of mind.",
+  },
+  {
+    question: "Are there a lot of mosquitoes in the forest?",
+    answer:
+      "It depends on the year; some summers are much buggier than others. Thermacell repellers work really well under the gazebo, so bring a few for the reception (we don't supply them), and pack bug spray for the trails and campsites.",
   },
   {
     question: "Do you host more than one wedding per weekend?",
@@ -130,11 +135,15 @@ const ForestWedding = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Vows Under the Trees</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  Rustic Retreat is a family-owned forest wedding venue on 65 private acres near Lac La Nonne, in Lac Ste. Anne County, Alberta. We're about an hour northwest of Edmonton and about 15 minutes from Barrhead. Couples come for a woodland ceremony and stay for the weekend: there's no ballroom ceiling, no rigid timeline, and nobody else's wedding on the property.
+                  Rustic Retreat is a family-owned forest wedding venue on 65 private acres near Lac La Nonne, in Lac Ste. Anne County, Alberta. We're about an hour northwest of Edmonton and about 15 minutes from Barrhead. Couples come for a woodland ceremony and stay for the whole weekend, with nobody else's wedding on the property.
                 </p>
                 <p className="text-lg mb-6 text-muted-foreground">
                   The land is a mix of poplar forest, meadow and groomed trails, with a hand-crafted gazebo set in the trees. Ceremonies happen wherever you choose. Receptions move to the clear-top gazebo under string lights, then carry on around the fire.
                 </p>
+                <blockquote className="mt-6 border-l-2 border-secondary pl-4 italic text-muted-foreground">
+                  "The property is stunning, featuring a romantic couples cabin, enchanting forested areas, and a breathtaking gazebo adorned with lights and ample space."
+                  <footer className="mt-2 text-sm not-italic">Tabitha, Facebook review</footer>
+                </blockquote>
               </ScrollReveal>
             </div>
           </div>
@@ -169,7 +178,7 @@ const ForestWedding = () => {
               <ScrollReveal>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Packages and Value</h2>
                 <p className="text-lg mb-6 text-muted-foreground">
-                  Every package is a multi-day booking of the whole property, not a single-day rental. The price covers the ceremony spaces, the gazebo, the newlywed cabin, camping for up to 60 guests, the décor collection, a dance floor and sound system, and a full firewood shed. You choose your own caterer, bar and vendors, with no minimums.
+                  Every package books the whole property for several days. The price covers the ceremony spaces, the gazebo, the newlywed cabin, camping for up to 60 guests, the décor collection, a dance floor and sound system, and a full firewood shed. You choose your own caterer, bar and vendors, with no minimums.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   {[threeDay, fiveDay].map((pkg) => (

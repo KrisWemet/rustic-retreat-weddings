@@ -358,7 +358,7 @@ const Navigation = () => {
                 size="lg"
                 className="btn-shimmer w-full bg-gradient-to-r from-rosegold-light via-rosegold to-rosegold-dark hover:from-rosegold hover:via-rosegold-dark hover:to-rosegold text-white rounded-full shadow-elegant"
               >
-                Discover Your Venue
+                Book a Tour
               </Button>
             </Link>
           </div>
